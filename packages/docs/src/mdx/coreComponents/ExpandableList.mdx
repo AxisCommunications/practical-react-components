@@ -1,0 +1,154 @@
+export const meta = {
+  name: 'ExpandableList',
+  route: '/components/expandablelist',
+  menu: 'Components',
+}
+
+import { useState } from 'react'
+import styled from 'styled-components'
+
+import { DeviceIcon } from 'practical-react-components-icons'
+import { ExpandableList } from 'practical-react-components-core'
+
+# ExpandableList
+
+ExpandableList creates a list where an option can be 'clicked' in order to expand it into a sub-list.
+
+## Demo
+
+export const ITEMS = [
+  {
+    id: 'devices',
+    label: 'Devices',
+    icon: DeviceIcon,
+  },
+  {
+    id: 'category',
+    label: 'Category',
+    icon: DeviceIcon,
+    selected: true,
+    items: [
+      {
+        id: 'item-1',
+        label: 'Item 1',
+        icon: DeviceIcon,
+      },
+      {
+        id: 'something-2',
+        label: 'Something 2',
+        icon: DeviceIcon,
+      },
+      {
+        id: 'something-else-3',
+        label: 'Something else 3',
+        icon: DeviceIcon,
+      },
+      {
+        id: 'entirely-different-thing',
+        label: 'Entirely different thing',
+        icon: DeviceIcon,
+      },
+      {
+        id: 'and-this-thing',
+        label: 'And this thing',
+        icon: DeviceIcon,
+      },
+      {
+        id: 'also-this',
+        label: 'Also this',
+        icon: DeviceIcon,
+      },
+    ],
+  },
+  {
+    id: 'site-log',
+    label: 'Site log',
+    icon: DeviceIcon,
+  },
+]
+
+export const Container = styled.div`
+  width: 256px;
+`
+
+export const DemoComponent = ({}) => {
+  const [selectedItem, setSelectedItem] = useState('none')
+  const listItems = ITEMS.map(item => {
+    return {
+      ...item,
+      selected: selectedItem === item.id,
+      onClick: () => {
+        setSelectedItem(item.id)
+      },
+      items:
+        item.items !== undefined
+          ? item.items.map(subItem => {
+              return {
+                ...subItem,
+                selected: selectedItem === subItem.id,
+                onClick: () => {
+                  setSelectedItem(subItem.id)
+                },
+              }
+            })
+          : undefined,
+    }
+  })
+  return (
+    <Container>
+      <ExpandableList items={listItems} />
+    </Container>
+  )
+}
+
+export const onClick = () => {}
+
+<DemoComponent />
+
+## Basic usage
+
+```typescript type=live
+<ExpandableList
+  items={[
+    {
+      id: 'devices',
+      label: 'Devices',
+      icon: DeviceIcon,
+    },
+    {
+      id: 'category',
+      label: 'Category',
+      icon: DeviceIcon,
+      selected: true,
+      items: [
+        {
+          id: 'item-1',
+          label: 'Item 1',
+          icon: DeviceIcon,
+        },
+        {
+          id: 'something-2',
+          label: 'Something 2',
+          icon: DeviceIcon,
+        },
+      ],
+    },
+  ]}
+/>
+```
+
+## ExpandableList Props
+
+ExpandableList forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="ExpandableList" />
+
+## ExpandableListItem Props
+
+ExpandableListItem forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="ExpandableListItem" />

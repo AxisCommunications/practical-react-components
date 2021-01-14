@@ -1,0 +1,34 @@
+export const meta = {
+  name: 'Progress',
+  route: '/components/Progress',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import { Progress } from 'practical-react-components-core'
+
+# Progress
+
+A Progress inform users about the status of ongoing progresses.
+
+## Demo
+
+export const total = 84
+export const data = 31
+export const value = (data / total).toFixed(2)
+
+<Progress value={value} label={`${data}/${total}Mb`} className="progress" />
+
+## Basic usage
+
+```typescript type=live
+<Progress value={0.5} label="50%" />
+```
+
+## Props
+
+Progress forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Progress" />

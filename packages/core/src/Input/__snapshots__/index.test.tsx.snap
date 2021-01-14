@@ -1,0 +1,4960 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInput NumberInput 1`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-25"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="number"
+          value=""
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-26"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput NumberInput 2`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-27"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="number"
+          value={1}
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-28"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput NumberInput 3`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-29"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          placeholder="Number"
+          spellCheck={false}
+          type="number"
+          value={100}
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-30"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput NumberInput 4`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 32px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-31"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="number"
+          value={100}
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-32"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput NumberInput 5`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c9:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 160px;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-33"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="small"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="number"
+          value={100}
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-34"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput NumberInput 6`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c9:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c10:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 200px;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-35"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="medium"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="number"
+          value={100}
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-36"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput NumberInput 7`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c9:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c10:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c11:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 352px;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-37"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="large"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="number"
+          value={100}
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-38"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput NumberInput 8`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c9:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c10:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c11:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-39"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="number"
+          value={100}
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-40"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput NumberInput 9`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c9:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c10:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c11:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c12:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-41"
+    >
+      <div
+        className="c2"
+        disabled={true}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={true}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="number"
+          value={100}
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-42"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput NumberInput 10`] = `
+.c10 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c12 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c11 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c4 {
+  color: rgb(41,41,41);
+  line-height: 16px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 40px;
+}
+
+.c6 {
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(41,41,41);
+  height: 100%;
+  min-width: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c8 {
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 0 0 0;
+}
+
+.c9 {
+  padding: 0 8px;
+  position: relative;
+  bottom: -50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: text;
+}
+
+.c13:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c13:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c14:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c14:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c15:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c15:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c16:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c16:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c17:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c17:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c18:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c18:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+  background-color: rgb(224,224,224);
+  border-bottom: none;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c19 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c2:hover {
+  background-color: rgb(224,224,224);
+  border-bottom: none;
+}
+
+.c2:focus-within {
+  background-color: rgb(224,224,224);
+  border-bottom: none;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-webkit-outer-spin-button,
+.c3::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-43"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="number"
+          value={100}
+        />
+        <div
+          className="c4"
+        >
+          <div
+            className="c5 c6"
+          >
+            <div
+              className="c7 c8"
+            />
+          </div>
+          <div
+            className="c9"
+          >
+            <span
+              className="c10"
+            >
+              test
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c11"
+      id="layer-44"
+    >
+      <div
+        className="c12"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInput 1`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-ms-reveal,
+.c3::-ms-clear {
+  display: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="text"
+          value="test"
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-2"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInput 2`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-ms-reveal,
+.c3::-ms-clear {
+  display: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="text"
+          value="test"
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-4"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInput 3`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 32px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-ms-reveal,
+.c3::-ms-clear {
+  display: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="text"
+          value="test"
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-6"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInput 4`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c9:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 160px;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-ms-reveal,
+.c3::-ms-clear {
+  display: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="small"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="text"
+          value="test"
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-8"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInput 5`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c9:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c10:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 200px;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-ms-reveal,
+.c3::-ms-clear {
+  display: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-9"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="medium"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="text"
+          value="test"
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-10"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInput 6`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c9:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c10:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c11:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 352px;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-ms-reveal,
+.c3::-ms-clear {
+  display: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-11"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="large"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="text"
+          value="test"
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-12"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInput 7`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c9:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c10:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c11:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-ms-reveal,
+.c3::-ms-clear {
+  display: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-13"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="text"
+          value="test"
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-14"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInput 8`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c8:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c9:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c10:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c11:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c12:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-ms-reveal,
+.c3::-ms-clear {
+  display: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-15"
+    >
+      <div
+        className="c2"
+        disabled={true}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={true}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="text"
+          value="test"
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-16"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInput 9`] = `
+.c10 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c12 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c11 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c4 {
+  color: rgb(41,41,41);
+  line-height: 16px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 40px;
+}
+
+.c6 {
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(41,41,41);
+  height: 100%;
+  min-width: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c8 {
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 0 0 0;
+}
+
+.c9 {
+  padding: 0 8px;
+  position: relative;
+  bottom: -50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: text;
+}
+
+.c13:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c13:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c14:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c14:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c15:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c15:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c16:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c16:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c17:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c17:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c18:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c18:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+  background-color: rgb(224,224,224);
+  border-bottom: none;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c19 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .c7 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .c5 {
+  border-bottom: 1px solid transparent;
+}
+
+.c2:hover {
+  background-color: rgb(224,224,224);
+  border-bottom: none;
+}
+
+.c2:focus-within {
+  background-color: rgb(224,224,224);
+  border-bottom: none;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c3::-ms-reveal,
+.c3::-ms-clear {
+  display: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-17"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="text"
+          value="test"
+        />
+        <div
+          className="c4"
+        >
+          <div
+            className="c5 c6"
+          >
+            <div
+              className="c7 c8"
+            />
+          </div>
+          <div
+            className="c9"
+          >
+            <span
+              className="c10"
+            >
+              test
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c11"
+      id="layer-18"
+    >
+      <div
+        className="c12"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInputCredentials 1`] = `
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c2 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c2:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c2:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-19"
+    >
+      <div
+        className="c2"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="username"
+          value="test"
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-20"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInputCredentials 2`] = `
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+
+.c7 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c11 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c10 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c9 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c3:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c3:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c3:focus-within .c8 {
+  background-color: rgb(82,82,82);
+}
+
+.c3:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c3:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c4 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c4::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c4:read-only {
+  opacity: 0.48;
+}
+
+.c4::-ms-reveal,
+.c4::-ms-clear {
+  display: none;
+}
+
+.c6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  height: inherit;
+  padding: 0 8px;
+  color: rgb(204,204,204);
+}
+
+.c2:hover .c5 {
+  color: rgb(122,122,122);
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-21"
+    >
+      <div
+        className="c2 c3"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c4"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="password"
+          value="test"
+        />
+        <div
+          className="c5 c6"
+          onClick={[Function]}
+        >
+          <span
+            className="c7"
+            role="img"
+            size="small"
+          >
+            <svg
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 4C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="c8 c9"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c10"
+      id="layer-22"
+    >
+      <div
+        className="c11"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TextInputCredentials 3`] = `
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+
+.c7 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c11 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c10 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c9 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c3:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c3:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c3:focus-within .c8 {
+  background-color: rgb(82,82,82);
+}
+
+.c3:focus-within .Input__ErrorLine-sc-15wizum-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c3:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c4 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c4::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c4:read-only {
+  opacity: 0.48;
+}
+
+.c4::-ms-reveal,
+.c4::-ms-clear {
+  display: none;
+}
+
+.c6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  height: inherit;
+  padding: 0 8px;
+  color: rgb(204,204,204);
+}
+
+.c2:hover .c5 {
+  color: rgb(122,122,122);
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-23"
+    >
+      <div
+        className="c2 c3"
+        disabled={false}
+        width="full"
+      >
+        <input
+          autoCapitalize="off"
+          autoComplete="off"
+          autoCorrect="off"
+          className="c4"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          spellCheck={false}
+          type="password"
+          value="test"
+        />
+        <div
+          className="c5 c6"
+          onClick={[Function]}
+        >
+          <span
+            className="c7"
+            role="img"
+            size="small"
+          >
+            <svg
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 4C7 4 2.73 7.11 1 11.5 2.73 15.89 7 19 12 19s9.27-3.11 11-7.5C21.27 7.11 17 4 12 4zm0 12.5c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="c8 c9"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c10"
+      id="layer-24"
+    >
+      <div
+        className="c11"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`TextInput TimeInput 1`] = `
+.c14 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c14 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c22 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c25 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c29 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c28 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.c9 {
+  width: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 32px;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  padding: 2px;
+  border: 0 solid transparent;
+  border-radius: 4px;
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.c10 .c11 {
+  padding: 0 4px 0 8px;
+}
+
+.c10 > div > span > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
+.c10:hover {
+  background-color: rgb(245,245,245);
+}
+
+.c10:focus {
+  outline: none;
+  background-color: transparent;
+  border: 2px solid rgb(61,61,61);
+  padding: 0;
+}
+
+.c10:active {
+  background-color: rgb(240,240,240);
+  border: none;
+  padding: 2px;
+}
+
+.c24 {
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgb(82,82,82);
+  cursor: default;
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c27 {
+  color: rgb(82,82,82);
+  margin-left: 8px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.c13 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c2 {
+  display: grid;
+  grid-template-columns: 144px;
+  grid-column-gap: 8px;
+  -webkit-align-items: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+
+.c7 {
+  display: grid;
+  grid-template-columns: 72px 64px;
+  grid-column-gap: 8px;
+  -webkit-align-items: end;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+}
+
+.c16 {
+  color: rgb(41,41,41);
+  line-height: 16px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 40px;
+}
+
+.c18 {
+  position: relative;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(41,41,41);
+  height: 100%;
+  min-width: 8px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.c20 {
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 0 0 0;
+}
+
+.c21 {
+  padding: 0 8px;
+  position: relative;
+  bottom: -50%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: text;
+}
+
+.c6 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 32px;
+}
+
+.c3:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c3:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c3:focus-within .c5 {
+  background-color: rgb(82,82,82);
+}
+
+.c3:focus-within .c19 {
+  background-color: rgb(41,41,41);
+}
+
+.c3:focus-within .c17 {
+  border-bottom: 1px solid transparent;
+}
+
+.c8 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 32px;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c8:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c8:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c8:focus-within .c5 {
+  background-color: rgb(82,82,82);
+}
+
+.c8:focus-within .c19 {
+  background-color: rgb(41,41,41);
+}
+
+.c8:focus-within .c17 {
+  border-bottom: 1px solid transparent;
+}
+
+.c15 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+  background-color: rgb(224,224,224);
+  border-bottom: none;
+}
+
+.c15:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c15:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c15:focus-within .c5 {
+  background-color: rgb(82,82,82);
+}
+
+.c15:focus-within .c19 {
+  background-color: rgb(41,41,41);
+}
+
+.c15:focus-within .c17 {
+  border-bottom: 1px solid transparent;
+}
+
+.c15:hover {
+  background-color: rgb(224,224,224);
+  border-bottom: none;
+}
+
+.c15:focus-within {
+  background-color: rgb(224,224,224);
+  border-bottom: none;
+}
+
+.c23 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 100%;
+  background-color: rgb(245,245,245);
+  box-sizing: border-box;
+  border-width: 0;
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  height: 40px;
+}
+
+.c23:hover {
+  border-bottom: 1px solid rgb(102,102,102);
+  background-color: rgb(240,240,240);
+}
+
+.c23:focus-within {
+  outline: none;
+  border-bottom: 2px solid transparent;
+  background-color: rgb(245,245,245);
+}
+
+.c23:focus-within .c5 {
+  background-color: rgb(82,82,82);
+}
+
+.c23:focus-within .c19 {
+  background-color: rgb(41,41,41);
+}
+
+.c23:focus-within .c17 {
+  border-bottom: 1px solid transparent;
+}
+
+.c4 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  outline: none;
+}
+
+.c4::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c4:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c4:read-only {
+  opacity: 0.48;
+}
+
+.c4::-ms-reveal,
+.c4::-ms-clear {
+  display: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-45"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          width="full"
+        >
+          <input
+            autoCapitalize="off"
+            autoComplete="off"
+            autoCorrect="off"
+            className="c4"
+            disabled={false}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            spellCheck={false}
+            type="text"
+            value="00:00:00"
+          />
+          <div
+            className="c5 c6"
+          />
+        </div>
+      </div>
+      <div
+        className="c7"
+      >
+        <div
+          className="c8"
+          disabled={true}
+          width="full"
+        >
+          <input
+            autoCapitalize="off"
+            autoComplete="off"
+            autoCorrect="off"
+            className="c4"
+            disabled={true}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            readOnly={true}
+            spellCheck={false}
+            type="text"
+            value="10:00"
+          />
+          <div
+            className="c5 c6"
+          />
+        </div>
+        <div
+          className="c9"
+          width="full"
+        >
+          <div
+            className="c10"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            onPointerDown={[Function]}
+            role="button"
+            tabIndex={0}
+          >
+            <div
+              className="c11 c12"
+            >
+              <span
+                className="c13"
+              >
+                AM
+              </span>
+              <span
+                className="c14"
+                role="img"
+                size="medium"
+              >
+                <svg
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0 0h24v24H0V0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c2"
+      >
+        <div
+          className="c15"
+          disabled={false}
+          width="full"
+        >
+          <input
+            autoCapitalize="off"
+            autoComplete="off"
+            autoCorrect="off"
+            className="c4"
+            disabled={false}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            spellCheck={false}
+            type="text"
+            value="00:00"
+          />
+          <div
+            className="c16"
+          >
+            <div
+              className="c17 c18"
+            >
+              <div
+                className="c19 c20"
+              />
+            </div>
+            <div
+              className="c21"
+            >
+              <span
+                className="c22"
+              >
+                MM:SS
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="c2"
+      >
+        <div
+          className="c23"
+          disabled={false}
+          width="full"
+        >
+          <input
+            autoCapitalize="off"
+            autoComplete="off"
+            autoCorrect="off"
+            className="c4"
+            disabled={false}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            spellCheck={false}
+            type="text"
+            value="00"
+          />
+          <div
+            className="c5 c6"
+          />
+        </div>
+      </div>
+      <div
+        className="c2"
+      >
+        <div
+          className="c23"
+          disabled={false}
+          width="full"
+        >
+          <input
+            autoCapitalize="off"
+            autoComplete="off"
+            autoCorrect="off"
+            className="c4"
+            disabled={false}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            spellCheck={false}
+            type="text"
+            value="00"
+          />
+          <div
+            className="c5 c6"
+          />
+        </div>
+      </div>
+      <div>
+        <div
+          className="c24"
+        >
+          <span
+            className="c25"
+          >
+            test
+          </span>
+        </div>
+        <div
+          className="c26"
+        >
+          <div
+            className="c7"
+          >
+            <div
+              className="c23"
+              disabled={false}
+              width="full"
+            >
+              <input
+                autoCapitalize="off"
+                autoComplete="off"
+                autoCorrect="off"
+                className="c4"
+                disabled={false}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                spellCheck={false}
+                type="text"
+                value="10"
+              />
+              <div
+                className="c5 c6"
+              />
+            </div>
+          </div>
+          <span
+            className="c22 c27"
+          >
+            MM
+          </span>
+        </div>
+      </div>
+      <div>
+        <div
+          className="c24"
+        >
+          <span
+            className="c25"
+          >
+            test
+          </span>
+        </div>
+        <div
+          className="c26"
+        >
+          <div
+            className="c2"
+          >
+            <div
+              className="c23"
+              disabled={false}
+              width="full"
+            >
+              <input
+                autoCapitalize="off"
+                autoComplete="off"
+                autoCorrect="off"
+                className="c4"
+                disabled={false}
+                onChange={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                spellCheck={false}
+                type="text"
+                value="00"
+              />
+              <div
+                className="c5 c6"
+              />
+            </div>
+          </div>
+          <span
+            className="c22 c27"
+          >
+            MM
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c28"
+      id="layer-46"
+    >
+      <div
+        className="c29"
+      />
+    </div>
+  </div>
+</div>
+`;

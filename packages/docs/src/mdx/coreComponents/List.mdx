@@ -1,0 +1,68 @@
+export const meta = {
+  name: 'List',
+  route: '/components/list',
+  menu: 'Components',
+}
+
+import { List, ListItem, Typography } from 'practical-react-components-core'
+
+# List
+
+Lists are a continuous group of text or images. They are composed of items
+containing primary and supplemental actions, which are represented by icons and text.
+
+## Demo
+
+export const CONTROLLER_LIST = [
+  { id: 'bla1', description: '192.168.0.100:8080' },
+  { id: 'bla2', description: '192.168.0.100:8080' },
+]
+
+<div
+  style={{
+    padding: '2px',
+    display: 'inline-grid',
+    gridGap: '10px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
+    width: '100%',
+  }}
+>
+  <List>
+    {CONTROLLER_LIST.map(controller => (
+      <ListItem key={controller.id}>
+        <Typography>{controller.description}</Typography>
+      </ListItem>
+    ))}
+  </List>
+</div>
+
+## Basic usage
+
+```typescript type=live
+<List>
+  {[
+    { id: 'bla1', description: '192.168.0.100:8080' },
+    { id: 'bla2', description: '192.168.0.100:8080' },
+  ].map(controller => (
+    <ListItem key={controller.id}>
+      <Typography>{controller.description}</Typography>
+    </ListItem>
+  ))}
+</List>
+```
+
+## List Props
+
+List forwards all unknown props to the base native `<ul>` component. See
+[`<ul>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) for more
+details on which additional props that are available.
+
+<Props of="List" />
+
+## ListItem Props
+
+ListItem forwards all unknown props to the base native `<li>` component. See
+[`<li>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li) for more
+details on which additional props that are available.
+
+<Props of="ListItem" />

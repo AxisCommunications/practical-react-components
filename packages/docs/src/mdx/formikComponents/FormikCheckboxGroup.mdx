@@ -1,0 +1,101 @@
+export const meta = {
+  name: 'FormikCheckboxGroup',
+  route: '/formik/FormikCheckboxGroup',
+  menu: 'Formik',
+}
+
+# FormikCheckboxGroup
+
+A formik component that wraps multiple checkbox components.
+Displays checkbox options in a grid with two rows, each row containing half of the options.
+
+## Demo
+
+```typescript type=demo
+<FormikDemo initialValues={{ months: [5] }}>
+  <FormikCheckboxGroupField
+    name="months"
+    label="Months"
+    options={[
+      { label: 'January', value: 1 },
+      { label: 'February', value: 2 },
+      { label: 'March', value: 3 },
+      { label: 'April', value: 4 },
+      { label: 'May', value: 5 },
+      { label: 'June', value: 6 },
+      { label: 'July', value: 7 },
+      { label: 'August', value: 8 },
+      { label: 'September', value: 9 },
+      { label: 'October', value: 10 },
+      { label: 'November', value: 11 },
+      { label: 'December', value: 12 },
+    ]}
+  />
+</FormikDemo>
+```
+
+## Usage in code
+
+```typescript
+import React, { useMemo, useCallback } from 'react'
+import { useFormik, FormikProvider } from 'formik'
+import { FormikCheckboxGroupField } from 'practical-react-components-formik'
+import * as yup from 'yup'
+
+const MyComponent = () => {
+  const validationSchema = useMemo(
+    () =>
+      yup.object().shape({
+        month: yup.array().required(),
+      }),
+    []
+  )
+  const options = useMemo(
+    () => [
+      { label: 'January', value: 1 },
+      { label: 'February', value: 2 },
+      { label: 'March', value: 3 },
+      { label: 'April', value: 4 },
+      { label: 'May', value: 5 },
+      { label: 'June', value: 6 },
+      { label: 'July', value: 7 },
+      { label: 'August', value: 8 },
+      { label: 'September', value: 9 },
+      { label: 'October', value: 10 },
+      { label: 'November', value: 11 },
+      { label: 'December', value: 12 },
+    ],
+    []
+  )
+  const initialValues = useMemo(
+    () => ({
+      months: [1],
+    }),
+    // Initial values that should not change during
+    // re-renders as formik handles state by itself
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  )
+  const onSubmit = useCallback((values: IFormikValues) => {
+    /* Save data here */
+  }, [])
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  })
+  return (
+    <FormikProvider value={formik}>
+      <FormikCheckboxGroupField
+        name="months"
+        label="Months"
+        options={options}
+      />
+    </FormikProvider>
+  )
+}
+```
+
+## Props
+
+<Props of="FormikCheckboxGroup" />

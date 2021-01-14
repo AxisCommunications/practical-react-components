@@ -1,0 +1,222 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinners Spinner 1`] = `
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.c3 {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: rgb(240,240,240);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-animation: hPEoKG linear infinite;
+  animation: hPEoKG linear infinite;
+  border-style: solid;
+  border-left: 2px solid rgb(82,82,82);
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.c3:dir(rtl) {
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.c5 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c4 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          type="primary"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c4"
+      id="layer-2"
+    >
+      <div
+        className="c5"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Spinners Spinner 2`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.c3 {
+  width: 32px;
+  height: 32px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: rgb(240,240,240);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-animation: hPEoKG linear infinite;
+  animation: hPEoKG linear infinite;
+  border-style: dashed;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+.c3:dir(rtl) {
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.c4 {
+  margin-top: 8px;
+  color: rgb(41,41,41);
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          type="dashed"
+        />
+        <div
+          className="c4"
+        >
+          <span
+            className="c5"
+          >
+            test
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-4"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,379 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Droppable Droppable 1`] = `
+.c7 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c3 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c4 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: block;
+  color: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  padding: 4px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.c2 {
+  border: 1px dashed rgb(61,61,61);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 12px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px 24px;
+  cursor: pointer;
+}
+
+.c5 {
+  display: none;
+}
+
+.c6 {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  color: rgb(41,41,41);
+}
+
+.c8 {
+  white-space: initial;
+  word-wrap: break-word;
+}
+
+.c10 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c9 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+        draggable={false}
+        onClick={[Function]}
+        onDragEnter={[Function]}
+        onDragLeave={[Function]}
+        onDragOver={[Function]}
+        onDrop={[Function]}
+      >
+        <span
+          className="c3 c4"
+          role="img"
+          size="medium"
+        >
+          <svg
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M 18.54,5.16 H 17 v 1.46 h 1.63 V 16.89 H 5.45 V 6.62 H 7 V 5.16 H 5.45 A 1.46,1.46 0 0 0 4,6.58 v 10.29 a 1.46,1.46 0 0 0 1.47,1.47 H 18.54 A 1.47,1.47 0 0 0 20,16.87 V 6.62 A 1.47,1.47 0 0 0 18.54,5.16 Z M 12.72,5.14 h -1.46 v 5.61 H 9.08 l 2.91,2.93 2.91,-2.93 h -2.18 z"
+            />
+          </svg>
+        </span>
+        <input
+          className="c5"
+          multiple={false}
+          onChange={[Function]}
+          type="file"
+        />
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            Click me
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c9"
+      id="layer-2"
+    >
+      <div
+        className="c10"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Droppable Droppable 2`] = `
+.c7 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c9 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c3 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c4 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: block;
+  color: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  padding: 4px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.c2 {
+  border: 1px dashed rgb(61,61,61);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 12px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px 24px;
+  cursor: pointer;
+}
+
+.c5 {
+  display: none;
+}
+
+.c6 {
+  display: grid;
+  grid-gap: 4px;
+  grid-template-columns: auto auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  color: rgb(41,41,41);
+}
+
+.c8 {
+  white-space: initial;
+  word-wrap: break-word;
+}
+
+.c11 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c10 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+        draggable={false}
+        onClick={[Function]}
+        onDragEnter={[Function]}
+        onDragLeave={[Function]}
+        onDragOver={[Function]}
+        onDrop={[Function]}
+      >
+        <span
+          className="c3 c4"
+          role="img"
+          size="medium"
+        >
+          <svg
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M 18.54,5.16 H 17 v 1.46 h 1.63 V 16.89 H 5.45 V 6.62 H 7 V 5.16 H 5.45 A 1.46,1.46 0 0 0 4,6.58 v 10.29 a 1.46,1.46 0 0 0 1.47,1.47 H 18.54 A 1.47,1.47 0 0 0 20,16.87 V 6.62 A 1.47,1.47 0 0 0 18.54,5.16 Z M 12.72,5.14 h -1.46 v 5.61 H 9.08 l 2.91,2.93 2.91,-2.93 h -2.18 z"
+            />
+          </svg>
+        </span>
+        <input
+          className="c5"
+          multiple={false}
+          onChange={[Function]}
+          type="file"
+        />
+        <div
+          className="c6"
+        >
+          <span
+            className="c7 c8"
+          >
+            Click me
+          </span>
+        </div>
+        <p
+          className="c9"
+        >
+          some formats
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c10"
+      id="layer-4"
+    >
+      <div
+        className="c11"
+      />
+    </div>
+  </div>
+</div>
+`;

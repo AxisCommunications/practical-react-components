@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lists List 1`] = `
+.c2 {
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  color: rgb(41,41,41);
+}
+
+.c3 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 40px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+
+.c3:hover {
+  background-color: rgb(245,245,245);
+}
+
+.c5 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c4 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <ul
+        className="c2"
+      >
+        <li
+          className="c3"
+        >
+          <span>
+            Test
+          </span>
+        </li>
+        <li
+          className="c3"
+        >
+          <span>
+            Test
+          </span>
+        </li>
+        <li
+          className="c3"
+        >
+          <span>
+            Test
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c4"
+      id="layer-2"
+    >
+      <div
+        className="c5"
+      />
+    </div>
+  </div>
+</div>
+`;

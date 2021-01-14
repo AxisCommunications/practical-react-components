@@ -1,0 +1,52 @@
+export const meta = {
+  name: 'Chip',
+  route: '/components/chip',
+  menu: 'Components',
+}
+
+import { InfoIcon } from 'practical-react-components-icons'
+import { Chip } from 'practical-react-components-core'
+
+# Chip
+
+Chips are compact elements that represent an input, attribute, or action.
+
+## Demo
+
+<div
+  style={{
+    padding: '2px',
+    display: 'inline-grid',
+    gridGap: '10px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
+    width: '100%',
+  }}
+>
+  <Chip text="good chip" />
+  <Chip text="bad chip" error={true} />
+  <Chip text="inactive chip" disabled={true} />
+  <Chip text="superlong text inside this super chip" />
+  <Chip text="with icon" icon={InfoIcon} />
+  <Chip text="can be removed" onRemove={() => {}} />
+</div>
+
+## Basic usage
+
+```typescript type=live
+<>
+  <Chip text="good chip" />
+  <Chip text="bad chip" error={true} />
+  <Chip text="inactive chip" disabled={true} />
+  <Chip text="superlong text inside this super chip" />
+  <Chip text="with icon" icon={InfoIcon} />
+  <Chip text="can be removed" onRemove={() => {}} />
+</>
+```
+
+## Props
+
+Chip forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Chip" />

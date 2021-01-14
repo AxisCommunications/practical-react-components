@@ -1,0 +1,59 @@
+export const meta = {
+  name: 'Droppable',
+  route: '/components/droppable',
+  menu: 'Components',
+}
+
+import { useState } from 'react'
+
+import { Droppable } from 'practical-react-components-core'
+
+# Droppable
+
+Droppable creates a drop-zone for users to drag and drop files for the purpose of storage, uploading etc.
+
+## Demo
+
+export const DemoComponent = ({}) => {
+  const [selectedFile, setsetSelectedFile] = useState(null)
+  const hasSelectedFile = selectedFile !== null
+  const supportedFormats = hasSelectedFile
+    ? undefined
+    : '(*.eap, *.zip, *.opk.tar.gz)'
+  const onFileChange = file => {
+    if (file === undefined) {
+      return
+    }
+    setsetSelectedFile(file)
+  }
+  return (
+    <Droppable
+      inputLabel="Click to browse or drag it here."
+      supportedFormats={supportedFormats}
+      selectedFileName={hasSelectedFile ? selectedFile.name : undefined}
+      onFileChange={onFileChange}
+    />
+  )
+}
+
+export const onClick = () => {}
+
+<DemoComponent />
+
+## Basic usage
+
+```typescript type=live
+<Droppable
+  inputLabel="Click to browse or drag it here."
+  supportedFormats="supportedFormats"
+  onFileChange={() => {}}
+/>
+```
+
+## Props
+
+Droppable forwards all unknown props to the base native `<input type="file">` component. See
+[`<input type="file">` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file) for more
+details on which additional props that are available.
+
+<Props of="Droppable" />

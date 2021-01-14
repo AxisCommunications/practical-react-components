@@ -1,0 +1,48 @@
+export const meta = {
+  name: 'PopOver',
+  route: '/components/popover',
+  menu: 'Components',
+}
+
+import { useState } from 'react'
+import { PopOVer, Typography } from 'practical-react-components-core'
+
+# PopOver
+
+A `PopOver` component is used to render an element relative to another (an anchor),
+but outside of the DOM tree of the anchor. This way, the rendered element
+can escape the parent anchor.
+
+This component is intended as a base for other components such as e.g. `Menu` or `Tooltip`.
+
+The `PopOver` component is rendered with `position: fixed;` and it does not follow
+the anchor around in case it would move. This is intentional to keep the component
+as simple as possible (i.e. only computing position on render, not tracking the anchor).
+Therefore, in e.g. `Menu`, the `PopOver` itself is hidden whenever any parent is scrolled.
+
+## Example usage
+
+```typescript type=code
+import { useState } from 'react'
+
+const MyPopOver = () => {
+  const [anchorEl, setAnchorEl] = useState(null)
+  return (
+    <div ref={setAnchorEl}>
+      <PopOver anchorEl={anchorEl}>
+        <div style={{ backgroundColor: 'pink' }}>
+          <Typography>{'Hello'}</Typography>
+        </div>
+      </PopOver>
+    </div>
+  )
+}
+```
+
+## Props
+
+PopOver forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="PopOver" />

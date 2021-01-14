@@ -1,0 +1,57 @@
+export const meta = {
+  name: 'Icons',
+  route: '/icons',
+}
+
+import styled from 'styled-components'
+import { Typography, spacing, Icon } from 'practical-react-components-core'
+import * as Icons from 'practical-react-components-icons'
+
+# Icons
+
+export const IconsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`
+
+export const IconContainer = styled.div`
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+export const IconName = styled.div`
+  padding: ${spacing.large} 0;
+`
+
+export const ReactUiIcons = () => {
+  return (
+    <IconsContainer>
+      {Object.entries(Icons)
+        .sort((a, b) => a[0].localeCompare(b[0]))
+        .map(([name, Svg]) => (
+          <IconContainer key={name}>
+            <Icon size="medium" icon={Svg} />
+            <IconName>
+              <Typography variant="default-text">{name}</Typography>
+            </IconName>
+          </IconContainer>
+        ))}
+    </IconsContainer>
+  )
+}
+
+<ReactUiIcons />
+
+## Usage in code
+
+```typescript
+import { Icon } from 'practical-react-components-core'
+import { CloseIcon } from 'practical-react-components-icons'
+
+export const MyComponent = () => <Icon size="medium" icon={CloseIcon} />
+```

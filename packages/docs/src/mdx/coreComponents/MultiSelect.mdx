@@ -1,0 +1,95 @@
+export const meta = {
+  name: 'MultiSelect',
+  route: '/components/multiSelect',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import { useState } from 'react'
+
+import { Paper, MultiSelect } from 'practical-react-components-core'
+
+# MultiSelect
+
+MultiSelect allows the user to select multiple values in the dropdown list.
+
+## Demo
+
+export const tzOptions = [
+  { value: 'Africa/Abidjan', label: 'Africa + Abidjan' },
+  { value: 'Africa/Accra', label: 'Africa + Accra' },
+  { value: 'Africa/Addis_Ababa', label: 'Africa + Addis_Ababa' },
+  { value: 'Africa/Algiers', label: 'Africa + Algiers' },
+  { value: 'Africa/Asmara', label: 'Africa + Asmara' },
+  { value: 'Africa/Asmera', label: 'Africa + Asmera' },
+  { value: 'Africa/Bamako', label: 'Africa + Bamako' },
+  { value: 'Africa/Bangui', label: 'Africa + Bangui' },
+  { value: 'Africa/Banjul', label: 'Africa + Banjul' },
+  { value: 'Africa/Bissau', label: 'Africa + Bissau' },
+]
+
+export const DemoComponent = ({}) => {
+  const [selected, setSelected] = useState([])
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+      }}
+    >
+      <MultiSelect
+        options={tzOptions}
+        placeholder="Select..."
+        width="full"
+        value={selected}
+        onChange={setSelected}
+        variant="framed"
+        noOptionsLabel="No options"
+      />
+    </div>
+  )
+}
+
+<DemoComponent />
+
+## Usage in code
+
+```typescript
+import React, { useState } from 'react'
+import { MultiSelect } from 'practical-react-components-core'
+
+const MyComponent = () => {
+  const tzOptions = [
+    { value: 'Africa/Abidjan', label: 'Africa + Abidjan' },
+    { value: 'Africa/Accra', label: 'Africa + Accra' },
+    { value: 'Africa/Addis_Ababa', label: 'Africa + Addis_Ababa' },
+    { value: 'Africa/Algiers', label: 'Africa + Algiers' },
+    { value: 'Africa/Asmara', label: 'Africa + Asmara' },
+    { value: 'Africa/Asmera', label: 'Africa + Asmera' },
+    { value: 'Africa/Bamako', label: 'Africa + Bamako' },
+    { value: 'Africa/Bangui', label: 'Africa + Bangui' },
+    { value: 'Africa/Banjul', label: 'Africa + Banjul' },
+    { value: 'Africa/Bissau', label: 'Africa + Bissau' },
+  ]
+  const [selected, setSelected] = useState([])
+
+  return (
+    <MultiSelect
+      options={tzOptions}
+      placeholder="Select..."
+      width="small"
+      value={selected}
+      onChange={setSelected}
+      noOptionsLabel="No options"
+    />
+  )
+}
+```
+
+## Props
+
+MultiSelect forwards all props to `BaseSelect`.
+See [`BaseSelect props`](#components/select)
+for more details on which additional props that are available.
+
+<Props of="MultiSelect" />

@@ -1,0 +1,151 @@
+export const meta = {
+  name: 'Stepper',
+  route: '/components/stepper',
+  menu: 'Components',
+}
+
+import { useState } from 'react'
+import {
+  TextInputField,
+  Typography,
+  RadioButtonGroupField,
+  Stepper,
+} from 'practical-react-components-core'
+
+# Stepper
+
+Steppers convey progress through numbered steps. It provides a wizard-like workflow.
+
+Steppers display progress through a sequence of logical and numbered steps.
+They may also be used for navigation.
+Steppers may display a transient feedback message after a step is saved.
+
+## Demo
+
+export const onClick = () => {}
+
+export const DemoComponent = ({}) => {
+  const options = [
+    { value: 'automatically', label: 'Automatically' },
+    { value: 'manually', label: 'Manually' },
+  ]
+  const [selected, setSelected] = useState('automatically')
+  return (
+    <Stepper
+      className="my-stepper"
+      steps={[
+        {
+          label: 'Step 1 Title',
+          content: (
+            <div>
+              <RadioButtonGroupField
+                name="test-group"
+                label="Choose something"
+                options={options}
+                value={selected}
+                onValueChange={setSelected}
+              />
+            </div>
+          ),
+          className: 'my-step',
+        },
+        {
+          label: 'Step 2 Title',
+          content: (
+            <div>
+              <TextInputField label="Name" value="" placeholder="First name" />
+            </div>
+          ),
+        },
+        {
+          label: 'Step 3 Title (done)',
+          content: (
+            <Typography variant="navigation-label">You are now done</Typography>
+          ),
+        },
+      ]}
+      prevAction={{
+        label: 'Back',
+        onClick: () => {},
+      }}
+      nextAction={{
+        label: 'Next',
+        onClick: () => {},
+      }}
+      completeAction={{
+        label: 'Install',
+        onClick: () => {},
+      }}
+      resetAction={{
+        label: 'Reset',
+        onClick: () => {},
+      }}
+    />
+  )
+}
+
+<DemoComponent />
+
+## Basic usage
+
+```typescript type=live
+<Stepper
+  steps={[
+    {
+      label: 'Step 1 Title',
+      content: (
+        <div>
+          <RadioButtonGroupField
+            name="test-group"
+            label="Choose something"
+            options={[
+              { value: 'automatically', label: 'Automatically' },
+              { value: 'manually', label: 'Manually' },
+            ]}
+            value=""
+            onValueChange={() => {}}
+          />
+        </div>
+      ),
+    },
+    {
+      label: 'Step 2 Title',
+      content: (
+        <div>
+          <TextInputField label="Name" value="" placeholder="First name" />
+        </div>
+      ),
+    },
+    {
+      label: 'Step 3 Title (done)',
+      content: (
+        <Typography variant="navigation-label">You are now done</Typography>
+      ),
+    },
+  ]}
+  prevAction={{
+    label: 'Back',
+    onClick: () => {},
+  }}
+  nextAction={{
+    label: 'Next',
+    onClick: () => {},
+  }}
+  completeAction={{
+    label: 'Install',
+    onClick: () => {},
+  }}
+  resetAction={{
+    label: 'Reset',
+    onClick: () => {},
+  }}
+/>
+```
+
+## Props
+
+Stepper forwards all unknown props to the base native `<div>` component. Also each step in steps forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Stepper" />

@@ -1,0 +1,65 @@
+export const meta = {
+  name: 'TextArea ✔',
+  route: '/components/textarea',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import { TextArea, TextAreaField } from 'practical-react-components-core'
+
+# TextArea
+
+The textarea tag defines a multi-line text input control. A text area can hold an unlimited number of characters.
+
+## Demo
+
+export const Wrapper = styled.div`
+  padding: 2px;
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  width: 100%;
+`
+
+export const onClick = () => {}
+
+<Wrapper>
+  <TextArea {...props} placeholder="Placeholder" />
+</Wrapper>
+<Wrapper>
+  <TextAreaField {...props} placeholder="Placeholder" label="TextArea label" />
+</Wrapper>
+<Wrapper>
+  <TextAreaField
+    {...props}
+    placeholder="Placeholder"
+    error="We have an error"
+  />
+</Wrapper>
+
+## Basic usage
+
+### Without label
+
+```typescript type=live
+<TextArea value="" onValueChange={() => {}} placeholder="Placeholder" />
+```
+
+### With label
+
+```typescript type=live
+<TextAreaField
+  label="TextArea label"
+  value=""
+  onValueChange={() => {}}
+  placeholder="Placeholder"
+/>
+```
+
+## Props
+
+TextArea forwards all unknown props to the base native `<textarea>` component. See
+[`<textarea>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) for more
+details on which additional props that are available.
+
+<Props of="TextArea" />

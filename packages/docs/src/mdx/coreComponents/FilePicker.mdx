@@ -1,0 +1,44 @@
+export const meta = {
+  name: 'FilePicker',
+  route: '/components/filepicker',
+  menu: 'Components',
+}
+
+import { useCallback } from 'react'
+
+import { FilePicker } from 'practical-react-components-core'
+
+# FilePicker
+
+FilePicker allows the user to browse his or hers folders in order to select a file for usage.
+
+## Demo
+
+export const DemoComponent = ({}) => {
+  const onFileChange = useCallback(file => console.log(file), [])
+  return (
+    <>
+      <FilePicker
+        onFileChange={onFileChange}
+        variant="primary"
+        label="Choose file"
+      />
+    </>
+  )
+}
+
+<DemoComponent />
+
+## Basic usage
+
+```typescript type=live
+<FilePicker onFileChange={() => {}} variant="primary" label="Choose file" />
+```
+
+## Props
+
+FilePicker forwards all unknown props to the base native `<input type="file">` component. See
+[`<input type="file">` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file) for more
+details on which additional props that are available.
+
+<Props of="FilePicker" />

@@ -1,0 +1,101 @@
+export const meta = {
+  name: 'Menu ✔',
+  route: '/components/menu',
+  menu: 'Components',
+}
+
+import {
+  MoreIcon,
+  CheckIcon,
+  ColumnsIcon,
+} from 'practical-react-components-icons'
+
+import { Menu } from 'practical-react-components-core'
+
+# Menu
+
+A Menu displays a list of choices on a temporary surface. It appears when the user interacts with a button, or other control.
+
+## Demo
+
+export const onClickHandler = label => {
+  return () => alert(`clicked item: "${label}"`)
+}
+
+export const ITEMS = [
+  { icon: CheckIcon, label: 'Enabled item' },
+  { icon: ColumnsIcon, label: 'Column options', divider: true },
+  { label: 'Item 3', disabled: true, danger: true },
+]
+
+<div
+  style={{
+    padding: '2px',
+    display: 'inline-grid',
+    gridGap: '10px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
+    width: '100%',
+  }}
+>
+  <Menu
+    items={ITEMS.map(({ label, ...item }) => ({
+      ...item,
+      label,
+      onClick: onClickHandler(label),
+    }))}
+  />
+  <Menu
+    icon={MoreIcon}
+    items={ITEMS.map(({ label, ...item }) => ({
+      ...item,
+      label,
+      onClick: onClickHandler(label),
+    }))}
+  />
+  <Menu
+    items={ITEMS.map(({ label, ...item }) => ({
+      ...item,
+      label,
+      onClick: onClickHandler(label),
+    }))}
+    disabled={true}
+  />
+  <Menu
+    icon={MoreIcon}
+    items={ITEMS.map(({ label, ...item }) => ({
+      ...item,
+      label,
+      onClick: onClickHandler(label),
+    }))}
+    disabled={true}
+  />
+</div>
+
+## Basic usage
+
+```typescript type=live
+<Menu
+  icon={MoreIcon}
+  items={[
+    { icon: CheckIcon, label: 'Item 1', onClick: () => {} },
+    { label: 'Item 2', onClick: () => {}, divider: true },
+    { label: 'Item 3', onClick: () => {}, disabled: true, danger: true },
+  ]}
+/>
+```
+
+## Menu Props
+
+Menu forwards all props to `PopOver`.
+See [`PopOver props`](#components/popover)
+for more details on which additional props that are available.
+
+<Props of="Menu" />
+
+## MenuWrapper Props
+
+MenuWrapper forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="MenuWrapper" />

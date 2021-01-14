@@ -1,0 +1,640 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StrengthIndicator Levels 1`] = `
+.c6 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c3 {
+  background-color: rgb(240,240,240);
+  height: 4px;
+  width: 240px;
+  overflow: hidden;
+}
+
+.c4 {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.c5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  margin-left: 16px;
+  line-height: 0;
+  color: rgb(41,41,41);
+}
+
+.c2 {
+  height: 16px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+            style={
+              Object {
+                "transform": "scaleX(0)",
+              }
+            }
+          />
+        </div>
+        <div
+          className="c5"
+        >
+          <span
+            className="c6"
+          >
+            test
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-2"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StrengthIndicator Levels 2`] = `
+.c6 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c3 {
+  background-color: rgb(240,240,240);
+  height: 4px;
+  width: 240px;
+  overflow: hidden;
+}
+
+.c4 {
+  background-color: rgb(41,41,41);
+  height: 100%;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.c5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  margin-left: 16px;
+  line-height: 0;
+  color: rgb(41,41,41);
+}
+
+.c2 {
+  height: 16px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+            style={
+              Object {
+                "transform": "scaleX(0.01)",
+              }
+            }
+          />
+        </div>
+        <div
+          className="c5"
+        >
+          <span
+            className="c6"
+          >
+            test
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-4"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StrengthIndicator Levels 3`] = `
+.c6 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c3 {
+  background-color: rgb(240,240,240);
+  height: 4px;
+  width: 240px;
+  overflow: hidden;
+}
+
+.c4 {
+  background-color: rgb(41,41,41);
+  height: 100%;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.c5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  margin-left: 16px;
+  line-height: 0;
+  color: rgb(41,41,41);
+}
+
+.c2 {
+  height: 16px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+            style={
+              Object {
+                "transform": "scaleX(0.26)",
+              }
+            }
+          />
+        </div>
+        <div
+          className="c5"
+        >
+          <span
+            className="c6"
+          >
+            test
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-6"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StrengthIndicator Levels 4`] = `
+.c6 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c3 {
+  background-color: rgb(240,240,240);
+  height: 4px;
+  width: 240px;
+  overflow: hidden;
+}
+
+.c4 {
+  background-color: rgb(41,41,41);
+  height: 100%;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.c5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  margin-left: 16px;
+  line-height: 0;
+  color: rgb(41,41,41);
+}
+
+.c2 {
+  height: 16px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+            style={
+              Object {
+                "transform": "scaleX(0.51)",
+              }
+            }
+          />
+        </div>
+        <div
+          className="c5"
+        >
+          <span
+            className="c6"
+          >
+            test
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-8"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`StrengthIndicator Levels 5`] = `
+.c6 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c3 {
+  background-color: rgb(240,240,240);
+  height: 4px;
+  width: 240px;
+  overflow: hidden;
+}
+
+.c4 {
+  background-color: rgb(41,41,41);
+  height: 100%;
+  width: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transform-origin: left center;
+  -ms-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.c5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+  margin-left: 16px;
+  line-height: 0;
+  color: rgb(41,41,41);
+}
+
+.c2 {
+  height: 16px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-9"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+            style={
+              Object {
+                "transform": "scaleX(0.76)",
+              }
+            }
+          />
+        </div>
+        <div
+          className="c5"
+        >
+          <span
+            className="c6"
+          >
+            test
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-10"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;

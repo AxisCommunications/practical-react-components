@@ -1,0 +1,5737 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateTimePicker DatePicker 1`] = `
+.c10 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c6 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c4 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c4::-moz-focus-inner {
+  border: 0;
+}
+
+.c4:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c4:focus {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.16);
+  border: 2px solid transparent;
+}
+
+.c4:active {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c4:disabled {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c16 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c16::-moz-focus-inner {
+  border: 0;
+}
+
+.c16:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c16:active {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c16:disabled {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c19 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c19::-moz-focus-inner {
+  border: 0;
+}
+
+.c19:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c19:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c19:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c7 {
+  fill: inherit;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c5 {
+  position: relative;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 32px;
+  width: 32px;
+  min-width: unset;
+  padding: unset;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.c5:hover {
+  background-color: transparent;
+  border: 0 solid transparent;
+}
+
+.c5:hover .c8 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c5:focus {
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.c5:focus .c8 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c5:active {
+  background-color: transparent;
+}
+
+.c5:active .c8 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+.c9 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c2 {
+  padding-top: 32px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c12 {
+  width: 100%;
+  background-color: rgb(240,240,240);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  border-bottom: 2px solid rgb(255,255,255);
+}
+
+.c14 {
+  width: 100%;
+  height: 216px;
+  background-color: rgb(240,240,240);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+
+.c15 {
+  text-align: center;
+  width: 14%;
+}
+
+.c13 {
+  text-align: center;
+  width: 14%;
+  color: rgb(82,82,82);
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.c21 {
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.c11 {
+  font-size: 14px;
+}
+
+.c17 {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  min-width: unset;
+  padding: 0;
+  box-shadow: initial;
+}
+
+.c17:focus {
+  border: initial;
+  box-shadow: initial;
+}
+
+.c18 {
+  color: rgb(82,82,82);
+}
+
+.c20 {
+  color: rgb(255,255,255);
+}
+
+.c23 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c22 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-15"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <button
+            className="c4 c5"
+            onClick={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="button"
+          >
+            <span
+              className="c6 c7 "
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.71 15.88L10.83 12l3.88-3.88c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .38-.39.39-1.03 0-1.42z"
+                />
+              </svg>
+            </span>
+            <div
+              className="c8 c9"
+            />
+          </button>
+          <p
+            className="c10 c11"
+          >
+            July
+          </p>
+          <button
+            className="c4 c5"
+            onClick={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="button"
+          >
+            <span
+              className="c6 c7 "
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"
+                />
+              </svg>
+            </span>
+            <div
+              className="c8 c9"
+            />
+          </button>
+        </div>
+        <div
+          className="c12"
+        >
+          <p
+            className="c10 c13"
+          >
+            Mon
+          </p>
+          <p
+            className="c10 c13"
+          >
+            Tue
+          </p>
+          <p
+            className="c10 c13"
+          >
+            Wed
+          </p>
+          <p
+            className="c10 c13"
+          >
+            Thu
+          </p>
+          <p
+            className="c10 c13"
+          >
+            Fri
+          </p>
+          <p
+            className="c10 c13"
+          >
+            Sat
+          </p>
+          <p
+            className="c10 c13"
+          >
+            Sun
+          </p>
+        </div>
+        <div
+          className="c14"
+        >
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                1
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                2
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                3
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                4
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                5
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                6
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                7
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                8
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                9
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                10
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                11
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                12
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                13
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                14
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c19 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c20"
+                selected={true}
+              >
+                15
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                16
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                17
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                18
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                19
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                20
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                21
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                22
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                23
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                24
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                25
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                26
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                27
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                28
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                29
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                30
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          >
+            <button
+              className="c16 c17"
+              onClick={[Function]}
+            >
+              <p
+                className="c10 c18"
+                selected={false}
+              >
+                31
+              </p>
+            </button>
+          </div>
+          <div
+            className="c15"
+          />
+          <div
+            className="c15"
+          />
+          <div
+            className="c15"
+          />
+          <div
+            className="c15"
+          />
+        </div>
+        <div
+          className="c21"
+        >
+          <button
+            className="c4 c5"
+            onClick={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="button"
+          >
+            <span
+              className="c6 c7 "
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.71 15.88L10.83 12l3.88-3.88c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L8.71 11.3c-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0 .38-.39.39-1.03 0-1.42z"
+                />
+              </svg>
+            </span>
+            <div
+              className="c8 c9"
+            />
+          </button>
+          <p
+            className="c10 c11"
+          >
+            2019
+          </p>
+          <button
+            className="c4 c5"
+            onClick={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="button"
+          >
+            <span
+              className="c6 c7 "
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"
+                />
+              </svg>
+            </span>
+            <div
+              className="c8 c9"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c22"
+      id="layer-16"
+    >
+      <div
+        className="c23"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DateTimePicker DateTimePicker 1`] = `
+.c8 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 21px;
+  line-height: 32px;
+}
+
+.c24 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c37 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c9 {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: rgb(255,255,255);
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 40%;
+  padding-bottom: 4px;
+}
+
+.c11 {
+  margin-right: 8px;
+}
+
+.c12 {
+  margin-right: 8px;
+}
+
+.c17 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c17 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c39 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c39::-moz-focus-inner {
+  border: 0;
+}
+
+.c39:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c39:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c39:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c39:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c42 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c42::-moz-focus-inner {
+  border: 0;
+}
+
+.c42:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c42:focus {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.16);
+  border: 2px solid transparent;
+}
+
+.c42:active {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c42:disabled {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c46 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c47 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding-top: 32px;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c38 {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  z-index: 2;
+}
+
+.c40 {
+  border-radius: 18px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 36px;
+  height: 36px;
+  padding: 4px;
+  box-shadow: initial;
+}
+
+.c40:first-child {
+  margin-right: 8px;
+}
+
+.c43 {
+  border-radius: 18px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 36px;
+  height: 36px;
+  padding: 4px;
+  box-shadow: initial;
+  background-color: rgb(240,240,240);
+}
+
+.c43:first-child {
+  margin-right: 8px;
+}
+
+.c41 {
+  color: rgb(255,255,255);
+}
+
+.c44 {
+  color: rgb(82,82,82);
+}
+
+.c21 {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+  background-color: rgb(240,240,240);
+  cursor: Move;
+}
+
+.c22 {
+  position: absolute;
+  left: 145px;
+  top: 145px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgb(82,82,82);
+}
+
+.c36 {
+  z-index: 100;
+  width: 4px;
+  left: calc(50% - 2px);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
+.c36::before {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  height: 0;
+  top: -125px;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-bottom: 125px solid rgb(82,82,82);
+}
+
+.c36::after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  left: -24px;
+  position: absolute;
+  top: -150px;
+  color: rgb(255,255,255);
+  -webkit-transform: rotate(-300deg);
+  -ms-transform: rotate(-300deg);
+  transform: rotate(-300deg);
+  border-radius: 50%;
+  background-color: rgb(82,82,82);
+}
+
+.c36 > * {
+  -webkit-transform: rotate(-300deg);
+  -ms-transform: rotate(-300deg);
+  transform: rotate(-300deg);
+  z-index: 1000;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  left: -24px;
+  position: absolute;
+  top: -150px;
+  color: rgb(255,255,255);
+  font-size: 14px;
+}
+
+.c23 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  left: 125.00000000000001px;
+}
+
+.c23 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c25 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 16.746824526945176px;
+  left: 187.5px;
+}
+
+.c25 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c26 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 62.50000000000001px;
+  left: 233.25317547305485px;
+}
+
+.c26 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c27 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125px;
+  left: 250px;
+}
+
+.c27 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c28 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 187.5px;
+  left: 233.25317547305485px;
+}
+
+.c28 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c29 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 233.25317547305482px;
+  left: 187.5px;
+}
+
+.c29 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c30 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 250px;
+  left: 125.00000000000001px;
+}
+
+.c30 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c31 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 233.25317547305485px;
+  left: 62.50000000000003px;
+}
+
+.c31 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c32 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 187.5px;
+  left: 16.74682452694516px;
+}
+
+.c32 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c33 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125.00000000000001px;
+  left: 0px;
+}
+
+.c33 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c34 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 62.499999999999986px;
+  left: 16.746824526945176px;
+}
+
+.c34 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c35 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 16.74682452694519px;
+  left: 62.49999999999994px;
+}
+
+.c35 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c49 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c48 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c2 {
+  background-color: rgba(41,41,41,0.48);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.c3 {
+  outline: 0px;
+}
+
+.c15 {
+  box-sizing: border-box;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c15:not(:last-child) {
+  border-right: 1px solid rgb(184,184,184);
+}
+
+.c15:active {
+  z-index: 1;
+  box-shadow: -1px 0 0 5px rgba(82,82,82,0.24);
+  border-radius: 4px;
+}
+
+.c18 {
+  box-sizing: border-box;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c18:not(:last-child) {
+  border-right: 1px solid rgb(184,184,184);
+}
+
+.c16 {
+  background-color: rgb(255,255,255);
+  height: 32px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+}
+
+.c16:focus {
+  outline-color: rgb(61,61,61);
+}
+
+.c16:hover {
+  background-color: rgb(61,61,61);
+}
+
+.c19 {
+  background-color: rgb(255,255,255);
+  height: 32px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+}
+
+.c19:hover {
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c19:focus {
+  background-color: rgba(204,204,204,0.16);
+  outline-color: rgb(61,61,61);
+}
+
+.c19:active {
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c14 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(24px,1fr));
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid rgb(184,184,184);
+  border-radius: 2px;
+}
+
+.c4 {
+  background-color: rgb(255,255,255);
+  color: rgb(41,41,41);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.c7 {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+}
+
+.c6 {
+  padding: 16px 24px;
+  border-bottom: 1px solid rgb(240,240,240);
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 16px 24px;
+}
+
+.c45 {
+  padding: 0 16px 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c45 >:last-child {
+  margin-right: 8px;
+}
+
+.c5 {
+  width: 360px;
+  height: 688px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div>
+        <div
+          className="c1"
+          id="layer-4"
+        >
+          <div
+            className="c2"
+          >
+            <div
+              className="c3"
+              id="practical-modal-3"
+              tabIndex={-1}
+            >
+              <div
+                className="c4 c5"
+              >
+                <div
+                  className="c6"
+                >
+                  <div
+                    className="c7"
+                  >
+                    <p
+                      className="c8"
+                    >
+                      Change date and time
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="c6"
+                >
+                  <div
+                    className="c9"
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <svg
+                        className="c11"
+                        height="24px"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M 12.5,7 H 11 v 6 L 16.25,16.15 17,14.92 12.5,12.25 Z M 11.99,2 C 6.47,2 2,6.48 2,12 2,17.52 6.47,22 11.99,22 17.52,22 22,17.52 22,12 22,6.48 17.52,2 11.99,2 Z M 12,20 C 7.58,20 4,16.42 4,12 4,7.58 7.58,4 12,4 c 4.42,0 8,3.58 8,8 0,4.42 -3.58,8 -8,8 z"
+                        />
+                      </svg>
+                      <p
+                        className="c8"
+                      >
+                        10:25 AM
+                      </p>
+                    </div>
+                    <div
+                      className="c10"
+                    >
+                      <svg
+                        className="c12"
+                        height="24px"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15 16h4v3h-4zm-5 0h4v3h-4zm-5 0h4v3H5zm10-4h4v3h-4zm-5 0h4v3h-4zm-5 0h4v3H5zm10-4h4v3h-4zm-5 0h4v3h-4zm10.09 14H3.91A1.91 1.91 0 012 20.09V3h3v2h4V3h6v2h4V3h3v17.09A1.91 1.91 0 0120.09 22zM20 7H4v12.47a.53.53 0 00.53.53h14.94a.53.53 0 00.53-.53zm-4-3h2V3a.93.93 0 00-.93-.93h-.14A.93.93 0 0016 3zM6.93 2.07h.14A.93.93 0 018 3v1H6V3a.93.93 0 01.93-.93z"
+                        />
+                      </svg>
+                      <p
+                        className="c8"
+                      >
+                        Mon, July 15, 2019
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="c13"
+                >
+                  <div
+                    className="c14"
+                  >
+                    <div
+                      className="c15"
+                      disabled={false}
+                      onClick={[Function]}
+                      selected={true}
+                    >
+                      <div
+                        className="c16"
+                        selected={true}
+                        tabIndex={1}
+                      >
+                        <span
+                          className="c17"
+                          role="img"
+                          size="medium"
+                        >
+                          <svg
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21.18 17.58a2 2 0 01.46 0l-.09.85a1.84 1.84 0 00-.41 0 1.16 1.16 0 00-.89.35 1.31 1.31 0 00-.34.94V22H19v-4.34h.72l.12.76h.05a1.76 1.76 0 01.56-.62 1.31 1.31 0 01.73-.22zM17 22l-.13-.57a1.3 1.3 0 01-.54.47 1.78 1.78 0 01-.81.17 1.59 1.59 0 01-1.17-.39 1.6 1.6 0 01-.39-1.18v-2.84h.93v2.66a1.11 1.11 0 00.2.74.77.77 0 00.64.25 1 1 0 00.85-.34 1.92 1.92 0 00.27-1.16v-2.15h.92V22zm-4.14-2.19a2.38 2.38 0 01-.55 1.65 1.92 1.92 0 01-1.51.59 2.1 2.1 0 01-1.07-.27A1.74 1.74 0 019 21a2.67 2.67 0 01-.25-1.19 2.38 2.38 0 01.53-1.64 1.94 1.94 0 011.52-.59 1.92 1.92 0 011.49.6 2.36 2.36 0 01.57 1.63zm-3.15 0c0 1 .37 1.49 1.11 1.49.74 0 1.09-.49 1.09-1.49s-.37-1.48-1.1-1.48a.94.94 0 00-.84.38 2 2 0 00-.26 1.1zM7.62 22h-.94v-2.6H4.05V22h-.94v-5.73h.94v2.33h2.63v-2.33h.94zM5.9 15a6.7 6.7 0 01-1.24-3.9 7.2 7.2 0 0114.4 0 6.83 6.83 0 01-1.3 4h2.1a9.1 9.1 0 001-4 9 9 0 00-18-.1 8.77 8.77 0 001 4h2zm6.36-8.39H11V12l4.7 2.8.7-1.1-4-2.4V6.61z"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      className="c18"
+                      disabled={false}
+                      onClick={[Function]}
+                      selected={false}
+                    >
+                      <div
+                        className="c19"
+                        selected={false}
+                        tabIndex={1}
+                      >
+                        <span
+                          className="c17"
+                          role="img"
+                          size="medium"
+                        >
+                          <svg
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M18.77 22h-.92v-2.68a1.17 1.17 0 00-.2-.74.77.77 0 00-.64-.25 1 1 0 00-.85.35 1.87 1.87 0 00-.27 1.15V22H15v-4.34h.72l.13.57a1.26 1.26 0 01.56-.48 1.86 1.86 0 01.79-.17 1.39 1.39 0 011.56 1.58zm-6.09-5.48a.49.49 0 01.14-.38.51.51 0 01.38-.14.52.52 0 01.38.14.49.49 0 01.13.38.51.51 0 01-.13.37.56.56 0 01-.38.13.54.54 0 01-.38-.13.51.51 0 01-.14-.37zm1 5.46h-.92v-4.32h.92zM7.92 22l-1.66-4.79c0 .71.07 1.37.07 2V22h-.88v-5.73h1.32l1.58 4.54L10 16.27h1.32V22h-.9v-2.84-1.11-.83L8.74 22zM5.9 15a6.7 6.7 0 01-1.24-3.9 7.2 7.2 0 0114.4 0 6.83 6.83 0 01-1.3 4h2.1a9.1 9.1 0 001-4 9 9 0 00-18-.1 8.77 8.77 0 001 4h2zm6.36-8.39H11V12l4.7 2.8.7-1.1-4-2.4V6.61z"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      className="c18"
+                      disabled={false}
+                      onClick={[Function]}
+                      selected={false}
+                    >
+                      <div
+                        className="c19"
+                        selected={false}
+                        tabIndex={1}
+                      >
+                        <span
+                          className="c17"
+                          role="img"
+                          size="medium"
+                        >
+                          <svg
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M15 16h4v3h-4zm-5 0h4v3h-4zm-5 0h4v3H5zm10-4h4v3h-4zm-5 0h4v3h-4zm-5 0h4v3H5zm10-4h4v3h-4zm-5 0h4v3h-4zm10.09 14H3.91A1.91 1.91 0 012 20.09V3h3v2h4V3h6v2h4V3h3v17.09A1.91 1.91 0 0120.09 22zM20 7H4v12.47a.53.53 0 00.53.53h14.94a.53.53 0 00.53-.53zm-4-3h2V3a.93.93 0 00-.93-.93h-.14A.93.93 0 0016 3zM6.93 2.07h.14A.93.93 0 018 3v1H6V3a.93.93 0 01.93-.93z"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="c20"
+                  >
+                    <div
+                      className="c21"
+                      onMouseDown={[Function]}
+                      onMouseMove={[Function]}
+                    >
+                      <span
+                        className="c22"
+                      />
+                      <span
+                        className="c23"
+                        id="0"
+                        x="125.00000000000001px"
+                        y="0px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          12
+                        </p>
+                      </span>
+                      <span
+                        className="c25"
+                        id="1"
+                        x="187.5px"
+                        y="16.746824526945176px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          1
+                        </p>
+                      </span>
+                      <span
+                        className="c26"
+                        id="2"
+                        x="233.25317547305485px"
+                        y="62.50000000000001px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          2
+                        </p>
+                      </span>
+                      <span
+                        className="c27"
+                        id="3"
+                        x="250px"
+                        y="125px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          3
+                        </p>
+                      </span>
+                      <span
+                        className="c28"
+                        id="4"
+                        x="233.25317547305485px"
+                        y="187.5px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          4
+                        </p>
+                      </span>
+                      <span
+                        className="c29"
+                        id="5"
+                        x="187.5px"
+                        y="233.25317547305482px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          5
+                        </p>
+                      </span>
+                      <span
+                        className="c30"
+                        id="6"
+                        x="125.00000000000001px"
+                        y="250px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          6
+                        </p>
+                      </span>
+                      <span
+                        className="c31"
+                        id="7"
+                        x="62.50000000000003px"
+                        y="233.25317547305485px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          7
+                        </p>
+                      </span>
+                      <span
+                        className="c32"
+                        id="8"
+                        x="16.74682452694516px"
+                        y="187.5px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          8
+                        </p>
+                      </span>
+                      <span
+                        className="c33"
+                        id="9"
+                        x="0px"
+                        y="125.00000000000001px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          9
+                        </p>
+                      </span>
+                      <span
+                        className="c34"
+                        id="10"
+                        x="16.746824526945176px"
+                        y="62.499999999999986px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          10
+                        </p>
+                      </span>
+                      <span
+                        className="c35"
+                        id="11"
+                        x="62.49999999999994px"
+                        y="16.74682452694519px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          11
+                        </p>
+                      </span>
+                      <div
+                        className="c36"
+                      >
+                        <span
+                          className="c37"
+                        >
+                          10
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      className="c38"
+                    >
+                      <button
+                        className="c39 c40"
+                        onClick={[Function]}
+                        selected={true}
+                      >
+                        <p
+                          className="c24 c41"
+                          selected={true}
+                        >
+                          AM
+                        </p>
+                      </button>
+                      <button
+                        className="c42 c43"
+                        onClick={[Function]}
+                        selected={false}
+                      >
+                        <p
+                          className="c24 c44"
+                          selected={false}
+                        >
+                          PM
+                        </p>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="c45"
+                >
+                  <button
+                    className="c39"
+                    disabled={false}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onPointerDown={[Function]}
+                    onPointerUp={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="c46 "
+                    >
+                      <span
+                        className="c47 "
+                      >
+                        <span
+                          className="c37"
+                        >
+                          test
+                        </span>
+                      </span>
+                    </span>
+                  </button>
+                  <button
+                    className="c42"
+                    disabled={false}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onPointerDown={[Function]}
+                    onPointerUp={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="c46 "
+                    >
+                      <span
+                        className="c47 "
+                      >
+                        <span
+                          className="c37"
+                        >
+                          test
+                        </span>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c48"
+      id="layer-2"
+    >
+      <div
+        className="c49"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DateTimePicker DateTimePicker 2`] = `
+.c8 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 21px;
+  line-height: 32px;
+}
+
+.c24 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c49 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c9 {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: rgb(255,255,255);
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 40%;
+  padding-bottom: 4px;
+}
+
+.c11 {
+  margin-right: 8px;
+}
+
+.c12 {
+  margin-right: 8px;
+}
+
+.c17 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c17 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c51 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c51::-moz-focus-inner {
+  border: 0;
+}
+
+.c51:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c51:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c51:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c51:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c54 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c54::-moz-focus-inner {
+  border: 0;
+}
+
+.c54:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c54:focus {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.16);
+  border: 2px solid transparent;
+}
+
+.c54:active {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c54:disabled {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c52 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c53 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding-top: 32px;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c21 {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+  background-color: rgb(240,240,240);
+  cursor: Move;
+}
+
+.c22 {
+  position: absolute;
+  left: 145px;
+  top: 145px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgb(82,82,82);
+}
+
+.c48 {
+  z-index: 100;
+  width: 4px;
+  left: calc(50% - 2px);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
+.c48::before {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  height: 0;
+  top: -125px;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-bottom: 125px solid rgb(82,82,82);
+}
+
+.c48::after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  left: -24px;
+  position: absolute;
+  top: -150px;
+  color: rgb(255,255,255);
+  -webkit-transform: rotate(-300deg);
+  -ms-transform: rotate(-300deg);
+  transform: rotate(-300deg);
+  border-radius: 50%;
+  background-color: rgb(82,82,82);
+}
+
+.c48 > * {
+  -webkit-transform: rotate(-300deg);
+  -ms-transform: rotate(-300deg);
+  transform: rotate(-300deg);
+  z-index: 1000;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  left: -24px;
+  position: absolute;
+  top: -150px;
+  color: rgb(255,255,255);
+  font-size: 14px;
+}
+
+.c23 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  left: 125.00000000000001px;
+}
+
+.c23 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c25 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 16.746824526945176px;
+  left: 187.5px;
+}
+
+.c25 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c26 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 62.50000000000001px;
+  left: 233.25317547305485px;
+}
+
+.c26 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c27 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125px;
+  left: 250px;
+}
+
+.c27 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c28 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 187.5px;
+  left: 233.25317547305485px;
+}
+
+.c28 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c29 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 233.25317547305482px;
+  left: 187.5px;
+}
+
+.c29 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c30 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 250px;
+  left: 125.00000000000001px;
+}
+
+.c30 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c31 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 233.25317547305485px;
+  left: 62.50000000000003px;
+}
+
+.c31 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c32 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 187.5px;
+  left: 16.74682452694516px;
+}
+
+.c32 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c33 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125.00000000000001px;
+  left: 0px;
+}
+
+.c33 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c34 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 62.499999999999986px;
+  left: 16.746824526945176px;
+}
+
+.c34 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c35 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 16.74682452694519px;
+  left: 62.49999999999994px;
+}
+
+.c35 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c36 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50px;
+  left: 125px;
+}
+
+.c36 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c37 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 60.0480947161671px;
+  left: 162.5px;
+}
+
+.c37 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c38 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 87.5px;
+  left: 189.9519052838329px;
+}
+
+.c38 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c39 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125px;
+  left: 200px;
+}
+
+.c39 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c40 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 162.5px;
+  left: 189.9519052838329px;
+}
+
+.c40 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c41 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 189.9519052838329px;
+  left: 162.5px;
+}
+
+.c41 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c42 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 200px;
+  left: 125px;
+}
+
+.c42 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c43 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 189.9519052838329px;
+  left: 87.50000000000001px;
+}
+
+.c43 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c44 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 162.5px;
+  left: 60.0480947161671px;
+}
+
+.c44 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c45 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125.00000000000001px;
+  left: 50px;
+}
+
+.c45 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c46 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 87.5px;
+  left: 60.0480947161671px;
+}
+
+.c46 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c47 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 60.048094716167114px;
+  left: 87.49999999999997px;
+}
+
+.c47 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c56 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c55 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c2 {
+  background-color: rgba(41,41,41,0.48);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.c3 {
+  outline: 0px;
+}
+
+.c15 {
+  box-sizing: border-box;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c15:not(:last-child) {
+  border-right: 1px solid rgb(184,184,184);
+}
+
+.c15:active {
+  z-index: 1;
+  box-shadow: -1px 0 0 5px rgba(82,82,82,0.24);
+  border-radius: 4px;
+}
+
+.c18 {
+  box-sizing: border-box;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c18:not(:last-child) {
+  border-right: 1px solid rgb(184,184,184);
+}
+
+.c16 {
+  background-color: rgb(255,255,255);
+  height: 32px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+}
+
+.c16:focus {
+  outline-color: rgb(61,61,61);
+}
+
+.c16:hover {
+  background-color: rgb(61,61,61);
+}
+
+.c19 {
+  background-color: rgb(255,255,255);
+  height: 32px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+}
+
+.c19:hover {
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c19:focus {
+  background-color: rgba(204,204,204,0.16);
+  outline-color: rgb(61,61,61);
+}
+
+.c19:active {
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c14 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(24px,1fr));
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid rgb(184,184,184);
+  border-radius: 2px;
+}
+
+.c4 {
+  background-color: rgb(255,255,255);
+  color: rgb(41,41,41);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.c7 {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+}
+
+.c6 {
+  padding: 16px 24px;
+  border-bottom: 1px solid rgb(240,240,240);
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 16px 24px;
+}
+
+.c50 {
+  padding: 0 16px 24px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.c50 >:last-child {
+  margin-right: 8px;
+}
+
+.c5 {
+  width: 360px;
+  height: 688px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div>
+        <div
+          className="c1"
+          id="layer-8"
+        >
+          <div
+            className="c2"
+          >
+            <div
+              className="c3"
+              id="practical-modal-7"
+              tabIndex={-1}
+            >
+              <div
+                className="c4 c5"
+              >
+                <div
+                  className="c6"
+                >
+                  <div
+                    className="c7"
+                  >
+                    <p
+                      className="c8"
+                    >
+                      Change date and time
+                    </p>
+                  </div>
+                </div>
+                <div
+                  className="c6"
+                >
+                  <div
+                    className="c9"
+                  >
+                    <div
+                      className="c10"
+                    >
+                      <svg
+                        className="c11"
+                        height="24px"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M 12.5,7 H 11 v 6 L 16.25,16.15 17,14.92 12.5,12.25 Z M 11.99,2 C 6.47,2 2,6.48 2,12 2,17.52 6.47,22 11.99,22 17.52,22 22,17.52 22,12 22,6.48 17.52,2 11.99,2 Z M 12,20 C 7.58,20 4,16.42 4,12 4,7.58 7.58,4 12,4 c 4.42,0 8,3.58 8,8 0,4.42 -3.58,8 -8,8 z"
+                        />
+                      </svg>
+                      <p
+                        className="c8"
+                      >
+                        10:25
+                      </p>
+                    </div>
+                    <div
+                      className="c10"
+                    >
+                      <svg
+                        className="c12"
+                        height="24px"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15 16h4v3h-4zm-5 0h4v3h-4zm-5 0h4v3H5zm10-4h4v3h-4zm-5 0h4v3h-4zm-5 0h4v3H5zm10-4h4v3h-4zm-5 0h4v3h-4zm10.09 14H3.91A1.91 1.91 0 012 20.09V3h3v2h4V3h6v2h4V3h3v17.09A1.91 1.91 0 0120.09 22zM20 7H4v12.47a.53.53 0 00.53.53h14.94a.53.53 0 00.53-.53zm-4-3h2V3a.93.93 0 00-.93-.93h-.14A.93.93 0 0016 3zM6.93 2.07h.14A.93.93 0 018 3v1H6V3a.93.93 0 01.93-.93z"
+                        />
+                      </svg>
+                      <p
+                        className="c8"
+                      >
+                        Mon, July 15, 2019
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="c13"
+                >
+                  <div
+                    className="c14"
+                  >
+                    <div
+                      className="c15"
+                      disabled={false}
+                      onClick={[Function]}
+                      selected={true}
+                    >
+                      <div
+                        className="c16"
+                        selected={true}
+                        tabIndex={1}
+                      >
+                        <span
+                          className="c17"
+                          role="img"
+                          size="medium"
+                        >
+                          <svg
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M21.18 17.58a2 2 0 01.46 0l-.09.85a1.84 1.84 0 00-.41 0 1.16 1.16 0 00-.89.35 1.31 1.31 0 00-.34.94V22H19v-4.34h.72l.12.76h.05a1.76 1.76 0 01.56-.62 1.31 1.31 0 01.73-.22zM17 22l-.13-.57a1.3 1.3 0 01-.54.47 1.78 1.78 0 01-.81.17 1.59 1.59 0 01-1.17-.39 1.6 1.6 0 01-.39-1.18v-2.84h.93v2.66a1.11 1.11 0 00.2.74.77.77 0 00.64.25 1 1 0 00.85-.34 1.92 1.92 0 00.27-1.16v-2.15h.92V22zm-4.14-2.19a2.38 2.38 0 01-.55 1.65 1.92 1.92 0 01-1.51.59 2.1 2.1 0 01-1.07-.27A1.74 1.74 0 019 21a2.67 2.67 0 01-.25-1.19 2.38 2.38 0 01.53-1.64 1.94 1.94 0 011.52-.59 1.92 1.92 0 011.49.6 2.36 2.36 0 01.57 1.63zm-3.15 0c0 1 .37 1.49 1.11 1.49.74 0 1.09-.49 1.09-1.49s-.37-1.48-1.1-1.48a.94.94 0 00-.84.38 2 2 0 00-.26 1.1zM7.62 22h-.94v-2.6H4.05V22h-.94v-5.73h.94v2.33h2.63v-2.33h.94zM5.9 15a6.7 6.7 0 01-1.24-3.9 7.2 7.2 0 0114.4 0 6.83 6.83 0 01-1.3 4h2.1a9.1 9.1 0 001-4 9 9 0 00-18-.1 8.77 8.77 0 001 4h2zm6.36-8.39H11V12l4.7 2.8.7-1.1-4-2.4V6.61z"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      className="c18"
+                      disabled={false}
+                      onClick={[Function]}
+                      selected={false}
+                    >
+                      <div
+                        className="c19"
+                        selected={false}
+                        tabIndex={1}
+                      >
+                        <span
+                          className="c17"
+                          role="img"
+                          size="medium"
+                        >
+                          <svg
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M18.77 22h-.92v-2.68a1.17 1.17 0 00-.2-.74.77.77 0 00-.64-.25 1 1 0 00-.85.35 1.87 1.87 0 00-.27 1.15V22H15v-4.34h.72l.13.57a1.26 1.26 0 01.56-.48 1.86 1.86 0 01.79-.17 1.39 1.39 0 011.56 1.58zm-6.09-5.48a.49.49 0 01.14-.38.51.51 0 01.38-.14.52.52 0 01.38.14.49.49 0 01.13.38.51.51 0 01-.13.37.56.56 0 01-.38.13.54.54 0 01-.38-.13.51.51 0 01-.14-.37zm1 5.46h-.92v-4.32h.92zM7.92 22l-1.66-4.79c0 .71.07 1.37.07 2V22h-.88v-5.73h1.32l1.58 4.54L10 16.27h1.32V22h-.9v-2.84-1.11-.83L8.74 22zM5.9 15a6.7 6.7 0 01-1.24-3.9 7.2 7.2 0 0114.4 0 6.83 6.83 0 01-1.3 4h2.1a9.1 9.1 0 001-4 9 9 0 00-18-.1 8.77 8.77 0 001 4h2zm6.36-8.39H11V12l4.7 2.8.7-1.1-4-2.4V6.61z"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div
+                      className="c18"
+                      disabled={false}
+                      onClick={[Function]}
+                      selected={false}
+                    >
+                      <div
+                        className="c19"
+                        selected={false}
+                        tabIndex={1}
+                      >
+                        <span
+                          className="c17"
+                          role="img"
+                          size="medium"
+                        >
+                          <svg
+                            height="1em"
+                            viewBox="0 0 24 24"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M15 16h4v3h-4zm-5 0h4v3h-4zm-5 0h4v3H5zm10-4h4v3h-4zm-5 0h4v3h-4zm-5 0h4v3H5zm10-4h4v3h-4zm-5 0h4v3h-4zm10.09 14H3.91A1.91 1.91 0 012 20.09V3h3v2h4V3h6v2h4V3h3v17.09A1.91 1.91 0 0120.09 22zM20 7H4v12.47a.53.53 0 00.53.53h14.94a.53.53 0 00.53-.53zm-4-3h2V3a.93.93 0 00-.93-.93h-.14A.93.93 0 0016 3zM6.93 2.07h.14A.93.93 0 018 3v1H6V3a.93.93 0 01.93-.93z"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="c20"
+                  >
+                    <div
+                      className="c21"
+                      onMouseDown={[Function]}
+                      onMouseMove={[Function]}
+                    >
+                      <span
+                        className="c22"
+                      />
+                      <span
+                        className="c23"
+                        id="0"
+                        x="125.00000000000001px"
+                        y="0px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          12
+                        </p>
+                      </span>
+                      <span
+                        className="c25"
+                        id="1"
+                        x="187.5px"
+                        y="16.746824526945176px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          1
+                        </p>
+                      </span>
+                      <span
+                        className="c26"
+                        id="2"
+                        x="233.25317547305485px"
+                        y="62.50000000000001px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          2
+                        </p>
+                      </span>
+                      <span
+                        className="c27"
+                        id="3"
+                        x="250px"
+                        y="125px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          3
+                        </p>
+                      </span>
+                      <span
+                        className="c28"
+                        id="4"
+                        x="233.25317547305485px"
+                        y="187.5px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          4
+                        </p>
+                      </span>
+                      <span
+                        className="c29"
+                        id="5"
+                        x="187.5px"
+                        y="233.25317547305482px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          5
+                        </p>
+                      </span>
+                      <span
+                        className="c30"
+                        id="6"
+                        x="125.00000000000001px"
+                        y="250px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          6
+                        </p>
+                      </span>
+                      <span
+                        className="c31"
+                        id="7"
+                        x="62.50000000000003px"
+                        y="233.25317547305485px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          7
+                        </p>
+                      </span>
+                      <span
+                        className="c32"
+                        id="8"
+                        x="16.74682452694516px"
+                        y="187.5px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          8
+                        </p>
+                      </span>
+                      <span
+                        className="c33"
+                        id="9"
+                        x="0px"
+                        y="125.00000000000001px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          9
+                        </p>
+                      </span>
+                      <span
+                        className="c34"
+                        id="10"
+                        x="16.746824526945176px"
+                        y="62.499999999999986px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          10
+                        </p>
+                      </span>
+                      <span
+                        className="c35"
+                        id="11"
+                        x="62.49999999999994px"
+                        y="16.74682452694519px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          11
+                        </p>
+                      </span>
+                      <span
+                        className="c36"
+                        id="0"
+                        x="125px"
+                        y="50px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          0
+                        </p>
+                      </span>
+                      <span
+                        className="c37"
+                        id="1"
+                        x="162.5px"
+                        y="60.0480947161671px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          13
+                        </p>
+                      </span>
+                      <span
+                        className="c38"
+                        id="2"
+                        x="189.9519052838329px"
+                        y="87.5px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          14
+                        </p>
+                      </span>
+                      <span
+                        className="c39"
+                        id="3"
+                        x="200px"
+                        y="125px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          15
+                        </p>
+                      </span>
+                      <span
+                        className="c40"
+                        id="4"
+                        x="189.9519052838329px"
+                        y="162.5px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          16
+                        </p>
+                      </span>
+                      <span
+                        className="c41"
+                        id="5"
+                        x="162.5px"
+                        y="189.9519052838329px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          17
+                        </p>
+                      </span>
+                      <span
+                        className="c42"
+                        id="6"
+                        x="125px"
+                        y="200px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          18
+                        </p>
+                      </span>
+                      <span
+                        className="c43"
+                        id="7"
+                        x="87.50000000000001px"
+                        y="189.9519052838329px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          19
+                        </p>
+                      </span>
+                      <span
+                        className="c44"
+                        id="8"
+                        x="60.0480947161671px"
+                        y="162.5px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          20
+                        </p>
+                      </span>
+                      <span
+                        className="c45"
+                        id="9"
+                        x="50px"
+                        y="125.00000000000001px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          21
+                        </p>
+                      </span>
+                      <span
+                        className="c46"
+                        id="10"
+                        x="60.0480947161671px"
+                        y="87.5px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          22
+                        </p>
+                      </span>
+                      <span
+                        className="c47"
+                        id="11"
+                        x="87.49999999999997px"
+                        y="60.048094716167114px"
+                      >
+                        <p
+                          className="c24"
+                        >
+                          23
+                        </p>
+                      </span>
+                      <div
+                        className="c48"
+                      >
+                        <span
+                          className="c49"
+                        >
+                          10
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="c50"
+                >
+                  <button
+                    className="c51"
+                    disabled={false}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onPointerDown={[Function]}
+                    onPointerUp={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="c52 "
+                    >
+                      <span
+                        className="c53 "
+                      >
+                        <span
+                          className="c49"
+                        >
+                          test
+                        </span>
+                      </span>
+                    </span>
+                  </button>
+                  <button
+                    className="c54"
+                    disabled={false}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onPointerDown={[Function]}
+                    onPointerUp={[Function]}
+                    type="button"
+                  >
+                    <span
+                      className="c52 "
+                    >
+                      <span
+                        className="c53 "
+                      >
+                        <span
+                          className="c49"
+                        >
+                          test
+                        </span>
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c55"
+      id="layer-6"
+    >
+      <div
+        className="c56"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DateTimePicker TimePickers 1`] = `
+.c6 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c19 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c21 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c21::-moz-focus-inner {
+  border: 0;
+}
+
+.c21:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c21:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c21:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c21:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c24 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c24::-moz-focus-inner {
+  border: 0;
+}
+
+.c24:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c24:focus {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.16);
+  border: 2px solid transparent;
+}
+
+.c24:active {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c24:disabled {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding-top: 32px;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c20 {
+  position: absolute;
+  left: 0;
+  top: 16px;
+  z-index: 2;
+}
+
+.c22 {
+  border-radius: 18px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 36px;
+  height: 36px;
+  padding: 4px;
+  box-shadow: initial;
+}
+
+.c22:first-child {
+  margin-right: 8px;
+}
+
+.c25 {
+  border-radius: 18px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 36px;
+  height: 36px;
+  padding: 4px;
+  box-shadow: initial;
+  background-color: rgb(240,240,240);
+}
+
+.c25:first-child {
+  margin-right: 8px;
+}
+
+.c23 {
+  color: rgb(255,255,255);
+}
+
+.c26 {
+  color: rgb(82,82,82);
+}
+
+.c3 {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+  background-color: rgb(240,240,240);
+  cursor: Move;
+}
+
+.c4 {
+  position: absolute;
+  left: 145px;
+  top: 145px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgb(82,82,82);
+}
+
+.c18 {
+  z-index: 100;
+  width: 4px;
+  left: calc(50% - 2px);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
+.c18::before {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  height: 0;
+  top: -125px;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-bottom: 125px solid rgb(82,82,82);
+}
+
+.c18::after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  left: -24px;
+  position: absolute;
+  top: -150px;
+  color: rgb(255,255,255);
+  -webkit-transform: rotate(-300deg);
+  -ms-transform: rotate(-300deg);
+  transform: rotate(-300deg);
+  border-radius: 50%;
+  background-color: rgb(82,82,82);
+}
+
+.c18 > * {
+  -webkit-transform: rotate(-300deg);
+  -ms-transform: rotate(-300deg);
+  transform: rotate(-300deg);
+  z-index: 1000;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  left: -24px;
+  position: absolute;
+  top: -150px;
+  color: rgb(255,255,255);
+  font-size: 14px;
+}
+
+.c5 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  left: 125.00000000000001px;
+}
+
+.c5 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c7 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 16.746824526945176px;
+  left: 187.5px;
+}
+
+.c7 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c8 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 62.50000000000001px;
+  left: 233.25317547305485px;
+}
+
+.c8 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c9 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125px;
+  left: 250px;
+}
+
+.c9 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c10 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 187.5px;
+  left: 233.25317547305485px;
+}
+
+.c10 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c11 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 233.25317547305482px;
+  left: 187.5px;
+}
+
+.c11 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c12 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 250px;
+  left: 125.00000000000001px;
+}
+
+.c12 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c13 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 233.25317547305485px;
+  left: 62.50000000000003px;
+}
+
+.c13 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c14 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 187.5px;
+  left: 16.74682452694516px;
+}
+
+.c14 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c15 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125.00000000000001px;
+  left: 0px;
+}
+
+.c15 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c16 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 62.499999999999986px;
+  left: 16.746824526945176px;
+}
+
+.c16 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c17 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 16.74682452694519px;
+  left: 62.49999999999994px;
+}
+
+.c17 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c28 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c27 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-9"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+        >
+          <span
+            className="c4"
+          />
+          <span
+            className="c5"
+            id="0"
+            x="125.00000000000001px"
+            y="0px"
+          >
+            <p
+              className="c6"
+            >
+              12
+            </p>
+          </span>
+          <span
+            className="c7"
+            id="1"
+            x="187.5px"
+            y="16.746824526945176px"
+          >
+            <p
+              className="c6"
+            >
+              1
+            </p>
+          </span>
+          <span
+            className="c8"
+            id="2"
+            x="233.25317547305485px"
+            y="62.50000000000001px"
+          >
+            <p
+              className="c6"
+            >
+              2
+            </p>
+          </span>
+          <span
+            className="c9"
+            id="3"
+            x="250px"
+            y="125px"
+          >
+            <p
+              className="c6"
+            >
+              3
+            </p>
+          </span>
+          <span
+            className="c10"
+            id="4"
+            x="233.25317547305485px"
+            y="187.5px"
+          >
+            <p
+              className="c6"
+            >
+              4
+            </p>
+          </span>
+          <span
+            className="c11"
+            id="5"
+            x="187.5px"
+            y="233.25317547305482px"
+          >
+            <p
+              className="c6"
+            >
+              5
+            </p>
+          </span>
+          <span
+            className="c12"
+            id="6"
+            x="125.00000000000001px"
+            y="250px"
+          >
+            <p
+              className="c6"
+            >
+              6
+            </p>
+          </span>
+          <span
+            className="c13"
+            id="7"
+            x="62.50000000000003px"
+            y="233.25317547305485px"
+          >
+            <p
+              className="c6"
+            >
+              7
+            </p>
+          </span>
+          <span
+            className="c14"
+            id="8"
+            x="16.74682452694516px"
+            y="187.5px"
+          >
+            <p
+              className="c6"
+            >
+              8
+            </p>
+          </span>
+          <span
+            className="c15"
+            id="9"
+            x="0px"
+            y="125.00000000000001px"
+          >
+            <p
+              className="c6"
+            >
+              9
+            </p>
+          </span>
+          <span
+            className="c16"
+            id="10"
+            x="16.746824526945176px"
+            y="62.499999999999986px"
+          >
+            <p
+              className="c6"
+            >
+              10
+            </p>
+          </span>
+          <span
+            className="c17"
+            id="11"
+            x="62.49999999999994px"
+            y="16.74682452694519px"
+          >
+            <p
+              className="c6"
+            >
+              11
+            </p>
+          </span>
+          <div
+            className="c18"
+          >
+            <span
+              className="c19"
+            >
+              10
+            </span>
+          </div>
+        </div>
+        <div
+          className="c20"
+        >
+          <button
+            className="c21 c22"
+            onClick={[Function]}
+            selected={true}
+          >
+            <p
+              className="c6 c23"
+              selected={true}
+            >
+              AM
+            </p>
+          </button>
+          <button
+            className="c24 c25"
+            onClick={[Function]}
+            selected={false}
+          >
+            <p
+              className="c6 c26"
+              selected={false}
+            >
+              PM
+            </p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c27"
+      id="layer-10"
+    >
+      <div
+        className="c28"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DateTimePicker TimePickers 2`] = `
+.c6 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c19 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding-top: 32px;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3 {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+  background-color: rgb(240,240,240);
+  cursor: Move;
+}
+
+.c4 {
+  position: absolute;
+  left: 145px;
+  top: 145px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgb(82,82,82);
+}
+
+.c18 {
+  z-index: 100;
+  width: 4px;
+  left: calc(50% - 2px);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.c18::before {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  height: 0;
+  top: -125px;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-bottom: 125px solid rgb(82,82,82);
+}
+
+.c18::after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  left: -24px;
+  position: absolute;
+  top: -150px;
+  color: rgb(255,255,255);
+  -webkit-transform: rotate(-150deg);
+  -ms-transform: rotate(-150deg);
+  transform: rotate(-150deg);
+  border-radius: 50%;
+  background-color: rgb(82,82,82);
+}
+
+.c18 > * {
+  -webkit-transform: rotate(-150deg);
+  -ms-transform: rotate(-150deg);
+  transform: rotate(-150deg);
+  z-index: 1000;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  left: -24px;
+  position: absolute;
+  top: -150px;
+  color: rgb(255,255,255);
+  font-size: 14px;
+}
+
+.c5 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  left: 125.00000000000001px;
+}
+
+.c5 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c7 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 16.746824526945176px;
+  left: 187.5px;
+}
+
+.c7 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c8 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 62.50000000000001px;
+  left: 233.25317547305485px;
+}
+
+.c8 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c9 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125px;
+  left: 250px;
+}
+
+.c9 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c10 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 187.5px;
+  left: 233.25317547305485px;
+}
+
+.c10 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c11 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 233.25317547305482px;
+  left: 187.5px;
+}
+
+.c11 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c12 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 250px;
+  left: 125.00000000000001px;
+}
+
+.c12 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c13 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 233.25317547305485px;
+  left: 62.50000000000003px;
+}
+
+.c13 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c14 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 187.5px;
+  left: 16.74682452694516px;
+}
+
+.c14 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c15 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125.00000000000001px;
+  left: 0px;
+}
+
+.c15 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c16 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 62.499999999999986px;
+  left: 16.746824526945176px;
+}
+
+.c16 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c17 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 16.74682452694519px;
+  left: 62.49999999999994px;
+}
+
+.c17 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c21 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c20 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-11"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+        >
+          <span
+            className="c4"
+          />
+          <span
+            className="c5"
+            id="0"
+            x="125.00000000000001px"
+            y="0px"
+          >
+            <p
+              className="c6"
+            >
+              0
+            </p>
+          </span>
+          <span
+            className="c7"
+            id="1"
+            x="187.5px"
+            y="16.746824526945176px"
+          >
+            <p
+              className="c6"
+            >
+              5
+            </p>
+          </span>
+          <span
+            className="c8"
+            id="2"
+            x="233.25317547305485px"
+            y="62.50000000000001px"
+          >
+            <p
+              className="c6"
+            >
+              10
+            </p>
+          </span>
+          <span
+            className="c9"
+            id="3"
+            x="250px"
+            y="125px"
+          >
+            <p
+              className="c6"
+            >
+              15
+            </p>
+          </span>
+          <span
+            className="c10"
+            id="4"
+            x="233.25317547305485px"
+            y="187.5px"
+          >
+            <p
+              className="c6"
+            >
+              20
+            </p>
+          </span>
+          <span
+            className="c11"
+            id="5"
+            x="187.5px"
+            y="233.25317547305482px"
+          >
+            <p
+              className="c6"
+            >
+              25
+            </p>
+          </span>
+          <span
+            className="c12"
+            id="6"
+            x="125.00000000000001px"
+            y="250px"
+          >
+            <p
+              className="c6"
+            >
+              30
+            </p>
+          </span>
+          <span
+            className="c13"
+            id="7"
+            x="62.50000000000003px"
+            y="233.25317547305485px"
+          >
+            <p
+              className="c6"
+            >
+              35
+            </p>
+          </span>
+          <span
+            className="c14"
+            id="8"
+            x="16.74682452694516px"
+            y="187.5px"
+          >
+            <p
+              className="c6"
+            >
+              40
+            </p>
+          </span>
+          <span
+            className="c15"
+            id="9"
+            x="0px"
+            y="125.00000000000001px"
+          >
+            <p
+              className="c6"
+            >
+              45
+            </p>
+          </span>
+          <span
+            className="c16"
+            id="10"
+            x="16.746824526945176px"
+            y="62.499999999999986px"
+          >
+            <p
+              className="c6"
+            >
+              50
+            </p>
+          </span>
+          <span
+            className="c17"
+            id="11"
+            x="62.49999999999994px"
+            y="16.74682452694519px"
+          >
+            <p
+              className="c6"
+            >
+              55
+            </p>
+          </span>
+          <div
+            className="c18"
+          >
+            <span
+              className="c19"
+            >
+              25
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c20"
+      id="layer-12"
+    >
+      <div
+        className="c21"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`DateTimePicker TimePickers 3`] = `
+.c6 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c31 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  padding-top: 32px;
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c3 {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  position: relative;
+  background-color: rgb(240,240,240);
+  cursor: Move;
+}
+
+.c4 {
+  position: absolute;
+  left: 145px;
+  top: 145px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: rgb(82,82,82);
+}
+
+.c30 {
+  z-index: 100;
+  width: 4px;
+  left: calc(50% - 2px);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: rotate(300deg);
+  -ms-transform: rotate(300deg);
+  transform: rotate(300deg);
+}
+
+.c30::before {
+  content: '';
+  position: absolute;
+  z-index: 10;
+  height: 0;
+  top: -125px;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-bottom: 125px solid rgb(82,82,82);
+}
+
+.c30::after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  left: -24px;
+  position: absolute;
+  top: -150px;
+  color: rgb(255,255,255);
+  -webkit-transform: rotate(-300deg);
+  -ms-transform: rotate(-300deg);
+  transform: rotate(-300deg);
+  border-radius: 50%;
+  background-color: rgb(82,82,82);
+}
+
+.c30 > * {
+  -webkit-transform: rotate(-300deg);
+  -ms-transform: rotate(-300deg);
+  transform: rotate(-300deg);
+  z-index: 1000;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  left: -24px;
+  position: absolute;
+  top: -150px;
+  color: rgb(255,255,255);
+  font-size: 14px;
+}
+
+.c5 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0px;
+  left: 125.00000000000001px;
+}
+
+.c5 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c7 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 16.746824526945176px;
+  left: 187.5px;
+}
+
+.c7 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c8 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 62.50000000000001px;
+  left: 233.25317547305485px;
+}
+
+.c8 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c9 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125px;
+  left: 250px;
+}
+
+.c9 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c10 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 187.5px;
+  left: 233.25317547305485px;
+}
+
+.c10 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c11 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 233.25317547305482px;
+  left: 187.5px;
+}
+
+.c11 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c12 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 250px;
+  left: 125.00000000000001px;
+}
+
+.c12 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c13 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 233.25317547305485px;
+  left: 62.50000000000003px;
+}
+
+.c13 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c14 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 187.5px;
+  left: 16.74682452694516px;
+}
+
+.c14 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c15 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125.00000000000001px;
+  left: 0px;
+}
+
+.c15 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c16 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 62.499999999999986px;
+  left: 16.746824526945176px;
+}
+
+.c16 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c17 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 16.74682452694519px;
+  left: 62.49999999999994px;
+}
+
+.c17 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c18 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 50px;
+  left: 125px;
+}
+
+.c18 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c19 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 60.0480947161671px;
+  left: 162.5px;
+}
+
+.c19 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c20 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 87.5px;
+  left: 189.9519052838329px;
+}
+
+.c20 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c21 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125px;
+  left: 200px;
+}
+
+.c21 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c22 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 162.5px;
+  left: 189.9519052838329px;
+}
+
+.c22 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c23 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 189.9519052838329px;
+  left: 162.5px;
+}
+
+.c23 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c24 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 200px;
+  left: 125px;
+}
+
+.c24 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c25 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 189.9519052838329px;
+  left: 87.50000000000001px;
+}
+
+.c25 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c26 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 162.5px;
+  left: 60.0480947161671px;
+}
+
+.c26 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c27 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 125.00000000000001px;
+  left: 50px;
+}
+
+.c27 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c28 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 87.5px;
+  left: 60.0480947161671px;
+}
+
+.c28 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c29 {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 60.048094716167114px;
+  left: 87.49999999999997px;
+}
+
+.c29 > * {
+  font-size: 14px;
+  line-height: 50px;
+}
+
+.c33 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c32 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-13"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+        >
+          <span
+            className="c4"
+          />
+          <span
+            className="c5"
+            id="0"
+            x="125.00000000000001px"
+            y="0px"
+          >
+            <p
+              className="c6"
+            >
+              12
+            </p>
+          </span>
+          <span
+            className="c7"
+            id="1"
+            x="187.5px"
+            y="16.746824526945176px"
+          >
+            <p
+              className="c6"
+            >
+              1
+            </p>
+          </span>
+          <span
+            className="c8"
+            id="2"
+            x="233.25317547305485px"
+            y="62.50000000000001px"
+          >
+            <p
+              className="c6"
+            >
+              2
+            </p>
+          </span>
+          <span
+            className="c9"
+            id="3"
+            x="250px"
+            y="125px"
+          >
+            <p
+              className="c6"
+            >
+              3
+            </p>
+          </span>
+          <span
+            className="c10"
+            id="4"
+            x="233.25317547305485px"
+            y="187.5px"
+          >
+            <p
+              className="c6"
+            >
+              4
+            </p>
+          </span>
+          <span
+            className="c11"
+            id="5"
+            x="187.5px"
+            y="233.25317547305482px"
+          >
+            <p
+              className="c6"
+            >
+              5
+            </p>
+          </span>
+          <span
+            className="c12"
+            id="6"
+            x="125.00000000000001px"
+            y="250px"
+          >
+            <p
+              className="c6"
+            >
+              6
+            </p>
+          </span>
+          <span
+            className="c13"
+            id="7"
+            x="62.50000000000003px"
+            y="233.25317547305485px"
+          >
+            <p
+              className="c6"
+            >
+              7
+            </p>
+          </span>
+          <span
+            className="c14"
+            id="8"
+            x="16.74682452694516px"
+            y="187.5px"
+          >
+            <p
+              className="c6"
+            >
+              8
+            </p>
+          </span>
+          <span
+            className="c15"
+            id="9"
+            x="0px"
+            y="125.00000000000001px"
+          >
+            <p
+              className="c6"
+            >
+              9
+            </p>
+          </span>
+          <span
+            className="c16"
+            id="10"
+            x="16.746824526945176px"
+            y="62.499999999999986px"
+          >
+            <p
+              className="c6"
+            >
+              10
+            </p>
+          </span>
+          <span
+            className="c17"
+            id="11"
+            x="62.49999999999994px"
+            y="16.74682452694519px"
+          >
+            <p
+              className="c6"
+            >
+              11
+            </p>
+          </span>
+          <span
+            className="c18"
+            id="0"
+            x="125px"
+            y="50px"
+          >
+            <p
+              className="c6"
+            >
+              0
+            </p>
+          </span>
+          <span
+            className="c19"
+            id="1"
+            x="162.5px"
+            y="60.0480947161671px"
+          >
+            <p
+              className="c6"
+            >
+              13
+            </p>
+          </span>
+          <span
+            className="c20"
+            id="2"
+            x="189.9519052838329px"
+            y="87.5px"
+          >
+            <p
+              className="c6"
+            >
+              14
+            </p>
+          </span>
+          <span
+            className="c21"
+            id="3"
+            x="200px"
+            y="125px"
+          >
+            <p
+              className="c6"
+            >
+              15
+            </p>
+          </span>
+          <span
+            className="c22"
+            id="4"
+            x="189.9519052838329px"
+            y="162.5px"
+          >
+            <p
+              className="c6"
+            >
+              16
+            </p>
+          </span>
+          <span
+            className="c23"
+            id="5"
+            x="162.5px"
+            y="189.9519052838329px"
+          >
+            <p
+              className="c6"
+            >
+              17
+            </p>
+          </span>
+          <span
+            className="c24"
+            id="6"
+            x="125px"
+            y="200px"
+          >
+            <p
+              className="c6"
+            >
+              18
+            </p>
+          </span>
+          <span
+            className="c25"
+            id="7"
+            x="87.50000000000001px"
+            y="189.9519052838329px"
+          >
+            <p
+              className="c6"
+            >
+              19
+            </p>
+          </span>
+          <span
+            className="c26"
+            id="8"
+            x="60.0480947161671px"
+            y="162.5px"
+          >
+            <p
+              className="c6"
+            >
+              20
+            </p>
+          </span>
+          <span
+            className="c27"
+            id="9"
+            x="50px"
+            y="125.00000000000001px"
+          >
+            <p
+              className="c6"
+            >
+              21
+            </p>
+          </span>
+          <span
+            className="c28"
+            id="10"
+            x="60.0480947161671px"
+            y="87.5px"
+          >
+            <p
+              className="c6"
+            >
+              22
+            </p>
+          </span>
+          <span
+            className="c29"
+            id="11"
+            x="87.49999999999997px"
+            y="60.048094716167114px"
+          >
+            <p
+              className="c6"
+            >
+              23
+            </p>
+          </span>
+          <div
+            className="c30"
+          >
+            <span
+              className="c31"
+            >
+              10
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c32"
+      id="layer-14"
+    >
+      <div
+        className="c33"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paper Default 1`] = `
+.c2 {
+  background-color: rgb(255,255,255);
+  color: rgb(41,41,41);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+      >
+        <span>
+          Test
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-2"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Paper Space 1`] = `
+.c2 {
+  background-color: rgb(255,255,255);
+  color: rgb(41,41,41);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+  overflow: hidden;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        className="c2"
+      >
+        <span>
+          Test
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-6"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Paper Square 1`] = `
+.c2 {
+  background-color: rgb(255,255,255);
+  color: rgb(41,41,41);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+  overflow: hidden;
+  padding: 0;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+      >
+        <span>
+          Test
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-4"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;

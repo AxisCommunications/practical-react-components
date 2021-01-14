@@ -1,0 +1,785 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menus Menu (default) 1`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.c5 {
+  fill: inherit;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  min-width: unset;
+  padding: unset;
+  outline: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c3::-moz-focus-inner {
+  border: 0;
+}
+
+.c3:hover {
+  border: 0 solid transparent;
+}
+
+.c3:hover .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:focus:focus {
+  border: 2px solid transparent;
+}
+
+.c3:focus:focus .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:active .c6 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+      >
+        <button
+          className="c3"
+          disabled={false}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="button"
+        >
+          <span
+            className="c4 c5 "
+            role="img"
+            size="medium"
+          >
+            <svg
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+          <div
+            className="c6 c7"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c8"
+      id="layer-2"
+    >
+      <div
+        className="c9"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Menus Menu (disabled) 1`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.c5 {
+  fill: inherit;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  min-width: unset;
+  padding: unset;
+  outline: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  opacity: 0.48;
+  pointer-events: none;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c3::-moz-focus-inner {
+  border: 0;
+}
+
+.c3:hover {
+  border: 0 solid transparent;
+}
+
+.c3:hover .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:focus:focus {
+  border: 2px solid transparent;
+}
+
+.c3:focus:focus .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:active .c6 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <div
+        className="c2"
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+      >
+        <button
+          className="c3"
+          disabled={true}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="button"
+        >
+          <span
+            className="c4 c5 "
+            role="img"
+            size="medium"
+          >
+            <svg
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+          <div
+            className="c6 c7"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c8"
+      id="layer-8"
+    >
+      <div
+        className="c9"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Menus Menu (left) 1`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.c5 {
+  fill: inherit;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  min-width: unset;
+  padding: unset;
+  outline: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c3::-moz-focus-inner {
+  border: 0;
+}
+
+.c3:hover {
+  border: 0 solid transparent;
+}
+
+.c3:hover .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:focus:focus {
+  border: 2px solid transparent;
+}
+
+.c3:focus:focus .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:active .c6 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+      >
+        <button
+          className="c3"
+          disabled={false}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="button"
+        >
+          <span
+            className="c4 c5 "
+            role="img"
+            size="medium"
+          >
+            <svg
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+          <div
+            className="c6 c7"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c8"
+      id="layer-4"
+    >
+      <div
+        className="c9"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Menus Menu (right) 1`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.c5 {
+  fill: inherit;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  min-width: unset;
+  padding: unset;
+  outline: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c3::-moz-focus-inner {
+  border: 0;
+}
+
+.c3:hover {
+  border: 0 solid transparent;
+}
+
+.c3:hover .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:focus:focus {
+  border: 2px solid transparent;
+}
+
+.c3:focus:focus .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:active .c6 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        className="c2"
+        onBlur={[Function]}
+        onKeyDown={[Function]}
+      >
+        <button
+          className="c3"
+          disabled={false}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="button"
+        >
+          <span
+            className="c4 c5 "
+            role="img"
+            size="medium"
+          >
+            <svg
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+              />
+            </svg>
+          </span>
+          <div
+            className="c6 c7"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c8"
+      id="layer-6"
+    >
+      <div
+        className="c9"
+      />
+    </div>
+  </div>
+</div>
+`;

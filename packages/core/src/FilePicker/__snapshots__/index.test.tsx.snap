@@ -1,0 +1,405 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilePicker FilePicker 1`] = `
+.c6 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c8 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c3 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c3::-moz-focus-inner {
+  border: 0;
+}
+
+.c3:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c3:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c3:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c3:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 > button {
+  margin-right: 8px;
+}
+
+.c7 {
+  display: none;
+}
+
+.c10 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c9 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+      >
+        <button
+          className="c3"
+          disabled={false}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="button"
+        >
+          <span
+            className="c4 "
+          >
+            <span
+              className="c5 "
+            >
+              <span
+                className="c6"
+              >
+                Choose file
+              </span>
+            </span>
+          </span>
+        </button>
+        <input
+          className="c7"
+          onChange={[Function]}
+          type="file"
+        />
+        <p
+          className="c8"
+        >
+          
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c9"
+      id="layer-2"
+    >
+      <div
+        className="c10"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`FilePicker FilePicker 2`] = `
+.c6 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c8 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c3 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c3::-moz-focus-inner {
+  border: 0;
+}
+
+.c3:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c3:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c3:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c3:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c4 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+  -ms-flex-pack: left;
+  justify-content: left;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 > button {
+  margin-right: 8px;
+}
+
+.c7 {
+  display: none;
+}
+
+.c10 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c9 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+      >
+        <button
+          className="c3"
+          disabled={false}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="button"
+        >
+          <span
+            className="c4 "
+          >
+            <span
+              className="c5 "
+            >
+              <span
+                className="c6"
+              >
+                Choose file
+              </span>
+            </span>
+          </span>
+        </button>
+        <input
+          className="c7"
+          onChange={[Function]}
+          type="file"
+        />
+        <p
+          className="c8"
+        >
+          
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c9"
+      id="layer-4"
+    >
+      <div
+        className="c10"
+      />
+    </div>
+  </div>
+</div>
+`;

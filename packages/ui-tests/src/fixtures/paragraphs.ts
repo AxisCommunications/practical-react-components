@@ -1,0 +1,27 @@
+export const smallParagraphFixture = `
+Cupcake ipsum dolor. Sit amet caramels jelly beans cake. Liquorice jelly beans wafer gingerbread jelly pie liquorice macaroon.
+
+Toffee jelly beans macaroon bonbon gingerbread dragée gingerbread icing. Gummi bears brownie jelly-o apple pie danish jujubes oat cake tootsie roll. Apple pie gingerbread jelly-o. Ice cream brownie halvah donut apple pie chocolate sweet.
+`
+
+export const mediumParagraphFixture = `
+Cupcake ipsum dolor. Sit amet marshmallow biscuit liquorice carrot cake pastry. Liquorice pastry dessert carrot cake sesame snaps. Cotton candy cookie cupcake caramels dragée pastry soufflé jelly-o. Pudding marzipan bonbon. Brownie bonbon cotton candy jelly caramels cheesecake bonbon marshmallow. Candy dragée dessert gummies powder toffee. Powder pie macaroon candy danish chocolate cake toffee wafer. Pudding carrot cake macaroon dessert lemon drops. Dessert jelly-o powder jujubes wafer soufflé.
+
+Brownie sweet candy canes candy cotton candy chocolate liquorice. Toffee marshmallow pie. Bear claw marzipan lemon drops pudding chocolate cake lemon drops. Macaroon pudding sweet pudding sweet sugar plum jelly beans topping toffee. Candy chocolate bar powder. Sweet roll croissant marzipan cake liquorice brownie. Soufflé marshmallow dessert ice cream. Tootsie roll sweet marzipan chocolate bar carrot cake jujubes.
+
+Cheesecake jelly-o wafer icing. Marzipan dessert icing caramels bonbon wafer dessert tart croissant. Gingerbread sweet roll chupa chups tart chocolate bar chocolate bar macaroon. Macaroon brownie halvah soufflé danish caramels toffee danish gummies. Pie tart lollipop jelly beans chocolate sweet macaroon pudding. Oat cake dessert jelly marzipan candy canes. Marshmallow liquorice donut sweet roll oat cake cake chocolate cake pie marshmallow. Ice cream toffee cotton candy wafer. Marshmallow brownie oat cake cookie brownie.
+
+Oat cake dragée chupa chups. Marshmallow powder donut. Tootsie roll bear claw croissant. Danish cupcake carrot cake lemon drops icing apple pie jelly-o fruitcake. Oat cake candy canes bear claw chocolate bar macaroon. Liquorice cookie cupcake biscuit caramels cupcake cake. Tiramisu gummi bears oat cake. Sweet jujubes halvah soufflé.
+`
+
+export const largeParagraphFixture = `
+Cupcake ipsum dolor sit amet. Soufflé biscuit macaroon lollipop dessert sugar plum jujubes cupcake. Tart chocolate bar cotton candy pie gummies candy. Muffin gummies muffin powder cotton candy liquorice. Oat cake candy bonbon lollipop toffee pudding pudding. Pie wafer cupcake pie gingerbread cookie jelly-o gingerbread. Dessert pudding chocolate cake. Gingerbread sesame snaps cake liquorice macaroon. Cotton candy croissant wafer tiramisu cotton candy cake oat cake candy canes chocolate. Croissant liquorice jelly-o candy ice cream croissant. Cupcake tart ice cream oat cake bear claw. Icing candy gingerbread cake jelly beans bear claw sesame snaps tiramisu cookie.
+
+Gingerbread dragée lemon drops jelly beans topping candy. Danish dragée oat cake halvah cake jelly beans. Chocolate cake lemon drops candy canes powder jelly beans tiramisu topping sesame snaps sugar plum. Cake dragée caramels chupa chups marzipan jelly candy canes powder. Cookie jelly wafer chocolate sugar plum sugar plum jelly-o donut. Brownie chupa chups ice cream lemon drops jujubes gummies lollipop danish. Pastry gummies lollipop cake marshmallow jelly jujubes wafer. Dragée jelly-o icing tootsie roll fruitcake macaroon tart. Bear claw topping pie caramels donut chocolate. Tootsie roll muffin candy canes chupa chups gummi bears gingerbread jujubes. Sesame snaps candy gingerbread wafer macaroon. Candy canes cake powder oat cake pudding wafer jelly-o caramels muffin.
+
+Caramels gummi bears oat cake gingerbread. Chocolate sweet chocolate caramels dessert apple pie muffin. Powder muffin jelly-o ice cream pie chocolate pudding macaroon. Cake powder dragée lemon drops. Biscuit chocolate cake candy canes cheesecake jujubes pudding croissant. Cookie cookie toffee ice cream jelly-o dragée bonbon jelly. Chocolate cake marshmallow cotton candy. Bonbon croissant bear claw. Ice cream toffee pastry. Bonbon jelly-o carrot cake. Sweet sesame snaps cheesecake chocolate bar chupa chups halvah cookie liquorice. Cotton candy jelly-o toffee.
+
+Candy canes carrot cake liquorice caramels. Pudding sugar plum sweet. Muffin ice cream chocolate cake gummi bears halvah toffee. Powder dessert pudding. Biscuit muffin icing. Sugar plum croissant muffin chocolate cake gingerbread icing cake sweet powder. Jujubes gingerbread cake cotton candy. Gingerbread wafer chupa chups tootsie roll lollipop. Chocolate bar jelly muffin tootsie roll. Caramels toffee tart carrot cake lollipop powder cake cookie jelly beans. Pastry biscuit bear claw cookie jelly-o carrot cake candy bear claw. Lollipop tootsie roll sugar plum topping pudding carrot cake bear claw macaroon.
+
+Cotton candy bear claw ice cream. Candy lemon drops powder brownie sweet roll. Pastry gingerbread chocolate. Danish fruitcake cotton candy donut chocolate cake jelly jelly-o ice cream topping. Cupcake biscuit biscuit oat cake. Tiramisu tart cupcake tiramisu. Cheesecake chocolate bear claw bonbon bear claw. Sweet roll chocolate pudding candy canes macaroon. Chocolate cake oat cake bear claw icing caramels toffee. Pudding caramels apple pie brownie toffee lemon drops pastry biscuit. Lollipop cake tiramisu jujubes candy biscuit chupa chups. Pie chupa chups lemon drops tiramisu. Tiramisu ice cream cookie bonbon dessert.
+`

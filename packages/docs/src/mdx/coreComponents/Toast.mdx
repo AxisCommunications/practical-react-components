@@ -1,0 +1,271 @@
+export const meta = {
+  name: 'Toast ⚙',
+  route: '/components/toast',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import { useState, useCallback } from 'react'
+import { Button, useToasts, Link } from 'practical-react-components-core'
+import { SiteIcon } from 'practical-react-components-icons'
+
+# Toast
+
+A Toast is a pop-up notification that can show in up to signify an error, to warn the user,
+provide information or notify success.
+
+Toasts can not be used (properly) unless your application is wrapped with a [PracticalProvider](/#practicalprovider).
+
+## Demo
+
+export const NOOP = () => {
+  alert('Clicked link')
+}
+
+export const Wrapper = styled.div`
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  max-width: 400px;
+  grid-gap: 16px;
+`
+
+export const DemoComponent = ({}) => {
+  const {
+    showToast,
+    hideToast,
+    clearToasts,
+    showSuccessToast,
+    showInfoToast,
+    showWarningToast,
+    showErrorToast,
+    showLoadingToast,
+    showProgressToast,
+    showActionToast,
+  } = useToasts()
+  const showSuccess = () =>
+    showSuccessToast({
+      label: 'Successfully set parameter',
+      onClose: id => {
+        console.log('Dismissed toast with ID: %o', id)
+      },
+    })
+  const showSuccessWithMessage = () =>
+    showSuccessToast({
+      label: 'Done!',
+      message:
+        'Successfully set parameter, so now we are super happy with ourselves and tell you about it in an elaborate way.',
+    })
+  const showInfo = () =>
+    showInfoToast({
+      label: 'Note that this will do that.',
+    })
+  const showInfoWithMessage = () =>
+    showInfoToast({
+      className: 'custom-made',
+      label: 'Note!',
+      message:
+        'This will do that other thing that you can read about in the help section if you are interested in more stuff.',
+    })
+  const showWarning = () =>
+    showWarningToast({
+      label: 'Please, do not do this!',
+    })
+  const showWarningWithMessage = () =>
+    showWarningToast({
+      label: 'Warning!',
+      message:
+        'You forgot to do something important, which caused us to wonder if you actually know that you should not have done this.',
+    })
+  const showError = () =>
+    showErrorToast({
+      label: 'Oops, the server responded with 403',
+    })
+  const showErrorWithMessage = () =>
+    showErrorToast({
+      label: 'Unauthorized!',
+      message:
+        'The server responded with 401. Please try to login before proceeding with whatever it is you are doing.',
+    })
+  const showAction = () =>
+    showActionToast({
+      label: 'Action',
+      action: {
+        icon: SiteIcon,
+        text: 'Link text',
+        link: { variant: 'button', onClick: NOOP },
+      },
+    })
+  const showActionWithMessage = () =>
+    showActionToast({
+      label: 'Action',
+      message: 'Some very very long action message',
+      action: {
+        icon: SiteIcon,
+        text: 'Link text',
+        link: { variant: 'button', onClick: NOOP },
+      },
+    })
+  const showLoading = () => {
+    showLoadingToast(
+      {
+        label: 'Loading...',
+      },
+      'my-simple-loader'
+    )
+    setTimeout(() => {
+      showSuccessToast({ label: 'Done!' }, 'my-simple-loader')
+    }, 3000)
+  }
+  const showLoadingWithMessage = () => {
+    showLoadingToast(
+      {
+        label: 'Loading...',
+        message: 'Some very very long action message',
+      },
+      'my-advanced-loader'
+    )
+    setTimeout(() => {
+      showSuccessToast({ label: 'Done!' }, 'my-advanced-loader')
+    }, 3000)
+  }
+  const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+  const progressFactory = (label, message, toastId) => {
+    const show = (toastId, value) =>
+      showProgressToast(
+        {
+          label,
+          message,
+          progress: {
+            value,
+            label: `${Math.max(0, Math.min(Math.round(value * 100), 100))}%`,
+          },
+        },
+        toastId
+      )
+    const myToastId = show(toastId, 0)
+    const setFraction = value => show(myToastId, value)
+    return [myToastId, setFraction]
+  }
+  const showProgress = async () => {
+    const [id, setValue] = progressFactory('Progressing...')
+    for (let i = 0; i <= 100; i++) {
+      await sleep(50)
+      setValue(i / 100)
+    }
+    await sleep(300)
+    showSuccessToast({ label: 'Done!' }, id)
+  }
+  const showProgressWithMessage = async () => {
+    const [id, setValue] = progressFactory(
+      'Progressing...',
+      'Look at this progress!'
+    )
+    for (let i = 0; i <= 100; i++) {
+      await sleep(50)
+      setValue(i / 100)
+    }
+    await sleep(300)
+    showSuccessToast({ label: 'Done!' }, id)
+  }
+  return (
+    <Wrapper>
+      <Button label="Success" variant="primary" onClick={showSuccess} />
+      <Button
+        label="Success with message"
+        variant="primary"
+        onClick={showSuccessWithMessage}
+      />
+      <Button label="Info" variant="primary" onClick={showInfo} />
+      <Button
+        label="Info with message"
+        variant="primary"
+        onClick={showInfoWithMessage}
+      />
+      <Button label="Warning" variant="primary" onClick={showWarning} />
+      <Button
+        label="Warning with message"
+        variant="primary"
+        onClick={showWarningWithMessage}
+      />
+      <Button label="Error" variant="primary" onClick={showError} />
+      <Button
+        label="Error with message"
+        variant="primary"
+        onClick={showErrorWithMessage}
+      />
+      <Button label="Action" variant="primary" onClick={showAction} />
+      <Button
+        label="Action with message"
+        variant="primary"
+        onClick={showActionWithMessage}
+      />
+      <Button label="Loading" variant="primary" onClick={showLoading} />
+      <Button
+        label="Loading with message"
+        variant="primary"
+        onClick={showLoadingWithMessage}
+      />
+      <Button label="Progress" variant="primary" onClick={showProgress} />
+      <Button
+        label="Progress with message"
+        variant="primary"
+        onClick={showProgressWithMessage}
+      />
+      <Button
+        label="Clear all toasts"
+        variant="secondary"
+        onClick={clearToasts}
+        accent={true}
+      />
+    </Wrapper>
+  )
+}
+
+<DemoComponent />
+
+## Basic usage
+
+```typescript
+import React, { useCallback } from 'react'
+import { useToasts, Button } from 'practical-react-components-core'
+
+const MyComponent = () => {
+  const {
+    showToast,
+    hideToast,
+    clearToasts,
+    showSuccessToast,
+    showInfoToast,
+    showWarningToast,
+    showErrorToast,
+    showLoadingToast,
+    showProgressToast,
+    showActionToast,
+  } = useToasts()
+
+  const showSuccess = useCallback(() => {
+    showSuccessToast({
+      label: 'Successfully set parameter',
+      onClose: id => {
+        console.log('Dismissed toast with ID: %o', id)
+      },
+    }
+  }, [])
+
+  return (
+    <Button
+      label="Success with message"
+      variant="primary"
+      onClick={showSuccess}
+    />
+  )
+}
+```
+
+## Props
+
+useToasts forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="useToasts" />

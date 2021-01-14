@@ -1,0 +1,975 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Typography buttons 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-27"
+    >
+      <span
+        className="c2"
+      >
+        text
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-28"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography caption 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-9"
+    >
+      <p
+        className="c2"
+      >
+        text
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-10"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography card title 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-13"
+    >
+      <span
+        className="c2"
+      >
+        text
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-14"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography chip tag text 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <span
+        className="c2"
+      >
+        text
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-6"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography column heading 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-19"
+    >
+      <span
+        className="c2"
+      >
+        text
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-20"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography compact label 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-29"
+    >
+      <span
+        className="c2"
+      >
+        text
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-30"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography default 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <p
+        className="c2"
+      >
+        text
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-2"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography default 2`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <p
+        className="c2"
+      >
+        text
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-4"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography dialog heading 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 21px;
+  line-height: 32px;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-23"
+    >
+      <p
+        className="c2"
+      >
+        text
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-24"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography explanatory text 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <span
+        className="c2"
+      >
+        text
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-8"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography group title 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-17"
+    >
+      <span
+        className="c2"
+      >
+        text
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-18"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography header title 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-21"
+    >
+      <span
+        className="c2"
+      >
+        text
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-22"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography navigation group 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-11"
+    >
+      <span
+        className="c2"
+      >
+        text
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-12"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography navigation label 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-15"
+    >
+      <span
+        className="c2"
+      >
+        text
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-16"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Typography page heading 1`] = `
+.c2 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 21px;
+  line-height: 32px;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-25"
+    >
+      <p
+        className="c2"
+      >
+        text
+      </p>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-26"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;

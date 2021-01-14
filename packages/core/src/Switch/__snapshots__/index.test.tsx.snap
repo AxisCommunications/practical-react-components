@@ -1,0 +1,1061 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch Off 1`] = `
+.c6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  margin: 0 -15px;
+}
+
+.c8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c10 {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+  background-color: rgb(250,250,250);
+  border: 1px solid rgb(250,250,250);
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.c2:hover .c9 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c2:hover .c7 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c2:focus-within {
+  outline: none;
+}
+
+.c2:focus-within .c9 {
+  border: 2px solid rgb(61,61,61);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c2:focus-within .c7 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c2:active .c9 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.32);
+}
+
+.c2:active .c7 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.88);
+  -ms-transform: scale(1.88);
+  transform: scale(1.88);
+}
+
+.c3 {
+  position: relative;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.c12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: unset;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32px;
+  position: relative;
+}
+
+.c5 {
+  display: block;
+  height: 14px;
+  border-radius: 7px;
+  -webkit-transition: width 200ms ease-in-out;
+  transition: width 200ms ease-in-out;
+  width: 14px;
+  background-color: rgb(122,122,122);
+}
+
+.c11 {
+  display: block;
+  height: 14px;
+  width: 14px;
+  border-radius: 7px;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  background-color: rgb(82,82,82);
+}
+
+.c14 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c13 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        className="c2"
+        disabled={false}
+      >
+        <label
+          className="c3"
+          disabled={false}
+        >
+          <span
+            className="c4"
+          >
+            <span
+              className="c5"
+            />
+            <div
+              className="c6"
+            >
+              <span
+                className="c7 c8"
+              />
+              <span
+                className="c9 c10"
+              />
+            </div>
+            <span
+              className="c11"
+            />
+          </span>
+          <input
+            className="c12"
+            disabled={false}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="checkbox"
+            value={false}
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c13"
+      id="layer-6"
+    >
+      <div
+        className="c14"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Switch Off 2`] = `
+.c6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  margin: 0 -15px;
+}
+
+.c8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c10 {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+  background-color: rgb(250,250,250);
+  border: 1px solid rgb(250,250,250);
+}
+
+.c15:hover .c9 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c15:hover .c7 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c15:focus-within .c9 {
+  border: 2px solid rgb(61,61,61);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c15:focus-within .c7 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c15:active .c9 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.32);
+}
+
+.c15:active .c7 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.88);
+  -ms-transform: scale(1.88);
+  transform: scale(1.88);
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c2:hover .c9 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c2:hover .c7 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c2:focus-within {
+  outline: none;
+}
+
+.c2:focus-within .c9 {
+  border: 2px solid rgb(61,61,61);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c2:focus-within .c7 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c2:active .c9 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.32);
+}
+
+.c2:active .c7 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.88);
+  -ms-transform: scale(1.88);
+  transform: scale(1.88);
+}
+
+.c3 {
+  position: relative;
+  padding: 8px;
+  cursor: default;
+}
+
+.c12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: unset;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32px;
+  position: relative;
+}
+
+.c5 {
+  display: block;
+  height: 14px;
+  border-radius: 7px;
+  -webkit-transition: width 200ms ease-in-out;
+  transition: width 200ms ease-in-out;
+  width: 14px;
+  background-color: rgb(122,122,122);
+}
+
+.c11 {
+  display: block;
+  height: 14px;
+  width: 14px;
+  border-radius: 7px;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  background-color: rgb(82,82,82);
+}
+
+.c14 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c13 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <div
+        className="c2"
+        disabled={true}
+      >
+        <label
+          className="c3"
+          disabled={true}
+        >
+          <span
+            className="c4"
+          >
+            <span
+              className="c5"
+            />
+            <div
+              className="c6"
+            >
+              <span
+                className="c7 c8"
+              />
+              <span
+                className="c9 c10"
+              />
+            </div>
+            <span
+              className="c11"
+            />
+          </span>
+          <input
+            className="c12"
+            disabled={true}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="checkbox"
+            value={false}
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c13"
+      id="layer-8"
+    >
+      <div
+        className="c14"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Switch On 1`] = `
+.c6 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  margin: 0 -15px;
+}
+
+.c8 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c10 {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+  background-color: rgb(250,250,250);
+  border: 1px solid rgb(250,250,250);
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+.c2:hover .c9 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c2:hover .c7 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c2:focus-within {
+  outline: none;
+}
+
+.c2:focus-within .c9 {
+  border: 2px solid rgb(61,61,61);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c2:focus-within .c7 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c2:active .c9 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.32);
+}
+
+.c2:active .c7 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.88);
+  -ms-transform: scale(1.88);
+  transform: scale(1.88);
+}
+
+.c3 {
+  position: relative;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.c12 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: unset;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32px;
+  position: relative;
+}
+
+.c5 {
+  display: block;
+  height: 14px;
+  border-radius: 7px;
+  -webkit-transition: width 200ms ease-in-out;
+  transition: width 200ms ease-in-out;
+  width: 14px;
+  background-color: rgb(122,122,122);
+}
+
+.c11 {
+  display: block;
+  height: 14px;
+  width: 14px;
+  border-radius: 7px;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  background-color: rgb(82,82,82);
+}
+
+.c14 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c13 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+        disabled={false}
+      >
+        <label
+          className="c3"
+          disabled={false}
+        >
+          <span
+            className="c4"
+          >
+            <span
+              className="c5"
+            />
+            <div
+              className="c6"
+            >
+              <span
+                className="c7 c8"
+              />
+              <span
+                className="c9 c10"
+              />
+            </div>
+            <span
+              className="c11"
+            />
+          </span>
+          <input
+            className="c12"
+            disabled={false}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="checkbox"
+            value={true}
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c13"
+      id="layer-2"
+    >
+      <div
+        className="c14"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Switch On 2`] = `
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c8 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  width: 18px;
+  height: 18px;
+  margin: 0 -15px;
+}
+
+.c4 {
+  margin-right: 8px;
+}
+
+.c10 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c12 {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+  background-color: rgb(250,250,250);
+  border: 1px solid rgb(250,250,250);
+}
+
+.c17:hover .c11 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c17:hover .c9 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c17:focus-within .c11 {
+  border: 2px solid rgb(61,61,61);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c17:focus-within .c9 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c17:active .c11 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.32);
+}
+
+.c17:active .c9 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.88);
+  -ms-transform: scale(1.88);
+  transform: scale(1.88);
+}
+
+.c2 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c2:hover .c11 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c2:hover .c9 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c2:focus-within {
+  outline: none;
+}
+
+.c2:focus-within .c11 {
+  border: 2px solid rgb(61,61,61);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c2:focus-within .c9 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.77);
+  -ms-transform: scale(1.77);
+  transform: scale(1.77);
+}
+
+.c2:active .c11 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.32);
+}
+
+.c2:active .c9 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.88);
+  -ms-transform: scale(1.88);
+  transform: scale(1.88);
+}
+
+.c5 {
+  position: relative;
+  padding: 8px;
+  cursor: default;
+}
+
+.c14 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: unset;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 32px;
+  position: relative;
+}
+
+.c7 {
+  display: block;
+  height: 14px;
+  border-radius: 7px;
+  -webkit-transition: width 200ms ease-in-out;
+  transition: width 200ms ease-in-out;
+  width: 14px;
+  background-color: rgb(122,122,122);
+}
+
+.c13 {
+  display: block;
+  height: 14px;
+  width: 14px;
+  border-radius: 7px;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  background-color: rgb(82,82,82);
+}
+
+.c16 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c15 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+        disabled={true}
+      >
+        <p
+          className="c3 c4"
+        >
+          test label
+        </p>
+        <label
+          className="c5"
+          disabled={true}
+        >
+          <span
+            className="c6"
+          >
+            <span
+              className="c7"
+            />
+            <div
+              className="c8"
+            >
+              <span
+                className="c9 c10"
+              />
+              <span
+                className="c11 c12"
+              />
+            </div>
+            <span
+              className="c13"
+            />
+          </span>
+          <input
+            className="c14"
+            disabled={true}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="checkbox"
+            value={true}
+          />
+        </label>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c15"
+      id="layer-4"
+    >
+      <div
+        className="c16"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,395 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectList SelectList 1`] = `
+.c4 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c3 {
+  height: 32px;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: left;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  pointer-events: none;
+}
+
+.c5 {
+  height: 32px;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: left;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgb(102,102,102);
+  pointer-events: none;
+}
+
+.c6 {
+  height: 32px;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: left;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.c6:hover {
+  background-color: rgb(245,245,245);
+}
+
+.c2 {
+  padding: 0;
+  outline: none;
+  list-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: rgb(255,255,255);
+  color: rgb(41,41,41);
+  min-width: 100%;
+  border-radius: 2px;
+  display: block;
+  max-height: 320px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <ul
+        className="c2"
+        onKeyUp={[Function]}
+        tabIndex={0}
+      >
+        <li
+          className="c3"
+          disabled={false}
+          onClick={[Function]}
+          role="menuitem"
+          selected={true}
+          value="test1"
+        >
+          <p
+            className="c4"
+          >
+            test1
+          </p>
+        </li>
+        <li
+          className="c5"
+          disabled={true}
+          onClick={[Function]}
+          role="menuitem"
+          selected={false}
+          value="test2"
+        >
+          <p
+            className="c4"
+          >
+            test2
+          </p>
+        </li>
+        <li
+          className="c6"
+          disabled={false}
+          onClick={[Function]}
+          role="menuitem"
+          selected={false}
+          value="test3"
+        >
+          <p
+            className="c4"
+          >
+            test3
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-2"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SelectList SelectList 2`] = `
+.c4 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c3 {
+  height: 32px;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: left;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  pointer-events: none;
+}
+
+.c5 {
+  height: 32px;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: left;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+  color: rgb(102,102,102);
+  pointer-events: none;
+}
+
+.c6 {
+  height: 32px;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: left;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.c6:hover {
+  background-color: rgb(245,245,245);
+}
+
+.c2 {
+  padding: 0;
+  outline: none;
+  list-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: rgb(255,255,255);
+  color: rgb(41,41,41);
+  min-width: 100%;
+  border-radius: 2px;
+  display: block;
+  max-height: 200px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <ul
+        className="c2"
+        onKeyUp={[Function]}
+        tabIndex={0}
+      >
+        <li
+          className="c3"
+          disabled={false}
+          onClick={[Function]}
+          role="menuitem"
+          selected={true}
+          value="test1"
+        >
+          <p
+            className="c4"
+          >
+            test1
+          </p>
+        </li>
+        <li
+          className="c5"
+          disabled={true}
+          onClick={[Function]}
+          role="menuitem"
+          selected={false}
+          value="test2"
+        >
+          <p
+            className="c4"
+          >
+            test2
+          </p>
+        </li>
+        <li
+          className="c6"
+          disabled={false}
+          onClick={[Function]}
+          role="menuitem"
+          selected={false}
+          value="test3"
+        >
+          <p
+            className="c4"
+          >
+            test3
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-4"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;

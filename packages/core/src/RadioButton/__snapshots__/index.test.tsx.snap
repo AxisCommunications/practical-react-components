@@ -1,0 +1,3497 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioButtons RadioButton 1`] = `
+.c9 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.c5 {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c6 {
+  width: 24px;
+  height: 24px;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  fill: transparent;
+  stroke: rgb(102,102,102);
+}
+
+.c8 {
+  stroke-width: 2px;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 3px;
+  min-height: 24px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 8px;
+  color: rgb(41,41,41);
+  white-space: initial;
+  word-break: break-word;
+}
+
+.c11 {
+  display: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+}
+
+.c2:hover .c4 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within {
+  outline: none;
+}
+
+.c2:focus-within .c4 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within .c7 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .c4 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c2:active .c7 {
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .RadioButton__SvgDot-sc-1m0c1id-4 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c13 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c12 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        checked={false}
+        className="c2"
+        disabled={false}
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4 c5"
+          />
+          <svg
+            checked={false}
+            className="c6"
+          >
+            <circle
+              className="c7 c8"
+              cx={12}
+              cy={12}
+              r={9}
+            />
+          </svg>
+        </div>
+        <span
+          className="c9 c10"
+        >
+          Sunny
+        </span>
+        <input
+          checked={false}
+          className="c11"
+          disabled={false}
+          name="test"
+          onChange={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="radio"
+          value="sunny"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c12"
+      id="layer-2"
+    >
+      <div
+        className="c13"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RadioButtons RadioButton 2`] = `
+.c11 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.c5 {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c6 {
+  width: 24px;
+  height: 24px;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  fill: transparent;
+  stroke: rgb(82,82,82);
+}
+
+.c8 {
+  stroke-width: 2px;
+}
+
+.c10 {
+  fill: rgb(82,82,82);
+  stroke: rgb(82,82,82);
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 3px;
+  min-height: 24px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 8px;
+  color: rgb(41,41,41);
+  white-space: initial;
+  word-break: break-word;
+}
+
+.c13 {
+  display: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c16:hover .c4 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c16:focus-within .c4 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c16:focus-within .c7 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c16:active .c4 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c16:active .c7 {
+  stroke: rgb(61,61,61);
+}
+
+.c16:active .c9 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+}
+
+.c2:hover .c4 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within {
+  outline: none;
+}
+
+.c2:focus-within .c4 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within .c7 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .c4 {
+  background-color: rgba(82,82,82,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c2:active .c7 {
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .c9 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c15 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c14 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        checked={true}
+        className="c2"
+        disabled={false}
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4 c5"
+          />
+          <svg
+            checked={true}
+            className="c6"
+          >
+            <circle
+              className="c7 c8"
+              cx={12}
+              cy={12}
+              r={9}
+            />
+            <circle
+              className="c9 c10"
+              cx={12}
+              cy={12}
+              r={4.5}
+            />
+          </svg>
+        </div>
+        <span
+          className="c11 c12"
+        >
+          Cloudy
+        </span>
+        <input
+          checked={true}
+          className="c13"
+          disabled={false}
+          name="test"
+          onChange={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="radio"
+          value="cloudy"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c14"
+      id="layer-4"
+    >
+      <div
+        className="c15"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RadioButtons RadioButton 3`] = `
+.c11 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.c5 {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c6 {
+  width: 24px;
+  height: 24px;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  fill: transparent;
+  stroke: rgb(102,102,102);
+}
+
+.c8 {
+  stroke-width: 2px;
+}
+
+.c10 {
+  fill: rgb(122,122,122);
+  stroke: rgb(122,122,122);
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 3px;
+  min-height: 24px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 8px;
+  color: rgb(41,41,41);
+  white-space: initial;
+  word-break: break-word;
+}
+
+.c13 {
+  display: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+}
+
+.c2:hover .c4 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within {
+  outline: none;
+}
+
+.c2:focus-within .c4 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within .c7 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .c4 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c2:active .c7 {
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .c9 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c16:hover .c4 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c16:focus-within .c4 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c16:focus-within .c7 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c16:active .c4 {
+  background-color: rgba(82,82,82,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c16:active .c7 {
+  stroke: rgb(61,61,61);
+}
+
+.c16:active .c9 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c15 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c14 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        checked={false}
+        className="c2"
+        disabled={false}
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4 c5"
+          />
+          <svg
+            checked={false}
+            className="c6"
+          >
+            <circle
+              className="c7 c8"
+              cx={12}
+              cy={12}
+              r={9}
+            />
+            <circle
+              className="c9 c10"
+              cx={12}
+              cy={12}
+              r={4.5}
+            />
+          </svg>
+        </div>
+        <span
+          className="c11 c12"
+        >
+          Rainy
+        </span>
+        <input
+          checked={false}
+          className="c13"
+          disabled={false}
+          name="test"
+          onChange={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="radio"
+          value="rainy"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c14"
+      id="layer-6"
+    >
+      <div
+        className="c15"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RadioButtons RadioButton 4`] = `
+.c9 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c3 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.c5 {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c6 {
+  width: 24px;
+  height: 24px;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  fill: transparent;
+  stroke: rgb(102,102,102);
+}
+
+.c8 {
+  stroke-width: 2px;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 3px;
+  min-height: 24px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 8px;
+  color: rgb(41,41,41);
+  white-space: initial;
+  word-break: break-word;
+}
+
+.c11 {
+  display: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c14:hover .c4 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c14:focus-within .c4 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c14:focus-within .c7 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c14:active .c4 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c14:active .c7 {
+  stroke: rgb(61,61,61);
+}
+
+.c15:hover .c4 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c15:focus-within .c4 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c15:focus-within .c7 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c15:active .c4 {
+  background-color: rgba(82,82,82,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c15:active .c7 {
+  stroke: rgb(61,61,61);
+}
+
+.c2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c2:hover .c4 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within {
+  outline: none;
+}
+
+.c2:focus-within .c4 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within .c7 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .c4 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c2:active .c7 {
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .c16 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c13 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c12 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <div
+        checked={false}
+        className="c2"
+        disabled={true}
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4 c5"
+          />
+          <svg
+            checked={false}
+            className="c6"
+          >
+            <circle
+              className="c7 c8"
+              cx={12}
+              cy={12}
+              r={9}
+            />
+          </svg>
+        </div>
+        <span
+          className="c9 c10"
+        >
+          Windy
+        </span>
+        <input
+          checked={false}
+          className="c11"
+          disabled={true}
+          name="test"
+          onChange={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="radio"
+          value="windy"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c12"
+      id="layer-8"
+    >
+      <div
+        className="c13"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RadioButtons RadioButtonGroup 1`] = `
+.c12 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.c6 {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c7 {
+  width: 24px;
+  height: 24px;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  fill: transparent;
+  stroke: rgb(82,82,82);
+}
+
+.c16 {
+  width: 24px;
+  height: 24px;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  fill: transparent;
+  stroke: rgb(102,102,102);
+}
+
+.c9 {
+  stroke-width: 2px;
+}
+
+.c11 {
+  fill: rgb(82,82,82);
+  stroke: rgb(82,82,82);
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 3px;
+  min-height: 24px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 8px;
+  color: rgb(41,41,41);
+  white-space: initial;
+  word-break: break-word;
+}
+
+.c14 {
+  display: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c3 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+}
+
+.c3:hover .c5 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c3:focus-within {
+  outline: none;
+}
+
+.c3:focus-within .c5 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c3:focus-within .c8 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c3:active .c5 {
+  background-color: rgba(82,82,82,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c3:active .c8 {
+  stroke: rgb(61,61,61);
+}
+
+.c3:active .c10 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c15 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+}
+
+.c15:hover .c5 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c15:focus-within {
+  outline: none;
+}
+
+.c15:focus-within .c5 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c15:focus-within .c8 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c15:active .c5 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c15:active .c8 {
+  stroke: rgb(61,61,61);
+}
+
+.c15:active .c10 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c17 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c17:hover .c5 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c17:focus-within {
+  outline: none;
+}
+
+.c17:focus-within .c5 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c17:focus-within .c8 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c17:active .c5 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c17:active .c8 {
+  stroke: rgb(61,61,61);
+}
+
+.c17:active .c10 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c2 {
+  display: grid;
+  grid-row-gap: 16px;
+  margin: 8px 0;
+}
+
+.c19 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c18 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-9"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          checked={true}
+          className="c3"
+          disabled={false}
+        >
+          <div
+            className="c4"
+          >
+            <div
+              className="c5 c6"
+            />
+            <svg
+              checked={true}
+              className="c7"
+            >
+              <circle
+                className="c8 c9"
+                cx={12}
+                cy={12}
+                r={9}
+              />
+              <circle
+                className="c10 c11"
+                cx={12}
+                cy={12}
+                r={4.5}
+              />
+            </svg>
+          </div>
+          <span
+            className="c12 c13"
+          >
+            Sunny
+          </span>
+          <input
+            checked={true}
+            className="c14"
+            disabled={false}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="radio"
+            value="sunny"
+          />
+        </div>
+        <div
+          checked={false}
+          className="c15"
+          disabled={false}
+        >
+          <div
+            className="c4"
+          >
+            <div
+              className="c5 c6"
+            />
+            <svg
+              checked={false}
+              className="c16"
+            >
+              <circle
+                className="c8 c9"
+                cx={12}
+                cy={12}
+                r={9}
+              />
+            </svg>
+          </div>
+          <span
+            className="c12 c13"
+          >
+            Cloudy
+          </span>
+          <input
+            checked={false}
+            className="c14"
+            disabled={false}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="radio"
+            value="cloudy"
+          />
+        </div>
+        <div
+          checked={false}
+          className="c15"
+          disabled={false}
+        >
+          <div
+            className="c4"
+          >
+            <div
+              className="c5 c6"
+            />
+            <svg
+              checked={false}
+              className="c16"
+            >
+              <circle
+                className="c8 c9"
+                cx={12}
+                cy={12}
+                r={9}
+              />
+            </svg>
+          </div>
+          <span
+            className="c12 c13"
+          >
+            Rainy
+          </span>
+          <input
+            checked={false}
+            className="c14"
+            disabled={false}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="radio"
+            value="rainy"
+          />
+        </div>
+        <div
+          checked={false}
+          className="c17"
+          disabled={true}
+        >
+          <div
+            className="c4"
+          >
+            <div
+              className="c5 c6"
+            />
+            <svg
+              checked={false}
+              className="c16"
+            >
+              <circle
+                className="c8 c9"
+                cx={12}
+                cy={12}
+                r={9}
+              />
+            </svg>
+          </div>
+          <span
+            className="c12 c13"
+          >
+            Windy
+          </span>
+          <input
+            checked={false}
+            className="c14"
+            disabled={true}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="radio"
+            value="windy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c18"
+      id="layer-10"
+    >
+      <div
+        className="c19"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RadioButtons RadioButtonGroup 2`] = `
+.c10 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c4 {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 2px;
+}
+
+.c6 {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c7 {
+  width: 24px;
+  height: 24px;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  fill: transparent;
+  stroke: rgb(41,41,41);
+}
+
+.c9 {
+  stroke-width: 2px;
+}
+
+.c15 {
+  fill: rgb(82,82,82);
+  stroke: rgb(82,82,82);
+}
+
+.c11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 3px;
+  min-height: 24px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 8px;
+  color: rgb(41,41,41);
+  white-space: initial;
+  word-break: break-word;
+}
+
+.c12 {
+  display: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c13 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+}
+
+.c13:hover .c5 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c13:focus-within {
+  outline: none;
+}
+
+.c13:focus-within .c5 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c13:focus-within .c8 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c13:active .c5 {
+  background-color: rgba(82,82,82,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c13:active .c8 {
+  stroke: rgb(61,61,61);
+}
+
+.c13:active .c14 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c3 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+}
+
+.c3:hover .c5 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c3:focus-within {
+  outline: none;
+}
+
+.c3:focus-within .c5 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c3:focus-within .c8 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c3:active .c5 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c3:active .c8 {
+  stroke: rgb(61,61,61);
+}
+
+.c3:active .c14 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c16 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c16:hover .c5 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c16:focus-within {
+  outline: none;
+}
+
+.c16:focus-within .c5 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c16:focus-within .c8 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c16:active .c5 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c16:active .c8 {
+  stroke: rgb(61,61,61);
+}
+
+.c16:active .c14 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c2 {
+  display: grid;
+  grid-row-gap: 16px;
+  margin: 8px 0;
+}
+
+.c18 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c17 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-11"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          checked={false}
+          className="c3"
+          disabled={false}
+        >
+          <div
+            className="c4"
+          >
+            <div
+              className="c5 c6"
+            />
+            <svg
+              checked={false}
+              className="c7"
+            >
+              <circle
+                className="c8 c9"
+                cx={12}
+                cy={12}
+                r={9}
+              />
+            </svg>
+          </div>
+          <span
+            className="c10 c11"
+          >
+            Sunny
+          </span>
+          <input
+            checked={false}
+            className="c12"
+            disabled={false}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="radio"
+            value="sunny"
+          />
+        </div>
+        <div
+          checked={false}
+          className="c3"
+          disabled={false}
+        >
+          <div
+            className="c4"
+          >
+            <div
+              className="c5 c6"
+            />
+            <svg
+              checked={false}
+              className="c7"
+            >
+              <circle
+                className="c8 c9"
+                cx={12}
+                cy={12}
+                r={9}
+              />
+            </svg>
+          </div>
+          <span
+            className="c10 c11"
+          >
+            Cloudy
+          </span>
+          <input
+            checked={false}
+            className="c12"
+            disabled={false}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="radio"
+            value="cloudy"
+          />
+        </div>
+        <div
+          checked={true}
+          className="c13"
+          disabled={false}
+        >
+          <div
+            className="c4"
+          >
+            <div
+              className="c5 c6"
+            />
+            <svg
+              checked={true}
+              className="c7"
+            >
+              <circle
+                className="c8 c9"
+                cx={12}
+                cy={12}
+                r={9}
+              />
+              <circle
+                className="c14 c15"
+                cx={12}
+                cy={12}
+                r={4.5}
+              />
+            </svg>
+          </div>
+          <span
+            className="c10 c11"
+          >
+            Rainy
+          </span>
+          <input
+            checked={true}
+            className="c12"
+            disabled={false}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="radio"
+            value="rainy"
+          />
+        </div>
+        <div
+          checked={false}
+          className="c16"
+          disabled={true}
+        >
+          <div
+            className="c4"
+          >
+            <div
+              className="c5 c6"
+            />
+            <svg
+              checked={false}
+              className="c7"
+            >
+              <circle
+                className="c8 c9"
+                cx={12}
+                cy={12}
+                r={9}
+              />
+            </svg>
+          </div>
+          <span
+            className="c10 c11"
+          >
+            Windy
+          </span>
+          <input
+            checked={false}
+            className="c12"
+            disabled={true}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPointerDown={[Function]}
+            onPointerUp={[Function]}
+            type="radio"
+            value="windy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c17"
+      id="layer-12"
+    >
+      <div
+        className="c18"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RadioButtons RadioIconButton 1`] = `
+.c8 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c9 {
+  display: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+}
+
+.c2:hover .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within {
+  outline: none;
+}
+
+.c2:focus-within .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within .RadioButton__SvgRing-sc-1m0c1id-3 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c2:active .RadioButton__SvgRing-sc-1m0c1id-3 {
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .RadioButton__SvgDot-sc-1m0c1id-4 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c6 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c5 {
+  position: relative;
+  box-sizing: border-box;
+  width: 96px;
+  height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: rgb(122,122,122);
+  color: rgb(122,122,122);
+  background-color: rgb(245,245,245);
+  border: 1px solid rgb(204,204,204);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3:hover .c4 {
+  color: rgb(102,102,102);
+  background-color: rgb(240,240,240);
+  border: 1px solid rgb(204,204,204);
+}
+
+.c3:focus-within {
+  outline: none;
+}
+
+.c3:focus-within .c4 {
+  outline: none;
+  color: rgb(102,102,102);
+  background-color: rgb(245,245,245);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c3:active .c4 {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.4);
+  color: rgb(102,102,102);
+}
+
+.c7 {
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c10 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-13"
+    >
+      <div
+        checked={false}
+        className="c2 c3"
+        disabled={false}
+      >
+        <div
+          checked={false}
+          className="c4 c5"
+        >
+          <span
+            className="c6"
+            role="img"
+            size="medium"
+          >
+            <svg
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5 3h14v18H5zm3 7h4M8 7h7"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="c7"
+        >
+          <span
+            className="c8"
+          >
+            Not Checked
+          </span>
+        </div>
+        <input
+          checked={false}
+          className="c9"
+          disabled={false}
+          name="test1"
+          onChange={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="radio"
+          value="test1"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c10"
+      id="layer-14"
+    >
+      <div
+        className="c11"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RadioButtons RadioIconButton 2`] = `
+.c8 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c9 {
+  display: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+}
+
+.c2:hover .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within {
+  outline: none;
+}
+
+.c2:focus-within .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within .RadioButton__SvgRing-sc-1m0c1id-3 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(82,82,82,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c2:active .RadioButton__SvgRing-sc-1m0c1id-3 {
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .RadioButton__SvgDot-sc-1m0c1id-4 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c6 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c5 {
+  position: relative;
+  box-sizing: border-box;
+  width: 96px;
+  height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: rgb(122,122,122);
+  color: rgb(82,82,82);
+  background-color: rgb(245,245,245);
+  border: 1px solid rgb(82,82,82);
+}
+
+.c12:hover .c4 {
+  color: rgb(102,102,102);
+  background-color: rgb(240,240,240);
+  border: 1px solid rgb(204,204,204);
+}
+
+.c12:focus-within .c4 {
+  outline: none;
+  color: rgb(102,102,102);
+  background-color: rgb(245,245,245);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c12:active .c4 {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.4);
+  color: rgb(102,102,102);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c3:hover .c4 {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.16);
+  border: 1px solid rgb(82,82,82);
+}
+
+.c3:focus-within {
+  outline: none;
+}
+
+.c3:focus-within .c4 {
+  outline: none;
+  color: rgb(61,61,61);
+  background-color: rgb(245,245,245);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c3:active .c4 {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.24);
+  border: 1px solid rgb(61,61,61);
+}
+
+.c7 {
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c10 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-15"
+    >
+      <div
+        checked={true}
+        className="c2 c3"
+        disabled={false}
+      >
+        <div
+          checked={true}
+          className="c4 c5"
+        >
+          <span
+            className="c6"
+            role="img"
+            size="medium"
+          >
+            <svg
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 13.75c-2.34 0-7 1.17-7 3.5V19h14v-1.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zM9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm7.04 6.81c1.16.84 1.96 1.96 1.96 3.44V19h4v-1.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="c7"
+        >
+          <span
+            className="c8"
+          >
+            Checked
+          </span>
+        </div>
+        <input
+          checked={true}
+          className="c9"
+          disabled={false}
+          name="test2"
+          onChange={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="radio"
+          value="test2"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c10"
+      id="layer-16"
+    >
+      <div
+        className="c11"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RadioButtons RadioIconButton 3`] = `
+.c8 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c9 {
+  display: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c2:hover .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within {
+  outline: none;
+}
+
+.c2:focus-within .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c2:focus-within .RadioButton__SvgRing-sc-1m0c1id-3 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(82,82,82,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c2:active .RadioButton__SvgRing-sc-1m0c1id-3 {
+  stroke: rgb(61,61,61);
+}
+
+.c2:active .RadioButton__SvgDot-sc-1m0c1id-4 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c6 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c6 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c5 {
+  position: relative;
+  box-sizing: border-box;
+  width: 96px;
+  height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: rgb(122,122,122);
+  color: rgb(82,82,82);
+  background-color: rgb(245,245,245);
+  border: 1px solid rgb(82,82,82);
+}
+
+.c12:hover .c4 {
+  color: rgb(102,102,102);
+  background-color: rgb(240,240,240);
+  border: 1px solid rgb(204,204,204);
+}
+
+.c12:focus-within .c4 {
+  outline: none;
+  color: rgb(102,102,102);
+  background-color: rgb(245,245,245);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c12:active .c4 {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.4);
+  color: rgb(102,102,102);
+}
+
+.c13:hover .c4 {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.16);
+  border: 1px solid rgb(82,82,82);
+}
+
+.c13:focus-within .c4 {
+  outline: none;
+  color: rgb(61,61,61);
+  background-color: rgb(245,245,245);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c13:active .c4 {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.24);
+  border: 1px solid rgb(61,61,61);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c3:hover .c4 {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.16);
+  border: 1px solid rgb(82,82,82);
+}
+
+.c3:focus-within {
+  outline: none;
+}
+
+.c3:focus-within .c4 {
+  outline: none;
+  color: rgb(61,61,61);
+  background-color: rgb(245,245,245);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c3:active .c4 {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.24);
+  border: 1px solid rgb(61,61,61);
+}
+
+.c7 {
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c11 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c10 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-17"
+    >
+      <div
+        checked={true}
+        className="c2 c3"
+        disabled={true}
+      >
+        <div
+          checked={true}
+          className="c4 c5"
+        >
+          <span
+            className="c6"
+            role="img"
+            size="medium"
+          >
+            <svg
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 13.75c-2.34 0-7 1.17-7 3.5V19h14v-1.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zM9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm7.04 6.81c1.16.84 1.96 1.96 1.96 3.44V19h4v-1.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div
+          className="c7"
+        >
+          <span
+            className="c8"
+          >
+            Disabled
+          </span>
+        </div>
+        <input
+          checked={true}
+          className="c9"
+          disabled={true}
+          name="test3"
+          onChange={[Function]}
+          onFocus={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          type="radio"
+          value="test3"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c10"
+      id="layer-18"
+    >
+      <div
+        className="c11"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`RadioButtons RadioIconGroup 1`] = `
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c2 {
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgb(82,82,82);
+  cursor: default;
+}
+
+.c12 {
+  display: unset;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.c6 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+}
+
+.c6:hover .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c6:focus-within {
+  outline: none;
+}
+
+.c6:focus-within .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c6:focus-within .RadioButton__SvgRing-sc-1m0c1id-3 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c6:active .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c6:active .RadioButton__SvgRing-sc-1m0c1id-3 {
+  stroke: rgb(61,61,61);
+}
+
+.c6:active .RadioButton__SvgDot-sc-1m0c1id-4 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c13 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 24px auto;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+  max-width: 100%;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c13:hover .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c13:focus-within {
+  outline: none;
+}
+
+.c13:focus-within .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1.6);
+  -ms-transform: scale(1.6);
+  transform: scale(1.6);
+}
+
+.c13:focus-within .RadioButton__SvgRing-sc-1m0c1id-3 {
+  outline: none;
+  stroke: rgb(61,61,61);
+}
+
+.c13:active .RadioButton__SvgHalo-sc-1m0c1id-1 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.7);
+  -ms-transform: scale(1.7);
+  transform: scale(1.7);
+}
+
+.c13:active .RadioButton__SvgRing-sc-1m0c1id-3 {
+  stroke: rgb(61,61,61);
+}
+
+.c13:active .RadioButton__SvgDot-sc-1m0c1id-4 {
+  fill: rgb(61,61,61);
+  stroke: rgb(61,61,61);
+}
+
+.c10 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c10 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c9 {
+  position: relative;
+  box-sizing: border-box;
+  width: 96px;
+  height: 80px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: rgb(122,122,122);
+  color: rgb(122,122,122);
+  background-color: rgb(245,245,245);
+  border: 1px solid rgb(204,204,204);
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7:hover .c8 {
+  color: rgb(102,102,102);
+  background-color: rgb(240,240,240);
+  border: 1px solid rgb(204,204,204);
+}
+
+.c7:focus-within {
+  outline: none;
+}
+
+.c7:focus-within .c8 {
+  outline: none;
+  color: rgb(102,102,102);
+  background-color: rgb(245,245,245);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c7:active .c8 {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.4);
+  color: rgb(102,102,102);
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c14:hover .c8 {
+  color: rgb(102,102,102);
+  background-color: rgb(240,240,240);
+  border: 1px solid rgb(204,204,204);
+}
+
+.c14:focus-within {
+  outline: none;
+}
+
+.c14:focus-within .c8 {
+  outline: none;
+  color: rgb(102,102,102);
+  background-color: rgb(245,245,245);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c14:active .c8 {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.4);
+  color: rgb(102,102,102);
+}
+
+.c11 {
+  height: 32px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c4 > .c5:not(:first-child) {
+  margin-left: 48px;
+}
+
+.c16 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c15 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-19"
+    >
+      <div>
+        <div
+          className="c2"
+        >
+          <span
+            className="c3"
+          >
+            Grouped buttons with icons
+          </span>
+        </div>
+        <div
+          className="c4"
+        >
+          <div
+            checked={false}
+            className="c5 c6 c7"
+            disabled={false}
+          >
+            <div
+              checked={false}
+              className="c8 c9"
+            >
+              <span
+                className="c10"
+                role="img"
+                size="medium"
+              >
+                <svg
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm0 11h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              className="c11"
+            >
+              <span
+                className="c3"
+              >
+                Basic security
+              </span>
+            </div>
+            <input
+              checked={false}
+              className="c12"
+              disabled={false}
+              name="icon-group"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
+              type="radio"
+              value="basicsecurity"
+            />
+          </div>
+          <div
+            checked={false}
+            className="c5 c6 c7"
+            disabled={false}
+          >
+            <div
+              checked={false}
+              className="c8 c9"
+            >
+              <span
+                className="c10"
+                role="img"
+                size="medium"
+              >
+                <svg
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 13.75c-2.34 0-7 1.17-7 3.5V19h14v-1.75c0-2.33-4.66-3.5-7-3.5zM4.34 17c.84-.58 2.87-1.25 4.66-1.25s3.82.67 4.66 1.25H4.34zM9 12c1.93 0 3.5-1.57 3.5-3.5S10.93 5 9 5 5.5 6.57 5.5 8.5 7.07 12 9 12zm0-5c.83 0 1.5.67 1.5 1.5S9.83 10 9 10s-1.5-.67-1.5-1.5S8.17 7 9 7zm7.04 6.81c1.16.84 1.96 1.96 1.96 3.44V19h4v-1.75c0-2.02-3.5-3.17-5.96-3.44zM15 12c1.93 0 3.5-1.57 3.5-3.5S16.93 5 15 5c-.54 0-1.04.13-1.5.35.63.89 1 1.98 1 3.15s-.37 2.26-1 3.15c.46.22.96.35 1.5.35z"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              className="c11"
+            >
+              <span
+                className="c3"
+              >
+                Extended security
+              </span>
+            </div>
+            <input
+              checked={false}
+              className="c12"
+              disabled={false}
+              name="icon-group"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
+              type="radio"
+              value="extendedsecurity"
+            />
+          </div>
+          <div
+            checked={false}
+            className="c5 c6 c7"
+            disabled={false}
+          >
+            <div
+              checked={false}
+              className="c8 c9"
+            >
+              <span
+                className="c10"
+                role="img"
+                size="medium"
+              >
+                <svg
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 3h14v18H5zm3 7h4M8 7h7"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              className="c11"
+            >
+              <span
+                className="c3"
+              >
+                Firmware
+              </span>
+            </div>
+            <input
+              checked={false}
+              className="c12"
+              disabled={false}
+              name="icon-group"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
+              type="radio"
+              value="firmware"
+            />
+          </div>
+          <div
+            checked={false}
+            className="c5 c13 c14"
+            disabled={true}
+          >
+            <div
+              checked={false}
+              className="c8 c9"
+            >
+              <span
+                className="c10"
+                role="img"
+                size="medium"
+              >
+                <svg
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 3h14v18H5zm3 7h4M8 7h7"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              className="c11"
+            >
+              <span
+                className="c3"
+              >
+                Configuration
+              </span>
+            </div>
+            <input
+              checked={false}
+              className="c12"
+              disabled={true}
+              name="icon-group"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
+              type="radio"
+              value="configuration"
+            />
+          </div>
+          <div
+            checked={false}
+            className="c5 c13 c14"
+            disabled={true}
+          >
+            <div
+              checked={false}
+              className="c8 c9"
+            >
+              <span
+                className="c10"
+                role="img"
+                size="medium"
+              >
+                <svg
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 3h14v18H5zm3 7h4M8 7h7"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                  />
+                </svg>
+              </span>
+            </div>
+            <div
+              className="c11"
+            >
+              <span
+                className="c3"
+              >
+                Device users
+              </span>
+            </div>
+            <input
+              checked={false}
+              className="c12"
+              disabled={true}
+              name="icon-group"
+              onChange={[Function]}
+              onFocus={[Function]}
+              onPointerDown={[Function]}
+              onPointerUp={[Function]}
+              type="radio"
+              value="deviceusers"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c15"
+      id="layer-20"
+    >
+      <div
+        className="c16"
+      />
+    </div>
+  </div>
+</div>
+`;

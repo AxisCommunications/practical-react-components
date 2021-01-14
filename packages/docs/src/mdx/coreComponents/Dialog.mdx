@@ -1,0 +1,730 @@
+export const meta = {
+  name: 'Dialog ✔',
+  route: '/components/dialog',
+  menu: 'Components',
+}
+
+import { useState, useCallback, useLayoutEffect, createRef } from 'react'
+import styled from 'styled-components'
+
+import {
+  SpaceBlock,
+  TextBlock,
+  FormSection,
+  ContentListItem,
+  ContentListItemWithHover,
+  ContentDivider,
+  Button,
+  RadioButton,
+  RadioButtonGroup,
+  Select,
+  Typography,
+  TextInput,
+  TextInputField,
+  useToasts,
+  Tooltip,
+  AlertDialog,
+  ConfirmDialog,
+  Dialog,
+  GlobalScrollbarStyle,
+  Icon,
+  Link,
+} from 'practical-react-components-core'
+import { CalculateIcon } from 'practical-react-components-icons'
+import { useBoolean } from 'react-hooks-shareable'
+
+import {
+  smallParagraphFixture,
+  largeParagraphFixture,
+} from '../fixtures/paragraphs'
+
+# Dialog
+
+## Alert dialog
+
+A dialog with a message and an action button that closes the dialog. Used for
+info/warning/error.
+Initial focus is set on the dialog itself when it opens, not focus on the button.
+
+### Demo
+
+export const AlertDialogDemo = () => {
+  const [openDialog, onOpenDialog, onCloseDialog] = useBoolean(false)
+  return (
+    <>
+      <Button label="Alert" onClick={onOpenDialog} />
+      <AlertDialog
+        open={openDialog}
+        onClose={onCloseDialog}
+        title="Alert"
+        message="Something went wrong!"
+        closeAction={{
+          label: 'OK',
+          onClick: onCloseDialog,
+        }}
+        className="my-alert"
+      />
+    </>
+  )
+}
+
+<AlertDialogDemo />
+
+### Usage example
+
+```typescript
+import { AlertDialog } from 'practical-react-components-core'
+
+export const MyComponent = () => (
+  <AlertDialog
+    open={false}
+    onClose={() => console.log('onClose')}
+    title="Alert dialog"
+    message="Something went wrong!"
+    closeAction={{
+      label: 'Close',
+      onClick: () => console.log('clicked Close'),
+    }}
+  />
+)
+```
+
+export const fruitOptions = [
+  { value: 'apple', label: 'Apple' },
+  { value: 'banana', label: 'Banana' },
+  { value: 'pie', label: 'Pie', disabled: true },
+]
+
+export const foodOptions = [
+  { value: 0, label: 'Apple' },
+  { value: 1, label: 'Banana' },
+  { value: 2, label: 'Pinapple' },
+  { value: 3, label: 'Onigiri' },
+  { value: 4, label: 'Kålpudding' },
+  { value: 5, label: 'Laxpaj' },
+  { value: 6, label: 'Toast' },
+]
+
+## Confirm dialog
+
+A dialog with a message and two action buttons.
+Right side button is for confirming action and left side button is for dismissive action.
+Initial focus is set on the dialog itself when it opens, not focus on the button.
+
+### Demo
+
+export const ConfirmDialogDemo = () => {
+  const [openDialog, onOpenDialog, onCloseDialog] = useBoolean(false)
+  return (
+    <>
+      <Button label="Confirm" onClick={onOpenDialog} />
+      <ConfirmDialog
+        open={openDialog}
+        onClose={onCloseDialog}
+        title="Dialog"
+        message="Are you sure?"
+        confirmAction={{
+          label: 'OK',
+          onClick: onCloseDialog,
+        }}
+        cancelAction={{
+          label: 'Cancel',
+          onClick: onCloseDialog,
+        }}
+        className="my-confirm"
+      />
+    </>
+  )
+}
+
+<ConfirmDialogDemo />
+
+### Usage example
+
+```typescript
+import { ConfirmDialog } from 'practical-react-components-core'
+
+export const MyComponent = () => (
+  <ConfirmDialog
+    open={false}
+    onClose={() => console.log('onClose')}
+    title="Confirm dialog"
+    message="Are you sure?"
+    confirmAction={{
+      label: 'OK',
+      onClick: () => console.log('clicked OK'),
+    }}
+    cancelAction={{
+      label: 'Cancel',
+      onClick: () => console.log('clicked Cancel'),
+    }}
+  />
+)
+```
+
+## Dialog
+
+### Demo
+
+Simple settings dialog with select dropdown that goes outside of the dialog.
+
+Recommend to use the `"Dialog.HeaderTitle"` component as `"header"` to get the proper Typography
+and to support longer title than one line.
+See **Dialog header example** below if you want a Tooltip on ellipsed title or if you want other component in the header.
+
+export const DialogDemo = () => {
+  const [openDialog, onOpenDialog, onCloseDialog] = useBoolean(false)
+  const [selectedFood, setSelectedFood] = useState('')
+  return (
+    <>
+      <GlobalScrollbarStyle />
+      <Button label="Dialog" onClick={onOpenDialog} />
+      <Dialog
+        open={openDialog}
+        onClose={onCloseDialog}
+        className="my-dialog"
+        header={
+          <Dialog.HeaderTitle>
+            Dialog heading is very long sometimes and will in those cases
+            require two rows. And this is example for two row heading.
+          </Dialog.HeaderTitle>
+        }
+        controls={
+          <>
+            <Button label="Done" onClick={onCloseDialog} />
+            <Button
+              variant="secondary"
+              label="Cancel"
+              onClick={onCloseDialog}
+            />
+          </>
+        }
+      >
+        <Typography variant="default-text">{smallParagraphFixture}</Typography>
+        <SpaceBlock variant={8} />
+        <TextInput
+          value=""
+          onChange={() => console.log('Input change')}
+          placeholder="A text input field"
+        />
+        <SpaceBlock variant={24} />
+        <Select
+          options={foodOptions}
+          placeholder="Select..."
+          width="full"
+          value={selectedFood}
+          onChange={setSelectedFood}
+        />
+        <SpaceBlock variant={24} />
+      </Dialog>
+    </>
+  )
+}
+
+<DialogDemo />
+
+Elaborate dialog with lots of text and inputs, should automatically get an
+overflow with scroll bar.
+
+export const RadioSelectableListItem = () => {
+  const [hovered, setHovered] = useState(false)
+  const onSelect = () => {}
+  const [selected, setSelected] = useState('all')
+  const handleSelect = useCallback(value => {
+    onSelect(value)
+    setSelected(value)
+  }, [])
+  return (
+    <ContentListItemWithHover onHover={setHovered}>
+      <RadioButton
+        name={name}
+        value="me"
+        label="Content ListItem"
+        onValueChange={handleSelect}
+        partial={selected === 'all'}
+        checked={selected === 'me'}
+        hovered={hovered}
+      />
+      <Typography>Second content</Typography>
+    </ContentListItemWithHover>
+  )
+}
+
+export const ListExample = () => {
+  const name = 'My radio group'
+  const onSelect = () => {}
+  const [selected, setSelected] = useState('all')
+  const handleSelect = useCallback(value => {
+    onSelect(value)
+    setSelected(value)
+  }, [])
+  return (
+    <>
+      <ContentDivider />
+      <RadioSelectableListItem />
+    </>
+  )
+}
+
+export const ElaborateDialogDemo = () => {
+  const [openDialog, onOpenDialog, onCloseDialog] = useBoolean(false)
+  const [selectedFood, setSelectedFood] = useState('')
+  const { showErrorToast } = useToasts()
+  const showError = () =>
+    showErrorToast({
+      label: 'Error',
+      message: 'Something went wrong here, as expected.',
+    })
+  return (
+    <>
+      <GlobalScrollbarStyle />
+      <Button label="Big dialog" onClick={onOpenDialog} />
+      <Dialog
+        open={openDialog}
+        onClose={onCloseDialog}
+        header={<Dialog.HeaderTitle>Big dialog</Dialog.HeaderTitle>}
+        controls={
+          <>
+            <Button label="Done" onClick={onCloseDialog} />
+            <Button
+              variant="secondary"
+              label="Cancel"
+              onClick={onCloseDialog}
+            />
+          </>
+        }
+        focusDialog={false}
+      >
+        <Typography variant="default-text">{smallParagraphFixture}</Typography>
+        <Button label="Show toast" variant="primary" onClick={showError} />
+        <Tooltip text="text">
+          <Typography>Show tooltip</Typography>
+        </Tooltip>
+        <Typography variant="default-text">{smallParagraphFixture}</Typography>
+        <TextInput
+          value=""
+          onChange={() => console.log('Input change')}
+          placeholder="A text input field"
+        />
+        <TextInput
+          value=""
+          onChange={() => console.log('Input change')}
+          placeholder="Another text input field"
+        />
+        <Typography variant="default-text">{largeParagraphFixture}</Typography>
+        <Typography variant="default-text">{smallParagraphFixture}</Typography>
+        <ContentDivider />
+        <Typography variant="default-text">{smallParagraphFixture}</Typography>
+        <ContentDivider />
+        <Typography variant="default-text">{smallParagraphFixture}</Typography>
+        <SpaceBlock variant={8} />
+        <Select
+          options={foodOptions}
+          placeholder="Select..."
+          width="full"
+          value={selectedFood}
+          onChange={setSelectedFood}
+          variant="framed"
+        />
+        <Select
+          options={foodOptions}
+          placeholder="Select..."
+          width="full"
+          value={selectedFood}
+          onChange={setSelectedFood}
+          variant="framed"
+          compact={true}
+        />
+        <Select
+          options={foodOptions}
+          placeholder="Select..."
+          width="full"
+          value={selectedFood}
+          onChange={setSelectedFood}
+        />
+        <SpaceBlock variant={8} />
+        <FormSection title="Group label">
+          <TextInputField
+            label="Input label"
+            value=""
+            onValueChange={() => {}}
+            placeholder="Placeholder"
+          />
+          <TextInputField
+            label="Input label"
+            value=""
+            onValueChange={() => {}}
+            placeholder="Placeholder"
+          />
+        </FormSection>
+        <SpaceBlock variant={32} />
+        <FormSection title="Group label">
+          <TextInputField
+            label="Input label"
+            value=""
+            onValueChange={() => {}}
+            placeholder="Placeholder"
+          />
+        </FormSection>
+        <SpaceBlock variant={32} />
+        <FormSection title="Group label">
+          <RadioButtonGroup
+            label="Select your favorite fruit"
+            name="radioValue"
+            options={fruitOptions}
+            onChange={() => {}}
+            value=""
+          />
+        </FormSection>
+        <SpaceBlock variant={32} />
+        <FormSection title="List example" />
+        <ListExample />
+        <ContentDivider />
+        <SpaceBlock variant={8} />
+        <TextBlock
+          text="Available applications for installation"
+          caption="Selected applications will automatically be installed and
+            reinstalled if removed."
+        />
+        <RadioButtonGroup
+          label="Select your favorite fruit"
+          name="radioValue"
+          options={fruitOptions}
+          onChange={() => {}}
+          value=""
+        />
+        <SpaceBlock variant={16} />
+        <ContentDivider />
+      </Dialog>
+    </>
+  )
+}
+
+<ElaborateDialogDemo />
+
+### Basic usage
+
+```typescript
+import { Dialog, Button } from 'practical-react-components-core'
+
+export const DialogDemo = () => {
+  const [openDialog, onOpenDialog, onCloseDialog] = useBoolean(false)
+  return (
+    <Dialog
+      open={openDialog}
+      onClose={onCloseDialog}
+      header={<Dialog.HeaderTitle>Big dialog</Dialog.HeaderTitle>}
+      controls={<Button label="Done" onClick={onCloseDialog} />}
+      focusDialog={false}
+    >
+      <Typography variant="default-text">{smallParagraphFixture}</Typography>
+      <FormSection title="Group label">
+        <TextInputField
+          label="Input label"
+          value=""
+          onValueChange={() => {}}
+          placeholder="Placeholder"
+        />
+        <TextInputField
+          label="Input label"
+          value=""
+          onValueChange={() => {}}
+          placeholder="Placeholder"
+        />
+      </FormSection>
+      <SpaceBlock variant={24} />
+      <FormSection title="Group label">
+        <TextInputField
+          label="Input label"
+          value=""
+          onValueChange={() => {}}
+          placeholder="Placeholder"
+        />
+      </FormSection>
+      <SpaceBlock variant={24} />
+      <FormSection title="Group label">
+        <RadioButtonGroup
+          label="Select your favorite fruit"
+          name="radioValue"
+          options={fruitOptions}
+          onChange={() => {}}
+          value=""
+        />
+      </FormSection>
+      <SpaceBlock variant={24} />
+      <FormSection title="List example" />
+      <ContentDivider />
+      <ContentListItem>
+        <RadioButton
+          name={name}
+          value="me"
+          label="Content ListItem"
+          onValueChange={handleSelect}
+          partial={selected === 'all'}
+          checked={selected === 'me'}
+        />
+      </ContentListItem>
+      <ContentDivider />
+      <SpaceBlock variant={8} />
+      <TextBlock
+        text="Available applications for installation"
+        caption="Selected applications will automatically be installed and reinstalled if removed."
+      />
+      <RadioButtonGroup
+        label="Select your favorite fruit"
+        name="radioValue"
+        options={fruitOptions}
+        onChange={() => {}}
+        value=""
+      />
+      <SpaceBlock variant={16} />
+      <ContentDivider />
+    </Dialog>
+  )
+}
+```
+
+### Header example
+
+Recommend to create a custom Dialog in your application if you always want the same functionality in the Dialog header.
+
+export const WithTooltip = ({ showTooltip, text, children }) => {
+  if (showTooltip) {
+    return <Tooltip text={text}>{children}</Tooltip>
+  }
+  return <>{children}</>
+}
+
+export const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: between;
+`
+
+export const Left = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+  margin-left: -3px;
+  > * {
+    width: fit-content;
+    margin-right: 8px;
+  }
+`
+
+export const Right = styled.div`
+  white-space: nowrap;
+  padding-left: 8px;
+`
+
+export const CustomHeaderComponent = ({
+  title,
+  typographyRef,
+  hasOverflow,
+}) => {
+  return (
+    <Wrapper>
+      <Left alignTop={hasOverflow}>
+        <Icon icon={CalculateIcon} size="large" />
+        <WithTooltip showTooltip={hasOverflow} text={title}>
+          <Dialog.HeaderTitle ref={typographyRef}>{title}</Dialog.HeaderTitle>
+        </WithTooltip>
+      </Left>
+      <Right>
+        <Typography>
+          <Link
+            variant="a"
+            href="http://example.org"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            172.25.64.158
+          </Link>
+        </Typography>
+      </Right>
+    </Wrapper>
+  )
+}
+
+export const CustomDialogDemo = () => {
+  const [openDialog, onOpenDialog, onCloseDialog] = useBoolean(false)
+  const title = 'Custom header'
+  const [hasOverflow, setHasOverflow] = useState(false)
+  const typographyRef = createRef()
+  useLayoutEffect(() => {
+    if (typographyRef.current === null) {
+      return
+    }
+    setHasOverflow(
+      typographyRef.current.offsetHeight < typographyRef.current.scrollHeight ||
+        typographyRef.current.offsetWidth < typographyRef.current.scrollWidth
+    )
+  }, [typographyRef, title])
+  return (
+    <>
+      <Button label="Custom header example" onClick={onOpenDialog} />
+      <Dialog
+        open={openDialog}
+        onClose={onCloseDialog}
+        className="my-dialog"
+        header={
+          <CustomHeaderComponent
+            title={title}
+            typographyRef={typographyRef}
+            hasOverflow={hasOverflow}
+          />
+        }
+        controls={
+          <>
+            <Button label="Done" onClick={onCloseDialog} />
+            <Button
+              variant="secondary"
+              label="Cancel"
+              onClick={onCloseDialog}
+            />
+          </>
+        }
+      >
+        <Typography variant="default-text">{smallParagraphFixture}</Typography>
+      </Dialog>
+    </>
+  )
+}
+
+<CustomDialogDemo />
+
+### Usage example
+
+```typescript
+const WithTooltip = ({ showTooltip, text, children }) => {
+  if (showTooltip) {
+    return <Tooltip text={text}>{children}</Tooltip>
+  }
+  return <>{children}</>
+}
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: between;
+`
+
+const Left = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+  margin-left: -3px;
+
+  > * {
+    width: fit-content;
+    margin-right: 8px;
+  }
+
+  /** Add style when the title has overflow */
+`
+
+const Right = styled.div`
+  white-space: nowrap;
+  padding-left: 8px;
+
+  /** Add style when the title has overflow */
+`
+
+const CustomHeaderComponent = ({ title, typographyRef, hasOverflow }) => {
+  return (
+    <Wrapper>
+      <Left alignTop={hasOverflow}>
+        <Icon icon={CalculateIcon} size="large" />
+        <WithTooltip showTooltip={hasOverflow} text={title}>
+          <Dialog.HeaderTitle ref={typographyRef}>{title}</Dialog.HeaderTitle>
+        </WithTooltip>
+      </Left>
+      <Right>
+        <Typography>
+          <Link
+            variant="a"
+            href="http://example.org"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            172.25.64.158
+          </Link>
+        </Typography>
+      </Right>
+    </Wrapper>
+  )
+}
+
+const CustomDialog = () => {
+  const [openDialog, onOpenDialog, onCloseDialog] = useBoolean(false)
+  const title = 'Custom header'
+  const [hasOverflow, setHasOverflow] = useState(false)
+  const typographyRef = createRef()
+
+  useLayoutEffect(() => {
+    if (typographyRef.current === null) {
+      return
+    }
+    setHasOverflow(
+      typographyRef.current.offsetHeight < typographyRef.current.scrollHeight ||
+        typographyRef.current.offsetWidth < typographyRef.current.scrollWidth
+    )
+  }, [typographyRef, title])
+
+  return (
+    <>
+      <Button label="Custom header example" onClick={onOpenDialog} />
+      <Dialog
+        open={openDialog}
+        onClose={onCloseDialog}
+        className="my-dialog"
+        header={
+          <CustomHeaderComponent
+            title={title}
+            typographyRef={typographyRef}
+            hasOverflow={hasOverflow}
+          />
+        }
+        controls={
+          <>
+            <Button label="Done" onClick={onCloseDialog} />
+            <Button
+              variant="secondary"
+              label="Cancel"
+              onClick={onCloseDialog}
+            />
+          </>
+        }
+      >
+        <Typography variant="default-text">{smallParagraphFixture}</Typography>
+      </Dialog>
+    </>
+  )
+}
+```
+
+## AlertDialog Props
+
+AlertDialog forwards all props to `Dialog`.
+See [`Dialog props`](#components/dialog) below for more
+details on which additional props that are available.
+
+<Props of="AlertDialog" />
+
+## ConfirmDialog Props
+
+ConfirmDialog forwards all props to `Dialog`.
+See [`Dialog props`](#components/dialog) below for more
+details on which additional props that are available.
+
+<Props of="ConfirmDialog" />
+
+## Dialog Props
+
+Dialog forwards all props to `Modal`.
+See [`Modal props`](#components/modal) for more
+details on which additional props that are available.
+
+<Props of="Dialog" />

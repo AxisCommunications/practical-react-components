@@ -1,0 +1,128 @@
+export const meta = {
+  name: 'Typography ✔',
+  route: '/styles/typography',
+  menu: 'Styles',
+}
+
+import {
+  SimpleTable,
+  SimpleTableRow,
+  Typography,
+} from 'practical-react-components-core'
+
+# Typography
+
+## Design
+
+Typography is used to present the design and content as clearly and efficiently as possible.
+It contains reusable categories of text, each with an intended application and meaning.
+
+<img
+  src={require('../images/typographies.png').default}
+  alt="Typography design"
+/>
+
+## Demo
+
+export const TABLE_HEADER_DATA = [
+  'Variant',
+  'Font size',
+  'Case with actual size',
+]
+
+export const TYPOGRAPHY_LIST = [
+  { variant: 'page-heading', fontSize: '21px', case: 'Page heading' },
+  { variant: 'dialog-heading', fontSize: '21px', case: 'Dialog heading' },
+  {
+    variant: 'button-text',
+    fontSize: '14px',
+    case: 'Regular button text',
+  },
+  {
+    variant: 'default-text',
+    fontSize: '13px',
+    case: `Text in a paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+  },
+  {
+    variant: 'header-title',
+    fontSize: '13px',
+    case: 'Header title',
+  },
+  {
+    variant: 'group-title',
+    fontSize: '13px',
+    case: 'Group title',
+  },
+  {
+    variant: 'card-title',
+    fontSize: '13px',
+    case: 'Card title',
+  },
+  {
+    variant: 'navigation-label',
+    fontSize: '13px',
+    case: 'A navigation label belong to something',
+  },
+  {
+    variant: 'column-heading',
+    fontSize: '12px',
+    case: 'Use me for table headers',
+  },
+  {
+    variant: 'navigation-group',
+    fontSize: '12px',
+    case: 'Navigation group',
+  },
+  {
+    variant: 'caption',
+    fontSize: '12px',
+    case: 'Extra descriptive text used as a caption.',
+  },
+  {
+    variant: 'explanatory-text',
+    fontSize: '12px',
+    case: 'A explanatory text, e.g. error message in a field. ',
+  },
+  {
+    variant: 'chip-tag-text',
+    fontSize: '12px',
+    case: 'Piece of data in e.g. a chip or a tag',
+  },
+  {
+    variant: 'compact-label',
+    fontSize: '11px',
+    case: 'Some label where space is limited',
+  },
+]
+
+<SimpleTable
+  maxHeight="400"
+  header={TABLE_HEADER_DATA.map((cell, index) => (
+    <Typography variant="column-heading" key={index}>
+      {cell}
+    </Typography>
+  ))}
+>
+  {TYPOGRAPHY_LIST.map((typography, index) => (
+    <SimpleTableRow key={index}>
+      <Typography>{typography.variant}</Typography>
+      <Typography>{typography.fontSize}</Typography>
+      <Typography variant={typography.variant}>{typography.case}</Typography>
+    </SimpleTableRow>
+  ))}
+</SimpleTable>
+
+## Basic usage
+
+```typescript type=live
+<Typography variant="column-heading">Text</Typography>
+```
+
+## Props
+
+Typography forwards all unknown props to the styled-components component. See
+[`API Reference`](https://styled-components.com/docs/api) for more
+details on which additional props that are available.
+
+<Props of="Typography" />

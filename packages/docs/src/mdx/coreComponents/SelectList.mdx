@@ -1,0 +1,56 @@
+export const meta = {
+  name: 'SelectList',
+  route: '/components/selectlist',
+  menu: 'Components',
+}
+
+import { useState } from 'react'
+import { SelectList } from 'practical-react-components-core'
+import { timezonesList } from '../fixtures/lists'
+
+# SelectList
+
+SelectList components are used for collecting user provided information from an
+extensive list of options.
+
+## Demo
+
+export const timeZones = timezonesList.map(timezone => ({
+  label: timezone,
+  value: timezone,
+}))
+
+export const DemoComponent = ({}) => {
+  const [selectedValue, setSelectedValue] = useState('Europe/Stockholm')
+  return (
+    <SelectList
+      onSelect={setSelectedValue}
+      options={timeZones}
+      value={selectedValue}
+    />
+  )
+}
+
+<DemoComponent />
+
+## Basic usage
+
+```typescript type=live
+<SelectList
+  onSelect={() => {}}
+  options={[
+    { label: 'Europe/Amsterdam', value: 'Europe/Amsterdam' },
+    { label: 'Europe/Andorra', value: 'Europe/Andorra' },
+    { label: 'Europe/Astrakhan', value: 'Europe/Astrakhan' },
+  ]}
+  value={() => {}}
+/>
+```
+
+## Props
+
+SelectList forwards all unknown props to the base native `<ul>` component. See
+[`<ul>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) for more
+details on which additional props that are available.
+
+<Props of="SelectList" />

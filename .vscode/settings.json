@@ -1,0 +1,15 @@
+{
+  "typescript.tsdk": ".yarn/sdks/typescript/lib",
+  "editor.formatOnSave": true,
+  "javascript.format.enable": false,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "eslint.nodePath": ".yarn/sdks",
+  "stylelint.stylelintPath": ".yarn/sdks/stylelint/lib/index.js",
+  "prettier.prettierPath": ".yarn/sdks/prettier/index.js"
+}

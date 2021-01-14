@@ -1,0 +1,4 @@
+__generated__
+build
+node_modules
+*.local

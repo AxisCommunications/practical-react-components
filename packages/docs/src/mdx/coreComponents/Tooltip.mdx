@@ -1,0 +1,86 @@
+export const meta = {
+  name: 'Tooltip',
+  route: '/components/tooltip',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import {
+  Tooltip,
+  Typography,
+  ExpandedTooltipTypography,
+} from 'practical-react-components-core'
+
+# Tooltip
+
+Tooltips give a short description of an element that the user hover over.
+This is often used for icons, which can be hard to understand (applies to symbolism in general)
+
+## Demo
+
+export const Wrapper = styled.div`
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  max-width: 400px;
+  grid-gap: 16px;
+`
+
+<Wrapper>
+  <Tooltip text="text">
+    <Typography>Default</Typography>
+  </Tooltip>
+  <Tooltip
+    tipTitle="Connected"
+    extraInfo="Last seen: 2020-08-31 18:47"
+    contents={
+      <ExpandedTooltipTypography>
+        The device is reachable via HTTP/HTTPS.
+      </ExpandedTooltipTypography>
+    }
+    variant="expanded"
+  >
+    <Typography>Expanded tooltip</Typography>
+  </Tooltip>
+</Wrapper>
+
+## Basic usage
+
+### Default tooltip
+
+```typescript type=live
+<Tooltip text="text">
+  <div style={{ display: 'inline-grid' }}>
+    <Typography>Default</Typography>
+  </div>
+</Tooltip>
+```
+
+### Expanded tooltip
+
+A tooltip that contains a title and contents.
+Recommend to use `ExpandedTooltipTypography` component in the contents in order to get proper Typography.
+
+```typescript type=live
+<Tooltip
+  variant="expanded"
+  tipTitle="Connected"
+  extraInfo="Last seen: 2020-08-31 18:47"
+  contents={
+    <ExpandedTooltipTypography>
+      The device is reachable via HTTP/HTTPS.
+    </ExpandedTooltipTypography>
+  }
+>
+  <div style={{ display: 'inline-grid' }}>
+    <Typography>Expanded</Typography>
+  </div>
+</Tooltip>
+```
+
+## Props
+
+Tooltip forwards all props to `PopOver`.
+See [`PopOver props`](#components/popover)
+for more details on which additional props that are available.
+
+<Props of="Tooltip" />

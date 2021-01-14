@@ -1,0 +1,66 @@
+export const meta = {
+  name: 'FormikNumberInput',
+  route: '/formik/FormikNumberInput',
+  menu: 'Formik',
+}
+
+# FormikNumberInput
+
+A formik component that wraps a NumberInput component.
+
+## Demo
+
+```typescript type=demo
+<FormikDemo initialValues={{ chickens: 2 }}>
+  <FormikNumberInputField label="Amount of chickens" name="chickens" />
+</FormikDemo>
+```
+
+## Usage in code
+
+```typescript
+import React, { useMemo, useCallback } from 'react'
+import { useFormik, FormikProvider } from 'formik'
+import { FormikNumberInputField } from 'practical-react-components-formik'
+import * as yup from 'yup'
+
+const MyComponent = ({ myinput }) => {
+  const validationSchema = useMemo(
+    () =>
+      yup.object().shape({
+        myinput: yup.number().required(),
+      }),
+    []
+  )
+
+  const initialValues = useMemo(
+    () => ({
+      myinput,
+    }),
+    // Initial values that should not change during
+    // re-renders as formik handles state by itself
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  )
+
+  const onSubmit = useCallback((values: IFormikValues) => {
+    /* Save data here */
+  }, [])
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  })
+
+  return (
+    <FormikProvider value={formik}>
+      <FormikNumberInputField label="Number" name="myinput" />
+    </FormikProvider>
+  )
+}
+```
+
+## Props
+
+<Props of="FormikNumberInput" />

@@ -1,0 +1,61 @@
+export * from './BaseChip'
+
+import React, { useMemo } from 'react'
+import styled from 'styled-components'
+
+import { CloseIcon } from 'practical-react-components-icons'
+
+import { spacing, componentSize } from '../designparams'
+import { ClickableIcon, Icon, IconType } from '../Icon'
+import { Typography } from '../Typography'
+import { BaseChip, IBaseChipProps } from './BaseChip'
+
+const ChipIcon = styled(Icon)`
+  width: ${componentSize.mini};
+  color: ${({ theme }) => theme.color.text05()};
+  margin-left: -${spacing.medium};
+`
+
+const ChipRemoveIcon = styled(ClickableIcon).attrs({
+  tabIndex: 0,
+  size: 'small',
+  icon: CloseIcon,
+})`
+  flex: 0 0 min-content;
+  margin-left: ${spacing.small};
+`
+
+interface IChipProps extends Omit<IBaseChipProps, 'component' | 'noPadding'> {
+  /**
+   * Changes the text of the label displayed on the chip.
+   */
+  readonly text: string
+  /**
+   * Optional icon next to text when no error
+   */
+  readonly icon?: IconType
+  /**
+   * Function to call if remove icon is pressed. Remove icon
+   * only visible if this prop is set.
+   */
+  readonly onRemove?: (e: React.MouseEvent) => void
+}
+
+/* eslint-disable-next-line react/display-name */
+export const Chip = React.forwardRef<HTMLDivElement, IChipProps>(
+  ({ text, error = false, onRemove, icon, ...props }, ref) => {
+    const component = useMemo(() => {
+      return (
+        <>
+          {!error && icon !== undefined ? (
+            <ChipIcon icon={icon} size="small" />
+          ) : null}
+          <Typography variant="chip-tag-text">{text}</Typography>
+          {onRemove ? <ChipRemoveIcon onClick={onRemove} /> : null}
+        </>
+      )
+    }, [text, error, icon, onRemove])
+
+    return <BaseChip ref={ref} error={error} component={component} {...props} />
+  }
+)

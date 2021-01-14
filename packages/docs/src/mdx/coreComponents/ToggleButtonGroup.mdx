@@ -1,0 +1,137 @@
+export const meta = {
+  name: 'ToggleButtonGroup',
+  route: '/components/togglebuttongroup',
+  menu: 'Components',
+}
+
+import { useState, useCallback } from 'react'
+
+import { LocationIcon, CalendarIcon } from 'practical-react-components-icons'
+import {
+  ToggleButtonGroup,
+  ToggleButtonGroupWithField,
+  Typography,
+  Icon,
+} from 'practical-react-components-core'
+
+# ToggleButtonGroup
+
+Toggle buttons can be used to group related options.
+To emphasize groups of related Toggle buttons, a group should share a common container.
+
+## Demo
+
+export const DemoComponent = ({}) => {
+  const [values, setToggledValues] = useState(['24'])
+  const onChange = useCallback(
+    id => {
+      const found = values.includes(id)
+      if (found) {
+        setToggledValues(values.filter(v => v !== id))
+      } else {
+        setToggledValues([...values, id])
+      }
+    },
+    [values]
+  )
+  return (
+    <>
+      <ToggleButtonGroup
+        label="asdf"
+        onChange={onChange}
+        options={[
+          {
+            id: '24',
+            content: <Typography>24</Typography>,
+          },
+          { id: 'location', content: <Icon icon={LocationIcon} /> },
+          {
+            id: 'disabled',
+            content: <Typography>Disabled</Typography>,
+            disabled: true,
+          },
+          {
+            id: 'btn',
+            content: <Typography>click me</Typography>,
+          },
+          {
+            id: 'calendar',
+            content: <Icon icon={CalendarIcon} />,
+          },
+          {
+            id: 'test',
+            content: <Typography>test</Typography>,
+          },
+        ]}
+        values={values}
+      />
+      <ToggleButtonGroupWithField
+        label="Also version with field"
+        onChange={onChange}
+        options={[
+          {
+            id: 'with',
+            content: <Typography>With</Typography>,
+          },
+          { id: 'field', content: <Typography>Field</Typography> },
+          {
+            id: 'version',
+            content: <Typography>Version</Typography>,
+          },
+          {
+            id: 'label',
+            content: <Typography>label</Typography>,
+          },
+          {
+            id: 'icon',
+            content: <Icon icon={CalendarIcon} />,
+          },
+          {
+            id: 'long',
+            content: <Typography>Loooooong text</Typography>,
+          },
+        ]}
+        values={values}
+      />
+    </>
+  )
+}
+
+<DemoComponent />
+
+## Basic usage
+
+```typescript type=live
+<ToggleButtonGroup
+  onChange={id => console.log(id)}
+  options={[
+    {
+      id: '24',
+      content: <Typography>24</Typography>,
+    },
+    { id: 'location', content: <Icon icon={LocationIcon} /> },
+    {
+      id: 'disabled',
+      content: <Typography>Disabled</Typography>,
+      disabled: true,
+    },
+    {
+      id: 'btn',
+      content: <Typography>click me</Typography>,
+    },
+    {
+      id: 'calendar',
+      content: <Icon icon={CalendarIcon} />,
+    },
+  ]}
+  values={['24']}
+/>
+```
+
+## Props
+
+ToggleButtonGroup forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="ToggleButtonGroup" />

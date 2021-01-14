@@ -1,0 +1,42 @@
+export const meta = {
+  name: 'Spinner',
+  route: '/components/spinner',
+  menu: 'Components',
+}
+
+import { Spinner } from 'practical-react-components-core'
+
+# Spinner
+
+A spinner can be used to indicate that something is loading.
+Use this when loading takes a longer time (too long for a skeleton loader),
+but not so long that you would need a progress indicator.
+
+## Demo
+
+<div
+  style={{
+    padding: '2px',
+    display: 'inline-grid',
+    gridGap: '10px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
+    width: '100%',
+  }}
+>
+  <Spinner type="primary" label="primary" />
+  <Spinner type="dashed" label="dashed" />
+</div>
+
+## Basic usage
+
+```typescript type=live
+<Spinner type="primary" label="label" />
+```
+
+## Props
+
+Spinner forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Spinner" />

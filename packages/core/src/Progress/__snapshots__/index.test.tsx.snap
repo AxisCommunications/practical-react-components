@@ -1,0 +1,673 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Progress Levels 1`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c3 {
+  position: relative;
+  background-color: rgb(230,230,230);
+  border-radius: 4px;
+  height: 5px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.c4 {
+  background-color: rgb(82,82,82);
+  border-radius: inherit;
+  height: 100%;
+  width: 0%;
+}
+
+.c6 {
+  padding: 0 8px;
+  color: rgb(82,82,82);
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+          />
+        </div>
+        <p
+          className="c5 c6"
+        >
+          test
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-2"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Progress Levels 2`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c3 {
+  position: relative;
+  background-color: rgb(230,230,230);
+  border-radius: 4px;
+  height: 5px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.c4 {
+  background-color: rgb(82,82,82);
+  border-radius: inherit;
+  height: 100%;
+  width: 10%;
+}
+
+.c6 {
+  padding: 0 8px;
+  color: rgb(82,82,82);
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+          />
+        </div>
+        <p
+          className="c5 c6"
+        >
+          test
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-4"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Progress Levels 3`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c3 {
+  position: relative;
+  background-color: rgb(230,230,230);
+  border-radius: 4px;
+  height: 5px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.c4 {
+  background-color: rgb(82,82,82);
+  border-radius: inherit;
+  height: 100%;
+  width: 22%;
+}
+
+.c6 {
+  padding: 0 8px;
+  color: rgb(82,82,82);
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+          />
+        </div>
+        <p
+          className="c5 c6"
+        >
+          test
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-6"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Progress Levels 4`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c3 {
+  position: relative;
+  background-color: rgb(230,230,230);
+  border-radius: 4px;
+  height: 5px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.c4 {
+  background-color: rgb(82,82,82);
+  border-radius: inherit;
+  height: 100%;
+  width: 58%;
+}
+
+.c6 {
+  padding: 0 8px;
+  color: rgb(82,82,82);
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+          />
+        </div>
+        <p
+          className="c5 c6"
+        >
+          test
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-8"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Progress Levels 5`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c3 {
+  position: relative;
+  background-color: rgb(230,230,230);
+  border-radius: 4px;
+  height: 5px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.c4 {
+  background-color: rgb(82,82,82);
+  border-radius: inherit;
+  height: 100%;
+  width: 83%;
+}
+
+.c6 {
+  padding: 0 8px;
+  color: rgb(82,82,82);
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-9"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+          />
+        </div>
+        <p
+          className="c5 c6"
+        >
+          test
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-10"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Progress Levels 6`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.c3 {
+  position: relative;
+  background-color: rgb(230,230,230);
+  border-radius: 4px;
+  height: 5px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.c4 {
+  background-color: rgb(82,82,82);
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+}
+
+.c6 {
+  padding: 0 8px;
+  color: rgb(82,82,82);
+}
+
+.c8 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c7 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-11"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+        >
+          <div
+            className="c4"
+          />
+        </div>
+        <p
+          className="c5 c6"
+        >
+          test
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c7"
+      id="layer-12"
+    >
+      <div
+        className="c8"
+      />
+    </div>
+  </div>
+</div>
+`;

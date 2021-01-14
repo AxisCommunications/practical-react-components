@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dividers Divider variant 1`] = `
+.c2 {
+  height: 1px;
+  background-color: rgb(230,230,230);
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-2"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dividers Divider variant 2`] = `
+.c2 {
+  height: 1px;
+  background-color: rgb(230,230,230);
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-4"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dividers Divider variant 3`] = `
+.c2 {
+  height: 1px;
+  background-color: rgb(230,230,230);
+  margin: 0 32px;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        className="c2"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-6"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dividers Divider variant 4`] = `
+.c2 {
+  height: 1px;
+  background-color: rgb(230,230,230);
+  margin-left: 64px;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <div
+        className="c2"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-8"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Dividers Divider variant 5`] = `
+.c2 {
+  height: 1px;
+  background-color: rgb(230,230,230);
+  margin-left: 100px;
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-9"
+    >
+      <div
+        className="c2"
+      />
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-10"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;

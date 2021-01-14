@@ -1,0 +1,143 @@
+export const meta = {
+  name: 'SimpleTable ⚙',
+  route: '/components/simpletable',
+  menu: 'Components',
+}
+
+import { useCallback, useMemo, useState } from 'react'
+import styled from 'styled-components'
+import {
+  Typography,
+  GlobalScrollbarStyle,
+  SimpleTable,
+  SimpleTableRow,
+  TableHeaderText,
+} from 'practical-react-components-core'
+import { useSelection } from 'react-hooks-shareable'
+
+# SimpleTable
+
+A simple table based on a regular HTML `<table>`. Column size is determined automatically
+by the browser, and cannot be modified by the user.
+If checkboxes/menus are needed, you need to add these yourself as separate columns.
+For more advanced functionality and built-in checkbox/menu, please use the `Table` component instead.
+
+## Demo
+
+export const onClick = () => {}
+
+export const Wrapper = styled.div`
+  padding: 2px;
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  width: 100%;
+`
+
+export const TABLE_HEADER_DATA = [
+  { id: 'serial-number', title: 'Serial number' },
+  { id: 'name', title: 'Name' },
+  { id: 'ip-address', title: 'IP address' },
+]
+
+export const DEVICE_LIST = [
+  { serialNumber: 'FACEFACE0001', name: 'a', ip: '192.168.0.1' },
+  { serialNumber: 'FACEFACE0002', name: 'b', ip: '192.168.0.2' },
+  { serialNumber: 'FACEFACE0003', name: 'c', ip: '192.168.0.3' },
+  { serialNumber: 'FACEFACE0004', name: 'd', ip: '192.168.0.4' },
+  { serialNumber: 'FACEFACE0005', name: 'e', ip: '192.168.0.5' },
+  { serialNumber: 'FACEFACE0006', name: 'f', ip: '192.168.0.6' },
+  { serialNumber: 'FACEFACE0007', name: 'g', ip: '192.168.0.7' },
+  { serialNumber: 'FACEFACE0008', name: 'h', ip: '192.168.0.8' },
+  { serialNumber: 'FACEFACE0009', name: 'i', ip: '192.168.0.9' },
+  { serialNumber: 'FACEFACE0010', name: 'j', ip: '192.168.0.10' },
+  { serialNumber: 'FACEFACE0011', name: 'k', ip: '192.168.0.11' },
+  { serialNumber: 'FACEFACE0012', name: 'l', ip: '192.168.0.12' },
+]
+
+The default variant of the simple table.
+
+export const DemoComponent = ({}) => {
+  const clickFunc = useCallback(id => {
+    window.alert(`You clicked on: ${id}`)
+  }, [])
+  return (
+    <Wrapper>
+      <GlobalScrollbarStyle />
+      <SimpleTable
+        maxHeight={3}
+        header={TABLE_HEADER_DATA.map(({ title }, id) => (
+          <TableHeaderText key={id}>{title}</TableHeaderText>
+        ))}
+        className="my-simple-table"
+      >
+        {DEVICE_LIST.map((device, index) => (
+          <SimpleTableRow
+            key={device.serialNumber}
+            disabled={index === 2}
+            className="my-simple-table-row"
+            onClick={
+              index === 5 ? () => clickFunc(device.serialNumber) : undefined
+            }
+          >
+            <Typography>{device.serialNumber}</Typography>
+            <Typography>{device.name}</Typography>
+            <Typography>{device.ip}</Typography>
+          </SimpleTableRow>
+        ))}
+      </SimpleTable>
+    </Wrapper>
+  )
+}
+
+## Basic usage
+
+```typescript type=live size=large
+<SimpleTable
+  maxHeight={5}
+  header={[
+    { id: 'serial-number', title: 'Serial number', width: 2 },
+    { id: 'name', title: 'Name', width: 1 },
+    { id: 'ip-address', title: 'IP address', width: 2 },
+  ].map(({ title }, id) => (
+    <TableHeaderText key={id}>{title}</TableHeaderText>
+  ))}
+>
+  {[
+    { serialNumber: 'FACEFACE0001', name: 'a', ip: '192.168.0.1' },
+    { serialNumber: 'FACEFACE0002', name: 'b', ip: '192.168.0.2' },
+    { serialNumber: 'FACEFACE0003', name: 'c', ip: '192.168.0.3' },
+    { serialNumber: 'FACEFACE0004', name: 'd', ip: '192.168.0.4' },
+    { serialNumber: 'FACEFACE0005', name: 'e', ip: '192.168.0.5' },
+    { serialNumber: 'FACEFACE0006', name: 'f', ip: '192.168.0.6' },
+    { serialNumber: 'FACEFACE0007', name: 'g', ip: '192.168.0.7' },
+    { serialNumber: 'FACEFACE0008', name: 'h', ip: '192.168.0.8' },
+    { serialNumber: 'FACEFACE0009', name: 'i', ip: '192.168.0.9' },
+    { serialNumber: 'FACEFACE0010', name: 'j', ip: '192.168.0.10' },
+    { serialNumber: 'FACEFACE0011', name: 'k', ip: '192.168.0.11' },
+    { serialNumber: 'FACEFACE0012', name: 'l', ip: '192.168.0.12' },
+  ].map((device, index) => (
+    <SimpleTableRow key={device.serialNumber}>
+      <Typography>{device.serialNumber}</Typography>
+      <Typography>{device.name}</Typography>
+      <Typography>{device.ip}</Typography>
+    </SimpleTableRow>
+  ))}
+</SimpleTable>
+```
+
+## Table Props
+
+SimpleTable forwards all unknown props to the base native `<table>` component. See
+[`<table>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) for more
+details on which additional props that are available.
+
+<Props of="SimpleTable" />
+
+## TableRow Props
+
+SimpleTableRow forwards all unknown props to the base native `<tr>` component. See
+[`<tr>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr) for more
+details on which additional props that are available.
+
+<Props of="SimpleTableRow" />

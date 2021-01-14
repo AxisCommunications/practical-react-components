@@ -1,0 +1,542 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleButtonGroup ToggleButtonGroup 1`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c3 {
+  box-sizing: border-box;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c3:not(:last-child) {
+  border-right: 1px solid rgb(184,184,184);
+}
+
+.c3:active {
+  z-index: 1;
+  box-shadow: -1px 0 0 5px rgba(82,82,82,0.24);
+  border-radius: 4px;
+}
+
+.c6 {
+  box-sizing: border-box;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c6:not(:last-child) {
+  border-right: 1px solid rgb(184,184,184);
+}
+
+.c9 {
+  box-sizing: border-box;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  opacity: 0.48;
+  pointer-events: none;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c9:not(:last-child) {
+  border-right: 1px solid rgb(184,184,184);
+}
+
+.c4 {
+  background-color: rgb(255,255,255);
+  height: 32px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+}
+
+.c4:focus {
+  outline-color: rgb(61,61,61);
+}
+
+.c4:hover {
+  background-color: rgb(61,61,61);
+}
+
+.c7 {
+  background-color: rgb(255,255,255);
+  height: 32px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+}
+
+.c7:hover {
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c7:focus {
+  background-color: rgba(204,204,204,0.16);
+  outline-color: rgb(61,61,61);
+}
+
+.c7:active {
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(24px,1fr));
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid rgb(184,184,184);
+  border-radius: 2px;
+}
+
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c8 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c11 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c10 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          onClick={[Function]}
+          selected={true}
+        >
+          <div
+            className="c4"
+            selected={true}
+            tabIndex={1}
+          >
+            <p
+              className="c5"
+            >
+              24
+            </p>
+          </div>
+        </div>
+        <div
+          className="c6"
+          disabled={false}
+          onClick={[Function]}
+          selected={false}
+        >
+          <div
+            className="c7"
+            selected={false}
+            tabIndex={1}
+          >
+            <span
+              className="c8"
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div
+          className="c9"
+          disabled={true}
+          onClick={[Function]}
+          selected={false}
+        >
+          <div
+            className="c7"
+            selected={false}
+            tabIndex={1}
+          >
+            <p
+              className="c5"
+            >
+              Disabled
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c10"
+      id="layer-2"
+    >
+      <div
+        className="c11"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ToggleButtonGroup ToggleButtonGroupWithField 1`] = `
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+.c7 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c2 {
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgb(82,82,82);
+  cursor: default;
+}
+
+.c5 {
+  box-sizing: border-box;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c5:not(:last-child) {
+  border-right: 1px solid rgb(184,184,184);
+}
+
+.c6 {
+  background-color: rgb(255,255,255);
+  height: 32px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+}
+
+.c6:hover {
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c6:focus {
+  background-color: rgba(204,204,204,0.16);
+  outline-color: rgb(61,61,61);
+}
+
+.c6:active {
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c4 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(24px,1fr));
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid rgb(184,184,184);
+  border-radius: 2px;
+}
+
+.c8 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c8 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c10 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c9 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div>
+        <div
+          className="c2"
+        >
+          <span
+            className="c3"
+          >
+            Togglebutton test
+          </span>
+        </div>
+        <div
+          className="c4"
+        >
+          <div
+            className="c5"
+            disabled={false}
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c6"
+              selected={false}
+              tabIndex={1}
+            >
+              <p
+                className="c7"
+              >
+                click me
+              </p>
+            </div>
+          </div>
+          <div
+            className="c5"
+            disabled={false}
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c6"
+              selected={false}
+              tabIndex={1}
+            >
+              <span
+                className="c8"
+                role="img"
+                size="medium"
+              >
+                <svg
+                  height="1em"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div
+            className="c5"
+            disabled={false}
+            onClick={[Function]}
+            selected={false}
+          >
+            <div
+              className="c6"
+              selected={false}
+              tabIndex={1}
+            >
+              <p
+                className="c7"
+              >
+                test
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c9"
+      id="layer-4"
+    >
+      <div
+        className="c10"
+      />
+    </div>
+  </div>
+</div>
+`;

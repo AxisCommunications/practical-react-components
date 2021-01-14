@@ -1,0 +1,59 @@
+export const meta = {
+  name: 'SelectNative ✔',
+  route: '/components/selectnative',
+  menu: 'Components',
+}
+
+import { CoffeeIcon } from 'practical-react-components-icons'
+import { SelectNative } from 'practical-react-components-core'
+
+# SelectNative
+
+Select components are used for collecting user provided information from a
+list of options inside a dropdown menu.
+
+## Demo
+
+export const onClick = () => {}
+
+export const options = [
+  { value: 'apple', label: 'Apple' },
+  { value: 'banana', label: 'Banana' },
+  { value: 'pie', label: 'Pie', disabled: true },
+]
+
+<div
+  style={{
+    padding: '2px',
+    display: 'inline-grid',
+    gridGap: '10px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
+    width: '100%',
+  }}
+>
+  <SelectNative {...props} options={options} width="small" />
+</div>
+
+## Basic usage
+
+```typescript type=live
+<SelectNative
+  value="apple"
+  options={[
+    { value: 'apple', label: 'Apple' },
+    { value: 'banana', label: 'Banana' },
+    { value: 'pie', label: 'Pie', disabled: true },
+  ]}
+  onChange={() => {}}
+  placeholder="Select..."
+  width="small"
+/>
+```
+
+## Props
+
+SelectNative forwards all unknown props to the base native `<select>` component. See
+[`<select>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) for more
+details on which additional props that are available.
+
+<Props of="SelectNative" />

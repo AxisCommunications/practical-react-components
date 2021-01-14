@@ -1,0 +1,63 @@
+export const meta = {
+  name: 'StrengthIndicator',
+  route: '/components/strengthindicator',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import { StrengthIndicator } from 'practical-react-components-core'
+
+# StrengthIndicator
+
+A StrengthIndicator can signify the relative strength of a piece of data or information. Some projects use it as a
+password strength indicator together with DropBox [zxcvbn](https://github.com/dropbox/zxcvbn) library.
+
+## Demo
+
+export const Block = styled.div`
+  margin: 24px;
+`
+
+<div
+  style={{
+    padding: '2px',
+    display: 'inline-grid',
+    gridGap: '10px',
+    gridTemplateColumns: '1fr',
+    width: '100%',
+  }}
+>
+  <Block>
+    <StrengthIndicator
+      strength={0}
+      helpText="horrible"
+      className="my-strenght-indicator"
+    />
+  </Block>
+  <Block>
+    <StrengthIndicator strength={0.25} helpText="bad" />
+  </Block>
+  <Block>
+    <StrengthIndicator strength={0.5} helpText="ok" />
+  </Block>
+  <Block>
+    <StrengthIndicator strength={0.75} helpText="good" />
+  </Block>
+  <Block>
+    <StrengthIndicator strength={1} helpText="excellent" />
+  </Block>
+</div>
+
+## Basic usage
+
+```typescript type=live
+<StrengthIndicator strength={0.5} helpText="ok" />
+```
+
+## Props
+
+StrengthIndicator forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="StrengthIndicator" />

@@ -1,0 +1,207 @@
+export const meta = {
+  name: 'Themes',
+  route: '/styles/theme',
+  menu: 'Styles',
+}
+
+import { useCallback } from 'react'
+import styled from 'styled-components'
+import {
+  basePalette,
+  spacing,
+  shape,
+  Typography,
+  Tooltip,
+  getHexValue,
+  defaultTheme,
+} from 'practical-react-components-core'
+
+# Themes
+
+A theme have a limited number of available colors in "slots". Each slot has a
+name so that you can refer to a color by it's slot:
+
+`${({ theme }) => theme.color.<SLOT_NAME>`
+
+Which color is assigned to each slot is determined when creating the theme.
+All colors from the color palette can be used.
+
+## Default theme
+
+<Theme theme={defaultTheme} />
+
+export const ThemeRow = styled.div`
+  border-bottom: 1px solid lightgray;
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
+  grid-template-columns: 140px 140px 1fr 80px;
+`
+
+export const ColorBox = styled.div`
+  background-color: ${({ color }) => color};
+  cursor: pointer;
+  height: 20px;
+  border-radius: ${shape.radius.medium};
+  margin: 0 ${spacing.medium};
+`
+
+export const PaletteContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+
+export const copyToClipBoard = async color => {
+  await window.navigator.clipboard.writeText(color)
+}
+
+export const PaletteColor = ({ colorName, colorValue }) => {
+  const onClick = useCallback(() => {
+    copyToClipBoard(colorValue()).catch(err => {
+      console.error(err)
+    })
+  }, [colorValue])
+  return (
+    <>
+      <Typography variant="default-text">{colorName}</Typography>
+      {colorName !== 'transparent' ? (
+        <>
+          <Tooltip text="Click to copy rgba-value">
+            <ColorBox color={colorValue()} onClick={onClick} />
+          </Tooltip>
+          <Typography variant="explanatory-text">
+            {getHexValue(colorValue())}
+          </Typography>
+        </>
+      ) : (
+        <>
+          <div />
+          <Typography variant="explanatory-text">transparent</Typography>
+        </>
+      )}
+    </>
+  )
+}
+
+export const Theme = ({ theme }) => {
+  const things = Object.entries(theme.color).map(([slot, color]) => {
+    const [colorName, colorValue] = Object.entries(basePalette).find(
+      ([, colorValue]) => color === colorValue
+    )
+    return [slot, colorName, colorValue]
+  })
+  return (
+    <>
+      <Typography variant="group-title">Color slots</Typography>
+      {things.map(([slot, colorName, colorValue]) => (
+        <ThemeRow key={slot}>
+          <Typography>{slot}</Typography>
+          <PaletteColor colorName={colorName} colorValue={colorValue} />
+        </ThemeRow>
+      ))}
+    </>
+  )
+}
+
+## Usage in code
+
+```typescript
+import styled from 'styled-components'
+
+const Box = styled.div`
+  background-color: ${theme.color.background00()};
+  color: ${theme.color.text00()};
+`
+```
+
+## Define your own theme
+
+Define your custom theme in a file.
+
+The "textTransform" css for Button label is "none" by default, but can be
+overwritten by "uppercase".
+
+Some components have an alternative compact style. If the components should be
+compact by default can be changed in the theme as well by changing the `compact`
+prop to `true`.
+
+Select component and SearchSelect component have an alternative check style (background style is default).
+If the components should indicate selected item with `check` icon by default
+can be changed in the theme as well by changing the `selectMarker` prop to `check`.
+
+```typescript
+
+interface IExtendedColor extends IColor {
+  readonly header: CSSColor
+}
+
+interface IExtendedTheme extends ITheme {
+  readonly color: IExtendedColor
+}
+
+export const MyThemeLight IExtendedTheme =  {
+  ...defaultTheme,
+  name: 'extendedTheme',
+  color: {
+    ...defaultTheme.color,
+    header: palette.primaryGreenLight,
+  },
+  font: {
+    ...defaultTheme.font,
+    button: {
+      primary: {
+        textTransform: 'uppercase',
+      },
+      secondary: {
+        default: {
+          textTransform: 'uppercase',
+        },
+        accent: {
+          textTransform: 'none',
+        },
+      },
+    },
+  },
+  compact: true,
+  selectMarker: 'check',
+
+}
+
+export const MyThemeDark IExtendedTheme =  {
+  ...defaultTheme,
+  name: 'extendedTheme',
+  color: {
+    ...defaultTheme.color,
+    header: palette.primaryGreenDark,
+  },
+  font: {
+    ...defaultTheme.font,
+    button: {
+      primary: {
+        textTransform: 'uppercase',
+      },
+      secondary: {
+        default: {
+          textTransform: 'uppercase',
+        },
+        accent: {
+          textTransform: 'none',
+        },
+      },
+    },
+  },
+  compact: true,
+  selectMarker: 'check',
+}
+```
+
+Extend the gobal declaration for styled-components to use your theme:
+
+```typescript
+import 'styled-components'
+import { IExtendedTheme } from './<path to your theme>'
+
+declare module 'styled-components' {
+  export interface DefaultTheme extends IExtendedTheme {}
+}
+```

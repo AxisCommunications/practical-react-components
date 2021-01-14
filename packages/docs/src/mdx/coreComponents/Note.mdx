@@ -1,0 +1,58 @@
+export const meta = {
+  name: 'Note',
+  route: '/components/note',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import { InfoIcon, WarningIcon } from 'practical-react-components-icons'
+
+import { Note } from 'practical-react-components-core'
+
+# Note
+
+A Note is a piece of text that can be implemented in a specific part of a
+website or application in order to convey crucial information to the user.
+
+## Demo
+
+export const Wrapper = styled.div`
+  max-height: 500px;
+  max-width: 500px;
+  margin-left: 8px;
+`
+
+export const text =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
+<div
+  style={{
+    padding: '2px',
+    display: 'inline-grid',
+    gridGap: '10px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
+    width: '100%',
+  }}
+>
+  <Wrapper>
+    <Note text={text} icon={InfoIcon} className="my-note" />
+    <Note text={text} icon={WarningIcon} />
+  </Wrapper>
+</div>
+
+## Basic usage
+
+```typescript type=live
+<>
+  <Note text="Text" icon={InfoIcon} />
+  <Note text="More text" icon={WarningIcon} />
+</>
+```
+
+## Props
+
+Note forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Note" />

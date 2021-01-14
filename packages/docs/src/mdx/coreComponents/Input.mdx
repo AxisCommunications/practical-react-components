@@ -1,0 +1,438 @@
+export const meta = {
+  name: 'Input ✔',
+  route: '/components/input',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import { useState, useCallback } from 'react'
+
+import {
+  SpaceBlock,
+  FormSection,
+  TextInput,
+  TextInputField,
+  TextInputCredentials,
+  TextInputCredentialsField,
+  NumberInput,
+  NumberInputField,
+  TimeInput,
+  Typography,
+  TimeInputField,
+  DurationInputField,
+} from 'practical-react-components-core'
+
+# Input
+
+export const Wrapper = styled.div`
+  padding: 2px;
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  width: 100%;
+`
+
+export const onClick = () => {}
+
+## TextInput
+
+Lets users enter and edit text.
+
+export const TextInputDemoComponent = ({}) => {
+  const [value, setValue] = useState('')
+  return (
+    <>
+      <Wrapper>
+        <TextInput
+          value={value}
+          onValueChange={setValue}
+          placeholder="Placeholder"
+          width="small"
+        />
+        <TextInputCredentials
+          value={value}
+          onValueChange={setValue}
+          placeholder="Password"
+          width="small"
+          type="new-password"
+        />
+      </Wrapper>
+      <Wrapper>
+        <TextInputField
+          label="Text input field label"
+          value={value}
+          onValueChange={setValue}
+          placeholder="Placeholder"
+          error="Short error"
+        />
+        <TextInputField
+          label="Text input field label"
+          value={value}
+          onValueChange={setValue}
+          placeholder="Placeholder"
+          error="Something went really wrong here, and the error is very very long. And there is a long explanation on why this was a user error and not something wrong with the background. There is also a helpful explanation on how to fix this issue."
+        />
+        <TextInputField
+          label="Text input field with error icon"
+          value={value}
+          onValueChange={setValue}
+          placeholder="Placeholder"
+          unitLabel="Unit label"
+          errorVariant="icon"
+          error="Something went really wrong here, and the error is very very long"
+        />
+      </Wrapper>
+      <Wrapper>
+        <TextInputField
+          label="Text input field with unit label"
+          value={value}
+          onValueChange={setValue}
+          placeholder="Placeholder"
+          unitLabel="Unit label"
+        />
+      </Wrapper>
+    </>
+  )
+}
+
+### Demo
+
+<TextInputDemoComponent />
+
+### Basic usage
+
+#### Without label
+
+```typescript type=live
+<TextInput
+  value=""
+  onValueChange={() => {}}
+  placeholder="Placeholder"
+  width="large"
+/>
+```
+
+#### With label
+
+```typescript type=live
+<TextInputField
+  label="Text input field label"
+  value=""
+  onValueChange={() => {}}
+  placeholder="Placeholder"
+  width="large"
+/>
+```
+
+#### With unit label
+
+```typescript type=live
+<TextInputField
+  label="Text input field label"
+  value=""
+  onValueChange={() => {}}
+  placeholder="Placeholder"
+  width="large"
+  unitLabel="Unit label"
+/>
+```
+
+#### Combination of some input fields
+
+If you want to use several input fields, you can use `FormSection` component
+which is in `Content` folder. That gives section title(which is optional) and
+gives proper margin to all children's bottom. `SpaceBlock` which is in `Content`
+folder is useful for adjusting space between each `FormSection`.
+
+```typescript type=live
+<>
+  <FormSection title="FormSection title">
+    <TextInputField
+      label="Text input field label"
+      value=""
+      onValueChange={() => {}}
+      placeholder="Placeholder"
+      width="large"
+    />
+    <TextInputField
+      label="Text input field label"
+      value=""
+      onValueChange={() => {}}
+      placeholder="Placeholder"
+      width="large"
+    />
+  </FormSection>
+  <SpaceBlock variant={32} />
+  <FormSection title="Second FormSection title">
+    <TextInputField
+      label="Text input field label"
+      value=""
+      onValueChange={() => {}}
+      placeholder="Placeholder"
+      width="large"
+    />
+    <TextInputField
+      label="Text input field label"
+      value=""
+      onValueChange={() => {}}
+      placeholder="Placeholder"
+      width="large"
+    />
+  </FormSection>
+</>
+```
+
+## NumberInput
+
+Lets users enter and edit numbers.
+
+export const NumberInputDemoComponent = ({}) => {
+  const [numberValue, setNumberValue] = useState('')
+  return (
+    <>
+      <Wrapper>
+        <NumberInput
+          value={numberValue}
+          onValueChange={setNumberValue}
+          placeholder="Number"
+          width="small"
+          min={0}
+          max={17}
+        />
+      </Wrapper>
+      <Wrapper>
+        <NumberInputField
+          label="Number input field label"
+          value={numberValue}
+          onValueChange={setNumberValue}
+          placeholder="Number input field"
+          error="I have an error"
+        />
+        <NumberInputField
+          label="Number input field label"
+          value={numberValue}
+          onValueChange={setNumberValue}
+          placeholder="Number input field"
+          errorVariant="icon"
+          error="Something went really wrong here, and the error is very very long"
+        />
+      </Wrapper>
+      <Wrapper>
+        <NumberInputField
+          label="Number input field very long label label and unit label"
+          value={numberValue}
+          onValueChange={setNumberValue}
+          placeholder="Number input field"
+          unitLabel="1..10000"
+          width="small"
+        />
+      </Wrapper>
+    </>
+  )
+}
+
+### Demo
+
+<NumberInputDemoComponent />
+
+### Basic usage
+
+#### Without label
+
+```typescript type=live
+<NumberInput
+  value=""
+  onValueChange={() => {}}
+  placeholder="Number"
+  width="medium"
+  min={0}
+  max={17}
+/>
+```
+
+#### With label
+
+```typescript type=live
+<NumberInputField
+  label="Number input field label"
+  value=""
+  onValueChange={() => {}}
+  placeholder="Number"
+  width="medium"
+  min={0}
+  max={17}
+/>
+```
+
+#### With unit label
+
+```typescript type=live
+<NumberInputField
+  label="Number input field label"
+  value=""
+  onValueChange={() => {}}
+  placeholder="Number"
+  width="medium"
+  min={0}
+  max={17}
+  unitLabel="Unit label"
+/>
+```
+
+## TimeInput
+
+Time input component
+
+The time input uses a text input box to
+write time, the input forces the user to enter
+in a specific format e.g. (hh:mm:ss).
+
+When variant `hour12` is `false` the time input will act as a 24 hour input.
+
+When property `hour12` is `true`, the input is
+postfixed with am/pm, and the hours can only go
+from 01 to 12, there is also a select besides the input component
+that lets the user to choose between AM and PM.
+
+Duration input component (DurationInput)
+
+Is a variant of TimeInput but the highest time unit
+in the input are not limited in value (can go up to max 99).
+Also big difference between Duration and TimeInput is that value in
+DurationInput is handled with seconds only.
+
+### Demo
+
+export const TimeInputDemoComponent = ({}) => {
+  const [value, setState] = useState(0)
+  const onChange = useCallback(
+    newState => {
+      setState(newState)
+    },
+    [value]
+  )
+  const [timeValue, setTimeValue] = useState({ hour: 0, minute: 0, second: 0 })
+  const onTimeChange = useCallback(
+    newState => {
+      setTimeValue(newState)
+    },
+    [value]
+  )
+  return (
+    <>
+      <Typography variant="default-text">
+        hour24 variant, twenty-four format hours, minutes and seconds
+      </Typography>
+      <SpaceBlock variant={8} />
+      <TimeInput
+        value={timeValue}
+        formatLabel="HH:MM:SS"
+        onChange={onTimeChange}
+      />
+      <SpaceBlock variant={24} />
+      <Typography variant="default-text">
+        hour12 variant, AM/PM hours and minutes
+      </Typography>
+      <SpaceBlock variant={8} />
+      <TimeInput
+        value={timeValue}
+        hour12={true}
+        formatLabel="HH:MM:SS"
+        onChange={onTimeChange}
+        hour12MeridiemLabels={{ am: 'AM', pm: 'PM' }}
+      />
+      <SpaceBlock variant={8} />
+      <DurationInputField
+        value={value}
+        format="hh:mm:ss"
+        unitLabel="hh:mm:ss"
+        label="Duration variant with seconds"
+        onChange={onChange}
+      />
+    </>
+  )
+}
+
+<TimeInputDemoComponent />
+
+### Basic usage
+
+#### Normal 24 hours, minutes and seconds
+
+```typescript type=live
+<TimeInput
+  value={{ hour: 0, minute: 0, second: 0 }}
+  onChange={newState => {}}
+/>
+```
+
+#### Normal AM/PM hours and minutes
+
+```typescript type=live
+<TimeInput
+  value={{ hour: 0, minute: 0 }}
+  hour12={true}
+  onChange={newState => {}}
+/>
+```
+
+#### Duration variant with minutes and seconds
+
+```typescript type=live
+<DurationInput value={0} format="mm:ss" onChange={newState => {}} />
+```
+
+#### Duration variant with hours, minutes and seconds
+
+```typescript type=live
+<DurationInput value={0} format="hh:mm:ss" onChange={newState => {}} />
+```
+
+#### Duration variant with seconds
+
+```typescript type=live
+<DurationInput value={0} format="ss" onChange={newState => {}} />
+```
+
+#### WithField variant with seconds
+
+```typescript type=live
+<TimeInputField
+  label="There is also a TimeInputField version"
+  value={{ hour: 0, minute: 0, second: 0 }}
+  hour12={true}
+  onChange={newState => {}}
+/>
+```
+
+## TextInput Props
+
+TextInput forwards all unknown props to the base native `<input>` component. See
+[`<input>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for more
+details on which additional props that are available.
+
+<Props of="TextInput" />
+
+## NumberInput Props
+
+NumberInput forwards all unknown props to the base native `<input>` component. See
+[`<input>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for more
+details on which additional props that are available.
+
+<Props of="NumberInput" />
+
+## TimeInput Props
+
+TimeInput forwards all props to `TextInput`.
+See [`TextInput props`](#components/input)
+for more details on which additional props that are available.
+
+<Props of="TimeInput" />
+
+## DurationInput Props
+
+DurationInput forwards all props to `TextInput`.
+See [`TextInput props`](#components/input)
+for more details on which additional props that are available.
+
+<Props of="DurationInput" />

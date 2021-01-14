@@ -1,0 +1,2377 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button primary 1`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c2:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c2:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c2:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <button
+        className="c2"
+        disabled={false}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c3 "
+        >
+          <span
+            className="c4 "
+          >
+            <span
+              className="c5"
+            >
+              click me
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-2"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Button primary 2`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  opacity: 0.48;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c2:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c2:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c2:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c2:hover,
+.c2 active,
+.c2 focus {
+  box-shadow: none;
+  border: 2px solid transparent;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <button
+        className="c2"
+        disabled={true}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c3 "
+        >
+          <span
+            className="c4 "
+          >
+            <span
+              className="c5"
+            >
+              click me
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-4"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Button secondary 1`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c2:focus {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.16);
+  border: 2px solid transparent;
+}
+
+.c2:active {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c2:disabled {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <button
+        className="c2"
+        disabled={false}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c3 "
+        >
+          <span
+            className="c4 "
+          >
+            <span
+              className="c5"
+            >
+              click me
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-6"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Button secondary 2`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+  opacity: 0.48;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c2:focus {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.16);
+  border: 2px solid transparent;
+}
+
+.c2:active {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c2:disabled {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c2:hover,
+.c2 active,
+.c2 focus {
+  box-shadow: none;
+  border: 2px solid transparent;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <button
+        className="c2"
+        disabled={true}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c3 "
+        >
+          <span
+            className="c4 "
+          >
+            <span
+              className="c5"
+            >
+              click me
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-8"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Button secondary 3`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+  opacity: 0.48;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c2:focus {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.16);
+  border: 2px solid transparent;
+}
+
+.c2:active {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c2:disabled {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c2:hover,
+.c2 active,
+.c2 focus {
+  box-shadow: none;
+  border: 2px solid transparent;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-9"
+    >
+      <button
+        className="c2"
+        disabled={true}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c3 "
+        >
+          <span
+            className="c4 "
+          >
+            <span
+              className="c5"
+            >
+              click me
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-10"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Button secondary 4`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(82,82,82);
+  fill: rgb(82,82,82);
+  background-color: transparent;
+  opacity: 0.48;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.16);
+}
+
+.c2:focus {
+  color: rgb(82,82,82);
+  background-color: rgba(82,82,82,0.16);
+  border: 2px solid transparent;
+}
+
+.c2:active {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.24);
+}
+
+.c2:disabled {
+  color: rgb(82,82,82);
+  fill: rgb(82,82,82);
+  background-color: transparent;
+}
+
+.c2:hover,
+.c2 active,
+.c2 focus {
+  box-shadow: none;
+  border: 2px solid transparent;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-11"
+    >
+      <button
+        className="c2"
+        disabled={true}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c3 "
+        >
+          <span
+            className="c4 "
+          >
+            <span
+              className="c5"
+            >
+              click me
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-12"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Button secondary 5`] = `
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(82,82,82);
+  fill: rgb(82,82,82);
+  background-color: transparent;
+  opacity: 0.48;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.16);
+}
+
+.c2:focus {
+  color: rgb(82,82,82);
+  background-color: rgba(82,82,82,0.16);
+  border: 2px solid transparent;
+}
+
+.c2:active {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.24);
+}
+
+.c2:disabled {
+  color: rgb(82,82,82);
+  fill: rgb(82,82,82);
+  background-color: transparent;
+}
+
+.c2:hover,
+.c2 active,
+.c2 focus {
+  box-shadow: none;
+  border: 2px solid transparent;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-13"
+    >
+      <button
+        className="c2"
+        disabled={true}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c3 "
+        >
+          <span
+            className="c4 "
+          >
+            <span
+              className="c5"
+            >
+              click me
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-14"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`IconButton primary 1`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c2:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c2:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c2:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c5 {
+  fill: inherit;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 32px;
+  width: 32px;
+  min-width: unset;
+  padding: unset;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-15"
+    >
+      <button
+        className="c2 c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c4 c5 "
+          role="img"
+          size="medium"
+        >
+          <svg
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 13h-4v4a1 1 0 01-2 0v-4H7a1 1 0 010-2h4V7a1 1 0 012 0v4h4a1 1 0 010 2z"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-16"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`IconButton primary 2`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  opacity: 0.48;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c2:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c2:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c2:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c2:hover,
+.c2 active,
+.c2 focus {
+  box-shadow: none;
+  border: 2px solid transparent;
+}
+
+.c5 {
+  fill: inherit;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 32px;
+  width: 32px;
+  min-width: unset;
+  padding: unset;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-17"
+    >
+      <button
+        className="c2 c3"
+        disabled={true}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c4 c5 "
+          role="img"
+          size="medium"
+        >
+          <svg
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 13h-4v4a1 1 0 01-2 0v-4H7a1 1 0 010-2h4V7a1 1 0 012 0v4h4a1 1 0 010 2z"
+            />
+          </svg>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-18"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`IconButton secondary 1`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c2:focus {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.16);
+  border: 2px solid transparent;
+}
+
+.c2:active {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c2:disabled {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c5 {
+  fill: inherit;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 32px;
+  width: 32px;
+  min-width: unset;
+  padding: unset;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.c3:hover {
+  background-color: transparent;
+  border: 0 solid transparent;
+}
+
+.c3:hover .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:focus {
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.c3:focus .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:active {
+  background-color: transparent;
+}
+
+.c3:active .c6 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-19"
+    >
+      <button
+        className="c2 c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c4 c5 "
+          role="img"
+          size="medium"
+        >
+          <svg
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 13h-4v4a1 1 0 01-2 0v-4H7a1 1 0 010-2h4V7a1 1 0 012 0v4h4a1 1 0 010 2z"
+            />
+          </svg>
+        </span>
+        <div
+          className="c6 c7"
+        />
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c8"
+      id="layer-20"
+    >
+      <div
+        className="c9"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`IconButton secondary 2`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+  opacity: 0.48;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c2:focus {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.16);
+  border: 2px solid transparent;
+}
+
+.c2:active {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c2:disabled {
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c2:hover,
+.c2 active,
+.c2 focus {
+  box-shadow: none;
+  border: 2px solid transparent;
+}
+
+.c5 {
+  fill: inherit;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 32px;
+  width: 32px;
+  min-width: unset;
+  padding: unset;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.c3:hover {
+  background-color: transparent;
+  border: 0 solid transparent;
+}
+
+.c3:hover .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:focus {
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.c3:focus .c6 {
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:active {
+  background-color: transparent;
+}
+
+.c3:active .c6 {
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-21"
+    >
+      <button
+        className="c2 c3"
+        disabled={true}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c4 c5 "
+          role="img"
+          size="medium"
+        >
+          <svg
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 13h-4v4a1 1 0 01-2 0v-4H7a1 1 0 010-2h4V7a1 1 0 012 0v4h4a1 1 0 010 2z"
+            />
+          </svg>
+        </span>
+        <div
+          className="c6 c7"
+        />
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c8"
+      id="layer-22"
+    >
+      <div
+        className="c9"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`IconButton secondary 3`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(82,82,82);
+  fill: rgb(82,82,82);
+  background-color: transparent;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.16);
+}
+
+.c2:focus {
+  color: rgb(82,82,82);
+  background-color: rgba(82,82,82,0.16);
+  border: 2px solid transparent;
+}
+
+.c2:active {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.24);
+}
+
+.c2:disabled {
+  color: rgb(82,82,82);
+  fill: rgb(82,82,82);
+  background-color: transparent;
+}
+
+.c5 {
+  fill: inherit;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 32px;
+  width: 32px;
+  min-width: unset;
+  padding: unset;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.c3:hover {
+  background-color: transparent;
+  border: 0 solid transparent;
+}
+
+.c3:hover .c6 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:focus {
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.c3:focus .c6 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:active {
+  background-color: transparent;
+}
+
+.c3:active .c6 {
+  background-color: rgba(82,82,82,0.24);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-23"
+    >
+      <button
+        className="c2 c3"
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c4 c5 "
+          role="img"
+          size="medium"
+        >
+          <svg
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 13h-4v4a1 1 0 01-2 0v-4H7a1 1 0 010-2h4V7a1 1 0 012 0v4h4a1 1 0 010 2z"
+            />
+          </svg>
+        </span>
+        <div
+          className="c6 c7"
+        />
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c8"
+      id="layer-24"
+    >
+      <div
+        className="c9"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`IconButton secondary 4`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c2 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(82,82,82);
+  fill: rgb(82,82,82);
+  background-color: transparent;
+  opacity: 0.48;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.16);
+}
+
+.c2:focus {
+  color: rgb(82,82,82);
+  background-color: rgba(82,82,82,0.16);
+  border: 2px solid transparent;
+}
+
+.c2:active {
+  color: rgb(61,61,61);
+  background-color: rgba(82,82,82,0.24);
+}
+
+.c2:disabled {
+  color: rgb(82,82,82);
+  fill: rgb(82,82,82);
+  background-color: transparent;
+}
+
+.c2:hover,
+.c2 active,
+.c2 focus {
+  box-shadow: none;
+  border: 2px solid transparent;
+}
+
+.c5 {
+  fill: inherit;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.c3 {
+  position: relative;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  height: 32px;
+  width: 32px;
+  min-width: unset;
+  padding: unset;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.c3:hover {
+  background-color: transparent;
+  border: 0 solid transparent;
+}
+
+.c3:hover .c6 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:focus {
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.c3:focus .c6 {
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3:active {
+  background-color: transparent;
+}
+
+.c3:active .c6 {
+  background-color: rgba(82,82,82,0.24);
+  -webkit-transform: scale(1.06);
+  -ms-transform: scale(1.06);
+  transform: scale(1.06);
+}
+
+.c7 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  -webkit-transform: scale(0.3);
+  -ms-transform: scale(0.3);
+  transform: scale(0.3);
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-25"
+    >
+      <button
+        className="c2 c3"
+        disabled={true}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c4 c5 "
+          role="img"
+          size="medium"
+        >
+          <svg
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 13h-4v4a1 1 0 01-2 0v-4H7a1 1 0 010-2h4V7a1 1 0 012 0v4h4a1 1 0 010 2z"
+            />
+          </svg>
+        </span>
+        <div
+          className="c6 c7"
+        />
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c8"
+      id="layer-26"
+    >
+      <div
+        className="c9"
+      />
+    </div>
+  </div>
+</div>
+`;

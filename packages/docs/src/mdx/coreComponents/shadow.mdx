@@ -1,0 +1,57 @@
+export const meta = {
+  name: 'Shadow',
+  route: '/styles/shadow',
+  menu: 'Styles',
+}
+
+import { useContext } from 'react'
+import styled, { ThemeContext } from 'styled-components'
+import { Typography } from 'practical-react-components-core'
+
+# Shadow
+
+export const ShadowBox = styled.div`
+  width: 160px;
+  height: 160px;
+  background-color: white;
+  margin: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: ${({ shadowValue }) => shadowValue};
+`
+
+export const ShadowName = styled(Typography)`
+  width: 100px;
+  text-align: center;
+`
+
+export const Shadow = () => {
+  const theme = useContext(ThemeContext)
+  return (
+    <div>
+      {Object.entries(theme.shadow)
+        // See issue https://github.com/pedronauck/docz/issues/875
+        .filter(([colorName]) => colorName !== '__filemeta')
+        .map(([shadowName, shadowValue]) => {
+          return (
+            <ShadowBox key={shadowName} shadowValue={shadowValue}>
+              <ShadowName>{shadowName}</ShadowName>
+            </ShadowBox>
+          )
+        })}
+    </div>
+  )
+}
+
+<Shadow />
+
+## Usage in code
+
+```typescript
+import styled from 'styled-components'
+
+const Box = styled.div`
+  box-shadow: ${({ theme }) => theme.shadow.card};
+`
+```

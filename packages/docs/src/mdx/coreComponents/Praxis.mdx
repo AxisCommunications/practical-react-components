@@ -1,0 +1,61 @@
+export const meta = {
+  name: 'PracticalProvider',
+  route: '/components/practicalprovider',
+  menu: 'Components',
+}
+
+# PracticalProvider
+
+PracticalProvider is a wrapper component that is necessary to use Practical react components components
+in an application. It is used to set the theme and configuration of toasts, such
+as duration.
+
+It contains several layers and each layer creates a new div element which is
+rendered as a sibling to the previous layer and a child of the practical root.
+
+Other components can access the layer element and id
+through the LayerContext.
+
+Layers cannot be clicked, but all children of it
+can be clicked on.
+
+## Basic usage
+
+```typescript
+import React from 'react'
+import {
+  GlobalScrollbarStyle,
+  PracticalProvider,
+} from 'practical-react-components-core'
+
+const App: React.FC = () => {
+  const [theme] = useTheme()
+
+  if (theme === undefined) {
+    return null
+  }
+
+  return (
+    <PracticalProvider
+      theme={theme}
+      toastsOptions={{
+        placement: {
+          justify: 'center',
+          top: '0',
+        },
+        alwaysOnTop: false,
+        defaultDurations: {
+          success: 4000,
+        },
+      }}
+    >
+      <GlobalScrollbarStyle />
+      <MyApp />
+    </PracticalProvider>
+  )
+}
+```
+
+## Props
+
+<Props of="PracticalProvider" />

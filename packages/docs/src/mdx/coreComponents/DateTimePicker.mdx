@@ -1,0 +1,72 @@
+export const meta = {
+  name: 'DateTimePicker',
+  route: '/components/datetimepicker',
+  menu: 'Components',
+}
+
+import { useState, useCallback } from 'react'
+
+import {
+  Button,
+  Typography,
+  DateTimePicker,
+} from 'practical-react-components-core'
+
+# DateTimePicker
+
+Modal component that allows users to choose
+date, time and time zone setting
+
+## Demo
+
+export const DemoComponent = ({}) => {
+  const [open, setOpen] = useState(false)
+  const [currentDate, setCurrentDate] = useState(new Date().toISOString())
+  const toggle = useCallback(d => setOpen(prevState => !prevState))
+  const save = useCallback(date => {
+    setOpen(false)
+    setCurrentDate(date)
+  })
+  console.log('currentDate: %o', currentDate)
+  return (
+    <>
+      <Button label="Change date and time" variant="primary" onClick={toggle} />
+      <DateTimePicker
+        onSaveAction={{ label: 'Save', onClick: save }}
+        onCancelAction={{ label: 'Cancel', onClick: toggle }}
+        header="Change date and time"
+        date={currentDate}
+        open={open}
+        hour12={true}
+        hour12MeridiemLabels={{ am: 'AM', pm: 'PM' }}
+      />
+    </>
+  )
+}
+
+<DemoComponent />
+
+## Basic usage
+
+```typescript type=live
+<>
+  <Button label="Change date and time" variant="primary" onClick={() => {}} />
+  <DateTimePicker
+    onSaveAction={{ label: 'Save', onClick: () => {} }}
+    onCancelAction={{ label: 'Cancel', onClick: () => {} }}
+    header="Change date and time"
+    date={new Date().toISOString()}
+    open={false}
+    hour12={false}
+    hour12MeridiemLabels={{ am: 'AM', pm: 'PM' }}
+  />
+</>
+```
+
+## Props
+
+DateTimePicker forwards all props to `Modal`.
+See [`Modal props`](#components/modal)
+for more details on which additional props that are available.
+
+<Props of="DateTimePicker" />

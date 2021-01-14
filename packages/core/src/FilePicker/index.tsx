@@ -1,0 +1,96 @@
+import React, { useRef, useCallback, useState } from 'react'
+import styled from 'styled-components'
+import { Typography } from '../Typography'
+import { spacing } from '../designparams'
+import { Button, IButtonProps } from '../Button'
+
+type BaseElement = HTMLInputElement
+type BaseProps = React.InputHTMLAttributes<BaseElement>
+type InputChangeHandler = React.ChangeEventHandler<BaseElement>
+
+const ButtonFileChooserContainer = styled.div`
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  > button {
+    margin-right: ${spacing.medium};
+  }
+`
+
+const FileInput = styled.input`
+  display: none;
+`
+
+interface IFilePickerProps
+  extends Pick<IButtonProps, 'variant' | 'accent' | 'label' | 'icon'>,
+    BaseProps {
+  /**
+   * `class` to be passed to the component.
+   */
+  readonly className?: BaseProps['className']
+  /**
+   * Callback that fires when user has chosen a file.
+   * @param file the chosen file
+   */
+  readonly onFileChange?: (file?: File) => void
+}
+
+/**
+ * FilePicker
+ *
+ * Can be used when file input from user is needed.
+ *
+ * The component is built with a Button component. When the user
+ * clicks the button a input file chooser dialog will appear.
+ *
+ */
+export const FilePicker: React.FC<IFilePickerProps> = ({
+  onFileChange,
+  disabled,
+  name,
+  variant,
+  label,
+  icon,
+  className,
+  onChange,
+  ...props
+}) => {
+  const ref = useRef<HTMLInputElement>(null)
+  const [fileName, setFileName] = useState('')
+  const onButtonClick = useCallback(() => {
+    if (ref.current !== null) {
+      ref.current.click()
+    }
+  }, [ref])
+  const handleFileChange = useCallback<InputChangeHandler>(
+    e => {
+      onChange?.(e)
+      const chosenFile = e.target.files?.[0]
+
+      if (chosenFile === undefined) {
+        return
+      }
+
+      setFileName(chosenFile.name)
+      onFileChange?.(chosenFile)
+    },
+    [onFileChange, onChange]
+  )
+
+  return (
+    <ButtonFileChooserContainer className={className}>
+      <Button
+        disabled={disabled}
+        name={name}
+        onClick={onButtonClick}
+        variant={variant}
+        className={className}
+        label={label}
+        type="button"
+        icon={icon}
+      />
+      <FileInput type="file" ref={ref} onChange={handleFileChange} {...props} />
+      <Typography variant="default-text">{fileName}</Typography>
+    </ButtonFileChooserContainer>
+  )
+}

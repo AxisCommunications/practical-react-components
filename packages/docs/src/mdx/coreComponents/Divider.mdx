@@ -1,0 +1,60 @@
+export const meta = {
+  name: 'Divider ✔',
+  route: '/components/divider',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+
+import { Card, Divider } from 'practical-react-components-core'
+
+# Divider
+
+A divider is a subtle line that groups, sections or divides content - in menus, dialogs and cards.
+Only use dividers when white space isn't clear enough as separation between elements.
+
+## Demo
+
+export const Box = styled.div`
+  height: 100px;
+`
+
+<div
+  style={{
+    padding: '2px',
+    display: 'inline-grid',
+    gridGap: '10px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    width: '100%',
+  }}
+>
+  <Card>
+    <Box />
+    <Divider />
+    <Box />
+  </Card>
+  <Card>
+    <Box />
+    <Divider variant="middle" />
+    <Box />
+  </Card>
+  <Card>
+    <Box />
+    <Divider variant="inset" />
+    <Box />
+  </Card>
+</div>
+
+## Basic usage
+
+```typescript type=live
+<Divider variant="inset" insetSize={100} />
+```
+
+## Props
+
+Divider forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Divider" />
