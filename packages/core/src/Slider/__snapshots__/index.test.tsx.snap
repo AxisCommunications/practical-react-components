@@ -1,0 +1,890 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider Levels 1`] = `
+.c2 {
+  box-sizing: border-box;
+  height: 32px;
+  padding: 8px;
+  width: 100%;
+}
+
+.c5 {
+  position: absolute;
+  height: 2px;
+  top: 7px;
+  left: 8px;
+  right: 8px;
+  background-color: rgb(184,184,184);
+  border-radius: 8px;
+}
+
+.c6 {
+  background-color: rgb(82,82,82);
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: 0px 0px;
+  -ms-transform-origin: 0px 0px;
+  transform-origin: 0px 0px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.c8 {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.c8:hover {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c12 {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.c14 {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke: transparent;
+}
+
+.c10 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c7:hover .c9 {
+  visibility: unset;
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c3 {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+}
+
+.c3 .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c3 .c7 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c3 .c11 {
+  fill: rgb(250,250,250);
+}
+
+.c3 .c13 {
+  stroke: rgb(250,250,250);
+  stroke-width: 1px;
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:focus .c7 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c3:focus .c11 {
+  fill: rgb(250,250,250);
+}
+
+.c3:focus .c9 {
+  visibility: visible;
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c3:focus .c13 {
+  stroke: rgb(61,61,61);
+  stroke-width: 1px;
+}
+
+.c3:active .c7 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.32);
+}
+
+.c3:active .c11 {
+  fill: rgb(250,250,250);
+}
+
+.c3:active .c9 {
+  visibility: visible;
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(2.12);
+  -ms-transform: scale(2.12);
+  transform: scale(2.12);
+}
+
+.c3:active .c13 {
+  stroke: rgb(250,250,250);
+  stroke-width: 1px;
+}
+
+.c16 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c15 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          tabIndex={0}
+        >
+          <div
+            className="c4 c5"
+          >
+            <div
+              className="c6"
+              style={
+                Object {
+                  "transform": "scaleX(0)",
+                }
+              }
+            />
+            <div
+              className="c7 c8"
+              style={
+                Object {
+                  "transform": "translateX(-50%) translateX(0px)",
+                }
+              }
+            >
+              <div
+                className="c9 c10"
+              />
+              <svg
+                className="c11 c12"
+              >
+                <circle
+                  cx={8}
+                  cy={8}
+                  r={8}
+                />
+              </svg>
+              <svg
+                className="c13 c14"
+              >
+                <circle
+                  cx={8}
+                  cy={8}
+                  r={7.5}
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c15"
+      id="layer-2"
+    >
+      <div
+        className="c16"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Slider Levels 2`] = `
+.c2 {
+  box-sizing: border-box;
+  height: 32px;
+  padding: 8px;
+  width: 100%;
+}
+
+.c5 {
+  position: absolute;
+  height: 2px;
+  top: 7px;
+  left: 8px;
+  right: 8px;
+  background-color: rgb(184,184,184);
+  border-radius: 8px;
+}
+
+.c6 {
+  background-color: rgb(82,82,82);
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: 0px 0px;
+  -ms-transform-origin: 0px 0px;
+  transform-origin: 0px 0px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.c8 {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.c8:hover {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.24);
+}
+
+.c12 {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.c14 {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke: transparent;
+}
+
+.c7:hover .c9 {
+  visibility: unset;
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c10 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c7:hover .c9 {
+  visibility: unset;
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c17 .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c17 .c7 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c17 .c11 {
+  fill: rgb(250,250,250);
+}
+
+.c17 .c13 {
+  stroke: rgb(250,250,250);
+  stroke-width: 1px;
+}
+
+.c17:focus .c7 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c17:focus .c11 {
+  fill: rgb(250,250,250);
+}
+
+.c17:focus .c9 {
+  visibility: visible;
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c17:focus .c13 {
+  stroke: rgb(61,61,61);
+  stroke-width: 1px;
+}
+
+.c17:active .c7 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.32);
+}
+
+.c17:active .c11 {
+  fill: rgb(250,250,250);
+}
+
+.c17:active .c9 {
+  visibility: visible;
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(2.12);
+  -ms-transform: scale(2.12);
+  transform: scale(2.12);
+}
+
+.c17:active .c13 {
+  stroke: rgb(250,250,250);
+  stroke-width: 1px;
+}
+
+.c3 {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+}
+
+.c3 .c7 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+}
+
+.c3 .c11 {
+  fill: rgb(82,82,82);
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:focus .c7 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.24);
+}
+
+.c3:focus .c11 {
+  fill: rgb(82,82,82);
+}
+
+.c3:focus .c9 {
+  visibility: visible;
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c3:focus .c13 {
+  stroke: rgb(61,61,61);
+  stroke-width: 2px;
+}
+
+.c3:active .c7 {
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+}
+
+.c3:active .c11 {
+  fill: rgb(61,61,61);
+}
+
+.c3:active .c9 {
+  visibility: visible;
+  background-color: rgba(82,82,82,0.24);
+  -webkit-transform: scale(2.12);
+  -ms-transform: scale(2.12);
+  transform: scale(2.12);
+}
+
+.c16 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c15 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          tabIndex={0}
+        >
+          <div
+            className="c4 c5"
+          >
+            <div
+              className="c6"
+              style={
+                Object {
+                  "transform": "scaleX(0.5)",
+                }
+              }
+            />
+            <div
+              className="c7 c8"
+              style={
+                Object {
+                  "transform": "translateX(-50%) translateX(0px)",
+                }
+              }
+            >
+              <div
+                className="c9 c10"
+              />
+              <svg
+                className="c11 c12"
+              >
+                <circle
+                  cx={8}
+                  cy={8}
+                  r={8}
+                />
+              </svg>
+              <svg
+                className="c13 c14"
+              >
+                <circle
+                  cx={8}
+                  cy={8}
+                  r={7}
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c15"
+      id="layer-4"
+    >
+      <div
+        className="c16"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Slider Levels 3`] = `
+.c2 {
+  box-sizing: border-box;
+  height: 32px;
+  padding: 8px;
+  width: 100%;
+}
+
+.c5 {
+  position: absolute;
+  height: 2px;
+  top: 7px;
+  left: 8px;
+  right: 8px;
+  background-color: rgb(184,184,184);
+  border-radius: 8px;
+}
+
+.c6 {
+  background-color: rgb(82,82,82);
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: 0px 0px;
+  -ms-transform-origin: 0px 0px;
+  transform-origin: 0px 0px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.c8 {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  -webkit-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+}
+
+.c8:hover {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.24);
+}
+
+.c12 {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.c14 {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke: transparent;
+}
+
+.c7:hover .c9 {
+  visibility: unset;
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c10 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  -webkit-transition: -webkit-transform 100ms;
+  -webkit-transition: transform 100ms;
+  transition: transform 100ms;
+}
+
+.c7:hover .c9 {
+  visibility: unset;
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c17 .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c17 .c7 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c17 .c11 {
+  fill: rgb(250,250,250);
+}
+
+.c17 .c13 {
+  stroke: rgb(250,250,250);
+  stroke-width: 1px;
+}
+
+.c17:focus .c7 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
+}
+
+.c17:focus .c11 {
+  fill: rgb(250,250,250);
+}
+
+.c17:focus .c9 {
+  visibility: visible;
+  background-color: rgba(204,204,204,0.16);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c17:focus .c13 {
+  stroke: rgb(61,61,61);
+  stroke-width: 1px;
+}
+
+.c17:active .c7 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.32);
+}
+
+.c17:active .c11 {
+  fill: rgb(250,250,250);
+}
+
+.c17:active .c9 {
+  visibility: visible;
+  background-color: rgba(204,204,204,0.24);
+  -webkit-transform: scale(2.12);
+  -ms-transform: scale(2.12);
+  transform: scale(2.12);
+}
+
+.c17:active .c13 {
+  stroke: rgb(250,250,250);
+  stroke-width: 1px;
+}
+
+.c3 {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  cursor: pointer;
+}
+
+.c3 .c7 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+}
+
+.c3 .c11 {
+  fill: rgb(82,82,82);
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:focus .c7 {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.24);
+}
+
+.c3:focus .c11 {
+  fill: rgb(82,82,82);
+}
+
+.c3:focus .c9 {
+  visibility: visible;
+  background-color: rgba(82,82,82,0.16);
+  -webkit-transform: scale(2);
+  -ms-transform: scale(2);
+  transform: scale(2);
+}
+
+.c3:focus .c13 {
+  stroke: rgb(61,61,61);
+  stroke-width: 2px;
+}
+
+.c3:active .c7 {
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.24);
+}
+
+.c3:active .c11 {
+  fill: rgb(61,61,61);
+}
+
+.c3:active .c9 {
+  visibility: visible;
+  background-color: rgba(82,82,82,0.24);
+  -webkit-transform: scale(2.12);
+  -ms-transform: scale(2.12);
+  transform: scale(2.12);
+}
+
+.c16 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c15 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        className="c2"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onPointerDown={[Function]}
+          onPointerUp={[Function]}
+          tabIndex={0}
+        >
+          <div
+            className="c4 c5"
+          >
+            <div
+              className="c6"
+              style={
+                Object {
+                  "transform": "scaleX(1)",
+                }
+              }
+            />
+            <div
+              className="c7 c8"
+              style={
+                Object {
+                  "transform": "translateX(-50%) translateX(0px)",
+                }
+              }
+            >
+              <div
+                className="c9 c10"
+              />
+              <svg
+                className="c11 c12"
+              >
+                <circle
+                  cx={8}
+                  cy={8}
+                  r={8}
+                />
+              </svg>
+              <svg
+                className="c13 c14"
+              >
+                <circle
+                  cx={8}
+                  cy={8}
+                  r={7}
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c15"
+      id="layer-6"
+    >
+      <div
+        className="c16"
+      />
+    </div>
+  </div>
+</div>
+`;

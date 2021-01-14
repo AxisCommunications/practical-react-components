@@ -1,0 +1,79 @@
+export const meta = {
+  name: 'FormikSwitch',
+  route: '/formik/FormikSwitch',
+  menu: 'Formik',
+}
+
+import { useFormik, FormikProvider } from 'formik'
+import { FormikSwitch } from 'practical-react-components-formik'
+
+# FormikSwitch
+
+A formik component that wraps a Switch component.
+
+## Demo
+
+```typescript type=demo
+<FormikDemo initialValues={{ enabled: false }}>
+  <SpaceBlock variant={16} />
+  <Typography variant="explanatory-text">Single (true/false)</Typography>
+  <SpaceBlock variant={8} />
+  <FormikSwitch label="Turn me on / off" name="enabled" />
+  <SpaceBlock variant={16} />
+
+  <Typography variant="explanatory-text">Multiple (array)</Typography>
+  <SpaceBlock variant={8} />
+  <FormikSwitch label="Red" name="colors" value="red" />
+  <FormikSwitch label="Green" name="colors" value="green" />
+  <FormikSwitch label="Blue" name="colors" value="blue" />
+</FormikDemo>
+```
+
+## Usage in code
+
+```typescript
+import React, { useMemo, useCallback } from 'react'
+import { useFormik, FormikProvider } from 'formik'
+import { FormikSwitch } from 'practical-react-components-formik'
+import * as yup from 'yup'
+
+const MyComponent = ({ enabled }) => {
+  const validationSchema = useMemo(
+    () =>
+      yup.object().shape({
+        enabled: yup.boolean(),
+      }),
+    []
+  )
+
+  const initialValues = useMemo(
+    () => ({
+      enabled,
+    }),
+    // Initial values that should not change during
+    // re-renders as formik handles state by itself
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  )
+
+  const onSubmit = useCallback((values: IFormikValues) => {
+    /* Save data here */
+  }, [])
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  })
+
+  return (
+    <FormikProvider value={formik}>
+      <FormikSwitch label="Enabled" name="enabled" />
+    </FormikProvider>
+  )
+}
+```
+
+## Props
+
+<Props of="FormikSwitch" />

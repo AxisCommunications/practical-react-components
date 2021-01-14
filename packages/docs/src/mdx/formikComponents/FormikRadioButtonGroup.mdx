@@ -1,0 +1,84 @@
+export const meta = {
+  name: 'FormikRadioButtonGroup',
+  route: '/formik/FormikRadioButtonGroup',
+  menu: 'Formik',
+}
+
+# FormikRadioButtonGroup
+
+A formik component that wraps a RadioButtonGroup component.
+
+## Demo
+
+```typescript type=demo
+<FormikDemo initialValues={{ day: 'mon' }}>
+  <FormikRadioButtonGroupField
+    label="Day"
+    name="day"
+    options={[
+      { label: 'Monday', value: 'mon' },
+      { label: 'Tuesday', value: 'tue' },
+      { label: 'Wednesday', value: 'wed' },
+      { label: 'Thursday', value: 'thu' },
+      { label: 'Friday', value: 'fri' },
+    ]}
+  />
+</FormikDemo>
+```
+
+## Usage in code
+
+```typescript
+import React, { useMemo, useCallback } from 'react'
+import { useFormik, FormikProvider } from 'formik'
+import { FormikRadioButtonGroupField } from 'practical-react-components-formik'
+import * as yup from 'yup'
+
+const MyComponent = ({ version }) => {
+  const validationSchema = useMemo(
+    () =>
+      yup.object().shape({
+        day: yup.string().required(),
+      }),
+    []
+  )
+
+  const initialValues = useMemo(
+    () => ({
+      day,
+    }),
+    // Initial values that should not change during
+    // re-renders as formik handles state by itself
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  )
+
+  const onSubmit = useCallback((values: IFormikValues) => {
+    /* Save data here */
+  }, [])
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  })
+
+  export const options = [
+    { label: 'Monday', value: 'mon' },
+    { label: 'Tuesday', value: 'tue' },
+    { label: 'Wednesday', value: 'wed' },
+    { label: 'Thursday', value: 'thu' },
+    { label: 'Friday', value: 'fri' },
+  ]
+
+  return (
+    <FormikProvider value={formik}>
+      <FormikRadioButtonGroupField label="Day" name="day" options={options} />
+    </FormikProvider>
+  )
+}
+```
+
+## Props
+
+<Props of="FormikRadioButtonGroup" />

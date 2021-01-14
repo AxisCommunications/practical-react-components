@@ -1,0 +1,58 @@
+export const meta = {
+  name: 'Link',
+  route: '/components/link',
+  menu: 'Components',
+}
+
+import { Link, Typography } from 'practical-react-components-core'
+
+# Link
+
+A Link is a clickable element which will link from one page to another.
+
+You can choose `<a>` tag or `<button>` tag for this component.
+If you use `<a>` tag, you need to add `href` attribute which indicates the link's destination.
+
+If a link doesn't have a meaningful href, it should be rendered using a `<button>` element.
+
+export const onClick = () => {}
+
+## Demo
+
+<div
+  style={{
+    padding: '2px',
+    display: 'inline-grid',
+    gridGap: '10px',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))',
+    width: '100%',
+  }}
+>
+  <Typography>
+    <Link {...props}>Link</Link>
+  </Typography>
+</div>
+
+## Basic usage
+
+```typescript type=live
+<Typography variant="default-text">
+  Hello
+  <Link
+    variant="a"
+    href="http://example.org"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    a link
+  </Link> world
+</Typography>
+```
+
+## Props
+
+Link forwards all unknown props to the base native `<a>` component for `variant="a"` and `<button>` component for `variant="button"`. See
+[`<a>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) and [`<button>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) for more
+details on which additional props that are available.
+
+<Props of="Link" />

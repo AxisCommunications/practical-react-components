@@ -1,0 +1,2871 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select Direction 1`] = `
+.c11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+
+.c11 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c16 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c12 {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.c12:focus {
+  outline: 2px solid rgb(61,61,61);
+}
+
+.c10 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c18 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c17 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 40px;
+  color: rgb(41,41,41);
+  background-color: rgb(245,245,245);
+  padding: 2px;
+  border: 0 solid transparent;
+  border-radius: 4px;
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.c3 .c4 {
+  padding: 0 8px;
+}
+
+.c3 > div > span > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
+.c3:hover {
+  background-color: rgb(240,240,240);
+}
+
+.c3:focus {
+  outline: none;
+  background-color: rgb(240,240,240);
+  border: 2px solid rgb(61,61,61);
+  padding: 0;
+}
+
+.c3:active {
+  background-color: rgb(240,240,240);
+  border: none;
+  padding: 2px;
+}
+
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
+.c9 {
+  background-color: rgb(184,184,184);
+  margin: 4px;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.c15 {
+  width: 1px;
+  background-color: rgb(230,230,230);
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  margin: 4px 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <div
+        className="c2"
+        width="full"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onPointerDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="c4 c5"
+          >
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                <div
+                  className="c8 c9"
+                  disabled={false}
+                >
+                  <span
+                    className="c10"
+                  >
+                    test1
+                  </span>
+                  <span
+                    className="c11 c12 c13"
+                    onClick={[Function]}
+                    role="img"
+                    size="small"
+                    tabIndex={0}
+                  >
+                    <svg
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 17L7 7m0 10L17 7"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeWidth={2}
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div
+                className="c14"
+              >
+                <span
+                  className="c11 c12"
+                  onClick={[Function]}
+                  role="img"
+                  size="small"
+                  tabIndex={0}
+                >
+                  <svg
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 17L7 7m0 10L17 7"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeWidth={2}
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                className="c15"
+              />
+            </div>
+            <span
+              className="c16"
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+                <path
+                  d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c17"
+      id="layer-8"
+    >
+      <div
+        className="c18"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select Direction 2`] = `
+.c11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+
+.c11 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c16 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c12 {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.c12:focus {
+  outline: 2px solid rgb(61,61,61);
+}
+
+.c10 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c18 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c17 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 40px;
+  color: rgb(41,41,41);
+  background-color: rgb(245,245,245);
+  padding: 2px;
+  border: 0 solid transparent;
+  border-radius: 4px;
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.c3 .c4 {
+  padding: 0 8px;
+}
+
+.c3 > div > span > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
+.c3:hover {
+  background-color: rgb(240,240,240);
+}
+
+.c3:focus {
+  outline: none;
+  background-color: rgb(240,240,240);
+  border: 2px solid rgb(61,61,61);
+  padding: 0;
+}
+
+.c3:active {
+  background-color: rgb(240,240,240);
+  border: none;
+  padding: 2px;
+}
+
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
+.c9 {
+  background-color: rgb(184,184,184);
+  margin: 4px;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.c15 {
+  width: 1px;
+  background-color: rgb(230,230,230);
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  margin: 4px 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-9"
+    >
+      <div
+        className="c2"
+        width="full"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onPointerDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="c4 c5"
+          >
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                <div
+                  className="c8 c9"
+                  disabled={false}
+                >
+                  <span
+                    className="c10"
+                  >
+                    test1
+                  </span>
+                  <span
+                    className="c11 c12 c13"
+                    onClick={[Function]}
+                    role="img"
+                    size="small"
+                    tabIndex={0}
+                  >
+                    <svg
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 17L7 7m0 10L17 7"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeWidth={2}
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div
+                className="c14"
+              >
+                <span
+                  className="c11 c12"
+                  onClick={[Function]}
+                  role="img"
+                  size="small"
+                  tabIndex={0}
+                >
+                  <svg
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 17L7 7m0 10L17 7"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeWidth={2}
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                className="c15"
+              />
+            </div>
+            <span
+              className="c16"
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+                <path
+                  d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c17"
+      id="layer-10"
+    >
+      <div
+        className="c18"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select Other 1`] = `
+.c11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+
+.c11 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c16 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c12 {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.c12:focus {
+  outline: 2px solid rgb(61,61,61);
+}
+
+.c10 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c18 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c17 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 40px;
+  color: rgb(41,41,41);
+  background-color: rgb(245,245,245);
+  padding: 2px;
+  border: 0 solid transparent;
+  border-radius: 4px;
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.c3 .c4 {
+  padding: 0 8px;
+}
+
+.c3 > div > span > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
+.c3:hover {
+  background-color: rgb(240,240,240);
+}
+
+.c3:focus {
+  outline: none;
+  background-color: rgb(240,240,240);
+  border: 2px solid rgb(61,61,61);
+  padding: 0;
+}
+
+.c3:active {
+  background-color: rgb(240,240,240);
+  border: none;
+  padding: 2px;
+}
+
+.c3,
+.c3:hover,
+.c3:focus {
+  background-color: rgb(224,224,224);
+  border-color: rgb(41,41,41);
+}
+
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
+.c9 {
+  background-color: rgb(184,184,184);
+  margin: 4px;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.c15 {
+  width: 1px;
+  background-color: rgb(230,230,230);
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  margin: 4px 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-11"
+    >
+      <div
+        className="c2"
+        width="full"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onPointerDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="c4 c5"
+          >
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                <div
+                  className="c8 c9"
+                  disabled={false}
+                >
+                  <span
+                    className="c10"
+                  >
+                    test1
+                  </span>
+                  <span
+                    className="c11 c12 c13"
+                    onClick={[Function]}
+                    role="img"
+                    size="small"
+                    tabIndex={0}
+                  >
+                    <svg
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 17L7 7m0 10L17 7"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeWidth={2}
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div
+                className="c14"
+              >
+                <span
+                  className="c11 c12"
+                  onClick={[Function]}
+                  role="img"
+                  size="small"
+                  tabIndex={0}
+                >
+                  <svg
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 17L7 7m0 10L17 7"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeWidth={2}
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                className="c15"
+              />
+            </div>
+            <span
+              className="c16"
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+                <path
+                  d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c17"
+      id="layer-12"
+    >
+      <div
+        className="c18"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select Other 2`] = `
+.c11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+
+.c11 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c16 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c12 {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.c12:focus {
+  outline: 2px solid rgb(61,61,61);
+}
+
+.c10 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c18 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c17 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c19 .c4 {
+  padding: 0 8px;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 40px;
+  color: rgb(41,41,41);
+  background-color: rgb(245,245,245);
+  padding: 2px;
+  border: 0 solid transparent;
+  border-radius: 4px;
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+  cursor: pointer;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c3 .c4 {
+  padding: 0 8px;
+}
+
+.c3 > div > span > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
+.c3:hover {
+  background-color: rgb(240,240,240);
+}
+
+.c3:focus {
+  outline: none;
+  background-color: rgb(240,240,240);
+  border: 2px solid rgb(61,61,61);
+  padding: 0;
+}
+
+.c3:active {
+  background-color: rgb(240,240,240);
+  border: none;
+  padding: 2px;
+}
+
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
+.c9 {
+  background-color: rgb(184,184,184);
+  margin: 4px;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.c15 {
+  width: 1px;
+  background-color: rgb(230,230,230);
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  margin: 4px 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-13"
+    >
+      <div
+        className="c2"
+        width="full"
+      >
+        <div
+          className="c3"
+          disabled={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onPointerDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="c4 c5"
+          >
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                <div
+                  className="c8 c9"
+                  disabled={false}
+                >
+                  <span
+                    className="c10"
+                  >
+                    test1
+                  </span>
+                  <span
+                    className="c11 c12 c13"
+                    onClick={[Function]}
+                    role="img"
+                    size="small"
+                    tabIndex={0}
+                  >
+                    <svg
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 17L7 7m0 10L17 7"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeWidth={2}
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div
+                className="c14"
+              >
+                <span
+                  className="c11 c12"
+                  onClick={[Function]}
+                  role="img"
+                  size="small"
+                  tabIndex={0}
+                >
+                  <svg
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 17L7 7m0 10L17 7"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeWidth={2}
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                className="c15"
+              />
+            </div>
+            <span
+              className="c16"
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+                <path
+                  d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c17"
+      id="layer-14"
+    >
+      <div
+        className="c18"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select Width 1`] = `
+.c11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+
+.c11 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c16 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c12 {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.c12:focus {
+  outline: 2px solid rgb(61,61,61);
+}
+
+.c10 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c18 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c17 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 40px;
+  color: rgb(41,41,41);
+  background-color: rgb(245,245,245);
+  padding: 2px;
+  border: 0 solid transparent;
+  border-radius: 4px;
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.c3 .c4 {
+  padding: 0 8px;
+}
+
+.c3 > div > span > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
+.c3:hover {
+  background-color: rgb(240,240,240);
+}
+
+.c3:focus {
+  outline: none;
+  background-color: rgb(240,240,240);
+  border: 2px solid rgb(61,61,61);
+  padding: 0;
+}
+
+.c3:active {
+  background-color: rgb(240,240,240);
+  border: none;
+  padding: 2px;
+}
+
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
+.c9 {
+  background-color: rgb(184,184,184);
+  margin: 4px;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.c15 {
+  width: 1px;
+  background-color: rgb(230,230,230);
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  margin: 4px 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+        width="full"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onPointerDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="c4 c5"
+          >
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                <div
+                  className="c8 c9"
+                  disabled={false}
+                >
+                  <span
+                    className="c10"
+                  >
+                    test1
+                  </span>
+                  <span
+                    className="c11 c12 c13"
+                    onClick={[Function]}
+                    role="img"
+                    size="small"
+                    tabIndex={0}
+                  >
+                    <svg
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 17L7 7m0 10L17 7"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeWidth={2}
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div
+                className="c14"
+              >
+                <span
+                  className="c11 c12"
+                  onClick={[Function]}
+                  role="img"
+                  size="small"
+                  tabIndex={0}
+                >
+                  <svg
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 17L7 7m0 10L17 7"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeWidth={2}
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                className="c15"
+              />
+            </div>
+            <span
+              className="c16"
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+                <path
+                  d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c17"
+      id="layer-2"
+    >
+      <div
+        className="c18"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select Width 2`] = `
+.c11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+
+.c11 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c16 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c12 {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.c12:focus {
+  outline: 2px solid rgb(61,61,61);
+}
+
+.c10 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c18 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c17 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 40px;
+  color: rgb(41,41,41);
+  background-color: rgb(245,245,245);
+  padding: 2px;
+  border: 0 solid transparent;
+  border-radius: 4px;
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.c3 .c4 {
+  padding: 0 8px;
+}
+
+.c3 > div > span > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
+.c3:hover {
+  background-color: rgb(240,240,240);
+}
+
+.c3:focus {
+  outline: none;
+  background-color: rgb(240,240,240);
+  border: 2px solid rgb(61,61,61);
+  padding: 0;
+}
+
+.c3:active {
+  background-color: rgb(240,240,240);
+  border: none;
+  padding: 2px;
+}
+
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
+.c9 {
+  background-color: rgb(184,184,184);
+  margin: 4px;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.c15 {
+  width: 1px;
+  background-color: rgb(230,230,230);
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  margin: 4px 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+        width="full"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onPointerDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="c4 c5"
+          >
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                <div
+                  className="c8 c9"
+                  disabled={false}
+                >
+                  <span
+                    className="c10"
+                  >
+                    test1
+                  </span>
+                  <span
+                    className="c11 c12 c13"
+                    onClick={[Function]}
+                    role="img"
+                    size="small"
+                    tabIndex={0}
+                  >
+                    <svg
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 17L7 7m0 10L17 7"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeWidth={2}
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  className="c8 c9"
+                  disabled={false}
+                >
+                  <span
+                    className="c10"
+                  >
+                    test2
+                  </span>
+                  <span
+                    className="c11 c12 c13"
+                    onClick={[Function]}
+                    role="img"
+                    size="small"
+                    tabIndex={0}
+                  >
+                    <svg
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 17L7 7m0 10L17 7"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeWidth={2}
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div
+                className="c14"
+              >
+                <span
+                  className="c11 c12"
+                  onClick={[Function]}
+                  role="img"
+                  size="small"
+                  tabIndex={0}
+                >
+                  <svg
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 17L7 7m0 10L17 7"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeWidth={2}
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                className="c15"
+              />
+            </div>
+            <span
+              className="c16"
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+                <path
+                  d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c17"
+      id="layer-4"
+    >
+      <div
+        className="c18"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Select Width 3`] = `
+.c11 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+
+.c11 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c16 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c16 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c12 {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.c12:focus {
+  outline: 2px solid rgb(61,61,61);
+}
+
+.c10 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c18 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c17 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 40px;
+  color: rgb(41,41,41);
+  background-color: rgb(245,245,245);
+  padding: 2px;
+  border: 0 solid transparent;
+  border-radius: 4px;
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.c3 .c4 {
+  padding: 0 8px;
+}
+
+.c3 > div > span > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
+.c3:hover {
+  background-color: rgb(240,240,240);
+}
+
+.c3:focus {
+  outline: none;
+  background-color: rgb(240,240,240);
+  border: 2px solid rgb(61,61,61);
+  padding: 0;
+}
+
+.c3:active {
+  background-color: rgb(240,240,240);
+  border: none;
+  padding: 2px;
+}
+
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
+.c9 {
+  background-color: rgb(184,184,184);
+  margin: 4px;
+}
+
+.c6 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.c15 {
+  width: 1px;
+  background-color: rgb(230,230,230);
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  margin: 4px 0;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        className="c2"
+        width="full"
+      >
+        <div
+          className="c3"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onKeyDown={[Function]}
+          onPointerDown={[Function]}
+          role="button"
+          tabIndex={0}
+        >
+          <div
+            className="c4 c5"
+          >
+            <div
+              className="c6"
+            >
+              <div
+                className="c7"
+              >
+                <div
+                  className="c8 c9"
+                  disabled={false}
+                >
+                  <span
+                    className="c10"
+                  >
+                    test1
+                  </span>
+                  <span
+                    className="c11 c12 c13"
+                    onClick={[Function]}
+                    role="img"
+                    size="small"
+                    tabIndex={0}
+                  >
+                    <svg
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 17L7 7m0 10L17 7"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeWidth={2}
+                      />
+                    </svg>
+                  </span>
+                </div>
+                <div
+                  className="c8 c9"
+                  disabled={false}
+                >
+                  <span
+                    className="c10"
+                  >
+                    test2
+                  </span>
+                  <span
+                    className="c11 c12 c13"
+                    onClick={[Function]}
+                    role="img"
+                    size="small"
+                    tabIndex={0}
+                  >
+                    <svg
+                      height="1em"
+                      viewBox="0 0 24 24"
+                      width="1em"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M17 17L7 7m0 10L17 7"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeWidth={2}
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div
+                className="c14"
+              >
+                <span
+                  className="c11 c12"
+                  onClick={[Function]}
+                  role="img"
+                  size="small"
+                  tabIndex={0}
+                >
+                  <svg
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17 17L7 7m0 10L17 7"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeWidth={2}
+                    />
+                  </svg>
+                </span>
+              </div>
+              <div
+                className="c15"
+              />
+            </div>
+            <span
+              className="c16"
+              role="img"
+              size="medium"
+            >
+              <svg
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+                <path
+                  d="M8.71 11.71l2.59 2.59c.39.39 1.02.39 1.41 0l2.59-2.59c.63-.63.18-1.71-.71-1.71H9.41c-.89 0-1.33 1.08-.7 1.71z"
+                />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c17"
+      id="layer-6"
+    >
+      <div
+        className="c18"
+      />
+    </div>
+  </div>
+</div>
+`;

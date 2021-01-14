@@ -1,0 +1,303 @@
+[
+  { "name": "alert.svg", "version": "3.0.1", "type": "basedOn" },
+  {
+    "name": "arrow-left.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "arrow-right.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "calendar.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "check.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "clock.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "cloud.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "cloud-off.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "columns.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "configuration.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "csv.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "dashboard.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "delete.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "delete_outline.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "device.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "device-off.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "edit.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "filter.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "hamburger-menu.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "hamburger-menu-close.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "home.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "info.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "insert-chart.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "invert-colors.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "label.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "lock-open-outline.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "lock-outline.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "menu.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "more.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "more_vert.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "notifications.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "organization.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "reports.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "retry.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "search.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "security.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "settings.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "site.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "site-not-found.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "trending-down.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "trending-flat.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "user-circle.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "user-circle-outline.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "user-filled.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "warning.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "autofocus.svg",
+    "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "calculate.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "battery.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "visibility.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "visibility-off.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "assessment.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "double-arrow-left.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "double-arrow-right.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "help.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "grid-on.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "grid-off.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "error-outline.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "keyboard-arrow-up.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "keyboard-arrow-down.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "insert-photo.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
+    "name": "add-circle.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  }
+]

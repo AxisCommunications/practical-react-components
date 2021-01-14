@@ -1,0 +1,86 @@
+export const meta = {
+  name: 'Button ✔',
+  route: '/components/button',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+
+import { Button, IconButton } from 'practical-react-components-core'
+import { AddIcon } from 'practical-react-components-icons'
+
+# Button
+
+Buttons allow users to take actions, and make choices, with a single tap.
+
+## Demo
+
+export const Wrapper = styled.div`
+  > * {
+    vertical-align: middle;
+    margin-right: 4px;
+    margin-bottom: 4px;
+  }
+`
+
+<Wrapper>
+  <Button label="Primary" />
+  <Button label="Primary" icon={AddIcon} />
+  <Button label="Secondary" variant="secondary" />
+  <Button label="Secondary" variant="secondary" icon={AddIcon} />
+  <Button label="Secondary" variant="secondary" accent={true} />
+  <Button label="Secondary" variant="secondary" icon={AddIcon} accent={true} />
+  <IconButton icon={AddIcon} />
+  <IconButton icon={AddIcon} variant="secondary" />
+  <IconButton icon={AddIcon} variant="secondary" accent={true} />
+</Wrapper>
+
+## Basic usage
+
+### Primary button
+
+A button with the primary color of the theme.
+
+```typescript type=live
+<Button label="Primary" />
+```
+
+### Secondary button
+
+A button without background color by default.
+
+```typescript type=live
+<Button label="Secondary" variant="secondary" />
+```
+
+### Clickable icon: Primary
+
+A clickable icon button with the primary color of the theme.
+
+```typescript type=live
+<IconButton icon={AddIcon} />
+```
+
+### Clickable icon: Secondary
+
+A clickable icon button without background color by default.
+
+```typescript type=live
+<IconButton icon={AddIcon} variant="secondary" />
+```
+
+## Button Props
+
+Button forwards all unknown props to the base native `<button>` component. See
+[`<button>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) for more
+details on which additional props that are available.
+
+<Props of="Button" />
+
+## IconButton Props
+
+IconButton forwards all unknown props to the base native `<button>` component. See
+[`<button>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) for more
+details on which additional props that are available.
+
+<Props of="IconButton" />

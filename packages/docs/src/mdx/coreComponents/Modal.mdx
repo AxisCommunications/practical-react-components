@@ -1,0 +1,72 @@
+export const meta = {
+  name: 'Modal',
+  route: '/components/modal',
+  menu: 'Components',
+}
+
+import { useState } from 'react'
+import { useBoolean } from 'react-hooks-shareable'
+import { Button, Modal, ModalBackdrop } from 'practical-react-components-core'
+
+# Modal
+
+The modal component provides a solid foundation for creating dialogs, popovers, lightboxes, or whatever else.
+
+export const DemoComponent = ({}) => {
+  const [open, setOpen, unsetOpen] = useBoolean(false)
+  const [openSub, unsetOpenSub] = useBoolean(false)
+  return (
+    <>
+      <Button label="Open modal" onClick={setOpen} variant="primary" />
+      <Modal
+        open={open}
+        onClose={unsetOpen}
+        titleId="modal-level-1"
+        focusDialog={true}
+        className="my-modal"
+      >
+        <Button label="Close modal" onClick={unsetOpen} variant="primary" />
+      </Modal>
+    </>
+  )
+}
+
+## Demo
+
+export const onClick = () => {}
+
+<DemoComponent />
+
+## Usage example
+
+```typescript
+import { Dialog, Button } from 'practical-react-components-core'
+
+export const DemoComponent = () => {
+  const [open, setOpen, unsetOpen] = useBoolean(false)
+  return (
+    <Modal
+      open={open}
+      onClose={unsetOpen}
+      titleId="modal-level-1"
+      focusDialog={true}
+    >
+      Content
+    </Modal>
+  )
+}
+```
+
+## Props
+
+ModalBackdrop forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="ModalBackdrop" />
+
+Modal forwards all props to `ModalBackdrop`.
+See [`Dialog props`](#components/modal) below for more
+details on which additional props that are available.
+
+<Props of="Modal" />

@@ -1,0 +1,469 @@
+export const meta = {
+  name: 'Card ✔',
+  route: '/components/card',
+  menu: 'Components',
+}
+
+import { useState, useCallback } from 'react'
+import styled from 'styled-components'
+
+import {
+  Typography,
+  Button,
+  Switch,
+  Divider,
+  shape,
+  componentSize,
+  Icon,
+  FoldTransition,
+  TextInputField,
+  RadioButton,
+  RadioButtonGroup,
+  FormSection,
+  ContentListItem,
+  ContentListItemWithHover,
+  ContentDivider,
+  SpaceBlock,
+  TextBlock,
+  Card,
+  CardHeader,
+  CardContent,
+  CardFooter,
+  CardPlainContent,
+  CardExpandableHeader,
+  CardTabs,
+  CardFooterSpacer,
+} from 'practical-react-components-core'
+
+import { ImagePlaceholderIcon } from 'practical-react-components-icons'
+import { smallParagraphFixture } from '../fixtures/paragraphs'
+
+# Card
+
+Cards contain content and actions about a single subject.
+
+## Demo
+
+export const Triangle = styled.span`
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-color: ${({ theme }) => theme.color.elementWarning()} transparent transparent
+    ${({ theme }) => theme.color.elementWarning()};
+  border-radius: ${shape.radius.large} 0 0 0;
+  border-style: solid;
+  border-width: 13px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+`
+
+export const Dot = styled.span`
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: ${({ theme }) => theme.color.elementSuccess()};
+  border-radius: ${shape.radius.circle};
+`
+
+export const Wrapper = styled.div`
+  padding: 2px;
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  width: 100%;
+`
+
+export const HalfWrapper = styled(Wrapper)`
+  width: 50%;
+`
+
+export const OutsideTabsContainer = styled.div`
+  height: calc(100% - 32px);
+  display: flex;
+  flex-direction: column;
+`
+
+export const OutsideHeader = styled(Typography).attrs({
+  variant: 'group-title',
+})`
+  display: flex;
+  align-items: center;
+  height: ${componentSize.large};
+  color: ${({ theme }) => theme.color.text05()};
+`
+
+export const fruitOptions = [
+  { value: 'apple', label: 'Apple' },
+  { value: 'banana', label: 'Banana' },
+  { value: 'pie', label: 'Pie', disabled: true },
+]
+
+export const tabs = [
+  { value: 'blue', label: 'Blue' },
+  { value: 'yellow', label: 'Yellow' },
+  { value: 'green', label: 'Green', disabled: true },
+  { value: 'white', label: 'White' },
+]
+
+export const RadioSelectableListItem = () => {
+  const [hovered, setHovered] = useState(false)
+  const onSelect = () => {}
+  const [selected, setSelected] = useState('all')
+  const handleSelect = useCallback(value => {
+    onSelect(value)
+    setSelected(value)
+  }, [])
+  return (
+    <ContentListItemWithHover onHover={setHovered}>
+      <RadioButton
+        name={name}
+        value="me"
+        label="Content ListItem"
+        onValueChange={handleSelect}
+        partial={selected === 'all'}
+        checked={selected === 'me'}
+        hovered={hovered}
+      />
+      <Typography>Second content</Typography>
+    </ContentListItemWithHover>
+  )
+}
+
+export const DemoComponent = ({}) => {
+  const [isExpanded, setExpanded] = useState(true)
+  const onClick = useCallback(() => {}, [])
+  const onSelect = () => {}
+  const [selected, setSelected] = useState('all')
+  const [tab, setTab] = useState('yellow')
+  const handleSelect = useCallback(value => {
+    onSelect(value)
+    setSelected(value)
+  }, [])
+  return (
+    <>
+      <Wrapper>
+        <Card>
+          <CardHeader header="Small height header" height="small" />
+          <CardContent>
+            <Typography>Card content</Typography>
+          </CardContent>
+          <CardFooter>
+            <Typography variant="button-text">Go somewhere</Typography>
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader
+            header="With menu"
+            menu={[
+              { label: 'Blue', onClick },
+              { label: 'Yellow', onClick },
+              {
+                label: 'Green',
+                onClick,
+                divider: true,
+              },
+              { label: 'White', onClick },
+            ]}
+          />
+          <CardContent>
+            <Typography variant="default-text">
+              {smallParagraphFixture}
+            </Typography>
+            <Typography variant="default-text">Default text</Typography>
+          </CardContent>
+          <CardFooter>
+            <Button onClick={onClick} label="Action 1" />
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader
+            header="With image"
+            icon={<Icon icon={ImagePlaceholderIcon} />}
+          />
+          <CardContent>
+            <Typography>Card content</Typography>
+          </CardContent>
+          <CardFooter>
+            <Button onClick={onClick} label="Action 1" />
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader tab={true}>
+            <CardTabs
+              variant="inside"
+              options={tabs}
+              value={tab}
+              onChange={setTab}
+            />
+          </CardHeader>
+          <CardContent>
+            <Typography>Card content</Typography>
+          </CardContent>
+          <CardFooter>
+            <Button onClick={onClick} label="Action 1" />
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeader tab={true} height="small">
+            <CardTabs
+              variant="inside"
+              options={tabs}
+              value={tab}
+              onChange={setTab}
+              hasBackground={true}
+            />
+          </CardHeader>
+          <CardContent>
+            <Typography>Card content</Typography>
+          </CardContent>
+          <CardFooter>
+            <Button onClick={onClick} label="Action 1" />
+          </CardFooter>
+        </Card>
+        <OutsideTabsContainer>
+          <CardTabs
+            variant="outside"
+            options={tabs}
+            value={tab}
+            onChange={setTab}
+          />
+          <Card>
+            <CardContent>
+              <Typography>Card content</Typography>
+            </CardContent>
+            <CardFooter></CardFooter>
+          </Card>
+        </OutsideTabsContainer>
+        <Card square={false}>
+          <CardHeader
+            header="With image(s) and with menu"
+            icon={
+              <>
+                <Triangle />
+                <Dot />
+              </>
+            }
+            menu={[
+              { label: 'Blue', onClick },
+              { label: 'Yellow', onClick },
+              {
+                label: 'Green',
+                onClick,
+                divider: true,
+              },
+              { label: 'White', onClick },
+            ]}
+          />
+          <CardContent>
+            <Typography>Card content</Typography>
+          </CardContent>
+          <CardFooter>
+            <Button onClick={onClick} label="Action 1" />
+            <Button onClick={onClick} label="Action 2" variant="secondary" />
+            <CardFooterSpacer />
+            <Switch value={false} onChange={() => {}} />
+            <Typography>Input label</Typography>
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardExpandableHeader
+            header="Expandable header"
+            subhead="Sub heading"
+            height="large"
+            icon={<Icon icon={ImagePlaceholderIcon} size="large" />}
+            expanded={isExpanded}
+            onToggle={setExpanded}
+          />
+          <FoldTransition expanded={isExpanded}>
+            <CardContent>
+              <Typography>Card content</Typography>
+            </CardContent>
+            <CardFooter>
+              <Button onClick={onClick} label="Action 1" />
+              <Button onClick={onClick} label="Action 2" variant="secondary" />
+            </CardFooter>
+          </FoldTransition>
+        </Card>
+      </Wrapper>
+      <HalfWrapper>
+        <div>
+          <OutsideHeader>Heading outside of card</OutsideHeader>
+          <Card>
+            <CardPlainContent>
+              <ContentListItem listHeight="large">
+                <Typography>Input label</Typography>
+                <Switch value={false} onChange={() => {}} />
+              </ContentListItem>
+              <ContentDivider />
+              <ContentListItem listHeight="large">
+                <Typography>Input label</Typography>
+                <Switch value={true} onChange={() => {}} />
+              </ContentListItem>
+              <ContentDivider />
+              <FormSection>
+                <TextInputField
+                  label="Input label"
+                  value=""
+                  onValueChange={() => {}}
+                  placeholder="Placeholder"
+                />
+                <TextInputField
+                  label="Input label"
+                  value=""
+                  onValueChange={() => {}}
+                  placeholder="Placeholder"
+                />
+              </FormSection>
+              <SpaceBlock variant={32} />
+              <FormSection title="Group label" />
+              <ContentListItem listHeight="large">
+                <Typography>Input label</Typography>
+                <Switch value={false} onChange={() => {}} />
+              </ContentListItem>
+              <ContentDivider />
+              <ContentListItem listHeight="large">
+                <Typography>Input label</Typography>
+                <Switch value={true} onChange={() => {}} />
+              </ContentListItem>
+              <ContentDivider />
+              <RadioSelectableListItem />
+              <ContentDivider />
+              <SpaceBlock variant={8} />
+              <TextBlock
+                text="Available applications for installation"
+                caption="Selected applications will automatically be installed and
+              reinstalled if removed."
+              />
+              <RadioButtonGroup
+                label="Select your favorite fruit"
+                name="radioValue"
+                options={fruitOptions}
+                onChange={() => {}}
+                value=""
+              />
+              <SpaceBlock variant={16} />
+            </CardPlainContent>
+          </Card>
+        </div>
+      </HalfWrapper>
+    </>
+  )
+}
+
+export const onClick = () => {}
+
+<DemoComponent />
+
+## Basic usage
+
+### Card with header, content and footer
+
+```typescript type=live
+<Card>
+  <CardHeader header="Normal height header" height="normal" />
+  <CardContent>
+    <Typography>CardContent</Typography>
+  </CardContent>
+  <CardFooter>
+    <Typography>CardFooter</Typography>
+  </CardFooter>
+</Card>
+```
+
+### Examples
+
+```typescript type=live
+<Card>
+  <CardPlainContent>
+    <ContentListItem listHeight="large">
+      <Typography>Input label</Typography>
+      <Switch value={false} onChange={() => {}} />
+    </ContentListItem>
+    <ContentDivider />
+    <ContentListItem listHeight="large">
+      <Typography>Input label</Typography>
+      <Switch value={true} onChange={() => {}} />
+    </ContentListItem>
+    <ContentDivider />
+    <FormSection>
+      <TextInputField
+        label="Input label"
+        value=""
+        onValueChange={() => {}}
+        placeholder="Placeholder"
+      />
+      <TextInputField
+        label="Input label"
+        value=""
+        onValueChange={() => {}}
+        placeholder="Placeholder"
+      />
+    </FormSection>
+    <SpaceBlock variant={24} />
+    <FormSection title="Group label" />
+    <ContentListItem listHeight="large">
+      <Typography>Input label</Typography>
+      <Switch value={false} onChange={() => {}} />
+    </ContentListItem>
+    <ContentDivider />
+    <ContentListItem listHeight="large">
+      <Typography>Input label</Typography>
+      <Switch value={true} onChange={() => {}} />
+    </ContentListItem>
+    <ContentDivider />
+    <ContentListItem>
+      <RadioButton
+        name=""
+        value="me"
+        label="Content ListItem"
+        onValueChange={() => {}}
+        partial={false}
+        checked={true}
+      />
+    </ContentListItem>
+    <ContentDivider />
+    <SpaceBlock variant={8} />
+    <TextBlock
+      text="Available applications for installation"
+      caption="Selected applications will automatically be installed and reinstalled if removed."
+    />
+    <RadioButtonGroup
+      label="Select your favorite fruit"
+      name="radioValue"
+      options={[
+        { value: 'apple', label: 'Apple' },
+        { value: 'banana', label: 'Banana' },
+        { value: 'pie', label: 'Pie', disabled: true },
+      ]}
+      onChange={() => {}}
+      value=""
+    />
+    <SpaceBlock variant={16} />
+  </CardPlainContent>
+</Card>
+```
+
+## Card Props
+
+Card forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Card" />
+
+## CardHeader Props
+
+CardHeader forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="CardHeader" />
+
+## CardTabs Props
+
+CardTabs forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="CardTabs" />

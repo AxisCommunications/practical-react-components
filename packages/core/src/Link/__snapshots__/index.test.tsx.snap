@@ -1,0 +1,238 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link Variant 1`] = `
+.c2 {
+  padding: 0;
+  border-color: transparent;
+  cursor: pointer;
+  height: auto;
+  font-weight: 600;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: rgb(184,184,184);
+}
+
+.c2:hover {
+  color: rgb(184,184,184);
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  color: rgb(184,184,184);
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <a
+        className="c2"
+        href="http://example.org"
+      >
+        Label
+      </a>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-2"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Link Variant 2`] = `
+.c2 {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  font-size: inherit;
+  font-weight: 600;
+  color: rgb(184,184,184);
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.c2:hover {
+  color: rgb(184,184,184);
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  color: rgb(184,184,184);
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <button
+        className="c2"
+        disabled={true}
+        onClick={[Function]}
+        type="button"
+      >
+        Label
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-4"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Link Variant 3`] = `
+.c2 {
+  padding: 0;
+  border-color: transparent;
+  cursor: pointer;
+  height: auto;
+  font-weight: 600;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: rgb(184,184,184);
+}
+
+.c2:hover {
+  color: rgb(184,184,184);
+}
+
+.c2:focus {
+  outline: none;
+}
+
+.c2:active {
+  color: rgb(184,184,184);
+}
+
+.c4 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c3 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <a
+        className="c2"
+        href="http://example.org"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Label
+      </a>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c3"
+      id="layer-6"
+    >
+      <div
+        className="c4"
+      />
+    </div>
+  </div>
+</div>
+`;

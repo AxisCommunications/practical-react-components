@@ -1,0 +1,66 @@
+export const meta = {
+  name: 'FormikTextArea',
+  route: '/formik/FormikTextArea',
+  menu: 'Formik',
+}
+
+# FormikTextArea
+
+A formik component that wraps a TextArea component.
+
+## Demo
+
+```typescript type=demo
+<FormikDemo initialValues={{ text: 'Once upon a time...' }}>
+  <FormikTextAreaField name="text" label="Write your story" />
+</FormikDemo>
+```
+
+## Usage in code
+
+```typescript
+import React, { useMemo, useCallback } from 'react'
+import { useFormik, FormikProvider } from 'formik'
+import { FormikTextAreaField } from 'practical-react-components-formik'
+import * as yup from 'yup'
+
+const MyComponent = ({ mytextarea }) => {
+  const validationSchema = useMemo(
+    () =>
+      yup.object().shape({
+        mytextarea: yup.string().required(),
+      }),
+    []
+  )
+
+  const initialValues = useMemo(
+    () => ({
+      mytextarea,
+    }),
+    // Initial values that should not change during
+    // re-renders as formik handles state by itself
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  )
+
+  const onSubmit = useCallback((values: IFormikValues) => {
+    /* Save data here */
+  }, [])
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  })
+
+  return (
+    <FormikProvider value={formik}>
+      <FormikTextAreaField label="TextArea" name="mytextarea" />
+    </FormikProvider>
+  )
+}
+```
+
+## Props
+
+<Props of="FormikTextArea" />

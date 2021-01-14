@@ -1,0 +1,143 @@
+export const meta = {
+  name: 'withField',
+  route: '/components/withfield',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import { useState, useCallback } from 'react'
+
+import { TextInputField, NumberInputField } from '../Input'
+import { TextAreaField } from '../TextArea'
+import { CheckboxField } from '../Checkbox'
+import { SwitchField } from '../Switch'
+import { RadioButtonGroupField } from '../RadioButton'
+import { SelectField } from '../Select'
+import { SliderField } from '../Slider'
+import { Paper } from '../Paper'
+
+# withField
+
+A "withField" is a higher order component(HOC) which is used for reusing component logic.
+"withField" gives the same styled label above the input.
+
+## Demo
+
+export const Layout = styled.div`
+  display: flex;
+  flex-direction: column;
+  color: ${({ theme }) => theme.color.text01()};
+  > * {
+    margin-bottom: 8px;
+  }
+`
+
+export const RadioContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+`
+
+export const DemoComponent = ({}) => {
+  const variantOptions = [
+    { value: 'normal', label: 'Normal' },
+    { value: 'compact', label: 'Compact' },
+  ]
+  const [selected, setSelected] = useState('normal')
+  const handleSelect = useCallback(value => {
+    setSelected(value)
+  }, [])
+  const [value, setValue] = useState('')
+  const [numberValue, setNumberValue] = useState('')
+  const [checked, setChecked] = useState(false)
+  const [switchValue, setswitchValue] = useState(false)
+  const fruitOptions = [
+    { value: 'apple', label: 'Apple' },
+    { value: 'banana', label: 'Banana' },
+    { value: 'pie', label: 'Pie', disabled: true },
+  ]
+  const [selectedFruit, setSelectedFruit] = useState('')
+  const weatherOptions = [
+    { value: 'sunny', label: 'Sunny' },
+    { value: 'cloudy', label: 'Cloudy' },
+    { value: 'rainy', label: 'Rainy' },
+    { value: 'windy', label: 'Windy', disabled: true },
+  ]
+  const [selectedWeather, setSelectedWeather] = useState()
+  const handleWeatherSelect = useCallback(value => {
+    setSelectedWeather(value)
+  }, [])
+  const [sliderValue, setSliderValue] = useState(0)
+  return (
+    <Paper space={true}>
+      <RadioContainer>
+        <RadioButtonGroupField
+          options={variantOptions}
+          onValueChange={handleSelect}
+          value={selected}
+        />
+      </RadioContainer>
+      <Layout>
+        <TextInputField
+          label="Text input field"
+          placeholder="text"
+          width="large"
+          value={value}
+          onValueChange={setValue}
+          compact={selected === 'compact'}
+        />
+        <NumberInputField
+          label="Number input field"
+          placeholder="number"
+          width="large"
+          value={numberValue}
+          onValueChange={setNumberValue}
+          compact={selected === 'compact'}
+        />
+        <TextAreaField
+          label="Text area field"
+          placeholder="text area input"
+          value={value}
+          onValueChange={setValue}
+          compact={selected === 'compact'}
+        />
+        <CheckboxField
+          label="Checkbox field"
+          checked={checked}
+          onCheckedValueChange={setChecked}
+          compact={selected === 'compact'}
+        />
+        <SwitchField
+          label="Switch field"
+          value={switchValue}
+          onValueChange={setswitchValue}
+          compact={selected === 'compact'}
+        />
+        <SelectField
+          label="Select field"
+          value={selectedFruit}
+          options={fruitOptions}
+          onChange={setSelectedFruit}
+          placeholder="Select..."
+          width="small"
+          compact={selected === 'compact'}
+        />
+        <RadioButtonGroupField
+          label="RadioButton group field"
+          options={weatherOptions}
+          onValueChange={handleWeatherSelect}
+          value={selectedWeather}
+          compact={selected === 'compact'}
+        />
+        <SliderField
+          label="Slider field"
+          value={sliderValue}
+          handleChange={setSliderValue}
+          compact={selected === 'compact'}
+        />
+      </Layout>
+    </Paper>
+  )
+}
+
+<DemoComponent />

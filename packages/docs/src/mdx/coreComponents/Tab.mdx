@@ -1,0 +1,144 @@
+export const meta = {
+  name: 'Tab',
+  route: '/components/tab',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import { useState } from 'react'
+import {
+  Tab,
+  VerticalTab,
+  TabBase,
+  Typography,
+} from 'practical-react-components-core'
+import { DeviceIcon } from 'practical-react-components-icons'
+
+# Tab
+
+Tabs make it easy to explore and switch between different views.
+
+Tabs organize and allow navigation between groups of content that are
+related and at the same level of hierarchy.
+
+## Demo
+
+export const HorizontalTabContainer = styled.div`
+  display: flex;
+  > * {
+    width: 128px;
+    margin: 8px;
+  }
+`
+
+export const VerticalTabContainer = styled.div`
+  display: inline-flex;
+  flex-direction: column;
+  > * {
+    width: 128px;
+    margin: 8px;
+  }
+`
+
+export const VContainer = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+export const HTABS = [
+  {
+    id: '1',
+    label: 'Large device',
+    icon: DeviceIcon,
+  },
+  {
+    id: '2',
+    label: 'Very large device',
+  },
+]
+
+export const VTABS = [
+  {
+    id: '3',
+    label: 'Tiny cup',
+    icon: DeviceIcon,
+  },
+  {
+    id: '4',
+    label: 'Cup',
+  },
+]
+
+export const Container = styled.div`
+  display: ${({ show }) => (show ? 'unset' : 'none')};
+`
+
+export const DemoComponent = ({}) => {
+  const [selectedTab, setSelectedTab] = useState('none')
+  return (
+    <>
+      <HorizontalTabContainer>
+        {HTABS.map(tab => (
+          <Tab
+            key={tab.id}
+            id={tab.id}
+            label={tab.label}
+            icon={tab.icon}
+            selected={tab.id === selectedTab}
+            onSelect={setSelectedTab}
+            className="my-tab"
+          />
+        ))}
+      </HorizontalTabContainer>
+      <Container show={selectedTab === '1'}>
+        <Typography variant="page-heading">1</Typography>
+      </Container>
+      <Container show={selectedTab === '2'}>
+        <Typography variant="page-heading">2</Typography>
+      </Container>
+      <br />
+      <VContainer>
+        <VerticalTabContainer>
+          {VTABS.map(tab => (
+            <VerticalTab
+              key={tab.id}
+              id={tab.id}
+              label={tab.label}
+              icon={tab.icon}
+              selected={tab.id === selectedTab}
+              onSelect={setSelectedTab}
+            />
+          ))}
+        </VerticalTabContainer>
+        <Container show={selectedTab === '3'}>
+          <Typography variant="page-heading">3</Typography>
+        </Container>
+        <Container show={selectedTab === '4'}>
+          <Typography variant="page-heading">4</Typography>
+        </Container>
+      </VContainer>
+    </>
+  )
+}
+
+<DemoComponent />
+
+## Basic usage
+
+```typescript type=live
+<Tab
+  id="id1"
+  label="Large device"
+  icon={DeviceIcon}
+  selected={true}
+  onSelect={() => {}}
+/>
+```
+
+## Props
+
+Tab forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Tab" />

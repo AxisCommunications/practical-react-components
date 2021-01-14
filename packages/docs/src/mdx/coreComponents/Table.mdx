@@ -1,0 +1,311 @@
+export const meta = {
+  name: 'Table ✔',
+  route: '/components/table',
+  menu: 'Components',
+}
+
+import { useCallback, useMemo, useState } from 'react'
+import styled from 'styled-components'
+import {
+  Menu,
+  IconButton,
+  Typography,
+  GlobalScrollbarStyle,
+  Table,
+  TableRow,
+  TableHeader,
+  TableDivider,
+  TableHeaderText,
+  LargeTableExample,
+  SkeletonTableExample,
+} from 'practical-react-components-core'
+import { useSelection } from 'react-hooks-shareable'
+import { AddIcon, MoreIcon } from 'practical-react-components-icons'
+
+# Table
+
+A Table allows the user to select one or multiple options from a comprehensive list of options.
+
+## Demo
+
+export const onClick = () => {}
+
+export const Wrapper = styled.div`
+  padding: 2px;
+  display: inline-grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  width: 100%;
+`
+
+export const TABLE_HEADER_DATA = [
+  { id: 'serial-number', title: 'Serial number', width: 200 },
+  { id: 'name', title: 'Name', width: 300 },
+  { id: 'ip-address', title: 'IP address', width: 400 },
+]
+
+export const DEVICE_LIST = [
+  { serialNumber: 'FACEFACE0001', name: 'a', ip: '192.168.0.1' },
+  { serialNumber: 'FACEFACE0002', name: 'b', ip: '192.168.0.2' },
+  { serialNumber: 'FACEFACE0003', name: 'c', ip: '192.168.0.3' },
+  { serialNumber: 'FACEFACE0004', name: 'd', ip: '192.168.0.4' },
+  { serialNumber: 'FACEFACE0005', name: 'e', ip: '192.168.0.5' },
+  { serialNumber: 'FACEFACE0006', name: 'f', ip: '192.168.0.6' },
+  { serialNumber: 'FACEFACE0007', name: 'g', ip: '192.168.0.7' },
+  { serialNumber: 'FACEFACE0008', name: 'h', ip: '192.168.0.8' },
+  { serialNumber: 'FACEFACE0009', name: 'i', ip: '192.168.0.9' },
+  { serialNumber: 'FACEFACE0010', name: 'j', ip: '192.168.0.10' },
+  { serialNumber: 'FACEFACE0011', name: 'k', ip: '192.168.0.11' },
+  { serialNumber: 'FACEFACE0012', name: 'l', ip: '192.168.0.12' },
+]
+
+export const ITEMS = [
+  { label: 'Item 1' },
+  { label: 'Item 2', divider: true },
+  { label: 'Item 3', disabled: true, danger: true },
+]
+
+export const onClickHandler = label => {
+  return () => alert(`clicked item: "${label}"`)
+}
+
+export const DemoComponent = ({}) => {
+  const [selection, add, remove, reset] = useSelection()
+  const [initialWidths, setInitialWidths] = useState(
+    TABLE_HEADER_DATA.map(({ width }) => width)
+  )
+  const onSelect = useCallback(
+    (selected, id) => {
+      if (selected) {
+        id !== undefined
+          ? add(id)
+          : reset(DEVICE_LIST.map(device => device.serialNumber))
+      } else {
+        id !== undefined ? remove(id) : reset([])
+      }
+    },
+    [DEVICE_LIST]
+  )
+  const [key, setKey] = useState('')
+  const clickFunc = useCallback(
+    id => {
+      window.alert(`You clicked on: ${id}`)
+      setKey(`${Math.floor(Math.random() * 100)}`)
+    },
+    [setKey]
+  )
+  return (
+    <Wrapper>
+      <GlobalScrollbarStyle />
+      <Table
+        initialWidths={initialWidths}
+        resizableColumns={true}
+        minColumnWidth={0}
+        maxHeight={6}
+        onSelect={onSelect}
+        hasMenu={true}
+        onWidthsChange={setInitialWidths}
+        scrollKey={key}
+      >
+        <TableHeader
+          selected={
+            selection.size !== 0 && selection.size === DEVICE_LIST.length
+          }
+          partial={selection.size > 0 && selection.size < DEVICE_LIST.length}
+          overlay={
+            selection.size === 0 ? undefined : (
+              <div>
+                <Typography>{'Actions overlay'}</Typography>
+              </div>
+            )
+          }
+          menu={
+            <Menu
+              align="right"
+              items={ITEMS.map(({ label, ...item }) => ({
+                ...item,
+                label,
+                onClick: onClickHandler(label),
+              }))}
+            />
+          }
+        >
+          {TABLE_HEADER_DATA.map(({ title }, id) => (
+            <TableHeaderText key={id}>{title}</TableHeaderText>
+          ))}
+        </TableHeader>
+        {DEVICE_LIST.map((device, index) => (
+          <TableRow
+            id={device.serialNumber}
+            key={device.serialNumber}
+            selected={selection.has(device.serialNumber)}
+            disabled={index === 2}
+            menu={
+              <>
+                <Menu
+                  icon={MoreIcon}
+                  align="right"
+                  items={ITEMS.map(({ label, ...item }) => ({
+                    ...item,
+                    label,
+                    onClick: onClickHandler(label),
+                  }))}
+                />
+              </>
+            }
+            clickable={index === 5}
+            onClicked={() => clickFunc(device.serialNumber)}
+          >
+            <Typography>{device.serialNumber}</Typography>
+            <Typography>{device.name}</Typography>
+            <Typography>{device.ip}</Typography>
+          </TableRow>
+        ))}
+      </Table>
+    </Wrapper>
+  )
+}
+
+<DemoComponent />
+
+A very large example to test mount / update performance.
+Start measuring performance, then click the button to mount
+the table.
+
+The same large example but with skeleton rows, should mount
+much faster.
+
+## Basic usage
+
+```typescript type=live size=large
+<Table maxHeight={5} initialWidths={[200, 1000, 200]}>
+  <TableHeader selected={false} partial={false} menu={null}>
+    {[
+      { id: 'serial-number', title: 'Serial number', width: 2 },
+      { id: 'name', title: 'Name', width: 1 },
+      { id: 'ip-address', title: 'IP address', width: 2 },
+    ].map(({ title }, id) => (
+      <TableHeaderText key={id}>{title}</TableHeaderText>
+    ))}
+  </TableHeader>
+  <TableDivider>
+    <Typography>I'm a table divider</Typography>
+  </TableDivider>
+  {[
+    { serialNumber: 'FACEFACE0001', name: 'a', ip: '192.168.0.1' },
+    { serialNumber: 'FACEFACE0002', name: 'b', ip: '192.168.0.2' },
+    { serialNumber: 'FACEFACE0003', name: 'c', ip: '192.168.0.3' },
+    { serialNumber: 'FACEFACE0004', name: 'd', ip: '192.168.0.4' },
+    { serialNumber: 'FACEFACE0005', name: 'e', ip: '192.168.0.5' },
+    { serialNumber: 'FACEFACE0006', name: 'f', ip: '192.168.0.6' },
+    { serialNumber: 'FACEFACE0007', name: 'g', ip: '192.168.0.7' },
+    { serialNumber: 'FACEFACE0008', name: 'h', ip: '192.168.0.8' },
+    { serialNumber: 'FACEFACE0009', name: 'i', ip: '192.168.0.9' },
+    { serialNumber: 'FACEFACE0010', name: 'j', ip: '192.168.0.10' },
+    { serialNumber: 'FACEFACE0011', name: 'k', ip: '192.168.0.11' },
+    { serialNumber: 'FACEFACE0012', name: 'l', ip: '192.168.0.12' },
+  ].map((device, index) => (
+    <TableRow id={device.serialNumber} key={device.serialNumber}>
+      <Typography>{device.serialNumber}</Typography>
+      <Typography>{device.name}</Typography>
+      <Typography>{device.ip}</Typography>
+    </TableRow>
+  ))}
+</Table>
+```
+
+```typescript type=live size=large
+<div style={{ height: '276px' }}>
+  <Table>
+    <TableHeader selected={false} partial={false} menu={null}>
+      {[
+        { id: 'serial-number', title: 'Serial number', width: 2 },
+        { id: 'name', title: 'Name', width: 1 },
+        { id: 'ip-address', title: 'IP address', width: 2 },
+      ].map(({ title }, id) => (
+        <TableHeaderText key={id}>{title}</TableHeaderText>
+      ))}
+    </TableHeader>
+    {[
+      { serialNumber: 'ACCC8E8278D8', name: 'Q1775', ip: '192.168.0.100' },
+      { serialNumber: 'ACCC8E545C9E', name: 'P1453', ip: '192.168.0.111' },
+      {
+        serialNumber: 'ACCC8E356111',
+        name: 'Q6155-E',
+        ip: '192.168.0.102',
+      },
+      {
+        serialNumber: 'ACCC8E0985A5',
+        name: 'M3024-MkII',
+        ip: '192.168.0.90',
+      },
+      { serialNumber: 'BCCC8E8278D8', name: 'Q1775', ip: '192.168.0.100' },
+      { serialNumber: 'BCCC8E545C9E', name: 'P1453', ip: '192.168.0.111' },
+      {
+        serialNumber: 'BCCC8E356111',
+        name: 'Q6155-E',
+        ip: '192.168.0.102',
+      },
+      {
+        serialNumber: 'BCCC8E0985A5',
+        name: 'M3024-MkII',
+        ip: '192.168.0.90',
+      },
+      { serialNumber: 'VCCC8E8278D8', name: 'Q1775', ip: '192.168.0.100' },
+      { serialNumber: 'VCCC8E545C9E', name: 'P1453', ip: '192.168.0.111' },
+      { serialNumber: 'VCC8E356111', name: 'Q6155-E', ip: '192.168.0.102' },
+      {
+        serialNumber: 'VCCC8E0985A5',
+        name: 'M3024-MkII',
+        ip: '192.168.0.90',
+      },
+    ].map((device, index) => (
+      <TableRow id={device.serialNumber} key={device.serialNumber}>
+        <Typography>{device.serialNumber}</Typography>
+        <Typography>{device.name}</Typography>
+        <Typography>{device.ip}</Typography>
+      </TableRow>
+    ))}
+  </Table>
+</div>
+```
+
+## Table Props
+
+Table forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Table" />
+
+## TableHeader Props
+
+TableHeader forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="TableHeader" />
+
+## TableRow Props
+
+TableRow forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="TableRow" />
+
+## TableDivider Props
+
+TableDivider forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="TableDivider" />
+
+## SkeletonTableRows Props
+
+SkeletonTableRows forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="SkeletonTableRows" />

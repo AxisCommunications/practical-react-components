@@ -1,0 +1,76 @@
+export const meta = {
+  name: 'Spacing',
+  route: '/styles/spacing',
+  menu: 'Styles',
+}
+
+import styled from 'styled-components'
+import { spacing, shape, Typography } from 'practical-react-components-core'
+
+# Spacing
+
+export const SpacingMarginBox = styled.div`
+  width: 120px;
+  height: 120px;
+  background-color: white;
+  margin: ${spacing.large};
+  display: flex;
+  align-items: center;
+  border: ${({ theme, spacingValue }) =>
+    `${spacingValue} solid ${theme.color.elementPrimary()}`};
+`
+
+export const SpacingName = styled(Typography)`
+  padding: 0 ${spacing.medium};
+  text-align: center;
+`
+
+export const SpacingValue = styled(Typography).attrs({
+  variant: 'explanatory-text',
+})`
+  padding: 0 ${spacing.medium};
+  text-align: center;
+`
+
+export const SpacingRow = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: ${spacing.medium};
+  border: 1px solid lightgray;
+  padding: ${spacing.small};
+  flex-direction: column;
+  border-radius: ${shape.radius.medium};
+`
+
+export const SpacingContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+
+export const Spacing = () => {
+  return (
+    <SpacingContainer>
+      {Object.entries(spacing).map(([spacingName, spacingValue]) => (
+        <SpacingRow key={spacingName}>
+          <SpacingMarginBox spacingValue={spacingValue} />
+          <SpacingName>{spacingName}</SpacingName>
+          <SpacingValue>{spacingValue}</SpacingValue>
+        </SpacingRow>
+      ))}
+    </SpacingContainer>
+  )
+}
+
+<Spacing />
+
+## Usage in code
+
+```typescript
+import styled from 'styled-components'
+import { spacing } from 'practical-react-components-core'
+
+const Box = styled.div`
+  margin: ${spacing.medium};
+`
+```

@@ -1,0 +1,116 @@
+# Run linting, unit tests, check build is possible.
+# Standard requirements that should always be green.
+# Tested on NodeJS LTS and current stable.
+name: Verify
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: ['14', '15']
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache
+        env:
+          CYPRESS_INSTALL_BINARY: '0'
+
+      - name: Check commit message
+        if: ${{ github.event_name == 'pull_request' }}
+        run: yarn commitlint ${{ github.context.payload.before }}
+
+      - name: Linting & Unit testing
+        run: |
+          yarn build:libs
+          git diff --exit-code
+          yarn lint
+          yarn test
+
+      - name: Archive build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: |
+            packages/core/build
+            packages/formik/build
+            packages/icons/build
+
+  ui-tests:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: ['chrome', 'firefox']
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: packages/
+
+      - name: Run Cypress UI tests
+        uses: cypress-io/github-action@v2
+        with:
+          install-command: yarn install --immutable --immutable-cache
+          start: yarn cypress:ui-tests
+          browser: ${{ matrix.browser }}
+          headless: true
+          working-directory: packages/ui-tests
+          wait-on: 'http://localhost:9009'
+          command-prefix: yarn workspace practical-react-components-ui-tests
+
+      - name: Upload screenshots for failed UI tests
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: packages/ui-tests/cypress/screenshots
+
+  docs:
+    needs: unit-tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache
+        env:
+          CYPRESS_INSTALL_BINARY: '0'
+
+      - name: Download all workflow run artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: packages/
+
+      - name: Linting & Unit testing
+        run: |
+          yarn build:docs --env base="/practical-react-components/" --env prod="true"
+          git diff --exit-code
+          tar zcvf docs-static.tgz -C packages/docs dist

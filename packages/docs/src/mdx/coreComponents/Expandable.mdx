@@ -1,0 +1,92 @@
+export const meta = {
+  name: 'Expandable',
+  route: '/components/expandable',
+  menu: 'Components',
+}
+
+import { useState, useCallback } from 'react'
+import styled from 'styled-components'
+
+import {
+  Expandable,
+  Button,
+  Arrow,
+  Typography,
+} from 'practical-react-components-core'
+
+import { ImagePlaceholderIcon } from 'practical-react-components-icons'
+import { smallParagraphFixture } from '../fixtures/paragraphs'
+
+# Expandable
+
+The `Expandable` is a simple wrapper around a `FoldTransition` together
+with a clickable header, that can be use to toggle the expanded state.
+
+## Demo
+
+export const Header = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+`
+
+export const Content = styled.div`
+  height: 300px;
+  padding: 10px;
+  border: 10px solid gray;
+  background-color: lightgray;
+`
+
+export const Box = styled.div`
+  border: 1px solid gray;
+`
+
+export const header = expanded => (
+  <Header>
+    <Typography>Header</Typography>
+    <Arrow expanded={expanded} />
+  </Header>
+)
+
+export const Demo = () => (
+  <Box>
+    <Expandable initialExpanded={true}>
+      {{
+        header,
+        body: (
+          <Content>
+            <Typography>Content</Typography>
+          </Content>
+        ),
+      }}
+    </Expandable>
+  </Box>
+)
+
+<Demo />
+
+The demo here is similiar to the example below.
+
+## Basic usage
+
+### Examples
+
+```typescript
+<Expandable>
+  {{
+    header: expanded => <Arrow expanded={expanded} />,
+    body: (
+      <div style={{ padding: '40px', backgroundColor: 'red' }}>Content</div>
+    ),
+  }}
+</Expandable>
+```
+
+## Expandable Props
+
+Expandable forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Expandable" />

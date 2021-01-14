@@ -1,0 +1,4 @@
+dist
+src/props.json
+node_modules
+*.local

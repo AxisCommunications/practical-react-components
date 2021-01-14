@@ -1,0 +1,80 @@
+export const meta = {
+  name: 'DraggableList ✔',
+  route: '/components/draggablelist',
+  menu: 'Components',
+}
+
+import { useState } from 'react'
+
+import {
+  DraggableList,
+  DraggableListItem,
+  Typography,
+} from 'practical-react-components-core'
+import { useBoolean } from 'react-hooks-shareable'
+
+# DraggableList
+
+A list that allows re-ordering of its items.
+
+## Demo
+
+export const DraggableDemo = () => {
+  const [state, setState] = useState([0, 1, 2, 3, 4])
+  return (
+    <DraggableList
+      onChange={nextIndices => {
+        setState(nextIndices.map(index => state[index]))
+      }}
+    >
+      {state.map((item, index) => (
+        <DraggableListItem key={index} disabled={item === 3}>
+          <Typography>{item}</Typography>
+        </DraggableListItem>
+      ))}
+    </DraggableList>
+  )
+}
+
+<DraggableDemo />
+
+## Usage example
+
+```typescript
+import {
+  DraggableList,
+  DraggableListItem,
+} from 'practical-react-components-core'
+
+const [state, setState] = useState([0, 1, 2, 3, 4])
+
+export const MyComponent = () => (
+  <DraggableList
+    onChange={nextIndices => {
+      setState(nextIndices.map(index => state[index]))
+    }}
+  >
+    {state.map((item, index) => (
+      <DraggableListItem key={index} disabled={item === 3}>
+        <Typography>{item}</Typography>
+      </DraggableListItem>
+    ))}
+  </DraggableList>
+)
+```
+
+## DraggableList Props
+
+DraggableList forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="DraggableList" />
+
+## DraggableListItem Props
+
+DraggableListItem forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="DraggableListItem" />

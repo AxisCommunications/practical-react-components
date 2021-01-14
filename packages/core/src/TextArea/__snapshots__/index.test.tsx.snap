@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextAreas TextArea 1`] = `
+.c5 {
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 2px 2px 0 0;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  display: unset;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  color: rgb(41,41,41);
+  background-color: transparent;
+  border-width: 0;
+  padding: 8px;
+  resize: none;
+}
+
+.c3::-webkit-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::-moz-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:-ms-input-placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3::placeholder {
+  color: rgb(122,122,122);
+}
+
+.c3:focus {
+  outline: none;
+}
+
+.c3:-moz-read-only {
+  opacity: 0.48;
+}
+
+.c3:read-only {
+  opacity: 0.48;
+}
+
+.c2 {
+  height: 96px;
+  position: relative;
+  -webkit-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  box-sizing: border-box;
+  border-width: 0;
+  background-color: rgb(245,245,245);
+  border-bottom: 1px solid rgb(204,204,204);
+  border-radius: 4px 4px 0 0;
+  padding-bottom: 8px;
+}
+
+.c2:hover {
+  background-color: rgb(240,240,240);
+  border-bottom: 1px solid rgb(102,102,102);
+}
+
+.c2:focus-within {
+  background-color: rgb(245,245,245);
+  border-bottom: 2px solid transparent;
+  padding-bottom: 7px;
+}
+
+.c2:focus-within .c4 {
+  background-color: rgb(82,82,82);
+}
+
+.c2:focus-within .TextArea__ErrorLine-sc-5zgztr-2 {
+  background-color: rgb(41,41,41);
+}
+
+.c2:focus-within .TextArea__ErrorLineContainter-sc-5zgztr-1 {
+  border-bottom: 1px solid transparent;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+        disabled={false}
+      >
+        <textarea
+          autoCapitalize="off"
+          autoCorrect="off"
+          className="c3"
+          disabled={false}
+          onChange={[Function]}
+          onKeyUp={[Function]}
+          rows={3}
+          spellCheck={false}
+          value="test"
+        />
+        <div
+          className="c4 c5"
+        />
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-2"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;

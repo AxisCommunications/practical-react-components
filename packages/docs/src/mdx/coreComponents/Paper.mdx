@@ -1,0 +1,38 @@
+export const meta = {
+  name: 'Paper',
+  route: '/components/paper',
+  menu: 'Components',
+}
+
+import { Paper, Typography, SpaceBlock } from 'practical-react-components-core'
+
+# Paper
+
+Paper acts as a physical surface for other components, providing a background
+and border separating the content.
+
+## Demo
+
+<Paper space={true} square={false}>
+  <Typography variant="page-heading">Hello world!</Typography>
+  <SpaceBlock variant={24} />
+  <Typography>I'm in the paper component.</Typography>
+</Paper>
+
+## Basic usage
+
+```typescript type=live
+<Paper space={true} square={false}>
+  <Typography variant="page-heading">Hello world!</Typography>
+  <SpaceBlock variant={24} />
+  <Typography>I'm in the paper component.</Typography>
+</Paper>
+```
+
+## Props
+
+Paper forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Paper" />

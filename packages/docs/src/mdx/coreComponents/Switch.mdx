@@ -1,0 +1,48 @@
+export const meta = {
+  name: 'Switch ✔',
+  route: '/components/switch',
+  menu: 'Components',
+}
+
+import { useState, useCallback } from 'react'
+import { Switch, SwitchField } from 'practical-react-components-core'
+
+# Switch
+
+Switches toggle the state of a single setting on or off.
+
+Switches are the preferred way to adjust settings on mobile. The option that the switch controls,
+as well as the state it’s in, should be made clear from the corresponding inline label.
+
+## Demo
+
+export const DemoComponent = ({}) => {
+  const [value, setValue] = useState(false)
+  return (
+    <Switch checked={value} onValueChange={setValue} label="Cool cool cool" />
+  )
+}
+
+<DemoComponent />
+
+## Basic usage
+
+### Without label on the top
+
+```typescript type=live
+<Switch label="In line label" checked={false} onChange={() => {}} />
+```
+
+### With label on the top
+
+```typescript type=live
+<SwitchField label="Switch field label" checked={false} onChange={() => {}} />
+```
+
+## Props
+
+Switch forwards all unknown props to the base native `<input>` component.
+See [`<input type="checkbox">` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+for more details on which additional props that are available.
+
+<Props of="Switch" />

@@ -1,0 +1,76 @@
+export const meta = {
+  name: 'Slider ⚙',
+  route: '/components/slider',
+  menu: 'Components',
+}
+
+import { useState } from 'react'
+import styled from 'styled-components'
+
+import { Slider, SliderField } from 'practical-react-components-core'
+
+# Slider
+
+Sliders allow users to make selections from a range of values.
+
+Sliders reflect a range of values along a bar, from which users may select a single value.
+They are ideal for adjusting settings such as volume, brightness, or applying image filters.
+
+export const DemoComponent = () => {
+  const [value, setValue] = useState(0)
+  const [valueField, setValueField] = useState(0)
+  const [valueFieldUnitLabel, setValueFieldUnitLabel] = useState(0)
+  return (
+    <>
+      <Slider value={value} handleChange={setValue} />
+      <SliderField
+        value={valueField}
+        handleChange={setValueField}
+        label="Slider field label"
+      />
+      <SliderField
+        value={valueFieldUnitLabel}
+        handleChange={setValueFieldUnitLabel}
+        label="Slider field with unit label"
+        unitLabel="Unit label"
+      />
+    </>
+  )
+}
+
+## Demo
+
+<DemoComponent />
+
+## Basic usage
+
+Without label
+
+```typescript type=live
+<Slider value={50} handleChange={() => {}} />
+```
+
+With label
+
+```typescript type=live
+<SliderField label="Slider field label" value={50} handleChange={() => {}} />
+```
+
+With unit label
+
+```typescript type=live
+<SliderField
+  label="Slider field with unit label"
+  value={50}
+  handleChange={() => {}}
+  unitLabel="Unit label"
+/>
+```
+
+## Props
+
+Slider forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="Slider" />

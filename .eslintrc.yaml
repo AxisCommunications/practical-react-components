@@ -1,0 +1,29 @@
+extends:
+  - 'typescript-shareable'
+
+parserOptions:
+  project: './tsconfig.json'
+  ecmaVersion: 2019
+  ecmaFeatures:
+    jsx: true
+
+env:
+  browser: true
+  es6: true
+  node: true
+  'cypress/globals': true
+
+settings:
+  react:
+    version: detect
+
+plugins:
+  - cypress
+
+overrides:
+  ###
+  # Test file overrides
+  ###
+  - files: ['**/*.test.tsx', '**/jest/**']
+    env:
+      jest: true

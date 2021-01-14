@@ -1,0 +1,265 @@
+export const meta = {
+  name: 'Select ✔',
+  route: '/components/select',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import { useState } from 'react'
+import {
+  FormSection,
+  SpaceBlock,
+  Select,
+  SelectField,
+} from 'practical-react-components-core'
+
+# Select
+
+Select components are used for collecting user provided information from a
+list of options inside a dropdown menu.
+
+## Demo
+
+export const onClick = () => {}
+
+export const fruitOptions = [
+  { value: 'apple', label: 'Apple' },
+  { value: 'banana', label: 'Banana' },
+  { value: 'pie', label: 'Pie', disabled: true },
+]
+
+export const tzOptions = [
+  { value: 'Africa/Abidjan', label: 'Africa/Abidjan' },
+  { value: 'Africa/Accra', label: 'Africa/Accra' },
+  { value: 'Africa/Addis_Ababa', label: 'Africa/Addis_Ababa' },
+  { value: 'Africa/Algiers', label: 'Africa/Algiers' },
+  { value: 'Africa/Asmara', label: 'Africa/Asmara' },
+  { value: 'Africa/Asmera', label: 'Africa/Asmera' },
+  { value: 'Africa/Bamako', label: 'Africa/Bamako' },
+  { value: 'Africa/Bangui', label: 'Africa/Bangui' },
+  { value: 'Africa/Banjul', label: 'Africa/Banjul' },
+  { value: 'Africa/Bissau', label: 'Africa/Bissau' },
+]
+
+export const DemoComponent = ({}) => {
+  const [selectedFruit, setSelectedFruit] = useState('')
+  const [selectedValue, setSelectedValue] = useState('')
+  return (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        alignItems: 'flex-start',
+        gridGap: '16px',
+        maxWidth: '600px',
+      }}
+    >
+      <SelectField
+        label="Framed variant"
+        options={tzOptions}
+        placeholder="Select..."
+        width="small"
+        value={selectedValue}
+        onChange={setSelectedValue}
+        variant="framed"
+        className="cypress-select"
+      />
+      <SelectField
+        label="Default: Filled variant (with disabled option)"
+        options={fruitOptions}
+        placeholder="Select..."
+        width="full"
+        value={selectedFruit}
+        onChange={setSelectedFruit}
+      />
+      <SelectField
+        label="Transparent vairant"
+        options={tzOptions}
+        placeholder="Select..."
+        width="full"
+        value={selectedValue}
+        onChange={setSelectedValue}
+        variant="transparent"
+        align="right"
+      />
+      <SelectField
+        label="Framed variant (field with unit label)"
+        options={tzOptions}
+        placeholder="Select..."
+        width="small"
+        value={selectedValue}
+        onChange={setSelectedValue}
+        variant="framed"
+        unitLabel="Unit label"
+      />
+      <SelectField
+        label="Default: Filled variant (with check icon)"
+        options={fruitOptions}
+        placeholder="Select..."
+        width="small"
+        value={selectedFruit}
+        onChange={setSelectedFruit}
+        selectMarker="check"
+      />
+    </div>
+  )
+}
+
+<DemoComponent />
+
+## Basic usage
+
+### Without label
+
+```typescript type=live
+<Select
+  value="apple"
+  options={[
+    { value: 'apple', label: 'Apple' },
+    { value: 'banana', label: 'Banana' },
+    { value: 'pie', label: 'Pie', disabled: true },
+  ]}
+  onChange={() => {}}
+  placeholder="Select..."
+  width="small"
+/>
+```
+
+### With label
+
+```typescript type=live
+<div>
+  <SelectField
+    label="Select field label"
+    value="apple"
+    options={[
+      { value: 'apple', label: 'Apple' },
+      { value: 'banana', label: 'Banana' },
+      { value: 'pie', label: 'Pie', disabled: true },
+    ]}
+    onChange={() => {}}
+    placeholder="Select..."
+    width="small"
+  />
+</div>
+```
+
+### With unit label
+
+```typescript type=live
+<div>
+  <SelectField
+    label="Select field label which is very very long"
+    value="apple"
+    options={[
+      { value: 'apple', label: 'Apple' },
+      { value: 'banana', label: 'Banana' },
+      { value: 'pie', label: 'Pie', disabled: true },
+    ]}
+    onChange={() => {}}
+    placeholder="Select..."
+    width="small"
+    unitLabel="Unit label"
+  />
+</div>
+```
+
+### With check icon
+
+```typescript type=live
+<div>
+  <SelectField
+    label="Select field label"
+    value="apple"
+    options={[
+      { value: 'apple', label: 'Apple' },
+      { value: 'banana', label: 'Banana' },
+      { value: 'pie', label: 'Pie', disabled: true },
+    ]}
+    onChange={() => {}}
+    placeholder="Select..."
+    width="small"
+    selectMarker="check"
+  />
+</div>
+```
+
+### Combination of some Select fields
+
+If you want to use several Select fields, you can use `FormSection` component
+which is in `Content` folder. That gives section title(which is optional) and
+gives proper margin to all children's bottom. `SpaceBlock` which is in `Content`
+folder is useful for adjusting space between each `FormSection`.
+
+```typescript type=live
+<>
+  <FormSection title="FormSection title">
+    <SelectField
+      label="Select field label which is very very long"
+      value="apple"
+      options={[
+        { value: 'apple', label: 'Apple' },
+        { value: 'banana', label: 'Banana' },
+        { value: 'pie', label: 'Pie', disabled: true },
+      ]}
+      onChange={() => {}}
+      placeholder="Select..."
+      width="small"
+    />
+    <SelectField
+      label="Select field label which is very very long"
+      value="apple"
+      options={[
+        { value: 'apple', label: 'Apple' },
+        { value: 'banana', label: 'Banana' },
+        { value: 'pie', label: 'Pie', disabled: true },
+      ]}
+      onChange={() => {}}
+      placeholder="Select..."
+      width="small"
+    />
+  </FormSection>
+  <SpaceBlock variant={32} />
+  <FormSection title="Second FormSection title">
+    <SelectField
+      label="Select field label which is very very long"
+      value="apple"
+      options={[
+        { value: 'apple', label: 'Apple' },
+        { value: 'banana', label: 'Banana' },
+        { value: 'pie', label: 'Pie', disabled: true },
+      ]}
+      onChange={() => {}}
+      placeholder="Select..."
+      width="small"
+    />
+    <SelectField
+      label="Select field label which is very very long"
+      value="apple"
+      options={[
+        { value: 'apple', label: 'Apple' },
+        { value: 'banana', label: 'Banana' },
+        { value: 'pie', label: 'Pie', disabled: true },
+      ]}
+      onChange={() => {}}
+      placeholder="Select..."
+      width="small"
+    />
+  </FormSection>
+</>
+```
+
+## BaseSelect Props
+
+BaseSelect forwards all props to `PopOver`.
+See [`PopOver props`](#components/popover)
+for more details on which additional props that are available.
+
+<Props of="BaseSelect" />
+
+## Select Props
+
+Select forwards all props to `BaseSelect`.
+See above for more details on which additional props that are available.
+
+<Props of="Select" />

@@ -1,0 +1,227 @@
+export const meta = {
+  name: 'RadioButton ✔',
+  route: '/components/radiobutton',
+  menu: 'Components',
+}
+
+import { useState, useCallback } from 'react'
+import {
+  RadioButton,
+  RadioButtonGroupField,
+  RadioIconButton,
+  RadioIconGroupField,
+} from 'practical-react-components-core'
+import { HomeIcon, HelpIcon, InfoIcon } from 'practical-react-components-icons'
+
+# RadioButton
+
+## RadioButton
+
+Radio buttons allow the user to select one option from a set.
+
+Use radio buttons when the user needs to see all available options.
+If available options can be collapsed, consider using a dropdown menu because it uses less space.
+
+Radio buttons should have the most commonly used option selected by default.
+
+RadioButtonGroup is a helpful wrapper used to group Radio components that provides an easier API,
+and proper keyboard accessibility to the group.
+
+### Demo
+
+export const DemoComponent = () => {
+  const [selected, setSelected] = useState('all')
+  const weatherOptions = [
+    { value: 'sunny', label: 'Sunny' },
+    { value: 'cloudy', label: 'Cloudy' },
+    { value: 'rainy', label: 'Rainy' },
+    { value: 'windy', label: 'Windy', disabled: true },
+  ]
+  const [selectedWeather, setSelectedWeather] = useState('cloudy')
+  return (
+    <>
+      <RadioButton
+        name={name}
+        value="me"
+        label="Select me"
+        onValueChange={setSelected}
+        partial={selected === 'all'}
+        checked={selected === 'me'}
+      />
+      <RadioButton
+        name={name}
+        value="noo"
+        label="Noo me"
+        partial={selected === 'all'}
+        checked={selected === 'noo'}
+        onValueChange={setSelected}
+      />
+      <RadioButton
+        name={name}
+        value="not"
+        label="Not me"
+        partial={selected === 'all'}
+        checked={selected === 'not'}
+        onValueChange={setSelected}
+        disabled={true}
+      />
+      <RadioButtonGroupField
+        name="weather-group"
+        label="Grouped buttons in a form with this label"
+        options={weatherOptions}
+        value={selectedWeather}
+        onValueChange={setSelectedWeather}
+      />
+    </>
+  )
+}
+
+<DemoComponent />
+
+### Basic usage
+
+```typescript type=live
+<>
+  <RadioButton
+    name={name}
+    value="me"
+    label="Select me"
+    onValueChange={() => {}}
+    partial={true}
+    checked={false}
+  />
+  <RadioButton
+    name={name}
+    value="noo"
+    label="Noo me"
+    onValueChange={() => {}}
+    partial={false}
+    checked={true}
+  />
+</>
+```
+
+#### Group filed with label on the top
+
+```typescript type=live
+<RadioButtonGroupField
+  name="weather-group"
+  label="Grouped buttons in a form with this label"
+  options={[
+    { value: 'sunny', label: 'Sunny' },
+    { value: 'cloudy', label: 'Cloudy' },
+    { value: 'rainy', label: 'Rainy' },
+    { value: 'windy', label: 'Windy', disabled: true },
+  ]}
+  value="sunny"
+  onValueChange={() => {}}
+/>
+```
+
+## RadioIconButton
+
+A RadioIconButton is a clickable element which will execute a command when clicked.
+The commands purpose is stored in a function which is then sent to the RadioIconButton's 'onClick' property upon being clicked.
+
+export const securityOptions = [
+  { value: 'home', label: 'Home', icon: HomeIcon },
+  { value: 'help', label: 'Help', icon: HelpIcon },
+  { value: 'info1', label: 'Info 1', icon: InfoIcon },
+  {
+    value: 'info1',
+    label: 'Info 2',
+    disabled: true,
+    icon: InfoIcon,
+  },
+  {
+    value: 'info1',
+    label: 'Info 2',
+    disabled: true,
+    icon: InfoIcon,
+  },
+]
+
+export const RadioIconButtonDemoComponent = ({}) => {
+  const [selected, setSelected] = useState('basicsecurity')
+  return (
+    <>
+      <RadioIconButton
+        name={name}
+        value="me"
+        label="Select me"
+        icon={HomeIcon}
+        checked={selected === 'me'}
+        onValueChange={setSelected}
+      />
+      <RadioIconGroupField
+        name="icon-group"
+        label="Grouped buttons with icons"
+        options={securityOptions}
+        value={selected}
+        onValueChange={setSelected}
+      />
+    </>
+  )
+}
+
+### Demo
+
+<RadioIconButtonDemoComponent />
+
+### Basic usage
+
+```typescript type=live
+<RadioIconButton
+  name={name}
+  value="me"
+  label="Select me"
+  icon={HomeIcon}
+  checked={false}
+  onValueChange={() => {}}
+/>
+```
+
+#### Group field with label on the top
+
+```typescript type=live
+<RadioIconGroupField
+  name="icon-group"
+  label="Grouped buttons with icons"
+  options={[
+    {
+      value: 'home',
+      label: 'Home',
+      icon: HomeIcon,
+    },
+    {
+      value: 'help',
+      label: 'Help',
+      icon: HelpIcon,
+    },
+    {
+      value: 'deviceusers',
+      label: 'Info',
+      disabled: true,
+      icon: InfoIcon,
+    },
+  ]}
+  value=""
+  onValueChange={() => {}}
+/>
+```
+
+## RadioButton Props
+
+RadioButton forwards all unknown props to the base native `<input>` component.
+See [`<input type="checkbox">` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+for more details on which additional props that are available.
+
+<Props of="RadioButton" />
+
+## RadioIconButton Props
+
+RadioIconButton forwards all unknown props to the base native `<input>` component.
+See [`<input type="checkbox">` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+for more details on which additional props that are available.
+
+<Props of="RadioIconButton" />

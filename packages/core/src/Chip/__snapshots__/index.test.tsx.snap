@@ -1,0 +1,495 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chips default 1`] = `
+.c2 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c5 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c4 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2"
+        disabled={false}
+      >
+        <span
+          className="c3"
+        >
+          test
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c4"
+      id="layer-2"
+    >
+      <div
+        className="c5"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Chips disabled 1`] = `
+.c2 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+  opacity: 0.48;
+}
+
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c5 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c4 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        className="c2"
+        disabled={true}
+      >
+        <span
+          className="c3"
+        >
+          test
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c4"
+      id="layer-6"
+    >
+      <div
+        className="c5"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Chips error 1`] = `
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c3 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c2 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 56px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(224,224,224);
+  color: rgb(41,41,41);
+  padding-left: 0;
+  border: 1px solid rgb(41,41,41);
+}
+
+.c4 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  overflow: visible;
+  color: rgb(41,41,41);
+}
+
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2"
+        disabled={false}
+      >
+        <span
+          className="c3 c4"
+          role="img"
+          size="medium"
+        >
+          <svg
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 8c.554 0 1 .446 1 1v4c0 .554-.446 1-1 1s-1-.446-1-1V9c0-.554.446-1 1-1zm1 8a1 1 0 01-1 1 1 1 0 01-1-1 1 1 0 011-1 1 1 0 011 1"
+            />
+          </svg>
+        </span>
+        <span
+          className="c5"
+        >
+          test
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-4"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Chips with icon 1`] = `
+.c3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 16px;
+  width: 16px;
+}
+
+.c3 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c2 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c4 {
+  width: 24px;
+  color: rgb(122,122,122);
+  margin-left: -8px;
+}
+
+.c7 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c6 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <div
+        className="c2"
+        disabled={false}
+      >
+        <span
+          className="c3 c4"
+          role="img"
+          size="small"
+        >
+          <svg
+            height="1em"
+            viewBox="0 0 24 24"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z"
+            />
+          </svg>
+        </span>
+        <span
+          className="c5"
+        >
+          with icon
+        </span>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c6"
+      id="layer-8"
+    >
+      <div
+        className="c7"
+      />
+    </div>
+  </div>
+</div>
+`;

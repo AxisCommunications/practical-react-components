@@ -1,0 +1,339 @@
+export const meta = {
+  name: 'Content',
+  route: '/components/content',
+  menu: 'Components',
+}
+
+import { useState } from 'react'
+import {
+  TextBlock,
+  SpaceBlock,
+  ContentDivider,
+  FormSection,
+  ContentListItem,
+  ContentListItemWithHover,
+  TextInputField,
+  Card,
+  CardContent,
+  Divider,
+  Typography,
+  Switch,
+  RadioButton,
+} from 'practical-react-components-core'
+
+import { smallParagraphFixture } from '../fixtures/paragraphs'
+
+# Content
+
+## TextBlock
+
+TextBlock is 40px height block with default Typography if you don't use caption property.
+If you use TextBlock with caption property, you get lighter color caption with default Typography
+under text and the block get 8px padding both top and bottom.
+
+### Demo
+
+<>
+  <TextBlock text="Text block" />
+  <TextBlock text="Text block" caption="This is caption" />
+</>
+
+### Basic usage
+
+```typescript type=live
+<>
+  <TextBlock text="Text block" />
+  <TextBlock text="Text block" caption="This is caption" />
+</>
+```
+
+## SpaceBlock
+
+SpaceBlock is div element for adjusting vertically space between elements.
+
+### Demo
+
+<>
+  Cupcake ipsum dolor. Sit amet caramels jelly beans cake.
+  <SpaceBlock variant={8} />
+  Cupcake ipsum dolor. Sit amet caramels jelly beans cake.
+  <SpaceBlock variant={16} />
+  Cupcake ipsum dolor. Sit amet caramels jelly beans cake.
+  <SpaceBlock variant={24} />
+  Cupcake ipsum dolor. Sit amet caramels jelly beans cake.
+  <SpaceBlock variant={32} />
+  Cupcake ipsum dolor. Sit amet caramels jelly beans cake.
+</>
+
+### Basic usage
+
+```typescript type=live
+<>
+  Cupcake ipsum dolor. Sit amet caramels jelly beans cake.
+  <SpaceBlock variant={8} />
+  Cupcake ipsum dolor. Sit amet caramels jelly beans cake.
+  <SpaceBlock variant={16} />
+  Cupcake ipsum dolor. Sit amet caramels jelly beans cake.
+  <SpaceBlock variant={24} />
+  Cupcake ipsum dolor. Sit amet caramels jelly beans cake.
+  <SpaceBlock variant={32} />
+  Cupcake ipsum dolor. Sit amet caramels jelly beans cake.
+</>
+```
+
+## ContentDivider
+
+It shows an edge to edge divider line in a content (in Card or in Dialog)
+
+### Demo
+
+<Card>
+  <CardContent>
+    <ContentDivider />
+  </CardContent>
+</Card>
+
+### Basic usage
+
+```typescript type=live
+<Card>
+  <CardContent>
+    <ContentDivider />
+    <SpaceBlock variant={32} />
+    // Use usual Divider if you need space to the side
+    <SpaceBlock variant={16} />
+    <Divider />
+  </CardContent>
+</Card>
+```
+
+## FormSection
+
+FormSection is a wrapper that gives proper height (40px) title (optional) and
+proper space (8px) between blocks to all its children.
+It is possible to use only title if you don't give children.
+
+### Demo
+
+<>
+  <FormSection title="FormSection group title">
+    <TextInputField
+      label="Text input field label"
+      value=""
+      onValueChange={() => {}}
+      placeholder="Placeholder"
+      width="large"
+    />
+    <TextInputField
+      label="Text input field label"
+      value=""
+      onValueChange={() => {}}
+      placeholder="Placeholder"
+      width="large"
+    />
+  </FormSection>
+</>
+
+### Basic usage
+
+```typescript type=live
+<>
+  <FormSection title="You can also use only title" />
+  <FormSection title="FormSection group title">
+    <TextInputField
+      label="Text input field label"
+      value=""
+      onValueChange={() => {}}
+      placeholder="Placeholder"
+      width="large"
+    />
+    <TextInputField
+      label="Text input field label"
+      value=""
+      onValueChange={() => {}}
+      placeholder="Placeholder"
+      width="large"
+    />
+  </FormSection>
+</>
+```
+
+## ContentListItem
+
+List item for a content (in Card or in Dialog).
+You can choose height between medium (40px) and large (48px).
+Default is medium.
+
+### Demo
+
+<Card>
+  <CardContent>
+    <ContentListItem>
+      <Typography>Medium content list item</Typography>
+      <Switch value={false} onChange={() => {}} />
+    </ContentListItem>
+    <ContentDivider />
+    <ContentListItem listHeight="large">
+      <Typography>Large content list item</Typography>
+      <Switch value={false} onChange={() => {}} />
+    </ContentListItem>
+    <ContentDivider />
+    <ContentListItem>
+      <RadioButton
+        name=""
+        value="me"
+        label="Content list item"
+        onValueChange={() => {}}
+        partial={false}
+        checked={true}
+      />
+    </ContentListItem>
+  </CardContent>
+</Card>
+
+### Basic usage
+
+```typescript type=live
+<Card>
+  <CardContent>
+    <ContentListItem>
+      <Typography>Medium content list item</Typography>
+      <Switch value={false} onChange={() => {}} />
+    </ContentListItem>
+    <ContentDivider />
+    <ContentListItem listHeight="large">
+      <Typography>Large content list item</Typography>
+      <Switch value={false} onChange={() => {}} />
+    </ContentListItem>
+    <ContentDivider />
+    <ContentListItem>
+      <RadioButton
+        name=""
+        value="me"
+        label="Content list item"
+        onValueChange={() => {}}
+        partial={false}
+        checked={true}
+      />
+    </ContentListItem>
+  </CardContent>
+</Card>
+```
+
+## ContentListItemWithHover
+
+List item for special interaction with RadioButton.
+The RadioButton gets hover effect even if the mouse is on the second content.
+
+### Demo
+
+export const RadioSelectableListItem = () => {
+  const [hovered, setHovered] = useState(false)
+  return (
+    <ContentListItemWithHover onHover={setHovered}>
+      <RadioButton
+        name=""
+        value="me"
+        label="Content list item with hover"
+        onValueChange={() => {}}
+        partial={false}
+        checked={true}
+        hovered={hovered}
+      />
+      <Typography>Second content</Typography>
+    </ContentListItemWithHover>
+  )
+}
+
+<Card>
+  <CardContent>
+    <RadioSelectableListItem />
+    <ContentDivider />
+    <ContentListItem>
+      <RadioButton
+        name=""
+        value="me"
+        label="Content list item"
+        onValueChange={() => {}}
+        partial={false}
+        checked={true}
+      />
+      <Typography>Second content</Typography>
+    </ContentListItem>
+  </CardContent>
+</Card>
+
+### Basic usage
+
+```typescript
+export const MyComponent = () => {
+  const [hovered, setHovered] = useState(false)
+
+  return (
+    <Card>
+      <CardContent>
+        <ContentListItemWithHover onHover={setHovered}>
+          <RadioButton
+            name=""
+            value="me"
+            label="Content list item with hover"
+            onValueChange={() => {}}
+            partial={false}
+            checked={true}
+            hovered={hovered}
+          />
+          <Typography>Second content</Typography>
+        </ContentListItemWithHover>
+      </CardContent>
+    </Card>
+  )
+}
+```
+
+## TextBlock Props
+
+TextBlock forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="TextBlock" />
+
+## SpaceBlock Props
+
+SpaceBlock forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="SpaceBlock" />
+
+## ContentDivider
+
+ContentDivider forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="ContentDivider" />
+
+## FormSection Props
+
+FormSection forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="FormSection" />
+
+## ContentListItem Props
+
+ContentListItem forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="ContentListItem" />
+
+## ContentListItemWithHover Props
+
+ContentListItemWithHover forwards all unknown props to the base native `<div>` component. See
+[`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="ContentListItemWithHover" />

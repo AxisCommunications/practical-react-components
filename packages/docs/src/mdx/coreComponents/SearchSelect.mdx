@@ -1,0 +1,119 @@
+export const meta = {
+  name: 'SearchSelect',
+  route: '/components/searchSelect',
+  menu: 'Components',
+}
+
+import styled from 'styled-components'
+import { useState } from 'react'
+import { SearchSelectField } from 'practical-react-components-core'
+
+# SearchSelect
+
+SearchSelect component allows the user to search and filter values in the dropdown list
+by user's input.
+
+## Demo
+
+export const tzOptions = [
+  { value: 'Africa/Abidjan', label: 'Africa/Abidjan' },
+  { value: 'Africa/Accra', label: 'Africa/Accra' },
+  { value: 'Africa/Addis_Ababa', label: 'Africa/Addis_Ababa' },
+  { value: 'Africa/Algiers', label: 'Africa/Algiers' },
+  { value: 'Africa/Asmara', label: 'Africa/Asmara' },
+  { value: 'Africa/Asmera', label: 'Africa/Asmera' },
+  { value: 'Africa/Bamako', label: 'Africa/Bamako' },
+  { value: 'Africa/Bangui', label: 'Africa/Bangui' },
+  { value: 'Africa/Banjul', label: 'Africa/Banjul' },
+  { value: 'Africa/Bissau', label: 'Africa/Bissau' },
+]
+
+export const DemoComponent = ({}) => {
+  const [selectedValue, setSelectedValue] = useState('')
+  return (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(2, 1fr)',
+        alignItems: 'flex-start',
+        gridGap: '16px',
+        maxWidth: '600px',
+      }}
+    >
+      <SearchSelectField
+        label="Default: Filled variant"
+        options={tzOptions}
+        placeholder="Select..."
+        width="medium"
+        value={selectedValue}
+        onChange={setSelectedValue}
+        noOptionsLabel="No options"
+      />
+      <SearchSelectField
+        label="Framed variant (with check icon as marker)"
+        options={tzOptions}
+        placeholder="Select..."
+        width="medium"
+        variant="framed"
+        value={selectedValue}
+        onChange={setSelectedValue}
+        noOptionsLabel="No options"
+        selectMarker="check"
+      />
+      <SearchSelectField
+        label="Transparent variant"
+        options={tzOptions}
+        placeholder="Select..."
+        width="medium"
+        variant="transparent"
+        value={selectedValue}
+        onChange={setSelectedValue}
+        noOptionsLabel="No options"
+      />
+    </div>
+  )
+}
+
+<DemoComponent />
+
+## Usage in code
+
+```typescript
+import React, { useState } from 'react'
+import { SearchSelect } from 'practical-react-components-core'
+
+const MyComponent = () => {
+  const tzOptions = [
+    { value: 'Africa/Abidjan', label: 'Africa + Abidjan' },
+    { value: 'Africa/Accra', label: 'Africa + Accra' },
+    { value: 'Africa/Addis_Ababa', label: 'Africa + Addis_Ababa' },
+    { value: 'Africa/Algiers', label: 'Africa + Algiers' },
+    { value: 'Africa/Asmara', label: 'Africa + Asmara' },
+    { value: 'Africa/Asmera', label: 'Africa + Asmera' },
+    { value: 'Africa/Bamako', label: 'Africa + Bamako' },
+    { value: 'Africa/Bangui', label: 'Africa + Bangui' },
+    { value: 'Africa/Banjul', label: 'Africa + Banjul' },
+    { value: 'Africa/Bissau', label: 'Africa + Bissau' },
+  ]
+  const [selected, setSelected] = useState([])
+
+  return (
+    <SearchSelect
+      options={tzOptions}
+      placeholder="Select..."
+      width="small"
+      value={selected}
+      onChange={setSelected}
+      noOptionsLabel="No options"
+    />
+  )
+}
+```
+
+## Props
+
+SearchSelect forwards all props to `Select`.
+See [`Select props`](#components/select)
+for more details on which additional props that are available.
+
+<Props of="SearchSelect" />

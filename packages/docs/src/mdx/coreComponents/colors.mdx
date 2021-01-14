@@ -1,0 +1,122 @@
+export const meta = {
+  name: 'Palette',
+  route: '/styles/palette',
+  menu: 'Styles',
+}
+
+import { useCallback } from 'react'
+import styled from 'styled-components'
+import {
+  basePalette,
+  spacing,
+  shape,
+  Typography,
+  Tooltip,
+  getHexValue,
+} from 'practical-react-components-core'
+
+# Colors
+
+You can refer to a color from the theme using `${({ theme }) => theme.color.<COLOR_NAME>`.
+
+## Base palette
+
+export const SpacingRow = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: ${spacing.medium};
+`
+
+export const ColorWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`
+
+export const ColorRow = styled(SpacingRow)`
+  border: 1px solid lightgray;
+  padding: ${spacing.small};
+  flex-direction: column;
+  border-radius: ${shape.radius.medium};
+`
+
+export const ColorName = styled(Typography)`
+  padding: 0 ${spacing.medium};
+  width: 130px;
+  text-align: center;
+  word-break: break-word;
+`
+
+export const ColorBox = styled.div`
+  background-color: ${({ color }) => color};
+  cursor: pointer;
+  height: 150px;
+  width: 140px;
+  border-top-left-radius: ${shape.radius.medium};
+  border-top-right-radius: ${shape.radius.medium};
+`
+
+export const PaletteContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+
+export const copyToClipBoard = async color => {
+  await window.navigator.clipboard.writeText(color)
+}
+
+export const PaletteColor = ({ colorName, colorValue }) => {
+  const onClick = useCallback(() => {
+    copyToClipBoard(colorValue()).catch(err => {
+      console.error(err)
+    })
+  }, [colorValue])
+  return (
+    <ColorRow key={colorName}>
+      <Tooltip text="Click to copy rgba-value">
+        <ColorBox color={colorValue()} onClick={onClick} />
+      </Tooltip>
+      <ColorName variant="default-text">{colorName}</ColorName>
+      <ColorName variant="explanatory-text">
+        {getHexValue(colorValue())}
+      </ColorName>
+    </ColorRow>
+  )
+}
+
+export const Palette = () => {
+  console.log(basePalette)
+  return (
+    <PaletteContainer>
+      {Object.entries(basePalette)
+        // Filter out transparent "color"
+        .filter(([colorName]) => colorName !== 'transparent')
+        .map(([colorName, colorValue]) => (
+          <PaletteColor
+            key={colorName}
+            colorName={colorName}
+            colorValue={colorValue}
+          />
+        ))}
+    </PaletteContainer>
+  )
+}
+
+<Palette />
+
+## Usage in code
+
+```typescript
+import styled from 'styled-components'
+
+const Box = styled.div`
+  background-color: ${({ theme }) => theme.color.background00()};
+  color: ${({ theme }) => theme.color.text00()};
+`
+```
+
+## Best practices for using color
+
+- Don't refer to hex values in your code (e.g. `#DAEAFF`) but rather use the
+  colors via the theme (e.g. `theme.color.textPrimary).

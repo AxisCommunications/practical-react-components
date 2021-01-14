@@ -1,0 +1,1010 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stepper Stepper 1`] = `
+.c7 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c16 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c20 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c19 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c13 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c13::-moz-focus-inner {
+  border: 0;
+}
+
+.c13:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c13:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c13:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c13:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c14 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c15 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c2 {
+  background-color: rgb(255,255,255);
+  color: rgb(41,41,41);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+  overflow: hidden;
+  padding: 0;
+}
+
+.c4 {
+  font-size: 13px;
+  font-weight: 400;
+  padding-top: 24px;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgb(82,82,82);
+  border-radius: 50%;
+  color: rgb(255,255,255);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: rgb(255,255,255);
+  font-size: 12px;
+  height: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: -12px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 20px;
+}
+
+.c9 {
+  height: calc(100% - 24px);
+  top: 22px;
+  width: 1px;
+  position: absolute;
+  background-color: rgb(82,82,82);
+  left: -2px;
+}
+
+.c17 {
+  height: 8px;
+  top: 22px;
+  width: 1px;
+  position: absolute;
+  background-color: rgb(82,82,82);
+  left: -2px;
+}
+
+.c5 {
+  position: relative;
+  margin-top: -16px;
+}
+
+.c10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 24px;
+  padding-left: 18px;
+}
+
+.c18 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgb(122,122,122);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 24px;
+  padding-left: 18px;
+}
+
+.c11 {
+  padding: 8px 0 32px 20px;
+}
+
+.c12 {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-gap: 8px;
+  padding: 4px 0 20px 20px;
+}
+
+.c8 {
+  position: relative;
+  min-height: 32px;
+  margin-bottom: -8px;
+}
+
+.c3 {
+  padding: 16px 24px 16px 36px;
+  box-shadow: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-1"
+    >
+      <div
+        className="c2 c3"
+      >
+        <div
+          className="c4"
+        >
+          <div
+            className="c5"
+          >
+            <span
+              className="c6"
+              onClick={[Function]}
+            >
+              <p
+                className="c7"
+              >
+                1
+              </p>
+            </span>
+          </div>
+          <div
+            className="c8"
+          >
+            <span
+              className="c9"
+            />
+            <p
+              className="c7 c10"
+            >
+              Step 1 Title
+            </p>
+            <div
+              className="c11"
+            >
+              <div />
+            </div>
+            <div
+              className="c12"
+            >
+              <button
+                className="c13"
+                disabled={false}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                type="button"
+              >
+                <span
+                  className="c14 "
+                >
+                  <span
+                    className="c15 "
+                  >
+                    <span
+                      className="c16"
+                    >
+                      Next
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <div
+            className="c5"
+          >
+            <span
+              className="c6"
+              onClick={[Function]}
+            >
+              <p
+                className="c7"
+              >
+                2
+              </p>
+            </span>
+          </div>
+          <div
+            className="c8"
+          >
+            <span
+              className="c17"
+            />
+            <p
+              className="c7 c18"
+            >
+              Step 2 Title
+            </p>
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <div
+            className="c5"
+          >
+            <span
+              className="c6"
+              onClick={[Function]}
+            >
+              <p
+                className="c7"
+              >
+                3
+              </p>
+            </span>
+          </div>
+          <div
+            className="c8"
+          >
+            <p
+              className="c7 c18"
+            >
+              Step 3 Title (done)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c19"
+      id="layer-2"
+    >
+      <div
+        className="c20"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Stepper Stepper 2`] = `
+.c7 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c16 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c19 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c18 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c13 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c13::-moz-focus-inner {
+  border: 0;
+}
+
+.c13:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c13:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c13:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c13:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c14 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c15 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c2 {
+  background-color: rgb(255,255,255);
+  color: rgb(41,41,41);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+  overflow: hidden;
+  padding: 0;
+}
+
+.c4 {
+  font-size: 13px;
+  font-weight: 400;
+  padding-top: 24px;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgb(82,82,82);
+  border-radius: 50%;
+  color: rgb(255,255,255);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: rgb(255,255,255);
+  font-size: 12px;
+  height: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: -12px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 20px;
+}
+
+.c9 {
+  height: calc(100% - 24px);
+  top: 22px;
+  width: 1px;
+  position: absolute;
+  background-color: rgb(82,82,82);
+  left: -2px;
+}
+
+.c5 {
+  position: relative;
+  margin-top: -16px;
+}
+
+.c10 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 24px;
+  padding-left: 18px;
+}
+
+.c17 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgb(122,122,122);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 24px;
+  padding-left: 18px;
+}
+
+.c11 {
+  padding: 8px 0 32px 20px;
+}
+
+.c12 {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-gap: 8px;
+  padding: 4px 0 20px 20px;
+}
+
+.c8 {
+  position: relative;
+  min-height: 32px;
+  margin-bottom: -8px;
+}
+
+.c3 {
+  padding: 16px 24px 16px 36px;
+  box-shadow: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <div
+        className="c2 c3"
+      >
+        <div
+          className="c4"
+        >
+          <div
+            className="c5"
+          >
+            <span
+              className="c6"
+              onClick={[Function]}
+            >
+              <p
+                className="c7"
+              >
+                1
+              </p>
+            </span>
+          </div>
+          <div
+            className="c8"
+          >
+            <span
+              className="c9"
+            />
+            <p
+              className="c7 c10"
+            >
+              Step 1 Title
+            </p>
+            <div
+              className="c11"
+            >
+              <div />
+            </div>
+            <div
+              className="c12"
+            >
+              <button
+                className="c13"
+                disabled={false}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                type="button"
+              >
+                <span
+                  className="c14 "
+                >
+                  <span
+                    className="c15 "
+                  >
+                    <span
+                      className="c16"
+                    >
+                      Next
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          className="c4"
+        >
+          <div
+            className="c5"
+          >
+            <span
+              className="c6"
+              onClick={[Function]}
+            >
+              <p
+                className="c7"
+              >
+                2
+              </p>
+            </span>
+          </div>
+          <div
+            className="c8"
+          >
+            <p
+              className="c7 c17"
+            >
+              Step 3 Title (done)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c18"
+      id="layer-4"
+    >
+      <div
+        className="c19"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Stepper Stepper 3`] = `
+.c7 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c15 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c17 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c16 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c12 {
+  white-space: nowrap;
+  max-width: 100%;
+  min-width: 83px;
+  height: 32px;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  padding: 0 16px;
+  color: rgb(255,255,255);
+  fill: rgb(255,255,255);
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c12::-moz-focus-inner {
+  border: 0;
+}
+
+.c12:hover {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+}
+
+.c12:focus {
+  background-color: rgb(82,82,82);
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
+  border: 2px solid rgb(61,61,61);
+}
+
+.c12:active {
+  background-color: rgb(61,61,61);
+  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+}
+
+.c12:disabled {
+  background-color: rgb(82,82,82);
+}
+
+.c13 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c14 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c2 {
+  background-color: rgb(255,255,255);
+  color: rgb(41,41,41);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.16);
+  overflow: hidden;
+  padding: 0;
+}
+
+.c4 {
+  font-size: 13px;
+  font-weight: 400;
+  padding-top: 24px;
+}
+
+.c6 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgb(82,82,82);
+  border-radius: 50%;
+  color: rgb(255,255,255);
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  fill: rgb(255,255,255);
+  font-size: 12px;
+  height: 20px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  left: -12px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 20px;
+}
+
+.c5 {
+  position: relative;
+  margin-top: -16px;
+}
+
+.c9 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 24px;
+  padding-left: 18px;
+}
+
+.c10 {
+  padding: 8px 0 32px 20px;
+}
+
+.c11 {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  grid-gap: 8px;
+  padding: 4px 0 20px 20px;
+}
+
+.c8 {
+  position: relative;
+  min-height: 32px;
+  margin-bottom: -8px;
+}
+
+.c3 {
+  padding: 16px 24px 16px 36px;
+  box-shadow: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-5"
+    >
+      <div
+        className="c2 c3"
+      >
+        <div
+          className="c4"
+        >
+          <div
+            className="c5"
+          >
+            <span
+              className="c6"
+              onClick={[Function]}
+            >
+              <p
+                className="c7"
+              >
+                1
+              </p>
+            </span>
+          </div>
+          <div
+            className="c8"
+          >
+            <p
+              className="c7 c9"
+            >
+              Step 1 Title
+            </p>
+            <div
+              className="c10"
+            >
+              <div />
+            </div>
+            <div
+              className="c11"
+            >
+              <button
+                className="c12"
+                disabled={false}
+                onClick={[Function]}
+                onFocus={[Function]}
+                onPointerDown={[Function]}
+                onPointerUp={[Function]}
+                type="button"
+              >
+                <span
+                  className="c13 "
+                >
+                  <span
+                    className="c14 "
+                  >
+                    <span
+                      className="c15"
+                    >
+                      Install
+                    </span>
+                  </span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c16"
+      id="layer-6"
+    >
+      <div
+        className="c17"
+      />
+    </div>
+  </div>
+</div>
+`;
