@@ -18,7 +18,7 @@ context('ToggleButtonGroup', () => {
       .should(
         'have.css',
         'background-color',
-        toggled === true ? 'rgb(67, 153, 230)' : 'rgb(252, 252, 252)'
+        toggled === true ? 'rgb(82, 82, 82)' : 'rgb(255, 255, 255)'
       )
   }
 
