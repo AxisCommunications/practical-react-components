@@ -101,7 +101,7 @@ context('Select', () => {
     cy.get(popOverEl)
       .find(popOverSelectItem)
       .eq(1)
-      .should('have.css', 'background-color', 'rgb(242, 242, 242)')
+      .should('have.css', 'background-color', 'rgb(245, 245, 245)')
     cy.get('[data-cy=selectTest]').click()
   })
 
@@ -302,6 +302,6 @@ context('Select', () => {
     cy.get(popOverEl)
       .find(popOverSelectItem)
       .eq(1)
-      .should('have.css', 'background-color', 'rgb(242, 242, 242)')
+      .should('have.css', 'background-color', 'rgb(245, 245, 245)')
   })
 })
