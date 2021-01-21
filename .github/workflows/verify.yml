@@ -20,6 +20,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Setup node
         uses: actions/setup-node@v2
@@ -33,7 +35,7 @@ jobs:
 
       - name: Check commit message
         if: ${{ github.event_name == 'pull_request' }}
-        run: yarn commitlint ${{ github.context.payload.before }}
+        run: yarn commitlint ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}
 
       - name: Linting & Unit testing
         run: |
