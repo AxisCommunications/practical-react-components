@@ -6,7 +6,7 @@ export const meta = {
 
 import { useState } from 'react'
 import { useBoolean } from 'react-hooks-shareable'
-import { Button, Modal } from 'practical-react-components-core'
+import { Button, Modal, ModalBackdrop } from 'practical-react-components-core'
 
 # Modal
 
@@ -59,8 +59,14 @@ export const DemoComponent = () => {
 
 ## Props
 
-Modal forwards all unknown props to the base native `<div>` component. See
+ModalBackdrop forwards all unknown props to the base native `<div>` component. See
 [`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
+details on which additional props that are available.
+
+<Props of="ModalBackdrop" />
+
+Modal forwards all props to `ModalBackdrop`.
+See [`Dialog props`](#components/modal) below for more
 details on which additional props that are available.
 
 <Props of="Modal" />

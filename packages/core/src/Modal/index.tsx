@@ -75,6 +75,22 @@ const FocusWrapper = styled.div`
   outline: 0px;
 `
 
+export interface ModalBackdropProps extends BaseProps {
+  /**
+   * `class` to be passed to the component.
+   */
+  readonly className?: BaseProps['className']
+}
+
+export const ModalBackdrop: React.FC<ModalBackdropProps> = ({
+  children,
+  ...props
+}) => (
+  <Layer>
+    <ModalContainer {...props}>{children}</ModalContainer>
+  </Layer>
+)
+
 export interface IModalProps extends BaseProps {
   /**
    * `class` to be passed to the component.
@@ -125,21 +141,19 @@ export const Modal: React.FC<IModalProps> = ({
   }
 
   return (
-    <Layer>
-      <ModalContainer {...props}>
-        {onClose !== undefined ? <CloseOnEscape onClose={onClose} /> : null}
-        <FocusTrap
-          focusTrapOptions={{
-            initialFocus: focusDialog ? `#${id}` : undefined,
-            escapeDeactivates: false, // We use our own stack
-            clickOutsideDeactivates: true, // 😱😱😱 We need this to prevent click capturing
-          }}
-        >
-          <FocusWrapper tabIndex={-1} id={id}>
-            {children}
-          </FocusWrapper>
-        </FocusTrap>
-      </ModalContainer>
-    </Layer>
+    <ModalBackdrop {...props}>
+      {onClose !== undefined ? <CloseOnEscape onClose={onClose} /> : null}
+      <FocusTrap
+        focusTrapOptions={{
+          initialFocus: focusDialog ? `#${id}` : undefined,
+          escapeDeactivates: false, // We use our own stack
+          clickOutsideDeactivates: true, // 😱😱😱 We need this to prevent click capturing
+        }}
+      >
+        <FocusWrapper tabIndex={-1} id={id}>
+          {children}
+        </FocusWrapper>
+      </FocusTrap>
+    </ModalBackdrop>
   )
 }
