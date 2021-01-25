@@ -115,3 +115,29 @@ jobs:
           yarn build:docs --env base="/practical-react-components/" --env prod="true"
           git diff --exit-code
           tar zcvf docs-static.tgz -C packages/docs dist
+      - name: Archive docs files
+        uses: actions/upload-artifact@v2
+        with:
+          name: docs-static
+          path: docs-static.tgz
+
+  deploy-docs:
+    needs: [docs, ui-tests]
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Download docs files
+        uses: actions/download-artifact@v2
+        with:
+          name: docs-static
+      - name: Extract docs files
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          tar zxvf docs-static.tgz
+      - name: Deploy docs 🚀
+        if: ${{ github.event_name != 'pull_request' }}
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: docs # The branch the action should deploy to.
+          FOLDER: dist # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
