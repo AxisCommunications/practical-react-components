@@ -299,5 +299,10 @@
     "name": "add-circle.svg",
     "version": "4.0.0",
     "type": "basedOn"
+  },
+  {
+    "name": "video-settings.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
   }
 ]
