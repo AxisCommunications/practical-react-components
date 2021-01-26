@@ -8,8 +8,7 @@ To install the core package, run:
 yarn add practical-react-components-core
 ```
 
-This contains all the core components. All the icons are located in a separate
-[practical-react-components-icons](https://www.npmjs.com/package/practical-react-components-icons) package.
+This contains all the core components.
 
 ## Dependencies
 
@@ -21,13 +20,6 @@ following packages are installed:
 yarn add styled-components
 yarn add react-transition-group
 yarn add pepjs
-```
-
-If you are using [practical-react-components-formik](https://www.npmjs.com/package/practical-react-components-formik) you also need to make sure
-the following packages are installed:
-
-```shell
-yarn add formik
 ```
 
 ### Typescript
