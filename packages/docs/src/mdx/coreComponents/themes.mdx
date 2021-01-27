@@ -7,7 +7,7 @@ export const meta = {
 import { useCallback } from 'react'
 import styled from 'styled-components'
 import {
-  basePalette,
+  palette,
   spacing,
   shape,
   Typography,
@@ -85,7 +85,7 @@ export const PaletteColor = ({ colorName, colorValue }) => {
 
 export const Theme = ({ theme }) => {
   const things = Object.entries(theme.color).map(([slot, color]) => {
-    const [colorName, colorValue] = Object.entries(basePalette).find(
+    const [colorName, colorValue] = Object.entries(palette).find(
       ([, colorValue]) => color === colorValue
     )
     return [slot, colorName, colorValue]

@@ -7,7 +7,7 @@ export const meta = {
 import { useCallback } from 'react'
 import styled from 'styled-components'
 import {
-  basePalette,
+  palette,
   spacing,
   shape,
   Typography,
@@ -86,10 +86,9 @@ export const PaletteColor = ({ colorName, colorValue }) => {
 }
 
 export const Palette = () => {
-  console.log(basePalette)
   return (
     <PaletteContainer>
-      {Object.entries(basePalette)
+      {Object.entries(palette)
         // Filter out transparent "color"
         .filter(([colorName]) => colorName !== 'transparent')
         .map(([colorName, colorValue]) => (
