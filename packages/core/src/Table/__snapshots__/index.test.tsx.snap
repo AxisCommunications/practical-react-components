@@ -69,7 +69,7 @@ exports[`Tables Table (full) 1`] = `
 }
 
 .c8:hover .c9 {
-  background-color: rgba(82,82,82,0.16);
+  background-color: rgba(103,58,183,0.16);
   -webkit-transform: scale(1.77);
   -ms-transform: scale(1.77);
   transform: scale(1.77);
@@ -80,7 +80,7 @@ exports[`Tables Table (full) 1`] = `
 }
 
 .c8:focus-within .c9 {
-  background-color: rgba(82,82,82,0.16);
+  background-color: rgba(103,58,183,0.16);
   -webkit-transform: scale(1.77);
   -ms-transform: scale(1.77);
   transform: scale(1.77);
@@ -89,11 +89,11 @@ exports[`Tables Table (full) 1`] = `
 .c8:focus-within .Checkbox__CSSBlankCheckbox-sc-1pw2164-6,
 .c8:focus-within .c11,
 .c8:focus-within .Checkbox__CSSCheckboxIndeterminate-sc-1pw2164-5 {
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
 }
 
 .c8:active .c9 {
-  background-color: rgba(82,82,82,0.24);
+  background-color: rgba(103,58,183,0.24);
   -webkit-transform: scale(1.88);
   -ms-transform: scale(1.88);
   transform: scale(1.88);
@@ -101,7 +101,7 @@ exports[`Tables Table (full) 1`] = `
 
 .c8:active .c11,
 .c8:active .Checkbox__CSSCheckboxIndeterminate-sc-1pw2164-5 {
-  background-color: rgb(61,61,61);
+  background-color: rgb(69,39,160);
 }
 
 .c14 {
@@ -139,7 +139,7 @@ exports[`Tables Table (full) 1`] = `
 }
 
 .c13 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c13::after {
@@ -205,7 +205,7 @@ exports[`Tables Table (full) 1`] = `
   z-index: 1;
   grid-column-start: content-start;
   grid-column-end: end;
-  color: rgb(61,61,61);
+  color: rgb(69,39,160);
 }
 
 .c4 {

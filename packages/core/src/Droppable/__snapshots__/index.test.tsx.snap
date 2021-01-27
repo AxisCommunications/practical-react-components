@@ -46,7 +46,7 @@ exports[`Droppable Droppable 1`] = `
   align-self: center;
   display: block;
   color: rgb(255,255,255);
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   padding: 4px;
   border-radius: 2px;
   margin-bottom: 8px;
@@ -238,7 +238,7 @@ exports[`Droppable Droppable 2`] = `
   align-self: center;
   display: block;
   color: rgb(255,255,255);
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   padding: 4px;
   border-radius: 2px;
   margin-bottom: 8px;

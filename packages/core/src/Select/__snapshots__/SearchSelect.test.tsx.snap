@@ -115,7 +115,7 @@ exports[`Select Direction 1`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(240,240,240);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   padding: 0;
 }
 
@@ -340,7 +340,7 @@ exports[`Select Direction 2`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(240,240,240);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   padding: 0;
 }
 
@@ -565,7 +565,7 @@ exports[`Select Other 1`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(240,240,240);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   padding: 0;
 }
 
@@ -578,8 +578,8 @@ exports[`Select Other 1`] = `
 .c3,
 .c3:hover,
 .c3:focus {
-  background-color: rgb(224,224,224);
-  border-color: rgb(41,41,41);
+  background-color: rgb(255,235,238);
+  border-color: rgb(211,47,47);
 }
 
 .c6 {
@@ -803,7 +803,7 @@ exports[`Select Other 2`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(240,240,240);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   padding: 0;
 }
 
@@ -1028,7 +1028,7 @@ exports[`Select SelectMarker 1`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(240,240,240);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   padding: 0;
 }
 
@@ -1253,7 +1253,7 @@ exports[`Select SelectMarker 2`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(240,240,240);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   padding: 0;
 }
 
@@ -1478,7 +1478,7 @@ exports[`Select Width 1`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(240,240,240);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   padding: 0;
 }
 
@@ -1703,7 +1703,7 @@ exports[`Select Width 2`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(240,240,240);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   padding: 0;
 }
 
@@ -1928,7 +1928,7 @@ exports[`Select Width 3`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(240,240,240);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   padding: 0;
 }
 

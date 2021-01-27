@@ -9,11 +9,11 @@ exports[`Link Variant 1`] = `
   font-weight: 600;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: rgb(184,184,184);
+  color: rgb(94,53,177);
 }
 
 .c2:hover {
-  color: rgb(184,184,184);
+  color: rgb(81,45,168);
 }
 
 .c2:focus {
@@ -21,7 +21,7 @@ exports[`Link Variant 1`] = `
 }
 
 .c2:active {
-  color: rgb(184,184,184);
+  color: rgb(81,45,168);
 }
 
 .c4 {
@@ -86,13 +86,13 @@ exports[`Link Variant 2`] = `
   height: auto;
   font-size: inherit;
   font-weight: 600;
-  color: rgb(184,184,184);
+  color: rgb(94,53,177);
   opacity: 0.48;
   pointer-events: none;
 }
 
 .c2:hover {
-  color: rgb(184,184,184);
+  color: rgb(81,45,168);
 }
 
 .c2:focus {
@@ -100,7 +100,7 @@ exports[`Link Variant 2`] = `
 }
 
 .c2:active {
-  color: rgb(184,184,184);
+  color: rgb(81,45,168);
 }
 
 .c4 {
@@ -167,11 +167,11 @@ exports[`Link Variant 3`] = `
   font-weight: 600;
   -webkit-text-decoration: none;
   text-decoration: none;
-  color: rgb(184,184,184);
+  color: rgb(94,53,177);
 }
 
 .c2:hover {
-  color: rgb(184,184,184);
+  color: rgb(81,45,168);
 }
 
 .c2:focus {
@@ -179,7 +179,7 @@ exports[`Link Variant 3`] = `
 }
 
 .c2:active {
-  color: rgb(184,184,184);
+  color: rgb(81,45,168);
 }
 
 .c4 {

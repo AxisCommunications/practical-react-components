@@ -27,7 +27,7 @@ exports[`ToggleButtonGroup ToggleButtonGroup 1`] = `
 
 .c3:active {
   z-index: 1;
-  box-shadow: -1px 0 0 5px rgba(82,82,82,0.24);
+  box-shadow: -1px 0 0 5px rgba(103,58,183,0.24);
   border-radius: 4px;
 }
 
@@ -84,15 +84,15 @@ exports[`ToggleButtonGroup ToggleButtonGroup 1`] = `
   transition: all 200ms;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c4:focus {
-  outline-color: rgb(61,61,61);
+  outline-color: rgb(69,39,160);
 }
 
 .c4:hover {
-  background-color: rgb(61,61,61);
+  background-color: rgb(69,39,160);
 }
 
 .c7 {
@@ -126,7 +126,7 @@ exports[`ToggleButtonGroup ToggleButtonGroup 1`] = `
 
 .c7:focus {
   background-color: rgba(204,204,204,0.16);
-  outline-color: rgb(61,61,61);
+  outline-color: rgb(69,39,160);
 }
 
 .c7:active {
@@ -369,7 +369,7 @@ exports[`ToggleButtonGroup ToggleButtonGroupWithField 1`] = `
 
 .c6:focus {
   background-color: rgba(204,204,204,0.16);
-  outline-color: rgb(61,61,61);
+  outline-color: rgb(69,39,160);
 }
 
 .c6:active {

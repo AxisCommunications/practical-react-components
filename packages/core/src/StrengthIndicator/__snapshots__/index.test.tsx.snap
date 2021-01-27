@@ -148,7 +148,7 @@ exports[`StrengthIndicator Levels 2`] = `
 }
 
 .c4 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
   height: 100%;
   width: 100%;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -276,7 +276,7 @@ exports[`StrengthIndicator Levels 3`] = `
 }
 
 .c4 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
   height: 100%;
   width: 100%;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -404,7 +404,7 @@ exports[`StrengthIndicator Levels 4`] = `
 }
 
 .c4 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(255,193,7);
   height: 100%;
   width: 100%;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -532,7 +532,7 @@ exports[`StrengthIndicator Levels 5`] = `
 }
 
 .c4 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(56,142,60);
   height: 100%;
   width: 100%;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;

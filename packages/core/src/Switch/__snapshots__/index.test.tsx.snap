@@ -80,7 +80,7 @@ exports[`Switch Off 1`] = `
 }
 
 .c2:focus-within .c9 {
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
 }
 
@@ -141,7 +141,7 @@ exports[`Switch Off 1`] = `
   -webkit-transition: width 200ms ease-in-out;
   transition: width 200ms ease-in-out;
   width: 14px;
-  background-color: rgb(122,122,122);
+  background-color: rgb(94,53,177);
 }
 
 .c11 {
@@ -152,7 +152,7 @@ exports[`Switch Off 1`] = `
   -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
-  background-color: rgb(82,82,82);
+  background-color: rgb(163,163,163);
 }
 
 .c14 {
@@ -301,7 +301,7 @@ exports[`Switch Off 2`] = `
 }
 
 .c15:focus-within .c9 {
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
 }
 
@@ -358,7 +358,7 @@ exports[`Switch Off 2`] = `
 }
 
 .c2:focus-within .c9 {
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
 }
 
@@ -419,7 +419,7 @@ exports[`Switch Off 2`] = `
   -webkit-transition: width 200ms ease-in-out;
   transition: width 200ms ease-in-out;
   width: 14px;
-  background-color: rgb(122,122,122);
+  background-color: rgb(94,53,177);
 }
 
 .c11 {
@@ -430,7 +430,7 @@ exports[`Switch Off 2`] = `
   -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
-  background-color: rgb(82,82,82);
+  background-color: rgb(163,163,163);
 }
 
 .c14 {
@@ -600,7 +600,7 @@ exports[`Switch On 1`] = `
 }
 
 .c2:focus-within .c9 {
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
 }
 
@@ -661,7 +661,7 @@ exports[`Switch On 1`] = `
   -webkit-transition: width 200ms ease-in-out;
   transition: width 200ms ease-in-out;
   width: 14px;
-  background-color: rgb(122,122,122);
+  background-color: rgb(94,53,177);
 }
 
 .c11 {
@@ -672,7 +672,7 @@ exports[`Switch On 1`] = `
   -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
-  background-color: rgb(82,82,82);
+  background-color: rgb(163,163,163);
 }
 
 .c14 {
@@ -836,7 +836,7 @@ exports[`Switch On 2`] = `
 }
 
 .c17:focus-within .c11 {
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
 }
 
@@ -893,7 +893,7 @@ exports[`Switch On 2`] = `
 }
 
 .c2:focus-within .c11 {
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   box-shadow: 0 1px 4px 0 rgba(0,0,0,0.24);
 }
 
@@ -954,7 +954,7 @@ exports[`Switch On 2`] = `
   -webkit-transition: width 200ms ease-in-out;
   transition: width 200ms ease-in-out;
   width: 14px;
-  background-color: rgb(122,122,122);
+  background-color: rgb(94,53,177);
 }
 
 .c13 {
@@ -965,7 +965,7 @@ exports[`Switch On 2`] = `
   -webkit-flex: auto;
   -ms-flex: auto;
   flex: auto;
-  background-color: rgb(82,82,82);
+  background-color: rgb(163,163,163);
 }
 
 .c16 {

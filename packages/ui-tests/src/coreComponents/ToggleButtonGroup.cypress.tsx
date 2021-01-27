@@ -29,11 +29,19 @@ const Test = () => {
       options={[
         {
           id: 't1',
-          content: <Typography>24</Typography>,
+          content: (
+            <Typography>
+              24{values.includes('t1') ? ' (Selected)' : ''}
+            </Typography>
+          ),
         },
         {
           id: 't2',
-          content: <Typography>Disabled</Typography>,
+          content: (
+            <Typography>
+              Disabled{values.includes('t2') ? ' (Selected)' : ''}
+            </Typography>
+          ),
           disabled: true,
         },
       ]}

@@ -1,4 +1,10 @@
-import { basePalette, CSSColor } from './color'
+import {
+  palette,
+  CSSColor,
+  ColorName,
+  ColorBaseName,
+  SimpleColorBaseName,
+} from './color'
 
 /**
  * Interfaces
@@ -156,45 +162,57 @@ export const font: IFont = {
   },
 }
 
-export const defaultTheme: ITheme = {
+// The type guards `as ColorName` should not be needed with TypeScript 4.2.0,
+// however, because of https://github.com/yarnpkg/berry/issues/2384 we cannot
+// upgrade to 4.2.0-beta yet.
+// FIXME: remove `as ColorName` type guards when TypeScript 4.2 is used.
+const generateDefaultColors = (
+  color: ColorBaseName | SimpleColorBaseName
+): IColor => {
+  return {
+    text00: palette.white,
+    text01: palette.grey16,
+    text02: palette.grey24,
+    text03: palette.grey32,
+    text04: palette.grey40,
+    text05: palette.grey48,
+    text06: palette.grey16,
+    textLink: palette[`${color}600` as ColorName],
+    textLinkHover: palette[`${color}700` as ColorName],
+    textPrimary: palette[`${color}800` as ColorName],
+    textError: palette.red700,
+    background: palette.white,
+    background00: palette.white,
+    background01: palette.grey94,
+    background02: palette.grey96,
+    background03: palette.grey98,
+    background04: palette.grey98,
+    background05: palette.white,
+    backgroundPrimary: palette.grey96,
+    backgroundError: palette.red50,
+    element01: palette.grey40,
+    element10: palette.grey98,
+    element11: palette.grey80,
+    element12: palette.grey90,
+    element13: palette.grey72,
+    element14: palette.grey64,
+    element15: palette.grey98,
+    element16: palette.grey98,
+    elementPrimary: palette[`${color}500` as ColorName],
+    elementHalfPrimary: palette[`${color}600` as ColorName],
+    elementError: palette.red700,
+    elementSuccess: palette.green700,
+    elementWarning: palette.amber500,
+    elementAccent: palette[`${color}500` as ColorName],
+    elementBorder: palette.transparent,
+  }
+}
+
+export const generateDefaultTheme = (
+  color: ColorBaseName | SimpleColorBaseName
+): ITheme => ({
   font,
-  color: {
-    text00: basePalette.white,
-    text01: basePalette.grey16,
-    text02: basePalette.grey24,
-    text03: basePalette.grey32,
-    text04: basePalette.grey40,
-    text05: basePalette.grey48,
-    text06: basePalette.grey16,
-    textLink: basePalette.grey72,
-    textLinkHover: basePalette.grey72,
-    textPrimary: basePalette.grey24,
-    textError: basePalette.grey16,
-    background: basePalette.white,
-    background00: basePalette.white,
-    background01: basePalette.grey94,
-    background02: basePalette.grey96,
-    background03: basePalette.grey98,
-    background04: basePalette.grey98,
-    background05: basePalette.white,
-    backgroundPrimary: basePalette.grey96,
-    backgroundError: basePalette.grey88,
-    element01: basePalette.grey40,
-    element10: basePalette.grey98,
-    element11: basePalette.grey80,
-    element12: basePalette.grey90,
-    element13: basePalette.grey72,
-    element14: basePalette.grey32,
-    element15: basePalette.grey98,
-    element16: basePalette.grey98,
-    elementPrimary: basePalette.grey32,
-    elementHalfPrimary: basePalette.grey48,
-    elementError: basePalette.grey16,
-    elementSuccess: basePalette.grey16,
-    elementWarning: basePalette.grey16,
-    elementAccent: basePalette.grey16,
-    elementBorder: basePalette.transparent,
-  },
+  color: generateDefaultColors(color),
   shadow: {
     card: '0 2px 6px 0 rgba(235, 237, 240, 1)',
     dialog: '0 2px 12px 0 rgba(0, 0, 0, 0.24)',
@@ -215,4 +233,6 @@ export const defaultTheme: ITheme = {
   },
   compact: false,
   selectMarker: 'background',
-}
+})
+
+export const defaultTheme: ITheme = generateDefaultTheme('deepPurple')
