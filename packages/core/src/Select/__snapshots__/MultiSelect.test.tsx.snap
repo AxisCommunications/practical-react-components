@@ -97,6 +97,41 @@ exports[`Select Direction 1`] = `
   z-index: 1;
 }
 
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -114,10 +149,6 @@ exports[`Select Direction 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
-}
-
-.c2 {
   width: 100%;
 }
 
@@ -172,39 +203,8 @@ exports[`Select Direction 1`] = `
   padding: 2px;
 }
 
-.c8 {
-  position: relative;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  height: 24px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  min-width: 32px;
-  max-width: 100%;
-  padding: 0 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 2px;
-  color: rgb(41,41,41);
-  background-color: rgb(240,240,240);
-}
-
-.c13 {
-  -webkit-flex: 0 0 min-content;
-  -ms-flex: 0 0 min-content;
-  flex: 0 0 min-content;
-  margin-left: 4px;
+.c2 {
+  width: 100%;
 }
 
 .c9 {
@@ -277,12 +277,12 @@ exports[`Select Direction 1`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -496,6 +496,41 @@ exports[`Select Direction 2`] = `
   z-index: 1;
 }
 
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -513,10 +548,6 @@ exports[`Select Direction 2`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
-}
-
-.c2 {
   width: 100%;
 }
 
@@ -571,39 +602,8 @@ exports[`Select Direction 2`] = `
   padding: 2px;
 }
 
-.c8 {
-  position: relative;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  height: 24px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  min-width: 32px;
-  max-width: 100%;
-  padding: 0 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 2px;
-  color: rgb(41,41,41);
-  background-color: rgb(240,240,240);
-}
-
-.c13 {
-  -webkit-flex: 0 0 min-content;
-  -ms-flex: 0 0 min-content;
-  flex: 0 0 min-content;
-  margin-left: 4px;
+.c2 {
+  width: 100%;
 }
 
 .c9 {
@@ -676,12 +676,12 @@ exports[`Select Direction 2`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -895,6 +895,41 @@ exports[`Select Other 1`] = `
   z-index: 1;
 }
 
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -912,10 +947,6 @@ exports[`Select Other 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
-}
-
-.c2 {
   width: 100%;
 }
 
@@ -977,39 +1008,8 @@ exports[`Select Other 1`] = `
   border-color: rgb(211,47,47);
 }
 
-.c8 {
-  position: relative;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  height: 24px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  min-width: 32px;
-  max-width: 100%;
-  padding: 0 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 2px;
-  color: rgb(41,41,41);
-  background-color: rgb(240,240,240);
-}
-
-.c13 {
-  -webkit-flex: 0 0 min-content;
-  -ms-flex: 0 0 min-content;
-  flex: 0 0 min-content;
-  margin-left: 4px;
+.c2 {
+  width: 100%;
 }
 
 .c9 {
@@ -1082,12 +1082,12 @@ exports[`Select Other 1`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -1301,6 +1301,41 @@ exports[`Select Other 2`] = `
   z-index: 1;
 }
 
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1318,10 +1353,6 @@ exports[`Select Other 2`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
-}
-
-.c2 {
   width: 100%;
 }
 
@@ -1382,39 +1413,8 @@ exports[`Select Other 2`] = `
   padding: 2px;
 }
 
-.c8 {
-  position: relative;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  height: 24px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  min-width: 32px;
-  max-width: 100%;
-  padding: 0 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 2px;
-  color: rgb(41,41,41);
-  background-color: rgb(240,240,240);
-}
-
-.c13 {
-  -webkit-flex: 0 0 min-content;
-  -ms-flex: 0 0 min-content;
-  flex: 0 0 min-content;
-  margin-left: 4px;
+.c2 {
+  width: 100%;
 }
 
 .c9 {
@@ -1487,12 +1487,12 @@ exports[`Select Other 2`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={true}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -1706,6 +1706,41 @@ exports[`Select Width 1`] = `
   z-index: 1;
 }
 
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1723,10 +1758,6 @@ exports[`Select Width 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
-}
-
-.c2 {
   width: 100%;
 }
 
@@ -1781,39 +1812,8 @@ exports[`Select Width 1`] = `
   padding: 2px;
 }
 
-.c8 {
-  position: relative;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  height: 24px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  min-width: 32px;
-  max-width: 100%;
-  padding: 0 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 2px;
-  color: rgb(41,41,41);
-  background-color: rgb(240,240,240);
-}
-
-.c13 {
-  -webkit-flex: 0 0 min-content;
-  -ms-flex: 0 0 min-content;
-  flex: 0 0 min-content;
-  margin-left: 4px;
+.c2 {
+  width: 100%;
 }
 
 .c9 {
@@ -1886,12 +1886,12 @@ exports[`Select Width 1`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -2105,6 +2105,41 @@ exports[`Select Width 2`] = `
   z-index: 1;
 }
 
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2122,10 +2157,6 @@ exports[`Select Width 2`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
-}
-
-.c2 {
   width: 100%;
 }
 
@@ -2180,39 +2211,8 @@ exports[`Select Width 2`] = `
   padding: 2px;
 }
 
-.c8 {
-  position: relative;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  height: 24px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  min-width: 32px;
-  max-width: 100%;
-  padding: 0 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 2px;
-  color: rgb(41,41,41);
-  background-color: rgb(240,240,240);
-}
-
-.c13 {
-  -webkit-flex: 0 0 min-content;
-  -ms-flex: 0 0 min-content;
-  flex: 0 0 min-content;
-  margin-left: 4px;
+.c2 {
+  width: 100%;
 }
 
 .c9 {
@@ -2285,12 +2285,12 @@ exports[`Select Width 2`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -2536,6 +2536,41 @@ exports[`Select Width 3`] = `
   z-index: 1;
 }
 
+.c8 {
+  position: relative;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 32px;
+  max-width: 100%;
+  padding: 0 8px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 2px;
+  color: rgb(41,41,41);
+  background-color: rgb(240,240,240);
+}
+
+.c13 {
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  margin-left: 4px;
+}
+
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2553,10 +2588,6 @@ exports[`Select Width 3`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
-}
-
-.c2 {
   width: 100%;
 }
 
@@ -2611,39 +2642,8 @@ exports[`Select Width 3`] = `
   padding: 2px;
 }
 
-.c8 {
-  position: relative;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  height: 24px;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-  min-width: 32px;
-  max-width: 100%;
-  padding: 0 8px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  overflow: hidden;
-  border-radius: 2px;
-  color: rgb(41,41,41);
-  background-color: rgb(240,240,240);
-}
-
-.c13 {
-  -webkit-flex: 0 0 min-content;
-  -ms-flex: 0 0 min-content;
-  flex: 0 0 min-content;
-  margin-left: 4px;
+.c2 {
+  width: 100%;
 }
 
 .c9 {
@@ -2716,12 +2716,12 @@ exports[`Select Width 3`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}

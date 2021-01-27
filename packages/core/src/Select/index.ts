@@ -1,3 +1,4 @@
+export * from './BaseSelectSelector'
 export * from './BaseSelect'
 export * from './Select'
 export * from './MultiSelect'

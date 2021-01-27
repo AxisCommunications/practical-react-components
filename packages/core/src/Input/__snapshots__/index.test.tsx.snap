@@ -4217,6 +4217,42 @@ exports[`TextInput TimeInput 1`] = `
   white-space: nowrap;
 }
 
+.c24 {
+  height: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgb(82,82,82);
+  cursor: default;
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c27 {
+  color: rgb(82,82,82);
+  margin-left: 8px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
 .c29 {
   position: fixed;
   top: 0;
@@ -4257,10 +4293,6 @@ exports[`TextInput TimeInput 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
-}
-
-.c9 {
   width: 100%;
 }
 
@@ -4315,40 +4347,8 @@ exports[`TextInput TimeInput 1`] = `
   padding: 2px;
 }
 
-.c24 {
-  height: 40px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: rgb(82,82,82);
-  cursor: default;
-}
-
-.c26 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c27 {
-  color: rgb(82,82,82);
-  margin-left: 8px;
-  -webkit-flex-shrink: 0;
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
+.c9 {
+  width: 100%;
 }
 
 .c13 {
@@ -4713,12 +4713,12 @@ exports[`TextInput TimeInput 1`] = `
         </div>
         <div
           className="c9"
+          onBlur={[Function]}
           width="full"
         >
           <div
             className="c10"
             disabled={false}
-            onBlur={[Function]}
             onClick={[Function]}
             onKeyDown={[Function]}
             onPointerDown={[Function]}
