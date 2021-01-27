@@ -10,14 +10,15 @@ import styled, { css, useTheme } from 'styled-components'
 import { useBoolean } from 'react-hooks-shareable'
 
 import { Icon } from '../Icon'
-import { ArrowDownIcon, ArrowUpIcon, SmallerCheckIcon } from './icons'
-import { componentSize, opacity, shape, spacing } from '../designparams'
+import { SmallerCheckIcon } from './icons'
+import { componentSize, shape, spacing } from '../designparams'
 import { Typography } from '../Typography'
 import { getWidth, scrollIntoView, findPrevIndex, findNextIndex } from './utils'
 import { ISelectMarker } from '../theme'
 
 import { PopOver, IPopOverProps } from '../PopOver'
 import { anchorPosition } from '../PopOver/utils'
+import { SelectVariant, BaseSelectSelector } from '.'
 
 export type DirectionType = 'auto' | 'up' | 'down'
 
@@ -304,137 +305,11 @@ export const SelectPopover: React.FC<ISelectPopoverProps> = ({
   )
 }
 
-const SelectInsideContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  width: 100%;
-`
-
 const SelectContainer = styled.div<{
   readonly width: string
 }>`
   width: ${({ width }) => getWidth(width)};
 `
-
-const SelectInput = styled.div<{
-  readonly compact: boolean
-  readonly variant: string
-  readonly hasError: boolean
-  readonly openedFocus: boolean
-  readonly visibleFocus: boolean
-  readonly disabled: boolean
-}>`
-  display: flex;
-  align-items: center;
-  min-height: ${({ compact }) =>
-    compact ? componentSize.small : componentSize.medium};
-  color: ${({ theme }) => theme.color.text01()};
-
-  background-color: ${({ variant, theme }) =>
-    variant === 'filled' || variant === 'framed'
-      ? theme.color.background02()
-      : 'transparent'};
-
-  padding: 2px;
-  border: 0 solid transparent;
-  border-radius: ${shape.radius.medium};
-
-  ${({ variant, theme }) =>
-    variant === 'framed'
-      ? css`
-          padding: 1px;
-          border: 1px solid ${theme.color.element01()};
-        `
-      : undefined}
-
-  font-family: ${({ theme }) => theme.font.family};
-  font-size: ${({ theme }) => theme.font.size.regular};
-  line-height: ${({ theme }) => theme.font.lineHeight.large};
-  text-align: left;
-  cursor: pointer;
-
-  ${SelectInsideContainer} {
-    padding: ${({ compact }) =>
-      compact
-        ? `0 ${spacing.small} 0 ${spacing.medium}`
-        : `0 ${spacing.medium}`};
-  }
-
-  > div > span > svg {
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    background-color: transparent;
-    fill: ${({ theme }) => theme.color.element01()};
-  }
-
-  &:hover {
-    background-color: ${({ variant, theme }) =>
-      variant === 'filled' || variant === 'framed'
-        ? theme.color.background01()
-        : theme.color.background02()};
-
-    ${({ variant, theme }) =>
-      variant === 'framed'
-        ? css`
-            padding: 0;
-            border: 2px solid ${theme.color.element01()};
-          `
-        : undefined}
-  }
-
-  &:focus {
-    outline: none;
-
-    ${({ openedFocus, visibleFocus, variant, theme }) =>
-      openedFocus
-        ? css`
-            background-color: ${theme.color.background01()};
-            border: none;
-            padding: 2px;
-          `
-        : visibleFocus
-        ? css`
-            background-color: ${variant === 'filled' || variant === 'framed'
-              ? theme.color.background01()
-              : 'transparent'};
-            border: 2px solid ${theme.color.textPrimary()};
-            padding: 0;
-          `
-        : undefined}
-  }
-
-  &:active {
-    background-color: ${({ theme }) => theme.color.background01()};
-    border: none;
-    padding: 2px;
-  }
-
-  ${({ disabled }) =>
-    disabled
-      ? css`
-          opacity: ${opacity[48]};
-          pointer-events: none;
-        `
-      : undefined}
-
-  ${({ theme, hasError }) =>
-    hasError
-      ? css`
-          &,
-          &:hover,
-          &:focus {
-            background-color: ${theme.color.backgroundError()};
-            border-color: ${theme.color.elementError()};
-          }
-        `
-      : undefined};
-`
-
-type SelectVariant = 'filled' | 'transparent' | 'framed'
 
 export enum SelectKeys {
   Space = ' ',
@@ -699,35 +574,38 @@ export function BaseSelect<V extends string = string>({
     }
   }, [isOpen, listRef, itemRefs, valueIndex])
 
-  const handleBlur = useCallback(() => {
-    if (onBlur !== undefined) {
-      onBlur(true)
-    }
-    setKeyboardOn()
-    closePopover()
-  }, [onBlur, closePopover, setKeyboardOn])
+  const handleFocusOut: React.EventHandler<React.FocusEvent> = useCallback(
+    e => {
+      if (popupAnchorEl?.contains(e.target) ?? false) {
+        setKeyboardOn()
+        closePopover()
+      }
+    },
+    [closePopover, popupAnchorEl, setKeyboardOn]
+  )
 
   return (
-    <SelectContainer width={width} ref={setPopupAnchorEl} {...props}>
-      <SelectInput
-        onClick={toggleOpen}
+    <SelectContainer
+      width={width}
+      ref={setPopupAnchorEl}
+      onBlur={handleFocusOut}
+      {...props}
+    >
+      <BaseSelectSelector
+        onToggleOpen={toggleOpen}
+        open={isOpen}
         compact={compact}
         variant={variant}
         onKeyDown={handleKeyDown}
         onPointerDown={setKeyboardOff}
-        onBlur={handleBlur}
-        openedFocus={isOpen}
-        visibleFocus={isKeyboard}
         hasError={error.length > 0}
         role="button"
         tabIndex={0}
         disabled={disabled}
+        visibleFocus={isKeyboard}
       >
-        <SelectInsideContainer>
-          {component}
-          <Icon icon={isOpen ? ArrowUpIcon : ArrowDownIcon} />
-        </SelectInsideContainer>
-      </SelectInput>
+        {component}
+      </BaseSelectSelector>
       <SelectPopover
         anchorEl={popupAnchorEl}
         onScroll={closePopover}

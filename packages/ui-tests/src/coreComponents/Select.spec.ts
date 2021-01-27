@@ -4,7 +4,8 @@ context('Select', () => {
   const popOverEl = '[class^=PopOver__]'
   const popOverSelectItem = '[class^=BaseSelect__SelectItem]'
   const multiSelectChip = '[class^=MultiSelect__ChipContainer]'
-  const selectSelectedItem = '[class^=BaseSelect__SelectInsideContainer]'
+  const selectSelectedItem =
+    '[class^=BaseSelectSelector__SelectInsideContainer]'
   const searchSelectInput = '[class^=SearchSelect__InputNative]'
 
   const options = [

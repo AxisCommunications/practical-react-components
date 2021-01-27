@@ -70,10 +70,6 @@ exports[`Select Compact 1`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -125,6 +121,10 @@ exports[`Select Compact 1`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -145,12 +145,12 @@ exports[`Select Compact 1`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -273,10 +273,6 @@ exports[`Select Compact 2`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c10 .c4 {
   padding: 0 4px 0 8px;
 }
@@ -332,6 +328,10 @@ exports[`Select Compact 2`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -352,12 +352,12 @@ exports[`Select Compact 2`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -480,10 +480,6 @@ exports[`Select Direction 1`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -535,6 +531,10 @@ exports[`Select Direction 1`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -555,12 +555,12 @@ exports[`Select Direction 1`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -683,10 +683,6 @@ exports[`Select Direction 2`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -738,6 +734,10 @@ exports[`Select Direction 2`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -758,12 +758,12 @@ exports[`Select Direction 2`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -886,10 +886,6 @@ exports[`Select Other 1`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -948,6 +944,10 @@ exports[`Select Other 1`] = `
   border-color: rgb(211,47,47);
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -968,12 +968,12 @@ exports[`Select Other 1`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -1096,10 +1096,6 @@ exports[`Select Other 2`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c10 .c4 {
   padding: 0 8px;
 }
@@ -1157,6 +1153,10 @@ exports[`Select Other 2`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1177,12 +1177,12 @@ exports[`Select Other 2`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={true}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -1305,10 +1305,6 @@ exports[`Select SelectMarker 1`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1360,6 +1356,10 @@ exports[`Select SelectMarker 1`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1380,12 +1380,12 @@ exports[`Select SelectMarker 1`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -1508,10 +1508,6 @@ exports[`Select SelectMarker 2`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1563,6 +1559,10 @@ exports[`Select SelectMarker 2`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1583,12 +1583,12 @@ exports[`Select SelectMarker 2`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -1711,10 +1711,6 @@ exports[`Select Variant 1`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1766,6 +1762,10 @@ exports[`Select Variant 1`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1786,12 +1786,12 @@ exports[`Select Variant 1`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -1914,10 +1914,6 @@ exports[`Select Variant 2`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c10 .c4 {
   padding: 0 8px;
 }
@@ -1973,6 +1969,10 @@ exports[`Select Variant 2`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1993,12 +1993,12 @@ exports[`Select Variant 2`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -2121,10 +2121,6 @@ exports[`Select Variant 3`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c10 .c4 {
   padding: 0 8px;
 }
@@ -2188,6 +2184,10 @@ exports[`Select Variant 3`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2208,12 +2208,12 @@ exports[`Select Variant 3`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -2336,10 +2336,6 @@ exports[`Select Width 1`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 160px;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2391,6 +2387,10 @@ exports[`Select Width 1`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 160px;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2411,12 +2411,12 @@ exports[`Select Width 1`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="small"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -2539,10 +2539,6 @@ exports[`Select Width 2`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 220px;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2594,6 +2590,10 @@ exports[`Select Width 2`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 220px;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2614,12 +2614,12 @@ exports[`Select Width 2`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="medium"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -2742,10 +2742,6 @@ exports[`Select Width 3`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 300px;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2797,6 +2793,10 @@ exports[`Select Width 3`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 300px;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -2817,12 +2817,12 @@ exports[`Select Width 3`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="large"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}
@@ -2945,10 +2945,6 @@ exports[`Select Width 4`] = `
   width: 100%;
 }
 
-.c2 {
-  width: 100%;
-}
-
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3000,6 +2996,10 @@ exports[`Select Width 4`] = `
   padding: 2px;
 }
 
+.c2 {
+  width: 100%;
+}
+
 .c6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3020,12 +3020,12 @@ exports[`Select Width 4`] = `
     >
       <div
         className="c2"
+        onBlur={[Function]}
         width="full"
       >
         <div
           className="c3"
           disabled={false}
-          onBlur={[Function]}
           onClick={[Function]}
           onKeyDown={[Function]}
           onPointerDown={[Function]}

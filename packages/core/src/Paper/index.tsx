@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import styled, { css } from 'styled-components'
 import { shape, spacing } from '../designparams'
 
@@ -46,13 +46,11 @@ interface IPaperProps extends BaseProps {
   readonly space?: boolean
 }
 
-export const Paper: React.FC<IPaperProps> = ({
-  square = false,
-  space = false,
-  children,
-  ...props
-}) => (
-  <PaperDiv square={square} space={space} {...props}>
-    {children}
-  </PaperDiv>
+/* eslint-disable-next-line react/display-name */
+export const Paper = forwardRef<BaseElement, IPaperProps>(
+  ({ square = false, space = false, children, ...props }, ref) => (
+    <PaperDiv square={square} space={space} {...props} ref={ref}>
+      {children}
+    </PaperDiv>
+  )
 )
