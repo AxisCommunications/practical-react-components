@@ -249,10 +249,10 @@ exports[`Chips error 1`] = `
   overflow: hidden;
   border-radius: 2px;
   color: rgb(41,41,41);
-  background-color: rgb(224,224,224);
-  color: rgb(41,41,41);
+  background-color: rgb(255,235,238);
+  color: rgb(211,47,47);
   padding-left: 0;
-  border: 1px solid rgb(41,41,41);
+  border: 1px solid rgb(211,47,47);
 }
 
 .c4 {
@@ -260,7 +260,7 @@ exports[`Chips error 1`] = `
   -ms-flex: 0 0 min-content;
   flex: 0 0 min-content;
   overflow: visible;
-  color: rgb(41,41,41);
+  color: rgb(211,47,47);
 }
 
 .c5 {

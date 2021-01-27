@@ -7,7 +7,7 @@ context('ToggleButtonGroup', () => {
 
   const toggleButtonGroupEl = '[data-cy=toggleButtonGroup]'
 
-  const checkButton = (index, toggled) => {
+  const checkButton = (index: number, toggled: boolean) => {
     cy.get(toggleButtonGroupEl)
       // Find the toggle button that should be checked
       .children()
@@ -15,11 +15,7 @@ context('ToggleButtonGroup', () => {
       // Step to the container that contains the css background-color
       .children()
       // Check the color of the toggle button to check if its toggled or not
-      .should(
-        'have.css',
-        'background-color',
-        toggled === true ? 'rgb(82, 82, 82)' : 'rgb(255, 255, 255)'
-      )
+      .should(toggled ? 'contain' : 'not.contain', 'Selected')
   }
 
   it('ToggleButtonGroup', () => {

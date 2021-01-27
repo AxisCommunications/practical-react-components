@@ -33,7 +33,7 @@ exports[`Spinners Spinner 1`] = `
   -webkit-animation: hPEoKG linear infinite;
   animation: hPEoKG linear infinite;
   border-style: solid;
-  border-left: 2px solid rgb(82,82,82);
+  border-left: 2px solid rgb(103,58,183);
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }

@@ -32,7 +32,7 @@ exports[`Button primary 1`] = `
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
 }
 
@@ -41,23 +41,23 @@ exports[`Button primary 1`] = `
 }
 
 .c2:hover {
-  background-color: rgb(61,61,61);
+  background-color: rgb(69,39,160);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
 }
 
 .c2:focus {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
 }
 
 .c2:active {
-  background-color: rgb(61,61,61);
-  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+  background-color: rgb(69,39,160);
+  box-shadow: 0 0 0 4px rgba(103,58,183,0.24);
 }
 
 .c2:disabled {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c3 {
@@ -186,7 +186,7 @@ exports[`Button primary 2`] = `
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
   opacity: 0.48;
   cursor: default;
@@ -198,23 +198,23 @@ exports[`Button primary 2`] = `
 }
 
 .c2:hover {
-  background-color: rgb(61,61,61);
+  background-color: rgb(69,39,160);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
 }
 
 .c2:focus {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
 }
 
 .c2:active {
-  background-color: rgb(61,61,61);
-  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+  background-color: rgb(69,39,160);
+  box-shadow: 0 0 0 4px rgba(103,58,183,0.24);
 }
 
 .c2:disabled {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:hover,
@@ -833,8 +833,8 @@ exports[`Button secondary 4`] = `
   -webkit-transition: all 200ms;
   transition: all 200ms;
   padding: 0 16px;
-  color: rgb(82,82,82);
-  fill: rgb(82,82,82);
+  color: rgb(103,58,183);
+  fill: rgb(103,58,183);
   background-color: transparent;
   opacity: 0.48;
   cursor: default;
@@ -846,24 +846,24 @@ exports[`Button secondary 4`] = `
 }
 
 .c2:hover {
-  color: rgb(61,61,61);
-  background-color: rgba(82,82,82,0.16);
+  color: rgb(69,39,160);
+  background-color: rgba(103,58,183,0.16);
 }
 
 .c2:focus {
-  color: rgb(82,82,82);
-  background-color: rgba(82,82,82,0.16);
+  color: rgb(103,58,183);
+  background-color: rgba(103,58,183,0.16);
   border: 2px solid transparent;
 }
 
 .c2:active {
-  color: rgb(61,61,61);
-  background-color: rgba(82,82,82,0.24);
+  color: rgb(69,39,160);
+  background-color: rgba(103,58,183,0.24);
 }
 
 .c2:disabled {
-  color: rgb(82,82,82);
-  fill: rgb(82,82,82);
+  color: rgb(103,58,183);
+  fill: rgb(103,58,183);
   background-color: transparent;
 }
 
@@ -998,8 +998,8 @@ exports[`Button secondary 5`] = `
   -webkit-transition: all 200ms;
   transition: all 200ms;
   padding: 0 16px;
-  color: rgb(82,82,82);
-  fill: rgb(82,82,82);
+  color: rgb(103,58,183);
+  fill: rgb(103,58,183);
   background-color: transparent;
   opacity: 0.48;
   cursor: default;
@@ -1011,24 +1011,24 @@ exports[`Button secondary 5`] = `
 }
 
 .c2:hover {
-  color: rgb(61,61,61);
-  background-color: rgba(82,82,82,0.16);
+  color: rgb(69,39,160);
+  background-color: rgba(103,58,183,0.16);
 }
 
 .c2:focus {
-  color: rgb(82,82,82);
-  background-color: rgba(82,82,82,0.16);
+  color: rgb(103,58,183);
+  background-color: rgba(103,58,183,0.16);
   border: 2px solid transparent;
 }
 
 .c2:active {
-  color: rgb(61,61,61);
-  background-color: rgba(82,82,82,0.24);
+  color: rgb(69,39,160);
+  background-color: rgba(103,58,183,0.24);
 }
 
 .c2:disabled {
-  color: rgb(82,82,82);
-  fill: rgb(82,82,82);
+  color: rgb(103,58,183);
+  fill: rgb(103,58,183);
   background-color: transparent;
 }
 
@@ -1178,7 +1178,7 @@ exports[`IconButton primary 1`] = `
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
 }
 
@@ -1187,23 +1187,23 @@ exports[`IconButton primary 1`] = `
 }
 
 .c2:hover {
-  background-color: rgb(61,61,61);
+  background-color: rgb(69,39,160);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
 }
 
 .c2:focus {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
 }
 
 .c2:active {
-  background-color: rgb(61,61,61);
-  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+  background-color: rgb(69,39,160);
+  box-shadow: 0 0 0 4px rgba(103,58,183,0.24);
 }
 
 .c2:disabled {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c5 {
@@ -1341,7 +1341,7 @@ exports[`IconButton primary 2`] = `
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
   opacity: 0.48;
   cursor: default;
@@ -1353,23 +1353,23 @@ exports[`IconButton primary 2`] = `
 }
 
 .c2:hover {
-  background-color: rgb(61,61,61);
+  background-color: rgb(69,39,160);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
 }
 
 .c2:focus {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
 }
 
 .c2:active {
-  background-color: rgb(61,61,61);
-  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+  background-color: rgb(69,39,160);
+  box-shadow: 0 0 0 4px rgba(103,58,183,0.24);
 }
 
 .c2:disabled {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:hover,
@@ -1966,8 +1966,8 @@ exports[`IconButton secondary 3`] = `
   -webkit-transition: all 200ms;
   transition: all 200ms;
   padding: 0 16px;
-  color: rgb(82,82,82);
-  fill: rgb(82,82,82);
+  color: rgb(103,58,183);
+  fill: rgb(103,58,183);
   background-color: transparent;
 }
 
@@ -1976,24 +1976,24 @@ exports[`IconButton secondary 3`] = `
 }
 
 .c2:hover {
-  color: rgb(61,61,61);
-  background-color: rgba(82,82,82,0.16);
+  color: rgb(69,39,160);
+  background-color: rgba(103,58,183,0.16);
 }
 
 .c2:focus {
-  color: rgb(82,82,82);
-  background-color: rgba(82,82,82,0.16);
+  color: rgb(103,58,183);
+  background-color: rgba(103,58,183,0.16);
   border: 2px solid transparent;
 }
 
 .c2:active {
-  color: rgb(61,61,61);
-  background-color: rgba(82,82,82,0.24);
+  color: rgb(69,39,160);
+  background-color: rgba(103,58,183,0.24);
 }
 
 .c2:disabled {
-  color: rgb(82,82,82);
-  fill: rgb(82,82,82);
+  color: rgb(103,58,183);
+  fill: rgb(103,58,183);
   background-color: transparent;
 }
 
@@ -2023,7 +2023,7 @@ exports[`IconButton secondary 3`] = `
 }
 
 .c3:hover .c6 {
-  background-color: rgba(82,82,82,0.16);
+  background-color: rgba(103,58,183,0.16);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -2035,7 +2035,7 @@ exports[`IconButton secondary 3`] = `
 }
 
 .c3:focus .c6 {
-  background-color: rgba(82,82,82,0.16);
+  background-color: rgba(103,58,183,0.16);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -2046,7 +2046,7 @@ exports[`IconButton secondary 3`] = `
 }
 
 .c3:active .c6 {
-  background-color: rgba(82,82,82,0.24);
+  background-color: rgba(103,58,183,0.24);
   -webkit-transform: scale(1.06);
   -ms-transform: scale(1.06);
   transform: scale(1.06);
@@ -2187,8 +2187,8 @@ exports[`IconButton secondary 4`] = `
   -webkit-transition: all 200ms;
   transition: all 200ms;
   padding: 0 16px;
-  color: rgb(82,82,82);
-  fill: rgb(82,82,82);
+  color: rgb(103,58,183);
+  fill: rgb(103,58,183);
   background-color: transparent;
   opacity: 0.48;
   cursor: default;
@@ -2200,24 +2200,24 @@ exports[`IconButton secondary 4`] = `
 }
 
 .c2:hover {
-  color: rgb(61,61,61);
-  background-color: rgba(82,82,82,0.16);
+  color: rgb(69,39,160);
+  background-color: rgba(103,58,183,0.16);
 }
 
 .c2:focus {
-  color: rgb(82,82,82);
-  background-color: rgba(82,82,82,0.16);
+  color: rgb(103,58,183);
+  background-color: rgba(103,58,183,0.16);
   border: 2px solid transparent;
 }
 
 .c2:active {
-  color: rgb(61,61,61);
-  background-color: rgba(82,82,82,0.24);
+  color: rgb(69,39,160);
+  background-color: rgba(103,58,183,0.24);
 }
 
 .c2:disabled {
-  color: rgb(82,82,82);
-  fill: rgb(82,82,82);
+  color: rgb(103,58,183);
+  fill: rgb(103,58,183);
   background-color: transparent;
 }
 
@@ -2254,7 +2254,7 @@ exports[`IconButton secondary 4`] = `
 }
 
 .c3:hover .c6 {
-  background-color: rgba(82,82,82,0.16);
+  background-color: rgba(103,58,183,0.16);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -2266,7 +2266,7 @@ exports[`IconButton secondary 4`] = `
 }
 
 .c3:focus .c6 {
-  background-color: rgba(82,82,82,0.16);
+  background-color: rgba(103,58,183,0.16);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);
@@ -2277,7 +2277,7 @@ exports[`IconButton secondary 4`] = `
 }
 
 .c3:active .c6 {
-  background-color: rgba(82,82,82,0.24);
+  background-color: rgba(103,58,183,0.24);
   -webkit-transform: scale(1.06);
   -ms-transform: scale(1.06);
   transform: scale(1.06);

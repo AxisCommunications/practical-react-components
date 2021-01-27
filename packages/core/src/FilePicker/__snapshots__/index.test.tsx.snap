@@ -43,7 +43,7 @@ exports[`FilePicker FilePicker 1`] = `
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
 }
 
@@ -52,23 +52,23 @@ exports[`FilePicker FilePicker 1`] = `
 }
 
 .c3:hover {
-  background-color: rgb(61,61,61);
+  background-color: rgb(69,39,160);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
 }
 
 .c3:focus {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
 }
 
 .c3:active {
-  background-color: rgb(61,61,61);
-  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+  background-color: rgb(69,39,160);
+  box-shadow: 0 0 0 4px rgba(103,58,183,0.24);
 }
 
 .c3:disabled {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c4 {
@@ -245,7 +245,7 @@ exports[`FilePicker FilePicker 2`] = `
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
 }
 
@@ -254,23 +254,23 @@ exports[`FilePicker FilePicker 2`] = `
 }
 
 .c3:hover {
-  background-color: rgb(61,61,61);
+  background-color: rgb(69,39,160);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
 }
 
 .c3:focus {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   box-shadow: 0 2px 6px 0 rgba(0,0,0,0.16);
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
 }
 
 .c3:active {
-  background-color: rgb(61,61,61);
-  box-shadow: 0 0 0 4px rgba(82,82,82,0.24);
+  background-color: rgb(69,39,160);
+  box-shadow: 0 0 0 4px rgba(103,58,183,0.24);
 }
 
 .c3:disabled {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c4 {

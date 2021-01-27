@@ -83,7 +83,7 @@ exports[`Draggable Disabled 1`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(245,245,245);
-  border: 1px solid rgb(61,61,61);
+  border: 1px solid rgb(69,39,160);
 }
 
 .c3:active {
@@ -297,7 +297,7 @@ exports[`Draggable Variant 1`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(245,245,245);
-  border: 1px solid rgb(61,61,61);
+  border: 1px solid rgb(69,39,160);
 }
 
 .c3:active {
@@ -511,7 +511,7 @@ exports[`Draggable Variant 2`] = `
 .c3:focus {
   outline: none;
   background-color: transparent;
-  border: 1px solid rgb(61,61,61);
+  border: 1px solid rgb(69,39,160);
 }
 
 .c3:active {
@@ -725,7 +725,7 @@ exports[`Draggable Width 1`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(245,245,245);
-  border: 1px solid rgb(61,61,61);
+  border: 1px solid rgb(69,39,160);
 }
 
 .c3:active {
@@ -939,7 +939,7 @@ exports[`Draggable Width 2`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(245,245,245);
-  border: 1px solid rgb(61,61,61);
+  border: 1px solid rgb(69,39,160);
 }
 
 .c3:active {
@@ -1153,7 +1153,7 @@ exports[`Draggable Width 3`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(245,245,245);
-  border: 1px solid rgb(61,61,61);
+  border: 1px solid rgb(69,39,160);
 }
 
 .c3:active {
@@ -1367,7 +1367,7 @@ exports[`Draggable Width 4`] = `
 .c3:focus {
   outline: none;
   background-color: rgb(245,245,245);
-  border: 1px solid rgb(61,61,61);
+  border: 1px solid rgb(69,39,160);
 }
 
 .c3:active {

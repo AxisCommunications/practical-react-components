@@ -38,7 +38,7 @@ exports[`Progress Levels 1`] = `
 }
 
 .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   border-radius: inherit;
   height: 100%;
   width: 0%;
@@ -150,7 +150,7 @@ exports[`Progress Levels 2`] = `
 }
 
 .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   border-radius: inherit;
   height: 100%;
   width: 10%;
@@ -262,7 +262,7 @@ exports[`Progress Levels 3`] = `
 }
 
 .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   border-radius: inherit;
   height: 100%;
   width: 22%;
@@ -374,7 +374,7 @@ exports[`Progress Levels 4`] = `
 }
 
 .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   border-radius: inherit;
   height: 100%;
   width: 58%;
@@ -486,7 +486,7 @@ exports[`Progress Levels 5`] = `
 }
 
 .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   border-radius: inherit;
   height: 100%;
   width: 83%;
@@ -598,7 +598,7 @@ exports[`Progress Levels 6`] = `
 }
 
 .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
   border-radius: inherit;
   height: 100%;
   width: 100%;

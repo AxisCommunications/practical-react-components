@@ -60,11 +60,11 @@ exports[`TextInput NumberInput 1`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -228,11 +228,11 @@ exports[`TextInput NumberInput 2`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -396,11 +396,11 @@ exports[`TextInput NumberInput 3`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -539,7 +539,7 @@ exports[`TextInput NumberInput 4`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2 {
@@ -569,11 +569,11 @@ exports[`TextInput NumberInput 4`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -711,11 +711,11 @@ exports[`TextInput NumberInput 5`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c9:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2 {
@@ -745,11 +745,11 @@ exports[`TextInput NumberInput 5`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -887,15 +887,15 @@ exports[`TextInput NumberInput 6`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c9:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c10:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2 {
@@ -925,11 +925,11 @@ exports[`TextInput NumberInput 6`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -1067,19 +1067,19 @@ exports[`TextInput NumberInput 7`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c9:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c10:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c11:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2 {
@@ -1109,11 +1109,11 @@ exports[`TextInput NumberInput 7`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -1277,11 +1277,11 @@ exports[`TextInput NumberInput 8`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -1289,19 +1289,19 @@ exports[`TextInput NumberInput 8`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c9:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c10:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c11:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c3 {
@@ -1435,23 +1435,23 @@ exports[`TextInput NumberInput 9`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c9:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c10:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c11:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c12:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2 {
@@ -1483,11 +1483,11 @@ exports[`TextInput NumberInput 9`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -1628,7 +1628,7 @@ exports[`TextInput NumberInput 10`] = `
 }
 
 .c4 {
-  color: rgb(41,41,41);
+  color: rgb(211,47,47);
   line-height: 16px;
   background-color: transparent;
   display: -webkit-box;
@@ -1649,7 +1649,7 @@ exports[`TextInput NumberInput 10`] = `
 .c6 {
   position: relative;
   box-sizing: border-box;
-  border-bottom: 1px solid rgb(41,41,41);
+  border-bottom: 1px solid rgb(211,47,47);
   height: 100%;
   min-width: 8px;
   -webkit-box-flex: 1;
@@ -1677,7 +1677,7 @@ exports[`TextInput NumberInput 10`] = `
 }
 
 .c13:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c13:focus-within .c5 {
@@ -1685,7 +1685,7 @@ exports[`TextInput NumberInput 10`] = `
 }
 
 .c14:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c14:focus-within .c5 {
@@ -1693,7 +1693,7 @@ exports[`TextInput NumberInput 10`] = `
 }
 
 .c15:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c15:focus-within .c5 {
@@ -1701,7 +1701,7 @@ exports[`TextInput NumberInput 10`] = `
 }
 
 .c16:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c16:focus-within .c5 {
@@ -1709,7 +1709,7 @@ exports[`TextInput NumberInput 10`] = `
 }
 
 .c17:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c17:focus-within .c5 {
@@ -1717,7 +1717,7 @@ exports[`TextInput NumberInput 10`] = `
 }
 
 .c18:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c18:focus-within .c5 {
@@ -1737,7 +1737,7 @@ exports[`TextInput NumberInput 10`] = `
   border-bottom: 1px solid rgb(204,204,204);
   border-radius: 4px 4px 0 0;
   height: 40px;
-  background-color: rgb(224,224,224);
+  background-color: rgb(255,235,238);
   border-bottom: none;
 }
 
@@ -1753,11 +1753,11 @@ exports[`TextInput NumberInput 10`] = `
 }
 
 .c2:focus-within .c19 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .c5 {
@@ -1765,12 +1765,12 @@ exports[`TextInput NumberInput 10`] = `
 }
 
 .c2:hover {
-  background-color: rgb(224,224,224);
+  background-color: rgb(255,235,238);
   border-bottom: none;
 }
 
 .c2:focus-within {
-  background-color: rgb(224,224,224);
+  background-color: rgb(255,235,238);
   border-bottom: none;
 }
 
@@ -1948,11 +1948,11 @@ exports[`TextInput TextInput 1`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -2110,11 +2110,11 @@ exports[`TextInput TextInput 2`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -2246,7 +2246,7 @@ exports[`TextInput TextInput 3`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2 {
@@ -2276,11 +2276,11 @@ exports[`TextInput TextInput 3`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -2412,11 +2412,11 @@ exports[`TextInput TextInput 4`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c9:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2 {
@@ -2446,11 +2446,11 @@ exports[`TextInput TextInput 4`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -2582,15 +2582,15 @@ exports[`TextInput TextInput 5`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c9:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c10:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2 {
@@ -2620,11 +2620,11 @@ exports[`TextInput TextInput 5`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -2756,19 +2756,19 @@ exports[`TextInput TextInput 6`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c9:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c10:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c11:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2 {
@@ -2798,11 +2798,11 @@ exports[`TextInput TextInput 6`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -2960,11 +2960,11 @@ exports[`TextInput TextInput 7`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -2972,19 +2972,19 @@ exports[`TextInput TextInput 7`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c9:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c10:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c11:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c3 {
@@ -3112,23 +3112,23 @@ exports[`TextInput TextInput 8`] = `
 }
 
 .c8:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c9:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c10:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c11:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c12:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2 {
@@ -3160,11 +3160,11 @@ exports[`TextInput TextInput 8`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -3299,7 +3299,7 @@ exports[`TextInput TextInput 9`] = `
 }
 
 .c4 {
-  color: rgb(41,41,41);
+  color: rgb(211,47,47);
   line-height: 16px;
   background-color: transparent;
   display: -webkit-box;
@@ -3320,7 +3320,7 @@ exports[`TextInput TextInput 9`] = `
 .c6 {
   position: relative;
   box-sizing: border-box;
-  border-bottom: 1px solid rgb(41,41,41);
+  border-bottom: 1px solid rgb(211,47,47);
   height: 100%;
   min-width: 8px;
   -webkit-box-flex: 1;
@@ -3348,7 +3348,7 @@ exports[`TextInput TextInput 9`] = `
 }
 
 .c13:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c13:focus-within .c5 {
@@ -3356,7 +3356,7 @@ exports[`TextInput TextInput 9`] = `
 }
 
 .c14:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c14:focus-within .c5 {
@@ -3364,7 +3364,7 @@ exports[`TextInput TextInput 9`] = `
 }
 
 .c15:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c15:focus-within .c5 {
@@ -3372,7 +3372,7 @@ exports[`TextInput TextInput 9`] = `
 }
 
 .c16:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c16:focus-within .c5 {
@@ -3380,7 +3380,7 @@ exports[`TextInput TextInput 9`] = `
 }
 
 .c17:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c17:focus-within .c5 {
@@ -3388,7 +3388,7 @@ exports[`TextInput TextInput 9`] = `
 }
 
 .c18:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c18:focus-within .c5 {
@@ -3408,7 +3408,7 @@ exports[`TextInput TextInput 9`] = `
   border-bottom: 1px solid rgb(204,204,204);
   border-radius: 4px 4px 0 0;
   height: 40px;
-  background-color: rgb(224,224,224);
+  background-color: rgb(255,235,238);
   border-bottom: none;
 }
 
@@ -3424,11 +3424,11 @@ exports[`TextInput TextInput 9`] = `
 }
 
 .c2:focus-within .c19 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .c7 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .c5 {
@@ -3436,12 +3436,12 @@ exports[`TextInput TextInput 9`] = `
 }
 
 .c2:hover {
-  background-color: rgb(224,224,224);
+  background-color: rgb(255,235,238);
   border-bottom: none;
 }
 
 .c2:focus-within {
-  background-color: rgb(224,224,224);
+  background-color: rgb(255,235,238);
   border-bottom: none;
 }
 
@@ -3613,11 +3613,11 @@ exports[`TextInput TextInputCredentials 1`] = `
 }
 
 .c2:focus-within .c4 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c2:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c2:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -3796,11 +3796,11 @@ exports[`TextInput TextInputCredentials 2`] = `
 }
 
 .c3:focus-within .c8 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c3:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c3:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -4024,11 +4024,11 @@ exports[`TextInput TextInputCredentials 3`] = `
 }
 
 .c3:focus-within .c8 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c3:focus-within .Input__ErrorLine-sc-15wizum-2 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c3:focus-within .Input__ErrorLineContainer-sc-15wizum-1 {
@@ -4305,7 +4305,7 @@ exports[`TextInput TimeInput 1`] = `
 .c10:focus {
   outline: none;
   background-color: transparent;
-  border: 2px solid rgb(61,61,61);
+  border: 2px solid rgb(69,39,160);
   padding: 0;
 }
 
@@ -4381,7 +4381,7 @@ exports[`TextInput TimeInput 1`] = `
 }
 
 .c16 {
-  color: rgb(41,41,41);
+  color: rgb(211,47,47);
   line-height: 16px;
   background-color: transparent;
   display: -webkit-box;
@@ -4402,7 +4402,7 @@ exports[`TextInput TimeInput 1`] = `
 .c18 {
   position: relative;
   box-sizing: border-box;
-  border-bottom: 1px solid rgb(41,41,41);
+  border-bottom: 1px solid rgb(211,47,47);
   height: 100%;
   min-width: 8px;
   -webkit-box-flex: 1;
@@ -4465,11 +4465,11 @@ exports[`TextInput TimeInput 1`] = `
 }
 
 .c3:focus-within .c5 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c3:focus-within .c19 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c3:focus-within .c17 {
@@ -4505,11 +4505,11 @@ exports[`TextInput TimeInput 1`] = `
 }
 
 .c8:focus-within .c5 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c8:focus-within .c19 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c8:focus-within .c17 {
@@ -4529,7 +4529,7 @@ exports[`TextInput TimeInput 1`] = `
   border-bottom: 1px solid rgb(204,204,204);
   border-radius: 4px 4px 0 0;
   height: 40px;
-  background-color: rgb(224,224,224);
+  background-color: rgb(255,235,238);
   border-bottom: none;
 }
 
@@ -4545,11 +4545,11 @@ exports[`TextInput TimeInput 1`] = `
 }
 
 .c15:focus-within .c5 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c15:focus-within .c19 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c15:focus-within .c17 {
@@ -4557,12 +4557,12 @@ exports[`TextInput TimeInput 1`] = `
 }
 
 .c15:hover {
-  background-color: rgb(224,224,224);
+  background-color: rgb(255,235,238);
   border-bottom: none;
 }
 
 .c15:focus-within {
-  background-color: rgb(224,224,224);
+  background-color: rgb(255,235,238);
   border-bottom: none;
 }
 
@@ -4593,11 +4593,11 @@ exports[`TextInput TimeInput 1`] = `
 }
 
 .c23:focus-within .c5 {
-  background-color: rgb(82,82,82);
+  background-color: rgb(103,58,183);
 }
 
 .c23:focus-within .c19 {
-  background-color: rgb(41,41,41);
+  background-color: rgb(211,47,47);
 }
 
 .c23:focus-within .c17 {
