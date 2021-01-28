@@ -109,20 +109,24 @@ if __name__ == "__main__":
         help="Don't include a changelog header",
     )
 
-    subparsers = parser.add_subparsers(dest="type")
+    subparsers = parser.add_subparsers(
+        dest="type", metavar="COMMAND", help='One of "single" or "full".', required=True
+    )
 
     single = subparsers.add_parser(
-        "single", description="Changelog for a single release"
+        "single", description="Generate changelog for a single tag."
     )
-    single.add_argument("-tag", "--tag", type=str, metavar="TAG")
+    single.add_argument("-t", "--tag", type=str, metavar="TAG")
 
-    full = subparsers.add_parser("full")
+    full = subparsers.add_parser(
+        "full", description="Generate a changelog covering entire history."
+    )
     full.add_argument(
-        "-release",
+        "-r",
         "--release",
         type=str,
         metavar="RELEASE",
-        help="New relase, includes full changelog with a new entry for things not tagged",
+        help="New release tag (e.g. vX.Y.Z), includes full changelog with a new entry for things not tagged",
     )
 
     args = parser.parse_args()
@@ -139,6 +143,18 @@ if __name__ == "__main__":
             "HEAD",
         ]
     ).split()
+
+    if args.tag is None:
+        try:
+            args.tag = tags[0]
+        except:
+            print(f"Error: no tags found!")
+            sys.exit(1)
+
+    if args.type == "single" and args.tag not in tags:
+        print(f"Error: tag {args.tag} not found!")
+        sys.exit(1)
+
     if args.type == "full" and args.release is not None:
         tags.insert(0, "HEAD")
 
