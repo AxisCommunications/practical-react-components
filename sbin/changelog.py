@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import argparse
 import re
@@ -6,6 +6,15 @@ import subprocess
 import sys
 
 import utils
+
+#
+# Stop immediately if version too old.
+#
+_MINIMUM_PYTHON_VERSION = "3.7"
+if sys.version_info < tuple(map(int, _MINIMUM_PYTHON_VERSION.split("."))):
+    raise Exception(
+        f"You need Python >= {_MINIMUM_PYTHON_VERSION}, but you are running {sys.version}"
+    )
 
 GITHUB_COMPARE_URL = (
     "https://github.com/AxisCommunications/practical-react-components/compare"
@@ -36,6 +45,9 @@ def changelog_part(commitish_to: str, commitish_from: str, version: str):
     commits = utils.cmd(
         ["git", "log", "--no-merges", "--date-order", "--format=%H%x09%s", commit_range]
     )
+
+    if commits == "":
+        return ""
 
     messages = {}
 
