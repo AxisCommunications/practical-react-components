@@ -1,6 +1,6 @@
 {
   "name": "practical-react-components",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Practical react components library",
   "homepage": "https://github.com/AxisCommunications/practical-react-components",
@@ -29,7 +29,7 @@
     "test": "jest",
     "build": "yarn workspaces foreach --topological run build",
     "prettier:fix": "prettier --write '{packages/*/src/**/*.{js,ts,jsx,tsx},cypress/**/*.{js,ts,jsx,tsx,json}}'",
-    "release": "yarn && yarn lint && yarn test && yarn build && sbin/release.py",
+    "release": "yarn --immutable --immutable-cache && yarn build:libs && yarn lint && yarn test && sbin/release.py",
     "dev": "yarn workspaces foreach -i --parallel --exclude practical-react-components-ui-tests run dev",
     "cypress:ui-tests": "yarn workspace practical-react-components-ui-tests dev",
     "cypress:chrome": "yarn workspace practical-react-components-ui-tests wait-on http-get://localhost:9009 -i 2000 -d 5000 && yarn workspace practical-react-components-ui-tests cypress run --browser chrome --headless",
