@@ -144,16 +144,16 @@ if __name__ == "__main__":
         ]
     ).split()
 
-    if args.tag is None:
-        try:
-            args.tag = tags[0]
-        except:
-            print(f"Error: no tags found!")
+    if args.type == "single":
+        if args.tag is None:
+            try:
+                args.tag = tags[0]
+            except:
+                print(f"Error: no tags found!")
+                sys.exit(1)
+        if args.tag not in tags:
+            print(f"Error: tag {args.tag} not found!")
             sys.exit(1)
-
-    if args.type == "single" and args.tag not in tags:
-        print(f"Error: tag {args.tag} not found!")
-        sys.exit(1)
 
     if args.type == "full" and args.release is not None:
         tags.insert(0, "HEAD")
