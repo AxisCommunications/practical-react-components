@@ -84,7 +84,7 @@ const Aside = styled.aside`
 `
 
 const Main = styled.main`
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   background-color: ${({ theme }) => theme.color.background00()};
   padding: ${spacing.extraLarge};
