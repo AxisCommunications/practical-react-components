@@ -44,6 +44,7 @@ export const tzOptions = [
 export const DemoComponent = ({}) => {
   const [selectedFruit, setSelectedFruit] = useState('')
   const [selectedValue, setSelectedValue] = useState('')
+  const [selectedWithCheck, setSelectedWithCheck] = useState('apple')
   return (
     <div
       style={{
@@ -73,7 +74,7 @@ export const DemoComponent = ({}) => {
         onChange={setSelectedFruit}
       />
       <SelectField
-        label="Transparent vairant"
+        label="Transparent variant"
         options={tzOptions}
         placeholder="Select..."
         width="full"
@@ -97,8 +98,8 @@ export const DemoComponent = ({}) => {
         options={fruitOptions}
         placeholder="Select..."
         width="small"
-        value={selectedFruit}
-        onChange={setSelectedFruit}
+        value={selectedWithCheck}
+        onChange={setSelectedWithCheck}
         selectMarker="check"
       />
     </div>
