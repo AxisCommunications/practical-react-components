@@ -3,7 +3,24 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.3.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.2.0...v0.3.0) (2021-01-28 11:33:30 +0100)
+## [v0.4.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.3.0...v0.4.0) (2021-02-01 12:42:59 +0100)
+
+### 🚀 Features
+
+  -  richer palette and default theme ([352ea5b](https://github.com/AxisCommunications/practical-react-components/commit/352ea5b8471fcde51c080878836598c6510402c3))
+
+### 🧰 Refactoring
+
+  -  split out selector from base select ([9adf3a5](https://github.com/AxisCommunications/practical-react-components/commit/9adf3a5435b1bb55a6b2747ea49a3044f8995ec1))
+
+### 📝 Documentation
+
+  -  change width of docs content ([3d99b18](https://github.com/AxisCommunications/practical-react-components/commit/3d99b181a99a0b5525bef611a98c044f4679f6db))
+  -  minor Select improvements ([335f28d](https://github.com/AxisCommunications/practical-react-components/commit/335f28d2c0ed4efd1d5110f56c05033f5e84ec6e))
+  -  better component name for icons page ([920ea69](https://github.com/AxisCommunications/practical-react-components/commit/920ea692b8f5558ca6dcf805d175a38b519a570f))
+  -  fix filename of PracticalProvider ([e2152e2](https://github.com/AxisCommunications/practical-react-components/commit/e2152e2c0c8be0d3d98255fda706eeb7d67acdbf))
+
+## [v0.3.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.2.0...v0.3.0) (2021-01-28 11:36:16 +0100)
 
 ### 🚀 Features
 

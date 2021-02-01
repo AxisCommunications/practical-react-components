@@ -19,6 +19,7 @@ jobs:
         with:
           node-version: '14'
           registry-url: 'https://registry.npmjs.org'
+          fetch-depth: 0
 
       - name: Install dependencies
         env:
