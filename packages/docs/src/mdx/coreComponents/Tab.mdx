@@ -11,8 +11,12 @@ import {
   VerticalTab,
   TabBase,
   Typography,
+  Paper,
 } from 'practical-react-components-core'
-import { DeviceIcon } from 'practical-react-components-icons'
+import {
+  HomeIcon,
+  SystemAccessoriesIcon,
+} from 'practical-react-components-icons'
 
 # Tab
 
@@ -48,24 +52,26 @@ export const VContainer = styled.div`
 export const HTABS = [
   {
     id: '1',
-    label: 'Large device',
-    icon: DeviceIcon,
+    label: 'Home',
+    icon: HomeIcon,
   },
   {
     id: '2',
-    label: 'Very large device',
+    label: 'Contact',
+    icon: SystemAccessoriesIcon,
   },
 ]
 
 export const VTABS = [
   {
-    id: '3',
-    label: 'Tiny cup',
-    icon: DeviceIcon,
+    id: '1',
+    label: 'Home',
+    icon: HomeIcon,
   },
   {
-    id: '4',
-    label: 'Cup',
+    id: '2',
+    label: 'Contact',
+    icon: SystemAccessoriesIcon,
   },
 ]
 
@@ -73,50 +79,76 @@ export const Container = styled.div`
   display: ${({ show }) => (show ? 'unset' : 'none')};
 `
 
+export const ExamplePaper = styled(Paper)`
+  background-color: ${({ theme }) => theme.color.background03()};
+`
+
+export const TabPaper = styled(Paper)`
+  max-width: 500px;
+  margin: 0 12px;
+`
+
 export const DemoComponent = ({}) => {
-  const [selectedTab, setSelectedTab] = useState('none')
+  const [selectedHTab, setSelectedHTab] = useState('1')
+  const [selectedVTab, setSelectedVTab] = useState('1')
   return (
     <>
-      <HorizontalTabContainer>
-        {HTABS.map(tab => (
-          <Tab
-            key={tab.id}
-            id={tab.id}
-            label={tab.label}
-            icon={tab.icon}
-            selected={tab.id === selectedTab}
-            onSelect={setSelectedTab}
-            className="my-tab"
-          />
-        ))}
-      </HorizontalTabContainer>
-      <Container show={selectedTab === '1'}>
-        <Typography variant="page-heading">1</Typography>
-      </Container>
-      <Container show={selectedTab === '2'}>
-        <Typography variant="page-heading">2</Typography>
-      </Container>
-      <br />
-      <VContainer>
-        <VerticalTabContainer>
-          {VTABS.map(tab => (
-            <VerticalTab
+      <ExamplePaper space={true}>
+        <HorizontalTabContainer>
+          {HTABS.map(tab => (
+            <Tab
               key={tab.id}
               id={tab.id}
               label={tab.label}
               icon={tab.icon}
-              selected={tab.id === selectedTab}
-              onSelect={setSelectedTab}
+              selected={tab.id === selectedHTab}
+              onSelect={setSelectedHTab}
+              className="my-tab"
             />
           ))}
-        </VerticalTabContainer>
-        <Container show={selectedTab === '3'}>
-          <Typography variant="page-heading">3</Typography>
+        </HorizontalTabContainer>
+        <Container show={selectedHTab === '1'}>
+          <TabPaper space={true}>
+            <Typography variant="page-heading">Home tab</Typography>
+            <Typography>This is the content of the Home tab.</Typography>
+          </TabPaper>
         </Container>
-        <Container show={selectedTab === '4'}>
-          <Typography variant="page-heading">4</Typography>
+        <Container show={selectedHTab === '2'}>
+          <TabPaper space={true}>
+            <Typography variant="page-heading">Contact tab</Typography>
+            <Typography>This is the content of the Contact tab.</Typography>
+          </TabPaper>
         </Container>
-      </VContainer>
+      </ExamplePaper>
+      <br />
+      <ExamplePaper space={true}>
+        <VContainer>
+          <VerticalTabContainer>
+            {VTABS.map(tab => (
+              <VerticalTab
+                key={tab.id}
+                id={tab.id}
+                label={tab.label}
+                icon={tab.icon}
+                selected={tab.id === selectedVTab}
+                onSelect={setSelectedVTab}
+              />
+            ))}
+          </VerticalTabContainer>
+          <Container show={selectedVTab === '1'}>
+            <TabPaper space={true}>
+              <Typography variant="page-heading">Home tab</Typography>
+              <Typography>This is the content of the Home tab.</Typography>
+            </TabPaper>
+          </Container>
+          <Container show={selectedVTab === '2'}>
+            <TabPaper space={true}>
+              <Typography variant="page-heading">Contact tab</Typography>
+              <Typography>This is the content of the Contact tab.</Typography>
+            </TabPaper>
+          </Container>
+        </VContainer>
+      </ExamplePaper>
     </>
   )
 }
@@ -128,8 +160,8 @@ export const DemoComponent = ({}) => {
 ```typescript type=live
 <Tab
   id="id1"
-  label="Large device"
-  icon={DeviceIcon}
+  label="Home"
+  icon={HomeIcon}
   selected={true}
   onSelect={() => {}}
 />
