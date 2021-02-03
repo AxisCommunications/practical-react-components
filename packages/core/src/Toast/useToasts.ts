@@ -11,6 +11,7 @@ import {
   ISimpleToast,
   IActionToast,
   IProgressToast,
+  IInfoToast,
   createSuccessToast,
   createErrorToast,
   createInfoToast,
@@ -28,6 +29,7 @@ type HideToastHandler = (id: ToastId) => void
 type SimpleToastCreator = (toast: ISimpleToast, id?: ToastId) => ToastId
 type ActionToastCreator = (toast: IActionToast, id?: ToastId) => ToastId
 type ProgressToastCreator = (toast: IProgressToast, id?: ToastId) => ToastId
+type InfoToastCreator = (toast: IInfoToast, id?: ToastId) => ToastId
 
 export interface ISimpleToastsDurations {
   readonly success?: number
@@ -43,7 +45,7 @@ export interface IToastCallbacks {
   readonly showSuccessToast: SimpleToastCreator
   readonly showErrorToast: SimpleToastCreator
   readonly showWarningToast: SimpleToastCreator
-  readonly showInfoToast: SimpleToastCreator
+  readonly showInfoToast: InfoToastCreator
   readonly showLoadingToast: SimpleToastCreator
   readonly showProgressToast: ProgressToastCreator
   readonly showActionToast: ActionToastCreator
@@ -86,7 +88,7 @@ export const useToastCallbacks = (
     [showToast, error]
   )
 
-  const showInfoToast: SimpleToastCreator = useCallback(
+  const showInfoToast: InfoToastCreator = useCallback(
     (toast, id) => showToast({ duration: info, ...createInfoToast(toast) }, id),
     [showToast, info]
   )

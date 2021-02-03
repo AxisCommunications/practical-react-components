@@ -105,6 +105,10 @@ export interface IProgressToast extends ISimpleToast {
   }
 }
 
+export interface IInfoToast extends ISimpleToast {
+  readonly icon?: IconType
+}
+
 export type IToast = ISimpleToast | IActionToast
 
 type ToastCreator<T = IToast> = (toast: T) => IBaseToast
@@ -112,6 +116,7 @@ type ToastCreator<T = IToast> = (toast: T) => IBaseToast
 type SimpleToastCreator = ToastCreator<ISimpleToast>
 type ActionToastCreator = ToastCreator<IActionToast>
 type ProgressToastCreator = ToastCreator<IProgressToast>
+type InfoToastCreator = ToastCreator<IInfoToast>
 
 /*
  * Success toast
@@ -223,9 +228,10 @@ export const createWarningToast: SimpleToastCreator = ({
  * Info toast
  */
 
-export const createInfoToast: SimpleToastCreator = ({
+export const createInfoToast: InfoToastCreator = ({
   label,
   message,
+  icon,
   ...rest
 }) => {
   const labelComponent = (
@@ -237,9 +243,9 @@ export const createInfoToast: SimpleToastCreator = ({
       {label}
     </ToastLabel>
   )
-  const icon = (
+  const iconComponent = (
     <InfoIconColor>
-      <Icon icon={InfoIcon} />
+      <Icon icon={icon ?? InfoIcon} />
     </InfoIconColor>
   )
 
@@ -247,7 +253,7 @@ export const createInfoToast: SimpleToastCreator = ({
     message !== undefined ? <Message>{message}</Message> : undefined
 
   return {
-    icon,
+    icon: iconComponent,
     label: labelComponent,
     message: messageComponent,
     ...rest,
