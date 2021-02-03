@@ -1,29 +1,19 @@
 import React, { useCallback } from 'react'
 import styled, { css } from 'styled-components'
-import { MoreVertIcon } from 'practical-react-components-icons'
 
 import { CARD_PADDING } from './padding'
-import { Typography } from '../Typography'
 import { Arrow } from '../Expandable'
-import { Menu, IMenuItem } from '../Menu'
+import { Typography } from '../Typography'
 import { spacing } from '../designparams'
 
 export type CardHeaderHeightType = 'small' | 'normal' | 'large'
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
 
-const HEADER_HEIGHT = {
-  small: '40px',
-  normal: '48px',
-  large: '60px',
-}
-
-const ICON_CONTAINER_WIDTH = '72px'
-
 /**
  * Empty header with just a bottom border
  */
-export const EmptyHeader = styled.div`
+export const BaseHeader = styled.div`
   flex: none;
   box-sizing: border-box;
   width: 100%;
@@ -32,37 +22,14 @@ export const EmptyHeader = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.color.element12()};
 `
 
-interface ITitleHeaderProps {
-  readonly height: CardHeaderHeightType
-  readonly hasIcon: boolean
-}
-
-const TitleHeader = styled(EmptyHeader)<ITitleHeaderProps>`
-  position: relative; /* This is for special icon like corner triangle */
+const TitleHeader = styled(BaseHeader)`
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
-  height: ${({ height }) => HEADER_HEIGHT[height]};
   cursor: default;
-
-  ${({ hasIcon }) =>
-    hasIcon
-      ? css`
-          padding-right: ${CARD_PADDING};
-        `
-      : css`
-          padding: 0 ${CARD_PADDING};
-        `}
-`
-
-const HeaderIcon = styled.div`
-  width: ${ICON_CONTAINER_WIDTH};
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }) => theme.color.element11()};
+  height: auto;
+  padding: ${spacing.medium} ${CARD_PADDING};
 `
 
 const TitleContainer = styled.div`
@@ -74,95 +41,36 @@ const TitleContainer = styled.div`
   text-overflow: ellipsis;
 `
 
-interface ITabsHeaderContainerProps extends Pick<ITitleHeaderProps, 'height'> {}
+export const CardHeaderTypography = styled(Typography).attrs({
+  variant: 'card-title',
+})``
 
-/* Header container for inside tabs */
-export const TabsHeaderContainer = styled(
-  EmptyHeader
-)<ITabsHeaderContainerProps>`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  height: ${({ height }) => HEADER_HEIGHT[height]};
-  padding: 0 ${spacing.large};
-`
+export const CardSubHeaderTypography = styled(Typography).attrs({
+  variant: 'caption',
+})``
 
-export interface ICardHeaderProps extends BaseProps {
+export interface CardHeaderProps extends BaseProps {
   /**
-   * Label that shows inside Card Header
+   * `class` to be passed to the component.
    */
-  readonly header: string
-  /**
-   * Small label that shows inside Card Header under header label
-   */
-  readonly subhead?: string
-  /**
-   * Header height
-   *
-   * Default: `normal`
-   */
-  readonly height?: CardHeaderHeightType
-  /**
-   * Optional icon
-   */
-  readonly icon?: React.ReactNode
-  /**
-   * Menu items that shows inside menu
-   */
-  readonly menu?: ReadonlyArray<IMenuItem>
-  /**
-   * if `true` return a header for inside tabs.
-   *
-   * Default: `false`
-   */
-  readonly tab?: boolean
+  readonly className?: string
 }
 
-export const CardHeader: React.FC<ICardHeaderProps> = ({
-  header,
-  subhead,
-  height = 'normal',
-  icon,
-  menu,
-  tab = false,
+export const CardHeader: React.FC<CardHeaderProps> = ({
   children,
   ...props
-}) => {
-  const hasIcon = icon !== undefined
-
-  if (tab) {
-    return (
-      <TabsHeaderContainer height={height} {...props}>
-        {children}
-      </TabsHeaderContainer>
-    )
-  }
-
-  return (
-    <TitleHeader height={height} hasIcon={hasIcon} {...props}>
-      {icon !== undefined ? <HeaderIcon>{icon}</HeaderIcon> : undefined}
-      <TitleContainer>
-        <Typography variant="card-title">{header}</Typography>
-        <Typography variant="caption">{subhead}</Typography>
-      </TitleContainer>
-      {menu !== undefined ? (
-        <Menu icon={MoreVertIcon} items={menu} />
-      ) : undefined}
-    </TitleHeader>
-  )
-}
+}) => <TitleHeader {...props}>{children}</TitleHeader>
 
 /**
  * Expandable header
  */
 
-interface IExpandableTitleHeaderProps {
+interface ExpandableTitleHeaderProps {
   readonly expanded: boolean
   readonly disabled: boolean
 }
 
-const ExpandableTitleHeader = styled(TitleHeader)<IExpandableTitleHeaderProps>`
+const ExpandableTitleHeader = styled(TitleHeader)<ExpandableTitleHeaderProps>`
   cursor: ${({ disabled }) => (disabled ? undefined : 'pointer')};
 
   ${({ expanded }) =>
@@ -174,23 +82,19 @@ const ExpandableTitleHeader = styled(TitleHeader)<IExpandableTitleHeaderProps>`
       : undefined};
 `
 
-export interface ICardExpandableHeaderProps extends ICardHeaderProps {
+export interface CardExpandableHeaderProps extends CardHeaderProps {
   readonly disabled?: boolean
   readonly expanded?: boolean
   readonly onToggle: (expanded: boolean) => void
 }
 
-export const CardExpandableHeader: React.FC<ICardExpandableHeaderProps> = ({
-  header,
-  subhead,
-  height = 'normal',
-  icon,
+export const CardExpandableHeader: React.FC<CardExpandableHeaderProps> = ({
   disabled = false,
   expanded = false,
   onToggle,
+  children,
   ...props
 }) => {
-  const hasIcon = icon !== undefined
   const onClick = useCallback<React.MouseEventHandler<HTMLDivElement>>(() => {
     if (!disabled) {
       onToggle(!expanded)
@@ -199,18 +103,12 @@ export const CardExpandableHeader: React.FC<ICardExpandableHeaderProps> = ({
 
   return (
     <ExpandableTitleHeader
-      height={height}
       disabled={disabled}
       expanded={expanded}
       onClick={onClick}
-      hasIcon={hasIcon}
       {...props}
     >
-      {icon !== undefined ? <HeaderIcon>{icon}</HeaderIcon> : undefined}
-      <TitleContainer>
-        <Typography variant="card-title">{header}</Typography>
-        <Typography variant="caption">{subhead}</Typography>
-      </TitleContainer>
+      <TitleContainer>{children}</TitleContainer>
       <Arrow disabled={disabled} expanded={expanded} />
     </ExpandableTitleHeader>
   )
