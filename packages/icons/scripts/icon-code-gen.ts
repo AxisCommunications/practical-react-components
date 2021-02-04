@@ -11,7 +11,7 @@ import path from 'path'
 import svgr from '@svgr/core'
 import chalk from 'chalk'
 
-interface IIcon {
+interface Icon {
   readonly fileName: string
   readonly componentName: string
   readonly svg: string
@@ -115,7 +115,7 @@ const DEFS_ELEMENT = chalk.white('<') + chalk.green('defs') + chalk.white('>')
 async function parseIcon(
   inputPath: string,
   icon: fs.Dirent
-): Promise<IIcon | undefined> {
+): Promise<Icon | undefined> {
   const fileName = icon.name.split('.')[0]
   const componentName = generateComponentName(fileName)
 
@@ -144,7 +144,7 @@ async function parseIcon(
   return undefined
 }
 
-function generateIcon(output: string, icon: IIcon): void {
+function generateIcon(output: string, icon: Icon): void {
   const contents = `import React from 'react'
 
 ${icon.svg}
@@ -155,7 +155,7 @@ export const ${icon.componentName} = Svg
   fs.writeFileSync(path.join(output, `${icon.fileName}.tsx`), contents)
 }
 
-function generateBarrel(output: string, icons: ReadonlyArray<IIcon>): void {
+function generateBarrel(output: string, icons: ReadonlyArray<Icon>): void {
   const contents = `${icons
     .map(icon => icon.fileName)
     .sort((a, b) => a.localeCompare(b))
@@ -173,7 +173,7 @@ async function processDir(
 ): Promise<void> {
   console.log(`Generating Icon's`)
 
-  const iconMap: Map<string, IIcon> = new Map()
+  const iconMap: Map<string, Icon> = new Map()
 
   const dirEnts = fs
     .readdirSync(inputPath, { withFileTypes: true })

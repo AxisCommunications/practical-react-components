@@ -49,7 +49,7 @@ export type IconType =
 
 export type IconSize = 'small' | 'medium' | 'large' | 'extraLarge'
 
-interface IIconProps extends BaseProps {
+interface IconProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -64,7 +64,7 @@ interface IIconProps extends BaseProps {
   readonly size?: IconSize
 }
 
-export const Icon: React.FunctionComponent<IIconProps> = ({
+export const Icon: React.FunctionComponent<IconProps> = ({
   icon: SvgIcon,
   size = 'medium',
   ...props

@@ -6,34 +6,34 @@ import {
 
 export const THEME_NAME = 'themePractical'
 
-export enum IThemeActionType {
+export enum ThemeActionType {
   'SWITCH_THEME',
 }
 
-export enum IThemeName {
+export enum ThemeName {
   'DEFAULT_THEME' = 'default_theme',
 }
 
-export interface IThemeContext {
-  readonly themeName: IThemeName
-  readonly setThemeName: (themeName: IThemeName) => void
+export interface ThemeContextType {
+  readonly themeName: ThemeName
+  readonly setThemeName: (themeName: ThemeName) => void
 }
 
-export interface IThemeNameProvider {
-  readonly initialThemeName?: IThemeName
+export interface ThemeNameProvider {
+  readonly initialThemeName?: ThemeName
 }
 
-export const ThemeContext = createContext<IThemeContext>({
-  themeName: IThemeName.DEFAULT_THEME,
+export const ThemeContext = createContext<ThemeContextType>({
+  themeName: ThemeName.DEFAULT_THEME,
   setThemeName: () => {
     /** no-op */
   },
 })
 const { Provider } = ThemeContext
 
-export const ThemeProvider: React.FC<IThemeNameProvider> = ({
+export const ThemeProvider: React.FC<ThemeNameProvider> = ({
   children,
-  initialThemeName = IThemeName.DEFAULT_THEME,
+  initialThemeName = ThemeName.DEFAULT_THEME,
 }) => {
   const [themeName, setThemeName] = useState(initialThemeName)
 

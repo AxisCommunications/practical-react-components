@@ -5,7 +5,7 @@ import { spacing, shape } from '../designparams'
 import { Typography } from '../Typography'
 import { font } from '../theme'
 import { NativeButton } from '../Button'
-import { ITranslationMeridiem } from './types'
+import { TranslationMeridiem } from './types'
 
 const CLOCK_SIZE = 300
 const HALF_CLOCK_SIZE = CLOCK_SIZE / 2
@@ -55,7 +55,7 @@ enum AMPM {
 
 type TimeFormat = AMPM.AM | AMPM.PM | ''
 
-interface INumberPosition {
+interface NumberPosition {
   readonly x: number
   readonly y: number
   readonly number: number
@@ -78,14 +78,14 @@ const TimeFormatContainer = styled.div`
   z-index: 2;
 `
 
-interface ITimeFormatSelected {
+interface TimeFormatSelected {
   readonly selected: boolean
 }
 
 const TimeFormatButton = styled(NativeButton).attrs({
   accent: false,
   visibleFocus: true,
-})<ITimeFormatSelected>`
+})<TimeFormatSelected>`
   border-radius: ${TIMEFORMAT_BUTTON_MIN_SIZE / 2}px;
   width: fit-content;
   min-width: ${TIMEFORMAT_BUTTON_MIN_SIZE}px;
@@ -102,7 +102,7 @@ const TimeFormatButton = styled(NativeButton).attrs({
 
 const TimeFormatButtonLabel = styled(Typography).attrs({
   variant: 'default-text',
-})<ITimeFormatSelected>`
+})<TimeFormatSelected>`
   color: ${({ theme, selected }) =>
     selected ? theme.color.text00() : theme.color.text03()};
 `
@@ -126,12 +126,12 @@ const MiddlePoint = styled.span`
   background-color: ${({ theme }) => theme.color.elementPrimary()};
 `
 
-interface IStyledPointerProps {
+interface StyledPointerProps {
   readonly innerPointer: boolean
   readonly rotation: number
 }
 
-const StyledPointer = styled.div<IStyledPointerProps>`
+const StyledPointer = styled.div<StyledPointerProps>`
   z-index: 100;
   width: 4px;
   left: calc(50% - 2px);
@@ -187,12 +187,12 @@ const StyledPointer = styled.div<IStyledPointerProps>`
     font-size: ${font.size.large};
   }
 `
-interface INumberProps {
+interface NumberContainerProps {
   readonly x: string
   readonly y: string
 }
 
-const NumberContainer = styled.span<INumberProps>`
+const NumberContainer = styled.span<NumberContainerProps>`
   text-align: center;
   line-height: ${NUMBER_SIZE}px;
   height: ${NUMBER_SIZE}px;
@@ -206,13 +206,13 @@ const NumberContainer = styled.span<INumberProps>`
   }
 `
 
-interface IPointerProps {
+interface PointerProps {
   readonly innerPointer: boolean
   readonly value: string
   readonly rotation: number
 }
 
-const Pointer: React.FunctionComponent<IPointerProps> = ({
+const Pointer: React.FunctionComponent<PointerProps> = ({
   innerPointer,
   value,
   rotation,
@@ -224,7 +224,7 @@ const Pointer: React.FunctionComponent<IPointerProps> = ({
   )
 }
 
-interface IClockComponentProps {
+interface ClockComponentProps {
   /**
    * Numbers to be shown in clock
    * Length of numbers should be 12 or 60.
@@ -254,10 +254,10 @@ interface IClockComponentProps {
   /**
    * AM/PM translation labels
    */
-  readonly hour12MeridiemLabels?: ITranslationMeridiem
+  readonly hour12MeridiemLabels?: TranslationMeridiem
 }
 
-const ClockComponent: React.FunctionComponent<IClockComponentProps> = ({
+const ClockComponent: React.FunctionComponent<ClockComponentProps> = ({
   numbers,
   value,
   innerNumbers = [],
@@ -269,7 +269,7 @@ const ClockComponent: React.FunctionComponent<IClockComponentProps> = ({
   const numberPositions = useMemo(() => {
     const { length } = numbers
     const rotateQuarter = length / 4
-    return numbers.reduce<ReadonlyArray<INumberPosition>>(
+    return numbers.reduce<ReadonlyArray<NumberPosition>>(
       (acc, number, index) => {
         if (length === 60 && index % 5 > 0) {
           return acc
@@ -285,7 +285,7 @@ const ClockComponent: React.FunctionComponent<IClockComponentProps> = ({
   const innerNumberPositions = useMemo(() => {
     const { length } = innerNumbers
     const rotateQuarter = length / 4
-    return innerNumbers.map<INumberPosition>((number, index) => {
+    return innerNumbers.map<NumberPosition>((number, index) => {
       const math = Math.PI * 2 * ((index - rotateQuarter) / length)
       const y = QUARTER_CLOCK_SIZE * Math.sin(math) + CLOCK_NUMBER_DIF
       const x = QUARTER_CLOCK_SIZE * Math.cos(math) + CLOCK_NUMBER_DIF
@@ -427,7 +427,7 @@ const ClockComponent: React.FunctionComponent<IClockComponentProps> = ({
   )
 }
 
-interface ITimePickerProps {
+interface TimePickerProps {
   /**
    * Current date value as date object
    */
@@ -443,7 +443,7 @@ interface ITimePickerProps {
  *
  * Shows a clock component with 24 hour time options
  */
-export const TimePickerTwentyFour: React.FC<ITimePickerProps> = ({
+export const TimePickerTwentyFour: React.FC<TimePickerProps> = ({
   date,
   onChange,
 }) => {
@@ -466,11 +466,11 @@ export const TimePickerTwentyFour: React.FC<ITimePickerProps> = ({
   )
 }
 
-interface ITimePickerAMPMProps extends ITimePickerProps {
+interface TimePickerAMPMProps extends TimePickerProps {
   /**
    * AM/PM translation labels
    */
-  readonly hour12MeridiemLabels: ITranslationMeridiem
+  readonly hour12MeridiemLabels: TranslationMeridiem
 }
 
 /**
@@ -478,7 +478,7 @@ interface ITimePickerAMPMProps extends ITimePickerProps {
  *
  * Shows a clock component with AM/PM format.
  */
-export const TimePickerAMPM: React.FunctionComponent<ITimePickerAMPMProps> = ({
+export const TimePickerAMPM: React.FunctionComponent<TimePickerAMPMProps> = ({
   date,
   onChange,
   hour12MeridiemLabels,
@@ -511,10 +511,7 @@ export const TimePickerAMPM: React.FunctionComponent<ITimePickerAMPMProps> = ({
  *
  * Shows a clock component with minute values
  */
-export const MinutePicker: React.FC<ITimePickerProps> = ({
-  date,
-  onChange,
-}) => {
+export const MinutePicker: React.FC<TimePickerProps> = ({ date, onChange }) => {
   const onTimeChange = useCallback(
     (minutes: number) => {
       const newDate = new Date(date)

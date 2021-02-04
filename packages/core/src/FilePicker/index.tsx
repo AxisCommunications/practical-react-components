@@ -2,7 +2,7 @@ import React, { useRef, useCallback, useState } from 'react'
 import styled from 'styled-components'
 import { Typography } from '../Typography'
 import { spacing } from '../designparams'
-import { Button, IButtonProps } from '../Button'
+import { Button, ButtonProps } from '../Button'
 
 type BaseElement = HTMLInputElement
 type BaseProps = React.InputHTMLAttributes<BaseElement>
@@ -21,8 +21,8 @@ const FileInput = styled.input`
   display: none;
 `
 
-interface IFilePickerProps
-  extends Pick<IButtonProps, 'variant' | 'accent' | 'label' | 'icon'>,
+interface FilePickerProps
+  extends Pick<ButtonProps, 'variant' | 'accent' | 'label' | 'icon'>,
     BaseProps {
   /**
    * `class` to be passed to the component.
@@ -44,7 +44,7 @@ interface IFilePickerProps
  * clicks the button a input file chooser dialog will appear.
  *
  */
-export const FilePicker: React.FC<IFilePickerProps> = ({
+export const FilePicker: React.FC<FilePickerProps> = ({
   onFileChange,
   disabled,
   name,

@@ -2,16 +2,16 @@ import React from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   TextInputCredentials,
-  ITextInputCredentialsProps,
+  TextInputCredentialsProps,
   withField,
 } from 'practical-react-components-core'
 
-export interface IFormikInputCredentialsProps
-  extends Omit<ITextInputCredentialsProps, 'name' | 'value'>,
-    Partial<Pick<ITextInputCredentialsProps, 'value'>>,
+export interface FormikInputCredentialsProps
+  extends Omit<TextInputCredentialsProps, 'name' | 'value'>,
+    Partial<Pick<TextInputCredentialsProps, 'value'>>,
     Pick<FieldConfig, 'name' | 'validate'> {}
 
-export const FormikInputCredentials: React.FC<IFormikInputCredentialsProps> = ({
+export const FormikInputCredentials: React.FC<FormikInputCredentialsProps> = ({
   name,
   validate,
   ...props

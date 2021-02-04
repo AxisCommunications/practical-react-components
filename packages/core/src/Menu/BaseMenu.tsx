@@ -13,7 +13,7 @@ import { remainder } from '../utils/math'
 
 import { Icon, IconType } from '../Icon'
 import { MoreVertIcon } from 'practical-react-components-icons'
-import { PopOver, IPopOverProps } from '../PopOver'
+import { PopOver, PopOverProps } from '../PopOver'
 import {
   useBoolean,
   useVisibleFocus,
@@ -158,7 +158,7 @@ export const BaseMenuItem = styled.div<{
 
 type ButtonClickHandler = React.MouseEventHandler<HTMLButtonElement>
 
-interface IMenuButtonProps extends BaseButtonProps {
+interface MenuButtonProps extends BaseButtonProps {
   /**
    * If `true`, the button will be disabled.
    */
@@ -187,7 +187,7 @@ interface IMenuButtonProps extends BaseButtonProps {
   readonly title?: string
 }
 
-export const MenuButton = React.forwardRef<BaseButtonElement, IMenuButtonProps>(
+export const MenuButton = React.forwardRef<BaseButtonElement, MenuButtonProps>(
   (
     {
       disabled,
@@ -280,14 +280,14 @@ enum MenuKeys {
  * Add an escape listener to the actual rendered menu.
  */
 
-interface IMenuWrapper extends BaseProps {
+interface MenuWrapperProps extends BaseProps {
   readonly onClose: () => void
   /**
    * `class` to be passed to the component.
    */
   readonly className?: string
 }
-export const MenuWrapper: React.FunctionComponent<IMenuWrapper> = ({
+export const MenuWrapper: React.FunctionComponent<MenuWrapperProps> = ({
   onClose,
   children,
   onPointerDown,
@@ -333,14 +333,14 @@ export const MenuWrapper: React.FunctionComponent<IMenuWrapper> = ({
   )
 }
 
-export interface IBaseMenuItem {
+export interface BaseItemProps {
   readonly component: ReactNode
   readonly onClick: () => void
   readonly disabled?: boolean
   readonly keyboardSelect?: boolean
 }
 
-const BaseItem: React.FunctionComponent<IBaseMenuItem> = ({
+const BaseItem: React.FunctionComponent<BaseItemProps> = ({
   component,
   onClick,
   disabled,
@@ -376,7 +376,7 @@ const BaseItem: React.FunctionComponent<IBaseMenuItem> = ({
   )
 }
 
-export interface IBaseMenuProps extends Omit<IPopOverProps, 'anchorEl'> {
+export interface BaseMenuProps extends Omit<PopOverProps, 'anchorEl'> {
   /**
    * The icon element.
    */
@@ -392,7 +392,7 @@ export interface IBaseMenuProps extends Omit<IPopOverProps, 'anchorEl'> {
   /**
    * Components to render
    */
-  readonly components: ReadonlyArray<IBaseMenuItem>
+  readonly components: ReadonlyArray<BaseItemProps>
 }
 
 /**
@@ -401,7 +401,7 @@ export interface IBaseMenuProps extends Omit<IPopOverProps, 'anchorEl'> {
  * Anchor with a button that toggles a menu when you click the button.
  * When pressing the escape key, the menu is closed.
  */
-export const BaseMenu = memo<IBaseMenuProps>(
+export const BaseMenu = memo<BaseMenuProps>(
   ({
     icon = MoreVertIcon,
     align = 'left',

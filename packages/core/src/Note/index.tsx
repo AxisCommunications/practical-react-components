@@ -25,7 +25,7 @@ const NoteTextWrapper = styled.div`
   margin-left: ${spacing.medium};
 `
 
-interface INoteProps extends BaseProps {
+interface NoteProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -40,7 +40,7 @@ interface INoteProps extends BaseProps {
   readonly icon: IconType
 }
 
-export const Note: React.FunctionComponent<INoteProps> = ({
+export const Note: React.FunctionComponent<NoteProps> = ({
   text,
   icon,
   ...props

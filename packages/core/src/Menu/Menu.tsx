@@ -4,7 +4,7 @@ import styled, { css, useTheme } from 'styled-components'
 import { componentSize, spacing } from '../designparams'
 import { Typography } from '../Typography'
 import { Icon, IconType } from '../Icon'
-import { BaseMenu, IBaseMenuItem, IBaseMenuProps } from './BaseMenu'
+import { BaseMenu, BaseItemProps, BaseMenuProps } from './BaseMenu'
 
 export const MenuItem = styled.div<{
   readonly divider?: boolean
@@ -35,8 +35,8 @@ const MenuItemIcon = styled(Icon)`
   color: ${({ theme }) => theme.color.text05()};
 `
 
-export interface IMenuItem
-  extends Omit<IBaseMenuItem, 'component' | 'keyboardSelect'> {
+export interface MenuItemProps
+  extends Omit<BaseItemProps, 'component' | 'keyboardSelect'> {
   readonly icon?: IconType
   readonly label: string
   readonly divider?: boolean
@@ -48,11 +48,11 @@ export interface IMenuItem
   readonly compact?: boolean
 }
 
-interface IMenuProps extends Omit<IBaseMenuProps, 'components'> {
+interface MenuProps extends Omit<BaseMenuProps, 'components'> {
   /**
    * An array of items in the drop down menu.
    */
-  readonly items: ReadonlyArray<IMenuItem>
+  readonly items: ReadonlyArray<MenuItemProps>
   /**
    * Override theme's default setting for `compact` if set.
 
@@ -65,7 +65,7 @@ interface IMenuProps extends Omit<IBaseMenuProps, 'components'> {
  *
  * Forwards props to BaseMenu
  */
-export const Menu = memo<IMenuProps>(
+export const Menu = memo<MenuProps>(
   ({ items, compact: compactFromProps, ...props }) => {
     const { compact: compactFromTheme } = useTheme()
     const compact = compactFromProps ?? compactFromTheme
@@ -74,7 +74,7 @@ export const Menu = memo<IMenuProps>(
      * Creates array of components using MenuItem to
      * forward to Base Menu
      */
-    const components = useMemo<ReadonlyArray<IBaseMenuItem>>(
+    const components = useMemo<ReadonlyArray<BaseItemProps>>(
       () =>
         items.map(item => {
           const { icon, label, divider, danger } = item

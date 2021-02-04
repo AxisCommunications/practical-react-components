@@ -4,7 +4,7 @@ import {
   NumberInput,
   NumberInputType,
   TimeInput,
-  ITimeInputValues,
+  TimeInputValues,
 } from 'practical-react-components-core'
 
 export const meta = {
@@ -16,12 +16,12 @@ export const meta = {
 const Test = () => {
   const [textInputValue, setTextInputValue] = useState('test 1')
   const [numberInputValue, setNumberInputValue] = useState<NumberInputType>(12)
-  const [timeInputValue, setTimeInputValue] = useState<ITimeInputValues>({
+  const [timeInputValue, setTimeInputValue] = useState<TimeInputValues>({
     hour: 22,
     minute: 33,
     second: 44,
   })
-  const [hour12Value, setHour12Value] = useState<ITimeInputValues>({
+  const [hour12Value, setHour12Value] = useState<TimeInputValues>({
     hour: 0,
     minute: 0,
     second: 0,

@@ -3,12 +3,12 @@ import styled, { css } from 'styled-components'
 import { useHistory } from 'react-router-dom'
 import {
   ExpandableList,
-  IExpandableListItem,
+  ExpandableListItemType,
   IconButton,
 } from 'practical-react-components-core'
 import { HamburgerMenuIcon } from 'practical-react-components-icons'
 
-import { Components, IComponent } from './types'
+import { Components, Component } from './types'
 
 function groupBy<T, K>(list: ReadonlyArray<T>, getKey: (item: T) => K) {
   const map = new Map<K, Array<T>>()
@@ -45,18 +45,18 @@ const ExpandableListContainer = styled.div`
   overflow-y: auto;
 `
 
-interface IMenuProps {
+interface MenuProps {
   readonly components: Components
 }
 
-interface IComponentGroup extends IComponent {
-  readonly id: IExpandableListItem['id']
-  readonly label: IExpandableListItem['label']
-  readonly icon: IExpandableListItem['icon']
-  readonly selected: IExpandableListItem['selected']
+interface ComponentGroup extends Component {
+  readonly id: ExpandableListItemType['id']
+  readonly label: ExpandableListItemType['label']
+  readonly icon: ExpandableListItemType['icon']
+  readonly selected: ExpandableListItemType['selected']
 }
 
-export const Menu: React.FC<IMenuProps> = ({ components }) => {
+export const Menu: React.FC<MenuProps> = ({ components }) => {
   const [showNavigation, setShowNavigation] = useState<boolean>(true)
   const history = useHistory()
   const selectTab = useCallback((route: string) => history.push(route), [
@@ -79,14 +79,14 @@ export const Menu: React.FC<IMenuProps> = ({ components }) => {
             ? (window.location.href = c.route)
             : selectTab(c.route),
         ...c,
-      })) as unknown) as ReadonlyArray<IComponentGroup>,
+      })) as unknown) as ReadonlyArray<ComponentGroup>,
     [history.location.pathname, components, selectTab]
   )
 
   const groupedComponents = useMemo(
     () =>
       groupBy(mappedComponents, item => item.menu).reduce(
-        (acc: ReadonlyArray<IExpandableListItem>, g) => {
+        (acc: ReadonlyArray<ExpandableListItemType>, g) => {
           const nested = g[0].menu !== undefined
           const name: string = nested ? g[0].menu : ''
 

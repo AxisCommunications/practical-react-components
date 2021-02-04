@@ -36,7 +36,7 @@ const ProgressLabel = styled(Typography).attrs({
   color: ${({ theme }) => theme.color.text03()};
 `
 
-interface IProgressProps extends BaseProps {
+interface ProgressProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -52,7 +52,7 @@ interface IProgressProps extends BaseProps {
   readonly label: string
 }
 
-export const Progress: React.FC<IProgressProps> = ({
+export const Progress: React.FC<ProgressProps> = ({
   value,
   label,
   ...props

@@ -9,7 +9,7 @@ import {
   ToastId,
 } from 'practical-react-components-core'
 
-import { IProgressToast } from './toastCreators'
+import { ProgressToast } from './toastCreators'
 
 export const meta = {
   name: 'Toast',
@@ -108,8 +108,8 @@ const ToastCypressTest = () => {
 
   const progressFactory = useCallback(
     (
-      label: IProgressToast['label'],
-      message?: IProgressToast['message'],
+      label: ProgressToast['label'],
+      message?: ProgressToast['message'],
       toastId?: ToastId
     ): readonly [string, (value: number) => string] => {
       const show = (id: string | undefined, value: number) =>

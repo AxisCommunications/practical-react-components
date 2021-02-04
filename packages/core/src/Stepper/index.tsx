@@ -4,18 +4,18 @@ import styled from 'styled-components'
 import { spacing } from '../designparams'
 import { Button } from '../Button'
 import { Paper } from '../Paper'
-import { IStepContent, IStepperAction, Step, StepControls } from './Step'
+import { StepContent, StepperAction, Step, StepControls } from './Step'
 
 const StepperWrapper = styled(Paper)`
   padding: ${spacing.large} ${spacing.extraLarge} ${spacing.large} 36px;
   box-shadow: none;
 `
 
-export { IStepContent, IStepperAction } from './Step'
+export { StepContent, StepperAction } from './Step'
 
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
-export interface IStepperProps extends BaseProps {
+export interface StepperProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -23,26 +23,26 @@ export interface IStepperProps extends BaseProps {
   /**
    * The steps passed to the stepper.
    */
-  readonly steps: ReadonlyArray<IStepContent>
+  readonly steps: ReadonlyArray<StepContent>
   /**
    * The function that run on action button click in the last stepper step.
    */
-  readonly completeAction: IStepperAction
+  readonly completeAction: StepperAction
   /**
    * The function that runs on previous button click.
    */
-  readonly prevAction: IStepperAction
+  readonly prevAction: StepperAction
   /**
    * The function that runs on next button click.
    */
-  readonly nextAction: IStepperAction
+  readonly nextAction: StepperAction
   /**
    * The function that runs on reset button click.
    */
-  readonly resetAction: IStepperAction
+  readonly resetAction: StepperAction
 }
 
-export const Stepper: React.FC<IStepperProps> = ({
+export const Stepper: React.FC<StepperProps> = ({
   steps,
   completeAction,
   prevAction,

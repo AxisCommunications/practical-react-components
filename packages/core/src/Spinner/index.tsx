@@ -30,11 +30,11 @@ const rotate = keyframes`
 
 type SpinnerType = 'primary' | 'dashed'
 
-interface ICircleProps {
+interface CircleProps {
   readonly type: SpinnerType
 }
 
-const Circle = styled.div<ICircleProps>`
+const Circle = styled.div<CircleProps>`
   width: ${SPINNER_SIZE};
   height: ${SPINNER_SIZE};
   box-sizing: border-box;
@@ -66,7 +66,7 @@ const Label = styled.div`
   color: ${({ theme }) => theme.color.text01()};
 `
 
-interface ISpinnerProps extends BaseProps {
+interface SpinnerProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -81,7 +81,7 @@ interface ISpinnerProps extends BaseProps {
   readonly label?: string
 }
 
-export const Spinner: React.FC<ISpinnerProps> = ({
+export const Spinner: React.FC<SpinnerProps> = ({
   type = 'primary',
   label,
   ...props

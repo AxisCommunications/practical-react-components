@@ -2,17 +2,17 @@ import React from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   NumberInput,
-  INumberInputProps,
+  NumberInputProps,
   withField,
 } from 'practical-react-components-core'
 
-export interface IFormikNumberInputProps
-  extends Omit<INumberInputProps, 'name' | 'value'>,
+export interface FormikNumberInputProps
+  extends Omit<NumberInputProps, 'name' | 'value'>,
     Pick<FieldConfig, 'name' | 'validate'> {
   readonly value?: number
 }
 
-export const FormikNumberInput: React.FC<IFormikNumberInputProps> = ({
+export const FormikNumberInput: React.FC<FormikNumberInputProps> = ({
   name,
   validate,
   ...props

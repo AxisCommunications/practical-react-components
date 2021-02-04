@@ -261,8 +261,7 @@ const ErrorMessageText: React.FC<ErrorMessageTextProps> = ({
   return hasOverflow ? <Tooltip text={error}>{text}</Tooltip> : text
 }
 
-interface IBaseInputProps<T extends string | NumberInputType>
-  extends BaseProps {
+interface BaseInputProps<T extends string | NumberInputType> extends BaseProps {
   /**
    * Specifies the name of an input element.
    */
@@ -333,7 +332,7 @@ function Input<T extends string | NumberInputType>({
   onKeyUp,
   inputRef,
   ...props
-}: IBaseInputProps<T>): JSX.Element {
+}: BaseInputProps<T>): JSX.Element {
   const containerRef = useRef<HTMLDivElement>(null)
   const [showPassword, setShowPassword] = useState(false)
   const { compact: compactFromTheme } = useTheme()
@@ -452,25 +451,25 @@ function Input<T extends string | NumberInputType>({
   )
 }
 
-export interface ITextInputProps extends IBaseInputProps<string> {}
-export const TextInput: React.FC<ITextInputProps> = props => (
+export interface TextInputProps extends BaseInputProps<string> {}
+export const TextInput: React.FC<TextInputProps> = props => (
   <Input {...props} type="text" />
 )
 
-export interface INumberInputProps extends IBaseInputProps<NumberInputType> {}
-export const NumberInput: React.FC<INumberInputProps> = props => (
+export interface NumberInputProps extends BaseInputProps<NumberInputType> {}
+export const NumberInput: React.FC<NumberInputProps> = props => (
   <Input {...props} type="number" />
 )
 
-export interface ITextInputCredentialsProps extends IBaseInputProps<string> {
+export interface TextInputCredentialsProps extends BaseInputProps<string> {
   readonly type: TextInputCredentialsType
 }
-export const TextInputCredentials: React.FC<ITextInputCredentialsProps> = props => (
+export const TextInputCredentials: React.FC<TextInputCredentialsProps> = props => (
   <Input {...props} />
 )
 
-export const TextInputField = withField<ITextInputProps>(TextInput)
-export const NumberInputField = withField<INumberInputProps>(NumberInput)
-export const TextInputCredentialsField = withField<ITextInputCredentialsProps>(
+export const TextInputField = withField<TextInputProps>(TextInput)
+export const NumberInputField = withField<NumberInputProps>(NumberInput)
+export const TextInputCredentialsField = withField<TextInputCredentialsProps>(
   TextInputCredentials
 )

@@ -2,16 +2,16 @@ import React from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   DurationInput,
-  IDurationInputProps,
+  DurationInputProps,
   withField,
 } from 'practical-react-components-core'
 
-export interface IFormikDurationInputProps
-  extends Omit<IDurationInputProps, 'name' | 'value' | 'onChange'>,
-    Partial<Pick<IDurationInputProps, 'value' | 'onChange'>>,
+export interface FormikDurationInputProps
+  extends Omit<DurationInputProps, 'name' | 'value' | 'onChange'>,
+    Partial<Pick<DurationInputProps, 'value' | 'onChange'>>,
     Pick<FieldConfig, 'name' | 'validate'> {}
 
-export const FormikDurationInput: React.FC<IFormikDurationInputProps> = ({
+export const FormikDurationInput: React.FC<FormikDurationInputProps> = ({
   name,
   validate,
   ...props

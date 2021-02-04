@@ -4,31 +4,31 @@ import styled, { ThemeProvider } from 'styled-components'
 import { ResizeObserver } from '@juggle/resize-observer'
 import { useId } from 'react-hooks-shareable'
 
-import { ITheme, defaultTheme } from './theme'
+import { Theme, defaultTheme } from './theme'
 import {
   ToastsProvider,
   ToastsAnchor,
-  IToastsPlacement,
+  ToastsPlacement,
 } from './Toast/ToastsProvider'
-import { ISimpleToastsDurations } from './Toast'
+import { SimpleToastsDurations } from './Toast'
 
 const PracticalRoot = styled.div`
   color: ${({ theme }) => theme.color.text01()};
 `
 
-interface IPracticalContext {
+interface PracticalContextType {
   readonly rootEl: HTMLElement | null | undefined
 }
 
-const PracticalContext = createContext<IPracticalContext>({
+const PracticalContext = createContext<PracticalContextType>({
   rootEl: undefined,
 })
 
-interface IToastsOptions {
+interface ToastsOptions {
   /**
    * Position of toasts on the page.
    */
-  readonly placement: IToastsPlacement
+  readonly placement: ToastsPlacement
   /**
    * Determine if toasts should be always on top (above any other modal layers),
    * or not (above the main application layer but below any other modal layers).
@@ -39,10 +39,10 @@ interface IToastsOptions {
   /**
    * Default toast durations
    */
-  readonly defaultDurations: ISimpleToastsDurations
+  readonly defaultDurations: SimpleToastsDurations
 }
 
-const DEFAULT_TOASTS_OPTIONS: IToastsOptions = {
+const DEFAULT_TOASTS_OPTIONS: ToastsOptions = {
   placement: { justify: 'right', top: '0' },
   alwaysOnTop: true,
   defaultDurations: {
@@ -50,20 +50,20 @@ const DEFAULT_TOASTS_OPTIONS: IToastsOptions = {
   },
 }
 
-interface IPracticalProvider extends ISimpleToastsDurations {
+interface PracticalProviderProps extends SimpleToastsDurations {
   /**
    * The Practical React Components theme to be used.
    */
-  readonly theme?: ITheme
+  readonly theme?: Theme
   /**
    * The toasts layout.
    *
    * @default Toasts are centered at the top and always visible.
    */
-  readonly toastsOptions?: IToastsOptions
+  readonly toastsOptions?: ToastsOptions
 }
 
-export const PracticalProvider: React.FC<IPracticalProvider> = ({
+export const PracticalProvider: React.FC<PracticalProviderProps> = ({
   theme = defaultTheme,
   toastsOptions = DEFAULT_TOASTS_OPTIONS,
   children,
@@ -107,21 +107,21 @@ const LayerContainer = styled.div<{ readonly zIndex?: number }>`
   z-index: ${({ zIndex = 0 }) => zIndex};
 `
 
-interface ILayerContext {
+interface LayerContextType {
   readonly el: HTMLElement | null
   readonly id: string
 }
 
-export const LayerContext = createContext<ILayerContext>({
+export const LayerContext = createContext<LayerContextType>({
   el: typeof document !== 'undefined' ? document.body : null,
   id: LAYER_ID_PREFIX,
 })
 
-interface ILayerProps {
+interface LayerProps {
   readonly zIndex?: number
 }
 
-export const Layer: React.FC<ILayerProps> = ({ children, zIndex }) => {
+export const Layer: React.FC<LayerProps> = ({ children, zIndex }) => {
   const { rootEl } = useContext(PracticalContext)
 
   const [el, ref] = useState<HTMLDivElement | null>(null)

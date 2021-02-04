@@ -2,10 +2,10 @@ import React from 'react'
 import 'jest-styled-components'
 
 import { SearchSelect } from '.'
-import { IOption } from './Select'
+import { Option } from './Select'
 import { TestRender } from '../TestUtils'
 
-const options: ReadonlyArray<IOption> = [
+const options: ReadonlyArray<Option> = [
   { value: 'test1', label: 'test1' },
   { value: 'test2', label: 'test2', disabled: true },
   { value: 'test3', label: 'test3' },

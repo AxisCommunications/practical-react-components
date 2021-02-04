@@ -2,23 +2,23 @@ import React, { useCallback, useMemo } from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   SelectField,
-  ISelectProps,
-  IOption,
+  SelectProps,
+  Option,
   withField,
 } from 'practical-react-components-core'
 
-interface IFormikNumberSelectOptions extends Omit<IOption, 'value'> {
+interface FormikNumberSelectOptions extends Omit<Option, 'value'> {
   readonly value: number
 }
 
-interface IFormikNumberSelectProps
-  extends Omit<ISelectProps, 'name' | 'value' | 'options'>,
+interface FormikNumberSelectProps
+  extends Omit<SelectProps, 'name' | 'value' | 'options'>,
     Pick<FieldConfig, 'name' | 'validate'> {
-  readonly options: ReadonlyArray<IFormikNumberSelectOptions>
+  readonly options: ReadonlyArray<FormikNumberSelectOptions>
   readonly value?: number
 }
 
-export const FormikNumberSelect: React.FC<IFormikNumberSelectProps> = ({
+export const FormikNumberSelect: React.FC<FormikNumberSelectProps> = ({
   name,
   validate,
   options,
@@ -30,7 +30,7 @@ export const FormikNumberSelect: React.FC<IFormikNumberSelectProps> = ({
     validate,
   })
   const optionString = useMemo(
-    () => options.map<IOption>(v => ({ ...v, value: v.value.toString() })),
+    () => options.map<Option>(v => ({ ...v, value: v.value.toString() })),
     [options]
   )
   const onBlur = useCallback(() => setTouched(true), [setTouched])

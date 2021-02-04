@@ -11,7 +11,7 @@ import * as practicalformik from 'practical-react-components-formik'
 
 import { FormikDemo } from './Formik'
 
-import { ThemeContext, IThemeName } from '../context'
+import { ThemeContext, ThemeName } from '../context'
 
 const CodeCard = styled(practicalcore.Card)<{
   readonly size: 'small' | 'large'
@@ -58,14 +58,14 @@ const Editor = styled.div`
   padding: ${practicalcore.spacing.large};
 `
 
-interface ICodeProps {
+interface CodeProps {
   readonly className: string
   readonly type?: 'demo' | 'live' | 'code'
   readonly size?: 'small' | 'large'
   readonly children: string
 }
 
-export const Code: React.FC<ICodeProps> = ({
+export const Code: React.FC<CodeProps> = ({
   children,
   className: cls,
   type = 'code',
@@ -74,7 +74,7 @@ export const Code: React.FC<ICodeProps> = ({
   const language = (cls?.replace(/language-/, '') ?? '') as Language
   const { themeName } = useContext(ThemeContext)
 
-  const theme = themeName === IThemeName.DEFAULT_THEME ? lightTheme : darkTheme
+  const theme = themeName === ThemeName.DEFAULT_THEME ? lightTheme : darkTheme
 
   const transformCode = useCallback((code: string) => {
     return `/** @jsx mdx */\n${code}`

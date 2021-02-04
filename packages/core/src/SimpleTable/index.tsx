@@ -72,11 +72,11 @@ const ScrollSpace = styled(TableHeaderCellContent)`
   padding: 0;
 `
 
-interface ISimpleTableHeaderProps {
+interface SimpleTableHeaderProps {
   readonly hasScrollSpace: boolean
 }
 
-const SimpleTableHeader: React.FC<ISimpleTableHeaderProps> = ({
+const SimpleTableHeader: React.FC<SimpleTableHeaderProps> = ({
   hasScrollSpace = false,
   children,
 }) => {
@@ -153,7 +153,7 @@ const TableCellContent = styled.td`
   text-overflow: ellipsis;
 `
 
-interface ISimpleTableRowProps extends BaseRowProps {
+interface SimpleTableRowProps extends BaseRowProps {
   readonly children: React.ReactNodeArray
   /**
    * `class` to be passed to the component.
@@ -169,7 +169,7 @@ interface ISimpleTableRowProps extends BaseRowProps {
   readonly onClick?: BaseRowProps['onClick']
 }
 
-export const SimpleTableRow: React.FC<ISimpleTableRowProps> = ({
+export const SimpleTableRow: React.FC<SimpleTableRowProps> = ({
   children,
   disabled = false,
   onClick,
@@ -234,7 +234,7 @@ const TableContentContainer = styled.tbody<{
   padding-bottom: ${spacing.medium};
 `
 
-interface ISimpleTableProps extends BaseProps {
+interface SimpleTableProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -255,7 +255,7 @@ interface ISimpleTableProps extends BaseProps {
   readonly header: React.ReactNode
 }
 
-export const SimpleTable: React.FC<ISimpleTableProps> = ({
+export const SimpleTable: React.FC<SimpleTableProps> = ({
   maxHeight,
   compact: compactFromProps,
   header,

@@ -11,7 +11,7 @@ import {
 import { Icon, IconType } from '../Icon'
 import { opacity, shape, componentSize } from '../designparams'
 import { Typography } from '../Typography'
-import { withField, IFieldProps } from '../utils'
+import { withField, FieldProps } from '../utils'
 
 /**
  *
@@ -143,7 +143,7 @@ const RadioLabel = styled.div`
 type BaseElement = HTMLInputElement
 type BaseProps = React.InputHTMLAttributes<BaseElement>
 
-export interface IRadioIconButtonProps<V extends string = string>
+export interface RadioIconButtonProps<V extends string = string>
   extends BaseProps {
   /**
    * Attributes a name to the RadioIconButton.
@@ -194,7 +194,7 @@ export function RadioIconButton<V extends string = string>({
   onPointerUp,
   onPointerDown,
   ...rest
-}: IRadioIconButtonProps<V>): JSX.Element {
+}: RadioIconButtonProps<V>): JSX.Element {
   const ref = React.createRef<BaseElement>()
   const pressed = usePressed(ref)
   const onChangeHandler = useCallback<RadioButtonChangeHandler>(
@@ -277,7 +277,7 @@ const RadioIconGroupContainer = styled.div`
   }
 `
 
-export interface IRadioIconGroupOption<V extends string = string> {
+export interface RadioIconGroupOption<V extends string = string> {
   readonly value: V
   readonly label: string
   readonly disabled?: boolean
@@ -287,9 +287,9 @@ export interface IRadioIconGroupOption<V extends string = string> {
 type GroupBaseElement = HTMLDivElement
 type GroupBaseProps = React.HTMLAttributes<GroupBaseElement>
 
-export interface IRadioIconGroupProps<V extends string = string>
+export interface RadioIconGroupProps<V extends string = string>
   extends GroupBaseProps {
-  readonly options: ReadonlyArray<IRadioIconGroupOption<V>>
+  readonly options: ReadonlyArray<RadioIconGroupOption<V>>
   readonly name?: string
   readonly value: V
   readonly onChange?: RadioButtonChangeHandler
@@ -305,7 +305,7 @@ export function RadioIconGroup<V extends string = string>({
   onValueChange,
   error,
   ...rest
-}: IRadioIconGroupProps<V>): JSX.Element {
+}: RadioIconGroupProps<V>): JSX.Element {
   return (
     <RadioIconGroupContainer {...rest}>
       {options.map((option, index) => (
@@ -327,5 +327,5 @@ export function RadioIconGroup<V extends string = string>({
 }
 
 export const RadioIconGroupField = <V extends string = string>(
-  props: IFieldProps & IRadioIconGroupProps<V>
-) => withField<IRadioIconGroupProps<V>>(RadioIconGroup)(props)
+  props: FieldProps & RadioIconGroupProps<V>
+) => withField<RadioIconGroupProps<V>>(RadioIconGroup)(props)

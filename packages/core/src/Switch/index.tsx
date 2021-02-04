@@ -8,15 +8,15 @@ import { Typography } from '../Typography'
 
 const SWITCH_THUMB_SIZE = '18px'
 
-interface IDisabledProps {
+interface DisabledProps {
   readonly disabled: boolean
 }
 
-interface ICheckedProps {
+interface CheckedProps {
   readonly checked: boolean
 }
 
-interface IVisibleFocusProps {
+interface VisibleFocusProps {
   readonly visibleFocus: boolean
 }
 
@@ -48,7 +48,7 @@ const ThumbHalo = styled.span`
   transition: transform 100ms;
 `
 
-const Thumb = styled.span<ICheckedProps>`
+const Thumb = styled.span<CheckedProps>`
   box-sizing: border-box;
   display: block;
   width: 100%;
@@ -69,9 +69,7 @@ const Thumb = styled.span<ICheckedProps>`
         `};
 `
 
-const Container = styled.div<
-  IDisabledProps & ICheckedProps & IVisibleFocusProps
->`
+const Container = styled.div<DisabledProps & CheckedProps & VisibleFocusProps>`
   display: inline-flex;
   align-items: center;
   vertical-align: middle;
@@ -139,7 +137,7 @@ const Container = styled.div<
       : undefined};
 `
 
-const TapArea = styled.label<IDisabledProps>`
+const TapArea = styled.label<DisabledProps>`
   position: relative;
   padding: ${spacing.medium};
   cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
@@ -166,7 +164,7 @@ const SwitchBox = styled.span`
   position: relative;
 `
 
-const TrackBefore = styled.span<ICheckedProps>`
+const TrackBefore = styled.span<CheckedProps>`
   display: block;
   height: 14px;
   border-radius: 7px;
@@ -190,7 +188,7 @@ type BaseProps = React.InputHTMLAttributes<BaseElement>
 export type SwitchChangeHandler = React.ChangeEventHandler<BaseElement>
 export type SwitchValueChangeHandler = (value: boolean) => void
 
-export interface ISwitchProps extends BaseProps {
+export interface SwitchProps extends BaseProps {
   /**
    * Specifies the name of an input element.
    */
@@ -218,7 +216,7 @@ export interface ISwitchProps extends BaseProps {
   readonly label?: string
 }
 
-export const Switch: React.FunctionComponent<ISwitchProps> = ({
+export const Switch: React.FunctionComponent<SwitchProps> = ({
   checked,
   disabled = false,
   onChange,
@@ -301,4 +299,4 @@ export const Switch: React.FunctionComponent<ISwitchProps> = ({
   )
 }
 
-export const SwitchField = withField<ISwitchProps>(Switch)
+export const SwitchField = withField<SwitchProps>(Switch)

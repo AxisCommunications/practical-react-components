@@ -4,14 +4,14 @@ import 'jest-styled-components'
 import { Table, TableHeader, TableRow, TableHeaderText } from '.'
 import { TestRender } from '../TestUtils'
 import { Typography } from '../Typography'
-import { IMenuItem, Menu } from '../Menu'
+import { MenuItemProps, Menu } from '../Menu'
 
 const NOOP = () => {
   /** */
 }
 const clickHandler = () => console.log('Menu item click')
 
-interface IDevice {
+interface Device {
   readonly serialNumber: string
   readonly name: string
   readonly ip: string
@@ -28,7 +28,7 @@ const TABLE_HEADER_DATA: ReadonlyArray<{
   { id: 'ip-address', title: 'IP address', width: 2 },
 ]
 
-const DEVICE_LIST: ReadonlyArray<IDevice> = [
+const DEVICE_LIST: ReadonlyArray<Device> = [
   { serialNumber: 'FACEFACE0001', name: 'a', ip: '192.168.0.1' },
   { serialNumber: 'FACEFACE0002', name: 'b', ip: '192.168.0.2' },
   {
@@ -48,7 +48,7 @@ const DEVICE_LIST: ReadonlyArray<IDevice> = [
   { serialNumber: 'FACEFACE0012', name: 'l', ip: '192.168.0.12' },
 ]
 
-const ITEMS: ReadonlyArray<Omit<IMenuItem, 'onClick'>> = [
+const ITEMS: ReadonlyArray<Omit<MenuItemProps, 'onClick'>> = [
   { label: 'Item 1' },
   { label: 'Item 2', divider: true },
   { label: 'Item 3', disabled: true, danger: true },

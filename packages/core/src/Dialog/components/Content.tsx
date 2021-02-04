@@ -49,13 +49,13 @@ const ScrollContainer = styled(Section)`
   overflow-y: overlay;
 `
 
-interface IScrollSection {
+interface ScrollSectionProps {
   readonly className?: string
   readonly maxHeight?: string
   readonly scrollRef: React.Dispatch<React.SetStateAction<HTMLElement | null>>
 }
 
-export const ScrollSection: React.FunctionComponent<IScrollSection> = ({
+export const ScrollSection: React.FunctionComponent<ScrollSectionProps> = ({
   className,
   maxHeight,
   scrollRef,

@@ -13,7 +13,7 @@ import { TableContext, WidthActionType } from './context'
  * from the beginning of the first column, and the widths of the columns
  * before and after the divider.
  */
-interface IColumnDivider {
+interface ColumnDivider {
   readonly offset: number
   readonly before: number
   readonly after: number
@@ -28,7 +28,7 @@ interface IColumnDivider {
  */
 const clipTranslation = (
   tx: number,
-  divider: IColumnDivider,
+  divider: ColumnDivider,
   minWidth: number
 ) => {
   const { before, after } = divider
@@ -104,13 +104,13 @@ const ResizeMarker = styled.div<{
  * a resize marker is shown to follow the change in width.
  */
 
-interface IColumnResizerProps {
-  readonly divider: IColumnDivider
+interface ColumnResizerProps {
+  readonly divider: ColumnDivider
   readonly setDragging: (dragging: boolean) => void
   readonly onDragEnd: (t: readonly [number, number]) => void
 }
 
-const ColumnResizer: React.FunctionComponent<IColumnResizerProps> = ({
+const ColumnResizer: React.FunctionComponent<ColumnResizerProps> = ({
   divider,
   setDragging,
   onDragEnd,
@@ -144,14 +144,14 @@ const ColumnResizer: React.FunctionComponent<IColumnResizerProps> = ({
  * A collection of resize handlers.
  */
 
-interface IColumnResizerRowProps {
+interface ColumnResizerRowProps {
   /**
    * Callback signaling start of a drag.
    */
   readonly setDragging: (dragging: boolean) => void
 }
 
-export const ColumnResizerRow: React.FunctionComponent<IColumnResizerRowProps> = ({
+export const ColumnResizerRow: React.FunctionComponent<ColumnResizerRowProps> = ({
   setDragging,
 }) => {
   const {

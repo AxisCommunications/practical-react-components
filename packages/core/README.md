@@ -41,10 +41,10 @@ with the following contents:
 
 ```typescript
 import 'styled-components'
-import { ITheme } from './theme'
+import { Theme } from './theme'
 
 declare module 'styled-components' {
-  export interface DefaultTheme extends ITheme {}
+  export interface DefaultTheme extends Theme {}
 }
 ```
 

@@ -31,7 +31,7 @@ const PaperDiv = styled.div<{
         `}
 `
 
-interface IPaperProps extends BaseProps {
+interface PaperProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -47,7 +47,7 @@ interface IPaperProps extends BaseProps {
 }
 
 /* eslint-disable-next-line react/display-name */
-export const Paper = forwardRef<BaseElement, IPaperProps>(
+export const Paper = forwardRef<BaseElement, PaperProps>(
   ({ square = false, space = false, children, ...props }, ref) => (
     <PaperDiv square={square} space={space} {...props} ref={ref}>
       {children}

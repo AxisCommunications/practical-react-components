@@ -2,16 +2,16 @@ import React from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   RadioButtonGroup,
-  IRadioButtonGroupProps,
+  RadioButtonGroupProps,
   withField,
 } from 'practical-react-components-core'
 
-export interface IFormikRadioButtonGroupProps
-  extends Omit<IRadioButtonGroupProps, 'name' | 'value'>,
-    Partial<Pick<IRadioButtonGroupProps, 'value'>>,
+export interface FormikRadioButtonGroupProps
+  extends Omit<RadioButtonGroupProps, 'name' | 'value'>,
+    Partial<Pick<RadioButtonGroupProps, 'value'>>,
     Pick<FieldConfig, 'name' | 'validate'> {}
 
-export const FormikRadioButtonGroup: React.FC<IFormikRadioButtonGroupProps> = ({
+export const FormikRadioButtonGroup: React.FC<FormikRadioButtonGroupProps> = ({
   name,
   validate,
   ...props

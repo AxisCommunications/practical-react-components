@@ -2,15 +2,15 @@ import React from 'react'
 
 import { Typography } from '../Typography'
 import { Button, ButtonClickHandler } from '../Button'
-import { IModalProps } from '../Modal'
+import { ModalProps } from '../Modal'
 import { Dialog, HeaderTitle } from './Dialog'
 
-export interface IConfirmDialogAction {
+export interface ConfirmDialogAction {
   readonly label: string
   readonly onClick: ButtonClickHandler
 }
 
-interface IConfirmDialogProps extends IModalProps {
+interface ConfirmDialogProps extends ModalProps {
   /**
    * When `true` the dialog is rendered, `false` removes the dialog.
    */
@@ -33,15 +33,15 @@ interface IConfirmDialogProps extends IModalProps {
    * The confirm action provides the label and click handler for the button that
    * allows the user to confimr the action and close the dialog.
    */
-  readonly confirmAction: IConfirmDialogAction
+  readonly confirmAction: ConfirmDialogAction
   /**
    * The cancel action provides the label and click handler for the button that
    * allows the user to cancel the action and close the dialog.
    */
-  readonly cancelAction: IConfirmDialogAction
+  readonly cancelAction: ConfirmDialogAction
 }
 
-export const ConfirmDialog: React.FC<IConfirmDialogProps> = ({
+export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
   open,
   onClose,
   title,

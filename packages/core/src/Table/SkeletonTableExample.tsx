@@ -4,7 +4,7 @@ import { useSelection } from 'react-hooks-shareable'
 
 import { Button } from '../Button'
 import { Typography } from '../Typography'
-import { Menu, IMenuItem } from '../Menu'
+import { Menu, MenuItemProps } from '../Menu'
 import { GlobalScrollbarStyle } from '../Global/GlobalScrollbarStyle'
 import { Table, TableHeader } from '.'
 import { SkeletonTableRows } from './SkeletonRows'
@@ -54,7 +54,7 @@ const NOOP = () => {
   /** */
 }
 
-const MENU_ITEMS: ReadonlyArray<IMenuItem> = [
+const MENU_ITEMS: ReadonlyArray<MenuItemProps> = [
   { label: 'Item 1', onClick: NOOP },
   { label: 'Item 2', divider: true, onClick: NOOP },
   { label: 'Item 3', disabled: true, danger: true, onClick: NOOP },

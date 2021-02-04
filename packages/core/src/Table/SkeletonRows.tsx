@@ -67,7 +67,7 @@ const SkeletonRowGrid = styled.div`
   }
 `
 
-interface ISkeletonRowProps {
+interface SkeletonRowProps {
   readonly gridTemplateColumns: string
   readonly hasCheckbox: boolean
   /**
@@ -76,7 +76,7 @@ interface ISkeletonRowProps {
   readonly columns: number
 }
 
-const SkeletonRow: React.FunctionComponent<ISkeletonRowProps> = React.memo(
+const SkeletonRow: React.FunctionComponent<SkeletonRowProps> = React.memo(
   ({ columns, gridTemplateColumns, hasCheckbox }) => {
     const columnArray: Array<undefined> = Array.from(new Array(columns))
 
@@ -98,7 +98,7 @@ const SkeletonRow: React.FunctionComponent<ISkeletonRowProps> = React.memo(
 )
 SkeletonRow.displayName = 'SkeletonRowComponent'
 
-interface ISkeletonTableRowsProps extends BaseProps {
+interface SkeletonTableRowsProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -106,7 +106,7 @@ interface ISkeletonTableRowsProps extends BaseProps {
   readonly rows: number
   readonly columns: number
 }
-export const SkeletonTableRows: React.FC<ISkeletonTableRowsProps> = React.memo(
+export const SkeletonTableRows: React.FC<SkeletonTableRowsProps> = React.memo(
   ({ rows, columns, ...props }) => {
     const rowArray: Array<undefined> = Array.from(new Array(rows))
 

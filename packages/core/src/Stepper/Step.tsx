@@ -7,7 +7,7 @@ import { Button, ButtonClickHandler } from '../Button'
 import { font } from '../theme'
 import { shape, spacing } from '../designparams'
 
-export interface IStepperAction {
+export interface StepperAction {
   /**
    * The label for the stepper button (previous, next or complete action).
    */
@@ -21,7 +21,7 @@ export interface IStepperAction {
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
 
-export interface IStepContent extends BaseProps {
+export interface StepContent extends BaseProps {
   /* Step's label */
   readonly label: string
   /* Step's content */
@@ -130,7 +130,7 @@ const StepLabel = styled(Typography)<{
   padding-left: 18px;
 `
 
-const StepContent = styled.div`
+const StepContentContainer = styled.div`
   padding: ${spacing.medium} 0 ${spacing.huge} 20px;
 `
 
@@ -149,23 +149,23 @@ const StepContentWrapper = styled.div<{
   margin-bottom: -8px;
 `
 
-interface IStepProps extends Omit<IStepContent, 'content'> {
+interface StepProps extends Omit<StepContent, 'content'> {
   /**
    * The function that run on action button click in the last stepper step.
    */
-  readonly completeAction: IStepperAction
+  readonly completeAction: StepperAction
   /**
    * The function that runs on previous button click.
    */
-  readonly prevAction: IStepperAction
+  readonly prevAction: StepperAction
   /**
    * The function that runs on next button click.
    */
-  readonly nextAction: IStepperAction
+  readonly nextAction: StepperAction
   /**
    * The function that runs on reset button click.
    */
-  readonly resetAction: IStepperAction
+  readonly resetAction: StepperAction
   /* Step's content */
   readonly children: React.ReactNode
   /* Current step's ID */
@@ -186,7 +186,7 @@ interface IStepProps extends Omit<IStepContent, 'content'> {
   readonly disableNext?: boolean
 }
 
-export const Step: React.FC<IStepProps> = ({
+export const Step: React.FC<StepProps> = ({
   children,
   label,
   hasErrors,
@@ -280,7 +280,9 @@ export const Step: React.FC<IStepProps> = ({
         <StepLabel variant="default-text" active={active} completed={completed}>
           {label}
         </StepLabel>
-        {active ? <StepContent>{children}</StepContent> : null}
+        {active ? (
+          <StepContentContainer>{children}</StepContentContainer>
+        ) : null}
         {active ? (
           <StepControls>
             {currentStep > 0 ? (

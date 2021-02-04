@@ -2,17 +2,17 @@ import React, { useCallback, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 
 import { spacing, shape, opacity, componentSize } from '../designparams'
-import { withField, IFieldProps } from '../utils'
+import { withField, FieldProps } from '../utils'
 
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
 
-interface IToggleButtonContainerProps {
+interface ToggleButtonContainerProps {
   readonly disabled: boolean
   readonly selected: boolean
 }
 
-const ToggleButtonContainer = styled.div<IToggleButtonContainerProps>`
+const ToggleButtonContainer = styled.div<ToggleButtonContainerProps>`
   box-sizing: border-box;
   max-width: 100%;
   position: relative;
@@ -42,11 +42,11 @@ const ToggleButtonContainer = styled.div<IToggleButtonContainerProps>`
   }}
 `
 
-interface IToggleButtonContentProps {
+interface ToggleButtonContentProps {
   readonly selected: boolean
 }
 
-const ToggleButtonContent = styled.div<IToggleButtonContentProps>`
+const ToggleButtonContent = styled.div<ToggleButtonContentProps>`
   background-color: ${({ theme }) => theme.color.background00()};
   height: 32px;
   width: 100%;
@@ -98,7 +98,7 @@ const ToggleButtonGrid = styled.div`
   border-radius: ${shape.radius.small};
 `
 
-interface IToggleButtonProps<T extends string | number> {
+interface ToggleButtonProps<T extends string | number> {
   /**
    * The id to associate with when selected.
    */
@@ -136,7 +136,7 @@ function ToggleButton<T extends string | number>({
   disabled = false,
   onClick,
   content,
-}: IToggleButtonProps<T>): JSX.Element {
+}: ToggleButtonProps<T>): JSX.Element {
   const selected = useMemo(() => values.some(value => value === id), [
     values,
     id,
@@ -163,7 +163,7 @@ function ToggleButton<T extends string | number>({
   )
 }
 
-export interface IToggleButtonGroup<T extends string | number> {
+export interface ToggleButtonGroupOption<T extends string | number> {
   /**
    * The id to associate with when selected.
    */
@@ -179,7 +179,7 @@ export interface IToggleButtonGroup<T extends string | number> {
   readonly disabled?: boolean
 }
 
-interface IToggleButtonGroupProps<T extends string | number>
+interface ToggleButtonGroupProps<T extends string | number>
   extends Omit<BaseProps, 'onChange'> {
   /**
    * `class` to be passed to the component.
@@ -188,7 +188,7 @@ interface IToggleButtonGroupProps<T extends string | number>
   /**
    * ToggleButton options with ID, react node element as content and disabled.
    */
-  readonly options: ReadonlyArray<IToggleButtonGroup<T>>
+  readonly options: ReadonlyArray<ToggleButtonGroupOption<T>>
   /**
    * Array of id values that should be toggled.
    */
@@ -205,7 +205,7 @@ export function ToggleButtonGroup<T extends string | number>({
   onChange,
   values,
   ...props
-}: IToggleButtonGroupProps<T>): JSX.Element {
+}: ToggleButtonGroupProps<T>): JSX.Element {
   return (
     <ToggleButtonGrid {...props}>
       {options.map(option => {
@@ -223,5 +223,5 @@ export function ToggleButtonGroup<T extends string | number>({
 }
 
 export const ToggleButtonGroupWithField = <T extends string | number>(
-  props: Pick<IFieldProps, 'label' | 'compact'> & IToggleButtonGroupProps<T>
-) => withField<IToggleButtonGroupProps<T>>(ToggleButtonGroup)(props)
+  props: Pick<FieldProps, 'label' | 'compact'> & ToggleButtonGroupProps<T>
+) => withField<ToggleButtonGroupProps<T>>(ToggleButtonGroup)(props)

@@ -126,7 +126,7 @@ type BaseProps = React.SelectHTMLAttributes<BaseElement>
 
 type SelectVariant = 'filled' | 'transparent'
 
-export interface ISelectNativeProps extends BaseProps {
+export interface SelectNativeProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -176,7 +176,7 @@ export interface ISelectNativeProps extends BaseProps {
   readonly disabled?: boolean
 }
 
-export const SelectNative: React.FunctionComponent<ISelectNativeProps> = ({
+export const SelectNative: React.FunctionComponent<SelectNativeProps> = ({
   value,
   options,
   onChange,

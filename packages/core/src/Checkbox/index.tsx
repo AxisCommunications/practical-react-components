@@ -161,7 +161,7 @@ type BaseProps = React.InputHTMLAttributes<BaseElement>
 export type CheckboxChangeHandler = React.ChangeEventHandler<BaseElement>
 export type CheckboxValueChangeHandler = (value: boolean) => void
 
-export interface ICheckboxProps extends BaseProps {
+export interface CheckboxProps extends BaseProps {
   /**
    * Specifies the name of an input element.
    */
@@ -198,7 +198,7 @@ export interface ICheckboxProps extends BaseProps {
   readonly onPartialValueChange?: CheckboxValueChangeHandler
 }
 
-export const Checkbox: React.FunctionComponent<ICheckboxProps> = ({
+export const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   checked,
   label,
   disabled = false,
@@ -305,4 +305,4 @@ export const Checkbox: React.FunctionComponent<ICheckboxProps> = ({
   )
 }
 
-export const CheckboxField = withField<ICheckboxProps>(Checkbox)
+export const CheckboxField = withField<CheckboxProps>(Checkbox)

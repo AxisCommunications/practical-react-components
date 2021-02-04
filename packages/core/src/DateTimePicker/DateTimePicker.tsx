@@ -15,12 +15,12 @@ import {
 } from './TimePicker'
 import { DatePicker } from './DatePicker'
 import { Typography } from '../Typography'
-import { Modal, IModalProps } from '../Modal'
+import { Modal, ModalProps } from '../Modal'
 import { Button } from '../Button'
 import { ToggleButtonGroup } from '../ToggleButtonGroup'
 import { Paper } from '../Paper'
 import { Icon } from '../Icon'
-import { ITranslationMeridiem } from './types'
+import { TranslationMeridiem } from './types'
 
 export enum DateTimeTabs {
   'TwentyFour' = '24',
@@ -64,17 +64,17 @@ const StyledPaper = styled(Paper)`
   justify-content: space-between;
 `
 
-export interface ISaveDateAction {
+export interface SaveDateAction {
   readonly label: string
   readonly onClick: (dateTime: string) => void
 }
 
-export interface ICloseDateAction {
+export interface CloseDateAction {
   readonly label: string
   readonly onClick: () => void
 }
 
-export interface IDateTimePickerProps extends IModalProps {
+export interface DateTimePickerProps extends ModalProps {
   /**
    * If `true` the date time picker dialog is shown.
    */
@@ -91,13 +91,13 @@ export interface IDateTimePickerProps extends IModalProps {
    * Label for the cancel button and a
    * function that fires when user clicks cancel button.
    */
-  readonly onCancelAction: ICloseDateAction
+  readonly onCancelAction: CloseDateAction
   /**
    * Label for the save button and a
    * function that fires when user clicks save button
    * @param dateTime Date string in ISO date format
    */
-  readonly onSaveAction: ISaveDateAction
+  readonly onSaveAction: SaveDateAction
   /**
    * Translation as locale string, used with javascript
    * Date object toLocaleString function.
@@ -120,7 +120,7 @@ export interface IDateTimePickerProps extends IModalProps {
    *
    * Default `AM` and `PM`
    */
-  readonly hour12MeridiemLabels?: ITranslationMeridiem
+  readonly hour12MeridiemLabels?: TranslationMeridiem
 }
 
 /**
@@ -128,7 +128,7 @@ export interface IDateTimePickerProps extends IModalProps {
  *
  * Dialog that can be used for date, time and time zone settings.
  */
-export const DateTimePicker: React.FC<IDateTimePickerProps> = ({
+export const DateTimePicker: React.FC<DateTimePickerProps> = ({
   open,
   date,
   lang = 'en',

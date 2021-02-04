@@ -11,7 +11,7 @@ import { GlobalScrollbarStyle, spacing } from 'practical-react-components-core'
 import { getLocalStorage } from 'react-hooks-shareable'
 
 import { components } from './mdx'
-import { ThemeProvider, IThemeName, THEME_NAME } from './context'
+import { ThemeProvider, ThemeName, THEME_NAME } from './context'
 import { Header } from './Header'
 import { Menu } from './Menu'
 import { Home } from './Home'
@@ -23,8 +23,7 @@ const practicalCoreModuleContext = require.context('./', true, /\.mdx$/)
 
 const paths = practicalCoreModuleContext.keys() as ReadonlyArray<string>
 const storage = getLocalStorage()
-const initialThemeName: IThemeName | undefined =
-  storage[THEME_NAME] ?? undefined
+const initialThemeName: ThemeName | undefined = storage[THEME_NAME] ?? undefined
 
 const componentDb = paths.map(path => {
   const componentModule = practicalCoreModuleContext(path)

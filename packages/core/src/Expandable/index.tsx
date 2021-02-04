@@ -17,7 +17,7 @@ const ExpandableHeader: React.FC<{
   return <Header onClick={onClick}>{children}</Header>
 }
 
-interface IExpandableProps extends BaseProps {
+interface ExpandableProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -34,7 +34,7 @@ interface IExpandableProps extends BaseProps {
   }
 }
 
-export const Expandable: React.FC<IExpandableProps> = ({
+export const Expandable: React.FC<ExpandableProps> = ({
   initialExpanded = false,
   children,
   ...props

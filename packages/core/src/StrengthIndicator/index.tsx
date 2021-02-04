@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { Typography } from '../Typography'
 import { spacing } from '../designparams'
-import { IColor } from '../theme'
+import { Color } from '../theme'
 
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
@@ -16,7 +16,7 @@ type BaseProps = React.HTMLAttributes<BaseElement>
  *
  * @param strength The level of strength (between 0 and 1)
  */
-const getStrengthColor = (strength: number, color: IColor) => {
+const getStrengthColor = (strength: number, color: Color) => {
   if (strength > 0.75) {
     return color.elementSuccess()
   }
@@ -66,7 +66,7 @@ const PasswordStrengthIndicator = styled.div`
   align-items: center;
 `
 
-export interface IStrengthIndicatorProps extends BaseProps {
+export interface StrengthIndicatorProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -81,7 +81,7 @@ export interface IStrengthIndicatorProps extends BaseProps {
   readonly helpText: string
 }
 
-export const StrengthIndicator: React.FC<IStrengthIndicatorProps> = ({
+export const StrengthIndicator: React.FC<StrengthIndicatorProps> = ({
   strength,
   helpText,
   ...props

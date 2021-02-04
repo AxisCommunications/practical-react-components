@@ -5,7 +5,7 @@ import { MoreIcon } from 'practical-react-components-icons'
 
 import { Button } from '../Button'
 import { Typography } from '../Typography'
-import { Menu, IMenuItem } from '../Menu'
+import { Menu, MenuItemProps } from '../Menu'
 import { GlobalScrollbarStyle } from '../Global/GlobalScrollbarStyle'
 import { Table, TableRow, TableHeader } from '.'
 import { TableHeaderText } from './TableCells'
@@ -63,7 +63,7 @@ const clickLogger = (id: string) => {
   return () => window.alert(`You clicked on: ${id}`)
 }
 
-const MENU_ITEMS: ReadonlyArray<IMenuItem> = [
+const MENU_ITEMS: ReadonlyArray<MenuItemProps> = [
   { label: 'Item 1', onClick: NOOP },
   { label: 'Item 2', divider: true, onClick: NOOP },
   {

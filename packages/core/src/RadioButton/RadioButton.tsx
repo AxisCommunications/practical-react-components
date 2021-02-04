@@ -2,7 +2,7 @@ import React, { useCallback, useMemo } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 import { usePressed, useVisibleFocus } from 'react-hooks-shareable'
 
-import { withField, IFieldProps } from '../utils'
+import { withField, FieldProps } from '../utils'
 import { spacing, opacity, componentSize, shape } from '../designparams'
 import { Typography } from '../Typography'
 
@@ -64,13 +64,13 @@ const SvgDot = styled.circle<{
     partial ? theme.color.text05() : theme.color.elementPrimary()};
 `
 
-interface IRadioButtonAtomProps {
+interface RadioButtonAtomProps {
   readonly checked: boolean
   readonly partial: boolean
   readonly error: string
 }
 
-export const RadioButtonAtom: React.FunctionComponent<IRadioButtonAtomProps> = ({
+export const RadioButtonAtom: React.FunctionComponent<RadioButtonAtomProps> = ({
   checked,
   partial,
   error,
@@ -229,7 +229,7 @@ export type RadioButtonValueChangeHandler<V extends string = string> = (
   value: V
 ) => void
 
-interface IRadioButtonProps<V extends string = string> extends BaseProps {
+interface RadioButtonProps<V extends string = string> extends BaseProps {
   /**
    * Attributes a name to the RadioButton.
    */
@@ -290,7 +290,7 @@ export function RadioButton<V extends string = string>({
   onPointerUp,
   onPointerDown,
   ...rest
-}: IRadioButtonProps<V>): JSX.Element {
+}: RadioButtonProps<V>): JSX.Element {
   const ref = React.createRef<BaseElement>()
   const pressed = usePressed(ref)
 
@@ -375,7 +375,7 @@ const RadioButtonGroupContainer = styled.div<{ readonly compact: boolean }>`
 `
 /* stylelint-enable */
 
-export interface IRadioButtonGroupOption<V extends string = string> {
+export interface RadioButtonGroupOption<V extends string = string> {
   readonly value: V
   readonly label: string
   readonly disabled?: boolean
@@ -384,14 +384,14 @@ export interface IRadioButtonGroupOption<V extends string = string> {
 type GroupBaseElement = HTMLDivElement
 type GroupBaseProps = React.HTMLAttributes<GroupBaseElement>
 
-export interface IRadioButtonGroupProps<V extends string = string>
+export interface RadioButtonGroupProps<V extends string = string>
   extends GroupBaseProps {
   /**
    * `class` to be passed to the component.
    */
   readonly className?: GroupBaseProps['className']
   readonly name?: string
-  readonly options: ReadonlyArray<IRadioButtonGroupOption<V>>
+  readonly options: ReadonlyArray<RadioButtonGroupOption<V>>
   readonly value: V
   readonly onChange?: RadioButtonChangeHandler
   readonly onValueChange?: RadioButtonValueChangeHandler<V>
@@ -412,7 +412,7 @@ export function RadioButtonGroup<V extends string = string>({
   error,
   compact: compactFromProps,
   ...rest
-}: IRadioButtonGroupProps<V>): JSX.Element {
+}: RadioButtonGroupProps<V>): JSX.Element {
   const { compact: compactFromTheme } = useTheme()
   const compact = compactFromProps ?? compactFromTheme
 
@@ -436,5 +436,5 @@ export function RadioButtonGroup<V extends string = string>({
 }
 
 export const RadioButtonGroupField = <V extends string = string>(
-  props: IFieldProps & IRadioButtonGroupProps<V>
-) => withField<IRadioButtonGroupProps<V>>(RadioButtonGroup)(props)
+  props: FieldProps & RadioButtonGroupProps<V>
+) => withField<RadioButtonGroupProps<V>>(RadioButtonGroup)(props)

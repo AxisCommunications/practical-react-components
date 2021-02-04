@@ -6,7 +6,7 @@
  * as components are built to conform to these properties.
  */
 
-interface ISpacing {
+interface Spacing {
   readonly extraSmall: '2px'
   readonly small: '4px'
   readonly medium: '8px'
@@ -23,7 +23,7 @@ interface ISpacing {
  * @extraLarge '24px',
  * @huge '32px',
  */
-export const spacing: ISpacing = {
+export const spacing: Spacing = {
   extraSmall: '2px',
   small: '4px',
   medium: '8px',
@@ -32,19 +32,19 @@ export const spacing: ISpacing = {
   huge: '32px',
 }
 
-interface IRadius {
+interface Radius {
   readonly circle: '50%'
   readonly small: '2px'
   readonly medium: '4px'
   readonly large: '8px'
 }
-interface IShape {
-  readonly radius: IRadius
+interface Shape {
+  readonly radius: Radius
 }
 /**
  * Basic shapes
  */
-export const shape: IShape = {
+export const shape: Shape = {
   radius: {
     circle: '50%',
     small: '2px',
@@ -53,7 +53,7 @@ export const shape: IShape = {
   },
 }
 
-interface IComponentSize {
+interface ComponentSize {
   readonly mini: '24px'
   readonly small: '32px'
   readonly medium: '40px'
@@ -68,7 +68,7 @@ interface IComponentSize {
  * @large '48px',
  * @extraLarge '56px',
  */
-export const componentSize: IComponentSize = {
+export const componentSize: ComponentSize = {
   mini: '24px',
   small: '32px',
   medium: '40px',
@@ -76,7 +76,7 @@ export const componentSize: IComponentSize = {
   extraLarge: '56px',
 }
 
-interface IIconsize {
+interface Iconsize {
   readonly small: '16px'
   readonly medium: '24px'
   readonly large: '40px'
@@ -89,14 +89,14 @@ interface IIconsize {
  * @large '40px',
  * @extraLarge '80px',
  */
-export const iconSize: IIconsize = {
+export const iconSize: Iconsize = {
   small: '16px',
   medium: '24px',
   large: '40px',
   extraLarge: '80px',
 }
 
-interface IOpacity {
+interface Opacity {
   readonly 16: 0.16
   readonly 24: 0.24
   readonly 40: 0.4
@@ -105,7 +105,7 @@ interface IOpacity {
 /**
  * Opacities
  */
-export const opacity: IOpacity = {
+export const opacity: Opacity = {
   16: 0.16,
   24: 0.24,
   40: 0.4,
