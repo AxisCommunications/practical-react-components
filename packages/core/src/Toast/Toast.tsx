@@ -12,7 +12,7 @@ import {
 } from '../designparams'
 import { Icon } from '../Icon'
 
-import { IBaseToast, ToastId } from './context'
+import { BaseToastValue, ToastId } from './context'
 
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
@@ -127,7 +127,7 @@ const ToastWrapper = styled.div.attrs<{ readonly zIndex: number }>(
  * BaseToast
  */
 
-interface IBaseToastProps extends IBaseToast, BaseProps {
+interface BaseToastProps extends BaseToastValue, BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -142,7 +142,7 @@ interface IBaseToastProps extends IBaseToast, BaseProps {
  * Child elements are passed as props.
  */
 export const BaseToast = React.memo(
-  React.forwardRef<HTMLDivElement | null, IBaseToastProps>(
+  React.forwardRef<HTMLDivElement | null, BaseToastProps>(
     (
       {
         toastId,

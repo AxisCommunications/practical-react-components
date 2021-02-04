@@ -1,6 +1,11 @@
-import { IBaseToast, IToastAction, IToastActionType, ToastId } from './context'
+import {
+  BaseToastValue,
+  ToastAction,
+  ToastActionType,
+  ToastId,
+} from './context'
 
-export type IToastsMap = ReadonlyMap<ToastId, IBaseToast>
+export type ToastsMap = ReadonlyMap<ToastId, BaseToastValue>
 
 /**
  * Given the current state (toast map) and an action,
@@ -10,19 +15,19 @@ export type IToastsMap = ReadonlyMap<ToastId, IBaseToast>
  * @param state The map of id -> toast connections
  * @param action The required action
  */
-export const toastReducer = (state: IToastsMap, action: IToastAction) => {
+export const toastReducer = (state: ToastsMap, action: ToastAction) => {
   switch (action.type) {
-    case IToastActionType.TOAST_CREATE: {
+    case ToastActionType.TOAST_CREATE: {
       const toastMap = new Map(state)
       toastMap.set(action.id, action.data)
       return toastMap
     }
-    case IToastActionType.TOAST_REMOVE: {
+    case ToastActionType.TOAST_REMOVE: {
       const toastMap = new Map(state)
       toastMap.delete(action.id)
       return toastMap
     }
-    case IToastActionType.TOAST_REMOVE_ALL: {
+    case ToastActionType.TOAST_REMOVE_ALL: {
       return new Map()
     }
     default:

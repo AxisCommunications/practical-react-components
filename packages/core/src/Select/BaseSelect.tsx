@@ -14,9 +14,9 @@ import { SmallerCheckIcon } from './icons'
 import { componentSize, shape, spacing } from '../designparams'
 import { Typography } from '../Typography'
 import { getWidth, scrollIntoView, findPrevIndex, findNextIndex } from './utils'
-import { ISelectMarker } from '../theme'
+import { SelectMarker } from '../theme'
 
-import { PopOver, IPopOverProps } from '../PopOver'
+import { PopOver, PopOverProps } from '../PopOver'
 import { anchorPosition } from '../PopOver/utils'
 import { SelectVariant, BaseSelectSelector } from './BaseSelectSelector'
 
@@ -115,18 +115,18 @@ const CheckItemRow = styled.div`
   }
 `
 
-interface ISelectOption extends IBaseOption {
+interface SelectOption extends BaseOption {
   readonly index: number
   // eslint-disable-next-line functional/prefer-readonly-type
-  readonly itemRefs: ISelectPopoverProps['itemRefs']
+  readonly itemRefs: SelectPopoverProps['itemRefs']
   readonly compact: boolean
   readonly selected: boolean
-  readonly selectMarker: ISelectMarker
+  readonly selectMarker: SelectMarker
   readonly role?: string
   readonly onClick?: (event: React.SyntheticEvent) => void
 }
 
-const SelectOption: React.FC<ISelectOption> = ({
+const SelectOptionComponent: React.FC<SelectOption> = ({
   value,
   disabled = false,
   onClick,
@@ -174,9 +174,9 @@ const SelectOption: React.FC<ISelectOption> = ({
   )
 }
 
-interface ISelectPopoverProps<V extends string = string>
-  extends Required<Pick<IBaseSelectProps, 'direction' | 'align' | 'compact'>>,
-    IPopOverProps {
+interface SelectPopoverProps<V extends string = string>
+  extends Required<Pick<BaseSelectProps, 'direction' | 'align' | 'compact'>>,
+    PopOverProps {
   readonly anchorEl: HTMLDivElement | null
   readonly onKeyDown: (event: React.KeyboardEvent) => void
   readonly isOpen: boolean
@@ -185,13 +185,13 @@ interface ISelectPopoverProps<V extends string = string>
   readonly itemRefs: React.MutableRefObject<Map<number, HTMLLIElement>>
   readonly valueIndex: number | null
   readonly optionHandlers: ReadonlyArray<(event: React.SyntheticEvent) => void>
-  readonly options: ReadonlyArray<IBaseOption<V>>
+  readonly options: ReadonlyArray<BaseOption<V>>
   readonly noOptionsLabel?: string
   readonly onScroll: VoidFunction
-  readonly selectMarker: ISelectMarker
+  readonly selectMarker: SelectMarker
 }
 
-export const SelectPopover: React.FC<ISelectPopoverProps> = ({
+export const SelectPopover: React.FC<SelectPopoverProps> = ({
   anchorEl,
   compact: compactFromProps,
   selectMarker: selectMarkerFromProps,
@@ -285,7 +285,7 @@ export const SelectPopover: React.FC<ISelectPopoverProps> = ({
           </NoOptionsText>
         ) : (
           options.map((option, index) => (
-            <SelectOption
+            <SelectOptionComponent
               key={option.value}
               value={option.value}
               disabled={option.disabled}
@@ -321,7 +321,7 @@ export enum SelectKeys {
   Esc = 'Esc',
 }
 
-export interface IBaseOption<V extends string = string> {
+export interface BaseOption<V extends string = string> {
   readonly value: V
   readonly component: ReactNode
   readonly disabled?: boolean
@@ -329,9 +329,9 @@ export interface IBaseOption<V extends string = string> {
 
 export type SelectHandler<V extends string = string> = (value: V) => void
 
-export interface IBaseSelectProps<V extends string = string>
+export interface BaseSelectProps<V extends string = string>
   extends Omit<
-    IPopOverProps,
+    PopOverProps,
     'anchorEl' | 'value' | 'onChange' | 'onBlur' | 'onKeyDown'
   > {
   /**
@@ -343,7 +343,7 @@ export interface IBaseSelectProps<V extends string = string>
   /**
    * Used to create an array of selectable options.
    */
-  readonly options: ReadonlyArray<IBaseOption<V>>
+  readonly options: ReadonlyArray<BaseOption<V>>
   /**
    * Executes a JavaScript when a user changes the selected option of an element.
    */
@@ -364,7 +364,7 @@ export interface IBaseSelectProps<V extends string = string>
    * Override theme's default setting for `selectMarker` if set.
    * Used to choose between `background` or `check`.
    */
-  readonly selectMarker?: ISelectMarker
+  readonly selectMarker?: SelectMarker
   /**
    * Used to choose between `filled` or `transparent` or`framed` variant.
    * Default: `filled`
@@ -418,7 +418,7 @@ export function BaseSelect<V extends string = string>({
   error = '',
   noOptionsLabel,
   ...props
-}: IBaseSelectProps<V>): JSX.Element {
+}: BaseSelectProps<V>): JSX.Element {
   const {
     compact: compactFromTheme,
     selectMarker: selectMarkerFromTheme,
@@ -435,7 +435,7 @@ export function BaseSelect<V extends string = string>({
 
   const optionMap = useMemo(() => {
     return new Map(
-      options.map<[V, IBaseOption<V> & { readonly index: number }]>(
+      options.map<[V, BaseOption<V> & { readonly index: number }]>(
         (option, index) => {
           return [option.value, { ...option, index }]
         }

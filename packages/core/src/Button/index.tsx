@@ -204,7 +204,7 @@ type ButtonType = 'button' | 'submit' | 'reset'
 export type ButtonVariantType = 'primary' | 'secondary'
 export type ButtonClickHandler = React.MouseEventHandler<BaseElement>
 
-interface IBaseButtonProps extends BaseProps {
+interface BaseButtonProps extends BaseProps {
   /**
    * Specifies the name for a <button> element.
    */
@@ -230,7 +230,7 @@ interface IBaseButtonProps extends BaseProps {
   readonly accent?: boolean
 }
 
-export interface IButtonProps extends IBaseButtonProps {
+export interface ButtonProps extends BaseButtonProps {
   /**
    * String used to label the button.
    */
@@ -242,7 +242,7 @@ export interface IButtonProps extends IBaseButtonProps {
 }
 
 /* eslint-disable-next-line react/display-name */
-export const Button = React.forwardRef<BaseElement, IButtonProps>(
+export const Button = React.forwardRef<BaseElement, ButtonProps>(
   (
     {
       disabled = false,
@@ -422,7 +422,7 @@ const IconButtonHalo = styled.div<{ readonly accent: boolean }>`
   transition: transform 100ms;
 `
 
-export interface IIconButtonProps extends IBaseButtonProps {
+export interface IconButtonProps extends BaseButtonProps {
   /**
    * Icon that shows inside Button.
    */
@@ -430,7 +430,7 @@ export interface IIconButtonProps extends IBaseButtonProps {
 }
 
 /* eslint-disable-next-line react/display-name */
-export const IconButton = React.forwardRef<BaseElement, IIconButtonProps>(
+export const IconButton = React.forwardRef<BaseElement, IconButtonProps>(
   (
     {
       disabled,

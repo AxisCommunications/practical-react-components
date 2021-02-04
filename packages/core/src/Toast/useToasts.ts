@@ -14,15 +14,15 @@ import {
 import {
   ActionToastCreator,
   HideToastHandler,
-  IToastAction,
-  IToastCallbacks,
+  ToastAction,
+  ToastCallbacks,
   ProgressToastCreator,
   ShowToastHandler,
   SimpleToastCreator,
   ToastsContext,
 } from './context'
 
-export interface ISimpleToastsDurations {
+export interface SimpleToastsDurations {
   readonly success?: number
   readonly error?: number
   readonly warning?: number
@@ -30,9 +30,9 @@ export interface ISimpleToastsDurations {
 }
 
 export const useToastCallbacks = (
-  dispatchRef: MutableRefObject<Dispatch<IToastAction>>,
-  { success, error, warning, info }: ISimpleToastsDurations = {}
-): IToastCallbacks => {
+  dispatchRef: MutableRefObject<Dispatch<ToastAction>>,
+  { success, error, warning, info }: SimpleToastsDurations = {}
+): ToastCallbacks => {
   const showToast: ShowToastHandler = useCallback(
     (toast, id) => {
       const toastAction = createToast(toast, id)

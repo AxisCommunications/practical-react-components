@@ -9,8 +9,8 @@ import React, {
 import styled from 'styled-components'
 import { useBoolean } from 'react-hooks-shareable'
 
-import { Typography, ITypographyProps } from '../Typography'
-import { PopOver, IPopOverProps } from '../PopOver'
+import { Typography, TypographyProps } from '../Typography'
+import { PopOver, PopOverProps } from '../PopOver'
 import { shape, spacing, componentSize } from '../designparams'
 import { font } from '../theme'
 
@@ -100,7 +100,7 @@ const StyledExpandedTooltipTypography = styled(Typography).attrs({
 `
 
 export const ExpandedTooltipTypography: React.FC<
-  Omit<ITypographyProps, 'variant'>
+  Omit<TypographyProps, 'variant'>
 > = ({ children }) => (
   <StyledExpandedTooltipTypography>{children}</StyledExpandedTooltipTypography>
 )
@@ -122,7 +122,7 @@ const ToolTipDownArrow = styled.div`
   border-top: 5px solid ${({ theme }) => theme.color.background00()};
 `
 
-interface ITooltipProps extends Omit<IPopOverProps, 'anchorEl'> {
+interface TooltipProps extends Omit<PopOverProps, 'anchorEl'> {
   /**
    * Optional Tooltip variant.
    * Default: `default`
@@ -134,7 +134,7 @@ interface ITooltipProps extends Omit<IPopOverProps, 'anchorEl'> {
   readonly text: string
 }
 
-interface IExpandedTooltipProps extends Omit<IPopOverProps, 'anchorEl'> {
+interface ExpandedTooltipProps extends Omit<PopOverProps, 'anchorEl'> {
   /**
    * Required Tooltip variant.
    */
@@ -154,7 +154,7 @@ interface IExpandedTooltipProps extends Omit<IPopOverProps, 'anchorEl'> {
   readonly contents: React.ReactNode
 }
 
-export const Tooltip: React.FC<ITooltipProps | IExpandedTooltipProps> = ({
+export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
   children,
   ...props
 }) => {

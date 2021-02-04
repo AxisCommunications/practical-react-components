@@ -73,7 +73,7 @@ export const CardContent = styled(CardPlainContent)`
 
 export type CardWidthType = 'small' | 'medium' | 'full'
 
-export interface ICardProps extends BaseProps {
+export interface CardProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -92,7 +92,7 @@ export interface ICardProps extends BaseProps {
   readonly square?: boolean
 }
 
-export const Card: React.FC<ICardProps> = ({
+export const Card: React.FC<CardProps> = ({
   width = 'full',
   square = true,
   children,
@@ -103,7 +103,7 @@ export const Card: React.FC<ICardProps> = ({
   </CardContainer>
 )
 
-export const PanelCard: React.FC<ICardProps> = ({
+export const PanelCard: React.FC<CardProps> = ({
   width = 'full',
   square = true,
   children,

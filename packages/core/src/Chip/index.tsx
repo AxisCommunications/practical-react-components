@@ -8,7 +8,7 @@ import { CloseIcon } from 'practical-react-components-icons'
 import { spacing, componentSize } from '../designparams'
 import { ClickableIcon, Icon, IconType } from '../Icon'
 import { Typography } from '../Typography'
-import { BaseChip, IBaseChipProps } from './BaseChip'
+import { BaseChip, BaseChipProps } from './BaseChip'
 
 const ChipIcon = styled(Icon)`
   width: ${componentSize.mini};
@@ -25,7 +25,7 @@ const ChipRemoveIcon = styled(ClickableIcon).attrs({
   margin-left: ${spacing.small};
 `
 
-interface IChipProps extends Omit<IBaseChipProps, 'component' | 'noPadding'> {
+interface ChipProps extends Omit<BaseChipProps, 'component' | 'noPadding'> {
   /**
    * Changes the text of the label displayed on the chip.
    */
@@ -42,7 +42,7 @@ interface IChipProps extends Omit<IBaseChipProps, 'component' | 'noPadding'> {
 }
 
 /* eslint-disable-next-line react/display-name */
-export const Chip = React.forwardRef<HTMLDivElement, IChipProps>(
+export const Chip = React.forwardRef<HTMLDivElement, ChipProps>(
   ({ text, error = false, onRemove, icon, ...props }, ref) => {
     const component = useMemo(() => {
       return (

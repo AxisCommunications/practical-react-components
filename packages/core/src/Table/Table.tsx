@@ -35,17 +35,14 @@ type BaseProps = React.HTMLAttributes<BaseElement>
  *
  ******************************************************************************/
 
-interface IWidthsState {
+interface WidthsState {
   readonly totalWidth: number
   readonly columnWidths: ReadonlyArray<number>
   readonly initialWidths: ReadonlyArray<number>
   readonly minColumnWidth: number
 }
 
-const reduceWidths = (
-  state: IWidthsState,
-  action: WidthAction
-): IWidthsState => {
+const reduceWidths = (state: WidthsState, action: WidthAction): WidthsState => {
   switch (action.type) {
     case WidthActionType.SET_WIDTHS: {
       // Sanitize columns to the minimum width
@@ -261,7 +258,7 @@ const TableContentContainer = styled.div.attrs<{
  * Defined by the number of columns.
  */
 
-interface ITableProps extends Omit<BaseProps, 'onSelect'> {
+interface TableProps extends Omit<BaseProps, 'onSelect'> {
   /**
    * `class` to be passed to the component.
    */
@@ -314,7 +311,7 @@ interface ITableProps extends Omit<BaseProps, 'onSelect'> {
 
 const EMPTY_ARRAY: ReadonlyArray<number> = []
 
-export const Table: React.FunctionComponent<ITableProps> = React.memo(
+export const Table: React.FunctionComponent<TableProps> = React.memo(
   ({
     initialWidths = EMPTY_ARRAY,
     resizableColumns = false,
@@ -329,7 +326,7 @@ export const Table: React.FunctionComponent<ITableProps> = React.memo(
   }) => {
     // Table width/height, including column widths
     const [{ columnWidths }, dispatchWidthsAction] = useReducer<
-      Reducer<IWidthsState, WidthAction>
+      Reducer<WidthsState, WidthAction>
     >(reduceWidths, {
       totalWidth: initialWidths.reduce((sum, width) => sum + width, 0),
       columnWidths: initialWidths,

@@ -59,7 +59,7 @@ const ChipErrorIcon = styled(Icon).attrs({ icon: ErrorWithoutCircleIcon })`
   color: ${({ theme }) => theme.color.elementError()};
 `
 
-export interface IBaseChipProps extends BaseProps {
+export interface BaseChipProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -79,7 +79,7 @@ export interface IBaseChipProps extends BaseProps {
 }
 
 /* eslint-disable-next-line react/display-name */
-export const BaseChip = React.forwardRef<HTMLDivElement, IBaseChipProps>(
+export const BaseChip = React.forwardRef<HTMLDivElement, BaseChipProps>(
   ({ error = false, disabled = false, component, ...props }, ref) => (
     <ChipArea ref={ref} error={error} disabled={disabled} {...props}>
       {error ? <ChipErrorIcon /> : null}

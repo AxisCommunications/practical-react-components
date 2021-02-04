@@ -7,10 +7,10 @@ import React from 'react'
 
 import { Typography } from '../Typography'
 import { Button, ButtonClickHandler } from '../Button'
-import { IModalProps } from '../Modal'
+import { ModalProps } from '../Modal'
 import { Dialog, HeaderTitle } from './Dialog'
 
-export interface IAlertDialogAction {
+export interface AlertDialogAction {
   /**
    * The label for the button that should close the dialog.
    */
@@ -21,7 +21,7 @@ export interface IAlertDialogAction {
   readonly onClick: ButtonClickHandler
 }
 
-interface IAlertDialogProps extends IModalProps {
+interface AlertDialogProps extends ModalProps {
   /**
    * When `true` the dialog is rendered, `false` removes the dialog.
    */
@@ -44,10 +44,10 @@ interface IAlertDialogProps extends IModalProps {
    * The close action provides the label and click handler for the button that
    * allows the user to close the dialog.
    */
-  readonly closeAction: IAlertDialogAction
+  readonly closeAction: AlertDialogAction
 }
 
-export const AlertDialog: React.FC<IAlertDialogProps> = ({
+export const AlertDialog: React.FC<AlertDialogProps> = ({
   open,
   onClose,
   title,

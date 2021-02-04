@@ -80,7 +80,7 @@ const TableRowGrid = styled.div<{
     clickable && !disabled ? 'pointer' : 'unset'};
 `
 
-export interface ITableRowProps extends BaseProps {
+export interface TableRowProps extends BaseProps {
   readonly children: React.ReactNodeArray
   /**
    * `class` to be passed to the component.
@@ -114,7 +114,7 @@ export interface ITableRowProps extends BaseProps {
   readonly onClicked?: React.MouseEventHandler<HTMLDivElement>
 }
 
-export const TableRow: React.FC<ITableRowProps> = React.memo(
+export const TableRow: React.FC<TableRowProps> = React.memo(
   ({
     className,
     id,

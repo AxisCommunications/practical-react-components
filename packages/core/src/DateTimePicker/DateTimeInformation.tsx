@@ -25,7 +25,7 @@ const DatetimeIcon = styled(SystemDatetimeIcon)`
   margin-right: ${spacing.medium};
 `
 
-interface IDateTimeInformationProps {
+interface DateTimeInformationProps {
   /**
    * Current date value as javascript Date object
    */
@@ -42,7 +42,7 @@ interface IDateTimeInformationProps {
   readonly hour12: boolean
 }
 
-export const DateTimeInformation: React.FC<IDateTimeInformationProps> = ({
+export const DateTimeInformation: React.FC<DateTimeInformationProps> = ({
   dateTime,
   lang,
   hour12,

@@ -6,19 +6,19 @@ import { spacing } from '../designparams'
 import { ClickableIcon } from '../Icon'
 
 import { Chip } from '../Chip'
-import { IFieldProps, withField } from '../utils/withField'
+import { FieldProps, withField } from '../utils/withField'
 
-import { BaseSelect, IBaseSelectProps } from './BaseSelect'
-import { IOption, PlaceholderContainer } from './Select'
+import { BaseSelect, BaseSelectProps } from './BaseSelect'
+import { Option, PlaceholderContainer } from './Select'
 
 const StyledChip = styled(Chip)`
   background-color: ${({ theme }) => theme.color.element13()};
   margin: ${spacing.small};
 `
 
-export interface IMultiSelectProps<V extends string = string>
+export interface MultiSelectProps<V extends string = string>
   extends Omit<
-    IBaseSelectProps<V>,
+    BaseSelectProps<V>,
     'value' | 'component' | 'options' | 'onChange' | 'selectMarker'
   > {
   /**
@@ -30,7 +30,7 @@ export interface IMultiSelectProps<V extends string = string>
   /**
    * Used to create an array of selectable options.
    */
-  readonly options: ReadonlyArray<IOption<V>>
+  readonly options: ReadonlyArray<Option<V>>
   /**
    * Executes a JavaScript when a user changes the selected option of an element.
    */
@@ -74,7 +74,7 @@ export function MultiSelect<V extends string = string>({
   onChange,
   placeholder = '',
   ...props
-}: IMultiSelectProps<V>): JSX.Element {
+}: MultiSelectProps<V>): JSX.Element {
   const onRemoveAllClick = useCallback(
     (event: React.SyntheticEvent) => {
       event.stopPropagation()
@@ -151,5 +151,5 @@ export function MultiSelect<V extends string = string>({
 }
 
 export const MultiSelectField = <V extends string = string>(
-  props: IFieldProps & IMultiSelectProps<V>
-) => withField<IMultiSelectProps<V>>(MultiSelect)(props)
+  props: FieldProps & MultiSelectProps<V>
+) => withField<MultiSelectProps<V>>(MultiSelect)(props)

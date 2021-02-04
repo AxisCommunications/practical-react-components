@@ -131,15 +131,15 @@ can be changed in the theme as well by changing the `selectMarker` prop to `chec
 
 ```typescript
 
-interface IExtendedColor extends IColor {
+interface ExtendedColor extends Color {
   readonly header: CSSColor
 }
 
-interface IExtendedTheme extends ITheme {
-  readonly color: IExtendedColor
+interface ExtendedTheme extends Theme {
+  readonly color: ExtendedColor
 }
 
-export const MyThemeLight IExtendedTheme =  {
+export const MyThemeLight ExtendedTheme =  {
   ...defaultTheme,
   name: 'extendedTheme',
   color: {
@@ -167,7 +167,7 @@ export const MyThemeLight IExtendedTheme =  {
 
 }
 
-export const MyThemeDark IExtendedTheme =  {
+export const MyThemeDark ExtendedTheme =  {
   ...defaultTheme,
   name: 'extendedTheme',
   color: {
@@ -199,9 +199,9 @@ Extend the gobal declaration for styled-components to use your theme:
 
 ```typescript
 import 'styled-components'
-import { IExtendedTheme } from './<path to your theme>'
+import { ExtendedTheme } from './<path to your theme>'
 
 declare module 'styled-components' {
-  export interface DefaultTheme extends IExtendedTheme {}
+  export interface DefaultTheme extends ExtendedTheme {}
 }
 ```

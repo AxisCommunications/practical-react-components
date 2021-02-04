@@ -47,7 +47,7 @@ const Caption = styled(Typography)`
   color: ${({ theme }) => theme.color.text03()};
 `
 
-interface ITextBlockProps extends BaseProps {
+interface TextBlockProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -55,7 +55,7 @@ interface ITextBlockProps extends BaseProps {
   readonly text: string
   readonly caption?: string
 }
-export const TextBlock: React.FC<ITextBlockProps> = ({
+export const TextBlock: React.FC<TextBlockProps> = ({
   text,
   caption,
   ...props
@@ -131,7 +131,7 @@ const GroupTitle: React.FC<{
   )
 }
 
-interface IFormSectionProps extends BaseProps {
+interface FormSectionProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -139,7 +139,7 @@ interface IFormSectionProps extends BaseProps {
   readonly title?: string
 }
 
-export const FormSection: React.FC<IFormSectionProps> = ({
+export const FormSection: React.FC<FormSectionProps> = ({
   title,
   children,
   ...props
@@ -183,7 +183,7 @@ export const ContentListItem = styled.div<{
   }
 `
 
-interface IContentListItemWithHoverProps extends BaseProps {
+interface ContentListItemWithHoverProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -192,7 +192,7 @@ interface IContentListItemWithHoverProps extends BaseProps {
   readonly onHover: (hover: boolean) => void
 }
 
-export const ContentListItemWithHover: React.FC<IContentListItemWithHoverProps> = ({
+export const ContentListItemWithHover: React.FC<ContentListItemWithHoverProps> = ({
   listHeight = 'medium',
   onHover,
   children,

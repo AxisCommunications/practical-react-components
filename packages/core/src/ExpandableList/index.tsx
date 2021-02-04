@@ -2,8 +2,8 @@ import React, { useState, FC } from 'react'
 
 import {
   ExpandableListContainer,
+  ExpandableListItemType,
   ExpandableListItem,
-  IExpandableListItem,
 } from './ExpandableListItem'
 
 export * from './ExpandableListItem'
@@ -11,7 +11,7 @@ export * from './ExpandableListItem'
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
 
-interface IExpandableListProps extends BaseProps {
+interface ExpandableListProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -19,10 +19,10 @@ interface IExpandableListProps extends BaseProps {
   /**
    * Used to create an array of items.
    */
-  readonly items: ReadonlyArray<IExpandableListItem>
+  readonly items: ReadonlyArray<ExpandableListItemType>
 }
 
-export const ExpandableList: FC<IExpandableListProps> = ({
+export const ExpandableList: FC<ExpandableListProps> = ({
   items,
   ...props
 }) => {

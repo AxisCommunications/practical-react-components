@@ -8,12 +8,12 @@ type BaseProps = React.LiHTMLAttributes<BaseElement>
 
 const LIST_ITEM_HEIGHT = 32
 
-interface ISelectListItem {
+interface SelectListItemProps {
   readonly disabled: boolean
   readonly selected: boolean
 }
 
-const SelectListItem = styled.li<ISelectListItem>`
+const SelectListItem = styled.li<SelectListItemProps>`
   height: ${LIST_ITEM_HEIGHT}px;
   padding: 0 ${spacing.medium};
   display: flex;
@@ -43,11 +43,11 @@ const SelectListItem = styled.li<ISelectListItem>`
   }}
 `
 
-interface ISelectListNative {
+interface SelectListNativeProps {
   readonly maxHeight: string
 }
 
-const SelectListNative = styled.ul<ISelectListNative>`
+const SelectListNative = styled.ul<SelectListNativeProps>`
   padding: 0;
   outline: none;
   list-style: none;
@@ -62,7 +62,7 @@ const SelectListNative = styled.ul<ISelectListNative>`
   overflow-y: auto;
 `
 
-export interface ISelectListItemOption {
+export interface SelectListItemOption {
   /**
    * Value of the option
    */
@@ -77,7 +77,7 @@ export interface ISelectListItemOption {
   readonly disabled?: boolean
 }
 
-export interface ISelectListProps extends Omit<BaseProps, 'onSelect'> {
+export interface SelectListProps extends Omit<BaseProps, 'onSelect'> {
   /**
    * Current value that is selected.
    */
@@ -85,7 +85,7 @@ export interface ISelectListProps extends Omit<BaseProps, 'onSelect'> {
   /**
    * Options to be displayed in the SelectList component.
    */
-  readonly options: ReadonlyArray<ISelectListItemOption>
+  readonly options: ReadonlyArray<SelectListItemOption>
   /**
    * Set state action, returns new selected value.
    */
@@ -108,7 +108,7 @@ export interface ISelectListProps extends Omit<BaseProps, 'onSelect'> {
  * in SelectList the options is always visible to the user.
  *
  */
-export const SelectList: React.FC<ISelectListProps> = ({
+export const SelectList: React.FC<SelectListProps> = ({
   value,
   options,
   onSelect,

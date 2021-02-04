@@ -1,13 +1,13 @@
 import React from 'react'
 import 'jest-styled-components'
 
-import { Menu, IMenuItem } from '.'
+import { Menu, MenuItemProps } from '.'
 import { CheckIcon } from 'practical-react-components-icons'
 import { TestRender } from '../TestUtils'
 
 const clickHandler = () => console.log('Menu item click')
 
-const items: ReadonlyArray<IMenuItem> = [
+const items: ReadonlyArray<MenuItemProps> = [
   { icon: CheckIcon, label: 'Apply policy', onClick: clickHandler },
   { label: 'Enter Credentials', onClick: clickHandler },
   { label: 'Pause policy', onClick: clickHandler },

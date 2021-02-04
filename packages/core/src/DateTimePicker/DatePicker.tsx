@@ -74,11 +74,11 @@ const DateButton = styled(NativeButton)`
   }
 `
 
-interface IDateButtonLabel {
+interface DateButtonLabelProps {
   readonly selected: boolean
 }
 
-const DateButtonLabel = styled(Typography)<IDateButtonLabel>`
+const DateButtonLabel = styled(Typography)<DateButtonLabelProps>`
   ${({ theme, selected }) => {
     if (selected) {
       return css`
@@ -122,7 +122,7 @@ const getWeekDays = (lang: string) => {
   return days
 }
 
-interface IDatePickerProps {
+interface DatePickerProps {
   /**
    * Current date value
    */
@@ -145,7 +145,7 @@ interface IDatePickerProps {
  * Modal component that allows users to choose
  * date, time and time zone setting
  */
-export const DatePicker: React.FC<IDatePickerProps> = ({
+export const DatePicker: React.FC<DatePickerProps> = ({
   date,
   onChange,
   lang = 'en',

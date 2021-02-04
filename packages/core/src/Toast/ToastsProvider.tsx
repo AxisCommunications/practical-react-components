@@ -7,15 +7,15 @@ import { spacing, shape } from '../designparams'
 import { BaseToast } from './Toast'
 import { toastReducer } from './toastReducer'
 
-import { useToastCallbacks, ISimpleToastsDurations } from './useToasts'
-import { IToastAction, NI, ToastsContext } from './context'
+import { useToastCallbacks, SimpleToastsDurations } from './useToasts'
+import { ToastAction, NI, ToastsContext } from './context'
 
-export interface IToastsPlacement {
+export interface ToastsPlacement {
   readonly justify: 'center' | 'right'
   readonly top: string
 }
 
-const ToastsWrapper = styled.div<IToastsPlacement>`
+const ToastsWrapper = styled.div<ToastsPlacement>`
   position: fixed;
   top: ${({ top }) => top};
   width: 360px;
@@ -43,11 +43,11 @@ const ToastsWrapper = styled.div<IToastsPlacement>`
  * the dispatch ref.
  *
  */
-export const ToastsProvider: React.FC<ISimpleToastsDurations> = ({
+export const ToastsProvider: React.FC<SimpleToastsDurations> = ({
   children,
   ...toastsOptions
 }) => {
-  const __dispatchRef = useRef<React.Dispatch<IToastAction>>(NI)
+  const __dispatchRef = useRef<React.Dispatch<ToastAction>>(NI)
 
   const callbacks = useToastCallbacks(__dispatchRef, toastsOptions)
 
@@ -78,16 +78,16 @@ export const ToastTransition: React.FC = ({ children, ...props }) => {
   )
 }
 
-export interface IToastsAnchorProps {
+export interface ToastsAnchorProps {
   /**
    * Where the toasts should be placed.
    *
    * Default: top right
    */
-  readonly placement: IToastsPlacement
+  readonly placement: ToastsPlacement
 }
 
-export const ToastsAnchor: React.FC<IToastsAnchorProps> = ({ placement }) => {
+export const ToastsAnchor: React.FC<ToastsAnchorProps> = ({ placement }) => {
   const [toasts, dispatch] = useReducer(toastReducer, new Map())
   const { hideToast, __dispatchRef } = useContext(ToastsContext)
   __dispatchRef.current = dispatch

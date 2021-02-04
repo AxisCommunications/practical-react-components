@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography, spacing } from 'practical-react-components-core'
-import { IComponentDoc } from '../types'
+import { ComponentDoc } from '../types'
 import styled from 'styled-components'
 
 import propsList from '../props.json'
@@ -47,12 +47,12 @@ const PropInfo = styled.div`
   align-self: end;
 `
 
-interface IPropsProps {
-  readonly props: ReadonlyArray<IComponentDoc>
+interface PropsProps {
+  readonly props: ReadonlyArray<ComponentDoc>
   readonly of: string
 }
 
-const PropsList: React.FC<IPropsProps> = ({ of, props }) => {
+const PropsList: React.FC<PropsProps> = ({ of, props }) => {
   const componentProps = props.find(({ displayName }) => displayName === of)
 
   if (componentProps === undefined) {
@@ -97,5 +97,5 @@ const PropsList: React.FC<IPropsProps> = ({ of, props }) => {
 }
 
 export const Props = styled(PropsList).attrs({
-  props: (propsList as unknown) as ReadonlyArray<IComponentDoc>,
+  props: (propsList as unknown) as ReadonlyArray<ComponentDoc>,
 })``

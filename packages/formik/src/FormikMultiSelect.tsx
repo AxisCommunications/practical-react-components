@@ -2,21 +2,21 @@ import React, { useCallback } from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   MultiSelect,
-  IMultiSelectProps,
-  IFieldProps,
+  MultiSelectProps,
+  FieldProps,
   withField,
 } from 'practical-react-components-core'
 
-export interface IFormikMultiSelectProps<V extends string = string>
-  extends Omit<IMultiSelectProps<V>, 'name' | 'value'>,
-    Partial<Pick<IMultiSelectProps<V>, 'value'>>,
+export interface FormikMultiSelectProps<V extends string = string>
+  extends Omit<MultiSelectProps<V>, 'name' | 'value'>,
+    Partial<Pick<MultiSelectProps<V>, 'value'>>,
     Pick<FieldConfig, 'name' | 'validate'> {}
 
 export function FormikMultiSelect<V extends string = string>({
   name,
   validate,
   ...props
-}: IFormikMultiSelectProps<V>): JSX.Element {
+}: FormikMultiSelectProps<V>): JSX.Element {
   const [field, meta, { setValue, setTouched }] = useField<ReadonlyArray<V>>({
     name,
     validate,
@@ -35,5 +35,5 @@ export function FormikMultiSelect<V extends string = string>({
 }
 
 export const FormikMultiSelectField = <V extends string = string>(
-  props: IFieldProps & IFormikMultiSelectProps<V>
-) => withField<IFormikMultiSelectProps<V>>(FormikMultiSelect)(props)
+  props: FieldProps & FormikMultiSelectProps<V>
+) => withField<FormikMultiSelectProps<V>>(FormikMultiSelect)(props)

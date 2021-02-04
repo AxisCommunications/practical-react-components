@@ -21,7 +21,7 @@ const PopOverContainer = styled.div`
  * repositioned stay within the document boundaries.
  */
 
-export interface IPopOverProps extends BaseProps {
+export interface PopOverProps extends BaseProps {
   /**
    * The element to anchor the pop-over to.
    */
@@ -73,7 +73,7 @@ export interface IPopOverProps extends BaseProps {
   readonly onScroll?: () => void
 }
 
-export const PopOver: React.FC<IPopOverProps> = ({
+export const PopOver: React.FC<PopOverProps> = ({
   anchorEl,
   horizontalPosition = 'left',
   verticalPosition = 'bottom',

@@ -27,14 +27,14 @@ const TableDividerCell = styled(TableCell)`
   grid-column-end: scroll;
 `
 
-interface ITableDividerProps extends BaseProps {
+interface TableDividerProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
   readonly className?: BaseProps['className']
 }
 
-export const TableDivider: React.FC<ITableDividerProps> = ({
+export const TableDivider: React.FC<TableDividerProps> = ({
   children,
   ...props
 }) => {

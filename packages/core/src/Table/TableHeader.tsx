@@ -30,7 +30,7 @@ const TableHeaderGrid = styled.div`
   display: grid;
   grid-template-rows: ${componentSize.large};
 `
-interface ITableHeaderProps extends BaseProps {
+interface TableHeaderProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -54,7 +54,7 @@ interface ITableHeaderProps extends BaseProps {
   readonly menu?: React.ReactNode
 }
 
-export const TableHeader: React.FC<ITableHeaderProps> = ({
+export const TableHeader: React.FC<TableHeaderProps> = ({
   children,
   selected = false,
   partial = false,

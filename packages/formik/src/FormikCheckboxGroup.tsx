@@ -4,22 +4,22 @@ import { FieldConfig, useField } from 'formik'
 import { Checkbox, spacing, withField } from 'practical-react-components-core'
 import styled, { css } from 'styled-components'
 
-export interface ICheckboxGroupOption<V extends string | number> {
+export interface CheckboxGroupOption<V extends string | number> {
   readonly value: V
   readonly label: string
   readonly disabled?: boolean
 }
 
-interface IFormikCheckboxGroupProps<V extends string | number>
+interface FormikCheckboxGroupProps<V extends string | number>
   extends Pick<FieldConfig, 'name' | 'validate'> {
-  readonly options: ReadonlyArray<ICheckboxGroupOption<V>>
+  readonly options: ReadonlyArray<CheckboxGroupOption<V>>
 }
 
-interface ICheckboxContainer {
+interface CheckboxContainerProps {
   readonly halfOptionLength: number
 }
 
-const CheckboxContainer = styled.div<ICheckboxContainer>`
+const CheckboxContainer = styled.div<CheckboxContainerProps>`
   ${({ halfOptionLength }) =>
     css`
       display: grid;
@@ -47,7 +47,7 @@ export function FormikCheckboxGroup<V extends string | number>({
   name,
   validate,
   options,
-}: IFormikCheckboxGroupProps<V>): JSX.Element {
+}: FormikCheckboxGroupProps<V>): JSX.Element {
   const [{ value }, , { setValue }] = useField<ReadonlyArray<V>>({
     name,
     validate,

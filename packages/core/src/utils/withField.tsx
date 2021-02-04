@@ -3,7 +3,7 @@ import styled, { useTheme } from 'styled-components'
 import { Typography } from '../Typography'
 import { componentSize, spacing } from '../designparams'
 
-export interface IFieldProps {
+export interface FieldProps {
   readonly label?: string
   /**
    * Override theme's default setting for `compact` if set.
@@ -36,7 +36,7 @@ const Unit = styled(Typography)`
 
 export function withField<T>(
   InputComponent: React.FunctionComponent<T>
-): React.FunctionComponent<IFieldProps & T> {
+): React.FunctionComponent<FieldProps & T> {
   // eslint-disable-next-line react/display-name
   return ({ label, unitLabel, ...props }) => {
     const { compact: compactFromTheme } = useTheme()

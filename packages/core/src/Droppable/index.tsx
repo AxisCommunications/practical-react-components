@@ -57,7 +57,7 @@ const InputLabel = styled(Typography)`
   word-wrap: break-word;
 `
 
-interface IDroppableProps extends BaseProps {
+interface DroppableProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -82,7 +82,7 @@ interface IDroppableProps extends BaseProps {
 
 let enterTarget: EventTarget | undefined
 
-export const Droppable: React.FC<IDroppableProps> = ({
+export const Droppable: React.FC<DroppableProps> = ({
   onFileChange,
   inputLabel,
   supportedFormats,

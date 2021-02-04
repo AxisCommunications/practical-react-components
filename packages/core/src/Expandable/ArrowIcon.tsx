@@ -18,12 +18,12 @@ const SvgIcon: IconType = () => (
   </svg>
 )
 
-interface IArrowProps {
+interface ArrowProps {
   readonly expanded: boolean
   readonly disabled: boolean
 }
 
-const ArrowIcon = styled(Icon)<IArrowProps>`
+const ArrowIcon = styled(Icon)<ArrowProps>`
   flex: none;
   transform-origin: center;
   transition: all 250ms ease-in-out;
@@ -50,6 +50,6 @@ const ArrowIcon = styled(Icon)<IArrowProps>`
       : undefined}
 `
 
-export const Arrow: React.FunctionComponent<IArrowProps> = props => {
+export const Arrow: React.FunctionComponent<ArrowProps> = props => {
   return <ArrowIcon {...props} icon={SvgIcon} />
 }

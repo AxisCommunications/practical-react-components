@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { Select, Typography, spacing } from 'practical-react-components-core'
 import { useLocalStorage } from 'react-hooks-shareable'
 
-import { IThemeName, ThemeContext, THEME_NAME } from './context'
+import { ThemeName, ThemeContext, THEME_NAME } from './context'
 
 const THEME_OPTIONS: ReadonlyArray<{
-  readonly value: IThemeName
+  readonly value: ThemeName
   readonly label: string
-}> = [{ value: IThemeName.DEFAULT_THEME, label: 'Default theme' }]
+}> = [{ value: ThemeName.DEFAULT_THEME, label: 'Default theme' }]
 
 const HeaderContainer = styled.div`
   padding: ${spacing.medium};
@@ -21,9 +21,9 @@ const HeaderContainer = styled.div`
 
 export const Header = () => {
   const { themeName, setThemeName } = useContext(ThemeContext)
-  const [, setThemeLocalStorage] = useLocalStorage<IThemeName>(THEME_NAME)
+  const [, setThemeLocalStorage] = useLocalStorage<ThemeName>(THEME_NAME)
   const onChange = useCallback(
-    (value: IThemeName) => {
+    (value: ThemeName) => {
       setThemeName(value)
       setThemeLocalStorage(value)
     },
@@ -33,7 +33,7 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <Typography variant="page-heading">Practical react components</Typography>
-      <Select<IThemeName>
+      <Select<ThemeName>
         value={themeName}
         options={THEME_OPTIONS}
         onChange={onChange}

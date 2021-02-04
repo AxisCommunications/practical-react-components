@@ -1,18 +1,14 @@
 import React from 'react'
 import { useField } from 'formik'
-import {
-  Switch,
-  ISwitchProps,
-  withField,
-} from 'practical-react-components-core'
+import { Switch, SwitchProps, withField } from 'practical-react-components-core'
 
-export interface IFormikSwitchProps
-  extends Omit<ISwitchProps, 'name' | 'checked'>,
-    Partial<Pick<ISwitchProps, 'checked'>> {
+export interface FormikSwitchProps
+  extends Omit<SwitchProps, 'name' | 'checked'>,
+    Partial<Pick<SwitchProps, 'checked'>> {
   readonly name: string
 }
 
-export const FormikSwitch: React.FC<IFormikSwitchProps> = ({
+export const FormikSwitch: React.FC<FormikSwitchProps> = ({
   name,
   value,
   ...props

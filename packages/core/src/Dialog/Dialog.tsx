@@ -17,7 +17,7 @@ import styled from 'styled-components'
 import { useScrollPosition } from 'react-hooks-shareable'
 
 import { Typography } from '../Typography'
-import { IModalProps } from '../Modal'
+import { ModalProps } from '../Modal'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { MainSection } from './components/Content'
@@ -37,7 +37,7 @@ export const HeaderTitle = styled(Typography).attrs({
   overflow: hidden;
 `
 
-export interface IDialogProps extends IModalProps {
+export interface DialogProps extends ModalProps {
   /**
    * Adjusts the width of the panel.
    */
@@ -60,7 +60,7 @@ export interface IDialogProps extends IModalProps {
   readonly focusDialog?: boolean
 }
 
-export const Dialog: React.FC<IDialogProps> = ({
+export const Dialog: React.FC<DialogProps> = ({
   width,
   header,
   controls,

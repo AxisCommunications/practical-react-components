@@ -9,7 +9,7 @@ import {
 import {
   RadioButton,
   RadioButtonGroup,
-  IRadioButtonGroupOption,
+  RadioButtonGroupOption,
   RadioIconButton,
   RadioIconGroupField,
 } from '.'
@@ -17,7 +17,7 @@ import { TestRender } from '../TestUtils'
 
 type Values = 'sunny' | 'cloudy' | 'rainy' | 'windy'
 
-const weatherOptions: ReadonlyArray<IRadioButtonGroupOption<Values>> = [
+const weatherOptions: ReadonlyArray<RadioButtonGroupOption<Values>> = [
   { value: 'sunny', label: 'Sunny' },
   { value: 'cloudy', label: 'Cloudy' },
   { value: 'rainy', label: 'Rainy' },

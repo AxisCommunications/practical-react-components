@@ -111,7 +111,7 @@ const TabBaseMarker = styled.div<{
         `}
 `
 
-interface ITabProps {
+interface TabProps {
   readonly id: number
   readonly selected?: boolean
   readonly label: string
@@ -129,7 +129,7 @@ function InternalTab({
   variant,
   disabled = false,
   hasBackground = false,
-}: ITabProps): JSX.Element {
+}: TabProps): JSX.Element {
   const onClickHandler = useCallback<OnClickHandler>(() => {
     if (!selected) {
       onClick(id)
@@ -154,13 +154,13 @@ function InternalTab({
   )
 }
 
-interface ITab<T> {
+interface TabItem<T> {
   readonly value: T
   readonly label: string
   readonly disabled?: boolean
 }
 
-interface ICardTabsProps<T> extends Omit<BaseProps, 'onChange'> {
+interface CardTabsProps<T> extends Omit<BaseProps, 'onChange'> {
   /**
    * Current selected tab, matching a `value` from options
    */
@@ -168,7 +168,7 @@ interface ICardTabsProps<T> extends Omit<BaseProps, 'onChange'> {
   /**
    * Array with object that contain `value`, `label`, and optional `disabled`
    */
-  readonly options: ReadonlyArray<ITab<T>>
+  readonly options: ReadonlyArray<TabItem<T>>
   /**
    * Tab change callback, called with the `value` from the selected options
    */
@@ -190,7 +190,7 @@ export function CardTabs<T>({
   variant,
   hasBackground,
   ...props
-}: ICardTabsProps<T>): JSX.Element {
+}: CardTabsProps<T>): JSX.Element {
   const onClickHandler = useCallback(index => onChange(options[index].value), [
     options,
     onChange,

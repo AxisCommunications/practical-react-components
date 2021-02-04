@@ -6,13 +6,13 @@ import { IconType } from '../Icon'
 
 import { ListItemContainer } from './ListItemContainer'
 
-export interface IExpandableListItem {
+export interface ExpandableListItemType {
   readonly id: string
   readonly label: string
   readonly icon: IconType
   readonly selected?: boolean
   readonly onClick?: VoidFunction
-  readonly items?: ReadonlyArray<IExpandableListItem>
+  readonly items?: ReadonlyArray<ExpandableListItemType>
 }
 
 export const ExpandableListContainer = styled.div`
@@ -29,8 +29,8 @@ const ItemWrapper = styled.div`
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
 
-export interface IExpandableListItemProps extends BaseProps {
-  readonly item: IExpandableListItem
+export interface ExpandableListItemProps extends BaseProps {
+  readonly item: ExpandableListItemType
   readonly expandedItems: ReadonlyArray<string>
   readonly setExpandedItems: Dispatch<SetStateAction<ReadonlyArray<string>>>
   readonly isNestedItem: boolean
@@ -45,7 +45,7 @@ export interface IExpandableListItemProps extends BaseProps {
  *
  */
 
-export const ExpandableListItem: FC<IExpandableListItemProps> = ({
+export const ExpandableListItem: FC<ExpandableListItemProps> = ({
   item,
   expandedItems,
   setExpandedItems,

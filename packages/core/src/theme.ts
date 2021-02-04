@@ -12,7 +12,7 @@ import {
 
 type TextTransformType = 'none' | 'uppercase'
 
-export interface IFont {
+export interface Font {
   readonly size: {
     readonly smaller: string
     readonly small: string
@@ -52,7 +52,7 @@ export interface IFont {
   }
 }
 
-export interface IColor {
+export interface Color {
   readonly text00: CSSColor
   readonly text01: CSSColor
   readonly text02: CSSColor
@@ -90,7 +90,7 @@ export interface IColor {
   readonly elementBorder: CSSColor
 }
 
-export interface IShadow {
+export interface Shadow {
   readonly card: string
   readonly dialog: string
   readonly dialogHeaderFooter: string
@@ -109,20 +109,20 @@ export interface IShadow {
   readonly tooltip: string
 }
 
-export type ISelectMarker = 'background' | 'check'
+export type SelectMarker = 'background' | 'check'
 
-export interface ITheme {
-  readonly font: IFont
-  readonly color: IColor
-  readonly shadow: IShadow
+export interface Theme {
+  readonly font: Font
+  readonly color: Color
+  readonly shadow: Shadow
   readonly compact: boolean
-  readonly selectMarker: ISelectMarker
+  readonly selectMarker: SelectMarker
 }
 
 /**
  * Default theming
  */
-export const font: IFont = {
+export const font: Font = {
   size: {
     smaller: '11px',
     small: '12px',
@@ -168,7 +168,7 @@ export const font: IFont = {
 // FIXME: remove `as ColorName` type guards when TypeScript 4.2 is used.
 const generateDefaultColors = (
   color: ColorBaseName | SimpleColorBaseName
-): IColor => {
+): Color => {
   return {
     text00: palette.white,
     text01: palette.grey16,
@@ -210,7 +210,7 @@ const generateDefaultColors = (
 
 export const generateDefaultTheme = (
   color: ColorBaseName | SimpleColorBaseName
-): ITheme => ({
+): Theme => ({
   font,
   color: generateDefaultColors(color),
   shadow: {
@@ -235,4 +235,4 @@ export const generateDefaultTheme = (
   selectMarker: 'background',
 })
 
-export const defaultTheme: ITheme = generateDefaultTheme('deepPurple')
+export const defaultTheme: Theme = generateDefaultTheme('deepPurple')

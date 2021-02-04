@@ -63,7 +63,7 @@ const LinkButton = styled.button<{
       : undefined}
 `
 
-export interface IButtonLinkProps extends BaseButtonProps {
+export interface ButtonLinkProps extends BaseButtonProps {
   /**
    * `class` to be passed to the component.
    */
@@ -75,7 +75,7 @@ export interface IButtonLinkProps extends BaseButtonProps {
   readonly variant: 'button'
 }
 
-export interface IALinkProps extends BaseProps {
+export interface ALinkProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -86,7 +86,7 @@ export interface IALinkProps extends BaseProps {
   readonly variant: 'a'
 }
 
-export const Link: React.FC<IButtonLinkProps | IALinkProps> = ({
+export const Link: React.FC<ButtonLinkProps | ALinkProps> = ({
   children,
   ...props
 }) => {

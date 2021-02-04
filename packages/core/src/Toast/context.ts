@@ -1,39 +1,39 @@
 import { createContext, ReactNode } from 'react'
 import { IconType } from '../Icon'
-import { IALinkProps, IButtonLinkProps } from '../Link'
+import { ALinkProps, ButtonLinkProps } from '../Link'
 
-export interface ISimpleToast {
+export interface SimpleToast {
   readonly label: string
   readonly message?: string
   readonly onClose?: (id: ToastId) => void
   readonly duration?: number
 }
 
-export interface IActionToast extends ISimpleToast {
+export interface ActionToast extends SimpleToast {
   readonly action: {
     readonly icon: IconType
     readonly text: string
-    readonly link: IButtonLinkProps | IALinkProps
+    readonly link: ButtonLinkProps | ALinkProps
   }
 }
 
-export interface IProgressToast extends ISimpleToast {
+export interface ProgressToast extends SimpleToast {
   readonly progress: {
     readonly value: number
     readonly label: string
   }
 }
 
-export type ShowToastHandler = (toast: IBaseToast, id?: ToastId) => ToastId
+export type ShowToastHandler = (toast: BaseToastValue, id?: ToastId) => ToastId
 export type HideToastHandler = (id: ToastId) => void
-export type SimpleToastCreator = (toast: ISimpleToast, id?: ToastId) => ToastId
-export type ActionToastCreator = (toast: IActionToast, id?: ToastId) => ToastId
+export type SimpleToastCreator = (toast: SimpleToast, id?: ToastId) => ToastId
+export type ActionToastCreator = (toast: ActionToast, id?: ToastId) => ToastId
 export type ProgressToastCreator = (
-  toast: IProgressToast,
+  toast: ProgressToast,
   id?: ToastId
 ) => ToastId
 
-export interface IToastCallbacks {
+export interface ToastCallbacks {
   readonly showToast: ShowToastHandler
   readonly hideToast: HideToastHandler
   readonly clearToasts: () => void
@@ -46,7 +46,7 @@ export interface IToastCallbacks {
   readonly showActionToast: ActionToastCreator
 }
 
-export interface IBaseToast {
+export interface BaseToastValue {
   readonly icon: ReactNode
   readonly label: ReactNode
   readonly message?: ReactNode
@@ -55,7 +55,7 @@ export interface IBaseToast {
   readonly onClose?: (id: ToastId) => void
 }
 
-export enum IToastActionType {
+export enum ToastActionType {
   'TOAST_CREATE',
   'TOAST_REMOVE',
   'TOAST_REMOVE_ALL',
@@ -63,34 +63,34 @@ export enum IToastActionType {
 
 export type ToastId = string
 
-export interface IToastCreateAction {
+export interface ToastCreateAction {
   readonly id: ToastId
-  readonly type: IToastActionType.TOAST_CREATE
-  readonly data: IBaseToast
+  readonly type: ToastActionType.TOAST_CREATE
+  readonly data: BaseToastValue
 }
 
-export interface IToastRemoveAction {
+export interface ToastRemoveAction {
   readonly id: ToastId
-  readonly type: IToastActionType.TOAST_REMOVE
+  readonly type: ToastActionType.TOAST_REMOVE
 }
 
-export interface IToastRemoveAllAction {
-  readonly type: IToastActionType.TOAST_REMOVE_ALL
+export interface ToastRemoveAllAction {
+  readonly type: ToastActionType.TOAST_REMOVE_ALL
 }
 
-export type IToastAction =
-  | IToastCreateAction
-  | IToastRemoveAction
-  | IToastRemoveAllAction
+export type ToastAction =
+  | ToastCreateAction
+  | ToastRemoveAction
+  | ToastRemoveAllAction
 
 export const NI = () => {
   throw new Error(`Not implemented: no ToastContext set`)
 }
-interface IToastContext extends IToastCallbacks {
-  readonly __dispatchRef: React.MutableRefObject<React.Dispatch<IToastAction>>
+interface ToastContextType extends ToastCallbacks {
+  readonly __dispatchRef: React.MutableRefObject<React.Dispatch<ToastAction>>
 }
 
-export const ToastsContext = createContext<IToastContext>({
+export const ToastsContext = createContext<ToastContextType>({
   showToast: NI,
   hideToast: NI,
   clearToasts: NI,

@@ -1,36 +1,36 @@
-export interface IComponent {
+export interface Component {
   readonly name: string
   readonly route: string
   readonly menu: string
   readonly component: React.FC
 }
 
-export type Components = ReadonlyArray<IComponent>
+export type Components = ReadonlyArray<Component>
 
 // From react-docgen-typescript
 
-export interface IStringIndexedObject<T> {
+export interface StringIndexedObject<T> {
   readonly [key: string]: T
 }
 
-export interface IComponentDoc {
+export interface ComponentDoc {
   readonly displayName: string
   readonly description: string
-  readonly props: IProps
+  readonly props: Props
 }
 
-export interface IProps extends IStringIndexedObject<IPropItem> {}
+export interface Props extends StringIndexedObject<PropItem> {}
 
-export interface IPropItem {
+export interface PropItem {
   readonly name: string
   readonly required: boolean
-  readonly type: IPropItemType
+  readonly type: PropItemType
   readonly description: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   readonly defaultValue: any
 }
 
-export interface IPropItemType {
+export interface PropItemType {
   readonly name: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   readonly value?: any

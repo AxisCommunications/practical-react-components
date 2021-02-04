@@ -2,16 +2,16 @@ import React from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   TextArea,
-  ITextAreaProps,
+  TextAreaProps,
   withField,
 } from 'practical-react-components-core'
 
-export interface IFormikTextAreaProps
-  extends Omit<ITextAreaProps, 'name' | 'value'>,
-    Partial<Pick<ITextAreaProps, 'value'>>,
+export interface FormikTextAreaProps
+  extends Omit<TextAreaProps, 'name' | 'value'>,
+    Partial<Pick<TextAreaProps, 'value'>>,
     Pick<FieldConfig, 'name' | 'validate'> {}
 
-export const FormikTextArea: React.FC<IFormikTextAreaProps> = ({
+export const FormikTextArea: React.FC<FormikTextAreaProps> = ({
   name,
   validate,
   ...props

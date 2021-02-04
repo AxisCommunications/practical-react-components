@@ -8,7 +8,7 @@ import { spacing } from '../designparams'
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
 
-export interface INormalDividerProps extends BaseProps {
+export interface NormalDividerProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -21,7 +21,7 @@ export interface INormalDividerProps extends BaseProps {
   readonly variant?: 'full'
 }
 
-export interface IMiddleDividerProps extends BaseProps {
+export interface MiddleDividerProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -34,7 +34,7 @@ export interface IMiddleDividerProps extends BaseProps {
   readonly variant: 'middle'
 }
 
-export interface IInsetDividerProps extends BaseProps {
+export interface InsetDividerProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -55,7 +55,7 @@ export interface IInsetDividerProps extends BaseProps {
 }
 
 export const Divider = styled.div<
-  INormalDividerProps | IMiddleDividerProps | IInsetDividerProps
+  NormalDividerProps | MiddleDividerProps | InsetDividerProps
 >`
   height: 1px;
   background-color: ${({ theme }) => theme.color.element12()};

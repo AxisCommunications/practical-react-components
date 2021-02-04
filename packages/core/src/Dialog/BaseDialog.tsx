@@ -15,7 +15,7 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
 
-import { Modal, IModalProps } from '../Modal'
+import { Modal, ModalProps } from '../Modal'
 import { Paper } from '../Paper'
 
 const BOTTOM_HEIGHT = '64px'
@@ -68,7 +68,7 @@ const Footer = styled.div`
   z-index: 1;
 `
 
-interface IBaseDialogContentProps {
+interface BaseDialogContentProps {
   /**
    * The width of the dialog, one of `'normal'`, `'settings-panel'` or
    * `'large-settings-panel'`.
@@ -86,9 +86,9 @@ interface IBaseDialogContentProps {
   readonly footer: ReactNode
 }
 
-export type IBaseDialogProps = IBaseDialogContentProps & IModalProps
+export type BaseDialogProps = BaseDialogContentProps & ModalProps
 
-export const BaseDialog: React.FC<IBaseDialogProps> = ({
+export const BaseDialog: React.FC<BaseDialogProps> = ({
   width = 'normal',
   header,
   footer,

@@ -2,10 +2,10 @@ import React, { useCallback, useMemo, useLayoutEffect } from 'react'
 import styled from 'styled-components'
 
 import { spacing } from '../designparams'
-import { ITextInputProps, TextInput } from './Input'
+import { TextInputProps, TextInput } from './Input'
 import { Select } from '../Select'
 import { withField } from '../utils/withField'
-import { ITranslationMeridiem } from '../DateTimePicker'
+import { TranslationMeridiem } from '../DateTimePicker'
 
 enum TimeFormat {
   AM = 'AM',
@@ -25,18 +25,18 @@ type FormatVariants = 'hh:mm:ss' | 'hh:mm' | 'mm:ss' | 'hh' | 'mm' | 'ss'
 const BACKSPACE_KEY = 'Backspace'
 const DELETE_KEY = 'Delete'
 
-interface ITimeContainerProps {
+interface TimeContainerProps {
   readonly hour12: boolean
 }
 
-const Container = styled.div<ITimeContainerProps>`
+const TimeContainer = styled.div<TimeContainerProps>`
   display: grid;
   grid-template-columns: ${({ hour12 }) => (hour12 ? `72px 64px` : `144px`)};
   grid-column-gap: ${spacing.medium};
   align-items: end;
 `
 
-interface ITimeValues {
+interface TimeValues {
   readonly hour?: number
   readonly minute?: number
   readonly second?: number
@@ -52,14 +52,14 @@ const MAX_INPUT_VALUE = 100
  */
 let inputPos = 0
 
-const isNewValuesValid = ({ hour, minute, second }: ITimeValues) => {
+const isNewValuesValid = ({ hour, minute, second }: TimeValues) => {
   const hourValidate = hour ?? 0
   const minuteValidate = minute ?? 0
   const secondValidate = second ?? 0
   return hourValidate < 24 && minuteValidate < 60 && secondValidate < 60
 }
 
-const isNewDurationValuesValid = ({ hour, minute, second }: ITimeValues) => {
+const isNewDurationValuesValid = ({ hour, minute, second }: TimeValues) => {
   let maxMinute = 60
   let maxSecond = 60
   const maxHour = 100
@@ -207,9 +207,9 @@ const getKeyCodeValue = (key: string) => {
   }
 }
 
-export interface IBaseTimeInputProps
+export interface BaseTimeInputProps
   extends Omit<
-    ITextInputProps,
+    TextInputProps,
     | 'value'
     | 'onValueChange'
     | 'onChange'
@@ -219,13 +219,13 @@ export interface IBaseTimeInputProps
     | 'placeholder'
   > {}
 
-export interface ITimeInputValues {
+export interface TimeInputValues {
   readonly hour?: number
   readonly minute?: number
   readonly second?: number
 }
 
-export interface ITimeInputProps extends IBaseTimeInputProps {
+export interface TimeInputProps extends BaseTimeInputProps {
   /**
    * If `true` will show and set the time in AM/PM format,
    * `false` will show and set time in 24 hour format.
@@ -234,19 +234,19 @@ export interface ITimeInputProps extends IBaseTimeInputProps {
   /**
    * Initial value in seconds, will be parsed into the given format.
    */
-  readonly value: ITimeInputValues
+  readonly value: TimeInputValues
   /**
    * Callback that returns the amount of seconds in TimeInput.
    *
    * returns seconds
    */
-  readonly onChange: (value: ITimeInputValues) => void
+  readonly onChange: (value: TimeInputValues) => void
   /**
    * AM/PM translation labels
    *
    * Default `AM` and `PM`
    */
-  readonly hour12MeridiemLabels?: ITranslationMeridiem
+  readonly hour12MeridiemLabels?: TranslationMeridiem
 }
 
 /**
@@ -268,7 +268,7 @@ export interface ITimeInputProps extends IBaseTimeInputProps {
  * Is a variant of TimeInput but the highest time unit
  * in the input are not limited in value (can go up to max 99).
  */
-export const TimeInput: React.FC<ITimeInputProps> = ({
+export const TimeInput: React.FC<TimeInputProps> = ({
   value,
   onChange,
   hour12 = false,
@@ -297,7 +297,7 @@ export const TimeInput: React.FC<ITimeInputProps> = ({
     (newTimeFormat: TimeFormat) => {
       const newCallbackValues = inputValue
         .split(':')
-        .reduce<ITimeValues>((acc, v) => {
+        .reduce<TimeValues>((acc, v) => {
           if (hour !== undefined && acc.hour === undefined) {
             acc = {
               hour: convertToTwentyFour(parseInt(v), newTimeFormat),
@@ -367,7 +367,7 @@ export const TimeInput: React.FC<ITimeInputProps> = ({
       )}${keyValue}${currentValue.substring(inputPos + 1, currentValue.length)}`
       const newCallbackValues = newInputValue
         .split(':')
-        .reduce<ITimeValues>((acc, v) => {
+        .reduce<TimeValues>((acc, v) => {
           let number = parseInt(v)
           if (number >= MAX_INPUT_VALUE) {
             number = MAX_INPUT_VALUE - 1
@@ -412,7 +412,7 @@ export const TimeInput: React.FC<ITimeInputProps> = ({
   )
 
   return (
-    <Container hour12={hour12}>
+    <TimeContainer hour12={hour12}>
       <TextInput
         value={inputValue}
         inputRef={inputElement}
@@ -428,11 +428,11 @@ export const TimeInput: React.FC<ITimeInputProps> = ({
           compact={props.compact}
         />
       ) : null}
-    </Container>
+    </TimeContainer>
   )
 }
 
-export interface IDurationInputProps extends IBaseTimeInputProps {
+export interface DurationInputProps extends BaseTimeInputProps {
   /**
    * Initial value in seconds, will be parsed into the given format.
    */
@@ -456,7 +456,7 @@ export interface IDurationInputProps extends IBaseTimeInputProps {
  * Is a variant of TimeInput but the highest time unit
  * in the input are not limited in value (can go up to max 99).
  */
-export const DurationInput: React.FC<IDurationInputProps> = ({
+export const DurationInput: React.FC<DurationInputProps> = ({
   value,
   onChange,
   format,
@@ -523,7 +523,7 @@ export const DurationInput: React.FC<IDurationInputProps> = ({
       )}${keyValue}${currentValue.substring(inputPos + 1, currentValue.length)}`
       const newCallbackValues = newInputValue
         .split(':')
-        .reduce<ITimeValues>((acc, v) => {
+        .reduce<TimeValues>((acc, v) => {
           let number = parseInt(v)
           if (number >= MAX_INPUT_VALUE) {
             number = MAX_INPUT_VALUE - 1
@@ -561,16 +561,16 @@ export const DurationInput: React.FC<IDurationInputProps> = ({
   )
 
   return (
-    <Container hour12={false}>
+    <TimeContainer hour12={false}>
       <TextInput
         value={inputValue}
         inputRef={inputElement}
         onKeyDown={onKeyDown}
         {...props}
       />
-    </Container>
+    </TimeContainer>
   )
 }
 
-export const TimeInputField = withField<ITimeInputProps>(TimeInput)
-export const DurationInputField = withField<IDurationInputProps>(DurationInput)
+export const TimeInputField = withField<TimeInputProps>(TimeInput)
+export const DurationInputField = withField<DurationInputProps>(DurationInput)

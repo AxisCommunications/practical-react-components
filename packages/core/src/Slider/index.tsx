@@ -245,7 +245,7 @@ enum SliderKeys {
   ArrowDown = 'ArrowDown',
 }
 
-export interface ISliderProps extends BaseProps {
+export interface SliderProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -285,7 +285,7 @@ export interface ISliderProps extends BaseProps {
 /**
  * TODO: according to UX, need to add `variant` property to have style `dashed`
  */
-export const Slider: React.FC<ISliderProps> = ({
+export const Slider: React.FC<SliderProps> = ({
   value,
   min = 0,
   max = 100,

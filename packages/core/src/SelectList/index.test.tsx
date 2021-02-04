@@ -1,10 +1,10 @@
 import React from 'react'
 import 'jest-styled-components'
 
-import { SelectList, ISelectListItemOption } from '.'
+import { SelectList, SelectListItemOption } from '.'
 import { TestRender } from '../TestUtils'
 
-const options: ReadonlyArray<ISelectListItemOption> = [
+const options: ReadonlyArray<SelectListItemOption> = [
   { value: 'test1', label: 'test1' },
   { value: 'test2', label: 'test2', disabled: true },
   { value: 'test3', label: 'test3' },

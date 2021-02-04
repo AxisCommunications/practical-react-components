@@ -7,25 +7,25 @@ import { Icon, IconType } from '../Icon'
 import { Typography } from '../Typography'
 import { Tooltip } from '../Tooltip'
 
-interface IListItemMarkerBaseProps {
+interface ListItemMarkerBaseProps {
   readonly selected: boolean
   readonly expanded: boolean
 }
 
-interface IListItemContainerBaseProps extends IListItemMarkerBaseProps {
+interface ListItemContainerBaseProps extends ListItemMarkerBaseProps {
   readonly childSelected: boolean
   readonly isNestedItem: boolean
   readonly hasChildren: boolean
 }
 
-interface IListItemContainerProps extends IListItemContainerBaseProps {
+interface ListItemContainerProps extends ListItemContainerBaseProps {
   readonly onClick?: VoidFunction
   readonly icon: IconType
   readonly label: string
 }
 
-interface IListItemMarkerProps extends IListItemMarkerBaseProps {
-  readonly childSelected: IListItemContainerProps['childSelected']
+interface ListItemMarkerProps extends ListItemMarkerBaseProps {
+  readonly childSelected: ListItemContainerProps['childSelected']
 }
 
 /**
@@ -36,7 +36,7 @@ enum MenuKeys {
   Enter = 'Enter',
 }
 
-const ListItemContainerWrapper = styled.div<IListItemContainerBaseProps>`
+const ListItemContainerWrapper = styled.div<ListItemContainerBaseProps>`
   background-color: ${({ theme }) => theme.color.background00()};
   box-sizing: border-box;
   color: ${({ theme }) => theme.color.text03()};
@@ -92,7 +92,7 @@ const ListItemContainerWrapper = styled.div<IListItemContainerBaseProps>`
       : undefined}
 `
 
-const ListItemMarker = styled.div<IListItemMarkerProps>`
+const ListItemMarker = styled.div<ListItemMarkerProps>`
   content: '';
   position: absolute;
   flex: none;
@@ -119,7 +119,7 @@ const Label = styled(Typography)`
 `
 
 const ListItemContents = styled.div<{
-  readonly isNestedItem: IListItemContainerBaseProps['isNestedItem']
+  readonly isNestedItem: ListItemContainerBaseProps['isNestedItem']
 }>`
   align-items: center;
   display: inline-flex;
@@ -140,7 +140,7 @@ const ListItemContents = styled.div<{
 `
 
 const ListItemContentsIcon = styled(Icon)<{
-  readonly selected: IListItemMarkerBaseProps['selected']
+  readonly selected: ListItemMarkerBaseProps['selected']
 }>`
   flex: none;
   margin-right: ${spacing.medium};
@@ -193,7 +193,7 @@ const LabelOverflowTooltip: React.FC<OverflowTooltipProps> = ({ label }) => {
  *
  */
 
-export const ListItemContainer: React.FC<IListItemContainerProps> = ({
+export const ListItemContainer: React.FC<ListItemContainerProps> = ({
   selected,
   isNestedItem,
   hasChildren,

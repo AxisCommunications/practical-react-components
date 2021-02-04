@@ -161,7 +161,7 @@ type BaseProps = React.TextareaHTMLAttributes<BaseElement>
 export type TextAreaChangeHandler = React.ChangeEventHandler<BaseElement>
 export type TextAreaValueChangeHandler = (value: string) => void
 
-export interface ITextAreaProps extends BaseProps {
+export interface TextAreaProps extends BaseProps {
   /**
    * Specifies the name of an input element.
    */
@@ -201,7 +201,7 @@ export interface ITextAreaProps extends BaseProps {
   readonly textareaRef?: React.RefObject<BaseElement>
 }
 
-export const TextArea: React.FC<ITextAreaProps> = ({
+export const TextArea: React.FC<TextAreaProps> = ({
   onChange,
   onValueChange,
   onPressEnter,
@@ -275,4 +275,4 @@ export const TextArea: React.FC<ITextAreaProps> = ({
   )
 }
 
-export const TextAreaField = withField<ITextAreaProps>(TextArea)
+export const TextAreaField = withField<TextAreaProps>(TextArea)

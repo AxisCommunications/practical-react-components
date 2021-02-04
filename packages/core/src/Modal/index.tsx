@@ -24,7 +24,7 @@ import {
 } from './hooks/useEscapeListenerStack'
 import { opacity } from '../designparams'
 
-interface ICloseOnEscapeProps {
+interface CloseOnEscapeProps {
   readonly onClose: VoidFunction
 }
 
@@ -34,7 +34,7 @@ type BaseProps = React.HTMLAttributes<BaseElement>
 /**
  * CloseOnEscape sets up and tears down the "close on escape" logic
  */
-const CloseOnEscape: React.FC<ICloseOnEscapeProps> = ({ onClose }) => {
+const CloseOnEscape: React.FC<CloseOnEscapeProps> = ({ onClose }) => {
   const [escPressed, setEscPressed] = useState(false)
 
   useEffect(() => {
@@ -91,7 +91,7 @@ export const ModalBackdrop: React.FC<ModalBackdropProps> = ({
   </Layer>
 )
 
-export interface IModalProps extends BaseProps {
+export interface ModalProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -116,7 +116,7 @@ export interface IModalProps extends BaseProps {
   readonly open: boolean
 }
 
-export const Modal: React.FC<IModalProps> = ({
+export const Modal: React.FC<ModalProps> = ({
   open,
   onClose,
   focusDialog = true,

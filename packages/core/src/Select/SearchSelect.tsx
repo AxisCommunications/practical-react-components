@@ -4,8 +4,8 @@ import styled from 'styled-components'
 import { useBoolean } from 'react-hooks-shareable'
 
 import { BaseSelect } from './BaseSelect'
-import { ISelectProps } from './Select'
-import { IFieldProps, withField } from '../utils/withField'
+import { SelectProps } from './Select'
+import { FieldProps, withField } from '../utils/withField'
 
 const InputNative = styled.input`
   font-family: ${({ theme }) => theme.font.family};
@@ -32,7 +32,7 @@ export function SearchSelect<V extends string = string>({
   onChange,
   placeholder,
   ...props
-}: ISelectProps<V>): JSX.Element {
+}: SelectProps<V>): JSX.Element {
   const [filter, setFilter] = useState('')
   const [isTyping, startTyping, stopTyping] = useBoolean(false)
 
@@ -87,5 +87,5 @@ export function SearchSelect<V extends string = string>({
 }
 
 export const SearchSelectField = <V extends string = string>(
-  props: IFieldProps & ISelectProps<V>
-) => withField<ISelectProps<V>>(SearchSelect)(props)
+  props: FieldProps & SelectProps<V>
+) => withField<SelectProps<V>>(SearchSelect)(props)

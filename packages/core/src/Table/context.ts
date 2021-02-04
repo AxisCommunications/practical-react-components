@@ -7,32 +7,32 @@ export enum WidthActionType {
   SET_TOTAL_WIDTH,
 }
 
-interface ISetWidthsAction {
+interface SetWidthsAction {
   readonly type: WidthActionType.SET_WIDTHS
   readonly widths: ReadonlyArray<number>
 }
 
-interface IUpdateWidthsAction {
+interface UpdateWidthsAction {
   readonly type: WidthActionType.UPDATE_WIDTHS
   readonly widths: { readonly [id: number]: number | undefined }
   readonly onWidthsChange?: (widths: ReadonlyArray<number>) => void
 }
 
-interface IResetWidthsAction {
+interface ResetWidthsAction {
   readonly type: WidthActionType.RESET_WIDTHS
   readonly numberOfColumns: number
 }
 
-interface ISetTotalWidthAction {
+interface SetTotalWidthAction {
   readonly type: WidthActionType.SET_TOTAL_WIDTH
   readonly value: number
 }
 
 export type WidthAction =
-  | ISetWidthsAction
-  | IUpdateWidthsAction
-  | IResetWidthsAction
-  | ISetTotalWidthAction
+  | SetWidthsAction
+  | UpdateWidthsAction
+  | ResetWidthsAction
+  | SetTotalWidthAction
 
 /*******************************************************************************
  *

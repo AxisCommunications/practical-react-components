@@ -16,11 +16,11 @@ const transitionHeight = (
   node.style.height = `${end}px`
 }
 
-interface IFoldTransition {
+interface FoldTransitionProps {
   readonly expanded: boolean
 }
 
-export const FoldTransition: React.FunctionComponent<IFoldTransition> = ({
+export const FoldTransition: React.FunctionComponent<FoldTransitionProps> = ({
   expanded,
   children,
 }) => {

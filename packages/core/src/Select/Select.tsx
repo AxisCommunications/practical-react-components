@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 
-import { BaseSelect, IBaseSelectProps } from './BaseSelect'
-import { IFieldProps, withField } from '../utils/withField'
+import { BaseSelect, BaseSelectProps } from './BaseSelect'
+import { FieldProps, withField } from '../utils/withField'
 
 export const LabelContainer = styled.span`
   overflow: hidden;
@@ -14,14 +14,14 @@ export const PlaceholderContainer = styled(LabelContainer)`
   color: ${({ theme }) => theme.color.text05()};
 `
 
-export interface IOption<V extends string = string> {
+export interface Option<V extends string = string> {
   readonly value: V
   readonly label: string
   readonly disabled?: boolean
 }
 
-export interface ISelectProps<V extends string = string>
-  extends Omit<IBaseSelectProps<V>, 'component' | 'options'> {
+export interface SelectProps<V extends string = string>
+  extends Omit<BaseSelectProps<V>, 'component' | 'options'> {
   /**
    * Selects an item in the dropdown menu.
    * Must pre-exist in the dropdown menu and written in lowercase.
@@ -31,7 +31,7 @@ export interface ISelectProps<V extends string = string>
   /**
    * Used to create an array of selectable options.
    */
-  readonly options: ReadonlyArray<IOption<V>>
+  readonly options: ReadonlyArray<Option<V>>
   /**
    * Executes a JavaScript when a user changes the selected option of an element.
    */
@@ -47,7 +47,7 @@ export function Select<V extends string = string>({
   options,
   placeholder = '',
   ...props
-}: ISelectProps<V>): JSX.Element {
+}: SelectProps<V>): JSX.Element {
   const textOptions = useMemo(
     () =>
       options.map(({ value, label, disabled }) => {
@@ -82,5 +82,5 @@ export function Select<V extends string = string>({
 }
 
 export const SelectField = <V extends string = string>(
-  props: IFieldProps & ISelectProps<V>
-) => withField<ISelectProps<V>>(Select)(props)
+  props: FieldProps & SelectProps<V>
+) => withField<SelectProps<V>>(Select)(props)

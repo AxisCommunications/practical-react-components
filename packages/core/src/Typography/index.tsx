@@ -217,15 +217,15 @@ const TYPOGRAPHY_VARIANTS = {
  *
  */
 
-export interface ITypographyProps {
+export interface TypographyProps {
   readonly variant?: TypographyVariant
 }
 
-export const Typography = styled.p.attrs<ITypographyProps>(
+export const Typography = styled.p.attrs<TypographyProps>(
   ({ variant = 'default-text' }) => ({
     as: TYPOGRAPHY_VARIANTS[variant].as,
   })
-)<ITypographyProps>`
+)<TypographyProps>`
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size.regular};
   line-height: ${({ theme }) => theme.font.lineHeight.large};

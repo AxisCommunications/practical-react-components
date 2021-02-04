@@ -1,7 +1,7 @@
 export * from './BaseDialog'
 export * from './AlertDialog'
 export * from './ConfirmDialog'
-export { IDialogProps } from './Dialog'
+export { DialogProps } from './Dialog'
 
 import { Dialog as DialogOriginal, HeaderTitle } from './Dialog'
 import {
@@ -13,7 +13,7 @@ import {
 type DialogOriginalType = typeof DialogOriginal
 
 /* eslint-disable functional/prefer-readonly-type */
-interface IDialogSetup {
+interface DialogSetupType {
   CenteredSection: typeof CenteredSection
   EdgeToEdgeSection: typeof EdgeToEdgeSection
   ScrollSection: typeof ScrollSection
@@ -21,12 +21,12 @@ interface IDialogSetup {
 }
 /* eslint-enable functional/prefer-readonly-type */
 
-const DialogSetup = DialogOriginal as DialogOriginalType & IDialogSetup
+const DialogSetup = DialogOriginal as DialogOriginalType & DialogSetupType
 DialogSetup.CenteredSection = CenteredSection
 DialogSetup.EdgeToEdgeSection = EdgeToEdgeSection
 DialogSetup.ScrollSection = ScrollSection
 DialogSetup.HeaderTitle = HeaderTitle
 
-interface IDialog extends DialogOriginalType, Readonly<IDialogSetup> {}
+interface DialogType extends DialogOriginalType, Readonly<DialogSetupType> {}
 
-export const Dialog: IDialog = DialogSetup
+export const Dialog: DialogType = DialogSetup

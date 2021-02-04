@@ -15,10 +15,10 @@ import { spacing, iconSize } from '../designparams'
 import { Spinner } from '../Spinner'
 import { Progress } from '../Progress'
 import {
-  ISimpleToast,
-  IActionToast,
-  IProgressToast,
-  IBaseToast,
+  SimpleToast,
+  ActionToast,
+  ProgressToast,
+  BaseToastValue,
 } from './context'
 
 const ToastLabel = styled(Typography).attrs({ variant: 'chip-tag-text' })<{
@@ -86,13 +86,13 @@ const ActionIconColor = styled(IconWrapper)`
   color: ${({ theme }) => theme.color.elementPrimary()};
 `
 
-export type IToast = ISimpleToast | IActionToast
+export type Toast = SimpleToast | ActionToast
 
-type ToastCreator<T = IToast> = (toast: T) => IBaseToast
+type ToastCreator<T = Toast> = (toast: T) => BaseToastValue
 
-type SimpleToastCreator = ToastCreator<ISimpleToast>
-type ActionToastCreator = ToastCreator<IActionToast>
-type ProgressToastCreator = ToastCreator<IProgressToast>
+type SimpleToastCreator = ToastCreator<SimpleToast>
+type ActionToastCreator = ToastCreator<ActionToast>
+type ProgressToastCreator = ToastCreator<ProgressToast>
 
 /*
  * Success toast

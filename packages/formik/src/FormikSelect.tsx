@@ -2,21 +2,21 @@ import React, { useCallback } from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   Select,
-  ISelectProps,
-  IFieldProps,
+  SelectProps,
+  FieldProps,
   withField,
 } from 'practical-react-components-core'
 
-export interface IFormikSelectProps<V extends string = string>
-  extends Omit<ISelectProps<V>, 'name' | 'value'>,
-    Partial<Pick<ISelectProps<V>, 'value'>>,
+export interface FormikSelectProps<V extends string = string>
+  extends Omit<SelectProps<V>, 'name' | 'value'>,
+    Partial<Pick<SelectProps<V>, 'value'>>,
     Pick<FieldConfig, 'name' | 'validate'> {}
 
 export function FormikSelect<V extends string = string>({
   name,
   validate,
   ...props
-}: IFormikSelectProps<V>): JSX.Element {
+}: FormikSelectProps<V>): JSX.Element {
   const [field, meta, { setValue, setTouched }] = useField<V>({
     name,
     validate,
@@ -35,5 +35,5 @@ export function FormikSelect<V extends string = string>({
 }
 
 export const FormikSelectField = <V extends string = string>(
-  props: IFieldProps & IFormikSelectProps<V>
-) => withField<IFormikSelectProps<V>>(FormikSelect)(props)
+  props: FieldProps & FormikSelectProps<V>
+) => withField<FormikSelectProps<V>>(FormikSelect)(props)

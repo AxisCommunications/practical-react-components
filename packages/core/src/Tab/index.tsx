@@ -26,13 +26,13 @@ const FLEX_DIRECTION = {
  * Tab container primitive
  */
 
-interface ITabBaseContainerProps {
+interface TabBaseContainerProps {
   readonly selected: boolean
   readonly disabled: boolean
   readonly markerOffset: MarkerOffset
 }
 
-const TabBaseContainer = styled.div<ITabBaseContainerProps>`
+const TabBaseContainer = styled.div<TabBaseContainerProps>`
   position: relative;
   display: flex;
   flex-direction: ${({ markerOffset }) => FLEX_DIRECTION[markerOffset]};
@@ -77,13 +77,13 @@ const TabBaseContainer = styled.div<ITabBaseContainerProps>`
  * Tab marker primitive
  */
 
-interface ITabBaseMarkerProps {
+interface TabBaseMarkerProps {
   readonly offset: MarkerOffset
   readonly selected: boolean
 }
 
 // Renders a marker indicating that the tab is selected
-const TabBaseMarker = styled.div<ITabBaseMarkerProps>`
+const TabBaseMarker = styled.div<TabBaseMarkerProps>`
   content: ' ';
   position: absolute;
   flex: none;
@@ -128,7 +128,7 @@ const TabBaseContents = styled.div`
  *
  */
 
-export interface ITabBaseProps<T> extends Omit<BaseProps, 'id' | 'onSelect'> {
+export interface TabBaseProps<T> extends Omit<BaseProps, 'id' | 'onSelect'> {
   readonly id: T
   readonly selected: boolean
   readonly disabled?: boolean
@@ -145,7 +145,7 @@ export function TabBase<T>({
   markerOffset = 'right',
   children,
   ...props
-}: ITabBaseProps<T>): JSX.Element {
+}: TabBaseProps<T>): JSX.Element {
   const onClick = useCallback<React.MouseEventHandler<HTMLDivElement>>(() => {
     if (selected || disabled) {
       return
@@ -195,12 +195,12 @@ const TabContentsIcon = styled(Icon)`
  * Tab contents label primitive
  */
 
-interface ITabContentsLabelProps {
+interface TabContentsLabelProps {
   readonly selected?: boolean
   readonly centered?: boolean
 }
 
-const TabContentsLabel = styled.div<ITabContentsLabelProps>`
+const TabContentsLabel = styled.div<TabContentsLabelProps>`
   margin-left: ${({ centered }) => (centered === true ? '0' : spacing.medium)};
   max-width: 100%;
   overflow: hidden;
@@ -231,7 +231,7 @@ const TabContents = styled.div`
 
 export type ChangeEventHandler<T> = (id: T) => void
 
-interface IInternalTabBaseProps<T> extends Omit<BaseProps, 'id' | 'onSelect'> {
+interface InternalTabBaseProps<T> extends Omit<BaseProps, 'id' | 'onSelect'> {
   /**
    * `class` to be passed to the component.
    */
@@ -262,7 +262,7 @@ interface IInternalTabBaseProps<T> extends Omit<BaseProps, 'id' | 'onSelect'> {
   readonly label?: string
 }
 
-interface IInternalTabProps<T> extends IInternalTabBaseProps<T> {
+interface InternalTabProps<T> extends InternalTabBaseProps<T> {
   readonly markerOffset: MarkerOffset
 }
 
@@ -275,7 +275,7 @@ function InternalTab<T>({
   markerOffset,
   label,
   ...props
-}: IInternalTabProps<T>): JSX.Element {
+}: InternalTabProps<T>): JSX.Element {
   return (
     <TabBase<T>
       id={id}
@@ -298,27 +298,27 @@ function InternalTab<T>({
 /**
  * Tab
  */
-interface ITabProps<T> extends IInternalTabBaseProps<T> {
+interface TabProps<T> extends InternalTabBaseProps<T> {
   readonly markerOffset?: HorizontalTabMarkerOffset
 }
 
 export function Tab<T>({
   markerOffset = 'bottom',
   ...props
-}: ITabProps<T>): JSX.Element {
+}: TabProps<T>): JSX.Element {
   return <InternalTab<T> {...props} markerOffset={markerOffset} />
 }
 
 /**
  * Vertical tab
  */
-interface IVerticalTabProps<T> extends IInternalTabBaseProps<T> {
+interface VerticalTabProps<T> extends InternalTabBaseProps<T> {
   readonly markerOffset?: VerticalTabMarkerOffset
 }
 
 export function VerticalTab<T>({
   markerOffset = 'right',
   ...props
-}: IVerticalTabProps<T>): JSX.Element {
+}: VerticalTabProps<T>): JSX.Element {
   return <InternalTab<T> {...props} markerOffset={markerOffset} />
 }
