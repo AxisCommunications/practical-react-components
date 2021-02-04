@@ -6,7 +6,6 @@ export const meta = {
 
 import { useState, useCallback } from 'react'
 import styled from 'styled-components'
-
 import {
   Typography,
   Button,
@@ -27,15 +26,21 @@ import {
   TextBlock,
   Card,
   CardHeader,
+  CardHeaderTypography,
+  CardSubHeaderTypography,
   CardContent,
   CardFooter,
   CardPlainContent,
   CardExpandableHeader,
   CardTabs,
   CardFooterSpacer,
+  Menu,
 } from 'practical-react-components-core'
+import {
+  ImagePlaceholderIcon,
+  MoreVertIcon,
+} from 'practical-react-components-icons'
 
-import { ImagePlaceholderIcon } from 'practical-react-components-icons'
 import { smallParagraphFixture } from '../fixtures/paragraphs'
 
 # Card
@@ -93,6 +98,45 @@ export const OutsideHeader = styled(Typography).attrs({
   color: ${({ theme }) => theme.color.text05()};
 `
 
+export const HeaderWithMenuWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 100%;
+  align-items: center;
+`
+
+export const HeaderIcon = styled(Icon)`
+  width: 72px;
+  height: 100%;
+  margin-left: -24px;
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+`
+
+export const CardHeaderTabs = styled(CardHeader)`
+  padding: 0;
+  height: 48px;
+`
+
+export const CardHeaderWithTriablge = styled(CardHeader)`
+  position: relative;
+`
+
+export const HeaderTriablgeWithMenuWrapper = styled.div`
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  width: 100%;
+  align-items: center;
+  grid-gap: 16px;
+`
+
+export const ExpandableHeaderWrapper = styled.div`
+  display: grid;
+  grid-template-columns: auto 1fr;
+`
+
 export const fruitOptions = [
   { value: 'apple', label: 'Apple' },
   { value: 'banana', label: 'Banana' },
@@ -144,7 +188,9 @@ export const DemoComponent = ({}) => {
     <>
       <Wrapper>
         <Card>
-          <CardHeader header="Small height header" height="small" />
+          <CardHeader>
+            <CardHeaderTypography>Small height header</CardHeaderTypography>
+          </CardHeader>
           <CardContent>
             <Typography>Card content</Typography>
           </CardContent>
@@ -153,19 +199,24 @@ export const DemoComponent = ({}) => {
           </CardFooter>
         </Card>
         <Card>
-          <CardHeader
-            header="With menu"
-            menu={[
-              { label: 'Blue', onClick },
-              { label: 'Yellow', onClick },
-              {
-                label: 'Green',
-                onClick,
-                divider: true,
-              },
-              { label: 'White', onClick },
-            ]}
-          />
+          <CardHeader>
+            <HeaderWithMenuWrapper>
+              <CardHeaderTypography>With menu</CardHeaderTypography>
+              <Menu
+                icon={MoreVertIcon}
+                items={[
+                  { label: 'Blue', onClick },
+                  { label: 'Yellow', onClick },
+                  {
+                    label: 'Green',
+                    onClick,
+                    divider: true,
+                  },
+                  { label: 'White', onClick },
+                ]}
+              />
+            </HeaderWithMenuWrapper>
+          </CardHeader>
           <CardContent>
             <Typography variant="default-text">
               {smallParagraphFixture}
@@ -177,25 +228,9 @@ export const DemoComponent = ({}) => {
           </CardFooter>
         </Card>
         <Card>
-          <CardHeader
-            header="With image"
-            icon={<Icon icon={ImagePlaceholderIcon} />}
-          />
-          <CardContent>
-            <Typography>Card content</Typography>
-          </CardContent>
-          <CardFooter>
-            <Button onClick={onClick} label="Action 1" />
-          </CardFooter>
-        </Card>
-        <Card>
-          <CardHeader tab={true}>
-            <CardTabs
-              variant="inside"
-              options={tabs}
-              value={tab}
-              onChange={setTab}
-            />
+          <CardHeader>
+            <HeaderIcon icon={ImagePlaceholderIcon} />
+            <CardHeaderTypography>With image</CardHeaderTypography>
           </CardHeader>
           <CardContent>
             <Typography>Card content</Typography>
@@ -205,7 +240,23 @@ export const DemoComponent = ({}) => {
           </CardFooter>
         </Card>
         <Card>
-          <CardHeader tab={true} height="small">
+          <CardHeaderTabs>
+            <CardTabs
+              variant="inside"
+              options={tabs}
+              value={tab}
+              onChange={setTab}
+            />
+          </CardHeaderTabs>
+          <CardContent>
+            <Typography>Card content</Typography>
+          </CardContent>
+          <CardFooter>
+            <Button onClick={onClick} label="Action 1" />
+          </CardFooter>
+        </Card>
+        <Card>
+          <CardHeaderTabs>
             <CardTabs
               variant="inside"
               options={tabs}
@@ -213,7 +264,7 @@ export const DemoComponent = ({}) => {
               onChange={setTab}
               hasBackground={true}
             />
-          </CardHeader>
+          </CardHeaderTabs>
           <CardContent>
             <Typography>Card content</Typography>
           </CardContent>
@@ -236,25 +287,30 @@ export const DemoComponent = ({}) => {
           </Card>
         </OutsideTabsContainer>
         <Card square={false}>
-          <CardHeader
-            header="With image(s) and with menu"
-            icon={
-              <>
+          <CardHeaderWithTriablge>
+            <HeaderTriablgeWithMenuWrapper>
+              <div>
                 <Triangle />
                 <Dot />
-              </>
-            }
-            menu={[
-              { label: 'Blue', onClick },
-              { label: 'Yellow', onClick },
-              {
-                label: 'Green',
-                onClick,
-                divider: true,
-              },
-              { label: 'White', onClick },
-            ]}
-          />
+              </div>
+              <CardHeaderTypography>
+                With image(s) and with menu
+              </CardHeaderTypography>
+              <Menu
+                icon={MoreVertIcon}
+                items={[
+                  { label: 'Blue', onClick },
+                  { label: 'Yellow', onClick },
+                  {
+                    label: 'Green',
+                    onClick,
+                    divider: true,
+                  },
+                  { label: 'White', onClick },
+                ]}
+              />
+            </HeaderTriablgeWithMenuWrapper>
+          </CardHeaderWithTriablge>
           <CardContent>
             <Typography>Card content</Typography>
           </CardContent>
@@ -268,13 +324,20 @@ export const DemoComponent = ({}) => {
         </Card>
         <Card>
           <CardExpandableHeader
-            header="Expandable header"
             subhead="Sub heading"
             height="large"
             icon={<Icon icon={ImagePlaceholderIcon} size="large" />}
             expanded={isExpanded}
             onToggle={setExpanded}
-          />
+          >
+            <ExpandableHeaderWrapper>
+              <HeaderIcon icon={ImagePlaceholderIcon} />
+              <div>
+                <CardHeaderTypography>Expandable header</CardHeaderTypography>
+                <CardSubHeaderTypography>Sub heading</CardSubHeaderTypography>
+              </div>
+            </ExpandableHeaderWrapper>
+          </CardExpandableHeader>
           <FoldTransition expanded={isExpanded}>
             <CardContent>
               <Typography>Card content</Typography>

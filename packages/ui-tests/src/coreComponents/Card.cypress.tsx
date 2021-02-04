@@ -3,6 +3,7 @@ import React from 'react'
 import {
   Card,
   CardHeader,
+  CardHeaderTypography,
   CardContent,
   CardFooter,
   Typography,
@@ -21,7 +22,9 @@ const NOOP = () => {
 
 const Test = () => (
   <Card data-cy="card">
-    <CardHeader header="Card header" />
+    <CardHeader>
+      <CardHeaderTypography>Card header</CardHeaderTypography>
+    </CardHeader>
     <CardContent>
       <Typography>Card content</Typography>
     </CardContent>
