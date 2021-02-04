@@ -1,34 +1,13 @@
-import { IBaseToast } from './Toast'
+import {
+  IBaseToast,
+  ToastId,
+  IToastCreateAction,
+  IToastActionType,
+  IToastRemoveAction,
+  IToastRemoveAllAction,
+} from './context'
 
 let toastCounter = 0
-
-export enum IToastActionType {
-  'TOAST_CREATE',
-  'TOAST_REMOVE',
-  'TOAST_REMOVE_ALL',
-}
-
-export type ToastId = string
-
-export interface IToastCreateAction {
-  readonly id: ToastId
-  readonly type: IToastActionType.TOAST_CREATE
-  readonly data: IBaseToast
-}
-
-export interface IToastRemoveAction {
-  readonly id: ToastId
-  readonly type: IToastActionType.TOAST_REMOVE
-}
-
-export interface IToastRemoveAllAction {
-  readonly type: IToastActionType.TOAST_REMOVE_ALL
-}
-
-export type IToastAction =
-  | IToastCreateAction
-  | IToastRemoveAction
-  | IToastRemoveAllAction
 
 export const createToast = (
   toast: IBaseToast,

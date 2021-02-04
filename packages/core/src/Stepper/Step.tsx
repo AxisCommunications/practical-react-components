@@ -3,11 +3,34 @@ import styled, { css } from 'styled-components'
 import { CheckIcon, WarningIcon } from 'practical-react-components-icons'
 
 import { Typography } from '../Typography'
-import { Button } from '../Button'
+import { Button, ButtonClickHandler } from '../Button'
 import { font } from '../theme'
 import { shape, spacing } from '../designparams'
 
-import { IStepperAction, IStepContent } from '.'
+export interface IStepperAction {
+  /**
+   * The label for the stepper button (previous, next or complete action).
+   */
+  readonly label: string
+  /**
+   * The click handler for the stepper button (previous, next or complete action).
+   */
+  readonly onClick?: ButtonClickHandler
+}
+
+type BaseElement = HTMLDivElement
+type BaseProps = React.HTMLAttributes<BaseElement>
+
+export interface IStepContent extends BaseProps {
+  /* Step's label */
+  readonly label: string
+  /* Step's content */
+  readonly content: React.ReactNode
+  /* Indicates whether the step has errors that should be resolved */
+  readonly hasErrors?: boolean
+  /* Disables next button */
+  readonly disableNext?: boolean
+}
 
 const StepWrapper = styled.div`
   font-size: ${font.size.regular};

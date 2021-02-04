@@ -7,7 +7,7 @@ import {
   RadioButtonValueChangeHandler,
   RadioNative,
   RadioContainer,
-} from '../RadioButton'
+} from './RadioButton'
 import { Icon, IconType } from '../Icon'
 import { opacity, shape, componentSize } from '../designparams'
 import { Typography } from '../Typography'

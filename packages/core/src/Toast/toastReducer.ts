@@ -1,5 +1,4 @@
-import { IToastAction, IToastActionType, ToastId } from './toastActions'
-import { IBaseToast } from './Toast'
+import { IBaseToast, IToastAction, IToastActionType, ToastId } from './context'
 
 export type IToastsMap = ReadonlyMap<ToastId, IBaseToast>
 

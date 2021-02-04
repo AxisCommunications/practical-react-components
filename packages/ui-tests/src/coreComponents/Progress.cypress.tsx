@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-/* eslint-disable-next-line node/no-extraneous-import */
+
 import { Button, Progress } from 'practical-react-components-core'
 
 export const meta = {

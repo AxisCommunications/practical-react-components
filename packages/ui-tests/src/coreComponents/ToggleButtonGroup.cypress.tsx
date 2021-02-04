@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react'
-/* eslint-disable-next-line node/no-extraneous-import */
+
 import { ToggleButtonGroup, Typography } from 'practical-react-components-core'
 
 export const meta = {

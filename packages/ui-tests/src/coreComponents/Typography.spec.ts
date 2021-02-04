@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 
-/* eslint-disable-next-line node/no-extraneous-import */
 import { font } from 'practical-react-components-core'
 
 const typographys = [

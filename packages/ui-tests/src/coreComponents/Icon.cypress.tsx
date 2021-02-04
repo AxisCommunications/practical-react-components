@@ -1,5 +1,5 @@
 import React from 'react'
-/* eslint-disable-next-line node/no-extraneous-import */
+
 import { Icon } from 'practical-react-components-core'
 import {
   AddIcon,

@@ -27,29 +27,6 @@ exports[`Select Direction 1`] = `
   width: auto;
 }
 
-.c9 {
-  position: fixed;
-  top: 0;
-  width: 360px;
-  border-radius: 4px;
-  margin: 8px 16px;
-  right: 0;
-}
-
-.c0 {
-  color: rgb(41,41,41);
-}
-
-.c1 {
-  position: absolute;
-  z-index: 0;
-}
-
-.c8 {
-  position: absolute;
-  z-index: 1;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -119,6 +96,29 @@ exports[`Select Direction 1`] = `
   background-color: rgb(240,240,240);
   border: none;
   padding: 2px;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
 }
 
 .c2 {
@@ -252,29 +252,6 @@ exports[`Select Direction 2`] = `
   width: auto;
 }
 
-.c9 {
-  position: fixed;
-  top: 0;
-  width: 360px;
-  border-radius: 4px;
-  margin: 8px 16px;
-  right: 0;
-}
-
-.c0 {
-  color: rgb(41,41,41);
-}
-
-.c1 {
-  position: absolute;
-  z-index: 0;
-}
-
-.c8 {
-  position: absolute;
-  z-index: 1;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -344,6 +321,29 @@ exports[`Select Direction 2`] = `
   background-color: rgb(240,240,240);
   border: none;
   padding: 2px;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
 }
 
 .c2 {
@@ -477,29 +477,6 @@ exports[`Select Other 1`] = `
   width: auto;
 }
 
-.c9 {
-  position: fixed;
-  top: 0;
-  width: 360px;
-  border-radius: 4px;
-  margin: 8px 16px;
-  right: 0;
-}
-
-.c0 {
-  color: rgb(41,41,41);
-}
-
-.c1 {
-  position: absolute;
-  z-index: 0;
-}
-
-.c8 {
-  position: absolute;
-  z-index: 1;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -576,6 +553,29 @@ exports[`Select Other 1`] = `
 .c3:focus {
   background-color: rgb(255,235,238);
   border-color: rgb(211,47,47);
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
 }
 
 .c2 {
@@ -709,29 +709,6 @@ exports[`Select Other 2`] = `
   width: auto;
 }
 
-.c9 {
-  position: fixed;
-  top: 0;
-  width: 360px;
-  border-radius: 4px;
-  margin: 8px 16px;
-  right: 0;
-}
-
-.c0 {
-  color: rgb(41,41,41);
-}
-
-.c1 {
-  position: absolute;
-  z-index: 0;
-}
-
-.c8 {
-  position: absolute;
-  z-index: 1;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -807,6 +784,29 @@ exports[`Select Other 2`] = `
   background-color: rgb(240,240,240);
   border: none;
   padding: 2px;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
 }
 
 .c2 {
@@ -940,29 +940,6 @@ exports[`Select SelectMarker 1`] = `
   width: auto;
 }
 
-.c9 {
-  position: fixed;
-  top: 0;
-  width: 360px;
-  border-radius: 4px;
-  margin: 8px 16px;
-  right: 0;
-}
-
-.c0 {
-  color: rgb(41,41,41);
-}
-
-.c1 {
-  position: absolute;
-  z-index: 0;
-}
-
-.c8 {
-  position: absolute;
-  z-index: 1;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1032,6 +1009,29 @@ exports[`Select SelectMarker 1`] = `
   background-color: rgb(240,240,240);
   border: none;
   padding: 2px;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
 }
 
 .c2 {
@@ -1165,29 +1165,6 @@ exports[`Select SelectMarker 2`] = `
   width: auto;
 }
 
-.c9 {
-  position: fixed;
-  top: 0;
-  width: 360px;
-  border-radius: 4px;
-  margin: 8px 16px;
-  right: 0;
-}
-
-.c0 {
-  color: rgb(41,41,41);
-}
-
-.c1 {
-  position: absolute;
-  z-index: 0;
-}
-
-.c8 {
-  position: absolute;
-  z-index: 1;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1257,6 +1234,29 @@ exports[`Select SelectMarker 2`] = `
   background-color: rgb(240,240,240);
   border: none;
   padding: 2px;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
 }
 
 .c2 {
@@ -1390,29 +1390,6 @@ exports[`Select Width 1`] = `
   width: auto;
 }
 
-.c9 {
-  position: fixed;
-  top: 0;
-  width: 360px;
-  border-radius: 4px;
-  margin: 8px 16px;
-  right: 0;
-}
-
-.c0 {
-  color: rgb(41,41,41);
-}
-
-.c1 {
-  position: absolute;
-  z-index: 0;
-}
-
-.c8 {
-  position: absolute;
-  z-index: 1;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1482,6 +1459,29 @@ exports[`Select Width 1`] = `
   background-color: rgb(240,240,240);
   border: none;
   padding: 2px;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
 }
 
 .c2 {
@@ -1615,29 +1615,6 @@ exports[`Select Width 2`] = `
   width: auto;
 }
 
-.c9 {
-  position: fixed;
-  top: 0;
-  width: 360px;
-  border-radius: 4px;
-  margin: 8px 16px;
-  right: 0;
-}
-
-.c0 {
-  color: rgb(41,41,41);
-}
-
-.c1 {
-  position: absolute;
-  z-index: 0;
-}
-
-.c8 {
-  position: absolute;
-  z-index: 1;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1707,6 +1684,29 @@ exports[`Select Width 2`] = `
   background-color: rgb(240,240,240);
   border: none;
   padding: 2px;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
 }
 
 .c2 {
@@ -1840,29 +1840,6 @@ exports[`Select Width 3`] = `
   width: auto;
 }
 
-.c9 {
-  position: fixed;
-  top: 0;
-  width: 360px;
-  border-radius: 4px;
-  margin: 8px 16px;
-  right: 0;
-}
-
-.c0 {
-  color: rgb(41,41,41);
-}
-
-.c1 {
-  position: absolute;
-  z-index: 0;
-}
-
-.c8 {
-  position: absolute;
-  z-index: 1;
-}
-
 .c5 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1932,6 +1909,29 @@ exports[`Select Width 3`] = `
   background-color: rgb(240,240,240);
   border: none;
   padding: 2px;
+}
+
+.c9 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c8 {
+  position: absolute;
+  z-index: 1;
 }
 
 .c2 {

@@ -8,15 +8,18 @@ import {
   InfoIcon,
 } from 'practical-react-components-icons'
 
-import { ToastId } from './toastActions'
-import { IBaseToast } from './Toast'
-
-import { IButtonLinkProps, IALinkProps, Link } from '../Link'
-import { IconType, Icon } from '../Icon'
+import { Link } from '../Link'
+import { Icon } from '../Icon'
 import { Typography } from '../Typography'
 import { spacing, iconSize } from '../designparams'
 import { Spinner } from '../Spinner'
 import { Progress } from '../Progress'
+import {
+  ISimpleToast,
+  IActionToast,
+  IProgressToast,
+  IBaseToast,
+} from './context'
 
 const ToastLabel = styled(Typography).attrs({ variant: 'chip-tag-text' })<{
   readonly hasCloseButton: boolean
@@ -82,28 +85,6 @@ const ErrorIconColor = styled(IconWrapper)`
 const ActionIconColor = styled(IconWrapper)`
   color: ${({ theme }) => theme.color.elementPrimary()};
 `
-
-export interface ISimpleToast {
-  readonly label: string
-  readonly message?: string
-  readonly onClose?: (id: ToastId) => void
-  readonly duration?: number
-}
-
-export interface IActionToast extends ISimpleToast {
-  readonly action: {
-    readonly icon: IconType
-    readonly text: string
-    readonly link: IButtonLinkProps | IALinkProps
-  }
-}
-
-export interface IProgressToast extends ISimpleToast {
-  readonly progress: {
-    readonly value: number
-    readonly label: string
-  }
-}
 
 export type IToast = ISimpleToast | IActionToast
 

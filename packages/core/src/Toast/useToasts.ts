@@ -1,16 +1,7 @@
 import { MutableRefObject, Dispatch, useContext, useCallback } from 'react'
 
+import { createToast, removeToast, removeAllToasts } from './toastActions'
 import {
-  createToast,
-  removeToast,
-  IToastAction,
-  ToastId,
-  removeAllToasts,
-} from './toastActions'
-import {
-  ISimpleToast,
-  IActionToast,
-  IProgressToast,
   createSuccessToast,
   createErrorToast,
   createInfoToast,
@@ -20,33 +11,22 @@ import {
   createProgressToast,
 } from './toastCreators'
 
-import { IBaseToast } from './Toast'
-import { ToastsContext } from './ToastsProvider'
-
-type ShowToastHandler = (toast: IBaseToast, id?: ToastId) => ToastId
-type HideToastHandler = (id: ToastId) => void
-type SimpleToastCreator = (toast: ISimpleToast, id?: ToastId) => ToastId
-type ActionToastCreator = (toast: IActionToast, id?: ToastId) => ToastId
-type ProgressToastCreator = (toast: IProgressToast, id?: ToastId) => ToastId
+import {
+  ActionToastCreator,
+  HideToastHandler,
+  IToastAction,
+  IToastCallbacks,
+  ProgressToastCreator,
+  ShowToastHandler,
+  SimpleToastCreator,
+  ToastsContext,
+} from './context'
 
 export interface ISimpleToastsDurations {
   readonly success?: number
   readonly error?: number
   readonly warning?: number
   readonly info?: number
-}
-
-export interface IToastCallbacks {
-  readonly showToast: ShowToastHandler
-  readonly hideToast: HideToastHandler
-  readonly clearToasts: () => void
-  readonly showSuccessToast: SimpleToastCreator
-  readonly showErrorToast: SimpleToastCreator
-  readonly showWarningToast: SimpleToastCreator
-  readonly showInfoToast: SimpleToastCreator
-  readonly showLoadingToast: SimpleToastCreator
-  readonly showProgressToast: ProgressToastCreator
-  readonly showActionToast: ActionToastCreator
 }
 
 export const useToastCallbacks = (

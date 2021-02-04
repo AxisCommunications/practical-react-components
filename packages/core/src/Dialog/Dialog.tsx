@@ -18,9 +18,9 @@ import { useScrollPosition } from 'react-hooks-shareable'
 
 import { Typography } from '../Typography'
 import { IModalProps } from '../Modal'
-import { Header } from '../Dialog/components/Header'
-import { Footer } from '../Dialog/components/Footer'
-import { MainSection } from '../Dialog/components/Content'
+import { Header } from './components/Header'
+import { Footer } from './components/Footer'
+import { MainSection } from './components/Content'
 import { BaseDialog, DialogWidth } from './BaseDialog'
 
 export const HeaderTitle = styled(Typography).attrs({

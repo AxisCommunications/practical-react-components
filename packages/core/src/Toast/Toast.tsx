@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, ReactNode } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import styled from 'styled-components'
 
 import { CloseIcon } from 'practical-react-components-icons'
@@ -12,7 +12,7 @@ import {
 } from '../designparams'
 import { Icon } from '../Icon'
 
-import { ToastId } from './toastActions'
+import { IBaseToast, ToastId } from './context'
 
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
@@ -127,14 +127,6 @@ const ToastWrapper = styled.div.attrs<{ readonly zIndex: number }>(
  * BaseToast
  */
 
-export interface IBaseToast {
-  readonly icon: ReactNode
-  readonly label: ReactNode
-  readonly message?: ReactNode
-  readonly duration?: number
-  readonly hasCloseButton?: boolean
-  readonly onClose?: (id: ToastId) => void
-}
 interface IBaseToastProps extends IBaseToast, BaseProps {
   /**
    * `class` to be passed to the component.

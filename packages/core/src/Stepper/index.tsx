@@ -2,40 +2,19 @@ import React, { useState, useMemo, useCallback } from 'react'
 import styled from 'styled-components'
 
 import { spacing } from '../designparams'
-import { ButtonClickHandler, Button } from '../Button'
+import { Button } from '../Button'
 import { Paper } from '../Paper'
-import { Step, StepControls } from './Step'
-
-type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+import { IStepContent, IStepperAction, Step, StepControls } from './Step'
 
 const StepperWrapper = styled(Paper)`
   padding: ${spacing.large} ${spacing.extraLarge} ${spacing.large} 36px;
   box-shadow: none;
 `
 
-export interface IStepContent extends BaseProps {
-  /* Step's label */
-  readonly label: string
-  /* Step's content */
-  readonly content: React.ReactNode
-  /* Indicates whether the step has errors that should be resolved */
-  readonly hasErrors?: boolean
-  /* Disables next button */
-  readonly disableNext?: boolean
-}
+export { IStepContent, IStepperAction } from './Step'
 
-export interface IStepperAction {
-  /**
-   * The label for the stepper button (previous, next or complete action).
-   */
-  readonly label: string
-  /**
-   * The click handler for the stepper button (previous, next or complete action).
-   */
-  readonly onClick?: ButtonClickHandler
-}
-
+type BaseElement = HTMLDivElement
+type BaseProps = React.HTMLAttributes<BaseElement>
 export interface IStepperProps extends BaseProps {
   /**
    * `class` to be passed to the component.
