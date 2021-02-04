@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
 
-/* eslint-disable-next-line node/no-extraneous-import */
 import { iconSize } from 'practical-react-components-core'
 
 const parseIconSize = size => parseInt(size.split('px')[0])

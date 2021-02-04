@@ -10,7 +10,6 @@ import {
   ContentDivider,
   FormSection,
   ContentListItem,
-  /* eslint-disable-next-line node/no-extraneous-import */
 } from 'practical-react-components-core'
 
 import { smallParagraphFixture } from '../fixtures/paragraphs'

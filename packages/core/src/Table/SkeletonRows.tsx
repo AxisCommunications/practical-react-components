@@ -3,7 +3,8 @@ import styled, { keyframes } from 'styled-components'
 
 import { componentSize, opacity, spacing } from '../designparams'
 
-import { TableContext, useGridTemplateColumns } from './Table'
+import { useGridTemplateColumns } from './Table'
+import { TableContext } from './context'
 
 import { TableCellCheckbox, TableCellContent } from './TableCells'
 

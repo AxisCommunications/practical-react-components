@@ -1,6 +1,6 @@
 import React from 'react'
 import { AddIcon } from 'practical-react-components-icons'
-/* eslint-disable-next-line node/no-extraneous-import */
+
 import { Button, IconButton } from 'practical-react-components-core'
 
 export const meta = {

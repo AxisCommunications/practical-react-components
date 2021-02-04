@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import styled from 'styled-components'
 import { SiteIcon } from 'practical-react-components-icons'
-/* eslint-disable-next-line node/no-extraneous-import */
+
 import {
   useToasts,
   Button,

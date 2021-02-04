@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, useContext, useRef } from 'react'
+import React, { useReducer, useContext, useRef } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import styled, { css } from 'styled-components'
 
@@ -6,34 +6,9 @@ import { spacing, shape } from '../designparams'
 
 import { BaseToast } from './Toast'
 import { toastReducer } from './toastReducer'
-import { IToastAction } from './toastActions'
-import {
-  IToastCallbacks,
-  useToastCallbacks,
-  ISimpleToastsDurations,
-} from './useToasts'
 
-const NI = () => {
-  throw new Error(`Not implemented: no ToastContext set`)
-}
-
-interface IToastContext extends IToastCallbacks {
-  readonly __dispatchRef: React.MutableRefObject<React.Dispatch<IToastAction>>
-}
-
-export const ToastsContext = createContext<IToastContext>({
-  showToast: NI,
-  hideToast: NI,
-  clearToasts: NI,
-  showSuccessToast: NI,
-  showErrorToast: NI,
-  showWarningToast: NI,
-  showInfoToast: NI,
-  showLoadingToast: NI,
-  showProgressToast: NI,
-  showActionToast: NI,
-  __dispatchRef: { current: NI },
-})
+import { useToastCallbacks, ISimpleToastsDurations } from './useToasts'
+import { IToastAction, NI, ToastsContext } from './context'
 
 export interface IToastsPlacement {
   readonly justify: 'center' | 'right'

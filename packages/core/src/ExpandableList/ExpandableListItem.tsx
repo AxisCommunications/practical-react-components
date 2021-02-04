@@ -2,10 +2,29 @@ import React, { useCallback, FC, Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
 import { FoldTransition } from '../Transition'
+import { IconType } from '../Icon'
 
 import { ListItemContainer } from './ListItemContainer'
 
-import { IExpandableListItem, ExpandableListContainer } from '.'
+export interface IExpandableListItem {
+  readonly id: string
+  readonly label: string
+  readonly icon: IconType
+  readonly selected?: boolean
+  readonly onClick?: VoidFunction
+  readonly items?: ReadonlyArray<IExpandableListItem>
+}
+
+export const ExpandableListContainer = styled.div`
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+`
+
+const ItemWrapper = styled.div`
+  background-color: ${({ theme }) => theme.color.background00()};
+`
 
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
@@ -16,10 +35,6 @@ export interface IExpandableListItemProps extends BaseProps {
   readonly setExpandedItems: Dispatch<SetStateAction<ReadonlyArray<string>>>
   readonly isNestedItem: boolean
 }
-
-const ItemWrapper = styled.div`
-  background-color: ${({ theme }) => theme.color.background00()};
-`
 
 /**
  * ExpandableListItem

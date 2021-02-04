@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import styled from 'styled-components'
 
 import { BaseSelect, IBaseSelectProps } from './BaseSelect'
-import { IFieldProps, withField } from '..'
+import { IFieldProps, withField } from '../utils/withField'
 
 export const LabelContainer = styled.span`
   overflow: hidden;

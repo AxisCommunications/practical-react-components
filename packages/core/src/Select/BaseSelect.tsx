@@ -18,7 +18,7 @@ import { ISelectMarker } from '../theme'
 
 import { PopOver, IPopOverProps } from '../PopOver'
 import { anchorPosition } from '../PopOver/utils'
-import { SelectVariant, BaseSelectSelector } from '.'
+import { SelectVariant, BaseSelectSelector } from './BaseSelectSelector'
 
 export type DirectionType = 'auto' | 'up' | 'down'
 

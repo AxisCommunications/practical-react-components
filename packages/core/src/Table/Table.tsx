@@ -1,6 +1,5 @@
 import React, {
   useRef,
-  createContext,
   useContext,
   useMemo,
   useReducer,
@@ -15,21 +14,11 @@ import { spacing } from '../designparams'
 import { ColumnResizerRow } from './ColumnResizerRow'
 import { useResetScroll } from 'react-hooks-shareable'
 import { SCROLLBAR_DIMENSION } from '../Global/GlobalScrollbarStyle'
+import { TableContext, WidthAction, WidthActionType } from './context'
+import { TABLE_DIMENSIONS } from './dimensions'
 
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
-
-const PADDING_LEFT = 24
-
-export const TABLE_DIMENSIONS = {
-  DEFAULT_MIN_COLUMN_WIDTH: 64,
-  PADDING_LEFT,
-  PADDING: PADDING_LEFT + SCROLLBAR_DIMENSION, // total padding (sum of left and right(scrollbar))
-  SELECT_WIDTH: 48, // holds the checkbox
-  MENU_WIDTH: 32 + (20 - SCROLLBAR_DIMENSION), // holds the menu (24px box that holds menu button icon should have 24px space between itself and Table edge)
-  // TODO: this is componentSize, but that one is a string and contains 'px'
-  ROW_HEIGHT: 56,
-}
 
 /*******************************************************************************
  *
@@ -45,40 +34,6 @@ export const TABLE_DIMENSIONS = {
  * The array of widths is updated using a reducer.
  *
  ******************************************************************************/
-
-export enum WidthActionType {
-  SET_WIDTHS,
-  UPDATE_WIDTHS,
-  RESET_WIDTHS,
-  SET_TOTAL_WIDTH,
-}
-
-interface ISetWidthsAction {
-  readonly type: WidthActionType.SET_WIDTHS
-  readonly widths: ReadonlyArray<number>
-}
-
-interface IUpdateWidthsAction {
-  readonly type: WidthActionType.UPDATE_WIDTHS
-  readonly widths: { readonly [id: number]: number | undefined }
-  readonly onWidthsChange?: (widths: ReadonlyArray<number>) => void
-}
-
-interface IResetWidthsAction {
-  readonly type: WidthActionType.RESET_WIDTHS
-  readonly numberOfColumns: number
-}
-
-interface ISetTotalWidthAction {
-  readonly type: WidthActionType.SET_TOTAL_WIDTH
-  readonly value: number
-}
-
-type WidthAction =
-  | ISetWidthsAction
-  | IUpdateWidthsAction
-  | IResetWidthsAction
-  | ISetTotalWidthAction
 
 interface IWidthsState {
   readonly totalWidth: number
@@ -208,38 +163,6 @@ const reduceWidths = (
     }
   }
 }
-
-/*******************************************************************************
- *
- * TableContext
- *
- * Keeps track of table-wide properties which need to
- * be accessible from within each of the subcomponents.
- *
- ******************************************************************************/
-
-export const TableContext = createContext<{
-  readonly minColumnWidth: number
-  readonly columnWidths: ReadonlyArray<number>
-  readonly dispatchWidthsAction: React.Dispatch<WidthAction>
-  readonly selectWidth: number
-  readonly menuWidth: number
-  readonly onSelect?: (selected: boolean, id?: string) => void
-  readonly hasMenu: boolean
-  readonly onWidthsChange?: (widths: ReadonlyArray<number>) => void
-}>({
-  minColumnWidth: 0,
-  columnWidths: [],
-  dispatchWidthsAction: () => {
-    /** */
-  },
-  selectWidth: 0,
-  menuWidth: 0,
-  hasMenu: false,
-  onWidthsChange: () => {
-    /** */
-  },
-})
 
 /**
  * Transform the array of widths to an appropriate grid-template-columns

@@ -2,10 +2,10 @@ import React, { useCallback, useMemo, useLayoutEffect } from 'react'
 import styled from 'styled-components'
 
 import { spacing } from '../designparams'
-import { ITextInputProps, TextInput } from '.'
+import { ITextInputProps, TextInput } from './Input'
 import { Select } from '../Select'
 import { withField } from '../utils/withField'
-import { ITranslationMeridiem } from '..'
+import { ITranslationMeridiem } from '../DateTimePicker'
 
 enum TimeFormat {
   AM = 'AM',

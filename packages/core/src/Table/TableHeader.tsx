@@ -4,7 +4,8 @@ import styled from 'styled-components'
 import { componentSize } from '../designparams'
 import { CheckboxChangeHandler, Checkbox } from '../Checkbox'
 
-import { TableContext, WidthActionType, useGridTemplateColumns } from './Table'
+import { useGridTemplateColumns } from './Table'
+import { TableContext, WidthActionType } from './context'
 
 import {
   TableHeaderCellCheckbox,

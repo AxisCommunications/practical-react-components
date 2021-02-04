@@ -5,7 +5,8 @@ import { useDraggable } from 'react-hooks-shareable'
 
 import { componentSize } from '../designparams'
 
-import { TableContext, TABLE_DIMENSIONS, WidthActionType } from './Table'
+import { TABLE_DIMENSIONS } from './dimensions'
+import { TableContext, WidthActionType } from './context'
 
 /**
  * A column divider specifies the absolute position of the divider

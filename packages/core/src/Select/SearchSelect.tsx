@@ -5,7 +5,7 @@ import { useBoolean } from 'react-hooks-shareable'
 
 import { BaseSelect } from './BaseSelect'
 import { ISelectProps } from './Select'
-import { IFieldProps, withField } from '..'
+import { IFieldProps, withField } from '../utils/withField'
 
 const InputNative = styled.input`
   font-family: ${({ theme }) => theme.font.family};

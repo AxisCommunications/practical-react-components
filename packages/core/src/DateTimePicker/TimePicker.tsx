@@ -5,7 +5,7 @@ import { spacing, shape } from '../designparams'
 import { Typography } from '../Typography'
 import { font } from '../theme'
 import { NativeButton } from '../Button'
-import { ITranslationMeridiem } from '.'
+import { ITranslationMeridiem } from './types'
 
 const CLOCK_SIZE = 300
 const HALF_CLOCK_SIZE = CLOCK_SIZE / 2

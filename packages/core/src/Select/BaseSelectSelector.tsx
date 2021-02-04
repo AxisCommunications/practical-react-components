@@ -3,7 +3,7 @@ import styled, { css, useTheme } from 'styled-components'
 
 import { Icon } from '../Icon'
 import { ArrowDownIcon, ArrowUpIcon } from './icons'
-import { componentSize, shape, spacing, opacity } from '..'
+import { componentSize, shape, spacing, opacity } from '../designparams'
 
 export type SelectVariant = 'filled' | 'transparent' | 'framed'
 

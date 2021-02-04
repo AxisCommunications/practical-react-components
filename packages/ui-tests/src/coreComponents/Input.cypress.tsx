@@ -5,7 +5,6 @@ import {
   NumberInputType,
   TimeInput,
   ITimeInputValues,
-  /* eslint-disable-next-line node/no-extraneous-import */
 } from 'practical-react-components-core'
 
 export const meta = {

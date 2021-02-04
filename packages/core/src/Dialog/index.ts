@@ -8,7 +8,7 @@ import {
   EdgeToEdgeSection,
   CenteredSection,
   ScrollSection,
-} from '../Dialog/components/Content'
+} from './components/Content'
 
 type DialogOriginalType = typeof DialogOriginal
 
