@@ -3,7 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.5.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.4.0...v0.5.0) (2021-02-02 09:28:15 +0100)
+## [v0.6.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.5.0...v0.6.0) (2021-02-04 19:52:13 +0100)
+
+### 🚀 Features
+
+  - **BREAKING** consistent type names, remove I prefix ([f5bff8b](https://github.com/AxisCommunications/practical-react-components/commit/f5bff8b888cbea3027f3180c8900624810487081))
+  - **card**: **BREAKING** refactors `CardHeader` to use only `ReactNode` (#26) ([e882d22](https://github.com/AxisCommunications/practical-react-components/commit/e882d2247f4d144f5f36ecff9462af480f37cfd0))
+
+### 📝 Documentation
+
+  -  improve Tab component example ([7ffe563](https://github.com/AxisCommunications/practical-react-components/commit/7ffe56306f1892311d94c1e61079ea496ac70e6c))
+
+### 🚧 Maintenance
+
+  -  update dependencies ([0e42811](https://github.com/AxisCommunications/practical-react-components/commit/0e42811c9fb1e4dac1d68252c62fab5c01923206))
+
+## [v0.5.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.4.0...v0.5.0) (2021-02-02 14:41:39 +0100)
 
 ### 🚧 Maintenance
 
