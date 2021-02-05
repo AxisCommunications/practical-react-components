@@ -1,6 +1,6 @@
 {
   "name": "practical-react-components-core",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "license": "MIT",
   "main": "build/index.js",
   "files": [
@@ -10,7 +10,7 @@
     "@juggle/resize-observer": "3.2.0",
     "focus-trap-react": "8.4.1",
     "no-scroll": "2.1.1",
-    "practical-react-components-icons": "0.7.0",
+    "practical-react-components-icons": "0.8.0",
     "react-hooks-shareable": "1.13.0"
   },
   "devDependencies": {

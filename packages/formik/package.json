@@ -1,13 +1,13 @@
 {
   "name": "practical-react-components-formik",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "license": "MIT",
   "main": "build/index.js",
   "files": [
     "build"
   ],
   "dependencies": {
-    "practical-react-components-core": "0.7.0"
+    "practical-react-components-core": "0.8.0"
   },
   "devDependencies": {
     "@babel/cli": "7.12.13",
