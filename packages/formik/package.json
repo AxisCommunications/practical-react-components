@@ -1,6 +1,7 @@
 {
   "name": "practical-react-components-formik",
   "version": "0.7.0",
+  "license": "MIT",
   "main": "build/index.js",
   "files": [
     "build"
