@@ -85,7 +85,7 @@ exports[`Select Direction 1`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -184,8 +184,10 @@ exports[`Select Direction 1`] = `
           >
             <input
               className="c6"
+              onBlur={[Function]}
               onChange={[Function]}
-              value=""
+              onFocus={[Function]}
+              value="test1"
             />
             <span
               className="c7"
@@ -310,7 +312,7 @@ exports[`Select Direction 2`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -409,8 +411,10 @@ exports[`Select Direction 2`] = `
           >
             <input
               className="c6"
+              onBlur={[Function]}
               onChange={[Function]}
-              value=""
+              onFocus={[Function]}
+              value="test1"
             />
             <span
               className="c7"
@@ -535,7 +539,7 @@ exports[`Select Other 1`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -641,8 +645,10 @@ exports[`Select Other 1`] = `
           >
             <input
               className="c6"
+              onBlur={[Function]}
               onChange={[Function]}
-              value=""
+              onFocus={[Function]}
+              value="test1"
             />
             <span
               className="c7"
@@ -773,7 +779,7 @@ exports[`Select Other 2`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -872,8 +878,10 @@ exports[`Select Other 2`] = `
           >
             <input
               className="c6"
+              onBlur={[Function]}
               onChange={[Function]}
-              value=""
+              onFocus={[Function]}
+              value="test1"
             />
             <span
               className="c7"
@@ -998,7 +1006,7 @@ exports[`Select SelectMarker 1`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -1097,8 +1105,10 @@ exports[`Select SelectMarker 1`] = `
           >
             <input
               className="c6"
+              onBlur={[Function]}
               onChange={[Function]}
-              value=""
+              onFocus={[Function]}
+              value="test1"
             />
             <span
               className="c7"
@@ -1223,7 +1233,7 @@ exports[`Select SelectMarker 2`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -1322,8 +1332,10 @@ exports[`Select SelectMarker 2`] = `
           >
             <input
               className="c6"
+              onBlur={[Function]}
               onChange={[Function]}
-              value=""
+              onFocus={[Function]}
+              value="test1"
             />
             <span
               className="c7"
@@ -1448,7 +1460,7 @@ exports[`Select Width 1`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -1547,8 +1559,10 @@ exports[`Select Width 1`] = `
           >
             <input
               className="c6"
+              onBlur={[Function]}
               onChange={[Function]}
-              value=""
+              onFocus={[Function]}
+              value="test1"
             />
             <span
               className="c7"
@@ -1673,7 +1687,7 @@ exports[`Select Width 2`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -1772,8 +1786,10 @@ exports[`Select Width 2`] = `
           >
             <input
               className="c6"
+              onBlur={[Function]}
               onChange={[Function]}
-              value=""
+              onFocus={[Function]}
+              value="test2"
             />
             <span
               className="c7"
@@ -1898,7 +1914,7 @@ exports[`Select Width 3`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -1997,8 +2013,10 @@ exports[`Select Width 3`] = `
           >
             <input
               className="c6"
+              onBlur={[Function]}
               onChange={[Function]}
-              value=""
+              onFocus={[Function]}
+              value="test1"
             />
             <span
               className="c7"
