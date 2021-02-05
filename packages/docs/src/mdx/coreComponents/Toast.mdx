@@ -249,7 +249,7 @@ const MyComponent = () => {
       onClose: id => {
         console.log('Dismissed toast with ID: %o', id)
       },
-    }
+    })
   }, [])
 
   return (
@@ -257,6 +257,42 @@ const MyComponent = () => {
       label="Success with message"
       variant="primary"
       onClick={showSuccess}
+    />
+  )
+}
+```
+
+## Advanced usage
+
+Not happy with the defaults we've provided? Don't fret. You can create a toast from scratch
+as well if you want to.
+
+```typescript
+import React, { useCallback } from 'react'
+import { useToasts, Button } from 'practical-react-components-core'
+
+const MyComponent = () => {
+  const { showToast } = useToasts()
+
+  const showAdvancedToaster = useCallback(() => {
+    showToast({
+      icon: <Icon icon={HomeIcon} />,
+      label: <Typography>Toast label</Typography>,
+      message: <Typography>Toast message</Typography>,
+      // Shows an X the user can click to dismiss the toaster
+      hasCloseButton: true,
+      duration: 10000,
+      onClose: id => {
+        console.log('Dismissed toast with ID: %o', id)
+      },
+    })
+  }, [])
+
+  return (
+    <Button
+      label="Custom toaster"
+      variant="primary"
+      onClick={showAdvancedToaster}
     />
   )
 }
