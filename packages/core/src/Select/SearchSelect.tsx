@@ -1,10 +1,10 @@
-import React, { useMemo, useState, useCallback } from 'react'
+import React, { useMemo, useState, useCallback, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 
 import { useBoolean } from 'react-hooks-shareable'
 
 import { BaseSelect } from './BaseSelect'
-import { SelectProps } from './Select'
+import { SelectProps, Option } from './Select'
 import { FieldProps, withField } from '../utils/withField'
 
 const InputNative = styled.input`
@@ -26,6 +26,29 @@ const InputNative = styled.input`
   }
 `
 
+const getLabel = <V extends string = string>(
+  value: V,
+  options: ReadonlyArray<Option<V>>
+): string => {
+  return options.find(option => option.value === value)?.label ?? value
+}
+
+const getLabelComponent = (label: string, filter: string): React.ReactNode => {
+  const offset = label.toLocaleLowerCase().indexOf(filter.toLocaleLowerCase())
+
+  if (offset === -1) {
+    return label
+  }
+
+  return (
+    <span>
+      {label.substring(0, offset)}
+      <strong>{label.substring(offset, offset + filter.length)}</strong>
+      {label.substring(offset + filter.length)}
+    </span>
+  )
+}
+
 export function SearchSelect<V extends string = string>({
   value: currentValue,
   options,
@@ -33,8 +56,10 @@ export function SearchSelect<V extends string = string>({
   placeholder,
   ...props
 }: SelectProps<V>): JSX.Element {
-  const [filter, setFilter] = useState('')
+  const [filter, setFilter] = useState<string>(currentValue)
   const [isTyping, startTyping, stopTyping] = useBoolean(false)
+
+  const inputRef = useRef<HTMLInputElement>(null)
 
   const filterLabel = useCallback(
     (text: string) =>
@@ -46,17 +71,17 @@ export function SearchSelect<V extends string = string>({
     return options
       .filter(({ label }) => !isTyping || filterLabel(label))
       .map(({ value, disabled, label }) => {
-        return { value, disabled, component: label }
+        return { value, disabled, component: getLabelComponent(label, filter) }
       })
-  }, [options, filterLabel, isTyping])
+  }, [options, isTyping, filterLabel, filter])
 
   const onSelectChange = useCallback(
-    value => {
-      setFilter(value)
-      onChange?.(value)
+    nextValue => {
+      setFilter(getLabel(nextValue, options) ?? nextValue)
+      onChange?.(nextValue)
       stopTyping()
     },
-    [onChange, stopTyping]
+    [onChange, options, stopTyping]
   )
 
   const onFilterChange = useCallback(
@@ -67,10 +92,25 @@ export function SearchSelect<V extends string = string>({
     [startTyping]
   )
 
+  const selectInputText = useCallback(() => inputRef.current?.select(), [])
+
+  const resetInputText = useCallback(
+    () => setFilter(getLabel(currentValue, options)),
+    [currentValue, options]
+  )
+
+  useEffect(() => setFilter(getLabel(currentValue, options)), [
+    currentValue,
+    options,
+  ])
+
   const input = (
     <InputNative
+      ref={inputRef}
       value={filter}
       onChange={onFilterChange}
+      onFocus={selectInputText}
+      onBlur={resetInputText}
       placeholder={placeholder}
     />
   )

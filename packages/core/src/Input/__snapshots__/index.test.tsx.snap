@@ -4604,7 +4604,7 @@ exports[`TextInput TimeInput 1`] = `
   background-color: rgb(245,245,245);
 }
 
-.c10:focus {
+.c10:focus-within {
   outline: none;
   background-color: transparent;
   border: 2px solid rgb(69,39,160);

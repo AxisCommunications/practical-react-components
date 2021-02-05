@@ -85,7 +85,7 @@ exports[`Select Compact 1`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -292,7 +292,7 @@ exports[`Select Compact 2`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -495,7 +495,7 @@ exports[`Select Direction 1`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -698,7 +698,7 @@ exports[`Select Direction 2`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -901,7 +901,7 @@ exports[`Select Other 1`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -1117,7 +1117,7 @@ exports[`Select Other 2`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -1320,7 +1320,7 @@ exports[`Select SelectMarker 1`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -1523,7 +1523,7 @@ exports[`Select SelectMarker 2`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -1726,7 +1726,7 @@ exports[`Select Variant 1`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -1933,7 +1933,7 @@ exports[`Select Variant 2`] = `
   background-color: rgb(245,245,245);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: transparent;
   border: 2px solid rgb(69,39,160);
@@ -2148,7 +2148,7 @@ exports[`Select Variant 3`] = `
   border: 2px solid rgb(102,102,102);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -2351,7 +2351,7 @@ exports[`Select Width 1`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -2554,7 +2554,7 @@ exports[`Select Width 2`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -2757,7 +2757,7 @@ exports[`Select Width 3`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);
@@ -2960,7 +2960,7 @@ exports[`Select Width 4`] = `
   background-color: rgb(240,240,240);
 }
 
-.c3:focus {
+.c3:focus-within {
   outline: none;
   background-color: rgb(240,240,240);
   border: 2px solid rgb(69,39,160);

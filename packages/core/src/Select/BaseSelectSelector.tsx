@@ -85,7 +85,7 @@ const SelectInput = styled.div<SelectInputProps>`
         : undefined}
   }
 
-  &:focus {
+  &:focus-within {
     outline: none;
 
     ${({ openedFocus, visibleFocus, variant, theme }) =>
