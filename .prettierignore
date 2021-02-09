@@ -1,1 +1,11 @@
+coverage
+packages/*/build
+packages/*/dist
+packages/docs/src/props.json
+
 **/__generated__/**
+
+.yarn/
+.pnp.js
+
+CHANGELOG.md

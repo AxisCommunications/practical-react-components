@@ -3,5 +3,5 @@ module.exports = {
   coveragePathIgnorePatterns: ['/node_modules/', '/__generated__/', '/build/'],
   testMatch: ['**/packages/**/?(*.)test.ts?(x)'],
   transformIgnorePatterns: ['node_modules/(?!@juggle)'],
-  setupFiles: ["<rootDir>/jest/globals.tsx"]
+  setupFiles: ['<rootDir>/jest/globals.tsx'],
 }
