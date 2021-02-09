@@ -1,10 +1,15 @@
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
-// import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
+import { LicenseWebpackPlugin } from 'license-webpack-plugin'
 import { createServer } from 'net'
+import { PackageJson } from 'license-webpack-plugin/dist/PackageJson'
 
 const DIST_FOLDER = 'dist'
 const PORT = 8080
+
+interface PackageJsonExtended extends PackageJson {
+  readonly homepage?: string
+}
 
 // Check if port is open, if not increase by 1 until open port is found
 const getNextFreePort = async (port: number): Promise<number> => {
@@ -114,6 +119,27 @@ export default async (env: Record<string, string> = {}) => {
       new HtmlWebpackPlugin({
         template: 'index.html',
         minify: prod,
+      }),
+      new LicenseWebpackPlugin({
+        perChunkOutput: false,
+        renderLicenses: modules => {
+          return modules
+            .reduce((acc, module) => {
+              const data = module.packageJson as PackageJsonExtended
+
+              return `${acc}
+Package: ${data.name} (${data.version})
+Web:     ${data.homepage ?? ''}
+License: ${module.licenseId ?? ''}
+
+${module.licenseText ?? ''}
+
+                       ====================
+
+`
+            }, '')
+            .trim()
+        },
       }),
     ],
 
