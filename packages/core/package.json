@@ -8,10 +8,10 @@
   ],
   "dependencies": {
     "@juggle/resize-observer": "3.2.0",
-    "focus-trap-react": "8.4.1",
+    "focus-trap-react": "8.4.2",
     "no-scroll": "2.1.1",
     "practical-react-components-icons": "0.8.0",
-    "react-hooks-shareable": "1.13.0"
+    "react-hooks-shareable": "1.14.0"
   },
   "devDependencies": {
     "@babel/cli": "7.12.13",
