@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'memory (rounded)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M22.633 17.981h-1v-1h1c1.333 0 1.333-2 0-2h-1v-1a1 1 0 00-1-1h-1v-1c0-1.333-2-1.333-2 0v1h-1v-1c0-1.333-2-1.333-2 0v1h-1a1 1 0 00-1 1v1h-1c-1.333 0-1.333 2 0 2h1v1h-1c-1.333 0-1.333 2 0 2h1v1a1 1 0 001 1h1v1c0 1.333 2 1.333 2 0v-1h1v1c0 1.333 2 1.333 2 0v-1h1a1 1 0 001-1v-1h1c1.333 0 1.333-2 0-2zm-3 2h-5v-5h5zm-15.001-18a1 1 0 00-1 1v18a1 1 0 001 1h3c1.352.02 1.352-2.02 0-2h-2v-16h12v3c-.02 1.352 2.02 1.352 2 0v-4a1 1 0 00-1-1zm3 7c-1.352-.02-1.352 2.02 0 2h3c1.352.02 1.352-2.02 0-2zm0-3c-1.352-.02-1.352 2.02 0 2h7c1.352.02 1.352-2.02 0-2z" />
 </svg>

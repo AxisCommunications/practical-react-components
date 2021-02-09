@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'signal_wifi_4_bar_lock (rounded)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M6 4V2.5a2.5 2.5 0 00-5 0V4a1.075 1.075 0 00-1 1v4a1.075 1.075 0 001 1h5a1.075 1.075 0 001-1V5a1.075 1.075 0 00-1-1zM5 4H2V2.5a1.5 1.5 0 013 0zm11 14H4a1 1 0 01-1-1v-5h4a2 2 0 002-2V6h7a1 1 0 011 1v3.5l2.293-2.3a.977.977 0 01.7-.295 1.013 1.013 0 011.014 1.006v6.172a1 1 0 01-1.01 1 .984.984 0 01-.7-.3l-2.293-2.287v3.5A1 1 0 0116 18z" />
 </svg>

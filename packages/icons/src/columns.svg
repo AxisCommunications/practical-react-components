@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'view_week (outlined)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="m21 4h-18c-0.55 0-1 0.45-1 1v14c0 0.55 0.45 1 1 1h18c0.55 0 1-0.45 1-1v-14c0-0.55-0.45-1-1-1zm-13 14h-4v-12h4v12zm6 0h-4v-12h4v12zm6 0h-4v-12h4v12z" />
 </svg>

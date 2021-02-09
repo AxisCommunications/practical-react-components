@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'shield (filled)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M5 2a1 1 0 00-1 1v18a1 1 0 001 1h5a1 1 0 100-2H6V4h12v4a1 1 0 102 0V3a1 1 0 00-1-1zm13.5 8.93l-.406.179L13 13.375v3.648a7.228 7.228 0 005.223 6.961l.277.08.277-.08A7.228 7.228 0 0024 17.024v-3.649zm0 2.188l3.5 1.556v2.354c.007 2.233-1.417 4.168-3.5 4.904-2.083-.736-3.507-2.671-3.5-4.904v-2.354zM8 8.998a1 1 0 100 2h4a1 1 0 100-2zm0-3a1 1 0 100 2h7a1 1 0 100-2z" />
 </svg>

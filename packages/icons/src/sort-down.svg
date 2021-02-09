@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'swap_vert (rounded)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M12.35 17.65l2.79-2.79a.5.5 0 00-.35-.85H13V8a1 1 0 00-2 0v6.01H9.21a.5.5 0 00-.35.85l2.79 2.79a.5.5 0 00.7 0z" />
 </svg>

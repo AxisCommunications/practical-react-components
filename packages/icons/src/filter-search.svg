@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'filter_ist (rounded)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M21.15 7.02a1 1 0 00-1-1h-16a1 1 0 000 2h16a1 1 0 001-1zM13.15 16.02h-2a1 1 0 000 2h2a1 1 0 100-2zM17.34 14.95a3.35 3.35 0 01-1.66.47 3.08 3.08 0 113.08-3.08 3 3 0 01-.47 1.66l2.55 2.56-1 .94zm-1.66-4.41a1.8 1.8 0 101.8 1.8 1.81 1.81 0 00-1.8-1.8zM11.27 12.45a4.11 4.11 0 01.26-1.43H6.99a.93.93 0 00-.87 1 .94.94 0 00.87 1h4.34a5.51 5.51 0 01-.06-.57z" />
 </svg>

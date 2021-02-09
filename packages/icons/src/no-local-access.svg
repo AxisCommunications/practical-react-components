@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'device_hub (filled)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M11.998 2.998A2.997 2.997 0 009 6c0 .1.014.197.023.295L13 10.27V8.82a2.997 2.997 0 00-1.002-5.823zm-7.791.795L2.793 5.207 9.586 12H4.5v4H3v5h5v-5H6.5v-2h5.086L16 18.414V21h2.586l1.207 1.207L21 21l.207-.207-17-17zM14.729 12l2 2h.771v.771l3.5 3.5V16h-1.5v-4h-4.771z" />
 </svg>

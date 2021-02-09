@@ -1,9 +1,9 @@
 <!-- 
   Based on Material design icons by Google - https://github.com/google/material-design-icons
-  which are licensed under the Apache License 2.0. Icon 'keyboard_arrow_up (rounded)'.
+  which are licensed under the Apache License 2.0. Icon 'device_hub (filled)'.
 
   File is modified. Modifications are licensed under the MIT license.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+  <path d="M21 16v5h-5v-5h1.5v-2h-11v2H8v5H3v-5h1.5v-4H11V8.82a3 3 0 112 0V12h6.5v4z" />
 </svg>

@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'trending_down (rounded)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M19.853 12.858v-2.036h-6.901v4.653a.996.996 0 01-.997.997l-8.493-.008a.996.996 0 110-1.994l7.489.008V9.825c0-.552.445-.997.997-.997l7.898-.007V6.784a.5.5 0 01.849-.353l3.033 3.033a.495.495 0 010 .707l-3.033 3.034c-.304.318-.842.092-.842-.347z" />
 </svg>

@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'cloud (outlined)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M12 6a5.503 5.503 0 015.39 4.43l.3 1.5 1.53.11A2.983 2.983 0 0119 18H6a3.997 3.997 0 01-.44-7.97l1.07-.11.5-.95A5.469 5.469 0 0112 6m0-2a7.496 7.496 0 00-6.65 4.04A5.997 5.997 0 006 20h13a4.986 4.986 0 00.35-9.96A7.49 7.49 0 0012 4z" />
 </svg>

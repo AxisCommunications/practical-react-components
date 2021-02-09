@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'event_note (rounded)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M16,10H8a1,1,0,0,0,0,2h8a1,1,0,0,0,0-2Zm3-7H18V2a1,1,0,0,0-2,0V3H8V2A1,1,0,0,0,6,2V3H5A2,2,0,0,0,3,5V19a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3ZM18,19H6a1,1,0,0,1-1-1V8H19V18A1,1,0,0,1,18,19Zm-5-5H8a1,1,0,0,0,0,2h5a1,1,0,0,0,0-2Z" />
 </svg>
