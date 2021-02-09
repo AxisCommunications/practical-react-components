@@ -1,4 +1,10 @@
-<svg viewBox="0 0 24 24" 
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'eject (filled)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
+<svg viewBox="0 0 24 24"
   xmlns="http://www.w3.org/2000/svg">
   <path d="M5 17h14v2H5zm7-12L5.33 15h13.34z" />
 </svg>

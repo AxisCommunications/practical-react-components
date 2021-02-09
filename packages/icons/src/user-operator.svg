@@ -1,4 +1,10 @@
-<svg viewBox="0 0 24 24" 
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'account_box (filled)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
+<svg viewBox="0 0 24 24"
   xmlns="http://www.w3.org/2000/svg">
   <path d="M3 5v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2zm12 4a3 3 0 11-3-3 3 3 0 013 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6z" />
 </svg>

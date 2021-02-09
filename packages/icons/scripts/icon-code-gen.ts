@@ -90,16 +90,24 @@ async function parseSVG(svg: string): Promise<string> {
   const tsTemplate = ({ template }: any, _: any, { jsx }: any) => {
     const typeScriptTpl = template.smart({
       plugins: ['typescript'],
+      preserveComments: true,
     })
-    return typeScriptTpl.ast`const Svg = React.memo((props: React.SVGProps<SVGSVGElement>) => ${jsx})`
+
+    const comment = svg.match(/<!--([^]*)-->/)?.[1]
+    const header = `${comment !== undefined ? `/**${comment}*/\n` : ''}`
+
+    return typeScriptTpl.ast`
+    ${header}
+
+    const Svg = React.memo(
+      (props: React.SVGProps<SVGSVGElement>) =>
+        ${jsx}
+    )`
   }
 
   const op: string = await svgr(svg, {
     icon: true,
     template: tsTemplate,
-    replaceAttrValues: {
-      '#676767': 'currentColor',
-    },
     plugins: [
       require.resolve('@svgr/plugin-jsx'),
       require.resolve('@svgr/plugin-prettier'),

@@ -116,3 +116,7 @@ export const App: React.FC = () => {
 
 For more information on what components are available and how to use them
 please visit the [documentation](https://axiscommunications.github.io/practical-react-components).
+
+## License
+
+Code and icons in these packages are licensed under the MIT license, except for icons in `practical-react-components-icons` from, or icons based on, [Material Design icons by Google](https://github.com/google/material-design-icons) (licensed under the Apache License 2.0).

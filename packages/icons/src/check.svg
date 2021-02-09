@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'check (rounded)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M9 16.17L5.53 12.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.18 4.18c.39.39 1.02.39 1.41 0L20.29 7.71c.39-.39.39-1.02 0-1.41-.39-.39-1.02-.39-1.41 0L9 16.17z" />
 </svg>

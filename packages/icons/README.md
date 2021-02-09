@@ -1,6 +1,6 @@
 # Practical react components icons
 
-A catalogue of React components icons, focused on ease-of-use.
+A catalog of React components icons focused on ease-of-use.
 
 To install the core package, run:
 
@@ -23,4 +23,8 @@ import { HomeIcon } from 'practical-react-components-icons'
 export const App: React.FC = () => <HomeIcon />
 ```
 
-All avaialble icons can be found in the [documentation](https://axiscommunications.github.io/practical-react-components/#icons).
+You can find all available icons in the [documentation](https://axiscommunications.github.io/practical-react-components/#icons).
+
+## License
+
+Icons in this package are licensed under the MIT license, except for icons from, or icons based on, [Material Design icons by Google](https://github.com/google/material-design-icons) (licensed under the Apache License 2.0).

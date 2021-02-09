@@ -1,9 +1,9 @@
 <!-- 
   Based on Material design icons by Google - https://github.com/google/material-design-icons
-  which are licensed under the Apache License 2.0. Icon 'keyboard_arrow_up (rounded)'.
+  which are licensed under the Apache License 2.0. Icon 'more_vert (outlined)'.
 
   File is modified. Modifications are licensed under the MIT license.
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+  <path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
 </svg>

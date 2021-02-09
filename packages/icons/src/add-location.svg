@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'add_location_alt (outlined)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
   <path d="M16 1v3h-3v2h3v3h2V6h3V4h-3V1zm-5 1a7.008 7.008 0 00-7 7c0 2.712 1.9 6.104 3.5 8.469a45.127 45.127 0 003.5 4.53c.058-.064 5.43-6.06 6.72-10.999h-2.072A28.79 28.79 0 0111 18.88C9.5 16.951 6 12.129 6 9a5.005 5.005 0 015-5zm0 4.5A2.5 2.5 0 008.5 9a2.5 2.5 0 002.5 2.5A2.5 2.5 0 0013.5 9 2.5 2.5 0 0011 6.5z" />
 </svg>

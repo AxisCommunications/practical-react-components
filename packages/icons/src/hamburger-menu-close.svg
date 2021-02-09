@@ -1,3 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'menu_open (filled)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <path d="M3 18h13v-2H3zm0-5h10v-2H3zm0-7v2h13V6zm18 9.59L17.42 12 21 8.41 19.59 7l-5 5 5 5z" />
 </svg>
