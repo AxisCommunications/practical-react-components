@@ -96,6 +96,11 @@
     "type": "basedOn"
   },
   {
+    "name": "hdmi.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
     "name": "home.svg",
     "version": "3.0.1",
     "type": "basedOn"
