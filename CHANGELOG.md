@@ -3,7 +3,24 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.9.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.8.0...v0.9.0) (2021-02-09 19:56:59 +0100)
+## [v0.10.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.9.0...v0.10.0) (2021-02-16 09:32:24 +0100)
+
+### 🚀 Features
+
+  - **toasts**:  export lower level toast components (#33) ([c25ee4e](https://github.com/AxisCommunications/practical-react-components/commit/c25ee4eb7ef9109ac930bd02782a7dbdee732a9d))
+  - **icons**:  add hdmi icon ([7f65e0d](https://github.com/AxisCommunications/practical-react-components/commit/7f65e0dbc9bfb8fe0fc190f3a7904de525a86a5b))
+
+### 📝 Documentation
+
+  -  show licenses in UI ([222cc4c](https://github.com/AxisCommunications/practical-react-components/commit/222cc4cde6f9b66eeb0d7f6f504259f9efd00964))
+
+### 🚧 Maintenance
+
+  -  update dependencies (#39) ([73c1592](https://github.com/AxisCommunications/practical-react-components/commit/73c1592716a8662e92c921d86b4b437c40bc51a6))
+  -  license clarification ([b52383b](https://github.com/AxisCommunications/practical-react-components/commit/b52383b925e2e1192931eb86b8633aabf623aef2))
+  -  run prettier on more files ([74449cc](https://github.com/AxisCommunications/practical-react-components/commit/74449ccf9b3583c6e43976d5a1be7c63f625ec05))
+
+## [v0.9.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.8.0...v0.9.0) (2021-02-09 20:26:49 +0100)
 
 ### 📝 Documentation
 
