@@ -20,8 +20,29 @@ import {
   ProgressToast,
   BaseToastValue,
 } from './context'
+import { Theme } from '../theme'
 
-const ToastLabel = styled(Typography).attrs({ variant: 'chip-tag-text' })<{
+const getIconColor = (theme: Theme, iconType?: ToastIconType) => {
+  const { color } = theme
+
+  switch (iconType) {
+    case ToastIconType.SUCCESS:
+      return color.elementSuccess()
+    case ToastIconType.WARNING:
+      return color.elementWarning()
+    case ToastIconType.ERROR:
+      return color.elementError()
+    case ToastIconType.ACTION:
+      return color.elementPrimary()
+    case ToastIconType.INFO:
+    default:
+      return color.text04()
+  }
+}
+
+export const ToastLabel = styled(Typography).attrs({
+  variant: 'chip-tag-text',
+})<{
   readonly hasCloseButton: boolean
   readonly isError: boolean
   readonly hasEmphasis: boolean
@@ -54,36 +75,29 @@ const ToastLabel = styled(Typography).attrs({ variant: 'chip-tag-text' })<{
         `}
 `
 
-const IconWrapper = styled.div`
+export enum ToastIconType {
+  SUCCESS = 'success',
+  WARNING = 'warning',
+  INFO = 'info',
+  ERROR = 'error',
+  ACTION = 'action',
+}
+
+export const ToastIconWrapper = styled.div<{
+  readonly iconType?: ToastIconType
+}>`
   height: ${iconSize.medium};
   width: ${iconSize.medium};
   display: flex;
   align-items: center;
   justify-content: center;
+  color: ${({ theme, iconType }) => getIconColor(theme, iconType)};
 `
 
-const Message = styled(Typography).attrs({ variant: 'chip-tag-text' })`
+export const ToastMessage = styled(Typography).attrs({
+  variant: 'chip-tag-text',
+})`
   white-space: normal;
-`
-
-const SuccessNotificationIconColor = styled(IconWrapper)`
-  color: ${({ theme }) => theme.color.elementSuccess()};
-`
-
-const WarningIconColor = styled(IconWrapper)`
-  color: ${({ theme }) => theme.color.elementWarning()};
-`
-
-const InfoIconColor = styled(IconWrapper)`
-  color: ${({ theme }) => theme.color.text04()};
-`
-
-const ErrorIconColor = styled(IconWrapper)`
-  color: ${({ theme }) => theme.color.elementError()};
-`
-
-const ActionIconColor = styled(IconWrapper)`
-  color: ${({ theme }) => theme.color.elementPrimary()};
 `
 
 export type Toast = SimpleToast | ActionToast
@@ -113,13 +127,13 @@ export const createSuccessToast: SimpleToastCreator = ({
     </ToastLabel>
   )
   const icon = (
-    <SuccessNotificationIconColor>
+    <ToastIconWrapper iconType={ToastIconType.SUCCESS}>
       <Icon icon={CheckIcon} />
-    </SuccessNotificationIconColor>
+    </ToastIconWrapper>
   )
 
   const messageComponent =
-    message !== undefined ? <Message>{message}</Message> : undefined
+    message !== undefined ? <ToastMessage>{message}</ToastMessage> : undefined
 
   return {
     icon,
@@ -149,13 +163,13 @@ export const createErrorToast: SimpleToastCreator = ({
     </ToastLabel>
   )
   const icon = (
-    <ErrorIconColor>
+    <ToastIconWrapper iconType={ToastIconType.ERROR}>
       <Icon icon={AlertIcon} />
-    </ErrorIconColor>
+    </ToastIconWrapper>
   )
 
   const messageComponent =
-    message !== undefined ? <Message>{message}</Message> : undefined
+    message !== undefined ? <ToastMessage>{message}</ToastMessage> : undefined
 
   return {
     icon,
@@ -184,13 +198,13 @@ export const createWarningToast: SimpleToastCreator = ({
     </ToastLabel>
   )
   const icon = (
-    <WarningIconColor>
+    <ToastIconWrapper iconType={ToastIconType.WARNING}>
       <Icon icon={WarningIcon} />
-    </WarningIconColor>
+    </ToastIconWrapper>
   )
 
   const messageComponent =
-    message !== undefined ? <Message>{message}</Message> : undefined
+    message !== undefined ? <ToastMessage>{message}</ToastMessage> : undefined
 
   return {
     icon,
@@ -219,13 +233,13 @@ export const createInfoToast: SimpleToastCreator = ({
     </ToastLabel>
   )
   const icon = (
-    <InfoIconColor>
+    <ToastIconWrapper iconType={ToastIconType.INFO}>
       <Icon icon={InfoIcon} />
-    </InfoIconColor>
+    </ToastIconWrapper>
   )
 
   const messageComponent =
-    message !== undefined ? <Message>{message}</Message> : undefined
+    message !== undefined ? <ToastMessage>{message}</ToastMessage> : undefined
 
   return {
     icon,
@@ -264,13 +278,13 @@ export const createActionToast: ActionToastCreator = ({
     </>
   )
   const icon = (
-    <ActionIconColor>
+    <ToastIconWrapper iconType={ToastIconType.ACTION}>
       <Icon icon={action.icon} />
-    </ActionIconColor>
+    </ToastIconWrapper>
   )
 
   const messageComponent =
-    message !== undefined ? <Message>{message}</Message> : undefined
+    message !== undefined ? <ToastMessage>{message}</ToastMessage> : undefined
 
   return {
     icon,
@@ -309,7 +323,7 @@ export const createLoadingToast: SimpleToastCreator = ({
   )
 
   const messageComponent =
-    message !== undefined ? <Message>{message}</Message> : undefined
+    message !== undefined ? <ToastMessage>{message}</ToastMessage> : undefined
 
   return {
     icon,
@@ -356,7 +370,7 @@ export const createProgressToast: ProgressToastCreator = ({
   )
 
   const messageComponent =
-    message !== undefined ? <Message>{message}</Message> : undefined
+    message !== undefined ? <ToastMessage>{message}</ToastMessage> : undefined
 
   return {
     icon,
