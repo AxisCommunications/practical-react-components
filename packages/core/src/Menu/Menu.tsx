@@ -1,10 +1,19 @@
 import React, { memo, useMemo } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 
+import { MoreVertIcon } from 'practical-react-components-icons'
+
 import { componentSize, spacing } from '../designparams'
 import { Typography } from '../Typography'
 import { Icon, IconType } from '../Icon'
-import { BaseMenu, BaseItemProps, BaseMenuProps } from './BaseMenu'
+import {
+  BaseMenu,
+  BaseItemProps,
+  BaseMenuProps,
+  MenuButtonIcon,
+  MenuButtonHalo,
+  MenuButtonIconContainer,
+} from './BaseMenu'
 
 export const MenuItem = styled.div<{
   readonly divider?: boolean
@@ -50,12 +59,17 @@ export interface MenuItemProps
 
 interface MenuProps extends Omit<BaseMenuProps, 'components'> {
   /**
+   * The icon element for menu button.
+   *
+   * Default: `MoreVertIcon`
+   */
+  readonly icon?: IconType
+  /**
    * An array of items in the drop down menu.
    */
   readonly items: ReadonlyArray<MenuItemProps>
   /**
    * Override theme's default setting for `compact` if set.
-
    */
   readonly compact?: boolean
 }
@@ -66,9 +80,21 @@ interface MenuProps extends Omit<BaseMenuProps, 'components'> {
  * Forwards props to BaseMenu
  */
 export const Menu = memo<MenuProps>(
-  ({ items, compact: compactFromProps, ...props }) => {
+  ({
+    icon: buttonIcon = MoreVertIcon,
+    items,
+    compact: compactFromProps,
+    ...props
+  }) => {
     const { compact: compactFromTheme } = useTheme()
     const compact = compactFromProps ?? compactFromTheme
+
+    const button = (
+      <MenuButtonIconContainer>
+        <MenuButtonIcon icon={buttonIcon} />
+        <MenuButtonHalo />
+      </MenuButtonIconContainer>
+    )
 
     /**
      * Creates array of components using MenuItem to
@@ -97,7 +123,7 @@ export const Menu = memo<MenuProps>(
       [compact, items]
     )
 
-    return <BaseMenu components={components} {...props} />
+    return <BaseMenu button={button} components={components} {...props} />
   }
 )
 

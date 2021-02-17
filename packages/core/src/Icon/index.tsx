@@ -49,7 +49,7 @@ export type IconType =
 
 export type IconSize = 'small' | 'medium' | 'large' | 'extraLarge'
 
-interface IconProps extends BaseProps {
+export interface IconProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
