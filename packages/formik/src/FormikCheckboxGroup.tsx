@@ -1,7 +1,12 @@
 // Libraries
 import React, { useMemo } from 'react'
 import { FieldConfig, useField } from 'formik'
-import { Checkbox, spacing, withField } from 'practical-react-components-core'
+import {
+  Checkbox,
+  FieldProps,
+  spacing,
+  withField,
+} from 'practical-react-components-core'
 import styled, { css } from 'styled-components'
 
 export interface CheckboxGroupOption<V extends string | number> {
@@ -88,4 +93,6 @@ export function FormikCheckboxGroup<V extends string | number>({
   )
 }
 
-export const FormikCheckboxGroupField = withField(FormikCheckboxGroup)
+export const FormikCheckboxGroupField = <V extends string | number>(
+  props: FieldProps & FormikCheckboxGroupProps<V>
+) => withField<FormikCheckboxGroupProps<V>>(FormikCheckboxGroup)(props)
