@@ -8,17 +8,16 @@ import React, {
 } from 'react'
 import styled, { css } from 'styled-components'
 
-import { spacing, componentSize, opacity, shape } from '../designparams'
-import { remainder } from '../utils/math'
-
-import { Icon, IconType } from '../Icon'
-import { MoreVertIcon } from 'practical-react-components-icons'
-import { PopOver, PopOverProps } from '../PopOver'
 import {
   useBoolean,
   useVisibleFocus,
   useClickOutside,
 } from 'react-hooks-shareable'
+
+import { spacing, componentSize, opacity, shape } from '../designparams'
+import { remainder } from '../utils/math'
+import { Icon } from '../Icon'
+import { PopOver, PopOverProps } from '../PopOver'
 import { useEscapeListenerStack } from '../Modal/hooks/useEscapeListenerStack'
 
 type BaseElement = HTMLDivElement
@@ -35,12 +34,24 @@ const Anchor = styled.div`
   height: fit-content;
 `
 
-const MenuIcon = styled(Icon).attrs({ className: 'sc-ButtonIcon' })`
+export const MenuButtonIconContainer = styled.div`
+  position: relative;
+  height: ${componentSize.small};
+  width: ${componentSize.small};
+  border-radius: ${shape.radius.circle};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+export const MenuButtonIcon = styled(Icon).attrs({
+  className: 'sc-ButtonIcon',
+})`
   fill: inherit;
   flex: none;
 `
 
-const MenuButtonHalo = styled.div`
+export const MenuButtonHalo = styled.div`
   position: absolute;
   top: 0;
   right: 0;
@@ -53,17 +64,15 @@ const MenuButtonHalo = styled.div`
   transition: transform 100ms;
 `
 
-const MenuNativeButton = styled.button<{ readonly visibleFocus: boolean }>`
-  position: relative;
+const MenuNativeButton = styled.button<{
+  readonly visibleFocus: boolean
+}>`
   flex: none;
-  height: ${componentSize.small};
-  width: ${componentSize.small};
-  border-radius: ${shape.radius.circle};
   min-width: unset;
   padding: unset;
   outline: none;
-  border: 2px solid transparent;
   cursor: pointer;
+  border: 0;
   &::-moz-focus-inner {
     border: 0;
   }
@@ -71,9 +80,14 @@ const MenuNativeButton = styled.button<{ readonly visibleFocus: boolean }>`
   fill: ${({ theme }) => theme.color.text04()};
   background-color: transparent;
   transition: all 200ms;
+  ${MenuButtonIconContainer} {
+    border: 2px solid transparent;
+  }
 
   &:hover {
-    border: 0 solid transparent;
+    ${MenuButtonIconContainer} {
+      border: 0 solid transparent;
+    }
     ${MenuButtonHalo} {
       background-color: ${({ theme }) => theme.color.element11(opacity[16])};
       transform: scale(1);
@@ -85,7 +99,9 @@ const MenuNativeButton = styled.button<{ readonly visibleFocus: boolean }>`
       visibleFocus
         ? css`
             &:focus {
-              border: 2px solid ${({ theme }) => theme.color.elementBorder()};
+              ${MenuButtonIconContainer} {
+                border: 2px solid ${({ theme }) => theme.color.elementBorder()};
+              }
               ${MenuButtonHalo} {
                 background-color: ${({ theme }) =>
                   theme.color.element11(opacity[16])};
@@ -178,26 +194,22 @@ interface MenuButtonProps extends BaseButtonProps {
    */
   readonly className?: string
   /**
-   * Icon that shows inside Button.
-   */
-  readonly icon: IconType
-  /**
    * The title attribute specifies extra information about an element.
    */
   readonly title?: string
 }
 
-export const MenuButton = React.forwardRef<BaseButtonElement, MenuButtonProps>(
+const MenuButton = React.forwardRef<BaseButtonElement, MenuButtonProps>(
   (
     {
       disabled,
       name,
       onClick,
       className,
-      icon,
       onPointerDown,
       onPointerUp,
       onFocus,
+      children,
       ...props
     },
     ref
@@ -249,8 +261,7 @@ export const MenuButton = React.forwardRef<BaseButtonElement, MenuButtonProps>(
         visibleFocus={visibleFocus}
         {...props}
       >
-        <MenuIcon icon={icon} />
-        <MenuButtonHalo />
+        {children}
       </MenuNativeButton>
     )
   }
@@ -378,9 +389,9 @@ const BaseItem: React.FunctionComponent<BaseItemProps> = ({
 
 export interface BaseMenuProps extends Omit<PopOverProps, 'anchorEl'> {
   /**
-   * The icon element.
+   * React element that will appear as menu button
    */
-  readonly icon?: IconType
+  readonly button: ReactNode
   /**
    * Aligns the menu either left or right.
    */
@@ -403,7 +414,7 @@ export interface BaseMenuProps extends Omit<PopOverProps, 'anchorEl'> {
  */
 export const BaseMenu = memo<BaseMenuProps>(
   ({
-    icon = MoreVertIcon,
+    button,
     align = 'left',
     disabled = false,
     components,
@@ -537,7 +548,9 @@ export const BaseMenu = memo<BaseMenuProps>(
         onBlur={handleBlur}
         {...props}
       >
-        <MenuButton icon={icon} onClick={mouseToggleMenu} disabled={disabled} />
+        <MenuButton onClick={mouseToggleMenu} disabled={disabled}>
+          {button}
+        </MenuButton>
         {menuVisible ? (
           <PopOver
             horizontalPosition={align}
