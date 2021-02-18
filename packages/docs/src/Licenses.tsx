@@ -22,7 +22,7 @@ export const Licenses: React.FC<ModalProps> = ({ onClose, ...props }) => {
 
   useEffect(() => {
     const fix = async () => {
-      const response = await fetch('/licenses.txt')
+      const response = await fetch('licenses.txt')
       const data = await response.text()
       setLicense(data)
     }
