@@ -574,21 +574,17 @@ export function BaseSelect<V extends string = string>({
     }
   }, [isOpen, listRef, itemRefs, valueIndex])
 
-  const handleFocusOut: React.EventHandler<React.FocusEvent> = useCallback(
-    e => {
-      if (popupAnchorEl?.contains(e.target) ?? false) {
-        setKeyboardOn()
-        closePopover()
-      }
-    },
-    [closePopover, popupAnchorEl, setKeyboardOn]
-  )
+  const handleBlur: React.EventHandler<React.FocusEvent> = useCallback(() => {
+    onBlur?.(true)
+    setKeyboardOn()
+    closePopover()
+  }, [closePopover, onBlur, setKeyboardOn])
 
   return (
     <SelectContainer
       width={width}
       ref={setPopupAnchorEl}
-      onBlur={handleFocusOut}
+      onBlur={handleBlur}
       {...props}
     >
       <BaseSelectSelector
