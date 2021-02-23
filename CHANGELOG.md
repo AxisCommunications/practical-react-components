@@ -3,7 +3,19 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.10.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.9.0...v0.10.0) (2021-02-16 09:32:24 +0100)
+## [v0.11.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.10.0...v0.11.0) (2021-02-23 08:57:14 +0100)
+
+### 🚀 Features
+
+  - **formik**:  add generics to checkbox and radio button groups ([73e0e0c](https://github.com/AxisCommunications/practical-react-components/commit/73e0e0c58a54c9aa28e5365d6422af3efd7ba477))
+  - **basemenu**: **BREAKING** refactors `BaseMenu` to use `ReactNode` for menu button ([f9305c1](https://github.com/AxisCommunications/practical-react-components/commit/f9305c1410b4af5c7634d242164b171bb8985619))
+
+### 🐛 Bug fixes
+
+  - **select**:  call onBlur prop on blur ([96324a1](https://github.com/AxisCommunications/practical-react-components/commit/96324a135c582c3dab90d35095809f78988cd6e3))
+  - **docs**:  use relative licenses.txt path ([5384d07](https://github.com/AxisCommunications/practical-react-components/commit/5384d0733b428ea1fc2a009fe19ea2ba6c96926b))
+
+## [v0.10.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.9.0...v0.10.0) (2021-02-16 09:39:31 +0100)
 
 ### 🚀 Features
 
