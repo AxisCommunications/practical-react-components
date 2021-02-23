@@ -13,24 +13,24 @@
     "focus-trap-react": "8.4.2",
     "no-scroll": "2.1.1",
     "practical-react-components-icons": "0.11.0",
-    "react-hooks-shareable": "1.15.0"
+    "react-hooks-shareable": "1.16.0"
   },
   "devDependencies": {
-    "@babel/cli": "7.12.16",
-    "@babel/core": "7.12.16",
-    "@babel/preset-env": "7.12.16",
+    "@babel/cli": "7.13.0",
+    "@babel/core": "7.13.1",
+    "@babel/preset-env": "7.13.0",
     "@babel/preset-react": "7.12.13",
-    "@babel/preset-typescript": "7.12.16",
+    "@babel/preset-typescript": "7.13.0",
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
     "@types/no-scroll": "2.1.0",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.1",
     "@types/react-test-renderer": "17.0.1",
-    "@types/react-transition-group": "4.4.0",
+    "@types/react-transition-group": "4.4.1",
     "@types/styled-components": "5.1.7",
     "@types/yup": "0.29.11",
-    "core-js": "3.8.3",
+    "core-js": "3.9.0",
     "jest-styled-components": "7.0.3",
     "pepjs": "0.5.3",
     "prop-types": "15.7.2",
@@ -42,7 +42,7 @@
     "styled-components": "5.2.1",
     "typeface-open-sans": "1.1.13",
     "typescript": "4.1.5",
-    "yup": "0.32.8"
+    "yup": "0.32.9"
   },
   "peerDependencies": {
     "pepjs": "^0.5.2",
