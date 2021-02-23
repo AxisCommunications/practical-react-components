@@ -57,7 +57,7 @@ export interface MenuItemProps
   readonly compact?: boolean
 }
 
-interface MenuProps extends Omit<BaseMenuProps, 'components'> {
+interface MenuProps extends Omit<BaseMenuProps, 'components' | 'button'> {
   /**
    * The icon element for menu button.
    *
