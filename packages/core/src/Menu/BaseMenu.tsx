@@ -36,6 +36,7 @@ const Anchor = styled.div`
 
 export const MenuButtonIconContainer = styled.div`
   position: relative;
+  box-sizing: border-box;
   height: ${componentSize.small};
   width: ${componentSize.small};
   border-radius: ${shape.radius.circle};
@@ -199,7 +200,7 @@ interface MenuButtonProps extends BaseButtonProps {
   readonly title?: string
 }
 
-const MenuButton = React.forwardRef<BaseButtonElement, MenuButtonProps>(
+export const MenuButton = React.forwardRef<BaseButtonElement, MenuButtonProps>(
   (
     {
       disabled,

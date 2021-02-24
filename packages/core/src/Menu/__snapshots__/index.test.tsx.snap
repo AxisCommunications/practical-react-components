@@ -61,6 +61,7 @@ exports[`Menus Menu (default) 1`] = `
 
 .c5 {
   position: relative;
+  box-sizing: border-box;
   height: 32px;
   width: 32px;
   border-radius: 50%;
@@ -279,6 +280,7 @@ exports[`Menus Menu (disabled) 1`] = `
 
 .c5 {
   position: relative;
+  box-sizing: border-box;
   height: 32px;
   width: 32px;
   border-radius: 50%;
@@ -501,6 +503,7 @@ exports[`Menus Menu (left) 1`] = `
 
 .c5 {
   position: relative;
+  box-sizing: border-box;
   height: 32px;
   width: 32px;
   border-radius: 50%;
@@ -719,6 +722,7 @@ exports[`Menus Menu (right) 1`] = `
 
 .c5 {
   position: relative;
+  box-sizing: border-box;
   height: 32px;
   width: 32px;
   border-radius: 50%;

@@ -84,6 +84,31 @@ export const ITEMS = [
 />
 ```
 
+## Advanced usage
+
+You can create a custom `Menu` with `MenuButton`.
+
+```typescript
+<Anchor ref={anchorRef}>
+  <MenuButton onClick={mouseToggleMenu}>
+    <MenuButtonIconContainer>
+      <MenuButtonIcon icon={icon} />
+      <MenuButtonHalo />
+    </MenuButtonIconContainer>
+  </MenuButton>
+  {menuVisible ? (
+    <PopOver
+      horizontalPosition="right"
+      horizontalAlignment="right"
+      anchorEl={anchorRef.current}
+      onScroll={hideAndBlurMenu}
+    >
+      <MenuWrapper onClose={hideMenu}>{children}</MenuWrapper>
+    </PopOver>
+  ) : null}
+</Anchor>
+```
+
 ## Menu Props
 
 Menu forwards all props to `PopOver`.
