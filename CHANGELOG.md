@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.12.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.11.0...v0.12.0) (2021-02-23 15:06:21 +0100)
+## [v0.13.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.12.0...v0.13.0) (2021-02-24 23:56:17 +0100)
+
+### 🐛 Bug fixes
+
+  - **menu**:  export `MenuButton` and menu button jumps ([30d170f](https://github.com/AxisCommunications/practical-react-components/commit/30d170f3d2ef1d11d00f1a00b02d5fdda4016fe4))
+
+## [v0.12.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.11.0...v0.12.0) (2021-02-23 15:12:43 +0100)
 
 ### 🐛 Bug fixes
 
