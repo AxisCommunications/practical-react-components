@@ -22,19 +22,12 @@ import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { MainSection } from './components/Content'
 import { BaseDialog, DialogWidth } from './BaseDialog'
+import { twoLinesClamp } from '../utils/twoLinesClamp'
 
 export const HeaderTitle = styled(Typography).attrs({
   variant: 'dialog-heading',
 })`
-  /* stylelint-disable-next-line value-no-vendor-prefix */
-  display: -webkit-box;
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-line-clamp: 2;
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-box-orient: vertical;
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -moz-box-orient: vertical;
-  overflow: hidden;
+  ${twoLinesClamp}
 `
 
 export interface DialogProps extends ModalProps {
