@@ -21,6 +21,7 @@ import {
   BaseToastValue,
 } from './context'
 import { Theme } from '../theme'
+import { twoLinesClamp } from '../utils/twoLinesClamp'
 
 const getIconColor = (theme: Theme, iconType?: ToastIconType) => {
   const { color } = theme
@@ -48,6 +49,7 @@ export const ToastLabel = styled(Typography).attrs({
   readonly hasEmphasis: boolean
 }>`
   height: 100%;
+  ${twoLinesClamp}
 
   ${({ hasCloseButton }) =>
     !hasCloseButton
