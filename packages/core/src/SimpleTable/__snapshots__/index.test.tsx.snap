@@ -78,8 +78,8 @@ exports[`SimpleTable SimpleTable 1`] = `
   width: 100%;
   height: 56px;
   text-align: left;
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
+  -webkit-transition: box-shadow 200ms;
+  transition: box-shadow 200ms;
   cursor: pointer;
 }
 
@@ -105,8 +105,8 @@ exports[`SimpleTable SimpleTable 1`] = `
   width: 100%;
   height: 56px;
   text-align: left;
-  -webkit-transition: all 200ms;
-  transition: all 200ms;
+  -webkit-transition: box-shadow 200ms;
+  transition: box-shadow 200ms;
   opacity: 0.48;
   pointer-events: none;
   cursor: unset;
