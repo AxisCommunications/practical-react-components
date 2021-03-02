@@ -3,7 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.13.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.12.0...v0.13.0) (2021-02-24 23:56:17 +0100)
+## [v0.14.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.13.0...v0.14.0) (2021-03-02 12:57:56 +0100)
+
+### 🚀 Features
+
+  - **toast**:  support two lines label in Toast (#49) ([deac97f](https://github.com/AxisCommunications/practical-react-components/commit/deac97f97640582631d971c8ebb344b407252272))
+
+### 🐛 Bug fixes
+
+  - **simpletable**:  limit transition property (#52) ([362906c](https://github.com/AxisCommunications/practical-react-components/commit/362906cdf02c0c0bffc0819efd8bfeacddd3005f))
+  - **select**:  only style select arrow, not all svgs ([442d445](https://github.com/AxisCommunications/practical-react-components/commit/442d445a98ccb5b9fcbb5480738a8803e4789ace))
+
+### 🚧 Maintenance
+
+  -  update dependencies to latest versions ([e3605e7](https://github.com/AxisCommunications/practical-react-components/commit/e3605e778b51bbe91230f1c17ddac3ae2261f92c))
+
+## [v0.13.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.12.0...v0.13.0) (2021-02-25 08:17:34 +0100)
 
 ### 🐛 Bug fixes
 
