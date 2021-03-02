@@ -62,7 +62,7 @@ const SelectInput = styled.div<SelectInputProps>`
         : `0 ${spacing.medium}`};
   }
 
-  > div > span > svg {
+  ${SelectInsideContainer} > *:last-child > svg {
     width: 100%;
     height: 100%;
     cursor: pointer;

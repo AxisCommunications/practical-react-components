@@ -4592,7 +4592,7 @@ exports[`TextInput TimeInput 1`] = `
   padding: 0 4px 0 8px;
 }
 
-.c10 > div > span > svg {
+.c10 .c11 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
