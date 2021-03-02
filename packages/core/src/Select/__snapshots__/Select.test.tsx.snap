@@ -73,7 +73,7 @@ exports[`Select Compact 1`] = `
   padding: 0 4px 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -254,6 +254,14 @@ exports[`Select Compact 2`] = `
   padding: 0 4px 0 8px;
 }
 
+.c10 .c4 > *:last-child > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -280,7 +288,7 @@ exports[`Select Compact 2`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -483,7 +491,7 @@ exports[`Select Direction 1`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -686,7 +694,7 @@ exports[`Select Direction 2`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -889,7 +897,7 @@ exports[`Select Other 1`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -1077,6 +1085,14 @@ exports[`Select Other 2`] = `
   padding: 0 8px;
 }
 
+.c10 .c4 > *:last-child > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1105,7 +1121,7 @@ exports[`Select Other 2`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -1308,7 +1324,7 @@ exports[`Select SelectMarker 1`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -1511,7 +1527,7 @@ exports[`Select SelectMarker 2`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -1714,7 +1730,7 @@ exports[`Select Variant 1`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -1895,6 +1911,14 @@ exports[`Select Variant 2`] = `
   padding: 0 8px;
 }
 
+.c10 .c4 > *:last-child > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
 .c3 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1921,7 +1945,7 @@ exports[`Select Variant 2`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -2102,8 +2126,24 @@ exports[`Select Variant 3`] = `
   padding: 0 8px;
 }
 
+.c10 .c4 > *:last-child > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
+}
+
 .c11 .c4 {
   padding: 0 8px;
+}
+
+.c11 .c4 > *:last-child > svg {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  fill: rgb(102,102,102);
 }
 
 .c3 {
@@ -2134,7 +2174,7 @@ exports[`Select Variant 3`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -2339,7 +2379,7 @@ exports[`Select Width 1`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -2542,7 +2582,7 @@ exports[`Select Width 2`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -2745,7 +2785,7 @@ exports[`Select Width 3`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -2948,7 +2988,7 @@ exports[`Select Width 4`] = `
   padding: 0 8px;
 }
 
-.c3 > div > span > svg {
+.c3 .c4 > *:last-child > svg {
   width: 100%;
   height: 100%;
   cursor: pointer;
