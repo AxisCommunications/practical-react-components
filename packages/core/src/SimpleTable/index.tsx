@@ -96,9 +96,6 @@ const SimpleTableHeader: React.FC<SimpleTableHeaderProps> = ({
  * SimpleTableRow
  *
  * A single row in the table used to group cells.
- * Note that there is no div associated with this,
- * it is just a convenience component to pass proper
- * keys to the grid cells.
  */
 
 const TableRow = styled.tr<{
@@ -115,7 +112,7 @@ const TableRow = styled.tr<{
 
   text-align: left;
 
-  transition: all 200ms;
+  transition: box-shadow 200ms;
 
   &:nth-child(odd) {
     background-color: ${({ theme }) => theme.color.background03()};
@@ -246,7 +243,6 @@ interface SimpleTableProps extends BaseProps {
   readonly maxHeight: number
   /**
    * Override theme's default setting for `compact` if set.
-
    */
   readonly compact?: boolean
   /**
