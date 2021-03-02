@@ -9,12 +9,12 @@
     "dev": "yarn build:ts webpack serve"
   },
   "dependencies": {
-    "core-js": "3.9.0",
+    "core-js": "3.9.1",
     "practical-react-components-core": "0.13.0",
     "practical-react-components-icons": "0.13.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-hooks-shareable": "1.16.0",
+    "react-hooks-shareable": "1.17.0",
     "react-is": "17.0.1",
     "react-router-dom": "5.2.0",
     "regenerator-runtime": "0.13.7",
@@ -22,8 +22,8 @@
     "styled-normalize": "8.0.7"
   },
   "devDependencies": {
-    "@babel/core": "7.13.1",
-    "@babel/preset-env": "7.13.0",
+    "@babel/core": "7.13.8",
+    "@babel/preset-env": "7.13.9",
     "@babel/preset-react": "7.12.13",
     "@babel/preset-typescript": "7.13.0",
     "@cypress/webpack-preprocessor": "5.6.0",
@@ -46,7 +46,7 @@
     "tsconfig-paths": "3.9.0",
     "typescript": "4.1.5",
     "wait-on": "5.2.1",
-    "webpack": "5.24.0",
+    "webpack": "5.24.2",
     "webpack-cli": "4.5.0",
     "webpack-dev-server": "3.11.2",
     "yargs": "16.2.0"

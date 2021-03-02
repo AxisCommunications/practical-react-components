@@ -9,16 +9,16 @@
     "build"
   ],
   "dependencies": {
-    "@juggle/resize-observer": "3.2.0",
+    "@juggle/resize-observer": "3.3.0",
     "focus-trap-react": "8.4.2",
     "no-scroll": "2.1.1",
     "practical-react-components-icons": "0.13.0",
-    "react-hooks-shareable": "1.16.0"
+    "react-hooks-shareable": "1.17.0"
   },
   "devDependencies": {
     "@babel/cli": "7.13.0",
-    "@babel/core": "7.13.1",
-    "@babel/preset-env": "7.13.0",
+    "@babel/core": "7.13.8",
+    "@babel/preset-env": "7.13.9",
     "@babel/preset-react": "7.12.13",
     "@babel/preset-typescript": "7.13.0",
     "@mdx-js/mdx": "1.6.22",
@@ -30,7 +30,7 @@
     "@types/react-transition-group": "4.4.1",
     "@types/styled-components": "5.1.7",
     "@types/yup": "0.29.11",
-    "core-js": "3.9.0",
+    "core-js": "3.9.1",
     "jest-styled-components": "7.0.3",
     "pepjs": "0.5.3",
     "prop-types": "15.7.2",
