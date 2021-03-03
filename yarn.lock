@@ -5907,9 +5907,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-typescript-shareable@npm:0.34.1":
-  version: 0.34.1
-  resolution: "eslint-config-typescript-shareable@npm:0.34.1"
+"eslint-config-typescript-shareable@npm:0.35.0":
+  version: 0.35.0
+  resolution: "eslint-config-typescript-shareable@npm:0.35.0"
   dependencies:
     "@typescript-eslint/eslint-plugin": 4.16.1
     "@typescript-eslint/parser": 4.16.1
@@ -5923,8 +5923,8 @@ __metadata:
     stylelint-config-recommended: 3.0.0
     stylelint-config-styled-components: 0.1.1
     stylelint-processor-styled-components: 1.10.0
-    typescript: 4.1.5
-  checksum: 3ef44053d77d99dd7e651dc9d085e672bbb57d1898b2fead32a5f48c5df624e752d66dbf93f34385b13e81f895078d8bc12945df715bb900e8c3f77b2de9acbc
+    typescript: 4.2.2
+  checksum: 20d58c7a7b1bb9b613bd1d063dc4f20097551f90d64725a1974c06daec18c5a66313510df938d9cbfcd9867d417eadea2ccc5416685588a070126f26a02bf257
   languageName: node
   linkType: hard
 
@@ -10978,13 +10978,13 @@ __metadata:
     prop-types: 15.7.2
     react: 17.0.1
     react-dom: 17.0.1
-    react-hooks-shareable: 1.17.0
+    react-hooks-shareable: 1.18.0
     react-is: 17.0.1
     react-test-renderer: 17.0.1
     react-transition-group: 4.4.1
     styled-components: 5.2.1
     typeface-open-sans: 1.1.13
-    typescript: 4.1.5
+    typescript: 4.2.2
     yup: 0.32.9
   peerDependencies:
     pepjs: ^0.5.2
@@ -11034,7 +11034,7 @@ __metadata:
     react: 17.0.1
     react-docgen-typescript: 1.21.0
     react-dom: 17.0.1
-    react-hooks-shareable: 1.17.0
+    react-hooks-shareable: 1.18.0
     react-is: 17.0.1
     react-live: 2.2.3
     react-router-dom: 5.2.0
@@ -11047,7 +11047,7 @@ __metadata:
     ts-node: 9.1.1
     tsconfig-paths: 3.9.0
     typeface-open-sans: 1.1.13
-    typescript: 4.1.5
+    typescript: 4.2.2
     webpack: 5.24.2
     webpack-cli: 4.5.0
     webpack-dev-server: 3.11.2
@@ -11075,7 +11075,7 @@ __metadata:
     react: 17.0.1
     react-is: 17.0.1
     styled-components: 5.2.1
-    typescript: 4.1.5
+    typescript: 4.2.2
   peerDependencies:
     formik: ^2.1.4
     pepjs: ^0.5.2
@@ -11107,7 +11107,7 @@ __metadata:
     react: 17.0.1
     react-dom: 17.0.1
     ts-node: 9.1.1
-    typescript: 4.1.5
+    typescript: 4.2.2
   peerDependencies:
     react: ^17.0.1
     react-dom: ^17.0.1
@@ -11143,7 +11143,7 @@ __metadata:
     practical-react-components-icons: 0.14.0
     react: 17.0.1
     react-dom: 17.0.1
-    react-hooks-shareable: 1.17.0
+    react-hooks-shareable: 1.18.0
     react-is: 17.0.1
     react-router-dom: 5.2.0
     regenerator-runtime: 0.13.7
@@ -11151,7 +11151,7 @@ __metadata:
     styled-normalize: 8.0.7
     ts-node: 9.1.1
     tsconfig-paths: 3.9.0
-    typescript: 4.1.5
+    typescript: 4.2.2
     wait-on: 5.2.1
     webpack: 5.24.2
     webpack-cli: 4.5.0
@@ -11180,7 +11180,7 @@ __metadata:
     "@typescript-eslint/parser": 4.16.1
     babel-plugin-styled-components: 1.12.0
     eslint: 7.21.0
-    eslint-config-typescript-shareable: 0.34.1
+    eslint-config-typescript-shareable: 0.35.0
     eslint-plugin-cypress: 2.11.2
     eslint-plugin-functional: 3.2.1
     eslint-plugin-import: 2.22.1
@@ -11194,7 +11194,7 @@ __metadata:
     react-dom: 17.0.1
     semver: 7.3.4
     stylelint: 13.11.0
-    typescript: 4.1.5
+    typescript: 4.2.2
     typescript-styled-plugin: 0.15.0
   languageName: unknown
   linkType: soft
@@ -11476,14 +11476,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hooks-shareable@npm:1.17.0":
-  version: 1.17.0
-  resolution: "react-hooks-shareable@npm:1.17.0"
+"react-hooks-shareable@npm:1.18.0":
+  version: 1.18.0
+  resolution: "react-hooks-shareable@npm:1.18.0"
   dependencies:
     "@juggle/resize-observer": 3.3.0
   peerDependencies:
     react: ^17.0.1
-  checksum: eac23c3bf69850e5ce7cb8270821f5e794bd42bc59a99040e2beb7cb858a95780ec44378ecaa09aa20cff8875d576807b07456b3a91f6dd0de5a2bf7f40f0db8
+  checksum: 10149a868c0ae15acf43097b2ae4b582eb035789da8fc333d80f9fd9f936f6fb24886bd42471100668cd0662a5b486ba3471431620f630786c1dc3958a88343b
   languageName: node
   linkType: hard
 
@@ -13770,23 +13770,23 @@ resolve@^1.14.2:
   languageName: node
   linkType: hard
 
-typescript@4.1.5:
-  version: 4.1.5
-  resolution: "typescript@npm:4.1.5"
+typescript@4.2.2:
+  version: 4.2.2
+  resolution: "typescript@npm:4.2.2"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 29157c84426ac94ce97aac836264f303a26bd9fb30865650229e3406a36ca2e89735ef4b8878075ba1b95fa4d3ff9810057b64888700c28e20b4034a6db4da83
+  checksum: b2e3d5551a12c51b6b7a14f0e78d2664c136fab4dfb3eecaaf7a6e8e7e608f2cf43c6ebe81387d194db2588793b769720d2df523d445a1664b7585c5b9a85984
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.1.5#builtin<compat/typescript>":
-  version: 4.1.5
-  resolution: "typescript@patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"
+"typescript@patch:typescript@4.2.2#builtin<compat/typescript>":
+  version: 4.2.2
+  resolution: "typescript@patch:typescript@npm%3A4.2.2#builtin<compat/typescript>::version=4.2.2&hash=a45b0e"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 58cc7786be0f8485c124944883b1384287532e4867ec37f1fb5cb2811dbc10f7a9decccad89097f924043285f3515bfd8223c61dbb4f88af00b2d8dc2ef73207
+  checksum: ea1f1b6be22c9e3348f61692719d3169dd4abaad34b2132edff44a8d5a748bde8f3116fa2fae41d61c92b3a7cf1c35d0c7276058b2f35196ff3cde3b7d57c84b
   languageName: node
   linkType: hard
 
