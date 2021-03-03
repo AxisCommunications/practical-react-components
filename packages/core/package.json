@@ -13,7 +13,7 @@
     "focus-trap-react": "8.4.2",
     "no-scroll": "2.1.1",
     "practical-react-components-icons": "0.14.0",
-    "react-hooks-shareable": "1.17.0"
+    "react-hooks-shareable": "1.18.0"
   },
   "devDependencies": {
     "@babel/cli": "7.13.0",
@@ -41,7 +41,7 @@
     "react-transition-group": "4.4.1",
     "styled-components": "5.2.1",
     "typeface-open-sans": "1.1.13",
-    "typescript": "4.1.5",
+    "typescript": "4.2.2",
     "yup": "0.32.9"
   },
   "peerDependencies": {
