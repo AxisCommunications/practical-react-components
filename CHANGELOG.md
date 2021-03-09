@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.15.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.14.0...v0.15.0) (2021-03-03 10:30:58 +0100)
+## [v0.16.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.15.0...v0.16.0) (2021-03-09 09:46:02 +0100)
+
+### 🚧 Maintenance
+
+  -  update dependencies to latest versions (#54) ([fc500e8](https://github.com/AxisCommunications/practical-react-components/commit/fc500e8257ea3928df9da21eb3a70c7b88b6c987))
+
+## [v0.15.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.14.0...v0.15.0) (2021-03-03 10:38:49 +0100)
 
 ### 🚧 Maintenance
 

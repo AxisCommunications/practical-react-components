@@ -1,6 +1,6 @@
 {
   "name": "practical-react-components-formik",
-  "version": "0.15.0",
+  "version": "0.16.0",
   "description": "Practical react components library - Formik components",
   "homepage": "https://github.com/AxisCommunications/practical-react-components",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "build"
   ],
   "dependencies": {
-    "practical-react-components-core": "0.15.0"
+    "practical-react-components-core": "0.16.0"
   },
   "devDependencies": {
     "@babel/cli": "7.13.10",
