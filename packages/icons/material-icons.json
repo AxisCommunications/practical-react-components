@@ -81,6 +81,11 @@
     "type": "basedOn"
   },
   {
+    "name": "first-page.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
+  },
+  {
     "name": "filter.svg",
     "version": "3.0.1",
     "type": "basedOn"
@@ -123,6 +128,11 @@
   {
     "name": "label.svg",
     "version": "3.0.1",
+    "type": "basedOn"
+  },
+  {
+    "name": "last-page.svg",
+    "version": "4.0.0",
     "type": "basedOn"
   },
   {
