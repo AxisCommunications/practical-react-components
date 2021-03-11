@@ -5,15 +5,17 @@ import styled from 'styled-components'
 
 import { CloseIcon } from 'practical-react-components-icons'
 
-import { spacing, componentSize } from '../designparams'
+import { spacing } from '../designparams'
 import { ClickableIcon, Icon, IconType } from '../Icon'
 import { Typography } from '../Typography'
 import { BaseChip, BaseChipProps } from './BaseChip'
 
-const ChipIcon = styled(Icon)`
-  width: ${componentSize.mini};
-  color: ${({ theme }) => theme.color.text05()};
-  margin-left: -${spacing.medium};
+const ChipIcon = styled(Icon).attrs({ size: 'small' })`
+  flex: 0 0 min-content;
+  overflow: visible;
+  margin-left: -${spacing.small};
+  margin-right: ${spacing.small};
+  color: ${({ theme }) => theme.color.text03()};
 `
 
 const ChipRemoveIcon = styled(ClickableIcon).attrs({
@@ -22,6 +24,7 @@ const ChipRemoveIcon = styled(ClickableIcon).attrs({
   icon: CloseIcon,
 })`
   flex: 0 0 min-content;
+  overflow: visible;
   margin-left: ${spacing.small};
 `
 
@@ -47,9 +50,7 @@ export const Chip = React.forwardRef<HTMLDivElement, ChipProps>(
     const component = useMemo(() => {
       return (
         <>
-          {!error && icon !== undefined ? (
-            <ChipIcon icon={icon} size="small" />
-          ) : null}
+          {!error && icon !== undefined ? <ChipIcon icon={icon} /> : null}
           <Typography variant="chip-tag-text">{text}</Typography>
           {onRemove ? <ChipRemoveIcon onClick={onRemove} /> : null}
         </>

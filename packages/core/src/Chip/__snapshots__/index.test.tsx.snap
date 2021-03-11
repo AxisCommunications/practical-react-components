@@ -416,9 +416,13 @@ exports[`Chips with icon 1`] = `
 }
 
 .c4 {
-  width: 24px;
-  color: rgb(122,122,122);
-  margin-left: -8px;
+  -webkit-flex: 0 0 min-content;
+  -ms-flex: 0 0 min-content;
+  flex: 0 0 min-content;
+  overflow: visible;
+  margin-left: -4px;
+  margin-right: 4px;
+  color: rgb(82,82,82);
 }
 
 .c7 {
