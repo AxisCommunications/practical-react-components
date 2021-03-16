@@ -1,0 +1,10 @@
+<!--
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'account_circle (filled)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path
+    d="M15 12a4 4 0 10-4-4 4 4 0 004 4zm0-6a2 2 0 11-2 2 2.006 2.006 0 012-2zm0 8c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zm-6 4c.22-.72 3.31-2 6-2s5.8 1.29 6 2zm-3-3v-3h3v-2H6V7H4v3H1v2h3v3z" />
+</svg>
