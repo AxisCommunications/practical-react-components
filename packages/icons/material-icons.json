@@ -309,5 +309,10 @@
     "name": "video-settings.svg",
     "version": "4.0.0",
     "type": "basedOn"
+  },
+  {
+    "name": "user-add.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
   }
 ]
