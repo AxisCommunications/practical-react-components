@@ -204,6 +204,7 @@ exports[`Select Direction 1`] = `
   -webkit-flex: 0 0 min-content;
   -ms-flex: 0 0 min-content;
   flex: 0 0 min-content;
+  overflow: visible;
   margin-left: 4px;
 }
 
@@ -603,6 +604,7 @@ exports[`Select Direction 2`] = `
   -webkit-flex: 0 0 min-content;
   -ms-flex: 0 0 min-content;
   flex: 0 0 min-content;
+  overflow: visible;
   margin-left: 4px;
 }
 
@@ -1009,6 +1011,7 @@ exports[`Select Other 1`] = `
   -webkit-flex: 0 0 min-content;
   -ms-flex: 0 0 min-content;
   flex: 0 0 min-content;
+  overflow: visible;
   margin-left: 4px;
 }
 
@@ -1422,6 +1425,7 @@ exports[`Select Other 2`] = `
   -webkit-flex: 0 0 min-content;
   -ms-flex: 0 0 min-content;
   flex: 0 0 min-content;
+  overflow: visible;
   margin-left: 4px;
 }
 
@@ -1821,6 +1825,7 @@ exports[`Select Width 1`] = `
   -webkit-flex: 0 0 min-content;
   -ms-flex: 0 0 min-content;
   flex: 0 0 min-content;
+  overflow: visible;
   margin-left: 4px;
 }
 
@@ -2220,6 +2225,7 @@ exports[`Select Width 2`] = `
   -webkit-flex: 0 0 min-content;
   -ms-flex: 0 0 min-content;
   flex: 0 0 min-content;
+  overflow: visible;
   margin-left: 4px;
 }
 
@@ -2651,6 +2657,7 @@ exports[`Select Width 3`] = `
   -webkit-flex: 0 0 min-content;
   -ms-flex: 0 0 min-content;
   flex: 0 0 min-content;
+  overflow: visible;
   margin-left: 4px;
 }
 
