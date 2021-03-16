@@ -3,7 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.16.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.15.0...v0.16.0) (2021-03-09 09:46:02 +0100)
+## [v0.17.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.16.0...v0.17.0) (2021-03-16 13:19:51 +0100)
+
+### 🚀 Features
+
+  - **icons**:  add user-add icon ([0e30b70](https://github.com/AxisCommunications/practical-react-components/commit/0e30b70451b1c006a43bc51d8f922deb1534636d))
+  - **icons**:  add first and last page icons ([3939343](https://github.com/AxisCommunications/practical-react-components/commit/3939343cb3dee0bf279dfc7a9983305d663c1c42))
+
+### 🐛 Bug fixes
+
+  - **chip**:  prevent to shrink icon in Chip (#56) ([5756acf](https://github.com/AxisCommunications/practical-react-components/commit/5756acfc7b54ad3323fe9d20d59cf10f2007dd78))
+
+### 🚧 Maintenance
+
+  -  update dependencies to latest versions ([a3d810f](https://github.com/AxisCommunications/practical-react-components/commit/a3d810f0053aaf221abdc171d253e4a43abf84d5))
+
+## [v0.16.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.15.0...v0.16.0) (2021-03-09 09:49:39 +0100)
 
 ### 🚧 Maintenance
 
