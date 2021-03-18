@@ -7,7 +7,11 @@ export const meta = {
 import { useState } from 'react'
 import styled from 'styled-components'
 
-import { Slider, SliderField } from 'practical-react-components-core'
+import {
+  Slider,
+  SliderField,
+  SpaceBlock,
+} from 'practical-react-components-core'
 
 # Slider
 
@@ -17,22 +21,64 @@ Sliders reflect a range of values along a bar, from which users may select a sin
 They are ideal for adjusting settings such as volume, brightness, or applying image filters.
 
 export const DemoComponent = () => {
-  const [value, setValue] = useState(0)
+  const [standardSliderValue, setStandardSliderValue] = useState(0)
   const [valueField, setValueField] = useState(0)
   const [valueFieldUnitLabel, setValueFieldUnitLabel] = useState(0)
+  const [metaSliderValue, setMetaSliderValue] = useState(0)
+  const [ticksOnlySliderValue, setTicksOnlySliderValue] = useState(0)
   return (
     <>
-      <Slider value={value} handleChange={setValue} />
+      <Slider
+        value={standardSliderValue}
+        handleChange={setStandardSliderValue}
+      />
+      <SpaceBlock variant={16} />
       <SliderField
         value={valueField}
         handleChange={setValueField}
         label="Slider field label"
       />
+      <SpaceBlock variant={16} />
       <SliderField
         value={valueFieldUnitLabel}
         handleChange={setValueFieldUnitLabel}
         label="Slider field with unit label"
         unitLabel="Unit label"
+      />
+      <SpaceBlock variant={16} />
+      <SliderField
+        label="Tick slider field"
+        min={-10}
+        max={20}
+        value={ticksOnlySliderValue}
+        handleChange={setTicksOnlySliderValue}
+        compact={true}
+        tickConfig={{
+          ticks: [
+            { position: -10, label: '-10°', marker: true },
+            { position: 0, label: '0°', marker: true },
+            { position: 10, label: '10°', marker: true },
+            { position: 20, label: '20°', marker: true },
+          ],
+          snap: false,
+        }}
+      />
+      <SpaceBlock variant={16} />
+      <Slider
+        min={-20}
+        max={20}
+        value={metaSliderValue}
+        handleChange={setMetaSliderValue}
+        tickConfig={{
+          ticks: [
+            { position: -20, label: '-20°', marker: true },
+            { position: -10, label: '-10°', marker: true },
+            { position: 0, label: '0°', marker: true },
+            { position: 10, label: '10°', marker: true },
+            { position: 20, label: '20°', marker: true },
+          ],
+          snap: true,
+        }}
       />
     </>
   )
@@ -64,6 +110,20 @@ With unit label
   value={50}
   handleChange={() => {}}
   unitLabel="Unit label"
+/>
+```
+
+Slider with ticks
+
+```typescript type=live
+<Slider
+  min={-10}
+  max={10}
+  value={0}
+  handleChange={() => {}}
+  tickConfig={{
+    ticks: [{ position: -10 }, { position: 0 }, { position: 10 }],
+  }}
 />
 ```
 

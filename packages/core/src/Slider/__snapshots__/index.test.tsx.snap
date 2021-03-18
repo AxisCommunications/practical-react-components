@@ -3,7 +3,8 @@
 exports[`Slider Levels 1`] = `
 .c2 {
   box-sizing: border-box;
-  height: 32px;
+  display: grid;
+  grid-auto-flow: row;
   padding: 8px;
   width: 100%;
 }
@@ -264,7 +265,8 @@ exports[`Slider Levels 1`] = `
 exports[`Slider Levels 2`] = `
 .c2 {
   box-sizing: border-box;
-  height: 32px;
+  display: grid;
+  grid-auto-flow: row;
   padding: 8px;
   width: 100%;
 }
@@ -578,7 +580,8 @@ exports[`Slider Levels 2`] = `
 exports[`Slider Levels 3`] = `
 .c2 {
   box-sizing: border-box;
-  height: 32px;
+  display: grid;
+  grid-auto-flow: row;
   padding: 8px;
   width: 100%;
 }

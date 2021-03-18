@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 import { usePressed, useVisibleFocus } from 'react-hooks-shareable'
 
@@ -9,7 +9,11 @@ import {
   iconSize,
   opacity,
 } from '../designparams'
-import { withField } from '../utils'
+import { FieldProps, Label, Unit, WithUnitLabelContainer } from '../utils'
+
+import { getXAbsolutePosition } from './getXAbsolutePosition'
+import { Tick, TickMarker, TickLabelContainer, TickLabel } from './Tick'
+import { Typography } from '../Typography'
 
 const clamp = (x: number) => Math.max(0, Math.min(x, 1))
 
@@ -19,7 +23,8 @@ type BaseProps = React.HTMLAttributes<BaseElement>
 // Provides padding around the slider's track
 const Container = styled.div`
   box-sizing: border-box;
-  height: ${componentSize.small};
+  display: grid;
+  grid-auto-flow: row;
   padding: ${spacing.medium};
   width: 100%;
 `
@@ -244,6 +249,17 @@ enum SliderKeys {
   ArrowLeft = 'ArrowLeft',
   ArrowDown = 'ArrowDown',
 }
+interface TickConfig {
+  /**
+   * An array of Ticks to display
+   */
+  readonly ticks: ReadonlyArray<Tick>
+  /**
+   * Wether to snap to Ticks or not
+   * Default true.
+   */
+  readonly snap?: boolean
+}
 
 export interface SliderProps extends BaseProps {
   /**
@@ -270,7 +286,16 @@ export interface SliderProps extends BaseProps {
    * If `true`, the slider will be disabled.
    */
   readonly disabled?: boolean
+  /**
+   * Configuration for displaying ticks in the slider
+   */
+  readonly tickConfig?: TickConfig
 }
+
+export const Meta = styled.div`
+  position: relative;
+  height: 16px;
+`
 
 /**
  * Slider component
@@ -297,6 +322,9 @@ export const Slider: React.FC<SliderProps> = ({
   onPointerDown,
   onPointerUp,
   onFocus,
+  tickConfig = {
+    ticks: [],
+  },
   ...props
 }) => {
   const sliderRef = useRef<BaseElement>(null)
@@ -304,7 +332,35 @@ export const Slider: React.FC<SliderProps> = ({
   const pressed = usePressed(knobRef)
   const [sliderWidth, setSliderWidth] = useState(0)
 
+  // Spread default values with incoming values since they are optional
+  const { ticks, snap } = useMemo(() => {
+    return {
+      ...{ snap: tickConfig.ticks.length > 0 },
+      ...tickConfig,
+    }
+  }, [tickConfig])
+
   const fraction = (value - min) / (max - min)
+
+  // Generate the ticks with its position along the x-axis
+  const tickMarkers = useMemo(
+    () =>
+      ticks.map(v => ({
+        position: getXAbsolutePosition(min, max, v.position),
+        value: v.position,
+        label: v.label,
+        marker: v.marker ?? false,
+      })),
+    [max, min, ticks]
+  )
+
+  /**
+   * To avoid making the calculation for snap values each time
+   * the slider is dragged we create the snap values here.
+   */
+  const snapValues = useMemo(() => tickMarkers.map(v => v.position / 100), [
+    tickMarkers,
+  ])
 
   // Computes the new value and passed it to the handleChange callback
   const handleClick = useCallback(
@@ -314,11 +370,21 @@ export const Slider: React.FC<SliderProps> = ({
 
       if (sliderRef.current !== null) {
         const { left, width } = sliderRef.current.getBoundingClientRect()
-        const x = clamp((e.pageX - left) / width)
+        let x = clamp((e.pageX - left) / width)
+
+        // Find x position if snap is enabled
+        if (e.type !== 'pointermove' && snap && tickMarkers.length > 0) {
+          const snapTo = snapValues.reduce((a, b) =>
+            Math.abs(b - x) < Math.abs(a - x) ? b : a
+          )
+
+          x = snapTo
+        }
+
         handleChange(min + x * (max - min))
       }
     },
-    [handleChange, max, min, onClick]
+    [handleChange, max, min, onClick, snap, snapValues, tickMarkers.length]
   )
 
   // Fetch slider dimensions once when the component is mounted and
@@ -342,8 +408,12 @@ export const Slider: React.FC<SliderProps> = ({
   useEffect(() => {
     if (pressed) {
       document.addEventListener('pointermove', handleClick)
+      document.addEventListener('pointerup', handleClick)
 
-      return () => document.removeEventListener('pointermove', handleClick)
+      return () => {
+        document.removeEventListener('pointermove', handleClick)
+        document.removeEventListener('pointerup', handleClick)
+      }
     }
   }, [handleClick, pressed])
 
@@ -442,6 +512,22 @@ export const Slider: React.FC<SliderProps> = ({
     [determineVisibleFocus, onFocus]
   )
 
+  const tickLabels = useMemo(() => {
+    return tickMarkers.map((tick, index) => {
+      return {
+        key: index,
+        label: tick.label,
+        position: tick.position,
+        value: tick.value,
+        handleChange,
+      }
+    })
+  }, [handleChange, tickMarkers])
+
+  const hasTickLabels = useMemo(() => tickLabels.length > 0, [
+    tickLabels.length,
+  ])
+
   return (
     <Container className={className}>
       <Track
@@ -461,6 +547,13 @@ export const Slider: React.FC<SliderProps> = ({
             pressed={pressed}
             style={{ transform: `scaleX(${fraction})` }}
           />
+          {tickMarkers.map((tick, index) => (
+            <TickMarker
+              key={index}
+              position={tick.position}
+              marker={tick.marker}
+            />
+          ))}
           <Knob
             fraction={fraction}
             pressed={pressed}
@@ -481,8 +574,39 @@ export const Slider: React.FC<SliderProps> = ({
           </Knob>
         </Rail>
       </Track>
+      {hasTickLabels ? (
+        <TickLabelContainer>
+          {tickLabels.map(({ key, ...tickLabel }) => (
+            <TickLabel key={key} {...tickLabel} />
+          ))}
+        </TickLabelContainer>
+      ) : null}
     </Container>
   )
 }
 
-export const SliderField = withField(Slider)
+const SliderLabel = styled(Label)`
+  height: ${componentSize.mini};
+`
+
+// Slider component has more air around its controls and will
+// use smaller space between label and slider.
+export const SliderField: React.FC<
+  Omit<FieldProps, 'compact'> & SliderProps
+> = ({ label, unitLabel, ...props }) => (
+  <div>
+    {label !== undefined ? (
+      <SliderLabel compact={false}>
+        <Typography variant="navigation-label">{label}</Typography>
+      </SliderLabel>
+    ) : null}
+    {unitLabel !== undefined ? (
+      <WithUnitLabelContainer>
+        <Slider {...props} />
+        <Unit variant="explanatory-text">{unitLabel}</Unit>
+      </WithUnitLabelContainer>
+    ) : (
+      <Slider {...props} />
+    )}
+  </div>
+)
