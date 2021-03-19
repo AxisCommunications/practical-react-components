@@ -324,5 +324,10 @@
     "name": "user-add.svg",
     "version": "4.0.0",
     "type": "basedOn"
+  },
+  {
+    "name": "mark-as-unread.svg",
+    "version": "4.0.0",
+    "type": "basedOn"
   }
 ]
