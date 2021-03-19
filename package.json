@@ -16,6 +16,7 @@
     "setup": "yarn install && yarn build:libs",
     "build:libs": "yarn workspaces foreach --topological --no-private run build",
     "build:docs": "yarn workspace practical-react-components-docs build",
+    "build:icons": "yarn workspace practical-react-components-icons build",
     "build:ui-tests": "yarn workspace practical-react-components-ui-tests build",
     "dev:libs": "yarn workspaces foreach --topological --no-private run dev",
     "dev:icons": "yarn build:icons --watch",
