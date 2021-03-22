@@ -13,12 +13,12 @@
     "focus-trap-react": "8.4.2",
     "no-scroll": "2.1.1",
     "practical-react-components-icons": "0.17.0",
-    "react-hooks-shareable": "1.21.0"
+    "react-hooks-shareable": "1.22.0"
   },
   "devDependencies": {
     "@babel/cli": "7.13.10",
     "@babel/core": "7.13.10",
-    "@babel/preset-env": "7.13.10",
+    "@babel/preset-env": "7.13.12",
     "@babel/preset-react": "7.12.13",
     "@babel/preset-typescript": "7.13.0",
     "@mdx-js/mdx": "1.6.22",
