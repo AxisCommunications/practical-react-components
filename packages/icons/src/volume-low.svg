@@ -1,0 +1,9 @@
+<!--
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'volume-low (filled)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path d="M7 9v6h4l5 5V4l-5 5H7z" />
+</svg>
