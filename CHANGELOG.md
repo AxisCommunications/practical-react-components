@@ -3,7 +3,19 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.17.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.16.0...v0.17.0) (2021-03-16 13:19:51 +0100)
+## [v0.18.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.17.0...v0.18.0) (2021-03-23 12:38:39 +0100)
+
+### 🚀 Features
+
+  - **icons**:  add mark-as-unread icon ([1db60a8](https://github.com/AxisCommunications/practical-react-components/commit/1db60a85c9599e515a7e53e380f4acbb1c751854))
+
+### 🚧 Maintenance
+
+  -  remove unused material-icons.json file (#63) ([147bd4a](https://github.com/AxisCommunications/practical-react-components/commit/147bd4a20862e21fd0bc8cbfab0e25e8fe99adf0))
+  -  update dependencies to latest versions ([0009e1a](https://github.com/AxisCommunications/practical-react-components/commit/0009e1aea2ec1cb4b1f110320bd3a0b8cf78bb3d))
+  -  enable "dev:icons" script ([117e75f](https://github.com/AxisCommunications/practical-react-components/commit/117e75ff15b5157eb5dcd122a80bc146e4361547))
+
+## [v0.17.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.16.0...v0.17.0) (2021-03-16 13:27:37 +0100)
 
 ### 🚀 Features
 
