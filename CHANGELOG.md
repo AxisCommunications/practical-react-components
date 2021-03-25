@@ -3,7 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.18.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.17.0...v0.18.0) (2021-03-23 12:38:39 +0100)
+## [v0.19.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.18.0...v0.19.0) (2021-03-25 12:59:58 +0100)
+
+### 🚀 Features
+
+  - **icons**:  add record icon ([4784021](https://github.com/AxisCommunications/practical-react-components/commit/4784021c71b5130e4c506774677d8554b8e9e10f))
+  - **icons**:  add volume icons ([0a19b27](https://github.com/AxisCommunications/practical-react-components/commit/0a19b27a6ec266747255015cc5bb8f29ae215c5e))
+
+## [v0.18.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.17.0...v0.18.0) (2021-03-23 12:45:00 +0100)
 
 ### 🚀 Features
 
