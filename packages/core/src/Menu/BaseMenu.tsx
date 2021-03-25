@@ -8,11 +8,7 @@ import React, {
 } from 'react'
 import styled, { css } from 'styled-components'
 
-import {
-  useBoolean,
-  useVisibleFocus,
-  useClickOutside,
-} from 'react-hooks-shareable'
+import { useBoolean, useVisibleFocus } from 'react-hooks-shareable'
 
 import { spacing, componentSize, opacity, shape } from '../designparams'
 import { remainder } from '../utils/math'
@@ -141,8 +137,6 @@ const MenuContainer = styled.div`
   border-radius: ${shape.radius.medium};
   overflow: auto;
 `
-
-const MenuList = styled.div``
 
 export const BaseMenuItem = styled.div<{
   readonly disabled?: boolean
@@ -291,58 +285,27 @@ enum MenuKeys {
 /**
  * Add an escape listener to the actual rendered menu.
  */
-
-interface MenuWrapperProps extends BaseProps {
-  readonly onClose: () => void
+export interface MenuListProps extends BaseProps {
+  /**
+   * Called when user pressed the escape button on the keyboard
+   */
+  readonly onEscape: () => void
   /**
    * `class` to be passed to the component.
    */
   readonly className?: string
 }
-export const MenuWrapper: React.FunctionComponent<MenuWrapperProps> = ({
-  onClose,
+
+export const MenuList: React.FC<MenuListProps> = ({
+  onEscape,
   children,
   onPointerDown,
   ...props
 }) => {
   // Close when pressing escape key.
-  useEscapeListenerStack(onClose)
+  useEscapeListenerStack(onEscape)
 
-  const menuRef = useRef<HTMLDivElement>(null)
-
-  const handleClickOutside = useClickOutside(onClose)
-
-  const handlePointerDown = useCallback(
-    e => {
-      onPointerDown?.(e)
-      handleClickOutside(e)
-    },
-    [handleClickOutside, onPointerDown]
-  )
-
-  // Close when an item was clicked
-  const onClick = useCallback<React.MouseEventHandler>(
-    event => {
-      event.stopPropagation()
-      // Remove focus from the menu button when closing the menu.
-      if (document.activeElement instanceof HTMLElement) {
-        document.activeElement.blur()
-      }
-      onClose()
-    },
-    [onClose]
-  )
-
-  return (
-    <MenuContainer
-      onClick={onClick}
-      onPointerDown={handlePointerDown}
-      ref={menuRef}
-      {...props}
-    >
-      {children}
-    </MenuContainer>
-  )
+  return <MenuContainer {...props}>{children}</MenuContainer>
 }
 
 export interface BaseItemProps {
@@ -559,17 +522,15 @@ export const BaseMenu = memo<BaseMenuProps>(
             anchorEl={anchorRef.current}
             onScroll={hideAndBlurMenu}
           >
-            <MenuWrapper onClose={hideMenu}>
-              <MenuList>
-                {components.map((component, index) => (
-                  <BaseItem
-                    key={index}
-                    keyboardSelect={index === arrowIndex}
-                    {...component}
-                  />
-                ))}
-              </MenuList>
-            </MenuWrapper>
+            <MenuList onEscape={hideMenu} onClick={hideAndBlurMenu}>
+              {components.map((component, index) => (
+                <BaseItem
+                  key={index}
+                  keyboardSelect={index === arrowIndex}
+                  {...component}
+                />
+              ))}
+            </MenuList>
           </PopOver>
         ) : null}
       </Anchor>

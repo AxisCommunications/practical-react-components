@@ -25,6 +25,30 @@ context('Menu', () => {
     cy.get(popup).should('not.exist')
   })
 
+  it('Should close the menu when clicking on the button again', () => {
+    cy.get(menu1).eq(0).find('button').click()
+    cy.get(popup).eq(0).should('exist').should('be.visible')
+
+    cy.get(menu1).eq(0).find('button').click()
+    cy.get(popup).should('not.exist')
+  })
+
+  it('Should close the menu when clicking outside', () => {
+    cy.get(menu1).eq(0).find('button').click()
+    cy.get(popup).eq(0).should('exist').should('be.visible')
+
+    cy.get('body').click(0, 0) // Click outside
+    cy.get(popup).should('not.exist')
+  })
+
+  it('Should close the menu on blur', () => {
+    cy.get(menu1).eq(0).find('button').click()
+    cy.get(popup).eq(0).should('exist').should('be.visible')
+
+    cy.get(menu1).eq(0).find('button').blur()
+    cy.get(popup).should('not.exist')
+  })
+
   it('Click a disabled item should do nothing', () => {
     cy.get(menu1).eq(0).find('button').click()
     cy.get(popup).eq(0).find(menuItemEl).eq(2).should('have.attr', 'disabled')
