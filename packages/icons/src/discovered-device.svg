@@ -1,0 +1,10 @@
+<!--
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'videocam (outlined)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path
+    d="M4.666 20.739a4.39 4.39 0 003.62.506 4.517 4.517 0 003.192-3.81 4.461 4.461 0 00-4.908-4.913 4.542 4.542 0 00-3.807 3.196 4.396 4.396 0 00.506 3.622L.79 21.82a.977.977 0 000 1.39.975.975 0 001.388 0zm-.099-3.771a2.479 2.479 0 112.479 2.48 2.456 2.456 0 01-2.479-2.48zM17 10.5V7a1.003 1.003 0 00-1-1H4a1.003 1.003 0 00-1 1v5.537a5.985 5.985 0 012-1.188V8h10v8h-2.09a5.6 5.6 0 010 2H16a1.003 1.003 0 001-1v-3.5l4 4v-11z" />
+</svg>
