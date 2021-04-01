@@ -13,7 +13,7 @@ export interface FieldProps {
   readonly unitLabel?: string
 }
 
-const Label = styled.div<{ readonly compact: boolean }>`
+export const Label = styled.div<{ readonly compact: boolean }>`
   height: ${({ compact }) =>
     !compact ? componentSize.medium : componentSize.small};
   display: flex;
@@ -22,13 +22,13 @@ const Label = styled.div<{ readonly compact: boolean }>`
   cursor: default;
 `
 
-const WithUnitLabelContainer = styled.div`
+export const WithUnitLabelContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
 `
 
-const Unit = styled(Typography)`
+export const Unit = styled(Typography)`
   color: ${({ theme }) => theme.color.text03()};
   margin-left: ${spacing.medium};
   flex-shrink: 0;
