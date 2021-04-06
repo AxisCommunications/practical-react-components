@@ -3,7 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.19.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.18.0...v0.19.0) (2021-03-25 12:59:58 +0100)
+## [v0.20.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.19.0...v0.20.0) (2021-04-06 10:14:47 +0200)
+
+### 🚀 Features
+
+  - **icons**:  add discovered-device icon ([4f3e961](https://github.com/AxisCommunications/practical-react-components/commit/4f3e961a8e19ac08f2964f150f3c4824ec7dbd2a))
+  - **slider**:  add slider with ticks (#59) ([ffd6373](https://github.com/AxisCommunications/practical-react-components/commit/ffd63731a4f4c7d9649eca36877e05272344124a))
+
+### 🐛 Bug fixes
+
+  - **docs**:  CardHeader in Basic usage in docs ([8d656b1](https://github.com/AxisCommunications/practical-react-components/commit/8d656b1841ce8fbb60621506f80a810d36679c15))
+
+### 🚧 Maintenance
+
+  -  update dependencies to latest versions (#68) ([1cdcf37](https://github.com/AxisCommunications/practical-react-components/commit/1cdcf37c29afb971e8389352df166824f82e7954))
+
+## [v0.19.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.18.0...v0.19.0) (2021-03-25 13:04:30 +0100)
 
 ### 🚀 Features
 
