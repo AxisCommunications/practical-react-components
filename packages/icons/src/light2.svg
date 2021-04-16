@@ -1,0 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'tungsten (filled)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path d="M11 19h2v3h-2zM2 11h3v2H2zM19 11h3v2h-3zM15.9 17.8l1.4-1.4 2.12 2.12-1.4 1.4zM4.58 18.5l2.13-2.11 1.4 1.4L6 19.92zM15 8.02V3H9v5.02A4.99 4.99 0 0012 17a5 5 0 003-8.98zM11 5h2v2.1a5.47 5.47 0 00-2 0V5z"/>
+</svg>
