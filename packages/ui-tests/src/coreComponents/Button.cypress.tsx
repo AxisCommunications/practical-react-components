@@ -1,7 +1,11 @@
 import React from 'react'
 import { AddIcon } from 'practical-react-components-icons'
 
-import { Button, IconButton } from 'practical-react-components-core'
+import {
+  Button,
+  IconButton,
+  IconTextButton,
+} from 'practical-react-components-core'
 
 export const meta = {
   name: 'Button',
@@ -12,9 +16,11 @@ export const meta = {
 const NOOP = () => {
   /* */
 }
-
+const testOnclick = () => {
+  alert('Click works!')
+}
 const Test = () => (
-  <>
+  <div style={{ display: 'inline-flex' }}>
     <Button data-cy="buttonTest1" label="Primary" onClick={NOOP} />
     <Button
       data-cy="buttonTest2"
@@ -29,7 +35,15 @@ const Test = () => (
       onClick={NOOP}
       variant="secondary"
     />
-  </>
+    <IconTextButton data-cy="buttonTest5" label="Secondary" icon={AddIcon} />
+
+    <IconTextButton
+      data-cy="buttonTest6"
+      label="Secondary"
+      icon={AddIcon}
+      onClick={testOnclick}
+    />
+  </div>
 )
 
 /* eslint-disable-next-line import/no-default-export */

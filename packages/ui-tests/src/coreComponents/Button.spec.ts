@@ -29,6 +29,7 @@ context('Button', () => {
       'background-color',
       'rgba(0, 0, 0, 0)'
     )
+
     cy.get('[class^=Button__IconButtonHalo]').should(
       'have.css',
       'background-color',
@@ -40,10 +41,23 @@ context('Button', () => {
     cy.get('[data-cy=buttonTest2]')
       .focus()
       .should('not.have.css', 'background-color', 'rgba(0, 0, 0, 0)')
-
     cy.get('[data-cy=buttonTest4]')
       .focus()
       .should('have.css', 'background-color', 'rgba(0, 0, 0, 0)')
     cy.get('[class^=Button__IconButtonHalo]').should('be.visible')
+  })
+})
+
+describe('Tests of IconTextButton', () => {
+  it('Enable/Disable Props', () => {
+    cy.get('[data-cy=buttonTest5]')
+      .should('be.enabled')
+      .invoke('prop', 'disabled', true) //Disable the button
+
+    cy.get('[data-cy=buttonTest5]').should('be.disabled')
+  })
+
+  it('Click', () => {
+    cy.get('[data-cy=buttonTest6]').click()
   })
 })

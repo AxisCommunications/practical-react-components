@@ -40,11 +40,8 @@ exports[`DateTimePicker DatePicker 1`] = `
 
 .c4 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -53,6 +50,9 @@ exports[`DateTimePicker DatePicker 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(102,102,102);
   fill: rgb(102,102,102);
@@ -87,11 +87,8 @@ exports[`DateTimePicker DatePicker 1`] = `
 
 .c16 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -100,6 +97,9 @@ exports[`DateTimePicker DatePicker 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(102,102,102);
   fill: rgb(102,102,102);
@@ -128,11 +128,8 @@ exports[`DateTimePicker DatePicker 1`] = `
 
 .c19 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -141,6 +138,9 @@ exports[`DateTimePicker DatePicker 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
@@ -1144,11 +1144,8 @@ exports[`DateTimePicker DateTimePicker 1`] = `
 
 .c39 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1157,6 +1154,9 @@ exports[`DateTimePicker DateTimePicker 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
@@ -1190,11 +1190,8 @@ exports[`DateTimePicker DateTimePicker 1`] = `
 
 .c42 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1203,6 +1200,9 @@ exports[`DateTimePicker DateTimePicker 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(102,102,102);
   fill: rgb(102,102,102);
@@ -2347,11 +2347,8 @@ exports[`DateTimePicker DateTimePicker 2`] = `
 
 .c51 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -2360,6 +2357,9 @@ exports[`DateTimePicker DateTimePicker 2`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
@@ -2393,11 +2393,8 @@ exports[`DateTimePicker DateTimePicker 2`] = `
 
 .c54 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -2406,6 +2403,9 @@ exports[`DateTimePicker DateTimePicker 2`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(102,102,102);
   fill: rgb(102,102,102);
@@ -3736,11 +3736,8 @@ exports[`DateTimePicker TimePickers 1`] = `
 
 .c21 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -3749,6 +3746,9 @@ exports[`DateTimePicker TimePickers 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
@@ -3782,11 +3782,8 @@ exports[`DateTimePicker TimePickers 1`] = `
 
 .c24 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -3795,6 +3792,9 @@ exports[`DateTimePicker TimePickers 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(102,102,102);
   fill: rgb(102,102,102);

@@ -1,13 +1,27 @@
 import React, { useCallback } from 'react'
 import styled, { css } from 'styled-components'
 import { useVisibleFocus } from 'react-hooks-shareable'
-
 import { Icon, IconType } from '../Icon'
 import { Typography } from '../Typography'
 import { componentSize, opacity, spacing, shape } from '../designparams'
 
 // Button min-width should be "Cancel" button width
 const BUTTON_MIN_WIDTH = '83px'
+
+//Common CSS for NativeButton and NativeIconTextButton
+const COMMON_STYLE = css`
+  white-space: nowrap;
+  height: ${componentSize.small};
+  outline: none;
+  &::-moz-focus-inner {
+    border: 0;
+  }
+  border-radius: ${shape.radius.small};
+  cursor: pointer;
+  user-select: none;
+  transition: all 200ms;
+  max-width: 100%;
+`
 
 /**
  * Button
@@ -24,20 +38,9 @@ export const NativeButton = styled.button<{
   readonly icon?: IconType
   readonly visibleFocus: boolean
 }>`
-  white-space: nowrap;
-  max-width: 100%;
+  ${COMMON_STYLE}
   min-width: ${BUTTON_MIN_WIDTH};
-  height: ${componentSize.small};
-  outline: none;
-  &::-moz-focus-inner {
-    border: 0;
-  }
   border: 2px solid transparent;
-  border-radius: ${shape.radius.small};
-  cursor: pointer;
-  user-select: none;
-  transition: all 200ms;
-
   padding: ${({ icon }) =>
     icon === undefined
       ? `0 ${spacing.large}`
@@ -494,6 +497,153 @@ export const IconButton = React.forwardRef<BaseElement, IconButtonProps>(
           <IconButtonHalo accent={accent} />
         ) : undefined}
       </IconNativeButton>
+    )
+  }
+)
+
+/**
+ * IconTextButton
+ *
+ * Always has a primary icon and a secondary text
+ *
+ */
+
+export const NativeIconTextButton = styled.button<{
+  readonly visibleFocus: boolean
+}>`
+  ${COMMON_STYLE}
+  border: none;
+  padding: 0 ${spacing.large} 0 0;
+  ${({ visibleFocus, theme }) => {
+    return css`
+      color: ${theme.color.text04()};
+      fill: ${theme.color.text04()};
+      background-color: transparent;
+
+      &:hover {
+        color: ${theme.color.text03()};
+        background-color: ${theme.color.element11(opacity[16])};
+        ${IconContainer} {
+          background-color: ${theme.color.textPrimary()};
+        }
+      }
+      &:focus {
+        ${visibleFocus
+          ? css`
+              color: ${theme.color.text04()};
+              background-color: ${theme.color.element11(opacity[16])};
+            `
+          : undefined};
+      }
+      &:active {
+        box-shadow: 0 0 0 4px ${theme.color.elementPrimary(opacity[24])};
+        background-color: ${theme.color.element11(opacity[24])};
+      }
+      &:disabled {
+        opacity: ${opacity[48]};
+        cursor: default;
+        box-shadow: none;
+        &:hover {
+          ${IconContainer} {
+            background-color: ${theme.color.elementPrimary()};
+          }
+        }
+      }
+    `
+  }}
+`
+const IconContainer = styled(Icon)`
+  ${({ theme }) => {
+    return css`
+      height: ${componentSize.small};
+      width: ${componentSize.small};
+      color: ${theme.color.text00()};
+      background-color: ${theme.color.elementPrimary()};
+      border-radius: ${shape.radius.small};
+      margin-right: ${spacing.medium};
+      padding: ${spacing.small};
+      transition: all 200ms;
+    `
+  }}
+`
+export interface IconTextButtonProps
+  extends Omit<BaseButtonProps, 'variant' | 'accent'> {
+  /**
+   * String used to label the button.
+   */
+  readonly label: string
+  /**
+   * The icon element.
+   */
+  readonly icon: IconType
+}
+
+// eslint-disable-next-line react/display-name
+export const IconTextButton = React.forwardRef<
+  BaseElement,
+  IconTextButtonProps
+>(
+  (
+    {
+      disabled = false,
+      type = 'button',
+      icon,
+      onPointerDown,
+      onPointerUp,
+      onFocus,
+      label,
+      ...props
+    },
+    ref
+  ) => {
+    const {
+      isPointerOn,
+      isPointerOff,
+      determineVisibleFocus,
+      visibleFocus,
+    } = useVisibleFocus()
+
+    const handleFocus = useCallback<React.FocusEventHandler<BaseElement>>(
+      e => {
+        onFocus?.(e)
+        determineVisibleFocus()
+      },
+      [determineVisibleFocus, onFocus]
+    )
+    const handlePointerDown = useCallback<
+      React.PointerEventHandler<BaseElement>
+    >(
+      e => {
+        onPointerDown?.(e)
+        isPointerOn()
+      },
+      [isPointerOn, onPointerDown]
+    )
+    const handlePointerUp = useCallback<React.PointerEventHandler<BaseElement>>(
+      e => {
+        onPointerUp?.(e)
+        isPointerOff()
+      },
+      [isPointerOff, onPointerUp]
+    )
+    return (
+      <NativeIconTextButton
+        ref={ref}
+        disabled={disabled}
+        type={type}
+        onPointerDown={handlePointerDown}
+        onPointerUp={handlePointerUp}
+        onFocus={handleFocus}
+        {...props}
+        visibleFocus={visibleFocus}
+      >
+        <Container>
+          <IconContainer icon={icon} />
+          <LabelContainer variant="primary" accent={false}>
+            <Typography variant="button-text">{label}</Typography>
+          </LabelContainer>
+        </Container>
+      </NativeIconTextButton>
     )
   }
 )
