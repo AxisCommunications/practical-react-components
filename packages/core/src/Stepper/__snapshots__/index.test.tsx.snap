@@ -50,11 +50,8 @@ exports[`Stepper Stepper 1`] = `
 
 .c13 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -63,6 +60,9 @@ exports[`Stepper Stepper 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
@@ -458,11 +458,8 @@ exports[`Stepper Stepper 2`] = `
 
 .c13 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -471,6 +468,9 @@ exports[`Stepper Stepper 2`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
@@ -827,11 +827,8 @@ exports[`Stepper Stepper 3`] = `
 
 .c12 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -840,6 +837,9 @@ exports[`Stepper Stepper 3`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);

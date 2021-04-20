@@ -16,11 +16,8 @@ exports[`Button primary 1`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -29,6 +26,9 @@ exports[`Button primary 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
@@ -170,11 +170,8 @@ exports[`Button primary 2`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -183,6 +180,9 @@ exports[`Button primary 2`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
@@ -334,11 +334,8 @@ exports[`Button secondary 1`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -347,6 +344,9 @@ exports[`Button secondary 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(102,102,102);
   fill: rgb(102,102,102);
@@ -489,11 +489,8 @@ exports[`Button secondary 2`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -502,6 +499,9 @@ exports[`Button secondary 2`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(102,102,102);
   fill: rgb(102,102,102);
@@ -654,11 +654,8 @@ exports[`Button secondary 3`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -667,6 +664,9 @@ exports[`Button secondary 3`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(102,102,102);
   fill: rgb(102,102,102);
@@ -819,11 +819,8 @@ exports[`Button secondary 4`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -832,6 +829,9 @@ exports[`Button secondary 4`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(103,58,183);
   fill: rgb(103,58,183);
@@ -984,11 +984,8 @@ exports[`Button secondary 5`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -997,6 +994,9 @@ exports[`Button secondary 5`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(103,58,183);
   fill: rgb(103,58,183);
@@ -1162,11 +1162,8 @@ exports[`IconButton primary 1`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1175,6 +1172,9 @@ exports[`IconButton primary 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
@@ -1325,11 +1325,8 @@ exports[`IconButton primary 2`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1338,6 +1335,9 @@ exports[`IconButton primary 2`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(255,255,255);
   fill: rgb(255,255,255);
@@ -1499,11 +1499,8 @@ exports[`IconButton secondary 1`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1512,6 +1509,9 @@ exports[`IconButton secondary 1`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(102,102,102);
   fill: rgb(102,102,102);
@@ -1720,11 +1720,8 @@ exports[`IconButton secondary 2`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1733,6 +1730,9 @@ exports[`IconButton secondary 2`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(102,102,102);
   fill: rgb(102,102,102);
@@ -1952,11 +1952,8 @@ exports[`IconButton secondary 3`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -1965,6 +1962,9 @@ exports[`IconButton secondary 3`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(103,58,183);
   fill: rgb(103,58,183);
@@ -2173,11 +2173,8 @@ exports[`IconButton secondary 4`] = `
 
 .c2 {
   white-space: nowrap;
-  max-width: 100%;
-  min-width: 83px;
   height: 32px;
   outline: none;
-  border: 2px solid transparent;
   border-radius: 2px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -2186,6 +2183,9 @@ exports[`IconButton secondary 4`] = `
   user-select: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+  max-width: 100%;
+  min-width: 83px;
+  border: 2px solid transparent;
   padding: 0 16px;
   color: rgb(103,58,183);
   fill: rgb(103,58,183);
@@ -2370,6 +2370,444 @@ exports[`IconButton secondary 4`] = `
     >
       <div
         className="c9"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`IconTextButton primary 1`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c8 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c7 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c2 {
+  white-space: nowrap;
+  height: 32px;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  max-width: 100%;
+  border: none;
+  padding: 0 16px 0 0;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c2:hover .c5 {
+  background-color: rgb(69,39,160);
+}
+
+.c2:focus {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c2:active {
+  box-shadow: 0 0 0 4px rgba(103,58,183,0.24);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c2:disabled {
+  opacity: 0.48;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c2:disabled:hover .c5 {
+  background-color: rgb(103,58,183);
+}
+
+.c6 {
+  height: 32px;
+  width: 32px;
+  color: rgb(255,255,255);
+  background-color: rgb(103,58,183);
+  border-radius: 2px;
+  margin-right: 8px;
+  padding: 4px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c10 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c9 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-27"
+    >
+      <button
+        className="c2"
+        disabled={false}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c3 "
+        >
+          <span
+            className="c4 c5 c6"
+            role="img"
+            size="medium"
+          >
+            <svg
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 17L7 7m0 10L17 7"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeWidth={2}
+              />
+            </svg>
+          </span>
+          <span
+            className="c7 "
+          >
+            <span
+              className="c8"
+            >
+              Click me
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c9"
+      id="layer-28"
+    >
+      <div
+        className="c10"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`IconTextButton primary 2`] = `
+.c4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px;
+}
+
+.c4 > svg {
+  fill: currentColor;
+  height: 100%;
+  width: auto;
+}
+
+.c8 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+  white-space: nowrap;
+}
+
+.c3 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c7 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+  color: inherit;
+  text-transform: none;
+}
+
+.c2 {
+  white-space: nowrap;
+  height: 32px;
+  outline: none;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  max-width: 100%;
+  border: none;
+  padding: 0 16px 0 0;
+  color: rgb(102,102,102);
+  fill: rgb(102,102,102);
+  background-color: transparent;
+}
+
+.c2::-moz-focus-inner {
+  border: 0;
+}
+
+.c2:hover {
+  color: rgb(82,82,82);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c2:hover .c5 {
+  background-color: rgb(69,39,160);
+}
+
+.c2:focus {
+  color: rgb(102,102,102);
+  background-color: rgba(204,204,204,0.16);
+}
+
+.c2:active {
+  box-shadow: 0 0 0 4px rgba(103,58,183,0.24);
+  background-color: rgba(204,204,204,0.24);
+}
+
+.c2:disabled {
+  opacity: 0.48;
+  cursor: default;
+  box-shadow: none;
+}
+
+.c2:disabled:hover .c5 {
+  background-color: rgb(103,58,183);
+}
+
+.c6 {
+  height: 32px;
+  width: 32px;
+  color: rgb(255,255,255);
+  background-color: rgb(103,58,183);
+  border-radius: 2px;
+  margin-right: 8px;
+  padding: 4px;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.c10 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c9 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-29"
+    >
+      <button
+        className="c2"
+        disabled={true}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onPointerDown={[Function]}
+        onPointerUp={[Function]}
+        type="button"
+      >
+        <span
+          className="c3 "
+        >
+          <span
+            className="c4 c5 c6"
+            role="img"
+            size="medium"
+          >
+            <svg
+              height="1em"
+              viewBox="0 0 24 24"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17 17L7 7m0 10L17 7"
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeWidth={2}
+              />
+            </svg>
+          </span>
+          <span
+            className="c7 "
+          >
+            <span
+              className="c8"
+            >
+              Click me
+            </span>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c9"
+      id="layer-30"
+    >
+      <div
+        className="c10"
       />
     </div>
   </div>

@@ -6,7 +6,11 @@ export const meta = {
 
 import styled from 'styled-components'
 
-import { Button, IconButton } from 'practical-react-components-core'
+import {
+  Button,
+  IconTextButton,
+  IconButton,
+} from 'practical-react-components-core'
 import { AddIcon } from 'practical-react-components-icons'
 
 # Button
@@ -30,6 +34,7 @@ export const Wrapper = styled.div`
   <Button label="Secondary" variant="secondary" icon={AddIcon} />
   <Button label="Secondary" variant="secondary" accent={true} />
   <Button label="Secondary" variant="secondary" icon={AddIcon} accent={true} />
+  <IconTextButton icon={AddIcon} label="Secondary" />
   <IconButton icon={AddIcon} />
   <IconButton icon={AddIcon} variant="secondary" />
   <IconButton icon={AddIcon} variant="secondary" accent={true} />
@@ -69,6 +74,14 @@ A clickable icon button without background color by default.
 <IconButton icon={AddIcon} variant="secondary" />
 ```
 
+### Clickable icon with Text: Primary icon and Secondary Text
+
+A clickable primary icon button with secondary text/title.
+
+```typescript type=live
+<IconTextButton icon={AddIcon} label="Secondary" />
+```
+
 ## Button Props
 
 Button forwards all unknown props to the base native `<button>` component. See
@@ -84,3 +97,11 @@ IconButton forwards all unknown props to the base native `<button>` component. S
 details on which additional props that are available.
 
 <Props of="IconButton" />
+
+## IconTextButton Props
+
+IconTextButton forwards all unknown props to the base native `<button>` component. See
+[`<button>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) for more
+details on which additional props that are available.
+
+<Props of="IconTextButton" />
