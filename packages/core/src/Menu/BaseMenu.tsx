@@ -397,6 +397,15 @@ export const BaseMenu = memo<BaseMenuProps>(
       hideMenu()
     }, [hideMenu])
 
+    const onClickHideAndBlurMenu = useCallback(
+      event => {
+        // Prevent event from bubbling up to the wrapper which is clickable
+        event.stopPropagation()
+        hideAndBlurMenu()
+      },
+      [hideAndBlurMenu]
+    )
+
     const handleBlur = useCallback<React.FocusEventHandler<BaseElement>>(
       e => {
         onBlur?.(e)
@@ -522,7 +531,7 @@ export const BaseMenu = memo<BaseMenuProps>(
             anchorEl={anchorRef.current}
             onScroll={hideAndBlurMenu}
           >
-            <MenuList onEscape={hideMenu} onClick={hideAndBlurMenu}>
+            <MenuList onEscape={hideMenu} onClick={onClickHideAndBlurMenu}>
               {components.map((component, index) => (
                 <BaseItem
                   key={index}

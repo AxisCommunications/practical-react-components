@@ -146,7 +146,7 @@ const Test = () => {
                 />
               </>
             }
-            clickable={index === 5}
+            clickable={index === 1}
             onClicked={clickFunc}
           >
             <Typography>{device.serialNumber}</Typography>

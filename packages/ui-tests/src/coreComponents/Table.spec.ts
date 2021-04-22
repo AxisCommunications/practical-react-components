@@ -39,9 +39,26 @@ context('Table', () => {
     // And also `cy.hover` has opened issue (https://github.com/cypress-io/cypress/issues/10)
   })
 
+  it('Menu on row should open menu item and only menu item should be clicked, should not click the row', () => {
+    cy.get('[data-cy=tableRow]')
+      .eq(1)
+      .within(() => {
+        // show menu
+        cy.get('[class*="TableCells__TableCell"]').eq(3).invoke('show')
+        cy.get('[data-cy=tableRowMenu]').as('clickableRowMenu')
+        cy.get('@clickableRowMenu').click()
+      })
+      .then(() => {
+        cy.contains('Item 1').click()
+        // close menu
+        cy.get('@clickableRowMenu').click()
+      })
+    cy.get('main').contains('Row is clicked').should('not.exist')
+  })
+
   it('clickable row should not have checkbox and is clickable', () => {
-    cy.get('[data-cy=tableRow]').eq(5).find(checkboxEl).should('not.exist')
-    cy.get('[data-cy=tableRow]').eq(5).click()
+    cy.get('[data-cy=tableRow]').eq(1).find(checkboxEl).should('not.exist')
+    cy.get('[data-cy=tableRow]').eq(1).click()
     cy.get('main').contains('Row is clicked')
   })
 
