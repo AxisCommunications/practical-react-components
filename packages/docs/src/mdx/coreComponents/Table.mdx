@@ -168,12 +168,9 @@ export const DemoComponent = ({}) => {
 
 <DemoComponent />
 
-A very large example to test mount / update performance.
-Start measuring performance, then click the button to mount
-the table.
-
-The same large example but with skeleton rows, should mount
-much faster.
+If you use both menu and clickable row in the table, you will have to use
+"event.stopPropagation()" in the menus onClick or the click will bubble up to
+the table row.
 
 ## Basic usage
 
