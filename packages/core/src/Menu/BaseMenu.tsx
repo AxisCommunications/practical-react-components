@@ -310,7 +310,7 @@ export const MenuList: React.FC<MenuListProps> = ({
 
 export interface BaseItemProps {
   readonly component: ReactNode
-  readonly onClick: () => void
+  readonly onClick: (e: React.MouseEvent | React.KeyboardEvent) => void
   readonly disabled?: boolean
   readonly keyboardSelect?: boolean
 }
@@ -329,7 +329,7 @@ const BaseItem: React.FunctionComponent<BaseItemProps> = ({
         event.stopPropagation()
         return
       }
-      onClick()
+      onClick(event)
     },
     [disabled, onClick]
   )
@@ -439,7 +439,7 @@ export const BaseMenu = memo<BaseMenuProps>(
           case MenuKeys.Space: {
             if (menuVisible) {
               if (components[arrowIndex].disabled !== true) {
-                components[arrowIndex].onClick()
+                components[arrowIndex].onClick(event)
                 hideMenu()
                 break
               }
