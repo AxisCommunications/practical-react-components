@@ -3,7 +3,19 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.21.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.20.0...v0.21.0) (2021-04-13 13:25:57 +0200)
+## [v0.22.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.21.0...v0.22.0) (2021-04-23 17:56:23 +0200)
+
+### 🚀 Features
+
+  - **docs**:  add explanation for usage of both clickable row and menu in Table ([b2dde81](https://github.com/AxisCommunications/practical-react-components/commit/b2dde81f614c54995a3c2bffeb8176c31bae9087))
+  - **menu**:  add event prop to onClick on MenuItem ([4a9e0bf](https://github.com/AxisCommunications/practical-react-components/commit/4a9e0bfbcfdaa1c51f765bf600c82a7355ba9c0c))
+  - **icons**:  add light icons ([902e48d](https://github.com/AxisCommunications/practical-react-components/commit/902e48d0804fb97e0fa4f4e00454ea313627ec23))
+
+### 🐛 Bug fixes
+
+  - **docs**:  multiselect won't have error by default ([d387eaa](https://github.com/AxisCommunications/practical-react-components/commit/d387eaa9cb417905b933971f329ba7518258c65d))
+
+## [v0.21.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.20.0...v0.21.0) (2021-04-13 13:29:36 +0200)
 
 ### 🐛 Bug fixes
 
