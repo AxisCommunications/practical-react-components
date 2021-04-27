@@ -258,7 +258,7 @@ const TableContentContainer = styled.div.attrs<{
  * Defined by the number of columns.
  */
 
-interface TableProps extends Omit<BaseProps, 'onSelect'> {
+export interface TableProps extends Omit<BaseProps, 'onSelect'> {
   /**
    * `class` to be passed to the component.
    */
