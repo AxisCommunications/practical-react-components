@@ -1,7 +1,7 @@
 {
   "name": "practical-react-components-docs",
   "private": true,
-  "version": "0.22.0",
+  "version": "0.23.0",
   "license": "MIT",
   "scripts": {
     "props": "cross-env TS_NODE_PROJECT=\"tsconfig.webpack.json\" ts-node scripts/docs-props-gen.ts --source ../core/src/index.ts --source ../formik/src/index.ts --dest src --tsconfig tsconfig.json",
@@ -15,9 +15,9 @@
     "@mdx-js/react": "1.6.22",
     "core-js": "3.10.1",
     "formik": "2.2.6",
-    "practical-react-components-core": "0.22.0",
-    "practical-react-components-formik": "0.22.0",
-    "practical-react-components-icons": "0.22.0",
+    "practical-react-components-core": "0.23.0",
+    "practical-react-components-formik": "0.23.0",
+    "practical-react-components-icons": "0.23.0",
     "prism-react-renderer": "1.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",

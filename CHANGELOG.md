@@ -3,7 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.22.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.21.0...v0.22.0) (2021-04-23 17:56:23 +0200)
+## [v0.23.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.22.0...v0.23.0) (2021-04-27 20:22:59 +0200)
+
+### 🚀 Features
+
+  - **button**:  added a new button with icon and text ([9a91b54](https://github.com/AxisCommunications/practical-react-components/commit/9a91b54d9695a5af6058c3198bbed1ce0aa44cf9))
+  - **table**:  export `TableProps` ([dc300b0](https://github.com/AxisCommunications/practical-react-components/commit/dc300b0d6cc92ea10113148c62434ca4772ed84c))
+
+## [v0.22.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.21.0...v0.22.0) (2021-04-26 07:39:26 +0200)
 
 ### 🚀 Features
 
