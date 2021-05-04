@@ -9,26 +9,26 @@
     "dev": "yarn build:ts webpack serve"
   },
   "dependencies": {
-    "core-js": "3.10.1",
+    "core-js": "3.11.2",
     "practical-react-components-core": "0.23.0",
     "practical-react-components-icons": "0.23.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-hooks-shareable": "1.24.0",
+    "react-hooks-shareable": "1.25.0",
     "react-is": "17.0.2",
     "react-router-dom": "5.2.0",
-    "regenerator-runtime": "0.13.7",
+    "regenerator-runtime": "0.13.8",
     "styled-components": "5.2.3",
     "styled-normalize": "8.0.7"
   },
   "devDependencies": {
-    "@babel/core": "7.13.15",
-    "@babel/preset-env": "7.13.15",
+    "@babel/core": "7.14.0",
+    "@babel/preset-env": "7.14.1",
     "@babel/preset-react": "7.13.13",
     "@babel/preset-typescript": "7.13.0",
     "@cypress/webpack-preprocessor": "5.7.0",
-    "@types/node": "14.14.37",
-    "@types/react": "17.0.3",
+    "@types/node": "15.0.1",
+    "@types/react": "17.0.4",
     "@types/react-router-dom": "5.1.7",
     "@types/regenerator-runtime": "0.13.0",
     "@types/styled-components": "5.1.9",
@@ -37,7 +37,7 @@
     "@types/yargs": "16.0.1",
     "babel-loader": "8.2.2",
     "babel-plugin-styled-components": "1.12.0",
-    "chalk": "4.1.0",
+    "chalk": "4.1.1",
     "cross-env": "7.0.3",
     "cypress": "6.8.0",
     "file-loader": "6.2.0",
@@ -46,9 +46,9 @@
     "tsconfig-paths": "3.9.0",
     "typescript": "4.2.4",
     "wait-on": "5.3.0",
-    "webpack": "5.32.0",
+    "webpack": "5.36.2",
     "webpack-cli": "4.6.0",
     "webpack-dev-server": "3.11.2",
-    "yargs": "16.2.0"
+    "yargs": "17.0.1"
   }
 }
