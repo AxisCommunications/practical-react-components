@@ -1,7 +1,6 @@
 import React, {
   useState,
   useEffect,
-  createRef,
   useLayoutEffect,
   Children,
   ReactElement,
@@ -165,7 +164,10 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
 
   const [debouncedVisible, setDebouncedVisible] = useState(visible)
   const [hasOverflow, setHasOverflow] = useState(false)
-  const tooltipRef = createRef<HTMLDivElement>()
+  const [horizontalLayout, setHorizontalLayout] = useState<
+    'left' | 'right' | 'center'
+  >('center')
+  const [tooltipEl, setTooltipEl] = useState<HTMLDivElement | null>(null)
 
   useEffect(() => {
     const delayVisible = () => setDebouncedVisible(visible)
@@ -188,17 +190,24 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
   }, [anchorEl, hide, show])
 
   useLayoutEffect(() => {
-    if (tooltipRef.current === null || anchorEl === null) {
+    if (tooltipEl === null || anchorEl === null) {
       return
     }
-    const tooltipEl = tooltipRef.current
 
     const { bottom } = anchorEl.getBoundingClientRect()
+
     const bottomSpace = document.documentElement.clientHeight - bottom
     // See if `bottomSpace` is smaller than Tooltip height.
-    // "8" is margin of the TooltipWapper.
+    // "8" is margin of the TooltipWrapper.
     setHasOverflow(tooltipEl.clientHeight + 8 > bottomSpace)
-  }, [anchorEl, tooltipRef, hide, show])
+
+    const { left, right } = tooltipEl.getBoundingClientRect()
+    if (left < 0) {
+      setHorizontalLayout('left')
+    } else if (right > document.documentElement.clientWidth) {
+      setHorizontalLayout('right')
+    }
+  }, [anchorEl, tooltipEl])
 
   if (props.variant !== 'expanded') {
     return (
@@ -209,13 +218,13 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
         {debouncedVisible ? (
           <PopOver
             anchorEl={anchorEl}
-            horizontalPosition="center"
-            horizontalAlignment="center"
+            horizontalPosition={horizontalLayout}
+            horizontalAlignment={horizontalLayout}
             verticalPosition={hasOverflow ? 'top' : 'bottom'}
             verticalAlignment={hasOverflow ? 'bottom' : 'top'}
             {...props}
           >
-            <TooltipWrapper ref={tooltipRef}>
+            <TooltipWrapper ref={setTooltipEl}>
               <Typography variant="chip-tag-text">{props.text}</Typography>
             </TooltipWrapper>
           </PopOver>
@@ -233,13 +242,13 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
         <>
           <PopOver
             anchorEl={anchorEl}
-            horizontalPosition="center"
-            horizontalAlignment="center"
+            horizontalPosition={horizontalLayout}
+            horizontalAlignment={horizontalLayout}
             verticalPosition={hasOverflow ? 'top' : 'bottom'}
             verticalAlignment={hasOverflow ? 'bottom' : 'top'}
             {...props}
           >
-            <ExpandedTooltipWrapper ref={tooltipRef}>
+            <ExpandedTooltipWrapper ref={setTooltipEl}>
               {props.extraInfo !== undefined ? (
                 <ExpandedTooltipTop>
                   <ExpandedTooltipTitle>{props.tipTitle}</ExpandedTooltipTitle>
