@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.24.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.23.0...v0.24.0) (2021-05-04 11:11:48 +0200)
+## [v0.25.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.24.0...v0.25.0) (2021-05-11 09:03:23 +0200)
+
+### 🐛 Bug fixes
+
+  - **tooltip**:  tooltip is cut when overflow horizontally ([eb6c8f8](https://github.com/AxisCommunications/practical-react-components/commit/eb6c8f806e97dc3270ed1fea27ca4c2f7ae1e8b0))
+
+## [v0.24.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.23.0...v0.24.0) (2021-05-04 12:37:13 +0200)
 
 ### 🚧 Maintenance
 
