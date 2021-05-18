@@ -18,8 +18,10 @@ export const grey = (brightness = 100): RGB => {
  */
 export type CSSColor = (a?: number) => string
 
-export const createCSSColor = ([r, g, b]: RGB): CSSColor => (a?: number) =>
-  a === undefined ? `rgb(${r}, ${g}, ${b})` : `rgba(${r}, ${g}, ${b}, ${a})`
+export const createCSSColor =
+  ([r, g, b]: RGB): CSSColor =>
+  (a?: number) =>
+    a === undefined ? `rgb(${r}, ${g}, ${b})` : `rgba(${r}, ${g}, ${b}, ${a})`
 
 /**
  * Converting functions that rgb color to hex color

@@ -261,12 +261,8 @@ export const Button = React.forwardRef<BaseElement, ButtonProps>(
     },
     ref
   ) => {
-    const {
-      isPointerOn,
-      isPointerOff,
-      determineVisibleFocus,
-      visibleFocus,
-    } = useVisibleFocus()
+    const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+      useVisibleFocus()
 
     const handleFocus = useCallback<React.FocusEventHandler<BaseElement>>(
       e => {
@@ -448,12 +444,8 @@ export const IconButton = React.forwardRef<BaseElement, IconButtonProps>(
     },
     ref
   ) => {
-    const {
-      isPointerOn,
-      isPointerOff,
-      determineVisibleFocus,
-      visibleFocus,
-    } = useVisibleFocus()
+    const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+      useVisibleFocus()
 
     const handleFocus = useCallback<React.FocusEventHandler<BaseElement>>(
       e => {
@@ -596,12 +588,8 @@ export const IconTextButton = React.forwardRef<
     },
     ref
   ) => {
-    const {
-      isPointerOn,
-      isPointerOff,
-      determineVisibleFocus,
-      visibleFocus,
-    } = useVisibleFocus()
+    const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+      useVisibleFocus()
 
     const handleFocus = useCallback<React.FocusEventHandler<BaseElement>>(
       e => {

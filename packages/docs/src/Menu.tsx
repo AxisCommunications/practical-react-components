@@ -72,9 +72,10 @@ export const Menu: React.FC<MenuProps> = ({ components }) => {
   const [showNavigation, setShowNavigation] = useState<boolean>(true)
   const history = useHistory()
   const location = useLocation()
-  const selectTab = useCallback((route: string) => history.push(route), [
-    history,
-  ])
+  const selectTab = useCallback(
+    (route: string) => history.push(route),
+    [history]
+  )
   const onMenuIconClick = useCallback(
     () => setShowNavigation(!showNavigation),
     [showNavigation]
@@ -82,7 +83,7 @@ export const Menu: React.FC<MenuProps> = ({ components }) => {
 
   const mappedComponents = useMemo(
     () =>
-      ([...BASE_ITEMS, ...components].map(c => ({
+      [...BASE_ITEMS, ...components].map(c => ({
         id: c.name,
         label: c.name,
         icon: () => null,
@@ -96,7 +97,7 @@ export const Menu: React.FC<MenuProps> = ({ components }) => {
             ? (window.location.href = c.route)
             : selectTab(c.route),
         ...c,
-      })) as unknown) as ReadonlyArray<ComponentGroup>,
+      })) as unknown as ReadonlyArray<ComponentGroup>,
     [location.pathname, components, selectTab]
   )
 

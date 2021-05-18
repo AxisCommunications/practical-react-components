@@ -207,10 +207,8 @@ export const SelectPopover: React.FC<SelectPopoverProps> = ({
   onScroll,
   ...props
 }) => {
-  const {
-    compact: compactFromTheme,
-    selectMarker: selectMarkerFromTheme,
-  } = useTheme()
+  const { compact: compactFromTheme, selectMarker: selectMarkerFromTheme } =
+    useTheme()
   const compact = compactFromProps ?? compactFromTheme
   const selectMarker = selectMarkerFromProps ?? selectMarkerFromTheme
 
@@ -419,19 +417,16 @@ export function BaseSelect<V extends string = string>({
   noOptionsLabel,
   ...props
 }: BaseSelectProps<V>): JSX.Element {
-  const {
-    compact: compactFromTheme,
-    selectMarker: selectMarkerFromTheme,
-  } = useTheme()
+  const { compact: compactFromTheme, selectMarker: selectMarkerFromTheme } =
+    useTheme()
   const compact = compactFromProps ?? compactFromTheme
   const selectMarker = selectMarkerFromProps ?? selectMarkerFromTheme
 
   const [isOpen, openPopover, closePopover, toggleOpen] = useBoolean(false)
   const [isKeyboard, setKeyboardOn, setKeyboardOff] = useBoolean(true)
 
-  const [popupAnchorEl, setPopupAnchorEl] = useState<HTMLDivElement | null>(
-    null
-  )
+  const [popupAnchorEl, setPopupAnchorEl] =
+    useState<HTMLDivElement | null>(null)
 
   const optionMap = useMemo(() => {
     return new Map(

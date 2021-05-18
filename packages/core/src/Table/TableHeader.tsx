@@ -62,9 +62,8 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
   menu,
   ...props
 }) => {
-  const { onSelect, hasMenu, columnWidths, dispatchWidthsAction } = useContext(
-    TableContext
-  )
+  const { onSelect, hasMenu, columnWidths, dispatchWidthsAction } =
+    useContext(TableContext)
   const onChange = useCallback<CheckboxChangeHandler>(
     e => {
       if (onSelect !== undefined) {

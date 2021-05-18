@@ -252,10 +252,10 @@ export const Step: React.FC<StepProps> = ({
       setCurrentStep,
     ]
   )
-  const onStepNumberClick = useCallback(() => setCurrentStep(stepId), [
-    setCurrentStep,
-    stepId,
-  ])
+  const onStepNumberClick = useCallback(
+    () => setCurrentStep(stepId),
+    [setCurrentStep, stepId]
+  )
 
   return (
     <StepWrapper {...props}>

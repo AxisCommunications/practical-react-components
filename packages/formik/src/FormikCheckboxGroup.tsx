@@ -62,9 +62,10 @@ export function FormikCheckboxGroup<V extends string | number>({
    * Number used to stack the first half of the options in left checkbox column
    * and the last half in the right column.
    */
-  const halfOptionLength = useMemo(() => Math.ceil(options.length / 2), [
-    options,
-  ])
+  const halfOptionLength = useMemo(
+    () => Math.ceil(options.length / 2),
+    [options]
+  )
   const onChanges = useMemo(
     () =>
       options.map(option => () => {

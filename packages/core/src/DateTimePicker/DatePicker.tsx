@@ -182,9 +182,10 @@ export const DatePicker: React.FC<DatePickerProps> = ({
     [date, onChange]
   )
   const onNextMonthClick = useCallback(() => navigateMonth(1), [navigateMonth])
-  const onPreviousMonthClick = useCallback(() => navigateMonth(-1), [
-    navigateMonth,
-  ])
+  const onPreviousMonthClick = useCallback(
+    () => navigateMonth(-1),
+    [navigateMonth]
+  )
 
   const onDateClick = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -203,9 +204,10 @@ export const DatePicker: React.FC<DatePickerProps> = ({
     [date, onChange]
   )
   const onNextYearClick = useCallback(() => navigateYear(1), [navigateYear])
-  const onPreviousYearClick = useCallback(() => navigateYear(-1), [
-    navigateYear,
-  ])
+  const onPreviousYearClick = useCallback(
+    () => navigateYear(-1),
+    [navigateYear]
+  )
   const weekdays = useMemo(() => getWeekDays(lang), [lang])
   return (
     <DatePickerWrapper>

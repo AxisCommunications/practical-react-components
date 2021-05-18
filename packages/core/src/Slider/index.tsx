@@ -358,9 +358,10 @@ export const Slider: React.FC<SliderProps> = ({
    * To avoid making the calculation for snap values each time
    * the slider is dragged we create the snap values here.
    */
-  const snapValues = useMemo(() => tickMarkers.map(v => v.position / 100), [
-    tickMarkers,
-  ])
+  const snapValues = useMemo(
+    () => tickMarkers.map(v => v.position / 100),
+    [tickMarkers]
+  )
 
   // Computes the new value and passed it to the handleChange callback
   const handleClick = useCallback(
@@ -483,12 +484,8 @@ export const Slider: React.FC<SliderProps> = ({
     [max, min, value, handleChange, onKeyDown]
   )
 
-  const {
-    isPointerOn,
-    isPointerOff,
-    determineVisibleFocus,
-    visibleFocus,
-  } = useVisibleFocus()
+  const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+    useVisibleFocus()
 
   const handlePointerDown = useCallback<React.PointerEventHandler<BaseElement>>(
     e => {
@@ -524,9 +521,10 @@ export const Slider: React.FC<SliderProps> = ({
     })
   }, [handleChange, tickMarkers])
 
-  const hasTickLabels = useMemo(() => tickLabels.length > 0, [
-    tickLabels.length,
-  ])
+  const hasTickLabels = useMemo(
+    () => tickLabels.length > 0,
+    [tickLabels.length]
+  )
 
   return (
     <Container className={className}>
@@ -591,22 +589,21 @@ const SliderLabel = styled(Label)`
 
 // Slider component has more air around its controls and will
 // use smaller space between label and slider.
-export const SliderField: React.FC<
-  Omit<FieldProps, 'compact'> & SliderProps
-> = ({ label, unitLabel, ...props }) => (
-  <div>
-    {label !== undefined ? (
-      <SliderLabel compact={false}>
-        <Typography variant="navigation-label">{label}</Typography>
-      </SliderLabel>
-    ) : null}
-    {unitLabel !== undefined ? (
-      <WithUnitLabelContainer>
+export const SliderField: React.FC<Omit<FieldProps, 'compact'> & SliderProps> =
+  ({ label, unitLabel, ...props }) => (
+    <div>
+      {label !== undefined ? (
+        <SliderLabel compact={false}>
+          <Typography variant="navigation-label">{label}</Typography>
+        </SliderLabel>
+      ) : null}
+      {unitLabel !== undefined ? (
+        <WithUnitLabelContainer>
+          <Slider {...props} />
+          <Unit variant="explanatory-text">{unitLabel}</Unit>
+        </WithUnitLabelContainer>
+      ) : (
         <Slider {...props} />
-        <Unit variant="explanatory-text">{unitLabel}</Unit>
-      </WithUnitLabelContainer>
-    ) : (
-      <Slider {...props} />
-    )}
-  </div>
-)
+      )}
+    </div>
+  )

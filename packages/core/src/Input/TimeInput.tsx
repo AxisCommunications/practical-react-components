@@ -334,10 +334,10 @@ export const TimeInput: React.FC<TimeInputProps> = ({
     [inputElement]
   )
 
-  useLayoutEffect(() => setCursorPosition(inputPos), [
-    inputValue,
-    setCursorPosition,
-  ])
+  useLayoutEffect(
+    () => setCursorPosition(inputPos),
+    [inputValue, setCursorPosition]
+  )
 
   const onKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -488,10 +488,10 @@ export const DurationInput: React.FC<DurationInputProps> = ({
     [inputElement]
   )
 
-  useLayoutEffect(() => setCursorPosition(inputPos), [
-    inputValue,
-    setCursorPosition,
-  ])
+  useLayoutEffect(
+    () => setCursorPosition(inputPos),
+    [inputValue, setCursorPosition]
+  )
 
   const onKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLInputElement>) => {

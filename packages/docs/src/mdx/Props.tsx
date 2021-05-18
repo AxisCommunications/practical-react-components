@@ -97,5 +97,5 @@ const PropsList: React.FC<PropsProps> = ({ of, props }) => {
 }
 
 export const Props = styled(PropsList).attrs({
-  props: (propsList as unknown) as ReadonlyArray<ComponentDoc>,
+  props: propsList as unknown as ReadonlyArray<ComponentDoc>,
 })``
