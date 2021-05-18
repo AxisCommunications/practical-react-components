@@ -10882,7 +10882,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"practical-react-components-core@0.25.0, practical-react-components-core@workspace:packages/core":
+"practical-react-components-core@0.26.0, practical-react-components-core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "practical-react-components-core@workspace:packages/core"
   dependencies:
@@ -10906,7 +10906,7 @@ __metadata:
     jest-styled-components: 7.0.4
     no-scroll: 2.1.1
     pepjs: 0.5.3
-    practical-react-components-icons: 0.25.0
+    practical-react-components-icons: 0.26.0
     prop-types: 15.7.2
     react: 17.0.2
     react-dom: 17.0.2
@@ -10959,9 +10959,9 @@ __metadata:
     formik: 2.2.6
     html-webpack-plugin: 5.3.1
     license-webpack-plugin: 2.3.18
-    practical-react-components-core: 0.25.0
-    practical-react-components-formik: 0.25.0
-    practical-react-components-icons: 0.25.0
+    practical-react-components-core: 0.26.0
+    practical-react-components-formik: 0.26.0
+    practical-react-components-icons: 0.26.0
     prism-react-renderer: 1.2.0
     react: 17.0.2
     react-docgen-typescript: 1.22.0
@@ -10987,7 +10987,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"practical-react-components-formik@0.25.0, practical-react-components-formik@workspace:packages/formik":
+"practical-react-components-formik@0.26.0, practical-react-components-formik@workspace:packages/formik":
   version: 0.0.0-use.local
   resolution: "practical-react-components-formik@workspace:packages/formik"
   dependencies:
@@ -11003,7 +11003,7 @@ __metadata:
     "@types/styled-components": 5.1.9
     core-js: 3.12.1
     formik: 2.2.6
-    practical-react-components-core: 0.25.0
+    practical-react-components-core: 0.26.0
     react: 17.0.2
     react-is: 17.0.2
     styled-components: 5.3.0
@@ -11018,7 +11018,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"practical-react-components-icons@0.25.0, practical-react-components-icons@workspace:packages/icons":
+"practical-react-components-icons@0.26.0, practical-react-components-icons@workspace:packages/icons":
   version: 0.0.0-use.local
   resolution: "practical-react-components-icons@workspace:packages/icons"
   dependencies:
@@ -11071,8 +11071,8 @@ __metadata:
     cypress: 6.8.0
     file-loader: 6.2.0
     html-webpack-plugin: 5.3.1
-    practical-react-components-core: 0.25.0
-    practical-react-components-icons: 0.25.0
+    practical-react-components-core: 0.26.0
+    practical-react-components-icons: 0.26.0
     react: 17.0.2
     react-dom: 17.0.2
     react-hooks-shareable: 1.26.0

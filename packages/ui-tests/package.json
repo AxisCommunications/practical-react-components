@@ -1,7 +1,7 @@
 {
   "name": "practical-react-components-ui-tests",
   "private": true,
-  "version": "0.25.0",
+  "version": "0.26.0",
   "license": "MIT",
   "scripts": {
     "build:ts": "cross-env TS_NODE_PROJECT=\"tsconfig.webpack.json\" --env.NODE_ENV=docs",
@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "core-js": "3.12.1",
-    "practical-react-components-core": "0.25.0",
-    "practical-react-components-icons": "0.25.0",
+    "practical-react-components-core": "0.26.0",
+    "practical-react-components-icons": "0.26.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-hooks-shareable": "1.26.0",

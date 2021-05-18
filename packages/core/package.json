@@ -1,6 +1,6 @@
 {
   "name": "practical-react-components-core",
-  "version": "0.25.0",
+  "version": "0.26.0",
   "description": "Practical react components library - Core",
   "homepage": "https://github.com/AxisCommunications/practical-react-components",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "@juggle/resize-observer": "3.3.1",
     "focus-trap-react": "8.5.0",
     "no-scroll": "2.1.1",
-    "practical-react-components-icons": "0.25.0",
+    "practical-react-components-icons": "0.26.0",
     "react-hooks-shareable": "1.26.0"
   },
   "devDependencies": {
