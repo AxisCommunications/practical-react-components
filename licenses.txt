@@ -1,4 +1,4 @@
-Package: webpack (5.24.4)
+Package: webpack (5.37.0)
 Web:     https://github.com/webpack/webpack
 License: MIT
 
@@ -27,7 +27,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                        ====================
 
 
-Package: core-js (3.11.2)
+Package: core-js (3.12.1)
 Web:     
 License: MIT
 
@@ -55,7 +55,7 @@ THE SOFTWARE.
                        ====================
 
 
-Package: regenerator-runtime (0.13.8)
+Package: regenerator-runtime (0.13.7)
 Web:     
 License: MIT
 
@@ -560,7 +560,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-hooks-shareable (1.25.0)
+Package: react-hooks-shareable (1.26.0)
 Web:     https://github.com/AxisCommunications/react-hooks-shareable
 License: MIT
 
@@ -1563,7 +1563,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                        ====================
 
 
-Package: styled-components (5.2.3)
+Package: styled-components (5.3.0)
 Web:     https://styled-components.com
 License: MIT
 
