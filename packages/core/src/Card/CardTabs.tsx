@@ -191,10 +191,10 @@ export function CardTabs<T>({
   hasBackground,
   ...props
 }: CardTabsProps<T>): JSX.Element {
-  const onClickHandler = useCallback(index => onChange(options[index].value), [
-    options,
-    onChange,
-  ])
+  const onClickHandler = useCallback(
+    index => onChange(options[index].value),
+    [options, onChange]
+  )
 
   return (
     <TabContainer {...props}>

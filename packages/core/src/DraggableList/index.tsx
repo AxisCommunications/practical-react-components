@@ -64,22 +64,25 @@ export const DraggableList: React.FC<DraggableListProps> = ({
   onChange,
   ...props
 }) => {
-  const childElements = useMemo(() => React.Children.toArray(children), [
-    children,
-  ])
-  const locked = useMemo(() => childElements.map(isElementDisabled), [
-    childElements,
-  ])
+  const childElements = useMemo(
+    () => React.Children.toArray(children),
+    [children]
+  )
+  const locked = useMemo(
+    () => childElements.map(isElementDisabled),
+    [childElements]
+  )
 
-  const elementRange = useMemo(() => range(childElements.length), [
-    childElements,
-  ])
+  const elementRange = useMemo(
+    () => range(childElements.length),
+    [childElements]
+  )
   const [order, setOrder] = useState(elementRange)
 
-  useLayoutEffect(() => setOrder(elementRange), [
-    elementRange,
-    childElements.length,
-  ])
+  useLayoutEffect(
+    () => setOrder(elementRange),
+    [elementRange, childElements.length]
+  )
 
   const dragIndexRef = useRef<number | undefined>()
   const dropIndexRef = useRef<number | undefined>()

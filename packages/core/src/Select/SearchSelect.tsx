@@ -99,10 +99,10 @@ export function SearchSelect<V extends string = string>({
     [currentValue, options]
   )
 
-  useEffect(() => setFilter(getLabel(currentValue, options)), [
-    currentValue,
-    options,
-  ])
+  useEffect(
+    () => setFilter(getLabel(currentValue, options)),
+    [currentValue, options]
+  )
 
   const input = (
     <InputNative

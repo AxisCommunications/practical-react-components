@@ -1,7 +1,9 @@
 import React, { useCallback, useContext, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 import Highlight, { defaultProps, Language } from 'prism-react-renderer'
+/* eslint-disable-next-line import/no-extraneous-dependencies */
 import lightTheme from 'prism-react-renderer/themes/nightOwlLight'
+/* eslint-disable-next-line import/no-extraneous-dependencies */
 import darkTheme from 'prism-react-renderer/themes/nightOwl'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { mdx } from '@mdx-js/react'

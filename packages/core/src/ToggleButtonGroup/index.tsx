@@ -137,10 +137,10 @@ function ToggleButton<T extends string | number>({
   onClick,
   content,
 }: ToggleButtonProps<T>): JSX.Element {
-  const selected = useMemo(() => values.some(value => value === id), [
-    values,
-    id,
-  ])
+  const selected = useMemo(
+    () => values.some(value => value === id),
+    [values, id]
+  )
   const onButtonClick = useCallback<
     React.MouseEventHandler<HTMLDivElement>
   >(() => {

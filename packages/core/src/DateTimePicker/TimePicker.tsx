@@ -20,32 +20,10 @@ const ANGLE_360 = 360
 const TIMEFORMAT_BUTTON_MIN_SIZE = 36
 
 const CLOCK_NUMBERS: ReadonlyArray<number> = [
-  12,
-  1,
-  2,
-  3,
-  4,
-  5,
-  6,
-  7,
-  8,
-  9,
-  10,
-  11,
+  12, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
 ]
 const CLOCK_NUMBERS_TWENTY_FOUR: ReadonlyArray<number> = [
-  0,
-  13,
-  14,
-  15,
-  16,
-  17,
-  18,
-  19,
-  20,
-  21,
-  22,
-  23,
+  0, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23,
 ]
 
 enum AMPM {

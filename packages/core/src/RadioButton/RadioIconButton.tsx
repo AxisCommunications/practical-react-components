@@ -205,12 +205,8 @@ export function RadioIconButton<V extends string = string>({
     [onChange, onValueChange]
   )
 
-  const {
-    isPointerOn,
-    isPointerOff,
-    determineVisibleFocus,
-    visibleFocus,
-  } = useVisibleFocus()
+  const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+    useVisibleFocus()
 
   const handleFocus = useCallback<React.FocusEventHandler<BaseElement>>(
     e => {

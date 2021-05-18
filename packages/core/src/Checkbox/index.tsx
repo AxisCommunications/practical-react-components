@@ -212,12 +212,8 @@ export const Checkbox: React.FunctionComponent<CheckboxProps> = ({
   className,
   ...props
 }) => {
-  const {
-    isPointerOn,
-    isPointerOff,
-    determineVisibleFocus,
-    visibleFocus,
-  } = useVisibleFocus()
+  const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+    useVisibleFocus()
 
   const handleChange = useCallback(
     e => {

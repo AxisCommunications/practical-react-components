@@ -228,12 +228,8 @@ export const Switch: React.FunctionComponent<SwitchProps> = ({
   className,
   ...props
 }) => {
-  const {
-    isPointerOn,
-    isPointerOff,
-    determineVisibleFocus,
-    visibleFocus,
-  } = useVisibleFocus()
+  const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+    useVisibleFocus()
 
   const handleChange = useCallback<SwitchChangeHandler>(
     e => {
