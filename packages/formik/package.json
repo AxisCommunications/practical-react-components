@@ -9,7 +9,7 @@
     "build"
   ],
   "dependencies": {
-    "practical-react-components-core": "0.27.0"
+    "practical-react-components-core": "workspace:*"
   },
   "devDependencies": {
     "@babel/cli": "7.14.3",
