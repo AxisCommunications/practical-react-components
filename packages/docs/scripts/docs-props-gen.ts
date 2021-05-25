@@ -14,8 +14,8 @@ import {
 } from 'react-docgen-typescript'
 import yargs from 'yargs'
 
-const generateArgs = () => {
-  return yargs
+const generateArgs = () =>
+  yargs
     .usage(
       'yarn props - generates a json file with props for TypeScript components'
     )
@@ -33,12 +33,11 @@ const generateArgs = () => {
     })
     .demandOption(
       ['source', 'dest', 'tsconfig'],
-      'Please provide both `source` and `path` arguments'
+      'Please provide `source`, `path` and `tsconfig` arguments'
     )
     .example('yarn props --source src/index.ts --path ../out', 'Creates props')
     .help('help')
     .wrap(75).argv
-}
 
 export const createDir = (target: string) => {
   if (!fs.existsSync(target)) {
@@ -54,8 +53,8 @@ const propFilter = (prop: PropItem) => {
   return true
 }
 
-function main() {
-  const args = generateArgs()
+async function main() {
+  const args = await generateArgs()
 
   console.log(chalk.gray('About to generate the props'))
   const cwd = process.cwd()
@@ -84,4 +83,4 @@ function main() {
   )
 }
 
-main()
+main().catch(console.error)
