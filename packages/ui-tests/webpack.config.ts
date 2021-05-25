@@ -4,8 +4,14 @@ import yargs from 'yargs'
 
 const DIST_FOLDER = 'dist'
 
-const generateArgs = () => {
-  return yargs
+interface GenerateArgsResult {
+  readonly base?: string | undefined
+  readonly port?: string | undefined
+  readonly prod: boolean
+}
+
+const generateArgs = () =>
+  yargs
     .option('port', {
       describe: 'Select a specific port',
       type: 'string',
@@ -19,8 +25,7 @@ const generateArgs = () => {
       type: 'string',
     })
     .help('help')
-    .wrap(75).argv
-}
+    .wrap(75).argv as GenerateArgsResult
 
 const args = generateArgs()
 const prod = args.prod === true
