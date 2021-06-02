@@ -5940,9 +5940,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-typescript-shareable@npm:1.0.0":
-  version: 1.0.0
-  resolution: "eslint-config-typescript-shareable@npm:1.0.0"
+"eslint-config-typescript-shareable@npm:1.1.0":
+  version: 1.1.0
+  resolution: "eslint-config-typescript-shareable@npm:1.1.0"
   peerDependencies:
     "@typescript-eslint/eslint-plugin": ^4.26.0
     "@typescript-eslint/parser": ^4.26.0
@@ -5957,7 +5957,7 @@ __metadata:
     stylelint-config-styled-components: ^0.1.1
     stylelint-processor-styled-components: ^1.10.0
     typescript: ^4.2.4
-  checksum: f2032cd6937ff5a8df3c62ec3fc18a8f739d459b94055f1ef459950c71103f66f61fb78e46bae501301a7a5ce1ee8f4f5bd3dcc99a51877d418e3cf74e0fd69d
+  checksum: 281ec1098fcfe3b69b9be35839c0fe4bfed6da3db6eaf38cf43ef5144253bf5e1308788e897118344e09b6fee16b44e56e567026f4472ab2ba22a5d516ab91d8
   languageName: node
   linkType: hard
 
@@ -11093,7 +11093,7 @@ __metadata:
     prop-types: 15.7.2
     react: 17.0.2
     react-dom: 17.0.2
-    react-hooks-shareable: 1.28.0
+    react-hooks-shareable: 1.29.0
     react-is: 17.0.2
     react-test-renderer: 17.0.2
     react-transition-group: 4.4.2
@@ -11149,12 +11149,12 @@ __metadata:
     react: 17.0.2
     react-docgen-typescript: 1.22.0
     react-dom: 17.0.2
-    react-hooks-shareable: 1.28.0
+    react-hooks-shareable: 1.29.0
     react-is: 17.0.2
     react-live: 2.2.3
     react-router-dom: 5.2.0
     react-transition-group: 4.4.2
-    regenerator-runtime: 0.13.7
+    regenerator-runtime: 0.13.8
     style-loader: 2.0.0
     styled-components: 5.3.0
     styled-normalize: 8.0.7
@@ -11258,10 +11258,10 @@ __metadata:
     practical-react-components-icons: "workspace:*"
     react: 17.0.2
     react-dom: 17.0.2
-    react-hooks-shareable: 1.28.0
+    react-hooks-shareable: 1.29.0
     react-is: 17.0.2
     react-router-dom: 5.2.0
-    regenerator-runtime: 0.13.7
+    regenerator-runtime: 0.13.8
     styled-components: 5.3.0
     styled-normalize: 8.0.7
     ts-node: 10.0.0
@@ -11295,7 +11295,7 @@ __metadata:
     "@typescript-eslint/parser": 4.26.0
     babel-plugin-styled-components: 1.12.0
     eslint: 7.27.0
-    eslint-config-typescript-shareable: 1.0.0
+    eslint-config-typescript-shareable: 1.1.0
     eslint-plugin-cypress: 2.11.3
     eslint-plugin-functional: 3.2.1
     eslint-plugin-import: 2.23.4
@@ -11611,14 +11611,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hooks-shareable@npm:1.28.0":
-  version: 1.28.0
-  resolution: "react-hooks-shareable@npm:1.28.0"
+"react-hooks-shareable@npm:1.29.0":
+  version: 1.29.0
+  resolution: "react-hooks-shareable@npm:1.29.0"
   dependencies:
     "@juggle/resize-observer": 3.3.1
   peerDependencies:
     react: ^17.0.2
-  checksum: 80c50dffeeac943b77ad7d6b5818ecd36040823384bfa862cb1b128e7e122e361def51b4916dd4e9a079bcffda9ea3265a1f6ed4a2204bc94836a2c23b2a2a4c
+  checksum: 04fa7213cb4455cb455770a8faafaad59fc70316020c34caed54e9b9cc0f030cebb9075ce9a7a2f31006fbf120e431f152202099db640d6d5a4dfe841cbaa43a
   languageName: node
   linkType: hard
 
@@ -11891,7 +11891,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:0.13.7, regenerator-runtime@npm:^0.13.4":
+"regenerator-runtime@npm:0.13.8":
+  version: 0.13.8
+  resolution: "regenerator-runtime@npm:0.13.8"
+  checksum: 20178f5753f181d59691e5c3b4c59a2769987f75c7ccf325777673b5478acca61a553b10e895585086c222f72f5ee428090acf50320264de4b79f630f7388653
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.13.4":
   version: 0.13.7
   resolution: "regenerator-runtime@npm:0.13.7"
   checksum: 6ef567c662088b1b292214920cbd72443059298d477f72e1a37e0a113bafbfac9057cbfe35ae617284effc4b423493326a78561bbff7b04162c7949bdb9624e8
