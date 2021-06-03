@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.30.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.29.0...v0.30.0) (2021-06-02 14:53:22 +0200)
+## [v0.31.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.30.0...v0.31.0) (2021-06-03 12:39:44 +0200)
+
+### 🚀 Features
+
+  - **icons**:  add download icon (#88) ([15cdf08](https://github.com/AxisCommunications/practical-react-components/commit/15cdf0834bee30d36c4c8737cb971fab776a770f))
+
+## [v0.30.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.29.0...v0.30.0) (2021-06-02 15:01:34 +0200)
 
 ### 🚧 Maintenance
 
