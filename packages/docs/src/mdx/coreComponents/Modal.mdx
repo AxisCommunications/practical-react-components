@@ -21,7 +21,7 @@ export const DemoComponent = ({}) => {
       <Modal
         open={open}
         onClose={unsetOpen}
-        titleId="modal-level-1"
+        title="modal-level-1"
         focusDialog={true}
         className="my-modal"
       >
@@ -40,19 +40,24 @@ export const onClick = () => {}
 ## Usage example
 
 ```typescript
-import { Dialog, Button } from 'practical-react-components-core'
+import { Modal, Button } from 'practical-react-components-core'
 
 export const DemoComponent = () => {
-  const [open, setOpen, unsetOpen] = useBoolean(false)
+  const [showModal, setShowModal] = useState(false)
+  const setModal = () => setShowModal(!showModal)
   return (
-    <Modal
-      open={open}
-      onClose={unsetOpen}
-      titleId="modal-level-1"
-      focusDialog={true}
-    >
-      Content
-    </Modal>
+    <>
+      <Button label="Open modal" onClick={setModal} variant="primary" />
+      <Modal
+        open={showModal}
+        onClose={setModal}
+        title="modal-level-1"
+        focusDialog={true}
+      >
+        CONTENT
+        <Button label="Close modal" onClick={setModal} variant="primary" />
+      </Modal>
+    </>
   )
 }
 ```
