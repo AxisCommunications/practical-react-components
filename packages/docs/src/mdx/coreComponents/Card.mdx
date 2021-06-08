@@ -175,6 +175,8 @@ export const RadioSelectableListItem = () => {
 }
 
 export const DemoComponent = ({}) => {
+  const [value, setValue] = useState(false)
+  const [valueText, setValueText] = useState('')
   const [isExpanded, setExpanded] = useState(true)
   const onClick = useCallback(() => {}, [])
   const onSelect = () => {}
@@ -318,7 +320,7 @@ export const DemoComponent = ({}) => {
             <Button onClick={onClick} label="Action 1" />
             <Button onClick={onClick} label="Action 2" variant="secondary" />
             <CardFooterSpacer />
-            <Switch value={false} onChange={() => {}} />
+            <Switch checked={value} onValueChange={setValue} />
             <Typography>Input label</Typography>
           </CardFooter>
         </Card>
@@ -356,25 +358,25 @@ export const DemoComponent = ({}) => {
             <CardPlainContent>
               <ContentListItem listHeight="large">
                 <Typography>Input label</Typography>
-                <Switch value={false} onChange={() => {}} />
+                <Switch checked={value} onValueChange={setValue} />
               </ContentListItem>
               <ContentDivider />
               <ContentListItem listHeight="large">
                 <Typography>Input label</Typography>
-                <Switch value={true} onChange={() => {}} />
+                <Switch checked={value} onValueChange={setValue} />
               </ContentListItem>
               <ContentDivider />
               <FormSection>
                 <TextInputField
                   label="Input label"
-                  value=""
-                  onValueChange={() => {}}
+                  value={valueText}
+                  onValueChange={setValueText}
                   placeholder="Placeholder"
                 />
                 <TextInputField
                   label="Input label"
-                  value=""
-                  onValueChange={() => {}}
+                  value={valueText}
+                  onValueChange={setValueText}
                   placeholder="Placeholder"
                 />
               </FormSection>
@@ -382,12 +384,12 @@ export const DemoComponent = ({}) => {
               <FormSection title="Group label" />
               <ContentListItem listHeight="large">
                 <Typography>Input label</Typography>
-                <Switch value={false} onChange={() => {}} />
+                <Switch checked={value} onValueChange={setValue} />
               </ContentListItem>
               <ContentDivider />
               <ContentListItem listHeight="large">
                 <Typography>Input label</Typography>
-                <Switch value={true} onChange={() => {}} />
+                <Switch checked={value} onValueChange={setValue} />
               </ContentListItem>
               <ContentDivider />
               <RadioSelectableListItem />
@@ -423,7 +425,7 @@ export const onClick = () => {}
 ### Card with header, content and footer
 
 ```typescript type=live
-<Card>
+<Card width="small">
   <CardHeader>
     <CardHeaderTypography>CardHeader</CardHeaderTypography>
   </CardHeader>
@@ -443,12 +445,12 @@ export const onClick = () => {}
   <CardPlainContent>
     <ContentListItem listHeight="large">
       <Typography>Input label</Typography>
-      <Switch value={false} onChange={() => {}} />
+      <Switch checked={false} onChange={() => {}} />
     </ContentListItem>
     <ContentDivider />
     <ContentListItem listHeight="large">
       <Typography>Input label</Typography>
-      <Switch value={true} onChange={() => {}} />
+      <Switch checked={true} onChange={() => {}} />
     </ContentListItem>
     <ContentDivider />
     <FormSection>
@@ -469,7 +471,7 @@ export const onClick = () => {}
     <FormSection title="Group label" />
     <ContentListItem listHeight="large">
       <Typography>Input label</Typography>
-      <Switch value={false} onChange={() => {}} />
+      <Switch checked={false} onChange={() => {}} />
     </ContentListItem>
     <ContentDivider />
     <ContentListItem listHeight="large">
@@ -494,7 +496,6 @@ export const onClick = () => {}
       caption="Selected applications will automatically be installed and reinstalled if removed."
     />
     <RadioButtonGroup
-      label="Select your favorite fruit"
       name="radioValue"
       options={[
         { value: 'apple', label: 'Apple' },
