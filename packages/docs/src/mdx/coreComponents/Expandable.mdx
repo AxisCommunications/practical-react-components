@@ -72,10 +72,10 @@ The demo here is similiar to the example below.
 
 ### Examples
 
-```typescript
+```typescript type=live
 <Expandable>
   {{
-    header: expanded => <Arrow expanded={expanded} />,
+    header: expanded => <Arrow disabled={false} expanded={expanded} />,
     body: (
       <div style={{ padding: '40px', backgroundColor: 'red' }}>Content</div>
     ),
