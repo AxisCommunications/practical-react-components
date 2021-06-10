@@ -78,6 +78,68 @@ export const NativeButton = styled.button<{
           background-color: ${theme.color.elementPrimary()};
         }
       `
+    } else if (variant === 'danger') {
+      return css`
+        color: ${theme.color.text00()};
+        fill: ${theme.color.text00()};
+        background-color: ${theme.color.elementError()};
+        box-shadow: ${theme.shadow.primaryButton};
+
+        &:hover {
+          background-color: ${theme.color.textError()};
+          box-shadow: ${theme.shadow.primaryButton};
+        }
+
+        &:focus {
+          ${visibleFocus
+            ? css`
+                background-color: ${theme.color.elementError()};
+                box-shadow: ${theme.shadow.primaryButton};
+                border: 2px solid ${theme.color.textError()};
+              `
+            : undefined};
+        }
+
+        &:active {
+          background-color: ${theme.color.textError()};
+          box-shadow: 0 0 0 4px ${theme.color.elementError(opacity[24])};
+        }
+
+        &:disabled {
+          background-color: ${theme.color.elementError()};
+        }
+      `
+    } else if (variant === 'success') {
+      return css`
+        color: ${theme.color.text00()};
+        fill: ${theme.color.text00()};
+        background-color: ${theme.color.elementSuccess()};
+        box-shadow: ${theme.shadow.primaryButton};
+
+        &:hover {
+          background-color: ${theme.color.textSuccess()};
+          box-shadow: ${theme.shadow.primaryButton};
+        }
+
+        &:focus {
+          ${visibleFocus
+            ? css`
+                background-color: ${theme.color.elementSuccess()};
+                box-shadow: ${theme.shadow.primaryButton};
+                border: 2px solid ${theme.color.textSuccess()};
+              `
+            : undefined};
+        }
+
+        &:active {
+          background-color: ${theme.color.textSuccess()};
+          box-shadow: 0 0 0 4px ${theme.color.elementSuccess(opacity[24])};
+        }
+
+        &:disabled {
+          background-color: ${theme.color.elementSuccess()};
+        }
+      `
     } else if (accent) {
       return css`
         color: ${theme.color.elementPrimary()};
@@ -204,7 +266,7 @@ const LabelContainer = styled.span.attrs({ className: 'sc-LabelContainer' })<{
 type BaseElement = HTMLButtonElement
 type BaseProps = React.ButtonHTMLAttributes<BaseElement>
 type ButtonType = 'button' | 'submit' | 'reset'
-export type ButtonVariantType = 'primary' | 'secondary'
+export type ButtonVariantType = 'primary' | 'secondary' | 'danger' | 'success'
 export type ButtonClickHandler = React.MouseEventHandler<BaseElement>
 
 interface BaseButtonProps extends BaseProps {
@@ -337,7 +399,11 @@ const IconNativeButton = styled(NativeButton)<{
   padding: unset;
 
   ${({ variant, accent, visibleFocus, theme }) => {
-    if (variant === 'primary') {
+    if (
+      variant === 'primary' ||
+      variant === 'danger' ||
+      variant === 'success'
+    ) {
       return undefined
     } else if (accent) {
       return css`
@@ -502,46 +568,127 @@ export const IconButton = React.forwardRef<BaseElement, IconButtonProps>(
 
 export const NativeIconTextButton = styled.button<{
   readonly visibleFocus: boolean
+  readonly variant: Omit<ButtonVariantType, 'secondary'>
 }>`
   ${COMMON_STYLE}
   border: none;
   padding: 0 ${spacing.large} 0 0;
-  ${({ visibleFocus, theme }) => {
-    return css`
-      color: ${theme.color.text04()};
-      fill: ${theme.color.text04()};
-      background-color: transparent;
+  ${({ visibleFocus, variant, theme }) => {
+    if (variant === 'primary') {
+      return css`
+        color: ${theme.color.text04()};
+        fill: ${theme.color.text04()};
+        background-color: transparent;
 
-      &:hover {
-        color: ${theme.color.text03()};
-        background-color: ${theme.color.element11(opacity[16])};
-        ${IconContainer} {
-          background-color: ${theme.color.textPrimary()};
-        }
-      }
-      &:focus {
-        ${visibleFocus
-          ? css`
-              color: ${theme.color.text04()};
-              background-color: ${theme.color.element11(opacity[16])};
-            `
-          : undefined};
-      }
-      &:active {
-        box-shadow: 0 0 0 4px ${theme.color.elementPrimary(opacity[24])};
-        background-color: ${theme.color.element11(opacity[24])};
-      }
-      &:disabled {
-        opacity: ${opacity[48]};
-        cursor: default;
-        box-shadow: none;
         &:hover {
+          color: ${theme.color.text03()};
+          background-color: ${theme.color.element11(opacity[16])};
           ${IconContainer} {
-            background-color: ${theme.color.elementPrimary()};
+            background-color: ${theme.color.textPrimary()};
           }
         }
-      }
-    `
+        &:focus {
+          ${visibleFocus
+            ? css`
+                color: ${theme.color.text04()};
+                background-color: ${theme.color.element11(opacity[16])};
+              `
+            : undefined};
+        }
+        &:active {
+          box-shadow: 0 0 0 4px ${theme.color.elementPrimary(opacity[24])};
+          background-color: ${theme.color.element11(opacity[24])};
+        }
+        &:disabled {
+          opacity: ${opacity[48]};
+          cursor: default;
+          box-shadow: none;
+          &:hover {
+            ${IconContainer} {
+              background-color: ${theme.color.elementPrimary()};
+            }
+          }
+        }
+      `
+    } else if (variant === 'danger') {
+      return css`
+        color: ${theme.color.text04()};
+        fill: ${theme.color.text04()};
+        background-color: transparent;
+        ${IconContainer} {
+          background-color: ${theme.color.elementError()};
+        }
+
+        &:hover {
+          color: ${theme.color.text03()};
+          background-color: ${theme.color.element11(opacity[16])};
+          ${IconContainer} {
+            background-color: ${theme.color.textError()};
+          }
+        }
+        &:focus {
+          ${visibleFocus
+            ? css`
+                color: ${theme.color.text04()};
+                background-color: ${theme.color.element11(opacity[16])};
+              `
+            : undefined};
+        }
+        &:active {
+          box-shadow: 0 0 0 4px ${theme.color.elementError(opacity[24])};
+          background-color: ${theme.color.element11(opacity[24])};
+        }
+        &:disabled {
+          opacity: ${opacity[48]};
+          cursor: default;
+          box-shadow: none;
+          &:hover {
+            ${IconContainer} {
+              background-color: ${theme.color.elementError()};
+            }
+          }
+        }
+      `
+    } else if (variant === 'success') {
+      return css`
+        color: ${theme.color.text04()};
+        fill: ${theme.color.text04()};
+        background-color: transparent;
+        ${IconContainer} {
+          background-color: ${theme.color.elementSuccess()};
+        }
+
+        &:hover {
+          color: ${theme.color.text03()};
+          background-color: ${theme.color.element11(opacity[16])};
+          ${IconContainer} {
+            background-color: ${theme.color.textSuccess()};
+          }
+        }
+        &:focus {
+          ${visibleFocus
+            ? css`
+                color: ${theme.color.text04()};
+                background-color: ${theme.color.element11(opacity[16])};
+              `
+            : undefined};
+        }
+        &:active {
+          box-shadow: 0 0 0 4px ${theme.color.elementSuccess(opacity[24])};
+          background-color: ${theme.color.element11(opacity[24])};
+        }
+        &:disabled {
+          opacity: ${opacity[48]};
+          cursor: default;
+          box-shadow: none;
+          &:hover {
+            ${IconContainer} {
+              background-color: ${theme.color.elementSuccess()};
+            }
+          }
+        }
+      `
+    }
   }}
 `
 const IconContainer = styled(Icon)`
@@ -568,6 +715,7 @@ export interface IconTextButtonProps
    * The icon element.
    */
   readonly icon: IconType
+  readonly variant?: Omit<ButtonVariantType, 'secondary'>
 }
 
 // eslint-disable-next-line react/display-name
@@ -584,6 +732,7 @@ export const IconTextButton = React.forwardRef<
       onPointerUp,
       onFocus,
       label,
+      variant = 'primary',
       ...props
     },
     ref
@@ -624,6 +773,7 @@ export const IconTextButton = React.forwardRef<
         onFocus={handleFocus}
         {...props}
         visibleFocus={visibleFocus}
+        variant={variant}
       >
         <Container>
           <IconContainer icon={icon} />

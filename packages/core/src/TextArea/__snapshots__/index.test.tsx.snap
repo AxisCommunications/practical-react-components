@@ -83,7 +83,7 @@ exports[`TextAreas TextArea 1`] = `
 }
 
 .c2:focus-within .TextArea__ErrorLine-sc-5zgztr-2 {
-  background-color: rgb(211,47,47);
+  background-color: rgb(229,57,53);
 }
 
 .c2:focus-within .TextArea__ErrorLineContainter-sc-5zgztr-1 {

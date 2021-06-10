@@ -937,7 +937,7 @@ exports[`Select Other 1`] = `
 .c3:hover,
 .c3:focus {
   background-color: rgb(255,235,238);
-  border-color: rgb(211,47,47);
+  border-color: rgb(229,57,53);
 }
 
 .c10 {

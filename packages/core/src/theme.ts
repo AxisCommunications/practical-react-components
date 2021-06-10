@@ -64,6 +64,7 @@ export interface Color {
   readonly textLinkHover: CSSColor
   readonly textPrimary: CSSColor
   readonly textError: CSSColor
+  readonly textSuccess: CSSColor
   readonly background: CSSColor
   readonly background00: CSSColor
   readonly background01: CSSColor
@@ -180,7 +181,8 @@ const generateDefaultColors = (
     textLink: palette[`${color}600` as ColorName],
     textLinkHover: palette[`${color}700` as ColorName],
     textPrimary: palette[`${color}800` as ColorName],
-    textError: palette.red700,
+    textError: palette.red800,
+    textSuccess: palette.green800,
     background: palette.white,
     background00: palette.white,
     background01: palette.grey94,
@@ -200,8 +202,8 @@ const generateDefaultColors = (
     element16: palette.grey98,
     elementPrimary: palette[`${color}500` as ColorName],
     elementHalfPrimary: palette[`${color}600` as ColorName],
-    elementError: palette.red700,
-    elementSuccess: palette.green700,
+    elementError: palette.red600,
+    elementSuccess: palette.green600,
     elementWarning: palette.amber500,
     elementAccent: palette[`${color}500` as ColorName],
     elementBorder: palette.transparent,
