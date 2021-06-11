@@ -76,7 +76,7 @@ export const Code: React.FC<CodeProps> = ({
   const language = (cls?.replace(/language-/, '') ?? '') as Language
   const { themeName } = useContext(ThemeContext)
 
-  const theme = themeName === ThemeName.DEFAULT_THEME ? lightTheme : darkTheme
+  const theme = themeName === ThemeName.DEEP_PURPLE ? lightTheme : darkTheme
 
   const transformCode = useCallback((code: string) => {
     return `/** @jsx mdx */\n${code}`

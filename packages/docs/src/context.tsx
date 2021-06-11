@@ -1,17 +1,35 @@
 import React, { createContext, useMemo, useState } from 'react'
 import {
-  defaultTheme,
+  ColorBaseName,
+  generateDefaultTheme,
   PracticalProvider,
+  SimpleColorBaseName,
 } from 'practical-react-components-core'
 
-export const THEME_NAME = 'themePractical'
-
-export enum ThemeActionType {
-  'SWITCH_THEME',
-}
+export const THEME_NAME = 'themePractical:v1'
 
 export enum ThemeName {
-  'DEFAULT_THEME' = 'default_theme',
+  // SimpleColorBaseName
+  BROWN = 'brown',
+  GREY = 'grey',
+  BLUE_GREY = 'blueGrey',
+  // ColorBaseName
+  RED = 'red',
+  PINK = 'pink',
+  PURPLE = 'purple',
+  DEEP_PURPLE = 'deepPurple',
+  INDIGO = 'indigo',
+  BLUE = 'blue',
+  LIGHT_BLUE = 'lightBlue',
+  CYAN = 'cyan',
+  TEAL = 'teal',
+  GREEN = 'green',
+  LIGHT_GREEN = 'lightGreen',
+  LIME = 'lime',
+  YELLOW = 'yellow',
+  AMBER = 'amber',
+  ORANGE = 'orange',
+  DEEP_ORANGE = 'deepOrange',
 }
 
 export interface ThemeContextType {
@@ -24,7 +42,7 @@ export interface ThemeNameProvider {
 }
 
 export const ThemeContext = createContext<ThemeContextType>({
-  themeName: ThemeName.DEFAULT_THEME,
+  themeName: ThemeName.DEEP_PURPLE,
   setThemeName: () => {
     /** no-op */
   },
@@ -33,13 +51,15 @@ const { Provider } = ThemeContext
 
 export const ThemeProvider: React.FC<ThemeNameProvider> = ({
   children,
-  initialThemeName = ThemeName.DEFAULT_THEME,
+  initialThemeName = ThemeName.DEEP_PURPLE,
 }) => {
   const [themeName, setThemeName] = useState(initialThemeName)
 
   const selectedTheme = useMemo(() => {
-    return defaultTheme
-  }, [])
+    return generateDefaultTheme(
+      themeName as SimpleColorBaseName | ColorBaseName
+    )
+  }, [themeName])
 
   return (
     <Provider value={{ themeName, setThemeName }}>
