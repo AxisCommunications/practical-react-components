@@ -15,7 +15,13 @@ import { Licenses } from './Licenses'
 const THEME_OPTIONS: ReadonlyArray<{
   readonly value: ThemeName
   readonly label: string
-}> = [{ value: ThemeName.DEFAULT_THEME, label: 'Default theme' }]
+}> = Object.values(ThemeName).map(value => {
+  if (value === ThemeName.DEEP_PURPLE) {
+    return { value, label: `${value} (default)` }
+  }
+
+  return { value, label: value }
+})
 
 const HeaderContainer = styled.div`
   padding: ${spacing.medium};
@@ -24,6 +30,12 @@ const HeaderContainer = styled.div`
   grid-template-columns: 1fr auto auto;
   grid-gap: ${spacing.large};
   align-items: center;
+`
+
+const ThemeWrapper = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: ${spacing.medium};
 `
 
 export const Header = () => {
@@ -45,14 +57,18 @@ export const Header = () => {
         <Typography variant="page-heading">
           Practical react components
         </Typography>
-        <Select<ThemeName>
-          value={themeName}
-          options={THEME_OPTIONS}
-          onChange={onChange}
-          placeholder="Select..."
-          width="small"
-          direction="down"
-        />
+        <ThemeWrapper>
+          <Typography>Theme:</Typography>
+          <Select<ThemeName>
+            compact={true}
+            value={themeName}
+            options={THEME_OPTIONS}
+            onChange={onChange}
+            placeholder="Select..."
+            width="medium"
+            direction="down"
+          />
+        </ThemeWrapper>
         <IconButton
           icon={HelpIcon}
           onClick={openLicenses}
