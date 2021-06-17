@@ -48,6 +48,7 @@ exports[`Draggable Disabled 1`] = `
   position: absolute;
   right: 8px;
   background-color: transparent;
+  pointer-events: none;
 }
 
 .c5 > svg {
@@ -262,6 +263,7 @@ exports[`Draggable Variant 1`] = `
   position: absolute;
   right: 8px;
   background-color: transparent;
+  pointer-events: none;
 }
 
 .c5 > svg {
@@ -476,6 +478,7 @@ exports[`Draggable Variant 2`] = `
   position: absolute;
   right: 8px;
   background-color: transparent;
+  pointer-events: none;
 }
 
 .c5 > svg {
@@ -690,6 +693,7 @@ exports[`Draggable Width 1`] = `
   position: absolute;
   right: 8px;
   background-color: transparent;
+  pointer-events: none;
 }
 
 .c5 > svg {
@@ -904,6 +908,7 @@ exports[`Draggable Width 2`] = `
   position: absolute;
   right: 8px;
   background-color: transparent;
+  pointer-events: none;
 }
 
 .c5 > svg {
@@ -1118,6 +1123,7 @@ exports[`Draggable Width 3`] = `
   position: absolute;
   right: 8px;
   background-color: transparent;
+  pointer-events: none;
 }
 
 .c5 > svg {
@@ -1332,6 +1338,7 @@ exports[`Draggable Width 4`] = `
   position: absolute;
   right: 8px;
   background-color: transparent;
+  pointer-events: none;
 }
 
 .c5 > svg {

@@ -47,6 +47,7 @@ const IconContainer = styled.div`
   position: absolute;
   right: 8px;
   background-color: transparent;
+  pointer-events: none;
 
   > svg {
     width: 100%;
