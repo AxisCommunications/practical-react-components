@@ -18,6 +18,7 @@ import { Home } from './Home'
 import { Content } from './Content'
 
 import { Components } from './types'
+import { ThemeCreator } from './mdx/themeCreator/ThemeCreator'
 
 const practicalCoreModuleContext = require.context('./', true, /\.mdx$/)
 
@@ -108,6 +109,9 @@ ReactDOM.render(
                 <Switch>
                   <Route exact path="/">
                     <Home />
+                  </Route>
+                  <Route exact path="/theme-creator">
+                    <ThemeCreator />
                   </Route>
                   {componentDb.map(({ route, component: Component }) => (
                     <Route key={route} path={route}>
