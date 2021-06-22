@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.31.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.30.0...v0.31.0) (2021-06-03 12:39:44 +0200)
+## [v0.32.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.31.0...v0.32.0) (2021-06-22 16:44:27 +0200)
+
+### 🚀 Features
+
+  - **icons**:  add ir light, speed dry, wiper icons ([e5a6d0c](https://github.com/AxisCommunications/practical-react-components/commit/e5a6d0cbea8bcae6cf31530be0e53919488ff04e))
+
+### 🐛 Bug fixes
+
+  - **docs**:  Card example code corrected (#98) ([8a365c3](https://github.com/AxisCommunications/practical-react-components/commit/8a365c35f70356ab41d643d5348a5c27c574b09b))
+  - **docs**:  Several small issues fixed ([18c39f7](https://github.com/AxisCommunications/practical-react-components/commit/18c39f778b64fe6463a2f276146e9fa9dd60b34e))
+
+## [v0.31.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.30.0...v0.31.0) (2021-06-03 12:42:40 +0200)
 
 ### 🚀 Features
 
