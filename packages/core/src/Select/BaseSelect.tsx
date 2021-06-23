@@ -425,8 +425,9 @@ export function BaseSelect<V extends string = string>({
   const [isOpen, openPopover, closePopover, toggleOpen] = useBoolean(false)
   const [isKeyboard, setKeyboardOn, setKeyboardOff] = useBoolean(true)
 
-  const [popupAnchorEl, setPopupAnchorEl] =
-    useState<HTMLDivElement | null>(null)
+  const [popupAnchorEl, setPopupAnchorEl] = useState<HTMLDivElement | null>(
+    null
+  )
 
   const optionMap = useMemo(() => {
     return new Map(

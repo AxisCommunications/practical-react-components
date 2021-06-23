@@ -12,22 +12,22 @@
     "practical-react-components-core": "workspace:*"
   },
   "devDependencies": {
-    "@babel/cli": "7.14.3",
-    "@babel/core": "7.14.3",
-    "@babel/preset-env": "7.14.4",
-    "@babel/preset-react": "7.13.13",
-    "@babel/preset-typescript": "7.13.0",
+    "@babel/cli": "7.14.5",
+    "@babel/core": "7.14.6",
+    "@babel/preset-env": "7.14.7",
+    "@babel/preset-react": "7.14.5",
+    "@babel/preset-typescript": "7.14.5",
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
-    "@types/react": "17.0.9",
-    "@types/react-dom": "17.0.6",
-    "@types/styled-components": "5.1.9",
-    "core-js": "3.13.1",
-    "formik": "2.2.8",
+    "@types/react": "17.0.11",
+    "@types/react-dom": "17.0.8",
+    "@types/styled-components": "5.1.10",
+    "core-js": "3.15.1",
+    "formik": "2.2.9",
     "react": "17.0.2",
     "react-is": "17.0.2",
     "styled-components": "5.3.0",
-    "typescript": "4.2.4"
+    "typescript": "4.3.4"
   },
   "peerDependencies": {
     "formik": "^2.1.4",

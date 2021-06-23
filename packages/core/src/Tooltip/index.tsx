@@ -164,8 +164,9 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
 
   const [debouncedVisible, setDebouncedVisible] = useState(visible)
   const [hasOverflow, setHasOverflow] = useState(false)
-  const [horizontalLayout, setHorizontalLayout] =
-    useState<'left' | 'right' | 'center'>('center')
+  const [horizontalLayout, setHorizontalLayout] = useState<
+    'left' | 'right' | 'center'
+  >('center')
   const [tooltipEl, setTooltipEl] = useState<HTMLDivElement | null>(null)
 
   useEffect(() => {
