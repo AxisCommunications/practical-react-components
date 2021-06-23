@@ -1,0 +1,10 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'music note (filled)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path
+        d="M16 4v10.55A3.991 3.991 0 1018 18V8h4V4zM2.7 16a.7.7 0 01-.674-.89 11.6 11.6 0 012.563-4.49 11.768 11.768 0 014.479-2.587.7.7 0 11.393 1.344 10.5 10.5 0 00-3.88 2.232 10.324 10.324 0 00-2.207 3.883A.7.7 0 012.7 16zM5.842 16.233a.7.7 0 01-.657-.941 8.419 8.419 0 011.448-2.431A7.778 7.778 0 019.1 11.189a.7.7 0 11.534 1.294A6.42 6.42 0 007.671 13.8 7.071 7.071 0 006.5 15.776a.7.7 0 01-.658.457z" />
+</svg>
