@@ -1,4 +1,4 @@
-Package: core-js (3.13.1)
+Package: core-js (3.15.1)
 Web:     
 License: MIT
 
@@ -26,7 +26,7 @@ THE SOFTWARE.
                        ====================
 
 
-Package: regenerator-runtime (0.13.8)
+Package: regenerator-runtime (0.13.7)
 Web:     
 License: MIT
 
@@ -531,7 +531,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-hooks-shareable (1.29.0)
+Package: react-hooks-shareable (1.30.0)
 Web:     https://github.com/AxisCommunications/react-hooks-shareable
 License: MIT
 
@@ -835,7 +835,7 @@ SOFTWARE.
                        ====================
 
 
-Package: focus-trap-react (8.5.0)
+Package: focus-trap-react (8.6.0)
 Web:     https://github.com/focus-trap/focus-trap-react#readme
 License: MIT
 
@@ -1218,7 +1218,7 @@ SOFTWARE.
                        ====================
 
 
-Package: formik (2.2.8)
+Package: formik (2.2.9)
 Web:     https://formik.org
 License: Apache-2.0
 
@@ -1573,7 +1573,7 @@ SOFTWARE.
                        ====================
 
 
-Package: focus-trap (6.4.0)
+Package: focus-trap (6.5.1)
 Web:     https://github.com/focus-trap/focus-trap#readme
 License: MIT
 
