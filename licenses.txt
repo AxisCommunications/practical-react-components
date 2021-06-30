@@ -1,4 +1,4 @@
-Package: core-js (3.15.1)
+Package: core-js (3.15.2)
 Web:     
 License: MIT
 
@@ -443,7 +443,7 @@ License: MIT
                        ====================
 
 
-Package: style-loader (2.0.0)
+Package: style-loader (3.0.0)
 Web:     https://github.com/webpack-contrib/style-loader
 License: MIT
 
@@ -531,7 +531,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-hooks-shareable (1.30.0)
+Package: react-hooks-shareable (1.31.0)
 Web:     https://github.com/AxisCommunications/react-hooks-shareable
 License: MIT
 
