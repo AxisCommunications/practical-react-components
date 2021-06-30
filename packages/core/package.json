@@ -13,7 +13,7 @@
     "focus-trap-react": "8.6.0",
     "no-scroll": "2.1.1",
     "practical-react-components-icons": "workspace:*",
-    "react-hooks-shareable": "1.30.0"
+    "react-hooks-shareable": "1.31.0"
   },
   "devDependencies": {
     "@babel/cli": "7.14.5",
@@ -30,7 +30,7 @@
     "@types/react-transition-group": "4.4.1",
     "@types/styled-components": "5.1.10",
     "@types/yup": "0.29.11",
-    "core-js": "3.15.1",
+    "core-js": "3.15.2",
     "jest-styled-components": "7.0.4",
     "pepjs": "0.5.3",
     "prop-types": "15.7.2",
