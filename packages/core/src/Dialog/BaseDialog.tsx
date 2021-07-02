@@ -41,7 +41,7 @@ const Container = styled.div<{ readonly width: DialogWidth }>`
   background-color: ${({ theme }) => theme.color.background00()};
 `
 
-const Header = styled.div`
+export const DialogHeader = styled.div`
   display: flex;
   flex: none;
   z-index: 1;
@@ -49,7 +49,7 @@ const Header = styled.div`
   max-height: 96px;
 `
 
-const Content = styled.div`
+export const DialogContent = styled.div`
   box-sizing: border-box;
   flex-grow: 1;
   flex-shrink: 1;
@@ -61,7 +61,7 @@ const Content = styled.div`
   overflow: auto;
 `
 
-const Footer = styled.div`
+export const DialogFooter = styled.div`
   height: ${BOTTOM_HEIGHT};
   display: flex;
   flex: none;
@@ -98,9 +98,9 @@ export const BaseDialog: React.FC<BaseDialogProps> = ({
   <Modal {...modalProps}>
     <Paper>
       <Container width={width}>
-        {header !== null ? <Header>{header}</Header> : null}
-        <Content>{children}</Content>
-        <Footer>{footer}</Footer>
+        {header !== null ? <DialogHeader>{header}</DialogHeader> : null}
+        <DialogContent>{children}</DialogContent>
+        <DialogFooter>{footer}</DialogFooter>
       </Container>
     </Paper>
   </Modal>
