@@ -3,7 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.34.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.33.0...v0.34.0) (2021-06-30 11:56:48 +0200)
+## [v0.35.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.34.0...v0.35.0) (2021-07-05 09:30:08 +0200)
+
+### 🚀 Features
+
+  - **icons**:  add fan, heater icons ([54bf56a](https://github.com/AxisCommunications/practical-react-components/commit/54bf56aae4eb8862a671764d0052d3a63d085e54))
+  - **dialog**:  export components from the `BaseDialog` ([27c545b](https://github.com/AxisCommunications/practical-react-components/commit/27c545be365a71b213cdb56a73c338ce61bb32dc))
+
+## [v0.34.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.33.0...v0.34.0) (2021-06-30 12:04:17 +0200)
 
 ### 🚀 Features
 
