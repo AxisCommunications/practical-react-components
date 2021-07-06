@@ -1,7 +1,7 @@
 {
   "name": "practical-react-components-docs",
   "private": true,
-  "version": "0.35.0",
+  "version": "0.36.0",
   "license": "MIT",
   "scripts": {
     "props": "cross-env TS_NODE_PROJECT=\"tsconfig.webpack.json\" ts-node scripts/docs-props-gen.ts --source ../core/src/index.ts --source ../formik/src/index.ts --dest src --tsconfig tsconfig.json",
