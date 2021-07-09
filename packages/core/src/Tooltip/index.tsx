@@ -36,7 +36,7 @@ const BaseTooltipWrapper = styled.div`
 const TooltipWrapper = styled(BaseTooltipWrapper)`
   align-items: center;
 
-  margin-top: ${spacing.small};
+  margin: ${spacing.small};
   padding: ${spacing.small} ${spacing.medium};
 
   min-height: ${componentSize.mini};
@@ -64,7 +64,7 @@ const ExpandedTooltipWrapper = styled(BaseTooltipWrapper)`
   align-items: flex-start;
   gap: ${spacing.medium};
 
-  margin: ${spacing.medium} ${spacing.small};
+  margin: ${spacing.medium};
   padding: ${spacing.medium};
 
   height: auto;
@@ -91,6 +91,7 @@ const ExpandedTooltipTitle = styled(Typography).attrs({
   variant: 'chip-tag-text',
 })`
   font-weight: ${font.fontWeight.semibold};
+  white-space: nowrap;
 `
 
 const ExpandedTooltipExtraInfo = styled(Typography).attrs({
@@ -109,22 +110,97 @@ export const ExpandedTooltipTypography: React.FC<
   <StyledExpandedTooltipTypography>{children}</StyledExpandedTooltipTypography>
 )
 
-const ToolTipUpArrow = styled.div`
+const upDownArrowBase = css`
   width: 0;
   height: 0;
-  margin: 3px ${spacing.medium} 0 ${spacing.medium};
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
+`
+const TooltipUpArrow = styled.div`
+  ${upDownArrowBase};
+  margin-top: 3px;
   border-bottom: 5px solid ${({ theme }) => theme.color.background00()};
 `
-const ToolTipDownArrow = styled.div`
-  width: 0;
-  height: 0;
-  margin: 0 ${spacing.medium} 3px ${spacing.medium};
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
+const TooltipDownArrow = styled.div`
+  ${upDownArrowBase};
+  margin-bottom: 3px;
   border-top: 5px solid ${({ theme }) => theme.color.background00()};
 `
+
+const leftRightArrowBase = css`
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+`
+const TooltipLeftArrow = styled.div`
+  ${leftRightArrowBase};
+  margin-left: 3px;
+  border-right: 5px solid ${({ theme }) => theme.color.background00()};
+`
+const TooltipRightArrow = styled.div`
+  ${leftRightArrowBase};
+  margin-right: 3px;
+  border-left: 5px solid ${({ theme }) => theme.color.background00()};
+`
+
+type Placement = 'up' | 'right' | 'down' | 'left'
+
+const pointInBounds = (pos: readonly [number, number]) =>
+  pos[0] >= 0 &&
+  pos[0] <= document.documentElement.clientWidth &&
+  pos[1] >= 0 &&
+  pos[1] <= document.documentElement.clientHeight
+
+const rectInBounds = (
+  pos: readonly [number, number],
+  size: readonly [number, number]
+) => pointInBounds(pos) && pointInBounds([pos[0] + size[0], pos[1] + size[1]])
+
+const alignments: Record<
+  Placement,
+  Required<
+    Pick<
+      PopOverProps,
+      | 'horizontalPosition'
+      | 'horizontalAlignment'
+      | 'verticalPosition'
+      | 'verticalAlignment'
+    >
+  >
+> = {
+  up: {
+    horizontalPosition: 'center',
+    horizontalAlignment: 'center',
+    verticalPosition: 'top',
+    verticalAlignment: 'bottom',
+  },
+  down: {
+    horizontalPosition: 'center',
+    horizontalAlignment: 'center',
+    verticalPosition: 'bottom',
+    verticalAlignment: 'top',
+  },
+  left: {
+    horizontalPosition: 'left',
+    horizontalAlignment: 'right',
+    verticalPosition: 'center',
+    verticalAlignment: 'center',
+  },
+  right: {
+    horizontalPosition: 'right',
+    horizontalAlignment: 'left',
+    verticalPosition: 'center',
+    verticalAlignment: 'center',
+  },
+}
+
+const arrows: Record<Placement, ReactElement> = {
+  left: <TooltipRightArrow />,
+  right: <TooltipLeftArrow />,
+  up: <TooltipDownArrow />,
+  down: <TooltipUpArrow />,
+}
 
 interface TooltipProps extends Omit<PopOverProps, 'anchorEl'> {
   /**
@@ -144,6 +220,11 @@ interface ExpandedTooltipProps extends Omit<PopOverProps, 'anchorEl'> {
    */
   readonly variant: 'expanded'
   /**
+   * Optional placement.
+   * Default: `up-down`
+   */
+  readonly placement?: 'up-down' | 'left-right'
+  /**
    * Optional semibold title text inside the tooltip.
    */
   readonly tipTitle?: string
@@ -162,16 +243,14 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
   children,
   ...props
 }) => {
+  const placement =
+    (props.variant === 'expanded' ? props.placement : undefined) ?? 'up-down'
   const child = Children.only(children) as ReactElement
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 
   const [visible, show, hide] = useBoolean(false)
-
   const [debouncedVisible, setDebouncedVisible] = useState(visible)
-  const [hasOverflow, setHasOverflow] = useState(false)
-  const [horizontalLayout, setHorizontalLayout] = useState<
-    'left' | 'right' | 'center'
-  >('center')
+  const [layout, setLayout] = useState<Placement>('down')
   const [tooltipEl, setTooltipEl] = useState<HTMLDivElement | null>(null)
 
   useEffect(() => {
@@ -199,20 +278,51 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
       return
     }
 
-    const { bottom } = anchorEl.getBoundingClientRect()
+    const bounds = anchorEl.getBoundingClientRect()
 
-    const bottomSpace = document.documentElement.clientHeight - bottom
-    // See if `bottomSpace` is smaller than Tooltip height.
-    // "8" is margin of the TooltipWrapper.
-    setHasOverflow(tooltipEl.clientHeight + 8 > bottomSpace)
+    // "16" is for space of margin of ExpandedTooltipWrapper + arrow size.
+    const tooltipSize: [number, number] = [
+      tooltipEl.clientWidth + 16,
+      tooltipEl.clientHeight + 16,
+    ]
+    const tooltipMid = [
+      bounds.left + (bounds.right - bounds.left) / 2,
+      bounds.top + (bounds.bottom - bounds.top) / 2,
+    ]
 
-    const { left, right } = tooltipEl.getBoundingClientRect()
-    if (left < 0) {
-      setHorizontalLayout('left')
-    } else if (right > document.documentElement.clientWidth) {
-      setHorizontalLayout('right')
+    const spaces: Record<Placement, boolean> = {
+      down: rectInBounds(
+        [tooltipMid[0] - tooltipSize[0] / 2, bounds.bottom],
+        tooltipSize
+      ),
+      up: rectInBounds(
+        [tooltipMid[0] - tooltipSize[0] / 2, bounds.top - tooltipSize[1]],
+        tooltipSize
+      ),
+      left: rectInBounds(
+        [bounds.left - tooltipSize[0], tooltipMid[1] - tooltipSize[1] / 2],
+        tooltipSize
+      ),
+      right: rectInBounds(
+        [bounds.right, tooltipMid[1] - tooltipSize[1] / 2],
+        tooltipSize
+      ),
     }
-  }, [anchorEl, tooltipEl])
+
+    if (placement === 'up-down') {
+      if (spaces.up || spaces.down) {
+        setLayout(spaces.down ? 'down' : 'up')
+      } else {
+        setLayout(spaces.right ? 'right' : 'left')
+      }
+    } else if (placement === 'left-right') {
+      if (spaces.right || spaces.left) {
+        setLayout(spaces.right ? 'right' : 'left')
+      } else {
+        setLayout(spaces.up ? 'up' : 'down')
+      }
+    }
+  }, [anchorEl, tooltipEl, props, placement])
 
   if (props.variant !== 'expanded') {
     return (
@@ -221,14 +331,7 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
           ref: setAnchorEl,
         })}
         {debouncedVisible ? (
-          <PopOver
-            anchorEl={anchorEl}
-            horizontalPosition={horizontalLayout}
-            horizontalAlignment={horizontalLayout}
-            verticalPosition={hasOverflow ? 'top' : 'bottom'}
-            verticalAlignment={hasOverflow ? 'bottom' : 'top'}
-            {...props}
-          >
+          <PopOver anchorEl={anchorEl} {...alignments[layout]} {...props}>
             <TooltipWrapper ref={setTooltipEl}>
               <Typography variant="chip-tag-text">{props.text}</Typography>
             </TooltipWrapper>
@@ -238,6 +341,8 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
     )
   }
 
+  const { tipTitle, extraInfo, contents } = props
+
   return (
     <>
       {React.cloneElement(child, {
@@ -245,40 +350,25 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
       })}
       {debouncedVisible ? (
         <>
-          <PopOver
-            anchorEl={anchorEl}
-            horizontalPosition={horizontalLayout}
-            horizontalAlignment={horizontalLayout}
-            verticalPosition={hasOverflow ? 'top' : 'bottom'}
-            verticalAlignment={hasOverflow ? 'bottom' : 'top'}
-            {...props}
-          >
+          <PopOver anchorEl={anchorEl} {...alignments[layout]} {...props}>
             <ExpandedTooltipWrapper ref={setTooltipEl}>
-              {props.tipTitle !== undefined || props.extraInfo !== undefined ? (
-                props.extraInfo !== undefined ? (
+              {tipTitle !== undefined || extraInfo !== undefined ? (
+                extraInfo !== undefined ? (
                   <ExpandedTooltipTop>
-                    <ExpandedTooltipTitle>
-                      {props.tipTitle}
-                    </ExpandedTooltipTitle>
+                    <ExpandedTooltipTitle>{tipTitle}</ExpandedTooltipTitle>
                     <ExpandedTooltipExtraInfo>
-                      {props.extraInfo}
+                      {extraInfo}
                     </ExpandedTooltipExtraInfo>
                   </ExpandedTooltipTop>
                 ) : (
-                  <ExpandedTooltipTitle>{props.tipTitle}</ExpandedTooltipTitle>
+                  <ExpandedTooltipTitle>{tipTitle}</ExpandedTooltipTitle>
                 )
               ) : null}
-              {props.contents}
+              {contents}
             </ExpandedTooltipWrapper>
           </PopOver>
-          <PopOver
-            anchorEl={anchorEl}
-            horizontalPosition="center"
-            horizontalAlignment="center"
-            verticalPosition={hasOverflow ? 'top' : 'bottom'}
-            verticalAlignment={hasOverflow ? 'bottom' : 'top'}
-          >
-            {hasOverflow ? <ToolTipDownArrow /> : <ToolTipUpArrow />}
+          <PopOver anchorEl={anchorEl} {...alignments[layout]}>
+            {arrows[layout]}
           </PopOver>
         </>
       ) : null}

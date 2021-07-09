@@ -15,25 +15,22 @@ export const meta = {
 
 const TopWrapper = styled.div`
   display: inline-grid;
-  grid-template-columns: auto 1fr;
-  max-width: 400px;
+  grid-template-columns: auto auto auto;
   grid-gap: 16px;
 `
 
 const BottomWrapper = styled(TopWrapper)`
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 8px;
+  right: 8px;
 `
 
 const Test = () => {
   return (
     <>
       <TopWrapper>
-        <Tooltip text="Tooltip top" data-cy="defaultTooltipTop">
-          <Typography variant="default-text" data-cy="defaultTooltipTopText">
-            Default top
-          </Typography>
+        <Tooltip text="Tooltip top - default" data-cy="defaultTooltipTop">
+          <Typography data-cy="defaultTooltipTopText">Default top</Typography>
         </Tooltip>
         <Tooltip
           tipTitle="Tooltip titile"
@@ -47,15 +44,47 @@ const Test = () => {
           variant="expanded"
           data-cy="expandedTooltipTop"
         >
-          <Typography variant="default-text" data-cy="expandedTooltipTopText">
-            Expanded top
+          <Typography data-cy="expandedTooltipTopText">Expanded top</Typography>
+        </Tooltip>
+        <Tooltip
+          tipTitle="Tooltip titile"
+          contents={
+            <ExpandedTooltipTypography>
+              LeftRight Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Vestibulum consequat ante pulvinar ligula fermentum, sit amet
+              maximus sapien iaculis.
+            </ExpandedTooltipTypography>
+          }
+          variant="expanded"
+          placement="left-right"
+          data-cy="expandedTooltipTopLeftRight"
+        >
+          <Typography data-cy="expandedTooltipTopLeftRightText">
+            Expanded top(left-right)
           </Typography>
         </Tooltip>
       </TopWrapper>
       <BottomWrapper>
-        <Tooltip text="Tooltip bottom" data-cy="defaultTooltipBottom">
-          <Typography variant="default-text" data-cy="defaultTooltipBottomText">
+        <Tooltip text="Tooltip bottom - default" data-cy="defaultTooltipBottom">
+          <Typography data-cy="defaultTooltipBottomText">
             Default bottom
+          </Typography>
+        </Tooltip>
+        <Tooltip
+          tipTitle="Tooltip titile"
+          contents={
+            <ExpandedTooltipTypography>
+              LeftRight Nulla rutrum pulvinar urna, sed aliquet tortor pharetra
+              id. Sed mattis augue ut libero volutpat, quis rhoncus nibh
+              lacinia.
+            </ExpandedTooltipTypography>
+          }
+          variant="expanded"
+          placement="left-right"
+          data-cy="expandedTooltipBottomLeftRight"
+        >
+          <Typography data-cy="expandedTooltipBottomLeftRightText">
+            Expanded bottom(left-right)
           </Typography>
         </Tooltip>
         <Tooltip
@@ -69,10 +98,7 @@ const Test = () => {
           variant="expanded"
           data-cy="expandedTooltipBottom"
         >
-          <Typography
-            variant="default-text"
-            data-cy="expandedTooltipBottomText"
-          >
+          <Typography data-cy="expandedTooltipBottomText">
             Expanded bottom
           </Typography>
         </Tooltip>
