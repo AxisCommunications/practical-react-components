@@ -46,6 +46,7 @@ const TooltipWrapper = styled(BaseTooltipWrapper)`
 const ExpandedTooltipWrapper = styled(BaseTooltipWrapper)`
   flex-direction: column;
   align-items: flex-start;
+  gap: ${spacing.medium};
 
   margin: ${spacing.medium} ${spacing.small};
   padding: ${spacing.medium};
@@ -77,20 +78,18 @@ const ExpandedTooltipTop = styled.div`
   justify-content: space-between;
   width: 100%;
   white-space: nowrap;
+  gap: ${spacing.medium};
 `
 
 const ExpandedTooltipTitle = styled(Typography).attrs({
   variant: 'chip-tag-text',
 })`
   font-weight: ${font.fontWeight.semibold};
-  margin-bottom: ${spacing.medium};
 `
 
 const ExpandedTooltipExtraInfo = styled(Typography).attrs({
   variant: 'compact-label',
-})`
-  margin-bottom: ${spacing.medium};
-`
+})``
 
 const StyledExpandedTooltipTypography = styled(Typography).attrs({
   variant: 'chip-tag-text',
@@ -139,9 +138,9 @@ interface ExpandedTooltipProps extends Omit<PopOverProps, 'anchorEl'> {
    */
   readonly variant: 'expanded'
   /**
-   * semibold title text inside the tooltip.
+   * Optional semibold title text inside the tooltip.
    */
-  readonly tipTitle: string
+  readonly tipTitle?: string
   /**
    * Optional extra info shown in the right corner.
    */
@@ -249,16 +248,20 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
             {...props}
           >
             <ExpandedTooltipWrapper ref={setTooltipEl}>
-              {props.extraInfo !== undefined ? (
-                <ExpandedTooltipTop>
+              {props.tipTitle !== undefined || props.extraInfo !== undefined ? (
+                props.extraInfo !== undefined ? (
+                  <ExpandedTooltipTop>
+                    <ExpandedTooltipTitle>
+                      {props.tipTitle}
+                    </ExpandedTooltipTitle>
+                    <ExpandedTooltipExtraInfo>
+                      {props.extraInfo}
+                    </ExpandedTooltipExtraInfo>
+                  </ExpandedTooltipTop>
+                ) : (
                   <ExpandedTooltipTitle>{props.tipTitle}</ExpandedTooltipTitle>
-                  <ExpandedTooltipExtraInfo>
-                    {props.extraInfo}
-                  </ExpandedTooltipExtraInfo>
-                </ExpandedTooltipTop>
-              ) : (
-                <ExpandedTooltipTitle>{props.tipTitle}</ExpandedTooltipTitle>
-              )}
+                )
+              ) : null}
               {props.contents}
             </ExpandedTooltipWrapper>
           </PopOver>
