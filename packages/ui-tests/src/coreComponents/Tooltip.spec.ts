@@ -18,11 +18,23 @@ context('Tooltip', () => {
       tooltipText:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat ante pulvinar ligula fermentum, sit amet maximus sapien iaculis.',
     },
+    {
+      textDataCy: 'expandedTooltipTopLeftRightText',
+      tooltipDataCy: 'expandedTooltipTopLeftRight',
+      tooltipText:
+        'LeftRight Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat ante pulvinar ligula fermentum, sit amet maximus sapien iaculis.',
+    },
     // Inside bottom wrapper
     {
       textDataCy: 'defaultTooltipBottomText',
       tooltipDataCy: 'defaultTooltipBottom',
       tooltipText: 'Tooltip bottom',
+    },
+    {
+      textDataCy: 'expandedTooltipBottomLeftRightText',
+      tooltipDataCy: 'expandedTooltipBottomLeftRight',
+      tooltipText:
+        'LeftRight Nulla rutrum pulvinar urna, sed aliquet tortor pharetra id. Sed mattis augue ut libero volutpat, quis rhoncus nibh lacinia.',
     },
     {
       textDataCy: 'expandedTooltipBottomText',
