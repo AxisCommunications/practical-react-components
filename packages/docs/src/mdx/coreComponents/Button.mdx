@@ -10,8 +10,9 @@ import {
   Button,
   IconTextButton,
   IconButton,
+  SpaceBlock,
 } from 'practical-react-components-core'
-import { AddIcon } from 'practical-react-components-icons'
+import { AddIcon, CloseIcon, CheckIcon } from 'practical-react-components-icons'
 
 # Button
 
@@ -30,14 +31,31 @@ export const Wrapper = styled.div`
 <Wrapper>
   <Button label="Primary" />
   <Button label="Primary" icon={AddIcon} />
+  <IconButton icon={AddIcon} />
+  <IconTextButton icon={AddIcon} label="Primary" />
+</Wrapper>
+<SpaceBlock variant={16} />
+<Wrapper>
   <Button label="Secondary" variant="secondary" />
   <Button label="Secondary" variant="secondary" icon={AddIcon} />
   <Button label="Secondary" variant="secondary" accent={true} />
   <Button label="Secondary" variant="secondary" icon={AddIcon} accent={true} />
-  <IconTextButton icon={AddIcon} label="Secondary" />
-  <IconButton icon={AddIcon} />
   <IconButton icon={AddIcon} variant="secondary" />
   <IconButton icon={AddIcon} variant="secondary" accent={true} />
+</Wrapper>
+<SpaceBlock variant={16} />
+<Wrapper>
+  <Button label="Danger" variant="danger" />
+  <Button label="Danger" variant="danger" icon={CloseIcon} />
+  <IconButton icon={CloseIcon} variant="danger" />
+  <IconTextButton label="Danger" icon={CloseIcon} variant="danger" />
+</Wrapper>
+<SpaceBlock variant={16} />
+<Wrapper>
+  <Button label="Success" variant="success" />
+  <Button label="Success" variant="success" icon={CheckIcon} />
+  <IconButton icon={CheckIcon} variant="success" />
+  <IconTextButton label="Success" icon={CheckIcon} variant="success" />
 </Wrapper>
 
 ## Basic usage
@@ -56,6 +74,22 @@ A button without background color by default.
 
 ```typescript type=live
 <Button label="Secondary" variant="secondary" />
+```
+
+### Danger button
+
+A button with an error style to represent dangerous actions. Eg: Delete user.
+
+```typescript type=live
+<Button label="Danger" variant="danger" />
+```
+
+### Success button
+
+A button with a success style to reperesent a positive action.
+
+```typescript type=live
+<Button label="Success" variant="success" />
 ```
 
 ### Clickable icon: Primary

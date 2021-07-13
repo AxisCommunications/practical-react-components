@@ -1657,7 +1657,7 @@ exports[`RadioButtons RadioButtonGroup 2`] = `
   position: absolute;
   top: 0;
   fill: transparent;
-  stroke: rgb(211,47,47);
+  stroke: rgb(229,57,53);
 }
 
 .c9 {
