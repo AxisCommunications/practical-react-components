@@ -3,7 +3,21 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.36.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.35.0...v0.36.0) (2021-07-06 11:18:07 +0200)
+## [v0.37.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.36.0...v0.37.0) (2021-07-12 21:13:56 +0200)
+
+### 🚀 Features
+
+  - **icons**:  adds block icon ([cc8bf7a](https://github.com/AxisCommunications/practical-react-components/commit/cc8bf7a28b27961f546913f6cbaeb75037f3319a))
+
+### 🐛 Bug fixes
+
+  - **tooltip**:  place title vertically in the middle when using only title ([850bb3e](https://github.com/AxisCommunications/practical-react-components/commit/850bb3e95df2adcad738404742ee41eabb2dce35))
+
+### 📝 Documentation
+
+  -  add ALL themes to docs page ([bc272a8](https://github.com/AxisCommunications/practical-react-components/commit/bc272a847e0c2ad963864ccd7275303dc13ce222))
+
+## [v0.36.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.35.0...v0.36.0) (2021-07-06 11:34:43 +0200)
 
 ### 🚧 Maintenance
 
