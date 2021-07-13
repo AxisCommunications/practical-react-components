@@ -16,7 +16,7 @@ exports[`Tables Table (full) 1`] = `
   border-bottom: 1px solid rgb(230,230,230);
 }
 
-.c17 {
+.c16 {
   display: grid;
   overflow-y: auto;
   overflow-x: hidden;
@@ -25,7 +25,7 @@ exports[`Tables Table (full) 1`] = `
   z-index: 0;
 }
 
-.c16 {
+.c15 {
   font-family: Open Sans,Helvetica,arial,sans-serif;
   font-size: 13px;
   line-height: 22px;
@@ -86,12 +86,6 @@ exports[`Tables Table (full) 1`] = `
   transform: scale(1.77);
 }
 
-.c8:focus-within .Checkbox__CSSBlankCheckbox-sc-1pw2164-6,
-.c8:focus-within .c11,
-.c8:focus-within .Checkbox__CSSCheckboxIndeterminate-sc-1pw2164-5 {
-  border: 2px solid rgb(69,39,160);
-}
-
 .c8:active .c9 {
   background-color: rgba(103,58,183,0.24);
   -webkit-transform: scale(1.88);
@@ -99,12 +93,7 @@ exports[`Tables Table (full) 1`] = `
   transform: scale(1.88);
 }
 
-.c8:active .c11,
-.c8:active .Checkbox__CSSCheckboxIndeterminate-sc-1pw2164-5 {
-  background-color: rgb(69,39,160);
-}
-
-.c14 {
+.c13 {
   position: absolute;
   top: 0;
   left: 0;
@@ -117,7 +106,7 @@ exports[`Tables Table (full) 1`] = `
   opacity: 0;
 }
 
-.c12 {
+.c11 {
   width: 18px;
   height: 18px;
   border-radius: 2px;
@@ -138,11 +127,11 @@ exports[`Tables Table (full) 1`] = `
   position: absolute;
 }
 
-.c13 {
+.c12 {
   background-color: rgb(103,58,183);
 }
 
-.c13::after {
+.c12::after {
   content: '';
   width: 5px;
   height: 10px;
@@ -201,7 +190,7 @@ exports[`Tables Table (full) 1`] = `
   overflow: visible;
 }
 
-.c15 {
+.c14 {
   z-index: 1;
   grid-column-start: content-start;
   grid-column-end: end;
@@ -213,7 +202,7 @@ exports[`Tables Table (full) 1`] = `
   grid-template-rows: 48px;
 }
 
-.c19 {
+.c18 {
   position: fixed;
   top: 0;
   width: 360px;
@@ -231,7 +220,7 @@ exports[`Tables Table (full) 1`] = `
   z-index: 0;
 }
 
-.c18 {
+.c17 {
   position: absolute;
   z-index: 1;
 }
@@ -271,11 +260,11 @@ exports[`Tables Table (full) 1`] = `
                   className="c9 c10"
                 />
                 <div
-                  className="c11 c12 c13"
+                  className="c11 c12"
                 />
                 <input
                   checked={true}
-                  className="c14"
+                  className="c13"
                   disabled={false}
                   onChange={[Function]}
                   onFocus={[Function]}
@@ -286,11 +275,11 @@ exports[`Tables Table (full) 1`] = `
               </div>
             </div>
             <div
-              className="c5 c15"
+              className="c5 c14"
             >
               <div>
                 <p
-                  className="c16"
+                  className="c15"
                 >
                   Actions overlay
                 </p>
@@ -299,7 +288,7 @@ exports[`Tables Table (full) 1`] = `
           </div>
         </div>
         <div
-          className="c17"
+          className="c16"
           style={
             Object {
               "maxHeight": "336px",
@@ -313,11 +302,11 @@ exports[`Tables Table (full) 1`] = `
   </div>
   <div>
     <div
-      className="c18"
+      className="c17"
       id="layer-4"
     >
       <div
-        className="c19"
+        className="c18"
       />
     </div>
   </div>
