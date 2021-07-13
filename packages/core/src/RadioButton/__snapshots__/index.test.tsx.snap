@@ -134,11 +134,6 @@ exports[`RadioButtons RadioButton 1`] = `
   stroke: rgb(61,61,61);
 }
 
-.c2:active .RadioButton__SvgDot-sc-1m0c1id-4 {
-  fill: rgb(69,39,160);
-  stroke: rgb(69,39,160);
-}
-
 .c13 {
   position: fixed;
   top: 0;
@@ -1032,11 +1027,6 @@ exports[`RadioButtons RadioButton 4`] = `
 
 .c2:active .c7 {
   stroke: rgb(61,61,61);
-}
-
-.c2:active .c17 {
-  fill: rgb(69,39,160);
-  stroke: rgb(69,39,160);
 }
 
 .c13 {
@@ -2108,43 +2098,8 @@ exports[`RadioButtons RadioIconButton 1`] = `
   max-width: 100%;
 }
 
-.c2:hover .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(204,204,204,0.16);
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
-  transform: scale(1.6);
-}
-
 .c2:focus-within {
   outline: none;
-}
-
-.c2:focus-within .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(204,204,204,0.16);
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
-  transform: scale(1.6);
-}
-
-.c2:focus-within .RadioButton__SvgRing-sc-1m0c1id-3 {
-  outline: none;
-  stroke: rgb(69,39,160);
-}
-
-.c2:active .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(204,204,204,0.24);
-  -webkit-transform: scale(1.7);
-  -ms-transform: scale(1.7);
-  transform: scale(1.7);
-}
-
-.c2:active .RadioButton__SvgRing-sc-1m0c1id-3 {
-  stroke: rgb(61,61,61);
-}
-
-.c2:active .RadioButton__SvgDot-sc-1m0c1id-4 {
-  fill: rgb(69,39,160);
-  stroke: rgb(69,39,160);
 }
 
 .c6 {
@@ -2383,43 +2338,8 @@ exports[`RadioButtons RadioIconButton 2`] = `
   max-width: 100%;
 }
 
-.c2:hover .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(103,58,183,0.16);
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
-  transform: scale(1.6);
-}
-
 .c2:focus-within {
   outline: none;
-}
-
-.c2:focus-within .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(103,58,183,0.16);
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
-  transform: scale(1.6);
-}
-
-.c2:focus-within .RadioButton__SvgRing-sc-1m0c1id-3 {
-  outline: none;
-  stroke: rgb(69,39,160);
-}
-
-.c2:active .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(103,58,183,0.24);
-  -webkit-transform: scale(1.7);
-  -ms-transform: scale(1.7);
-  transform: scale(1.7);
-}
-
-.c2:active .RadioButton__SvgRing-sc-1m0c1id-3 {
-  stroke: rgb(69,39,160);
-}
-
-.c2:active .RadioButton__SvgDot-sc-1m0c1id-4 {
-  fill: rgb(69,39,160);
-  stroke: rgb(69,39,160);
 }
 
 .c6 {
@@ -2674,43 +2594,8 @@ exports[`RadioButtons RadioIconButton 3`] = `
   pointer-events: none;
 }
 
-.c2:hover .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(103,58,183,0.16);
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
-  transform: scale(1.6);
-}
-
 .c2:focus-within {
   outline: none;
-}
-
-.c2:focus-within .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(103,58,183,0.16);
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
-  transform: scale(1.6);
-}
-
-.c2:focus-within .RadioButton__SvgRing-sc-1m0c1id-3 {
-  outline: none;
-  stroke: rgb(69,39,160);
-}
-
-.c2:active .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(103,58,183,0.24);
-  -webkit-transform: scale(1.7);
-  -ms-transform: scale(1.7);
-  transform: scale(1.7);
-}
-
-.c2:active .RadioButton__SvgRing-sc-1m0c1id-3 {
-  stroke: rgb(69,39,160);
-}
-
-.c2:active .RadioButton__SvgDot-sc-1m0c1id-4 {
-  fill: rgb(69,39,160);
-  stroke: rgb(69,39,160);
 }
 
 .c6 {
@@ -2998,43 +2883,8 @@ exports[`RadioButtons RadioIconGroup 1`] = `
   max-width: 100%;
 }
 
-.c6:hover .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(204,204,204,0.16);
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
-  transform: scale(1.6);
-}
-
 .c6:focus-within {
   outline: none;
-}
-
-.c6:focus-within .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(204,204,204,0.16);
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
-  transform: scale(1.6);
-}
-
-.c6:focus-within .RadioButton__SvgRing-sc-1m0c1id-3 {
-  outline: none;
-  stroke: rgb(69,39,160);
-}
-
-.c6:active .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(204,204,204,0.24);
-  -webkit-transform: scale(1.7);
-  -ms-transform: scale(1.7);
-  transform: scale(1.7);
-}
-
-.c6:active .RadioButton__SvgRing-sc-1m0c1id-3 {
-  stroke: rgb(61,61,61);
-}
-
-.c6:active .RadioButton__SvgDot-sc-1m0c1id-4 {
-  fill: rgb(69,39,160);
-  stroke: rgb(69,39,160);
 }
 
 .c13 {
@@ -3049,43 +2899,8 @@ exports[`RadioButtons RadioIconGroup 1`] = `
   pointer-events: none;
 }
 
-.c13:hover .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(204,204,204,0.16);
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
-  transform: scale(1.6);
-}
-
 .c13:focus-within {
   outline: none;
-}
-
-.c13:focus-within .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(204,204,204,0.16);
-  -webkit-transform: scale(1.6);
-  -ms-transform: scale(1.6);
-  transform: scale(1.6);
-}
-
-.c13:focus-within .RadioButton__SvgRing-sc-1m0c1id-3 {
-  outline: none;
-  stroke: rgb(69,39,160);
-}
-
-.c13:active .RadioButton__SvgHalo-sc-1m0c1id-1 {
-  background-color: rgba(204,204,204,0.24);
-  -webkit-transform: scale(1.7);
-  -ms-transform: scale(1.7);
-  transform: scale(1.7);
-}
-
-.c13:active .RadioButton__SvgRing-sc-1m0c1id-3 {
-  stroke: rgb(61,61,61);
-}
-
-.c13:active .RadioButton__SvgDot-sc-1m0c1id-4 {
-  fill: rgb(69,39,160);
-  stroke: rgb(69,39,160);
 }
 
 .c10 {

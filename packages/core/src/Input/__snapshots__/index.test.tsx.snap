@@ -63,14 +63,6 @@ exports[`TextInput NumberInput 1`] = `
   background-color: rgb(103,58,183);
 }
 
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
-}
-
 .c3 {
   font-family: Open Sans,Helvetica,arial,sans-serif;
   font-size: 13px;
@@ -231,14 +223,6 @@ exports[`TextInput NumberInput 2`] = `
   background-color: rgb(103,58,183);
 }
 
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
-}
-
 .c3 {
   font-family: Open Sans,Helvetica,arial,sans-serif;
   font-size: 13px;
@@ -397,14 +381,6 @@ exports[`TextInput NumberInput 3`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c3 {
@@ -570,14 +546,6 @@ exports[`TextInput NumberInput 4`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c3 {
@@ -746,14 +714,6 @@ exports[`TextInput NumberInput 5`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c3 {
@@ -926,14 +886,6 @@ exports[`TextInput NumberInput 6`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c3 {
@@ -1112,14 +1064,6 @@ exports[`TextInput NumberInput 7`] = `
   background-color: rgb(103,58,183);
 }
 
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
-}
-
 .c3 {
   font-family: Open Sans,Helvetica,arial,sans-serif;
   font-size: 13px;
@@ -1278,14 +1222,6 @@ exports[`TextInput NumberInput 8`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c8:focus-within .c4 {
@@ -1484,14 +1420,6 @@ exports[`TextInput NumberInput 9`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c3 {
@@ -1752,10 +1680,6 @@ exports[`TextInput NumberInput 10`] = `
   background-color: rgb(245,245,245);
 }
 
-.c2:focus-within .c19 {
-  background-color: rgb(103,58,183);
-}
-
 .c2:focus-within .c7 {
   background-color: rgb(211,47,47);
 }
@@ -1951,14 +1875,6 @@ exports[`TextInput TextInput 1`] = `
   background-color: rgb(103,58,183);
 }
 
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
-}
-
 .c3 {
   font-family: Open Sans,Helvetica,arial,sans-serif;
   font-size: 13px;
@@ -2111,14 +2027,6 @@ exports[`TextInput TextInput 2`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c3 {
@@ -2277,14 +2185,6 @@ exports[`TextInput TextInput 3`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c3 {
@@ -2447,14 +2347,6 @@ exports[`TextInput TextInput 4`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c3 {
@@ -2621,14 +2513,6 @@ exports[`TextInput TextInput 5`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c3 {
@@ -2801,14 +2685,6 @@ exports[`TextInput TextInput 6`] = `
   background-color: rgb(103,58,183);
 }
 
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
-}
-
 .c3 {
   font-family: Open Sans,Helvetica,arial,sans-serif;
   font-size: 13px;
@@ -2961,14 +2837,6 @@ exports[`TextInput TextInput 7`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c8:focus-within .c4 {
@@ -3161,14 +3029,6 @@ exports[`TextInput TextInput 8`] = `
 
 .c2:focus-within .c4 {
   background-color: rgb(103,58,183);
-}
-
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c3 {
@@ -3423,10 +3283,6 @@ exports[`TextInput TextInput 9`] = `
   background-color: rgb(245,245,245);
 }
 
-.c2:focus-within .c19 {
-  background-color: rgb(103,58,183);
-}
-
 .c2:focus-within .c7 {
   background-color: rgb(211,47,47);
 }
@@ -3616,14 +3472,6 @@ exports[`TextInput TextInputCredentials 1`] = `
   background-color: rgb(103,58,183);
 }
 
-.c2:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c2:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
-}
-
 .c3 {
   font-family: Open Sans,Helvetica,arial,sans-serif;
   font-size: 13px;
@@ -3797,14 +3645,6 @@ exports[`TextInput TextInputCredentials 2`] = `
 
 .c3:focus-within .c8 {
   background-color: rgb(103,58,183);
-}
-
-.c3:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c3:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c4 {
@@ -4025,14 +3865,6 @@ exports[`TextInput TextInputCredentials 3`] = `
 
 .c3:focus-within .c8 {
   background-color: rgb(103,58,183);
-}
-
-.c3:focus-within .Input__ErrorLine-sc-5z5y11-2 {
-  background-color: rgb(211,47,47);
-}
-
-.c3:focus-within .Input__ErrorLineContainer-sc-5z5y11-1 {
-  border-bottom: 1px solid transparent;
 }
 
 .c4 {

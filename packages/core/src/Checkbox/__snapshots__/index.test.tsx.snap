@@ -51,12 +51,6 @@ exports[`Checkbox Checked 1`] = `
   transform: scale(1.77);
 }
 
-.c2:focus-within .c5,
-.c2:focus-within .Checkbox__CSSCheckboxChecked-sc-1pw2164-4,
-.c2:focus-within .Checkbox__CSSCheckboxIndeterminate-sc-1pw2164-5 {
-  border: 2px solid rgb(69,39,160);
-}
-
 .c2:active .c3 {
   background-color: rgba(204,204,204,0.24);
   -webkit-transform: scale(1.88);
@@ -189,27 +183,21 @@ exports[`Checkbox Checked 2`] = `
   pointer-events: none;
 }
 
-.c11:hover .c3 {
+.c10:hover .c3 {
   background-color: rgba(204,204,204,0.16);
   -webkit-transform: scale(1.77);
   -ms-transform: scale(1.77);
   transform: scale(1.77);
 }
 
-.c11:focus-within .c3 {
+.c10:focus-within .c3 {
   background-color: rgba(204,204,204,0.16);
   -webkit-transform: scale(1.77);
   -ms-transform: scale(1.77);
   transform: scale(1.77);
 }
 
-.c11:focus-within .c12,
-.c11:focus-within .c5,
-.c11:focus-within .Checkbox__CSSCheckboxIndeterminate-sc-1pw2164-5 {
-  border: 2px solid rgb(69,39,160);
-}
-
-.c11:active .c3 {
+.c10:active .c3 {
   background-color: rgba(204,204,204,0.24);
   -webkit-transform: scale(1.88);
   -ms-transform: scale(1.88);
@@ -253,12 +241,6 @@ exports[`Checkbox Checked 2`] = `
   transform: scale(1.77);
 }
 
-.c2:focus-within .c12,
-.c2:focus-within .c5,
-.c2:focus-within .Checkbox__CSSCheckboxIndeterminate-sc-1pw2164-5 {
-  border: 2px solid rgb(69,39,160);
-}
-
 .c2:active .c3 {
   background-color: rgba(103,58,183,0.24);
   -webkit-transform: scale(1.88);
@@ -266,12 +248,7 @@ exports[`Checkbox Checked 2`] = `
   transform: scale(1.88);
 }
 
-.c2:active .c5,
-.c2:active .Checkbox__CSSCheckboxIndeterminate-sc-1pw2164-5 {
-  background-color: rgb(69,39,160);
-}
-
-.c8 {
+.c7 {
   position: absolute;
   top: 0;
   left: 0;
@@ -284,7 +261,7 @@ exports[`Checkbox Checked 2`] = `
   opacity: 0;
 }
 
-.c6 {
+.c5 {
   width: 18px;
   height: 18px;
   border-radius: 2px;
@@ -305,11 +282,11 @@ exports[`Checkbox Checked 2`] = `
   position: absolute;
 }
 
-.c7 {
+.c6 {
   background-color: rgb(103,58,183);
 }
 
-.c7::after {
+.c6::after {
   content: '';
   width: 5px;
   height: 10px;
@@ -321,7 +298,7 @@ exports[`Checkbox Checked 2`] = `
   margin-bottom: 3px;
 }
 
-.c10 {
+.c9 {
   position: fixed;
   top: 0;
   width: 360px;
@@ -339,7 +316,7 @@ exports[`Checkbox Checked 2`] = `
   z-index: 0;
 }
 
-.c9 {
+.c8 {
   position: absolute;
   z-index: 1;
 }
@@ -362,11 +339,11 @@ exports[`Checkbox Checked 2`] = `
           className="c3 c4"
         />
         <div
-          className="c5 c6 c7"
+          className="c5 c6"
         />
         <input
           checked={true}
-          className="c8"
+          className="c7"
           disabled={false}
           onChange={[Function]}
           onFocus={[Function]}
@@ -379,11 +356,11 @@ exports[`Checkbox Checked 2`] = `
   </div>
   <div>
     <div
-      className="c9"
+      className="c8"
       id="layer-4"
     >
       <div
-        className="c10"
+        className="c9"
       />
     </div>
   </div>
@@ -404,27 +381,21 @@ exports[`Checkbox Checked 3`] = `
   pointer-events: none;
 }
 
-.c11:hover .c3 {
+.c10:hover .c3 {
   background-color: rgba(204,204,204,0.16);
   -webkit-transform: scale(1.77);
   -ms-transform: scale(1.77);
   transform: scale(1.77);
 }
 
-.c11:focus-within .c3 {
+.c10:focus-within .c3 {
   background-color: rgba(204,204,204,0.16);
   -webkit-transform: scale(1.77);
   -ms-transform: scale(1.77);
   transform: scale(1.77);
 }
 
-.c11:focus-within .c12,
-.c11:focus-within .c13,
-.c11:focus-within .c5 {
-  border: 2px solid rgb(69,39,160);
-}
-
-.c11:active .c3 {
+.c10:active .c3 {
   background-color: rgba(204,204,204,0.24);
   -webkit-transform: scale(1.88);
   -ms-transform: scale(1.88);
@@ -468,12 +439,6 @@ exports[`Checkbox Checked 3`] = `
   transform: scale(1.77);
 }
 
-.c2:focus-within .c12,
-.c2:focus-within .c13,
-.c2:focus-within .c5 {
-  border: 2px solid rgb(69,39,160);
-}
-
 .c2:active .c3 {
   background-color: rgba(103,58,183,0.24);
   -webkit-transform: scale(1.88);
@@ -481,12 +446,7 @@ exports[`Checkbox Checked 3`] = `
   transform: scale(1.88);
 }
 
-.c2:active .c13,
-.c2:active .c5 {
-  background-color: rgb(69,39,160);
-}
-
-.c8 {
+.c7 {
   position: absolute;
   top: 0;
   left: 0;
@@ -499,7 +459,7 @@ exports[`Checkbox Checked 3`] = `
   opacity: 0;
 }
 
-.c6 {
+.c5 {
   width: 18px;
   height: 18px;
   border-radius: 2px;
@@ -520,11 +480,11 @@ exports[`Checkbox Checked 3`] = `
   position: absolute;
 }
 
-.c7 {
+.c6 {
   background-color: rgb(103,58,183);
 }
 
-.c7::after {
+.c6::after {
   content: '';
   width: 10px;
   height: 2px;
@@ -532,7 +492,7 @@ exports[`Checkbox Checked 3`] = `
   border-radius: 2px;
 }
 
-.c10 {
+.c9 {
   position: fixed;
   top: 0;
   width: 360px;
@@ -550,7 +510,7 @@ exports[`Checkbox Checked 3`] = `
   z-index: 0;
 }
 
-.c9 {
+.c8 {
   position: absolute;
   z-index: 1;
 }
@@ -573,11 +533,11 @@ exports[`Checkbox Checked 3`] = `
           className="c3 c4"
         />
         <div
-          className="c5 c6 c7"
+          className="c5 c6"
         />
         <input
           checked={true}
-          className="c8"
+          className="c7"
           disabled={false}
           onChange={[Function]}
           onFocus={[Function]}
@@ -590,11 +550,11 @@ exports[`Checkbox Checked 3`] = `
   </div>
   <div>
     <div
-      className="c9"
+      className="c8"
       id="layer-6"
     >
       <div
-        className="c10"
+        className="c9"
       />
     </div>
   </div>
