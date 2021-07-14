@@ -55,7 +55,7 @@ export const Wrapper = styled.div`
 </Tooltip>
 ```
 
-### Expanded tooltip
+### Expanded tooltip: up-down (default)
 
 A tooltip that contains a title and contents.
 Recommend to use `ExpandedTooltipTypography` component in the contents in order to get proper Typography.
@@ -73,6 +73,16 @@ Recommend to use `ExpandedTooltipTypography` component in the contents in order 
 >
   <div style={{ display: 'inline-grid' }}>
     <Typography>Expanded</Typography>
+  </div>
+</Tooltip>
+```
+
+### Expanded tooltip: left-right
+
+```typescript type=live
+<Tooltip variant="expanded" placement="left-right" tipTitle="Tooltip text">
+  <div style={{ display: 'inline-grid' }}>
+    <Typography>Expanded: left-right</Typography>
   </div>
 </Tooltip>
 ```

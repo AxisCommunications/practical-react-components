@@ -45,5 +45,21 @@ describe('Tooltip', () => {
       </Tooltip>
     )
     expect(tree2).toMatchSnapshot()
+
+    const tree3 = TestRender(
+      <Tooltip
+        variant="expanded"
+        placement="left-right"
+        tipTitle="title"
+        contents={
+          <ExpandedTooltipTypography>
+            Expanded tooltip test text
+          </ExpandedTooltipTypography>
+        }
+      >
+        <TestTextWithForwardRef />
+      </Tooltip>
+    )
+    expect(tree3).toMatchSnapshot()
   })
 })

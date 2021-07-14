@@ -152,3 +152,54 @@ exports[`Tooltip Expanded 2`] = `
   </div>
 </div>
 `;
+
+exports[`Tooltip Expanded 3`] = `
+.c3 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c2 {
+  position: absolute;
+  z-index: 1;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-7"
+    >
+      <span>
+        Test
+      </span>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c2"
+      id="layer-8"
+    >
+      <div
+        className="c3"
+      />
+    </div>
+  </div>
+</div>
+`;
