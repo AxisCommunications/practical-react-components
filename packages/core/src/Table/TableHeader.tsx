@@ -95,7 +95,11 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
         <OverlayContainer>{overlay}</OverlayContainer>
       ) : (
         React.Children.map(children, (cell, i) => {
-          return <TableHeaderCellContent key={i}>{cell}</TableHeaderCellContent>
+          return (
+            <TableHeaderCellContent data-col={i} key={i}>
+              {cell}
+            </TableHeaderCellContent>
+          )
         })
       )}
       {overlay === undefined && hasMenu ? (

@@ -8,7 +8,6 @@ import React, {
   useState,
 } from 'react'
 import styled from 'styled-components'
-
 import { spacing } from '../designparams'
 
 import { ColumnResizerRow } from './ColumnResizerRow'
@@ -168,6 +167,7 @@ const reduceWidths = (state: WidthsState, action: WidthAction): WidthsState => {
  * Example:
  *  [34, 78]
  */
+
 export const useGridTemplateColumns = () => {
   const { columnWidths, selectWidth, menuWidth } = useContext(TableContext)
 
@@ -273,6 +273,8 @@ export interface TableProps extends Omit<BaseProps, 'onSelect'> {
   /**
    * Control if columns should be resizeable or not. If true, resize
    * handles will be available to change column width.
+   *
+   * For doubleclick functionality to work properly, when you have multiple elements in one cell, wrap them inside a <div>.
    *
    * @default false
    */
@@ -409,6 +411,7 @@ export const Table: React.FunctionComponent<TableProps> = React.memo(
             onSelect,
             hasMenu,
             onWidthsChange,
+            tableRef,
           }}
         >
           <TableHeaderContainer>{header}</TableHeaderContainer>
