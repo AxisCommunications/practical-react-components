@@ -168,6 +168,18 @@ const reduceWidths = (state: WidthsState, action: WidthAction): WidthsState => {
  * Example:
  *  [34, 78]
  */
+
+const generateRandomKey = (length: number) => {
+  var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var result = '';
+  for (var i = 0; i < length; i++) {
+    result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
+  }
+  return result;
+}
+
+export const tableID = generateRandomKey(5);
+
 export const useGridTemplateColumns = () => {
   const { columnWidths, selectWidth, menuWidth } = useContext(TableContext)
 
@@ -240,7 +252,7 @@ const TableContentContainer = styled.div.attrs<{
   return {
     style: { width: `${width}px`, maxHeight: `${maxHeight}px` },
   }
-})<{
+}) <{
   readonly maxHeight?: number
   readonly width: number
 }>`
@@ -385,8 +397,8 @@ export const Table: React.FunctionComponent<TableProps> = React.memo(
       maxHeight !== undefined
         ? maxHeight * TABLE_DIMENSIONS.ROW_HEIGHT
         : tableHeight !== undefined
-        ? tableHeight - TABLE_DIMENSIONS.ROW_HEIGHT
-        : undefined
+          ? tableHeight - TABLE_DIMENSIONS.ROW_HEIGHT
+          : undefined
 
     const { header, rows } = useMemo(() => {
       const [headerEl, ...rowsEl] = React.Children.toArray(children)
@@ -396,6 +408,7 @@ export const Table: React.FunctionComponent<TableProps> = React.memo(
     const tableContentRef = useRef<HTMLDivElement>(null)
     // Scroll to top when scrollKey changes
     useResetScroll(tableContentRef, scrollKey)
+    let arr: Array<string[]> = []
 
     return (
       <TableContainer ref={tableRef} dragging={dragging} {...props}>
@@ -409,6 +422,7 @@ export const Table: React.FunctionComponent<TableProps> = React.memo(
             onSelect,
             hasMenu,
             onWidthsChange,
+            arr
           }}
         >
           <TableHeaderContainer>{header}</TableHeaderContainer>

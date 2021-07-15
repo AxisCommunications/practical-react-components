@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { componentSize } from '../designparams'
 import { CheckboxChangeHandler, Checkbox } from '../Checkbox'
 
-import { useGridTemplateColumns } from './Table'
+import { useGridTemplateColumns, tableID } from './Table'
 import { TableContext, WidthActionType } from './context'
 
 import {
@@ -62,7 +62,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
   menu,
   ...props
 }) => {
-  const { onSelect, hasMenu, columnWidths, dispatchWidthsAction } =
+  const { onSelect, hasMenu, columnWidths, dispatchWidthsAction, arr } =
     useContext(TableContext)
   const onChange = useCallback<CheckboxChangeHandler>(
     e => {
@@ -94,10 +94,13 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
       {overlay !== undefined ? (
         <OverlayContainer>{overlay}</OverlayContainer>
       ) : (
-        React.Children.map(children, (cell, i) => {
-          return <TableHeaderCellContent key={i}>{cell}</TableHeaderCellContent>
-        })
-      )}
+          React.Children.map(children, (cell, i) => {
+            if (!arr[i]) arr[i] = []
+            const theID: string = i + " " + i + " " + tableID;
+            arr[i].push(theID)
+            return <TableHeaderCellContent id={theID} key={i}>{cell}</TableHeaderCellContent>
+          })
+        )}
       {overlay === undefined && hasMenu ? (
         <TableHeaderCellMenu>
           {menu !== undefined ? menu : null}
