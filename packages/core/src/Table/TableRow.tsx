@@ -162,7 +162,11 @@ export const TableRow: React.FC<TableRowProps> = React.memo(
 
     const tableCellContent = useMemo(() => {
       return React.Children.map(children, (cell, cellId) => {
-        return <TableCellContent key={cellId}>{cell}</TableCellContent>
+        return (
+          <TableCellContent data-col={cellId} key={cellId}>
+            {cell}
+          </TableCellContent>
+        )
       })
     }, [children])
 

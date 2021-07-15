@@ -52,6 +52,7 @@ export const TableContext = createContext<{
   readonly onSelect?: (selected: boolean, id?: string) => void
   readonly hasMenu: boolean
   readonly onWidthsChange?: (widths: ReadonlyArray<number>) => void
+  readonly tableRef?: React.RefObject<HTMLDivElement>
 }>({
   minColumnWidth: 0,
   columnWidths: [],

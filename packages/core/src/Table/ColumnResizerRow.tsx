@@ -97,6 +97,73 @@ const ResizeMarker = styled.div<{
 `
 
 /**
+ * widthLookup
+ *
+ * This lookup returns the size a column would need to
+ * accommodate it's largest element without overflow.
+ */
+const widthLookup = (
+  tableRef: React.RefObject<HTMLDivElement>,
+  separator: number
+): readonly [number, number] => {
+  const column1Elements = tableRef.current?.querySelectorAll(
+    `[data-col="${separator}"]`
+  )
+  let maxColumn1Width = 0
+  for (const el of column1Elements ?? []) {
+    maxColumn1Width = Math.max(
+      maxColumn1Width,
+      el.children[0].getBoundingClientRect().width
+    )
+  }
+
+  const column2Elements = tableRef.current?.querySelectorAll(
+    `[data-col="${separator + 1}"]`
+  )
+  let maxColumn2Width = 0
+  for (const el of column2Elements ?? []) {
+    maxColumn2Width = Math.max(
+      maxColumn2Width,
+      el.children[0].getBoundingClientRect().width
+    )
+  }
+
+  return [
+    maxColumn1Width + TABLE_DIMENSIONS.PADDING_LEFT,
+    maxColumn2Width + TABLE_DIMENSIONS.PADDING_LEFT,
+  ]
+}
+
+interface UpdateWidthsArgs {
+  readonly tableRef: React.RefObject<HTMLDivElement>
+  readonly separator: number
+  readonly currentSizes: ReadonlyArray<number>
+  readonly minColumnWidth: number
+}
+
+const updateWidths = ({
+  tableRef,
+  separator,
+  currentSizes,
+  minColumnWidth,
+}: UpdateWidthsArgs) => {
+  const [col1, col2] = widthLookup(tableRef, separator)
+  const prevCol1 = currentSizes[separator]
+  const prevCol2 = currentSizes[separator + 1]
+
+  const newCol1 = Math.min(Math.max(col1, minColumnWidth), prevCol1)
+  const newCol2 = Math.min(Math.max(col2, minColumnWidth), prevCol2)
+
+  const scaleFactor = (prevCol1 + prevCol2) / (newCol1 + newCol2)
+
+  const newWidths = [...currentSizes]
+  newWidths[separator] = newCol1 * scaleFactor
+  newWidths[separator + 1] = newCol2 * scaleFactor
+
+  return newWidths
+}
+
+/*
  * ColumnResizer
  *
  * A draggable resize handle that will dispatch a new
@@ -108,14 +175,17 @@ interface ColumnResizerProps {
   readonly divider: ColumnDivider
   readonly setDragging: (dragging: boolean) => void
   readonly onDragEnd: (t: readonly [number, number]) => void
+  readonly index: number
 }
 
 const ColumnResizer: React.FunctionComponent<ColumnResizerProps> = ({
   divider,
   setDragging,
   onDragEnd,
+  index,
 }) => {
-  const { minColumnWidth } = useContext(TableContext)
+  const { minColumnWidth, dispatchWidthsAction, columnWidths, tableRef } =
+    useContext(TableContext)
 
   const [[tx], onDragStart, dragging] = useDraggable(onDragEnd)
   const txClipped = clipTranslation(tx, divider, minColumnWidth)
@@ -130,8 +200,25 @@ const ColumnResizer: React.FunctionComponent<ColumnResizerProps> = ({
     }
   }, [dragging, setDragging])
 
+  const optimizeColWidths = useCallback(() => {
+    if (tableRef === undefined) return
+
+    dispatchWidthsAction({
+      type: WidthActionType.UPDATE_WIDTHS,
+      widths: updateWidths({
+        tableRef,
+        separator: index,
+        currentSizes: columnWidths,
+        minColumnWidth,
+      }),
+    })
+  }, [tableRef, minColumnWidth, index, columnWidths, dispatchWidthsAction])
+
   return (
-    <ResizeContainer left={divider.offset + txClipped}>
+    <ResizeContainer
+      onDoubleClick={optimizeColWidths}
+      left={divider.offset + txClipped}
+    >
       <ResizeHandle onPointerDown={onDragStart} />
       <ResizeMarker dragging={dragging} />
     </ResizeContainer>
@@ -215,6 +302,7 @@ export const ColumnResizerRow: React.FunctionComponent<ColumnResizerRowProps> =
             <ColumnResizer
               setDragging={setDragging}
               key={`${i}:${divider.offset}`}
+              index={i}
               divider={divider}
               onDragEnd={dragEndHandlers[i]}
             />

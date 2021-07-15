@@ -453,6 +453,7 @@ exports[`Tables Table (minimal) 1`] = `
           >
             <div
               className="c5 c6 c7"
+              data-col={0}
             >
               <p
                 className="c8 c9"
@@ -462,6 +463,7 @@ exports[`Tables Table (minimal) 1`] = `
             </div>
             <div
               className="c5 c6 c7"
+              data-col={1}
             >
               <p
                 className="c8 c9"
@@ -471,6 +473,7 @@ exports[`Tables Table (minimal) 1`] = `
             </div>
             <div
               className="c5 c6 c7"
+              data-col={2}
             >
               <p
                 className="c8 c9"
