@@ -62,7 +62,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
   menu,
   ...props
 }) => {
-  const { onSelect, hasMenu, columnWidths, dispatchWidthsAction, arr } =
+  const { onSelect, hasMenu, columnWidths, dispatchWidthsAction } =
     useContext(TableContext)
   const onChange = useCallback<CheckboxChangeHandler>(
     e => {
@@ -95,10 +95,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
         <OverlayContainer>{overlay}</OverlayContainer>
       ) : (
           React.Children.map(children, (cell, i) => {
-            if (!arr[i]) arr[i] = []
-            const theID: string = i + " " + i + " " + tableID;
-            arr[i].push(theID)
-            return <TableHeaderCellContent id={theID} key={i}>{cell}</TableHeaderCellContent>
+            return <TableHeaderCellContent data-col={i} key={i}>{cell}</TableHeaderCellContent>
           })
         )}
       {overlay === undefined && hasMenu ? (

@@ -96,85 +96,45 @@ const ResizeMarker = styled.div<{
   }
 `
 
-enum ConfidenceLevel {
-  EIGHTY_PERCENT = 1.28,
-  EIGHTYFIVE_PERCENT = 1.44,
-  NINTY_PERCENT = 1.65,
-  NINTYFIVE_PERCENT = 1.96,
-  NINTYNINE_PERCENT = 2.58
-}
+/**
+ * expensiveWidthLookup
+ * 
+ * This lookup gets all elements and calculates their widths to get the exact minimum size
+ */
+const expensiveWidthLookup = (
+  columnDocumentIds: React.RefObject<HTMLDivElement>,
+  clickedColumn: number,
+  currentSizes: readonly number[]
+): Array<number> => {
 
-// This is valued at a standard 50% if you are unsure, this might be good to play around with for better results
-const populationProportion = .5;
-const marginOfError = .05
+  let maxColumnWidths: Array<number> = [...currentSizes];
 
-// https://www.calculator.net/sample-size-calculator.html
-const getSampleSize = (populationSize: number) => {
-  // This is a constant that is used twice
-  const c = Math.pow(ConfidenceLevel.NINTYNINE_PERCENT, 2) * populationProportion * (1 - populationProportion)
-  return Math.round(
-    (c / Math.pow(marginOfError, 2) /
-      (1 + (c / (Math.pow(marginOfError, 2) * populationSize)))))
-}
-
-// Shuffles the given array
-const shuffleArray = (array: Array<string>) => {
-  let i = array.length,
-    j = 0,
-    temp;
-
-  while (i--) {
-
-    j = Math.floor(Math.random() * (i + 1));
-
-    // swap randomly chosen element with current element
-    temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-
-  }
-
-  return array;
-}
-
-const calculateVariance = (arrai: Array<number>) => {
-  let total = 0;
-  for (var i = 0; i < arrai.length; i++) {
-    total += arrai[i];
-  }
-  const avg = total / arrai.length;
-
-  return arrai.reduce((acc, cur) => Math.pow(cur - avg, 2) + acc, 0) / arrai.length
-}
-
-const preformanceTest = (arr: Array<string[]>, clickedColumn: number) => {
-  // FIND OUT WHICH COLUMN THAT WAS PRESSED TO DETERMINE WHICH COLUMNS TO LOOP THROUGH
-
-  let blipmorp = []
-
-  for (let i = 0; i < arr.length; ++i) {
-    const sampleSize = getSampleSize(arr[i].length)
-    const shuffledArray = shuffleArray(arr[i])
-
-    let barr = [];
-    for (let j = 0; j < sampleSize; j++) {
-      // TODO: create a system that determines the width of all elements within the child dependent on how they are layed out
-      barr.push(document.getElementById(shuffledArray[j])?.children[0].getBoundingClientRect().width);
+  for (let i = clickedColumn; i < clickedColumn + 2; ++i) {
+    const columnElements = columnDocumentIds.current?.querySelectorAll(`[data-col="${i}"]`);
+    if (!columnElements) return []
+    let maxColumnWidth = []
+    for (let j = 0; j < columnElements?.length; ++j) {
+      maxColumnWidth.push(columnElements[j].children[0].getBoundingClientRect().width)
     }
-    // Fix so the new array type never is undefined
-    blipmorp.push(Math.max(...barr) + calculateVariance(barr) + TABLE_DIMENSIONS.PADDING_LEFT)
+    maxColumnWidths[i] = Math.max(...maxColumnWidth) + TABLE_DIMENSIONS.PADDING_LEFT
   }
 
-  // USE THE ENTIRE ARRAY TO UPDATE THE WIDTHS, SET THE VALUES OF THE OLD ARRAY ENTRIES TO THE NEW ONES MABY UP IN THE PAST FOR LOOP
-  // THEN UPDATE THE VALUES AND CHANGE THE LEFT MOST WIDTH TO MATCH THE NEW SIZE
+  return maxColumnWidths
+}
 
-  // THINK ABOUT HAVING THE HEADERS THING ALWAYS BE INCLUDED WITHIN THE TEST AND IF IT IS THE BIGGEST ONE DONT ADD THE PADDING TO IT?
 
-  // const paddingRight = columnWidths.reduce((acc, cur) => acc + cur, 0) - newColumnSizes.reduce((acc, cur) => acc + cur, 0)
-  // newColumnSizes[newColumnSizes.length - 1] += paddingRight;
+// Create simple randomizer with seed to support
+const getMinimumWidths = (
+  tableRef: React.RefObject<HTMLDivElement>,
+  clickedColumn: number,
+  currentSizes: readonly number[]) => {
 
-  return blipmorp
-  //Return an array of sizes that the updateSizesReducer will use
+  const newWidths = expensiveWidthLookup(tableRef, clickedColumn, currentSizes)
+
+  const paddingRight = currentSizes.reduce((acc, cur) => acc + cur, 0) - newWidths.reduce((acc, cur) => acc + cur, 0)
+  newWidths[newWidths.length - 1] += paddingRight;
+
+  return newWidths
 }
 
 /*
@@ -189,14 +149,16 @@ interface ColumnResizerProps {
   readonly divider: ColumnDivider
   readonly setDragging: (dragging: boolean) => void
   readonly onDragEnd: (t: readonly [number, number]) => void
+  readonly index: number
 }
 
 const ColumnResizer: React.FunctionComponent<ColumnResizerProps> = ({
   divider,
   setDragging,
   onDragEnd,
+  index
 }) => {
-  const { minColumnWidth, arr, dispatchWidthsAction } = useContext(TableContext)
+  const { minColumnWidth, dispatchWidthsAction, columnWidths, tableRef } = useContext(TableContext)
 
   const [[tx], onDragStart, dragging] = useDraggable(onDragEnd)
   const txClipped = clipTranslation(tx, divider, minColumnWidth)
@@ -211,10 +173,15 @@ const ColumnResizer: React.FunctionComponent<ColumnResizerProps> = ({
     }
   }, [dragging, setDragging])
 
-  const a = useCallback(() => dispatchWidthsAction({ type: WidthActionType.UPDATE_WIDTHS, widths: preformanceTest(arr, ) }), [arr])
+  const minimumWidthsWrapper = useCallback(() =>
+    dispatchWidthsAction({
+      type: WidthActionType.UPDATE_WIDTHS,
+      widths: getMinimumWidths(tableRef, index, columnWidths)
+    }
+    ), [tableRef])
 
   return (
-    <ResizeContainer onDoubleClick={a} left={divider.offset + txClipped}>
+    <ResizeContainer onDoubleClick={minimumWidthsWrapper} left={divider.offset + txClipped}>
       <ResizeHandle onPointerDown={onDragStart} />
       <ResizeMarker dragging={dragging} />
     </ResizeContainer>
@@ -298,6 +265,7 @@ export const ColumnResizerRow: React.FunctionComponent<ColumnResizerRowProps> =
             <ColumnResizer
               setDragging={setDragging}
               key={`${i}:${divider.offset}`}
+              index={i}
               divider={divider}
               onDragEnd={dragEndHandlers[i]}
             />

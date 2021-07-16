@@ -1,0 +1,21 @@
+enhancement(table) double-click automatically resizes adjacent columns to fit content
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Fri Jul 16 15:32:58 2021 +0200
+#
+# On branch userSize
+# Your branch is up to date with 'origin/userSize'.
+#
+# Changes to be committed:
+#	modified:   packages/core/src/Table/ColumnResizerRow.tsx
+#	modified:   packages/core/src/Table/Table.tsx
+#	modified:   packages/core/src/Table/TableHeader.tsx
+#	modified:   packages/core/src/Table/TableRow.tsx
+#	modified:   packages/core/src/Table/__snapshots__/index.test.tsx.snap
+#	modified:   packages/core/src/Table/context.ts
+#
+# Changes not staged for commit:
+#	modified:   packages/core/src/Table/ColumnResizerRow.tsx
+#

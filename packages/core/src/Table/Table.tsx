@@ -169,17 +169,6 @@ const reduceWidths = (state: WidthsState, action: WidthAction): WidthsState => {
  *  [34, 78]
  */
 
-const generateRandomKey = (length: number) => {
-  var randomChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-  var result = '';
-  for (var i = 0; i < length; i++) {
-    result += randomChars.charAt(Math.floor(Math.random() * randomChars.length));
-  }
-  return result;
-}
-
-export const tableID = generateRandomKey(5);
-
 export const useGridTemplateColumns = () => {
   const { columnWidths, selectWidth, menuWidth } = useContext(TableContext)
 
@@ -285,6 +274,8 @@ export interface TableProps extends Omit<BaseProps, 'onSelect'> {
   /**
    * Control if columns should be resizeable or not. If true, resize
    * handles will be available to change column width.
+   * 
+   * For doubleclick functionality to work properly, when you have multiple elements in one cell, wrap them inside a <div>.
    *
    * @default false
    */
@@ -408,7 +399,6 @@ export const Table: React.FunctionComponent<TableProps> = React.memo(
     const tableContentRef = useRef<HTMLDivElement>(null)
     // Scroll to top when scrollKey changes
     useResetScroll(tableContentRef, scrollKey)
-    let arr: Array<string[]> = []
 
     return (
       <TableContainer ref={tableRef} dragging={dragging} {...props}>
@@ -422,7 +412,7 @@ export const Table: React.FunctionComponent<TableProps> = React.memo(
             onSelect,
             hasMenu,
             onWidthsChange,
-            arr
+            tableRef
           }}
         >
           <TableHeaderContainer>{header}</TableHeaderContainer>

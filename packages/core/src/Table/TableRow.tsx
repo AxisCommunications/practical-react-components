@@ -126,7 +126,7 @@ export const TableRow: React.FC<TableRowProps> = React.memo(
     menu,
     ...props
   }) => {
-    const { onSelect, hasMenu, arr } = useContext(TableContext)
+    const { onSelect, hasMenu } = useContext(TableContext)
     const onChange = useCallback<CheckboxChangeHandler>(
       e => {
         if (onSelect !== undefined) {
@@ -162,11 +162,7 @@ export const TableRow: React.FC<TableRowProps> = React.memo(
 
     const tableCellContent = useMemo(() => {
       return React.Children.map(children, (cell, cellId) => {
-        // Row id, cellId, tableId
-        if (!arr[cellId]) arr[cellId] = []
-        const theID: string = id + " " + cellId + " " + tableID;
-        arr[cellId].push(theID)
-        return <TableCellContent id={theID} key={cellId}>{cell}</TableCellContent>
+        return <TableCellContent data-col={cellId} key={cellId}>{cell}</TableCellContent>
       })
     }, [children])
 
