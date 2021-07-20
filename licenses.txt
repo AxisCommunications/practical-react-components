@@ -26,7 +26,7 @@ THE SOFTWARE.
                        ====================
 
 
-Package: regenerator-runtime (0.13.8)
+Package: regenerator-runtime (0.13.7)
 Web:     
 License: MIT
 
@@ -472,7 +472,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                        ====================
 
 
-Package: css-loader (5.2.6)
+Package: css-loader (6.2.0)
 Web:     https://github.com/webpack-contrib/css-loader
 License: MIT
 
@@ -531,7 +531,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-hooks-shareable (1.33.0)
+Package: react-hooks-shareable (1.34.0)
 Web:     https://github.com/AxisCommunications/react-hooks-shareable
 License: MIT
 
