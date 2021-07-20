@@ -13,7 +13,7 @@
     "focus-trap-react": "8.7.0",
     "no-scroll": "2.1.1",
     "practical-react-components-icons": "workspace:*",
-    "react-hooks-shareable": "1.33.0"
+    "react-hooks-shareable": "1.34.0"
   },
   "devDependencies": {
     "@babel/cli": "7.14.5",
