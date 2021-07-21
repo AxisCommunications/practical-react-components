@@ -310,6 +310,7 @@ exports[`Select Direction 1`] = `
                   </span>
                   <span
                     className="c11 c12 c13"
+                    disabled={false}
                     onClick={[Function]}
                     role="img"
                     size="small"
@@ -710,6 +711,7 @@ exports[`Select Direction 2`] = `
                   </span>
                   <span
                     className="c11 c12 c13"
+                    disabled={false}
                     onClick={[Function]}
                     role="img"
                     size="small"
@@ -1117,6 +1119,7 @@ exports[`Select Other 1`] = `
                   </span>
                   <span
                     className="c11 c12 c13"
+                    disabled={false}
                     onClick={[Function]}
                     role="img"
                     size="small"
@@ -1531,6 +1534,7 @@ exports[`Select Other 2`] = `
                   </span>
                   <span
                     className="c11 c12 c13"
+                    disabled={false}
                     onClick={[Function]}
                     role="img"
                     size="small"
@@ -1931,6 +1935,7 @@ exports[`Select Width 1`] = `
                   </span>
                   <span
                     className="c11 c12 c13"
+                    disabled={false}
                     onClick={[Function]}
                     role="img"
                     size="small"
@@ -2331,6 +2336,7 @@ exports[`Select Width 2`] = `
                   </span>
                   <span
                     className="c11 c12 c13"
+                    disabled={false}
                     onClick={[Function]}
                     role="img"
                     size="small"
@@ -2363,6 +2369,7 @@ exports[`Select Width 2`] = `
                   </span>
                   <span
                     className="c11 c12 c13"
+                    disabled={false}
                     onClick={[Function]}
                     role="img"
                     size="small"
@@ -2763,6 +2770,7 @@ exports[`Select Width 3`] = `
                   </span>
                   <span
                     className="c11 c12 c13"
+                    disabled={false}
                     onClick={[Function]}
                     role="img"
                     size="small"
@@ -2795,6 +2803,7 @@ exports[`Select Width 3`] = `
                   </span>
                   <span
                     className="c11 c12 c13"
+                    disabled={false}
                     onClick={[Function]}
                     role="img"
                     size="small"
