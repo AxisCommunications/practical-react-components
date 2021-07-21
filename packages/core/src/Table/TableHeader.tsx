@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { componentSize } from '../designparams'
 import { CheckboxChangeHandler, Checkbox } from '../Checkbox'
 
-import { useGridTemplateColumns } from './Table'
+import { useGridTemplateColumns, tableID } from './Table'
 import { TableContext, WidthActionType } from './context'
 
 import {
@@ -94,10 +94,10 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
       {overlay !== undefined ? (
         <OverlayContainer>{overlay}</OverlayContainer>
       ) : (
-        React.Children.map(children, (cell, i) => {
-          return <TableHeaderCellContent key={i}>{cell}</TableHeaderCellContent>
-        })
-      )}
+          React.Children.map(children, (cell, i) => {
+            return <TableHeaderCellContent data-col={i} key={i}>{cell}</TableHeaderCellContent>
+          })
+        )}
       {overlay === undefined && hasMenu ? (
         <TableHeaderCellMenu>
           {menu !== undefined ? menu : null}

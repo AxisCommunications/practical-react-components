@@ -168,6 +168,7 @@ const reduceWidths = (state: WidthsState, action: WidthAction): WidthsState => {
  * Example:
  *  [34, 78]
  */
+
 export const useGridTemplateColumns = () => {
   const { columnWidths, selectWidth, menuWidth } = useContext(TableContext)
 
@@ -240,7 +241,7 @@ const TableContentContainer = styled.div.attrs<{
   return {
     style: { width: `${width}px`, maxHeight: `${maxHeight}px` },
   }
-})<{
+}) <{
   readonly maxHeight?: number
   readonly width: number
 }>`
@@ -273,6 +274,8 @@ export interface TableProps extends Omit<BaseProps, 'onSelect'> {
   /**
    * Control if columns should be resizeable or not. If true, resize
    * handles will be available to change column width.
+   * 
+   * For doubleclick functionality to work properly, when you have multiple elements in one cell, wrap them inside a <div>.
    *
    * @default false
    */
@@ -385,8 +388,8 @@ export const Table: React.FunctionComponent<TableProps> = React.memo(
       maxHeight !== undefined
         ? maxHeight * TABLE_DIMENSIONS.ROW_HEIGHT
         : tableHeight !== undefined
-        ? tableHeight - TABLE_DIMENSIONS.ROW_HEIGHT
-        : undefined
+          ? tableHeight - TABLE_DIMENSIONS.ROW_HEIGHT
+          : undefined
 
     const { header, rows } = useMemo(() => {
       const [headerEl, ...rowsEl] = React.Children.toArray(children)
@@ -409,6 +412,7 @@ export const Table: React.FunctionComponent<TableProps> = React.memo(
             onSelect,
             hasMenu,
             onWidthsChange,
+            tableRef
           }}
         >
           <TableHeaderContainer>{header}</TableHeaderContainer>

@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components'
 import { componentSize, opacity } from '../designparams'
 import { CheckboxChangeHandler, Checkbox } from '../Checkbox'
 
-import { useGridTemplateColumns } from './Table'
+import { useGridTemplateColumns, tableID } from './Table'
 import { TableContext } from './context'
 
 import {
@@ -68,12 +68,12 @@ const TableRowGrid = styled.div<{
 
   & ${TableCellContent} {
     ${({ disabled }) =>
-      disabled
-        ? css`
+    disabled
+      ? css`
             opacity: ${opacity[48]}; /* TODO: to be decided */
             pointer-events: none;
           `
-        : undefined};
+      : undefined};
   }
 
   cursor: ${({ clickable, disabled }) =>
@@ -162,7 +162,7 @@ export const TableRow: React.FC<TableRowProps> = React.memo(
 
     const tableCellContent = useMemo(() => {
       return React.Children.map(children, (cell, cellId) => {
-        return <TableCellContent key={cellId}>{cell}</TableCellContent>
+        return <TableCellContent data-col={cellId} key={cellId}>{cell}</TableCellContent>
       })
     }, [children])
 

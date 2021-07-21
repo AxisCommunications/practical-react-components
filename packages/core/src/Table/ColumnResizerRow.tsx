@@ -50,7 +50,7 @@ const ResizeContainer = styled.div.attrs<{ readonly left: number }>(
       style: { left: `${left - 8}px` },
     }
   }
-)<{ readonly left: number }>`
+) <{ readonly left: number }>`
   display: relative;
   position: absolute;
   width: 16px;
@@ -97,6 +97,47 @@ const ResizeMarker = styled.div<{
 `
 
 /**
+ * expensiveWidthLookup
+ * 
+ * This lookup gets all elements and calculates their widths to get the exact minimum size
+ */
+const expensiveWidthLookup = (
+  columnDocumentIds: React.RefObject<HTMLDivElement>,
+  clickedColumn: number,
+  currentSizes: readonly number[]
+): Array<number> => {
+
+  let maxColumnWidths: Array<number> = [...currentSizes];
+
+  for (let i = clickedColumn; i < clickedColumn + 2; ++i) {
+    const columnElements = columnDocumentIds.current?.querySelectorAll(`[data-col="${i}"]`);
+    if (!columnElements) return []
+    let maxColumnWidth = []
+    for (let j = 0; j < columnElements?.length; ++j) {
+      maxColumnWidth.push(columnElements[j].children[0].getBoundingClientRect().width)
+    }
+    maxColumnWidths[i] = Math.max(...maxColumnWidth) + TABLE_DIMENSIONS.PADDING_LEFT
+  }
+
+  return maxColumnWidths
+}
+
+
+// Create simple randomizer with seed to support
+const getMinimumWidths = (
+  tableRef: React.RefObject<HTMLDivElement>,
+  clickedColumn: number,
+  currentSizes: readonly number[]) => {
+
+  const newWidths = expensiveWidthLookup(tableRef, clickedColumn, currentSizes)
+
+  const paddingRight = currentSizes.reduce((acc, cur) => acc + cur, 0) - newWidths.reduce((acc, cur) => acc + cur, 0)
+  newWidths[newWidths.length - 1] += paddingRight;
+
+  return newWidths
+}
+
+/*
  * ColumnResizer
  *
  * A draggable resize handle that will dispatch a new
@@ -108,14 +149,16 @@ interface ColumnResizerProps {
   readonly divider: ColumnDivider
   readonly setDragging: (dragging: boolean) => void
   readonly onDragEnd: (t: readonly [number, number]) => void
+  readonly index: number
 }
 
 const ColumnResizer: React.FunctionComponent<ColumnResizerProps> = ({
   divider,
   setDragging,
   onDragEnd,
+  index
 }) => {
-  const { minColumnWidth } = useContext(TableContext)
+  const { minColumnWidth, dispatchWidthsAction, columnWidths, tableRef } = useContext(TableContext)
 
   const [[tx], onDragStart, dragging] = useDraggable(onDragEnd)
   const txClipped = clipTranslation(tx, divider, minColumnWidth)
@@ -130,8 +173,15 @@ const ColumnResizer: React.FunctionComponent<ColumnResizerProps> = ({
     }
   }, [dragging, setDragging])
 
+  const minimumWidthsWrapper = useCallback(() =>
+    dispatchWidthsAction({
+      type: WidthActionType.UPDATE_WIDTHS,
+      widths: getMinimumWidths(tableRef, index, columnWidths)
+    }
+    ), [tableRef])
+
   return (
-    <ResizeContainer left={divider.offset + txClipped}>
+    <ResizeContainer onDoubleClick={minimumWidthsWrapper} left={divider.offset + txClipped}>
       <ResizeHandle onPointerDown={onDragStart} />
       <ResizeMarker dragging={dragging} />
     </ResizeContainer>
@@ -215,6 +265,7 @@ export const ColumnResizerRow: React.FunctionComponent<ColumnResizerRowProps> =
             <ColumnResizer
               setDragging={setDragging}
               key={`${i}:${divider.offset}`}
+              index={i}
               divider={divider}
               onDragEnd={dragEndHandlers[i]}
             />
