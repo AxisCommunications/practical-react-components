@@ -18,6 +18,7 @@ import { Home } from './Home'
 import { Content } from './Content'
 
 import { Components } from './types'
+import { ColorSelector } from './mdx/colorSelector/ColorSelector'
 
 const practicalCoreModuleContext = require.context('./', true, /\.mdx$/)
 
@@ -108,6 +109,9 @@ ReactDOM.render(
                 <Switch>
                   <Route exact path="/">
                     <Home />
+                  </Route>
+                  <Route exact path="/color-selector">
+                    <ColorSelector />
                   </Route>
                   {componentDb.map(({ route, component: Component }) => (
                     <Route key={route} path={route}>
