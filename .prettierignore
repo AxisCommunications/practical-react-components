@@ -6,6 +6,6 @@ packages/docs/src/props.json
 **/__generated__/**
 
 .yarn/
-.pnp.js
+.pnp.*
 
 CHANGELOG.md
