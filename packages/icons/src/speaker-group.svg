@@ -1,0 +1,10 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'speaker group (filled)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <path
+    d="M6 5H4v16a2 2 0 002 2h10v-2H6zm12.2-4H9.8C8.81 1 8 1.81 8 2.8v14.4c0 .99.81 1.79 1.8 1.79l8.4.01c.99 0 1.8-.81 1.8-1.8V2.8c0-.99-.81-1.8-1.8-1.8zM14 3a2 2 0 11.001 3.999A2 2 0 0114 3zm0 13.5c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm2.5-4A2.5 2.5 0 0114 15a2.5 2.5 0 01-2.5-2.5A2.5 2.5 0 0114 10a2.5 2.5 0 012.5 2.5" />
+</svg>
