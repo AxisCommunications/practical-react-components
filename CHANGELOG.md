@@ -3,7 +3,17 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.40.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.39.0...v0.40.0) (2021-08-10 10:27:43 +0200)
+## [v0.41.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.40.0...v0.41.0) (2021-08-17 09:49:35 +0200)
+
+### 🚀 Features
+
+  - **icons**:  add speaker group icon (#121) ([753d4f8](https://github.com/AxisCommunications/practical-react-components/commit/753d4f8c915440bd8e46ca8a4836a271ff5ff3dd))
+
+### 🚧 Maintenance
+
+  -  update dependencies to latest versions (#122) ([ea91677](https://github.com/AxisCommunications/practical-react-components/commit/ea916777ded597c9b25d0bc69afdedb34db55c06))
+
+## [v0.40.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.39.0...v0.40.0) (2021-08-10 10:32:33 +0200)
 
 ### 🚧 Maintenance
 
