@@ -10,10 +10,10 @@
   ],
   "dependencies": {
     "@juggle/resize-observer": "3.3.1",
-    "focus-trap-react": "8.7.0",
+    "focus-trap-react": "8.7.1",
     "no-scroll": "2.1.1",
     "practical-react-components-icons": "workspace:*",
-    "react-hooks-shareable": "1.37.0"
+    "react-hooks-shareable": "1.38.0"
   },
   "devDependencies": {
     "@babel/cli": "7.14.8",
@@ -24,7 +24,7 @@
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
     "@types/no-scroll": "2.1.0",
-    "@types/react": "17.0.16",
+    "@types/react": "17.0.18",
     "@types/react-dom": "17.0.9",
     "@types/react-test-renderer": "17.0.1",
     "@types/react-transition-group": "4.4.2",
