@@ -501,7 +501,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                        ====================
 
 
-Package: practical-react-components-core (0.40.0)
+Package: practical-react-components-core (0.41.0)
 Web:     https://github.com/AxisCommunications/practical-react-components
 License: MIT
 
@@ -561,7 +561,7 @@ SOFTWARE.
                        ====================
 
 
-Package: practical-react-components-icons (0.40.0)
+Package: practical-react-components-icons (0.41.0)
 Web:     https://github.com/AxisCommunications/practical-react-components
 License: MIT AND Apache-2.0
 
@@ -1157,7 +1157,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                        ====================
 
 
-Package: practical-react-components-formik (0.40.0)
+Package: practical-react-components-formik (0.41.0)
 Web:     https://github.com/AxisCommunications/practical-react-components
 License: MIT
 
@@ -2115,7 +2115,7 @@ THE SOFTWARE.
                        ====================
 
 
-Package: practical-react-components (0.40.0)
+Package: practical-react-components (0.41.0)
 Web:     https://github.com/AxisCommunications/practical-react-components
 License: MIT
 
