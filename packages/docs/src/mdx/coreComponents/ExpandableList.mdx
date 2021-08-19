@@ -8,7 +8,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 
 import { DeviceIcon } from 'practical-react-components-icons'
-import { ExpandableList } from 'practical-react-components-core'
+import { ExpandableList, Typography } from 'practical-react-components-core'
 
 # ExpandableList
 
@@ -29,32 +29,32 @@ export const ITEMS = [
     selected: true,
     items: [
       {
-        id: 'item-1',
+        id: 'category-item-1',
         label: 'Item 1',
         icon: DeviceIcon,
       },
       {
-        id: 'something-2',
+        id: 'category-something-2',
         label: 'Something 2',
         icon: DeviceIcon,
       },
       {
-        id: 'something-else-3',
+        id: 'category-something-else-3',
         label: 'Something else 3',
         icon: DeviceIcon,
       },
       {
-        id: 'entirely-different-thing',
+        id: 'category-entirely-different-thing',
         label: 'Entirely different thing',
         icon: DeviceIcon,
       },
       {
-        id: 'and-this-thing',
+        id: 'category-and-this-thing',
         label: 'And this thing',
         icon: DeviceIcon,
       },
       {
-        id: 'also-this',
+        id: 'category-also-this',
         label: 'Also this',
         icon: DeviceIcon,
       },
@@ -64,11 +64,60 @@ export const ITEMS = [
     id: 'site-log',
     label: 'Site log',
     icon: DeviceIcon,
+    items: [
+      {
+        id: 'site-log-item-1',
+        label: 'Item 1',
+        icon: DeviceIcon,
+      },
+      {
+        id: 'site-log-something-2',
+        label: 'Something 2',
+        icon: DeviceIcon,
+      },
+      {
+        id: 'site-log-something-else-3',
+        label: 'Something else 3',
+        icon: DeviceIcon,
+      },
+      {
+        id: 'site-log-entirely-different-thing',
+        label: 'Entirely different thing',
+        icon: DeviceIcon,
+      },
+      {
+        id: 'site-log-and-this-thing',
+        label: 'And this thing',
+        icon: DeviceIcon,
+      },
+      {
+        id: 'site-log-also-this',
+        label: 'Also this',
+        icon: DeviceIcon,
+      },
+    ],
+  },
+  {
+    id: 'something-else',
+    label: 'Something else',
+    icon: DeviceIcon,
   },
 ]
 
 export const Container = styled.div`
   width: 256px;
+`
+
+export const DemoContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
+`
+
+export const DemoContainerItem = styled.div`
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: 16px;
 `
 
 export const DemoComponent = ({}) => {
@@ -101,9 +150,48 @@ export const DemoComponent = ({}) => {
   )
 }
 
+export const DemoComponentAccordion = ({}) => {
+  const [selectedItem, setSelectedItem] = useState('none')
+  const listItems = ITEMS.map(item => {
+    return {
+      ...item,
+      selected: selectedItem === item.id,
+      onClick: () => {
+        setSelectedItem(item.id)
+      },
+      items:
+        item.items !== undefined
+          ? item.items.map(subItem => {
+              return {
+                ...subItem,
+                selected: selectedItem === subItem.id,
+                onClick: () => {
+                  setSelectedItem(subItem.id)
+                },
+              }
+            })
+          : undefined,
+    }
+  })
+  return (
+    <Container>
+      <ExpandableList items={listItems} accordion={true} />
+    </Container>
+  )
+}
+
 export const onClick = () => {}
 
-<DemoComponent />
+<DemoContainer>
+  <DemoContainerItem>
+    <Typography variant="card-title">Expandable list</Typography>
+    <DemoComponent />
+  </DemoContainerItem>
+  <DemoContainerItem>
+    <Typography variant="card-title">Expandable list accordion</Typography>
+    <DemoComponentAccordion />
+  </DemoContainerItem>
+</DemoContainer>
 
 ## Basic usage
 

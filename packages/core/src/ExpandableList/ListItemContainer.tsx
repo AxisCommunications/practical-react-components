@@ -1,11 +1,11 @@
-import React, { useCallback, useRef, useState, useLayoutEffect } from 'react'
-
+import React, { useCallback } from 'react'
 import styled, { css } from 'styled-components'
-import { shape, spacing } from '../designparams'
+import { useHasOverflow } from 'react-hooks-shareable'
 
+import { shape, spacing } from '../designparams'
 import { Icon, IconType } from '../Icon'
 import { Typography } from '../Typography'
-import { Tooltip } from '../Tooltip'
+import { Tooltip, ExpandedTooltipTypography } from '../Tooltip'
 
 interface ListItemMarkerBaseProps {
   readonly selected: boolean
@@ -113,7 +113,9 @@ const ListItemMarker = styled.div<ListItemMarkerProps>`
     `}
 `
 
-const Label = styled(Typography)`
+const Label = styled(Typography).attrs({
+  variant: 'default-text',
+})`
   margin-right: ${spacing.huge};
   white-space: nowrap;
 `
@@ -160,27 +162,20 @@ interface OverflowTooltipProps {
  * Used to show a tooltip if label is too long to be fully shown in container.
  */
 const LabelOverflowTooltip: React.FC<OverflowTooltipProps> = ({ label }) => {
-  const [hasOverflow, setHasOverflow] = useState(false)
-  const labelRef = useRef<HTMLDivElement>(null)
+  const { hasOverflow, ref } = useHasOverflow()
 
-  useLayoutEffect(() => {
-    if (labelRef.current === null) {
-      return
-    }
+  const text = <Label ref={ref}>{label}</Label>
 
-    setHasOverflow(
-      labelRef.current.offsetHeight < labelRef.current.scrollHeight ||
-        labelRef.current.offsetWidth < labelRef.current.scrollWidth
-    )
-  }, [labelRef])
-
-  const text = (
-    <Label ref={labelRef} variant="default-text">
-      {label}
-    </Label>
+  return hasOverflow ? (
+    <Tooltip
+      variant="expanded"
+      contents={<ExpandedTooltipTypography>{label}</ExpandedTooltipTypography>}
+    >
+      <Label>{label}</Label>
+    </Tooltip>
+  ) : (
+    text
   )
-
-  return hasOverflow ? <Tooltip text={label}>{text}</Tooltip> : text
 }
 
 /**
@@ -193,7 +188,7 @@ const LabelOverflowTooltip: React.FC<OverflowTooltipProps> = ({ label }) => {
  *
  */
 
-export const ListItemContainer: React.FC<ListItemContainerProps> = ({
+export const ListItemContainer: React.VFC<ListItemContainerProps> = ({
   selected,
   isNestedItem,
   hasChildren,

@@ -1,4 +1,4 @@
-import React, { useCallback, FC, Dispatch, SetStateAction } from 'react'
+import React, { useCallback, Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
 import { FoldTransition } from '../Transition'
@@ -34,6 +34,7 @@ export interface ExpandableListItemProps extends BaseProps {
   readonly expandedItems: ReadonlyArray<string>
   readonly setExpandedItems: Dispatch<SetStateAction<ReadonlyArray<string>>>
   readonly isNestedItem: boolean
+  readonly isAccordion: boolean
 }
 
 /**
@@ -45,23 +46,34 @@ export interface ExpandableListItemProps extends BaseProps {
  *
  */
 
-export const ExpandableListItem: FC<ExpandableListItemProps> = ({
+export const ExpandableListItem: React.VFC<ExpandableListItemProps> = ({
   item,
   expandedItems,
   setExpandedItems,
   isNestedItem,
+  isAccordion,
   ...props
 }) => {
   const { id, label, icon, selected = false, onClick, items } = item
   const onChildClick = useCallback(
     () =>
       ((itemId: string) => {
-        const nextExpandedItems = expandedItems.includes(itemId)
-          ? expandedItems.filter(i => i !== itemId)
-          : [...expandedItems, id]
+        let nextExpandedItems = []
+
+        if (expandedItems.includes(itemId)) {
+          // Close the expanded item
+          nextExpandedItems = expandedItems.filter(i => i !== itemId)
+        } else if (isAccordion) {
+          // Only add one expanded item when accordion
+          nextExpandedItems = [id]
+        } else {
+          // Extend expanded items with a new one
+          nextExpandedItems = [...expandedItems, id]
+        }
+
         setExpandedItems(nextExpandedItems)
       })(id),
-    [expandedItems, id, setExpandedItems]
+    [expandedItems, id, isAccordion, setExpandedItems]
   )
   const hasChildren = items !== undefined
   const onItemClick = hasChildren ? onChildClick : onClick
@@ -93,6 +105,7 @@ export const ExpandableListItem: FC<ExpandableListItemProps> = ({
                 expandedItems={expandedItems}
                 setExpandedItems={setExpandedItems}
                 isNestedItem={true}
+                isAccordion={isAccordion}
               />
             ))}
           </ExpandableListContainer>
