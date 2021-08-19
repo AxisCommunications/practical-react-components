@@ -21,7 +21,13 @@ import { ModalProps } from '../Modal'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { MainSection } from './components/Content'
-import { BaseDialog, DialogWidth } from './BaseDialog'
+import {
+  BaseDialog,
+  DialogWidth,
+  DialogHeader,
+  DialogContent,
+  DialogFooter,
+} from './BaseDialog'
 import { twoLinesClamp } from '../utils/twoLinesClamp'
 
 export const HeaderTitle = styled(Typography).attrs({
@@ -68,17 +74,19 @@ export const Dialog: React.FC<DialogProps> = ({
       focusDialog={focusDialog}
       width={width}
       verticallyCenter={true}
-      header={
-        header !== undefined ? (
-          <Header shadowHidden={atTop !== false}>{header}</Header>
-        ) : null
-      }
-      footer={<Footer shadowHidden={atBottom !== false}>{controls}</Footer>}
       {...modalProps}
     >
+      {header !== undefined ? (
+        <DialogHeader>
+          <Header shadowHidden={atTop !== false}>{header}</Header>
+        </DialogHeader>
+      ) : null}
       <MainSection scrollRef={scrollRef} hasHeader={header !== undefined}>
-        {children}
+        <DialogContent>{children}</DialogContent>
       </MainSection>
+      <DialogFooter>
+        <Footer shadowHidden={atBottom !== false}>{controls}</Footer>
+      </DialogFooter>
     </BaseDialog>
   )
 }

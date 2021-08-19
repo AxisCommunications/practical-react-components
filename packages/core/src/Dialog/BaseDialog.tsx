@@ -12,7 +12,7 @@
  * specific dialogs. All dialogs should follow this structure.
  */
 
-import React, { ReactNode } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 import { Modal, ModalProps } from '../Modal'
@@ -76,32 +76,18 @@ interface BaseDialogContentProps {
    * Default: `'normal'`
    */
   readonly width?: DialogWidth
-  /**
-   * React element that will go into the top of the dialog.
-   */
-  readonly header?: ReactNode
-  /**
-   * React element that will go into the bottom of the dialog.
-   */
-  readonly footer: ReactNode
 }
 
 export type BaseDialogProps = BaseDialogContentProps & ModalProps
 
 export const BaseDialog: React.FC<BaseDialogProps> = ({
   width = 'normal',
-  header,
-  footer,
   children,
   ...modalProps
 }) => (
   <Modal {...modalProps}>
     <Paper>
-      <Container width={width}>
-        {header !== null ? <DialogHeader>{header}</DialogHeader> : null}
-        <DialogContent>{children}</DialogContent>
-        <DialogFooter>{footer}</DialogFooter>
-      </Container>
+      <Container width={width}>{children}</Container>
     </Paper>
   </Modal>
 )
