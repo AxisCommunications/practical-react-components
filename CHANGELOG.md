@@ -3,7 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.41.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.40.0...v0.41.0) (2021-08-17 09:49:35 +0200)
+## [v0.42.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.41.0...v0.42.0) (2021-08-19 13:35:05 +0200)
+
+### 🚀 Features
+
+  - **icons**:  add drag indicator icon (#123) ([245b954](https://github.com/AxisCommunications/practical-react-components/commit/245b954a0dddd83a36d016c727af3ddba79501c4))
+  - **expandableList**:  add `accordion` property to the component (#125) ([e4bed08](https://github.com/AxisCommunications/practical-react-components/commit/e4bed0883044d23fdd953acd7b8db0b6b9ca1f97))
+
+## [v0.41.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.40.0...v0.41.0) (2021-08-17 10:09:44 +0200)
 
 ### 🚀 Features
 
