@@ -42,7 +42,7 @@ export const ExpandableList: React.VFC<ExpandableListProps> = ({
           item={item}
           expandedItems={expandedItems}
           setExpandedItems={setExpandedItems}
-          isAccordion={accordion === true}
+          accordion={accordion}
           isNestedItem={false}
         />
       ))}
