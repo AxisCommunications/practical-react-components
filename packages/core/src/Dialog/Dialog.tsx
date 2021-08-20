@@ -81,9 +81,11 @@ export const Dialog: React.FC<DialogProps> = ({
           <Header shadowHidden={atTop !== false}>{header}</Header>
         </DialogHeader>
       ) : null}
-      <MainSection scrollRef={scrollRef} hasHeader={header !== undefined}>
-        <DialogContent>{children}</DialogContent>
-      </MainSection>
+      <DialogContent>
+        <MainSection scrollRef={scrollRef} hasHeader={header !== undefined}>
+          {children}
+        </MainSection>
+      </DialogContent>
       <DialogFooter>
         <Footer shadowHidden={atBottom !== false}>{controls}</Footer>
       </DialogFooter>
