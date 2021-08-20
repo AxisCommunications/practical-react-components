@@ -34,7 +34,7 @@ export interface ExpandableListItemProps extends BaseProps {
   readonly expandedItems: ReadonlyArray<string>
   readonly setExpandedItems: Dispatch<SetStateAction<ReadonlyArray<string>>>
   readonly isNestedItem: boolean
-  readonly isAccordion: boolean
+  readonly accordion?: boolean
 }
 
 /**
@@ -51,7 +51,7 @@ export const ExpandableListItem: React.VFC<ExpandableListItemProps> = ({
   expandedItems,
   setExpandedItems,
   isNestedItem,
-  isAccordion,
+  accordion = false,
   ...props
 }) => {
   const { id, label, icon, selected = false, onClick, items } = item
@@ -63,7 +63,7 @@ export const ExpandableListItem: React.VFC<ExpandableListItemProps> = ({
         if (expandedItems.includes(itemId)) {
           // Close the expanded item
           nextExpandedItems = expandedItems.filter(i => i !== itemId)
-        } else if (isAccordion) {
+        } else if (accordion) {
           // Only add one expanded item when accordion
           nextExpandedItems = [id]
         } else {
@@ -73,7 +73,7 @@ export const ExpandableListItem: React.VFC<ExpandableListItemProps> = ({
 
         setExpandedItems(nextExpandedItems)
       })(id),
-    [expandedItems, id, isAccordion, setExpandedItems]
+    [expandedItems, id, accordion, setExpandedItems]
   )
   const hasChildren = items !== undefined
   const onItemClick = hasChildren ? onChildClick : onClick
@@ -105,7 +105,7 @@ export const ExpandableListItem: React.VFC<ExpandableListItemProps> = ({
                 expandedItems={expandedItems}
                 setExpandedItems={setExpandedItems}
                 isNestedItem={true}
-                isAccordion={isAccordion}
+                accordion={accordion}
               />
             ))}
           </ExpandableListContainer>
