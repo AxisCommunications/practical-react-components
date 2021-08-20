@@ -3,7 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.42.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.41.0...v0.42.0) (2021-08-19 13:35:05 +0200)
+## [v0.43.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.42.0...v0.43.0) (2021-08-20 13:02:45 +0200)
+
+### 🐛 Bug fixes
+
+  - **dialog**:  correctly wrap components' content ([ae7fe18](https://github.com/AxisCommunications/practical-react-components/commit/ae7fe1823576b1f0843196003fa69f6445b56e36))
+  - **expandableList**:  make `accordion` property optional ([cd91622](https://github.com/AxisCommunications/practical-react-components/commit/cd9162279edb99feef29a61e3dca76c8456375d0))
+
+## [v0.42.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.41.0...v0.42.0) (2021-08-19 13:47:12 +0200)
 
 ### 🚀 Features
 
