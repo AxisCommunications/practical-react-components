@@ -5,7 +5,7 @@ import React, {
   Children,
   ReactElement,
 } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { useBoolean } from 'react-hooks-shareable'
 
 import { Typography, TypographyProps } from '../Typography'
@@ -20,6 +20,8 @@ import { font } from '../theme'
  * Positioned below the anchor element,
  * aliigned to it's center.
  */
+
+export const TOOLTIP_DELAY_MS = 250
 
 const BaseTooltipWrapper = styled.div`
   display: flex;
@@ -43,6 +45,20 @@ const TooltipWrapper = styled(BaseTooltipWrapper)`
   background-color: ${({ theme }) => theme.color.text04()};
 `
 
+export const ExpandedTooltipAnimation = css`
+  animation: fadein 200ms ease-out;
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+`
+
 const ExpandedTooltipWrapper = styled(BaseTooltipWrapper)`
   flex-direction: column;
   align-items: flex-start;
@@ -59,17 +75,7 @@ const ExpandedTooltipWrapper = styled(BaseTooltipWrapper)`
 
   word-break: break-word;
 
-  animation: fadein 200ms ease-out;
-
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
-  }
+  ${ExpandedTooltipAnimation}
 `
 
 const ExpandedTooltipTop = styled.div`
@@ -170,7 +176,7 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
 
   useEffect(() => {
     const delayVisible = () => setDebouncedVisible(visible)
-    const delayed = setTimeout(delayVisible, 250)
+    const delayed = setTimeout(delayVisible, TOOLTIP_DELAY_MS)
     return () => {
       clearTimeout(delayed)
     }
