@@ -63,6 +63,7 @@ const LabelContainer = styled.div`
 
   overflow: hidden;
   text-overflow: ellipsis;
+  word-wrap: break-word;
 `
 
 const MessageContainer = styled.div`
