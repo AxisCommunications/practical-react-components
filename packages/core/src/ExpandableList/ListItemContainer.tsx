@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
 import styled, { css } from 'styled-components'
-import { useHasOverflow } from 'react-hooks-shareable'
+import { useHasOverflowWithResizeEvent } from 'react-hooks-shareable'
 
 import { shape, spacing } from '../designparams'
 import { Icon, IconType } from '../Icon'
@@ -162,7 +162,7 @@ interface OverflowTooltipProps {
  * Used to show a tooltip if label is too long to be fully shown in container.
  */
 const LabelOverflowTooltip: React.FC<OverflowTooltipProps> = ({ label }) => {
-  const { hasOverflow, ref } = useHasOverflow()
+  const { hasOverflow, ref } = useHasOverflowWithResizeEvent()
 
   const text = <Label ref={ref}>{label}</Label>
 
