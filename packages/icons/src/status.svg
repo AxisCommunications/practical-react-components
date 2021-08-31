@@ -1,0 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'monitor_heart (outlined)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M4 4a2 2 0 00-2 2v3h2V6h16v3h2V6a2 2 0 00-2-2H4zm10 3.04a.98.98 0 00-.9.51L10 13.76l-1.1-2.2A.99.99 0 008 11H2v2h5.38l1.72 3.45c.18.34.52.55.9.55s.72-.21.9-.55l3.1-6.21 1.1 2.2c.18.35.52.56.9.56h6v-2h-5.38l-1.73-3.45a.98.98 0 00-.9-.51zM2 15v3c0 1.1.9 2 2 2h16a2 2 0 002-2v-3h-2v3H4v-3H2z"/>
+</svg>
