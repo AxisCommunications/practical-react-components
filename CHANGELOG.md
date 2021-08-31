@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.44.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.43.0...v0.44.0) (2021-08-24 09:37:12 +0200)
+## [v0.45.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.44.0...v0.45.0) (2021-08-31 14:26:05 +0200)
+
+### 🐛 Bug fixes
+
+  - **toast**:  correctly wrap label if word ([51eb309](https://github.com/AxisCommunications/practical-react-components/commit/51eb30971b2f1ad114825c74db5308aaa83dc47c))
+  - **expandableList**:  use `useHasOverflowWithResizeEvent` hook for text ([e73b35b](https://github.com/AxisCommunications/practical-react-components/commit/e73b35b138b1995a29d7db03d6499b75a9da8bc9))
+
+### 🚧 Maintenance
+
+  -  update dependencies to latest versions ([8b7d228](https://github.com/AxisCommunications/practical-react-components/commit/8b7d228d4f11d6bcc3cdb9b76abdc26ed6396a22))
+
+## [v0.44.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.43.0...v0.44.0) (2021-08-24 10:00:10 +0200)
 
 ### 🚧 Maintenance
 
