@@ -13,7 +13,7 @@
     "focus-trap-react": "8.7.1",
     "no-scroll": "2.1.1",
     "practical-react-components-icons": "workspace:*",
-    "react-hooks-shareable": "1.39.0"
+    "react-hooks-shareable": "1.40.0"
   },
   "devDependencies": {
     "@babel/cli": "7.14.8",
@@ -28,9 +28,9 @@
     "@types/react-dom": "17.0.9",
     "@types/react-test-renderer": "17.0.1",
     "@types/react-transition-group": "4.4.2",
-    "@types/styled-components": "5.1.12",
+    "@types/styled-components": "5.1.13",
     "@types/yup": "0.29.13",
-    "core-js": "3.16.2",
+    "core-js": "3.16.4",
     "jest-styled-components": "7.0.5",
     "pepjs": "0.5.3",
     "prop-types": "15.7.2",
@@ -39,7 +39,7 @@
     "react-is": "17.0.2",
     "react-test-renderer": "17.0.2",
     "react-transition-group": "4.4.2",
-    "styled-components": "5.3.0",
+    "styled-components": "5.3.1",
     "typeface-open-sans": "1.1.13",
     "typescript": "4.3.5",
     "yup": "0.32.9"
