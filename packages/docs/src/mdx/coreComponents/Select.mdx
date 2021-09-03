@@ -25,6 +25,10 @@ export const onClick = () => {}
 export const fruitOptions = [
   { value: 'apple', label: 'Apple' },
   { value: 'banana', label: 'Banana' },
+  {
+    value: 'very long text label',
+    label: 'Long labels will be automatically wrapped with in the container',
+  },
   { value: 'pie', label: 'Pie', disabled: true },
 ]
 
@@ -49,10 +53,11 @@ export const DemoComponent = ({}) => {
     <div
       style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(2, 1fr)',
+        gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
         alignItems: 'flex-start',
         gridGap: '16px',
         maxWidth: '600px',
+        minWidth: '0',
       }}
     >
       <SelectField

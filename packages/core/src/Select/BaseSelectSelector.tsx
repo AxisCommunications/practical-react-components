@@ -17,10 +17,9 @@ interface SelectInputProps {
 }
 
 export const SelectInsideContainer = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: space-between;
   height: 100%;
   width: 100%;
 `

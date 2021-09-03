@@ -94,6 +94,10 @@ const SelectItem = styled.li<{
           }
         `};
 `
+const Item = styled.span`
+  overflow: hidden;
+  text-overflow: ellipsis;
+`
 
 const NoOptionsText = styled(Typography)`
   display: flex;
@@ -169,7 +173,7 @@ const SelectOptionComponent: React.FC<SelectOption> = ({
       selected={selected && selectMarker === 'background'}
       ref={ref}
     >
-      {item}
+      <Item>{item}</Item>
     </SelectItem>
   )
 }
@@ -214,6 +218,7 @@ export const SelectPopover: React.FC<SelectPopoverProps> = ({
 
   const MAX_HEIGHT = 320
   const MIN_HEIGHT = 160
+  const MAX_MIN_WIDTH = 300
 
   const onDropdownPosition = useCallback(
     (anchorElement, popOverContainerEl) => {
@@ -224,6 +229,10 @@ export const SelectPopover: React.FC<SelectPopoverProps> = ({
       const anchorBBox = anchorElement.getBoundingClientRect()
       const { top, bottom, left, right } = anchorBBox
       popOverContainerEl.style.minWidth = `${right - left}px`
+      popOverContainerEl.style.maxWidth = `${Math.max(
+        right - left,
+        MAX_MIN_WIDTH
+      )}px`
 
       // Calculate available space above and below
       const { clientHeight } = document.documentElement
