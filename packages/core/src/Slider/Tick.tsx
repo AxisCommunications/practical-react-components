@@ -66,8 +66,25 @@ const BaseLabel = styled.div.attrs<{
   readonly center: number
   readonly width: number
 }>(({ center, width }) => ({
-  style: { left: `calc(${center}% - ${width / 2}px)` },
-}))<{ readonly center: number; readonly width: number }>`
+  style: (() => {
+    if (center === 0) {
+      return {
+        left: 0,
+      }
+    }
+
+    if (center === 100) {
+      return { right: 0 }
+    }
+
+    return {
+      left: `calc(${center}% - ${width / 2}px)`,
+    }
+  })(),
+}))<{
+  readonly center: number
+  readonly width: number
+}>`
   position: absolute;
   cursor: pointer;
 
