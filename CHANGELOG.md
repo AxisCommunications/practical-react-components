@@ -3,10 +3,15 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.45.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.44.0...v0.45.0) (2021-08-31 14:26:05 +0200)
+## [v0.46.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.44.0...v0.46.0) (2021-09-06 10:47:49 +0200)
+
+### 🚀 Features
+
+  - **icons**:  add status icon ([d2b27b2](https://github.com/AxisCommunications/practical-react-components/commit/d2b27b25acafa1f476f7db2d8d1a3f80c6b9cd3e))
 
 ### 🐛 Bug fixes
 
+  - **slider**:  align min and max tick labels ([00b69b2](https://github.com/AxisCommunications/practical-react-components/commit/00b69b21d3d60f8f8ad20c59500dab8cb6faaa6e))
   - **toast**:  correctly wrap label if word ([51eb309](https://github.com/AxisCommunications/practical-react-components/commit/51eb30971b2f1ad114825c74db5308aaa83dc47c))
   - **expandableList**:  use `useHasOverflowWithResizeEvent` hook for text ([e73b35b](https://github.com/AxisCommunications/practical-react-components/commit/e73b35b138b1995a29d7db03d6499b75a9da8bc9))
 
