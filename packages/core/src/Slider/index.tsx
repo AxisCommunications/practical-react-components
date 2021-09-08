@@ -575,7 +575,7 @@ export const Slider: React.FC<SliderProps> = ({
       {hasTickLabels ? (
         <TickLabelContainer>
           {tickLabels.map(({ key, ...tickLabel }) => (
-            <TickLabel key={key} {...tickLabel} />
+            <TickLabel key={key} disabled={disabled} {...tickLabel} />
           ))}
         </TickLabelContainer>
       ) : null}

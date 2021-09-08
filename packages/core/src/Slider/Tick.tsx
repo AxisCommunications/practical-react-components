@@ -1,5 +1,5 @@
 import React, { useCallback, useLayoutEffect, useRef, useState } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import { spacing, opacity, shape } from '../designparams'
 import { Typography } from '../Typography'
@@ -84,6 +84,7 @@ const BaseLabel = styled.div.attrs<{
 }))<{
   readonly center: number
   readonly width: number
+  readonly disabled: boolean
 }>`
   position: absolute;
   cursor: pointer;
@@ -92,6 +93,20 @@ const BaseLabel = styled.div.attrs<{
     background-color: ${({ theme }) => theme.color.element11(opacity[24])};
     transform: scaleX(1);
   }
+
+  ${({ disabled }) =>
+    disabled
+      ? css`
+          pointer-events: none;
+          opacity: ${opacity[48]};
+        `
+      : undefined};
+`
+
+const Label = styled(Typography).attrs({
+  variant: 'explanatory-text',
+})`
+  color: ${({ theme }) => theme.color.text04()};
 `
 
 export const TickMarker: React.FC<Omit<Tick, 'label'>> = ({
@@ -114,6 +129,10 @@ interface TickLabelProps {
    */
   readonly label?: string
   /**
+   * If `true`, the tick label will be disabled
+   */
+  readonly disabled?: boolean
+  /**
    * Executes JavaScript when clicking the value.
    */
   readonly handleChange: (value: number) => void
@@ -124,6 +143,7 @@ export const TickLabel: React.FC<TickLabelProps> = ({
   label,
   value,
   handleChange,
+  disabled = false,
 }) => {
   const [width, setWidth] = useState<number>(0)
   const el = useRef<HTMLDivElement | null>(null)
@@ -145,12 +165,10 @@ export const TickLabel: React.FC<TickLabelProps> = ({
   }, [])
 
   return (
-    <BaseLabel ref={el} center={position} width={width}>
+    <BaseLabel ref={el} center={position} width={width} disabled={disabled}>
       <LabelContainer onClick={handleClick}>
         <BoxHalo width={width}></BoxHalo>
-        <Typography variant="explanatory-text">
-          {label === undefined ? value : label}
-        </Typography>
+        <Label>{label === undefined ? value : label}</Label>
       </LabelContainer>
     </BaseLabel>
   )
