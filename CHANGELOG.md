@@ -3,7 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.46.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.44.0...v0.46.0) (2021-09-06 10:47:49 +0200)
+## [v0.47.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.46.0...v0.47.0) (2021-09-09 09:58:19 +0200)
+
+### 🚀 Features
+
+  - **slider**:  add disabled property to tick labels ([d90e349](https://github.com/AxisCommunications/practical-react-components/commit/d90e3496f2eb25d7ad81269476b5e123d4246653))
+  -  export tooltip delay time and animation ([5c68a26](https://github.com/AxisCommunications/practical-react-components/commit/5c68a26bf4235ed665d3ed8cdb40f2c7115d0b1a))
+
+## [v0.46.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.45.0...v0.46.0) (2021-09-06 11:28:06 +0200)
 
 ### 🚀 Features
 
@@ -12,6 +19,11 @@ All notable changes to this project will be documented in this file.
 ### 🐛 Bug fixes
 
   - **slider**:  align min and max tick labels ([00b69b2](https://github.com/AxisCommunications/practical-react-components/commit/00b69b21d3d60f8f8ad20c59500dab8cb6faaa6e))
+
+## [v0.45.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.44.0...v0.45.0) (2021-08-31 15:21:16 +0200)
+
+### 🐛 Bug fixes
+
   - **toast**:  correctly wrap label if word ([51eb309](https://github.com/AxisCommunications/practical-react-components/commit/51eb30971b2f1ad114825c74db5308aaa83dc47c))
   - **expandableList**:  use `useHasOverflowWithResizeEvent` hook for text ([e73b35b](https://github.com/AxisCommunications/practical-react-components/commit/e73b35b138b1995a29d7db03d6499b75a9da8bc9))
 
