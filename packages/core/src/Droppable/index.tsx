@@ -139,6 +139,18 @@ export const Droppable: React.FC<DroppableProps> = ({
     [handleFile, onChange]
   )
 
+  const handleKeyUp = useCallback<React.KeyboardEventHandler<BaseElement>>(
+    e => {
+      switch (e.key) {
+        case 'Enter': {
+          handleLinkClick()
+          break
+        }
+      }
+    },
+    [handleLinkClick]
+  )
+
   const hasSelectedFile = selectedFileName !== undefined
 
   return (
@@ -151,6 +163,8 @@ export const Droppable: React.FC<DroppableProps> = ({
       onDrop={handleDragAndDrop}
       onClick={handleLinkClick}
       className={className}
+      tabIndex={0}
+      onKeyUp={handleKeyUp}
     >
       <DroppableIcon icon={DropIcon} />
       <DroppableInputFile

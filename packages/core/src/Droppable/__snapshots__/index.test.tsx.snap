@@ -133,6 +133,8 @@ exports[`Droppable Droppable 1`] = `
         onDragLeave={[Function]}
         onDragOver={[Function]}
         onDrop={[Function]}
+        onKeyUp={[Function]}
+        tabIndex={0}
       >
         <span
           className="c3 c4"
@@ -325,6 +327,8 @@ exports[`Droppable Droppable 2`] = `
         onDragLeave={[Function]}
         onDragOver={[Function]}
         onDrop={[Function]}
+        onKeyUp={[Function]}
+        tabIndex={0}
       >
         <span
           className="c3 c4"
