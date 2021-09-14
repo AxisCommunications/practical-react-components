@@ -1,4 +1,4 @@
-Package: core-js (3.16.4)
+Package: core-js (3.17.3)
 Web:     
 License: MIT
 
@@ -531,7 +531,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-hooks-shareable (1.40.0)
+Package: react-hooks-shareable (1.41.0)
 Web:     https://github.com/AxisCommunications/react-hooks-shareable
 License: MIT
 
@@ -1497,7 +1497,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                        ====================
 
 
-Package: react-router-dom (5.2.1)
+Package: react-router-dom (5.3.0)
 Web:     
 License: MIT
 
