@@ -3,7 +3,17 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.47.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.46.0...v0.47.0) (2021-09-09 09:58:19 +0200)
+## [v0.48.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.47.0...v0.48.0) (2021-09-14 09:30:36 +0200)
+
+### 🚀 Features
+
+  - **docs**:  ThemeCreator ([41ac4af](https://github.com/AxisCommunications/practical-react-components/commit/41ac4afbd9d54dab832be87240f28017e4755fe4))
+
+### 🚧 Maintenance
+
+  -  update dependencies to latest versions ([3072563](https://github.com/AxisCommunications/practical-react-components/commit/3072563066a03bf846123a7774815a30063e476b))
+
+## [v0.47.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.46.0...v0.47.0) (2021-09-09 15:21:17 +0200)
 
 ### 🚀 Features
 
