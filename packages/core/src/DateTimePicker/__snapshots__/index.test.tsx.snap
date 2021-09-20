@@ -1677,6 +1677,7 @@ exports[`DateTimePicker DateTimePicker 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   padding: 0 8px;
   overflow: hidden;
   white-space: nowrap;
@@ -1711,6 +1712,7 @@ exports[`DateTimePicker DateTimePicker 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   padding: 0 8px;
   overflow: hidden;
   white-space: nowrap;
@@ -3014,6 +3016,7 @@ exports[`DateTimePicker DateTimePicker 2`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   padding: 0 8px;
   overflow: hidden;
   white-space: nowrap;
@@ -3048,6 +3051,7 @@ exports[`DateTimePicker DateTimePicker 2`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  box-sizing: border-box;
   padding: 0 8px;
   overflow: hidden;
   white-space: nowrap;
