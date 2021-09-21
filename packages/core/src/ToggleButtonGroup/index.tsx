@@ -147,8 +147,12 @@ function ToggleButton<T extends string | number>({
     if (disabled) {
       return
     }
+
+    if (selected) {
+      return
+    }
     onClick(id)
-  }, [disabled, id, onClick])
+  }, [disabled, id, onClick, selected])
 
   return (
     <ToggleButtonContainer
