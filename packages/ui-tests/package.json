@@ -1,7 +1,7 @@
 {
   "name": "practical-react-components-ui-tests",
   "private": true,
-  "version": "0.48.0",
+  "version": "0.49.0",
   "license": "MIT",
   "scripts": {
     "build:ts": "cross-env TS_NODE_PROJECT=\"tsconfig.webpack.json\" --env.NODE_ENV=docs",
@@ -9,12 +9,12 @@
     "dev": "yarn build:ts webpack serve"
   },
   "dependencies": {
-    "core-js": "3.17.3",
+    "core-js": "3.18.0",
     "practical-react-components-core": "workspace:*",
     "practical-react-components-icons": "workspace:*",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-hooks-shareable": "1.41.0",
+    "react-hooks-shareable": "1.42.0",
     "react-is": "17.0.2",
     "react-router-dom": "5.3.0",
     "regenerator-runtime": "0.13.9",
@@ -27,9 +27,9 @@
     "@babel/preset-react": "7.14.5",
     "@babel/preset-typescript": "7.15.0",
     "@cypress/webpack-preprocessor": "5.9.1",
-    "@types/node": "16.9.1",
-    "@types/react": "17.0.20",
-    "@types/react-router-dom": "5.1.8",
+    "@types/node": "16.9.4",
+    "@types/react": "17.0.22",
+    "@types/react-router-dom": "5.1.9",
     "@types/regenerator-runtime": "0.13.1",
     "@types/styled-components": "5.1.14",
     "@types/webpack": "5.28.0",
@@ -46,7 +46,7 @@
     "tsconfig-paths": "3.11.0",
     "typescript": "4.4.3",
     "wait-on": "6.0.0",
-    "webpack": "5.52.1",
+    "webpack": "5.53.0",
     "webpack-cli": "4.8.0",
     "webpack-dev-server": "3.11.2",
     "yargs": "17.1.1"
