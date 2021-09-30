@@ -340,7 +340,10 @@ export const Slider: React.FC<SliderProps> = ({
     }
   }, [tickConfig])
 
-  const fraction = (value - min) / (max - min)
+  const fraction = useMemo(
+    () => clamp((value - min) / (max - min)),
+    [max, min, value]
+  )
 
   // Generate the ticks with its position along the x-axis
   const tickMarkers = useMemo(
