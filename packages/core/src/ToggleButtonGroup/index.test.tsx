@@ -76,6 +76,38 @@ const TestControllerWithField: React.FC = () => {
   )
 }
 
+const TestControlledWithFieldExclusive: React.FC = () => {
+  const [exclusiveValue, setExclusiveValue] = useState([])
+
+  const onExclusiveChange = useCallback(id => {
+    setExclusiveValue([id])
+  }, [])
+
+  return (
+    <ToggleButtonGroupWithField
+      data-cy="toggleButtonGroupExclusive"
+      label="Exclusive selection"
+      onChange={onExclusiveChange}
+      exclusive
+      options={[
+        {
+          id: 'option1',
+          content: <Typography>Option 1</Typography>,
+        },
+        {
+          id: 'option2',
+          content: <Typography>Option 2</Typography>,
+        },
+        {
+          id: 'option3',
+          content: <Typography>Option 3</Typography>,
+        },
+      ]}
+      values={exclusiveValue}
+    />
+  )
+}
+
 describe('ToggleButtonGroup', () => {
   test('ToggleButtonGroup', () => {
     const test = TestRender(<TestController />)
@@ -83,6 +115,10 @@ describe('ToggleButtonGroup', () => {
   })
   test('ToggleButtonGroupWithField', () => {
     const test = TestRender(<TestControllerWithField />)
+    expect(test).toMatchSnapshot()
+  })
+  test('ToggleButtonGroupWithFieldExclusive', () => {
+    const test = TestRender(<TestControlledWithFieldExclusive />)
     expect(test).toMatchSnapshot()
   })
 })
