@@ -117,6 +117,11 @@ interface ToggleButtonProps<T extends string | number> {
    */
   readonly onClick: (id: T) => void
   /**
+   * If `true`, only allow one of the child ToggleButton values to be selected.
+   * @default false
+   */
+  readonly exclusive?: boolean
+  /**
    * ToggleButton content.
    */
   readonly content: React.ReactNode
@@ -136,6 +141,7 @@ function ToggleButton<T extends string | number>({
   disabled = false,
   onClick,
   content,
+  exclusive = false,
 }: ToggleButtonProps<T>): JSX.Element {
   const selected = useMemo(
     () => values.some(value => value === id),
@@ -147,8 +153,13 @@ function ToggleButton<T extends string | number>({
     if (disabled) {
       return
     }
+
+    if (exclusive && selected) {
+      return
+    }
+
     onClick(id)
-  }, [disabled, id, onClick])
+  }, [disabled, id, exclusive, selected, onClick])
 
   return (
     <ToggleButtonContainer
@@ -194,6 +205,11 @@ interface ToggleButtonGroupProps<T extends string | number>
    */
   readonly values: ReadonlyArray<T>
   /**
+   * If `true`, only allow one of the child ToggleButton values to be selected.
+   * @default false
+   */
+  readonly exclusive?: boolean
+  /**
    * Callback fired when user clicks a toggle button.
    * @param id The toggle button id prop
    */
@@ -204,6 +220,7 @@ export function ToggleButtonGroup<T extends string | number>({
   options,
   onChange,
   values,
+  exclusive = false,
   ...props
 }: ToggleButtonGroupProps<T>): JSX.Element {
   return (
@@ -215,6 +232,7 @@ export function ToggleButtonGroup<T extends string | number>({
             {...option}
             values={values}
             onClick={onChange}
+            exclusive={exclusive}
           />
         )
       })}

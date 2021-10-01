@@ -23,6 +23,7 @@ To emphasize groups of related Toggle buttons, a group should share a common con
 
 export const DemoComponent = ({}) => {
   const [values, setToggledValues] = useState(['24'])
+  const [exclusiveValue, setExclusiveValue] = useState([])
   const onChange = useCallback(
     id => {
       const found = values.includes(id)
@@ -33,6 +34,12 @@ export const DemoComponent = ({}) => {
       }
     },
     [values]
+  )
+  const onExclusiveChange = useCallback(
+    id => {
+      setExclusiveValue([id])
+    },
+    [exclusiveValue]
   )
   return (
     <>
@@ -92,6 +99,23 @@ export const DemoComponent = ({}) => {
           },
         ]}
         values={values}
+      />
+      <ToggleButtonGroupWithField
+        label="Exclusive selection"
+        onChange={onExclusiveChange}
+        exclusive
+        options={[
+          {
+            id: 'option1',
+            content: <Typography>Option 1</Typography>,
+          },
+          { id: 'option2', content: <Typography>Option 2</Typography> },
+          {
+            id: 'option3',
+            content: <Typography>Option 3</Typography>,
+          },
+        ]}
+        values={exclusiveValue}
       />
     </>
   )
