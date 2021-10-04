@@ -3,7 +3,20 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.49.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.48.0...v0.49.0) (2021-09-21 10:07:38 +0200)
+## [v0.50.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.49.0...v0.50.0) (2021-09-30 12:20:28 +0200)
+
+### 🚀 Features
+
+  - **table**:  double-click resizes adjacent columns ([d6de26f](https://github.com/AxisCommunications/practical-react-components/commit/d6de26f9a69c7fbd9e569cb98d9a993c39981c9b))
+  - **droppable**:  tab and select file with enter key ([c912bfa](https://github.com/AxisCommunications/practical-react-components/commit/c912bfafc800acbe119006e31350bf1fa563d670))
+  - **icons**:  add headphones icon ([5b060bc](https://github.com/AxisCommunications/practical-react-components/commit/5b060bcba198480f372cc7b26b1abf977465cfc8))
+
+### 🐛 Bug fixes
+
+  - **select**:  provide max width for select popover with long labels. ([2ed6dd1](https://github.com/AxisCommunications/practical-react-components/commit/2ed6dd1b861ea13901bfae9967f2f4998201bbf8))
+  - **slider**:  limit slider value ([8fab4b7](https://github.com/AxisCommunications/practical-react-components/commit/8fab4b7ba55a9a82a396112569c2b79cf4afbe59))
+
+## [v0.49.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.48.0...v0.49.0) (2021-09-21 10:53:54 +0200)
 
 ### 🚧 Maintenance
 
