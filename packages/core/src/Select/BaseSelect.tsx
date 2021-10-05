@@ -579,7 +579,7 @@ export function BaseSelect<V extends string = string>({
     }
   }, [isOpen, listRef, itemRefs, valueIndex])
 
-  const handleBlur: React.EventHandler<React.FocusEvent> = useCallback(() => {
+  const handleBlur = useCallback(() => {
     onBlur?.(true)
     setKeyboardOn()
     closePopover()
