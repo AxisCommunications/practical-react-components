@@ -1,4 +1,4 @@
-Package: core-js (3.18.0)
+Package: core-js (3.18.1)
 Web:     
 License: MIT
 
@@ -443,7 +443,7 @@ License: MIT
                        ====================
 
 
-Package: style-loader (3.2.1)
+Package: style-loader (3.3.0)
 Web:     https://github.com/webpack-contrib/style-loader
 License: MIT
 
@@ -531,7 +531,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-hooks-shareable (1.42.0)
+Package: react-hooks-shareable (1.43.0)
 Web:     https://github.com/AxisCommunications/react-hooks-shareable
 License: MIT
 
@@ -835,7 +835,7 @@ SOFTWARE.
                        ====================
 
 
-Package: focus-trap-react (8.7.1)
+Package: focus-trap-react (8.8.1)
 Web:     https://github.com/focus-trap/focus-trap-react#readme
 License: MIT
 
@@ -1573,7 +1573,7 @@ SOFTWARE.
                        ====================
 
 
-Package: focus-trap (6.6.1)
+Package: focus-trap (6.7.1)
 Web:     https://github.com/focus-trap/focus-trap#readme
 License: MIT
 
