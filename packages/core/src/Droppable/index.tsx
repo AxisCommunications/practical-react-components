@@ -36,6 +36,10 @@ const DroppableArea = styled.div<{ readonly isDragging: boolean }>`
   text-align: center;
   padding: ${spacing.large} ${spacing.extraLarge};
   cursor: pointer;
+  &:focus {
+    border: 1px solid ${({ theme }) => theme.color.textPrimary()};
+    outline: none;
+  }
 `
 
 const DroppableInputFile = styled.input`
