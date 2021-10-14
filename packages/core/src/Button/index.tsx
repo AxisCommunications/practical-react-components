@@ -10,6 +10,7 @@ const BUTTON_MIN_WIDTH = '83px'
 
 //Common CSS for NativeButton and NativeIconTextButton
 const COMMON_STYLE = css`
+  vertical-align: middle;
   white-space: nowrap;
   height: ${componentSize.small};
   outline: none;
@@ -547,6 +548,7 @@ export const NativeIconTextButton = styled.button<{
 const IconContainer = styled(Icon)`
   ${({ theme }) => {
     return css`
+      box-sizing: border-box;
       height: ${componentSize.small};
       width: ${componentSize.small};
       color: ${theme.color.text00()};

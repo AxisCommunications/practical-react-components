@@ -39,6 +39,7 @@ exports[`DateTimePicker DatePicker 1`] = `
 }
 
 .c4 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -86,6 +87,7 @@ exports[`DateTimePicker DatePicker 1`] = `
 }
 
 .c16 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -127,6 +129,7 @@ exports[`DateTimePicker DatePicker 1`] = `
 }
 
 .c19 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -1143,6 +1146,7 @@ exports[`DateTimePicker DateTimePicker 1`] = `
 }
 
 .c39 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -1189,6 +1193,7 @@ exports[`DateTimePicker DateTimePicker 1`] = `
 }
 
 .c42 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -2346,6 +2351,7 @@ exports[`DateTimePicker DateTimePicker 2`] = `
 }
 
 .c51 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -2392,6 +2398,7 @@ exports[`DateTimePicker DateTimePicker 2`] = `
 }
 
 .c54 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -3735,6 +3742,7 @@ exports[`DateTimePicker TimePickers 1`] = `
 }
 
 .c21 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -3781,6 +3789,7 @@ exports[`DateTimePicker TimePickers 1`] = `
 }
 
 .c24 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;

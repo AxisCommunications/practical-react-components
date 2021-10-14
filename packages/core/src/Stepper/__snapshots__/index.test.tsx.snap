@@ -49,6 +49,7 @@ exports[`Stepper Stepper 1`] = `
 }
 
 .c13 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -457,6 +458,7 @@ exports[`Stepper Stepper 2`] = `
 }
 
 .c13 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -826,6 +828,7 @@ exports[`Stepper Stepper 3`] = `
 }
 
 .c12 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
