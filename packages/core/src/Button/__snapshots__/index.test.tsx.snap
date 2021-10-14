@@ -15,6 +15,7 @@ exports[`Button primary 1`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -169,6 +170,7 @@ exports[`Button primary 2`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -333,6 +335,7 @@ exports[`Button secondary 1`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -488,6 +491,7 @@ exports[`Button secondary 2`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -653,6 +657,7 @@ exports[`Button secondary 3`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -818,6 +823,7 @@ exports[`Button secondary 4`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -983,6 +989,7 @@ exports[`Button secondary 5`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -1161,6 +1168,7 @@ exports[`IconButton primary 1`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -1324,6 +1332,7 @@ exports[`IconButton primary 2`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -1498,6 +1507,7 @@ exports[`IconButton secondary 1`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -1719,6 +1729,7 @@ exports[`IconButton secondary 2`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -1951,6 +1962,7 @@ exports[`IconButton secondary 3`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -2172,6 +2184,7 @@ exports[`IconButton secondary 4`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -2441,6 +2454,7 @@ exports[`IconTextButton primary 1`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -2494,6 +2508,7 @@ exports[`IconTextButton primary 1`] = `
 }
 
 .c6 {
+  box-sizing: border-box;
   height: 32px;
   width: 32px;
   color: rgb(255,255,255);
@@ -2660,6 +2675,7 @@ exports[`IconTextButton primary 2`] = `
 }
 
 .c2 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -2713,6 +2729,7 @@ exports[`IconTextButton primary 2`] = `
 }
 
 .c6 {
+  box-sizing: border-box;
   height: 32px;
   width: 32px;
   color: rgb(255,255,255);

@@ -26,6 +26,7 @@ exports[`FilePicker FilePicker 1`] = `
 }
 
 .c3 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
@@ -228,6 +229,7 @@ exports[`FilePicker FilePicker 2`] = `
 }
 
 .c3 {
+  vertical-align: middle;
   white-space: nowrap;
   height: 32px;
   outline: none;
