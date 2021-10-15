@@ -3,7 +3,11 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.51.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.50.0...v0.51.0) (2021-10-05 11:28:01 +0200)
+## [v0.52.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.50.0...v0.52.0) (2021-10-12 08:13:29 +0200)
+
+### 🚀 Features
+
+  - **tooltip**:  support for left-right variant of expanded tooltip ([096fa13](https://github.com/AxisCommunications/practical-react-components/commit/096fa137f984a52e8bfc85272e62169f093c5030))
 
 ### 🚧 Maintenance
 
