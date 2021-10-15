@@ -3,7 +3,17 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.52.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.50.0...v0.52.0) (2021-10-12 08:13:29 +0200)
+## [v0.53.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.52.0...v0.53.0) (2021-10-15 14:58:31 +0200)
+
+### 🚀 Features
+
+  - **toggleButtonGroup**:  add exclusiveness to options ([ba59742](https://github.com/AxisCommunications/practical-react-components/commit/ba59742fbaeecfb207f3510602ef58d78ee14c31))
+
+### 🐛 Bug fixes
+
+  - **droppable**:  add focus style for droppable when tabbed into (focused) ([de2bd2e](https://github.com/AxisCommunications/practical-react-components/commit/de2bd2e1bb47a664fc00006ec5d303482bfb4fd1))
+
+## [v0.52.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.50.0...v0.52.0) (2021-10-15 09:21:06 +0200)
 
 ### 🚀 Features
 
