@@ -152,11 +152,13 @@ ${module.licenseText ?? ''}
     ],
 
     devServer: {
-      contentBase: path.join(__dirname, DIST_FOLDER),
+      static: {
+        directory: path.join(__dirname, DIST_FOLDER),
+      },
       historyApiFallback: true,
       port,
       host: '0.0.0.0',
-      disableHostCheck: true,
+      allowedHosts: 'all',
     },
   }
 }

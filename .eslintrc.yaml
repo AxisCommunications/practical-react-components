@@ -27,3 +27,6 @@ overrides:
   - files: ['**/*.test.tsx', '**/jest/**']
     env:
       jest: true
+
+rules:
+  'react-hooks/exhaustive-deps': off # temporary disable until a new release that fixes https://github.com/facebook/react/issues/22545
