@@ -65,7 +65,9 @@ export default {
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, DIST_FOLDER),
+    static: {
+      directory: path.join(__dirname, DIST_FOLDER),
+    },
     historyApiFallback: true,
     port: 9009,
   },
