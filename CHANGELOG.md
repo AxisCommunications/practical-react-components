@@ -3,7 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.54.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.53.0...v0.54.0) (2021-10-19 12:30:56 +0200)
+## [v0.55.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.54.0...v0.55.0) (2021-10-20 09:43:28 +0200)
+
+### 🚀 Features
+
+  - **icons**:  add delete forever outlined icon ([5457f3e](https://github.com/AxisCommunications/practical-react-components/commit/5457f3e5e79453d33cb840b2118d2cf4809ed91f))
+
+### 🐛 Bug fixes
+
+  - **toggleButtonGroup**:  color and border don't overflow now ([cf56ce8](https://github.com/AxisCommunications/practical-react-components/commit/cf56ce8803acfb2f4163029b724280d09e35a95c))
+
+### 🚧 Maintenance
+
+  - **toggleButtonGroup**:  update missing snapshot ([d4e1d2f](https://github.com/AxisCommunications/practical-react-components/commit/d4e1d2fc2019dd534b0c2322e381ea38028a3fa6))
+  -  updates cypress version ([f60d952](https://github.com/AxisCommunications/practical-react-components/commit/f60d952135d766d438068dcf07f2dfb6c7e6040c))
+
+## [v0.54.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.53.0...v0.54.0) (2021-10-19 12:48:24 +0200)
 
 ### 🚧 Maintenance
 
@@ -19,11 +34,13 @@ All notable changes to this project will be documented in this file.
 
   - **droppable**:  add focus style for droppable when tabbed into (focused) ([de2bd2e](https://github.com/AxisCommunications/practical-react-components/commit/de2bd2e1bb47a664fc00006ec5d303482bfb4fd1))
 
-## [v0.52.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.50.0...v0.52.0) (2021-10-15 09:21:06 +0200)
+## [v0.52.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.51.0...v0.52.0) (2021-10-15 09:21:06 +0200)
 
 ### 🚀 Features
 
   - **tooltip**:  support for left-right variant of expanded tooltip ([096fa13](https://github.com/AxisCommunications/practical-react-components/commit/096fa137f984a52e8bfc85272e62169f093c5030))
+
+## [v0.51.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.50.0...v0.51.0) (2021-10-05 11:43:00 +0200)
 
 ### 🚧 Maintenance
 
