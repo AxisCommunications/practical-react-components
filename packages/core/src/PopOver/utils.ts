@@ -33,16 +33,16 @@ export const useOnScrollEffect = (
 }
 
 // Reposition on resize
-export const useOnResizeEffect = (
-  anchorEl: HTMLElement | null,
+export const useOnResizeParentEffect = (
+  element: HTMLElement | null,
   onResize: () => void
 ): void => {
   useLayoutEffect(() => {
-    if (anchorEl === null) {
+    if (element === null) {
       return undefined
     }
 
-    let parentEl = anchorEl.parentElement
+    let parentEl = element.parentElement
     const observer = new window.ResizeObserver(onResize)
 
     while (parentEl !== null) {
@@ -51,7 +51,23 @@ export const useOnResizeEffect = (
     }
 
     return () => observer.disconnect()
-  }, [onResize, anchorEl])
+  }, [onResize, element])
+}
+
+export const useOnResizeEffect = (
+  element: HTMLElement | null,
+  onResize: () => void
+) => {
+  useLayoutEffect(() => {
+    if (element === null) {
+      return undefined
+    }
+
+    const observer = new window.ResizeObserver(onResize)
+    observer.observe(element)
+
+    return () => observer.disconnect()
+  }, [onResize, element])
 }
 
 export const anchorPosition = (

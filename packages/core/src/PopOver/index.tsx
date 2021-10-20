@@ -1,9 +1,19 @@
-import React, { useRef, useLayoutEffect, useContext, useCallback } from 'react'
+import React, {
+  useLayoutEffect,
+  useContext,
+  useCallback,
+  useState,
+} from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 
 import { LayerContext } from '../Practical'
-import { useOnResizeEffect, useOnScrollEffect, anchorPosition } from './utils'
+import {
+  useOnResizeParentEffect,
+  useOnResizeEffect,
+  useOnScrollEffect,
+  anchorPosition,
+} from './utils'
 
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
@@ -84,15 +94,16 @@ export const PopOver: React.FC<PopOverProps> = ({
   children,
   ...props
 }) => {
-  const popOverContainerRef = useRef<HTMLDivElement>(null)
+  const [popOverContainer, setPopOverContainer] =
+    useState<HTMLDivElement | null>(null)
 
   const { el: layerRoot } = useContext(LayerContext)
 
   const position = useCallback(() => {
     // Position the pop-over element synchronously
-    if (anchorEl !== null && popOverContainerRef.current !== null) {
+    if (anchorEl !== null && popOverContainer !== null) {
       if (onPosition === undefined) {
-        anchorPosition(anchorEl, popOverContainerRef.current, {
+        anchorPosition(anchorEl, popOverContainer, {
           horizontalPosition,
           verticalPosition,
           horizontalAlignment,
@@ -100,7 +111,7 @@ export const PopOver: React.FC<PopOverProps> = ({
         })
         return
       }
-      onPosition(anchorEl, popOverContainerRef.current)
+      onPosition(anchorEl, popOverContainer)
     }
   }, [
     horizontalPosition,
@@ -109,6 +120,7 @@ export const PopOver: React.FC<PopOverProps> = ({
     verticalAlignment,
     anchorEl,
     onPosition,
+    popOverContainer,
   ])
 
   useOnScrollEffect(
@@ -119,12 +131,16 @@ export const PopOver: React.FC<PopOverProps> = ({
           /** */
         }
   )
-  useOnResizeEffect(anchorEl, position)
+
+  // Used when resizing the parent anchorEl
+  useOnResizeParentEffect(anchorEl, position)
+
+  useOnResizeEffect(popOverContainer, position)
 
   // Reposition on initialize
   useLayoutEffect(() => {
     position()
-  }, [position])
+  }, [position, popOverContainer])
 
   // When the layer element is not available, there is no layer yet.
   if (layerRoot === null) {
@@ -132,7 +148,7 @@ export const PopOver: React.FC<PopOverProps> = ({
   }
 
   return ReactDOM.createPortal(
-    <PopOverContainer ref={popOverContainerRef} {...props}>
+    <PopOverContainer ref={setPopOverContainer} {...props}>
       {children}
     </PopOverContainer>,
     layerRoot
