@@ -3,7 +3,19 @@ import subprocess
 import sys
 import typing
 
-possible_types = ["feat", "fix", "refactor", "docs", "chore", "ci"]
+possible_types = [
+    "build",
+    "chore",
+    "ci",
+    "docs",
+    "feat",
+    "fix",
+    "perf",
+    "refactor",
+    "revert",
+    "style",
+    "test",
+]
 
 types = "|".join(possible_types)
 
@@ -27,7 +39,7 @@ def conventional_commit_parse(message: str):
 
 
 def cmd(cmd: typing.List[str]) -> str:
-    """ Call shell command and return the result """
+    """Call shell command and return the result"""
     try:
         return subprocess.check_output(cmd, encoding="utf-8").strip()
     except subprocess.CalledProcessError as exc:
