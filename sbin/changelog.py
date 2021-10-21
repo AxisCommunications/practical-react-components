@@ -24,12 +24,17 @@ GITHUB_COMMIT_URL = (
 )
 
 GROUP_TITLES = {
-    "feat": "🚀 Features",
-    "fix": "🐛 Bug fixes",
-    "refactor": "🧰 Refactoring",
-    "docs": "📝 Documentation",
+    "build": "👷 Build",
     "chore": "🚧 Maintenance",
     "ci": "🚦 Continous integration",
+    "docs": "📝 Documentation",
+    "feat": "✨ Features",
+    "fix": "🐛 Bug fixes",
+    "perf": "🏎️ Performance",
+    "refactor": "♻️ Refactoring",
+    "revert": "⏪️ Reverts",
+    "style": "💄 Styling",
+    "test": "🧪 Test",
 }
 
 
