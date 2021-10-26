@@ -198,8 +198,8 @@ export const ListItemContainer: React.VFC<ListItemContainerProps> = ({
   icon,
   label,
 }) => {
-  const handleKeyDown = useCallback(
-    (event: React.KeyboardEvent) => {
+  const handleKeyDown = useCallback<React.KeyboardEventHandler<HTMLDivElement>>(
+    event => {
       if (event.key !== MenuKeys.Enter) {
         return
       }
