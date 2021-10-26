@@ -423,8 +423,10 @@ export const BaseMenu = memo<BaseMenuProps>(
       [arrowIndex, components.length]
     )
 
-    const handleKeyDown = useCallback(
-      (event: React.KeyboardEvent) => {
+    const handleKeyDown = useCallback<
+      React.KeyboardEventHandler<HTMLDivElement>
+    >(
+      event => {
         if (!(event.key in MenuKeys)) {
           return
         }
