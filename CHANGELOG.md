@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.56.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.55.0...v0.56.0) (2021-10-26 11:38:11 +0200)
+## [v0.57.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.56.0...v0.57.0) (2021-10-29 16:46:17 +0200)
+
+### 🐛 Bug fixes
+
+  - **popOver**:  reposition PopOver when it is resized ([6c7dd8e](https://github.com/AxisCommunications/practical-react-components/commit/6c7dd8ebbbb3d581ac2a879bc447c9f1ff8c1b37))
+
+## [v0.56.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.55.0...v0.56.0) (2021-10-26 15:17:49 +0200)
 
 ### 🚧 Maintenance
 
