@@ -60,6 +60,11 @@ const TableRowGrid = styled.div<{
     }
   }
 
+  &:focus-within {
+    box-shadow: ${({ theme }) => theme.shadow.tableRow};
+    z-index: 1;
+  }
+
   &.selected {
     background-color: ${({ theme }) => theme.color.backgroundPrimary()};
   }
