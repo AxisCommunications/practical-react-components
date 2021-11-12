@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.57.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.56.0...v0.57.0) (2021-10-29 16:46:17 +0200)
+## [v0.58.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.57.0...v0.58.0) (2021-11-03 09:13:58 +0100)
+
+### 🐛 Bug fixes
+
+  - **button**:  icon don't overflow and buttons are aligned ([378549e](https://github.com/AxisCommunications/practical-react-components/commit/378549ea9fa00eea58c149c1aa735936fe1c2859))
+
+## [v0.57.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.56.0...v0.57.0) (2021-10-29 17:00:42 +0200)
 
 ### 🐛 Bug fixes
 
