@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 import styledNormalize from 'styled-normalize'
 import styled, { createGlobalStyle } from 'styled-components'
 import { MDXProvider } from '@mdx-js/react'
-import { HashRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import 'typeface-open-sans'
 import { GlobalScrollbarStyle, spacing } from 'practical-react-components-core'
 import { getLocalStorage } from 'react-hooks-shareable'
@@ -99,26 +99,21 @@ ReactDOM.render(
         <HeaderStyled>
           <Header />
         </HeaderStyled>
-        <Router hashType="noslash">
+        <Router>
           <Aside>
             <Menu components={componentDb} />
           </Aside>
           <Content>
             <MDXProvider components={components}>
               <Main>
-                <Switch>
-                  <Route exact path="/">
-                    <Home />
-                  </Route>
-                  <Route exact path="/theme-creator">
-                    <ThemeCreator />
-                  </Route>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/theme-creator" element={<ThemeCreator />} />
+
                   {componentDb.map(({ route, component: Component }) => (
-                    <Route key={route} path={route}>
-                      <Component />
-                    </Route>
+                    <Route key={route} path={route} element={<Component />} />
                   ))}
-                </Switch>
+                </Routes>
               </Main>
             </MDXProvider>
           </Content>

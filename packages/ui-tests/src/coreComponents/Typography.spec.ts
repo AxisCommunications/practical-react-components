@@ -91,7 +91,7 @@ const typographys = [
 
 context('Typography', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/typography')
+    cy.visit('http://localhost:9009/#/components/typography')
   })
 
   it('Should exist', () => {

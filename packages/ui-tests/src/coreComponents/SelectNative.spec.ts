@@ -9,7 +9,7 @@ const options = [
 
 context('SelectNative', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/selectnative')
+    cy.visit('http://localhost:9009/#/components/selectnative')
   })
 
   it('Should exist and be visible', () => {

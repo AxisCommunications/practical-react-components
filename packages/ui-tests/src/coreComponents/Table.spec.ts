@@ -4,7 +4,7 @@ context('Table', () => {
   const checkboxEl = '[class^=Checkbox__Container]'
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/table')
+    cy.visit('http://localhost:9009/#/components/table')
   })
 
   it('is rendered correctly', () => {

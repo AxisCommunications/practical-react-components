@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 context('Dialog', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/dialog')
+    cy.visit('http://localhost:9009/#/components/dialog')
   })
 
   /*

@@ -12,7 +12,7 @@ context('DateTimePicker', () => {
   const footerConEl = '[class*=DateTimePicker__FooterContainer]'
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/datetimepicker')
+    cy.visit('http://localhost:9009/#/components/datetimepicker')
   })
 
   it('no result should exist', () => {

@@ -2,7 +2,7 @@
 
 context('StrengthIndicator', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/strengthindicator')
+    cy.visit('http://localhost:9009/#/components/strengthindicator')
   })
 
   it('worst should have scaleX(0)', () => {

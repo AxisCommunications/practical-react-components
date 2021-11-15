@@ -2,7 +2,7 @@
 
 context('Link', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/link')
+    cy.visit('http://localhost:9009/#/components/link')
   })
 
   it('Check a link attribute', () => {

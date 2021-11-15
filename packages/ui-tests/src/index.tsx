@@ -4,7 +4,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import styledNormalize from 'styled-normalize'
 import styled, { createGlobalStyle } from 'styled-components'
-import { HashRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 import { Menu } from './Menu'
 import {
   GlobalScrollbarStyle,
@@ -82,19 +82,17 @@ ReactDOM.render(
     <AppContainer>
       <GlobalStyle />
       <GlobalScrollbarStyle />
-      <Router hashType="noslash">
+      <Router>
         <Aside>
           <Menu components={componentDb} />
         </Aside>
         <Content>
           <Main>
-            <Switch>
+            <Routes>
               {componentDb.map(({ route, component: Component }) => (
-                <Route key={route} path={route}>
-                  <Component />
-                </Route>
+                <Route key={route} path={route} element={<Component />} />
               ))}
-            </Switch>
+            </Routes>
           </Main>
         </Content>
       </Router>

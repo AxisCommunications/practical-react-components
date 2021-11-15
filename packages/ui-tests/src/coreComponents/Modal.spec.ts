@@ -4,7 +4,7 @@ context('Modal', () => {
   const modalContainerEl = '[class^=Modal__ModalContainer]'
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/modal')
+    cy.visit('http://localhost:9009/#/components/modal')
   })
 
   it('modal container should not be open', () => {

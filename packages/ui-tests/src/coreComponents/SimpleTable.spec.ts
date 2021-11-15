@@ -23,7 +23,7 @@ const DEVICE_LIST = [
 
 context('SimpleTable', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/simpletable')
+    cy.visit('http://localhost:9009/#/components/simpletable')
   })
 
   it('Should exist and visible', () => {

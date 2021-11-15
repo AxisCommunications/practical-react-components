@@ -2,7 +2,7 @@
 
 context('ExpandableList', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/expandablelist')
+    cy.visit('http://localhost:9009/#/components/expandablelist')
   })
 
   it('container should have 3 items', () => {

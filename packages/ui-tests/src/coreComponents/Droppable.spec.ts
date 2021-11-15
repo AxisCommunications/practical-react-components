@@ -2,7 +2,7 @@
 
 context('Droppable', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/droppable')
+    cy.visit('http://localhost:9009/#/components/droppable')
   })
 
   it('Should exist but should not be visible', () => {

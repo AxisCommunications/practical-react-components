@@ -13,7 +13,7 @@ context('Checkbox', () => {
   }
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/checkbox')
+    cy.visit('http://localhost:9009/#/components/checkbox')
   })
 
   it('Should exist', () => {

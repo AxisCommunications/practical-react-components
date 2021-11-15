@@ -14,7 +14,7 @@ const icons = [
 
 context('Icon', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/icon')
+    cy.visit('http://localhost:9009/#/components/icon')
   })
 
   it('Should exist', () => {

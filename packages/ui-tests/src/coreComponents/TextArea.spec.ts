@@ -2,7 +2,7 @@
 
 context('TextArea', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/textarea')
+    cy.visit('http://localhost:9009/#/components/textarea')
   })
 
   it('Value and change handlers', () => {

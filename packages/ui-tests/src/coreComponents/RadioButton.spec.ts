@@ -28,7 +28,7 @@ context('RadioButton', () => {
   }
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/radiobutton')
+    cy.visit('http://localhost:9009/#/components/radiobutton')
   })
 
   /** RadioButton test */

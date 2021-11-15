@@ -2,7 +2,7 @@
 
 context('FilePicker', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/filepicker')
+    cy.visit('http://localhost:9009/#/components/filepicker')
   })
 
   it('Should exist but should not be visible', () => {

@@ -2,7 +2,7 @@
 
 context('Divder', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/divider')
+    cy.visit('http://localhost:9009/#/components/divider')
   })
 
   it('Should exist', () => {
