@@ -5,7 +5,7 @@ const draggableHandleEl = '[class^=DraggableList__DraggableHandle]'
 
 context('DraggableList', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/draggablelist')
+    cy.visit('http://localhost:9009/#/components/draggablelist')
   })
 
   it('Should exist and be visible', () => {

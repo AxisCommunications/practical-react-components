@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useMemo } from 'react'
 import styled, { css } from 'styled-components'
-import { useHistory, useLocation, matchPath } from 'react-router-dom'
+import { useNavigate, useLocation, matchPath } from 'react-router-dom'
 import {
   ExpandableList,
   ExpandableListItemType,
@@ -70,12 +70,9 @@ interface ComponentGroup extends Component {
 
 export const Menu: React.FC<MenuProps> = ({ components }) => {
   const [showNavigation, setShowNavigation] = useState<boolean>(true)
-  const history = useHistory()
+  const navigate = useNavigate()
   const location = useLocation()
-  const selectTab = useCallback(
-    (route: string) => history.push(route),
-    [history]
-  )
+  const selectTab = useCallback((route: string) => navigate(route), [history])
   const onMenuIconClick = useCallback(
     () => setShowNavigation(!showNavigation),
     [showNavigation]
@@ -87,11 +84,7 @@ export const Menu: React.FC<MenuProps> = ({ components }) => {
         id: c.name,
         label: c.name,
         icon: () => null,
-        selected:
-          matchPath(location.pathname, {
-            path: c.route,
-            exact: true,
-          }) !== null,
+        selected: matchPath(location.pathname, c.route) !== null,
         onClick: () =>
           /^https?:\/\//.test(c.route)
             ? (window.location.href = c.route)
@@ -118,7 +111,7 @@ export const Menu: React.FC<MenuProps> = ({ components }) => {
               id: name,
               label: name,
               icon: () => null,
-              selected: history.location.pathname.startsWith(
+              selected: location.pathname.startsWith(
                 `/${name.toLocaleLowerCase()}`
               ),
               items: g,
@@ -127,7 +120,7 @@ export const Menu: React.FC<MenuProps> = ({ components }) => {
         },
         []
       ),
-    [history.location.pathname, mappedComponents]
+    [location.pathname, mappedComponents]
   )
 
   return (

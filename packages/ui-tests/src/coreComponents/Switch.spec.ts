@@ -13,7 +13,7 @@ context('Switch', () => {
   }
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/switch')
+    cy.visit('http://localhost:9009/#/components/switch')
   })
 
   it('should exist', () => {

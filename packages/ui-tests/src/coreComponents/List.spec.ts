@@ -7,7 +7,7 @@ const CONTROLLER_LIST = [
 
 context('List', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/list')
+    cy.visit('http://localhost:9009/#/components/list')
   })
 
   it('Should exist', () => {

@@ -2,7 +2,7 @@
 
 context('Stepper', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/stepper')
+    cy.visit('http://localhost:9009/#/components/stepper')
   })
 
   it('correctly navigates and displays content for each step', () => {

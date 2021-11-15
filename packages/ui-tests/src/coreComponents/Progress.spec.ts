@@ -8,7 +8,7 @@ const getWidthInPercent = $div => {
 
 context('Progress', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/Progress')
+    cy.visit('http://localhost:9009/#/components/Progress')
   })
 
   it('should exist', () => {

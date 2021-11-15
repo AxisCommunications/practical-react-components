@@ -2,7 +2,7 @@
 
 context('ToggleButtonGroup', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/togglebuttongroup')
+    cy.visit('http://localhost:9009/#/components/togglebuttongroup')
   })
 
   const toggleButtonGroupEl = '[data-cy=toggleButtonGroup]'

@@ -2,7 +2,7 @@
 
 context('Tooltip', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/tooltip')
+    cy.visit('http://localhost:9009/#/components/tooltip')
   })
 
   const testTooltips = [

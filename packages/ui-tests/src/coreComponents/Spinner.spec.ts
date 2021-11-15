@@ -2,7 +2,7 @@
 
 context('Spinner', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/spinner')
+    cy.visit('http://localhost:9009/#/components/spinner')
   })
 
   it('Should exist', () => {

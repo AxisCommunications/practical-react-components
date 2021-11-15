@@ -7,7 +7,7 @@ context('Menu', () => {
   const popup = '[class^=PopOver__PopOverContainer]'
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/menu')
+    cy.visit('http://localhost:9009/#/components/menu')
   })
 
   it('Menu button should be visible and popover should not be visible', () => {

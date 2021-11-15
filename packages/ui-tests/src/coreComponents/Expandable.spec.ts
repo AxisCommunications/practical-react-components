@@ -4,7 +4,7 @@ context('Expandable', () => {
   const iconConEl = '[class^=Icon__IconContainer]'
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/expandable')
+    cy.visit('http://localhost:9009/#/components/expandable')
   })
 
   it('header should be visible, but not content', () => {

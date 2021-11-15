@@ -53,7 +53,7 @@ context('SelectList', () => {
   ]
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/selectlist')
+    cy.visit('http://localhost:9009/#/components/selectlist')
   })
 
   /*

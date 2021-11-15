@@ -2,7 +2,7 @@
 
 context('Button', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/button')
+    cy.visit('http://localhost:9009/#/components/button')
   })
 
   it('Default background color', () => {

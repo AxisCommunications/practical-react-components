@@ -16,7 +16,7 @@ context('Slider', () => {
   const button = '[data-cy=sliderButton]'
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/slider')
+    cy.visit('http://localhost:9009/#/components/slider')
   })
 
   it('Check if trail element is exist', () => {

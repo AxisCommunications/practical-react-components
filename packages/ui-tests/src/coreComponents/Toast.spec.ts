@@ -12,7 +12,7 @@ context('Toast', () => {
   ]
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/toast')
+    cy.visit('http://localhost:9009/#/components/toast')
   })
 
   toasts.forEach(({ dataCy, label }) => {

@@ -5,7 +5,7 @@ context('Input', () => {
   const timeFormatSelectPopOverEl = '[class^=PopOver__]'
 
   before(() => {
-    cy.visit('http://localhost:9009/#components/input')
+    cy.visit('http://localhost:9009/#/components/input')
   })
 
   it('TextInput', () => {

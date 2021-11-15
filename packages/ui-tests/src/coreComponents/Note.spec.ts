@@ -2,7 +2,7 @@
 
 context('Note', () => {
   before(() => {
-    cy.visit('http://localhost:9009/#components/note')
+    cy.visit('http://localhost:9009/#/components/note')
   })
 
   it('Should exist', () => {

@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useMemo } from 'react'
 import styled, { css } from 'styled-components'
-import { useHistory } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import {
   ExpandableList,
   ExpandableListItemType,
@@ -8,7 +8,13 @@ import {
 } from 'practical-react-components-core'
 import { HamburgerMenuIcon } from 'practical-react-components-icons'
 
-import { Components, Component } from './types'
+interface Component {
+  readonly name: string
+  readonly route: string
+  readonly menu: string
+  readonly component: React.FC
+}
+type Components = ReadonlyArray<Component>
 
 function groupBy<T, K>(list: ReadonlyArray<T>, getKey: (item: T) => K) {
   const map = new Map<K, Array<T>>()
@@ -58,11 +64,9 @@ interface ComponentGroup extends Component {
 
 export const Menu: React.FC<MenuProps> = ({ components }) => {
   const [showNavigation, setShowNavigation] = useState<boolean>(true)
-  const history = useHistory()
-  const selectTab = useCallback(
-    (route: string) => history.push(route),
-    [history]
-  )
+  const navigate = useNavigate()
+  const location = useLocation()
+  const selectTab = useCallback((route: string) => navigate(route), [history])
   const onMenuIconClick = useCallback(
     () => setShowNavigation(!showNavigation),
     [showNavigation]
@@ -74,14 +78,14 @@ export const Menu: React.FC<MenuProps> = ({ components }) => {
         id: c.name,
         label: c.name,
         icon: () => null,
-        selected: c.route === history.location.pathname,
+        selected: c.route === location.pathname,
         onClick: () =>
           /^https?:\/\//.test(c.route)
             ? (window.location.href = c.route)
             : selectTab(c.route),
         ...c,
       })) as unknown as ReadonlyArray<ComponentGroup>,
-    [history.location.pathname, components, selectTab]
+    [location.pathname, components, selectTab]
   )
 
   const groupedComponents = useMemo(
@@ -101,7 +105,7 @@ export const Menu: React.FC<MenuProps> = ({ components }) => {
               id: name,
               label: name,
               icon: () => null,
-              selected: history.location.pathname.startsWith(
+              selected: location.pathname.startsWith(
                 `/${name.toLocaleLowerCase()}`
               ),
               items: g,
@@ -110,7 +114,7 @@ export const Menu: React.FC<MenuProps> = ({ components }) => {
         },
         []
       ),
-    [history.location.pathname, mappedComponents]
+    [location.pathname, mappedComponents]
   )
 
   return (
