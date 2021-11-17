@@ -55,8 +55,6 @@ export const DEVICE_LIST = [
   { serialNumber: 'FACEFACE0012', name: 'l', ip: '192.168.0.12' },
 ]
 
-The default variant of the simple table.
-
 export const DemoComponent = ({}) => {
   const clickFunc = useCallback(id => {
     window.alert(`You clicked on: ${id}`)
@@ -90,18 +88,23 @@ export const DemoComponent = ({}) => {
   )
 }
 
+<DemoComponent />
+
+The default variant of the simple table.
+
 ## Basic usage
 
 ```typescript type=live size=large
 <SimpleTable
   maxHeight={5}
   header={[
-    { id: 'serial-number', title: 'Serial number', width: 2 },
-    { id: 'name', title: 'Name', width: 1 },
-    { id: 'ip-address', title: 'IP address', width: 2 },
+    { id: 'serial-number', title: 'Serial number' },
+    { id: 'name', title: 'Name' },
+    { id: 'ip-address', title: 'IP address' },
   ].map(({ title }, id) => (
     <TableHeaderText key={id}>{title}</TableHeaderText>
   ))}
+  widths={[40, 10]}
 >
   {[
     { serialNumber: 'FACEFACE0001', name: 'a', ip: '192.168.0.1' },
