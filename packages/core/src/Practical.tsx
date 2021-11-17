@@ -24,25 +24,25 @@ const PracticalContext = createContext<PracticalContextType>({
   rootEl: undefined,
 })
 
-interface ToastsOptions {
+export interface ToastsOptions {
   /**
    * Position of toasts on the page.
    */
-  readonly placement: ToastsPlacement
+  readonly placement?: ToastsPlacement
   /**
    * Determine if toasts should be always on top (above any other modal layers),
    * or not (above the main application layer but below any other modal layers).
    *
    * @default true
    */
-  readonly alwaysOnTop: boolean
+  readonly alwaysOnTop?: boolean
   /**
    * Default toast durations
    */
-  readonly defaultDurations: SimpleToastsDurations
+  readonly defaultDurations?: SimpleToastsDurations
 }
 
-const DEFAULT_TOASTS_OPTIONS: ToastsOptions = {
+const DEFAULT_TOASTS_OPTIONS: Required<ToastsOptions> = {
   placement: { justify: 'right', top: '0' },
   alwaysOnTop: true,
   defaultDurations: {
@@ -65,19 +65,24 @@ interface PracticalProviderProps extends SimpleToastsDurations {
 
 export const PracticalProvider: React.FC<PracticalProviderProps> = ({
   theme = defaultTheme,
-  toastsOptions = DEFAULT_TOASTS_OPTIONS,
+  toastsOptions,
   children,
 }) => {
   const [rootEl, rootRef] = useState<HTMLDivElement | null>(null)
 
+  const mergedOptions = {
+    ...DEFAULT_TOASTS_OPTIONS,
+    ...toastsOptions,
+  }
+
   return (
     <ThemeProvider theme={theme}>
       <PracticalContext.Provider value={{ rootEl }}>
-        <ToastsProvider {...toastsOptions.defaultDurations}>
+        <ToastsProvider {...mergedOptions.defaultDurations}>
           <PracticalRoot id="practical-root" ref={rootRef}>
             <Layer>{children}</Layer>
-            <Layer zIndex={toastsOptions.alwaysOnTop ? 1 : 0}>
-              <ToastsAnchor placement={toastsOptions.placement} />
+            <Layer zIndex={mergedOptions.alwaysOnTop ? 1 : 0}>
+              <ToastsAnchor placement={mergedOptions.placement} />
             </Layer>
           </PracticalRoot>
         </ToastsProvider>
