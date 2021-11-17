@@ -3,15 +3,28 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.59.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.56.0...v0.59.0) (2021-11-16 09:45:24 +0100)
+## [v0.60.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.59.0...v0.60.0) (2021-11-17 10:03:16 +0100)
+
+### ✨ Features
+
+  - **icons**:  add audio icons ([b1aeeb7](https://github.com/AxisCommunications/practical-react-components/commit/b1aeeb75af02c525a6f69847861881580465b4da))
+
+## [v0.59.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.58.0...v0.59.0) (2021-11-16 10:03:07 +0100)
 
 ### 🚧 Maintenance
 
   -  update dependencies to latest versions ([bfd6af1](https://github.com/AxisCommunications/practical-react-components/commit/bfd6af1109473895cc178c0fca71ca4bd93c0e4a))
 
+## [v0.58.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.57.0...v0.58.0) (2021-11-12 09:12:25 +0100)
+
 ### 🐛 Bug fixes
 
   - **button**:  icon don't overflow and buttons are aligned ([378549e](https://github.com/AxisCommunications/practical-react-components/commit/378549ea9fa00eea58c149c1aa735936fe1c2859))
+
+## [v0.57.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.56.0...v0.57.0) (2021-10-29 17:00:42 +0200)
+
+### 🐛 Bug fixes
+
   - **popOver**:  reposition PopOver when it is resized ([6c7dd8e](https://github.com/AxisCommunications/practical-react-components/commit/6c7dd8ebbbb3d581ac2a879bc447c9f1ff8c1b37))
 
 ## [v0.56.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.55.0...v0.56.0) (2021-10-26 15:17:49 +0200)
