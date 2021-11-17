@@ -144,13 +144,12 @@ exports[`SimpleTable SimpleTable 1`] = `
   width: 100%;
   height: 100%;
   overflow-y: auto;
+  position: relative;
 }
 
 .c3 {
   display: table;
-  table-layout: fixed;
   width: 100%;
-  border-bottom: 1px solid rgb(230,230,230);
 }
 
 .c8 {
@@ -159,6 +158,7 @@ exports[`SimpleTable SimpleTable 1`] = `
   max-height: 168px;
   overflow: auto;
   padding-bottom: 8px;
+  border-top: 1px solid rgb(230,230,230);
 }
 
 .c7 {
@@ -622,6 +622,692 @@ exports[`SimpleTable SimpleTable 1`] = `
     >
       <div
         className="c14"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`SimpleTable SimpleTable with fixed column width 1`] = `
+.c6 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
+.c13 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+.c18 {
+  position: fixed;
+  top: 0;
+  width: 360px;
+  border-radius: 4px;
+  margin: 8px 16px;
+  right: 0;
+}
+
+.c0 {
+  color: rgb(41,41,41);
+}
+
+.c1 {
+  position: absolute;
+  z-index: 0;
+}
+
+.c17 {
+  position: absolute;
+  z-index: 1;
+}
+
+.c4 {
+  height: 48px;
+  text-align: left;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.c5 {
+  color: rgb(61,61,61);
+  background: rgb(255,255,255);
+  padding-right: 16px;
+  text-align: left;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 30%;
+}
+
+.c5:first-child {
+  padding-left: 24px;
+}
+
+.c8 {
+  color: rgb(61,61,61);
+  background: rgb(255,255,255);
+  padding-right: 16px;
+  text-align: left;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 20%;
+}
+
+.c8:first-child {
+  padding-left: 24px;
+}
+
+.c9 {
+  color: rgb(61,61,61);
+  background: rgb(255,255,255);
+  padding-right: 16px;
+  text-align: left;
+  font-weight: 400;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.c9:first-child {
+  padding-left: 24px;
+}
+
+.c11 {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 56px;
+  text-align: left;
+  -webkit-transition: box-shadow 200ms;
+  transition: box-shadow 200ms;
+  cursor: pointer;
+}
+
+.c11:nth-child(odd) {
+  background-color: rgb(250,250,250);
+}
+
+.c11:nth-child(even) {
+  background-color: rgb(255,255,255);
+}
+
+.c11:hover {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  z-index: 1;
+}
+
+.c16 {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 56px;
+  text-align: left;
+  -webkit-transition: box-shadow 200ms;
+  transition: box-shadow 200ms;
+  opacity: 0.48;
+  pointer-events: none;
+  cursor: unset;
+}
+
+.c16:nth-child(odd) {
+  background-color: rgb(250,250,250);
+}
+
+.c16:nth-child(even) {
+  background-color: rgb(255,255,255);
+}
+
+.c16:hover {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.16);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  z-index: 1;
+}
+
+.c12 {
+  padding-right: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 30%;
+}
+
+.c12:first-child {
+  padding-left: 24px;
+}
+
+.c14 {
+  padding-right: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 20%;
+}
+
+.c14:first-child {
+  padding-left: 24px;
+}
+
+.c15 {
+  padding-right: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c15:first-child {
+  padding-left: 24px;
+}
+
+.c2 {
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+}
+
+.c3 {
+  display: table;
+  width: 100%;
+}
+
+.c10 {
+  display: block;
+  width: 100%;
+  max-height: 168px;
+  overflow: auto;
+  padding-bottom: 8px;
+  border-top: 1px solid rgb(230,230,230);
+}
+
+.c7 {
+  text-transform: none;
+}
+
+<div
+  className="c0"
+  id="practical-root"
+>
+  <div>
+    <div
+      className="c1"
+      id="layer-3"
+    >
+      <table
+        className="c2 my-simple-table"
+      >
+        <thead
+          className="c3"
+        >
+          <tr
+            className="c4"
+          >
+            <th
+              className="c5"
+            >
+              <p
+                className="c6 c7"
+              >
+                Serial number
+              </p>
+            </th>
+            <th
+              className="c8"
+            >
+              <p
+                className="c6 c7"
+              >
+                Name
+              </p>
+            </th>
+            <th
+              className="c9"
+            >
+              <p
+                className="c6 c7"
+              >
+                IP address
+              </p>
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          className="c10"
+        >
+          <tr
+            className="c11 my-simple-table-row"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0001
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                a
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.1
+              </p>
+            </td>
+          </tr>
+          <tr
+            className="c11 my-simple-table-row"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0002
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                b
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.2
+              </p>
+            </td>
+          </tr>
+          <tr
+            className="c16 my-simple-table-row"
+            disabled={true}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0003
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                c
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.3
+              </p>
+            </td>
+          </tr>
+          <tr
+            className="c11 my-simple-table-row"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0004
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                d
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.4
+              </p>
+            </td>
+          </tr>
+          <tr
+            className="c11 my-simple-table-row"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0005
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                e
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.5
+              </p>
+            </td>
+          </tr>
+          <tr
+            className="c11 my-simple-table-row"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0006
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                f
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.6
+              </p>
+            </td>
+          </tr>
+          <tr
+            className="c11 my-simple-table-row"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0007
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                g
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.7
+              </p>
+            </td>
+          </tr>
+          <tr
+            className="c11 my-simple-table-row"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0008
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                h
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.8
+              </p>
+            </td>
+          </tr>
+          <tr
+            className="c11 my-simple-table-row"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0009
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                i
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.9
+              </p>
+            </td>
+          </tr>
+          <tr
+            className="c11 my-simple-table-row"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0010
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                j
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.10
+              </p>
+            </td>
+          </tr>
+          <tr
+            className="c11 my-simple-table-row"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0011
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                k
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.11
+              </p>
+            </td>
+          </tr>
+          <tr
+            className="c11 my-simple-table-row"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <td
+              className="c12"
+            >
+              <p
+                className="c13"
+              >
+                FACEFACE0012
+              </p>
+            </td>
+            <td
+              className="c14"
+            >
+              <p
+                className="c13"
+              >
+                l
+              </p>
+            </td>
+            <td
+              className="c15"
+            >
+              <p
+                className="c13"
+              >
+                192.168.0.12
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+    <div
+      className="c17"
+      id="layer-4"
+    >
+      <div
+        className="c18"
       />
     </div>
   </div>

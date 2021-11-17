@@ -55,4 +55,31 @@ describe('SimpleTable', () => {
     )
     expect(tree).toMatchSnapshot()
   })
+
+  test('SimpleTable with fixed column width', () => {
+    const tree = TestRender(
+      <SimpleTable
+        maxHeight={3}
+        header={TABLE_HEADER_DATA.map(({ title }, id) => (
+          <TableHeaderText key={id}>{title}</TableHeaderText>
+        ))}
+        className="my-simple-table"
+        widths={[30, 20]}
+      >
+        {DEVICE_LIST.map((device, index) => (
+          <SimpleTableRow
+            key={device.serialNumber}
+            disabled={index === 2}
+            className="my-simple-table-row"
+            onClick={clickHandler}
+          >
+            <Typography>{device.serialNumber}</Typography>
+            <Typography>{device.name}</Typography>
+            <Typography>{device.ip}</Typography>
+          </SimpleTableRow>
+        ))}
+      </SimpleTable>
+    )
+    expect(tree).toMatchSnapshot()
+  })
 })
