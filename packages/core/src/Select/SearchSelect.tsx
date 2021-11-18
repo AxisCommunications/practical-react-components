@@ -94,10 +94,10 @@ export function SearchSelect<V extends string = string>({
 
   const selectInputText = useCallback(() => inputRef.current?.select(), [])
 
-  const resetInputText = useCallback(
-    () => setFilter(getLabel(currentValue, options)),
-    [currentValue, options]
-  )
+  const resetInputText = useCallback(() => {
+    setFilter(getLabel(currentValue, options))
+    stopTyping()
+  }, [currentValue, options])
 
   useEffect(
     () => setFilter(getLabel(currentValue, options)),
