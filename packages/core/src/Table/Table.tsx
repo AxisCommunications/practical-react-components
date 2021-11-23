@@ -313,120 +313,120 @@ export interface TableProps extends Omit<BaseProps, 'onSelect'> {
 
 const EMPTY_ARRAY: ReadonlyArray<number> = []
 
-export const Table: React.FunctionComponent<TableProps> = React.memo(
-  ({
-    initialWidths = EMPTY_ARRAY,
-    resizableColumns = false,
-    minColumnWidth = TABLE_DIMENSIONS.DEFAULT_MIN_COLUMN_WIDTH,
-    onWidthsChange,
-    maxHeight,
-    onSelect,
-    hasMenu = false,
-    scrollKey,
-    children,
-    ...props
-  }) => {
-    // Table width/height, including column widths
-    const [{ columnWidths }, dispatchWidthsAction] = useReducer<
-      Reducer<WidthsState, WidthAction>
-    >(reduceWidths, {
-      totalWidth: initialWidths.reduce((sum, width) => sum + width, 0),
-      columnWidths: initialWidths,
-      initialWidths,
-      minColumnWidth,
-    })
-    const [tableHeight, setTableHeight] = useState<number>()
+const TableComponent: React.FunctionComponent<TableProps> = ({
+  initialWidths = EMPTY_ARRAY,
+  resizableColumns = false,
+  minColumnWidth = TABLE_DIMENSIONS.DEFAULT_MIN_COLUMN_WIDTH,
+  onWidthsChange,
+  maxHeight,
+  onSelect,
+  hasMenu = false,
+  scrollKey,
+  children,
+  ...props
+}) => {
+  // Table width/height, including column widths
+  const [{ columnWidths }, dispatchWidthsAction] = useReducer<
+    Reducer<WidthsState, WidthAction>
+  >(reduceWidths, {
+    totalWidth: initialWidths.reduce((sum, width) => sum + width, 0),
+    columnWidths: initialWidths,
+    initialWidths,
+    minColumnWidth,
+  })
+  const [tableHeight, setTableHeight] = useState<number>()
 
-    // Keep track of additional columns for select/menu.
-    const selectWidth = useMemo(
-      () => (onSelect !== undefined ? TABLE_DIMENSIONS.SELECT_WIDTH : 0),
-      [onSelect]
-    )
-    const menuWidth = useMemo(
-      () => (hasMenu ? TABLE_DIMENSIONS.MENU_WIDTH : 0),
-      [hasMenu]
-    )
+  // Keep track of additional columns for select/menu.
+  const selectWidth = useMemo(
+    () => (onSelect !== undefined ? TABLE_DIMENSIONS.SELECT_WIDTH : 0),
+    [onSelect]
+  )
+  const menuWidth = useMemo(
+    () => (hasMenu ? TABLE_DIMENSIONS.MENU_WIDTH : 0),
+    [hasMenu]
+  )
 
-    // Set up total width control
-    const tableRef = useRef<HTMLDivElement>(null)
+  // Set up total width control
+  const tableRef = useRef<HTMLDivElement>(null)
 
-    useLayoutEffect(() => {
-      const tableEl = tableRef.current
-      if (tableEl !== null) {
-        const updateTableDimensions = () => {
-          const { width, height } = tableEl.getBoundingClientRect()
-          dispatchWidthsAction({
-            type: WidthActionType.SET_TOTAL_WIDTH,
-            value: width - selectWidth - menuWidth - TABLE_DIMENSIONS.PADDING,
-          })
-          setTableHeight(height)
-        }
-        updateTableDimensions()
-
-        const observer = new window.ResizeObserver(updateTableDimensions)
-        observer.observe(tableEl)
-
-        return () => observer.disconnect()
+  useLayoutEffect(() => {
+    const tableEl = tableRef.current
+    if (tableEl !== null) {
+      const updateTableDimensions = () => {
+        const { width, height } = tableEl.getBoundingClientRect()
+        dispatchWidthsAction({
+          type: WidthActionType.SET_TOTAL_WIDTH,
+          value: width - selectWidth - menuWidth - TABLE_DIMENSIONS.PADDING,
+        })
+        setTableHeight(height)
       }
-    }, [columnWidths.length, selectWidth, menuWidth, setTableHeight])
+      updateTableDimensions()
 
-    const [dragging, setDragging] = useState(false)
+      const observer = new window.ResizeObserver(updateTableDimensions)
+      observer.observe(tableEl)
 
-    /**
-     * The content's width and (maximum) height.
-     */
-    const contentWidth = useMemo(() => {
-      return (
-        columnWidths.reduce((total, width) => total + width, 0) +
-        selectWidth +
-        menuWidth +
-        TABLE_DIMENSIONS.PADDING
-      )
-    }, [columnWidths, selectWidth, menuWidth])
-    const contentHeight =
-      maxHeight !== undefined
-        ? maxHeight * TABLE_DIMENSIONS.ROW_HEIGHT
-        : tableHeight !== undefined
-        ? tableHeight - TABLE_DIMENSIONS.ROW_HEIGHT
-        : undefined
+      return () => observer.disconnect()
+    }
+  }, [columnWidths.length, selectWidth, menuWidth, setTableHeight])
 
-    const { header, rows } = useMemo(() => {
-      const [headerEl, ...rowsEl] = React.Children.toArray(children)
-      return { header: headerEl, rows: rowsEl }
-    }, [children])
+  const [dragging, setDragging] = useState(false)
 
-    const tableContentRef = useRef<HTMLDivElement>(null)
-    // Scroll to top when scrollKey changes
-    useResetScroll(tableContentRef, scrollKey)
-
+  /**
+   * The content's width and (maximum) height.
+   */
+  const contentWidth = useMemo(() => {
     return (
-      <TableContainer ref={tableRef} dragging={dragging} {...props}>
-        <TableContext.Provider
-          value={{
-            minColumnWidth,
-            columnWidths,
-            dispatchWidthsAction,
-            selectWidth,
-            menuWidth,
-            onSelect,
-            hasMenu,
-            onWidthsChange,
-            tableRef,
-          }}
-        >
-          <TableHeaderContainer>{header}</TableHeaderContainer>
-          <TableContentContainer
-            maxHeight={contentHeight}
-            width={contentWidth}
-            ref={tableContentRef}
-          >
-            {tableHeight !== undefined ? rows : undefined}
-          </TableContentContainer>
-          {resizableColumns ? (
-            <ColumnResizerRow setDragging={setDragging} />
-          ) : null}
-        </TableContext.Provider>
-      </TableContainer>
+      columnWidths.reduce((total, width) => total + width, 0) +
+      selectWidth +
+      menuWidth +
+      TABLE_DIMENSIONS.PADDING
     )
-  }
-)
+  }, [columnWidths, selectWidth, menuWidth])
+  const contentHeight =
+    maxHeight !== undefined
+      ? maxHeight * TABLE_DIMENSIONS.ROW_HEIGHT
+      : tableHeight !== undefined
+      ? tableHeight - TABLE_DIMENSIONS.ROW_HEIGHT
+      : undefined
+
+  const { header, rows } = useMemo(() => {
+    const [headerEl, ...rowsEl] = React.Children.toArray(children)
+    return { header: headerEl, rows: rowsEl }
+  }, [children])
+
+  const tableContentRef = useRef<HTMLDivElement>(null)
+  // Scroll to top when scrollKey changes
+  useResetScroll(tableContentRef, scrollKey)
+
+  return (
+    <TableContainer ref={tableRef} dragging={dragging} {...props}>
+      <TableContext.Provider
+        value={{
+          minColumnWidth,
+          columnWidths,
+          dispatchWidthsAction,
+          selectWidth,
+          menuWidth,
+          onSelect,
+          hasMenu,
+          onWidthsChange,
+          tableRef,
+        }}
+      >
+        <TableHeaderContainer>{header}</TableHeaderContainer>
+        <TableContentContainer
+          maxHeight={contentHeight}
+          width={contentWidth}
+          ref={tableContentRef}
+        >
+          {tableHeight !== undefined ? rows : undefined}
+        </TableContentContainer>
+        {resizableColumns ? (
+          <ColumnResizerRow setDragging={setDragging} />
+        ) : null}
+      </TableContext.Provider>
+    </TableContainer>
+  )
+}
+
+export const Table = React.memo(TableComponent)
