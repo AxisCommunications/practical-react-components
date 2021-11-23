@@ -6,7 +6,12 @@ import {
   ExpandableListItemType,
   IconButton,
 } from 'practical-react-components-core'
-import { HamburgerMenuIcon } from 'practical-react-components-icons'
+import {
+  DownloadIcon,
+  HamburgerMenuIcon,
+  HomeIcon,
+  LogIcon,
+} from 'practical-react-components-icons'
 
 import { Components, Component } from './types'
 
@@ -14,11 +19,18 @@ const BASE_ITEMS = [
   {
     name: 'Home',
     route: '/',
+    icon: HomeIcon,
+  },
+  {
+    name: 'Repository',
+    route: 'https://github.com/AxisCommunications/practical-react-components',
+    icon: DownloadIcon,
   },
   {
     name: 'Changelog',
     route:
       'https://github.com/AxisCommunications/practical-react-components/blob/main/CHANGELOG.md',
+    icon: LogIcon,
   },
 ]
 
@@ -83,7 +95,7 @@ export const Menu: React.FC<MenuProps> = ({ components }) => {
       [...BASE_ITEMS, ...components].map(c => ({
         id: c.name,
         label: c.name,
-        icon: () => null,
+        icon: () => c.icon ?? null,
         selected: matchPath(location.pathname, c.route) !== null,
         onClick: () =>
           /^https?:\/\//.test(c.route)

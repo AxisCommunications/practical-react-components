@@ -1,7 +1,10 @@
+import { IconType } from 'practical-react-components-core'
+
 export interface Component {
   readonly name: string
   readonly route: string
   readonly menu: string
+  readonly icon?: IconType
   readonly component: React.FC
 }
 
