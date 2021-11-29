@@ -15,17 +15,33 @@ import {
   MenuButtonIconContainer,
 } from './BaseMenu'
 
+const SubmenuArrowIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M11.71 15.29l2.59-2.59a.996.996 0 000-1.41L11.71 8.7c-.63-.62-1.71-.18-1.71.71v5.17c0 .9 1.08 1.34 1.71.71z" />
+  </svg>
+)
+
+export const SubmenuIcon = styled(Icon).attrs({ icon: SubmenuArrowIcon })`
+  color: ${({ theme }) => theme.color.text05()};
+`
+
 export const MenuItem = styled.div<{
   readonly divider?: boolean
   readonly danger?: boolean
   readonly compact: boolean
+  readonly submenu: boolean
+  readonly hasIcon: boolean
 }>`
-  display: flex;
+  display: grid;
   align-items: center;
-  padding: 0 ${spacing.large};
-  > * {
-    margin-right: ${spacing.large};
-  }
+  grid-template-columns: ${({ hasIcon }) =>
+    hasIcon
+      ? `${componentSize.small} 1fr ${componentSize.mini}`
+      : `1fr ${componentSize.mini}`};
+
+  padding: ${({ submenu }) =>
+    submenu ? `0 ${spacing.medium} 0 ${spacing.large}` : `0 ${spacing.large}`};
+
   height: ${({ compact }) =>
     compact ? componentSize.small : componentSize.medium};
 
@@ -45,16 +61,22 @@ const MenuItemIcon = styled(Icon)`
 `
 
 export interface MenuItemProps
-  extends Omit<BaseItemProps, 'component' | 'keyboardSelect'> {
+  extends Omit<
+    BaseItemProps,
+    'component' | 'submenuComponents' | 'keyboardSelect'
+  > {
   readonly icon?: IconType
   readonly label: string
   readonly divider?: boolean
   readonly danger?: boolean
   /**
    * Override theme's default setting for `compact` if set.
-
    */
   readonly compact?: boolean
+  /**
+   * An array of submenu items.
+   */
+  readonly submenu?: ReadonlyArray<MenuItemProps>
 }
 
 interface MenuProps extends Omit<BaseMenuProps, 'components' | 'button'> {
@@ -103,20 +125,56 @@ export const Menu = memo<MenuProps>(
     const components = useMemo<ReadonlyArray<BaseItemProps>>(
       () =>
         items.map(item => {
-          const { icon, label, divider, danger } = item
+          const { icon, label, divider, danger, submenu } = item
 
           const menuItemContent =
             icon !== undefined ? (
               <MenuItemIcon icon={icon} size="small" />
             ) : undefined
 
+          const submenuArrowIcon =
+            submenu !== undefined ? <SubmenuIcon /> : undefined
+
+          const submenuComponents =
+            submenu !== undefined
+              ? submenu.map(sub => {
+                  return {
+                    component: (
+                      <MenuItem
+                        divider={sub.divider}
+                        danger={sub.danger}
+                        compact={compact}
+                        submenu={false}
+                        hasIcon={sub.icon !== undefined}
+                      >
+                        {sub.icon !== undefined ? (
+                          <MenuItemIcon icon={sub.icon} size="small" />
+                        ) : undefined}
+                        <Typography variant="navigation-label">
+                          {sub.label}
+                        </Typography>
+                      </MenuItem>
+                    ),
+                    ...sub,
+                  }
+                })
+              : undefined
+
           return {
             component: (
-              <MenuItem divider={divider} danger={danger} compact={compact}>
+              <MenuItem
+                divider={divider}
+                danger={danger}
+                compact={compact}
+                submenu={submenu !== undefined}
+                hasIcon={icon !== undefined}
+              >
                 {menuItemContent}
                 <Typography variant="navigation-label">{label}</Typography>
+                {submenuArrowIcon}
               </MenuItem>
             ),
+            submenuComponents,
             ...item,
           }
         }),

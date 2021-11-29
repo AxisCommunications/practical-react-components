@@ -5,6 +5,7 @@ import React, {
   memo,
   PointerEventHandler,
   ReactNode,
+  useEffect,
 } from 'react'
 import styled, { css } from 'styled-components'
 
@@ -24,6 +25,8 @@ type BaseButtonProps = React.HTMLAttributes<BaseButtonElement>
 
 const MENU_MIN_WIDTH = '232px'
 const MENU_MAX_HEIGHT = '360px'
+
+const SUBMENU_DELAY_MS = 250
 
 const Anchor = styled.div`
   width: fit-content;
@@ -127,7 +130,7 @@ const MenuNativeButton = styled.button<{
       : undefined}
 `
 
-const MenuContainer = styled.div`
+const MenuContainer = styled.div<{ readonly isSubmenu: boolean }>`
   color: ${({ theme }) => theme.color.text06()};
   background-color: ${({ theme }) => theme.color.background05()};
   box-shadow: ${({ theme }) => theme.shadow.menu};
@@ -136,6 +139,13 @@ const MenuContainer = styled.div`
   padding: ${spacing.medium} 0;
   border-radius: ${shape.radius.medium};
   overflow: auto;
+
+  ${({ isSubmenu }) =>
+    isSubmenu
+      ? css`
+          margin-top: -${spacing.medium};
+        `
+      : undefined}
 `
 
 export const BaseMenuItem = styled.div<{
@@ -290,22 +300,157 @@ export interface MenuListProps extends BaseProps {
    * `class` to be passed to the component.
    */
   readonly className?: string
+  /**
+   * If true, align submenu list with main menu item.
+   */
+  readonly isSubmenu?: boolean
 }
 
 export const MenuList: React.FC<MenuListProps> = ({
   onEscape,
   children,
   onPointerDown,
+  isSubmenu = false,
   ...props
 }) => {
   // Close when pressing escape key.
   useEscapeListenerStack(onEscape)
 
-  return <MenuContainer {...props}>{children}</MenuContainer>
+  return (
+    <MenuContainer {...props} isSubmenu={isSubmenu}>
+      {children}
+    </MenuContainer>
+  )
 }
+
+interface SubmenuProps {
+  readonly visible: boolean
+  readonly submenuComponents: ReadonlyArray<BaseItemProps>
+  readonly anchorEl: HTMLElement | null
+  readonly disabled?: boolean
+  readonly align: 'left' | 'right'
+  readonly arrowIndex: number
+  readonly hideAndBlurMenu: VoidFunction
+  readonly hideSubmenu: VoidFunction
+}
+
+const Submenu: React.FC<SubmenuProps> = ({
+  visible,
+  submenuComponents,
+  anchorEl,
+  disabled,
+  align,
+  arrowIndex,
+  hideAndBlurMenu,
+  hideSubmenu,
+}) => {
+  const [hovered, show, hide] = useBoolean(false)
+
+  if (!visible && !hovered) {
+    return null
+  }
+
+  return (
+    <PopOver
+      horizontalPosition={align === 'left' ? 'right' : 'left'}
+      horizontalAlignment={align}
+      verticalPosition="top"
+      anchorEl={anchorEl}
+      onScroll={hideAndBlurMenu}
+    >
+      <MenuList
+        onEscape={hideSubmenu}
+        onClick={hideAndBlurMenu}
+        onPointerOver={show}
+        onPointerLeave={hide}
+        isSubmenu
+      >
+        {submenuComponents.map((sub, index) => {
+          return (
+            <BaseItem
+              key={index}
+              onClick={sub.onClick}
+              keyboardSelect={index === arrowIndex}
+              component={sub.component}
+              disabled={disabled === true || sub.disabled}
+            />
+          )
+        })}
+      </MenuList>
+    </PopOver>
+  )
+}
+
+export interface BaseItemWithSubmenuProps
+  extends Omit<BaseItemProps, 'onClick'> {
+  readonly align: 'left' | 'right'
+  readonly submenuVisible: boolean
+  readonly submenuArrowIndex: number
+  readonly hideAndBlurMenu: VoidFunction
+  readonly hideSubmenu: VoidFunction
+}
+
+const BaseItemWithSubmenu: React.FunctionComponent<BaseItemWithSubmenuProps> =
+  ({
+    component,
+    submenuComponents,
+    disabled,
+    keyboardSelect,
+    align,
+    submenuVisible,
+    submenuArrowIndex,
+    hideAndBlurMenu,
+    hideSubmenu,
+  }) => {
+    const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
+
+    const [visible, show, hide] = useBoolean(false)
+    const [debouncedVisible, setDebouncedVisible] = useState(visible)
+
+    useEffect(() => {
+      const delayVisible = () => setDebouncedVisible(visible)
+      const delayed = setTimeout(delayVisible, SUBMENU_DELAY_MS)
+      return () => {
+        clearTimeout(delayed)
+      }
+    }, [visible])
+
+    const preventMenuBlur = useCallback<PointerEventHandler>(e => {
+      // Prevent the menu from losing focus when clicking down on an item.
+      e.preventDefault()
+    }, [])
+
+    return (
+      <>
+        <BaseMenuItem
+          ref={setAnchorEl}
+          disabled={disabled}
+          keyboardSelect={keyboardSelect}
+          onPointerDown={preventMenuBlur}
+          onPointerOver={show}
+          onPointerOut={hide}
+        >
+          {component}
+        </BaseMenuItem>
+        {submenuComponents !== undefined && (
+          <Submenu
+            visible={submenuVisible || debouncedVisible}
+            submenuComponents={submenuComponents}
+            anchorEl={anchorEl}
+            disabled={disabled}
+            align={align}
+            arrowIndex={submenuArrowIndex}
+            hideAndBlurMenu={hideAndBlurMenu}
+            hideSubmenu={hideSubmenu}
+          />
+        )}
+      </>
+    )
+  }
 
 export interface BaseItemProps {
   readonly component: ReactNode
+  readonly submenuComponents?: ReadonlyArray<BaseItemProps>
   readonly onClick: (e: React.MouseEvent | React.KeyboardEvent) => void
   readonly disabled?: boolean
   readonly keyboardSelect?: boolean
@@ -347,6 +492,11 @@ const BaseItem: React.FunctionComponent<BaseItemProps> = ({
   )
 }
 
+interface ArrowIndex {
+  readonly main: number
+  readonly sub: number
+}
+
 export interface BaseMenuProps extends Omit<PopOverProps, 'anchorEl'> {
   /**
    * React element that will appear as menu button
@@ -382,15 +532,20 @@ export const BaseMenu = memo<BaseMenuProps>(
     ...props
   }) => {
     const [menuVisible, openMenu, hideMenu] = useBoolean(false)
+    const [submenuVisible, openSubmenu, hideSubmenu] = useBoolean(false)
 
     const anchorRef = useRef<HTMLDivElement>(null)
-    const [arrowIndex, setArrowIndex] = useState(-1)
+    const [arrowIndex, setArrowIndex] = useState<ArrowIndex>({
+      main: -1,
+      sub: -1,
+    })
 
     const hideAndBlurMenu = useCallback(() => {
       if (document.activeElement instanceof HTMLElement) {
         document.activeElement.blur()
       }
       hideMenu()
+      hideSubmenu()
     }, [hideMenu])
 
     const handleBlur = useCallback<React.FocusEventHandler<BaseElement>>(
@@ -408,17 +563,31 @@ export const BaseMenu = memo<BaseMenuProps>(
           hideAndBlurMenu()
         } else {
           // Reset arrowIndex before Menu opens
-          setArrowIndex(-1)
+          setArrowIndex({ main: -1, sub: -1 })
           openMenu()
         }
       },
       [menuVisible, hideAndBlurMenu, openMenu]
     )
 
-    const moveArrowMenuIndex = useCallback(
+    const moveMainArrowMenuIndex = useCallback(
       (increment: number) => {
-        const nextIndex = remainder(arrowIndex + increment, components.length)
-        return setArrowIndex(nextIndex)
+        const nextIndex = remainder(
+          arrowIndex.main + increment,
+          components.length
+        )
+        return setArrowIndex({ ...arrowIndex, main: nextIndex })
+      },
+      [arrowIndex, components.length]
+    )
+
+    const moveSubArrowMenuIndex = useCallback(
+      (increment: number) => {
+        const nextIndex = remainder(
+          arrowIndex.sub + increment,
+          components[arrowIndex.main].submenuComponents?.length ?? 0
+        )
+        return setArrowIndex({ ...arrowIndex, sub: nextIndex })
       },
       [arrowIndex, components.length]
     )
@@ -436,55 +605,115 @@ export const BaseMenu = memo<BaseMenuProps>(
           case MenuKeys.Enter:
           case MenuKeys.Space: {
             if (menuVisible) {
-              if (components[arrowIndex].disabled !== true) {
-                components[arrowIndex].onClick(event)
+              const submenu = components[arrowIndex.main].submenuComponents
+              const hasSubmenu = submenu !== undefined
+
+              if (
+                submenuVisible &&
+                hasSubmenu &&
+                components[arrowIndex.main].disabled !== true &&
+                submenu[arrowIndex.sub].disabled !== true &&
+                arrowIndex.sub !== -1
+              ) {
+                submenu[arrowIndex.sub].onClick(event)
+                hideSubmenu()
                 hideMenu()
                 break
               }
-              break
+
+              if (
+                components[arrowIndex.main].disabled !== true &&
+                !hasSubmenu
+              ) {
+                components[arrowIndex.main].onClick(event)
+                hideMenu()
+                break
+              }
+
+              // Open submenu
+              if (components[arrowIndex.main].disabled !== true && hasSubmenu) {
+                openSubmenu()
+                setArrowIndex({ ...arrowIndex, sub: 0 })
+                break
+              }
             }
+
             openMenu()
-            setArrowIndex(0)
+            setArrowIndex({ main: 0, sub: -1 })
             break
           }
           case MenuKeys.Escape:
           case MenuKeys.Esc: {
+            hideSubmenu()
             hideMenu()
             break
           }
           case MenuKeys.ArrowUp: {
+            if (submenuVisible) {
+              moveSubArrowMenuIndex(-1)
+              break
+            }
             if (menuVisible) {
-              moveArrowMenuIndex(-1)
+              moveMainArrowMenuIndex(-1)
               break
             }
             openMenu()
-            setArrowIndex(0)
+            setArrowIndex({ ...arrowIndex, main: 0 })
             break
           }
           case MenuKeys.ArrowDown: {
+            if (submenuVisible) {
+              moveSubArrowMenuIndex(1)
+              break
+            }
             if (menuVisible) {
-              moveArrowMenuIndex(1)
+              moveMainArrowMenuIndex(1)
               break
             }
             openMenu()
-            setArrowIndex(0)
+            setArrowIndex({ ...arrowIndex, main: 0 })
             break
           }
           case MenuKeys.ArrowRight:
           case MenuKeys.ArrowLeft: {
+            if (
+              !submenuVisible &&
+              components[arrowIndex.main].submenuComponents !== undefined
+            ) {
+              openSubmenu()
+              setArrowIndex({ ...arrowIndex, sub: 0 })
+              break
+            }
+            if (submenuVisible) {
+              hideSubmenu()
+              setArrowIndex({ ...arrowIndex, sub: -1 })
+              break
+            }
             hideMenu()
             break
           }
           case MenuKeys.Home: {
+            if (submenuVisible) {
+              setArrowIndex({ ...arrowIndex, sub: 0 })
+              break
+            }
             if (menuVisible) {
-              setArrowIndex(0)
+              setArrowIndex({ ...arrowIndex, main: 0 })
               break
             }
             break
           }
           case MenuKeys.End: {
+            const submenu = components[arrowIndex.main].submenuComponents
+            if (submenuVisible && submenu !== undefined) {
+              setArrowIndex({
+                ...arrowIndex,
+                sub: submenu.length - 1,
+              })
+              break
+            }
             if (menuVisible) {
-              setArrowIndex(components.length - 1)
+              setArrowIndex({ ...arrowIndex, main: components.length - 1 })
               break
             }
             break
@@ -499,7 +728,7 @@ export const BaseMenu = memo<BaseMenuProps>(
         components,
         arrowIndex,
         hideMenu,
-        moveArrowMenuIndex,
+        moveMainArrowMenuIndex,
       ]
     )
 
@@ -521,13 +750,29 @@ export const BaseMenu = memo<BaseMenuProps>(
             onScroll={hideAndBlurMenu}
           >
             <MenuList onEscape={hideMenu} onClick={hideAndBlurMenu}>
-              {components.map((component, index) => (
-                <BaseItem
-                  key={index}
-                  keyboardSelect={index === arrowIndex}
-                  {...component}
-                />
-              ))}
+              {components.map((component, index) => {
+                if (component.submenuComponents === undefined) {
+                  return (
+                    <BaseItem
+                      key={index}
+                      keyboardSelect={index === arrowIndex.main}
+                      {...component}
+                    />
+                  )
+                }
+                return (
+                  <BaseItemWithSubmenu
+                    key={index}
+                    keyboardSelect={index === arrowIndex.main}
+                    {...component}
+                    align={align}
+                    submenuVisible={submenuVisible}
+                    submenuArrowIndex={arrowIndex.sub}
+                    hideAndBlurMenu={hideAndBlurMenu}
+                    hideSubmenu={hideSubmenu}
+                  />
+                )
+              })}
             </MenuList>
           </PopOver>
         ) : null}
