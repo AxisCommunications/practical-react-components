@@ -84,6 +84,26 @@ export const ITEMS = [
 />
 ```
 
+### With submenu
+
+```typescript type=live
+<Menu
+  icon={MoreIcon}
+  items={[
+    {
+      icon: CheckIcon,
+      label: 'Item 1',
+      submenu: [
+        { label: 'Sub 1', onClick: () => {} },
+        { label: 'Sub 2', onClick: () => {} },
+      ],
+    },
+    { label: 'Item 2', onClick: () => {}, divider: true },
+    { label: 'Item 3', onClick: () => {}, disabled: true, danger: true },
+  ]}
+/>
+```
+
 ## Advanced usage
 
 You can create a custom `Menu` with `MenuButton`.
