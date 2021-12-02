@@ -10,6 +10,8 @@ import styled from 'styled-components'
 import {
   Slider,
   SliderField,
+  IndicatorSlider,
+  IndicatorSliderWithField,
   SpaceBlock,
 } from 'practical-react-components-core'
 
@@ -26,6 +28,11 @@ export const DemoComponent = () => {
   const [valueFieldUnitLabel, setValueFieldUnitLabel] = useState(0)
   const [metaSliderValue, setMetaSliderValue] = useState(0)
   const [ticksOnlySliderValue, setTicksOnlySliderValue] = useState(0)
+  const [indicatorSliderValue, setIndicatorSliderValue] = useState(0)
+  const [
+    indicatorSliderWithAndTicksValue,
+    setIndicatorSliderWithAndTicksValue,
+  ] = useState(0)
   return (
     <>
       <Slider
@@ -69,6 +76,31 @@ export const DemoComponent = () => {
         max={20}
         value={metaSliderValue}
         handleChange={setMetaSliderValue}
+        tickConfig={{
+          ticks: [
+            { position: -20, label: '-20°', marker: true },
+            { position: -10, label: '-10°', marker: true },
+            { position: 0, label: '0°', marker: true },
+            { position: 10, label: '10°', marker: true },
+            { position: 20, label: '20°', marker: true },
+          ],
+          snap: true,
+        }}
+      />
+      <SpaceBlock variant={16} />
+      <IndicatorSliderWithField
+        label="Slider with indicator"
+        value={indicatorSliderValue}
+        handleChange={setIndicatorSliderValue}
+      />
+      <SpaceBlock variant={16} />
+      <IndicatorSliderWithField
+        min={-20}
+        max={20}
+        label="Slider with indicator and ticks"
+        indicatorLabel="°"
+        value={indicatorSliderWithAndTicksValue}
+        handleChange={setIndicatorSliderWithAndTicksValue}
         tickConfig={{
           ticks: [
             { position: -20, label: '-20°', marker: true },
@@ -125,6 +157,12 @@ Slider with ticks
     ticks: [{ position: -10 }, { position: 0 }, { position: 10 }],
   }}
 />
+```
+
+Slider With indicator
+
+```typescript type=live
+<IndicatorSlider value={50} handleChange={() => {}} />
 ```
 
 ## Props
