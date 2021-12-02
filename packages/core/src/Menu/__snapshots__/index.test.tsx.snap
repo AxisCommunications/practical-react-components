@@ -127,11 +127,13 @@ exports[`Menus Menu (default) 1`] = `
   border: 2px solid transparent;
 }
 
-.c3:hover .c4 {
+.c3:hover .c4,
+.c3:focus-within .c4 {
   border: 0 solid transparent;
 }
 
-.c3:hover .c8 {
+.c3:hover .c8,
+.c3:focus-within .c8 {
   background-color: rgba(204,204,204,0.16);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -350,11 +352,13 @@ exports[`Menus Menu (disabled) 1`] = `
   border: 2px solid transparent;
 }
 
-.c3:hover .c4 {
+.c3:hover .c4,
+.c3:focus-within .c4 {
   border: 0 solid transparent;
 }
 
-.c3:hover .c8 {
+.c3:hover .c8,
+.c3:focus-within .c8 {
   background-color: rgba(204,204,204,0.16);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -569,11 +573,13 @@ exports[`Menus Menu (left) 1`] = `
   border: 2px solid transparent;
 }
 
-.c3:hover .c4 {
+.c3:hover .c4,
+.c3:focus-within .c4 {
   border: 0 solid transparent;
 }
 
-.c3:hover .c8 {
+.c3:hover .c8,
+.c3:focus-within .c8 {
   background-color: rgba(204,204,204,0.16);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
@@ -788,11 +794,13 @@ exports[`Menus Menu (right) 1`] = `
   border: 2px solid transparent;
 }
 
-.c3:hover .c4 {
+.c3:hover .c4,
+.c3:focus-within .c4 {
   border: 0 solid transparent;
 }
 
-.c3:hover .c8 {
+.c3:hover .c8,
+.c3:focus-within .c8 {
   background-color: rgba(204,204,204,0.16);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);

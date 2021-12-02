@@ -81,7 +81,8 @@ const MenuNativeButton = styled.button<{
     border: 2px solid transparent;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     ${MenuButtonIconContainer} {
       border: 0 solid transparent;
     }
