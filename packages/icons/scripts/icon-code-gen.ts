@@ -6,10 +6,9 @@
  */
 import fs from 'fs'
 import path from 'path'
-/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
-// @ts-ignore
-import svgr from '@svgr/core'
+import { transform } from '@svgr/core'
 import chalk from 'chalk'
+import { Template } from '@svgr/babel-plugin-transform-svg-component'
 
 interface Icon {
   readonly fileName: string
@@ -83,36 +82,40 @@ function generateComponentName(fileName: string): string {
   )}Icon`
 }
 
-async function parseSVG(svg: string): Promise<string> {
+async function parseSVG(svg: string, componentName: string): Promise<string> {
   // Just return minimal parsed SVG code here since too much
   // TypeScript information is stripped away by this parsing
-  // eslint-disable-next-line @typescript-eslint/promise-function-async, @typescript-eslint/no-explicit-any
-  const tsTemplate = ({ template }: any, _: any, { jsx }: any) => {
-    const typeScriptTpl = template.smart({
-      plugins: ['typescript'],
-      preserveComments: true,
-    })
-
+  const tsTemplate: Template = (variables, { tpl }) => {
     const comment = svg.match(/<!--([^]*)-->/)?.[1]
     const header = `${comment !== undefined ? `/**${comment}*/\n` : ''}`
 
-    return typeScriptTpl.ast`
-    ${header}
+    return tpl`${header}
+    
+    import React from 'react'
 
-    const Svg = React.memo(
-      (props: React.SVGProps<SVGSVGElement>) =>
-        ${jsx}
-    )`
+    ${variables.interfaces};
+
+    export const ${variables.componentName} = React.memo(
+      (${`(props: React.SVGProps<SVGSVGElement>)`}) =>
+        ${variables.jsx}
+    )
+    `
   }
 
-  const op: string = await svgr(svg, {
-    icon: true,
-    template: tsTemplate,
-    plugins: [
-      require.resolve('@svgr/plugin-jsx'),
-      require.resolve('@svgr/plugin-prettier'),
-    ],
-  })
+  const op: string = await transform(
+    svg,
+    {
+      icon: true,
+      template: tsTemplate,
+      plugins: [
+        require.resolve('@svgr/plugin-jsx'),
+        require.resolve('@svgr/plugin-prettier'),
+      ],
+    },
+    {
+      componentName,
+    }
+  )
 
   return op
 }
@@ -130,7 +133,7 @@ async function parseIcon(
   try {
     const svgCode = fs.readFileSync(path.join(inputPath, icon.name), 'utf8')
 
-    const op = await parseSVG(svgCode)
+    const op = await parseSVG(svgCode, componentName)
 
     if (op.includes('<defs>')) {
       console.warn(
@@ -153,11 +156,9 @@ async function parseIcon(
 }
 
 function generateIcon(output: string, icon: Icon): void {
-  const contents = `import React from 'react'
-
+  const contents = `
 ${icon.svg}
 
-export const ${icon.componentName} = Svg
 `
   fs.mkdirSync(output, { recursive: true })
   fs.writeFileSync(path.join(output, `${icon.fileName}.tsx`), contents)

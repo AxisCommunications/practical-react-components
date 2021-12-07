@@ -238,76 +238,77 @@ interface ColumnResizerRowProps {
   readonly setDragging: (dragging: boolean) => void
 }
 
-export const ColumnResizerRow: React.FunctionComponent<ColumnResizerRowProps> =
-  ({ setDragging }) => {
-    const {
-      minColumnWidth,
-      columnWidths,
-      dispatchWidthsAction,
-      onSelect,
-      onWidthsChange,
-    } = useContext(TableContext)
+export const ColumnResizerRow: React.FunctionComponent<
+  ColumnResizerRowProps
+> = ({ setDragging }) => {
+  const {
+    minColumnWidth,
+    columnWidths,
+    dispatchWidthsAction,
+    onSelect,
+    onWidthsChange,
+  } = useContext(TableContext)
 
-    /**
-     * The global offset of all resize handles.
-     * This is used e.g. when there is a column
-     * of checkboxes that needs to be taken into account.
-     */
-    const globalOffset =
-      TABLE_DIMENSIONS.PADDING_LEFT +
-      (onSelect !== undefined ? TABLE_DIMENSIONS.SELECT_WIDTH : 0)
+  /**
+   * The global offset of all resize handles.
+   * This is used e.g. when there is a column
+   * of checkboxes that needs to be taken into account.
+   */
+  const globalOffset =
+    TABLE_DIMENSIONS.PADDING_LEFT +
+    (onSelect !== undefined ? TABLE_DIMENSIONS.SELECT_WIDTH : 0)
 
-    const dividers = useMemo(() => {
-      const result = []
-      let offset = globalOffset
-      for (let i = 0; i < columnWidths.length - 1; i += 1) {
-        offset = offset + columnWidths[i]
-        result.push({
-          offset,
-          before: columnWidths[i],
-          after: columnWidths[i + 1],
-        })
-      }
-      return result
-    }, [columnWidths, globalOffset])
+  const dividers = useMemo(() => {
+    const result = []
+    let offset = globalOffset
+    for (let i = 0; i < columnWidths.length - 1; i += 1) {
+      offset = offset + columnWidths[i]
+      result.push({
+        offset,
+        before: columnWidths[i],
+        after: columnWidths[i + 1],
+      })
+    }
+    return result
+  }, [columnWidths, globalOffset])
 
-    const moveDivider = useCallback(
-      (x: number, dividerIndex: number) => {
-        const divider = dividers[dividerIndex]
-        const xClipped = clipTranslation(x, divider, minColumnWidth)
-        dispatchWidthsAction({
-          type: WidthActionType.UPDATE_WIDTHS,
-          widths: {
-            [dividerIndex]: divider.before + xClipped,
-            [dividerIndex + 1]: divider.after - xClipped,
-          },
-          onWidthsChange,
-        })
-      },
-      [dividers, dispatchWidthsAction, minColumnWidth, onWidthsChange]
+  const moveDivider = useCallback(
+    (x: number, dividerIndex: number) => {
+      const divider = dividers[dividerIndex]
+      const xClipped = clipTranslation(x, divider, minColumnWidth)
+      dispatchWidthsAction({
+        type: WidthActionType.UPDATE_WIDTHS,
+        widths: {
+          [dividerIndex]: divider.before + xClipped,
+          [dividerIndex + 1]: divider.after - xClipped,
+        },
+        onWidthsChange,
+      })
+    },
+    [dividers, dispatchWidthsAction, minColumnWidth, onWidthsChange]
+  )
+
+  const dragEndHandlers = useMemo(() => {
+    return [...Array(dividers.length).keys()].map(
+      i =>
+        ([tx]: readonly [number, number]) =>
+          moveDivider(tx, i)
     )
+  }, [dividers.length, moveDivider])
 
-    const dragEndHandlers = useMemo(() => {
-      return [...Array(dividers.length).keys()].map(
-        i =>
-          ([tx]: readonly [number, number]) =>
-            moveDivider(tx, i)
-      )
-    }, [dividers.length, moveDivider])
-
-    return (
-      <>
-        {dividers.map((divider, i) => {
-          return (
-            <ColumnResizer
-              setDragging={setDragging}
-              key={`${i}:${divider.offset}`}
-              index={i}
-              divider={divider}
-              onDragEnd={dragEndHandlers[i]}
-            />
-          )
-        })}
-      </>
-    )
-  }
+  return (
+    <>
+      {dividers.map((divider, i) => {
+        return (
+          <ColumnResizer
+            setDragging={setDragging}
+            key={`${i}:${divider.offset}`}
+            index={i}
+            divider={divider}
+            onDragEnd={dragEndHandlers[i]}
+          />
+        )
+      })}
+    </>
+  )
+}
