@@ -592,21 +592,22 @@ const SliderLabel = styled(Label)`
 
 // Slider component has more air around its controls and will
 // use smaller space between label and slider.
-export const SliderField: React.FC<Omit<FieldProps, 'compact'> & SliderProps> =
-  ({ label, unitLabel, ...props }) => (
-    <div>
-      {label !== undefined ? (
-        <SliderLabel compact={false}>
-          <Typography variant="navigation-label">{label}</Typography>
-        </SliderLabel>
-      ) : null}
-      {unitLabel !== undefined ? (
-        <WithUnitLabelContainer>
-          <Slider {...props} />
-          <Unit variant="explanatory-text">{unitLabel}</Unit>
-        </WithUnitLabelContainer>
-      ) : (
+export const SliderField: React.FC<
+  Omit<FieldProps, 'compact'> & SliderProps
+> = ({ label, unitLabel, ...props }) => (
+  <div>
+    {label !== undefined ? (
+      <SliderLabel compact={false}>
+        <Typography variant="navigation-label">{label}</Typography>
+      </SliderLabel>
+    ) : null}
+    {unitLabel !== undefined ? (
+      <WithUnitLabelContainer>
         <Slider {...props} />
-      )}
-    </div>
-  )
+        <Unit variant="explanatory-text">{unitLabel}</Unit>
+      </WithUnitLabelContainer>
+    ) : (
+      <Slider {...props} />
+    )}
+  </div>
+)

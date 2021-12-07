@@ -192,23 +192,24 @@ interface ContentListItemWithHoverProps extends BaseProps {
   readonly onHover: (hover: boolean) => void
 }
 
-export const ContentListItemWithHover: React.FC<ContentListItemWithHoverProps> =
-  ({ listHeight = 'medium', onHover, children, ...props }) => {
-    const handleMouseEnter = useCallback(() => {
-      onHover(true)
-    }, [onHover])
-    const handleMouseLeave = useCallback(() => {
-      onHover(false)
-    }, [onHover])
+export const ContentListItemWithHover: React.FC<
+  ContentListItemWithHoverProps
+> = ({ listHeight = 'medium', onHover, children, ...props }) => {
+  const handleMouseEnter = useCallback(() => {
+    onHover(true)
+  }, [onHover])
+  const handleMouseLeave = useCallback(() => {
+    onHover(false)
+  }, [onHover])
 
-    return (
-      <ContentListItem
-        listHeight={listHeight}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        {...props}
-      >
-        {children}
-      </ContentListItem>
-    )
-  }
+  return (
+    <ContentListItem
+      listHeight={listHeight}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      {...props}
+    >
+      {children}
+    </ContentListItem>
+  )
+}

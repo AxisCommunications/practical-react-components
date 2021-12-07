@@ -464,8 +464,9 @@ export const NumberInput: React.FC<NumberInputProps> = props => (
 export interface TextInputCredentialsProps extends BaseInputProps<string> {
   readonly type: TextInputCredentialsType
 }
-export const TextInputCredentials: React.FC<TextInputCredentialsProps> =
-  props => <Input {...props} />
+export const TextInputCredentials: React.FC<
+  TextInputCredentialsProps
+> = props => <Input {...props} />
 
 export const TextInputField = withField<TextInputProps>(TextInput)
 export const NumberInputField = withField<NumberInputProps>(NumberInput)
