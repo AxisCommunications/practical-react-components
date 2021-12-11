@@ -1,0 +1,90 @@
+export const meta = {
+  name: 'FormikSearchSelect',
+  route: '/formik/FormikSearchSelect',
+  menu: 'Formik',
+}
+
+# FormikSearchSelect
+
+A formik component that wraps a SearchSelect component.
+
+## Demo
+
+```typescript type=demo
+<FormikDemo initialValues={{ fruits: 'cherry' }}>
+  <FormikSearchSelectField
+    label="Select favorite fruits"
+    name="fruits"
+    noOptionsLabel="No options"
+    options={[
+      { label: 'Apple', value: 'apple' },
+      { label: 'Banana', value: 'banana' },
+      { label: 'Cherry', value: 'cherry' },
+      { label: 'Dragon fruit', value: 'dragon_fruit' },
+      { label: 'Elderberry', value: 'elderberry' },
+    ]}
+  />
+</FormikDemo>
+```
+
+## Usage in code
+
+```typescript
+import React, { useMemo, useCallback } from 'react'
+import { useFormik, FormikProvider } from 'formik'
+import { FormikSearchSelectField } from 'practical-react-components-formik'
+import * as yup from 'yup'
+
+const MyComponent = ({ enabled }) => {
+  const validationSchema = useMemo(
+    () =>
+      yup.object().shape({
+        selected: yup.string().required(),
+      }),
+    []
+  )
+
+  const initialValues = useMemo(
+    () => ({
+      selected,
+    }),
+    // Initial values that should not change during
+    // re-renders as formik handles state by itself
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    []
+  )
+
+  const onSubmit = useCallback((values: FormikValues) => {
+    /* Save data here */
+  }, [])
+
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit,
+  })
+
+  const options = [
+    { label: 'Apple', value: 'apple' },
+    { label: 'Banana', value: 'banana' },
+    { label: 'Cherry', value: 'cherry' },
+    { label: 'Dragon fruit', value: 'dragon_fruit' },
+    { label: 'Elderberry', value: 'elderberry' },
+  ]
+
+  return (
+    <FormikProvider value={formik}>
+      <FormikSearchSelectField
+        label="Selected"
+        name="selected"
+        noOptionsLabel="No options"
+        options={options}
+      />
+    </FormikProvider>
+  )
+}
+```
+
+## Props
+
+<Props of="FormikSearchSelect" />
