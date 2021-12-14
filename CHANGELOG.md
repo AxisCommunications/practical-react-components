@@ -3,7 +3,14 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.62.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.61.0...v0.62.0) (2021-12-08 11:14:17 +0100)
+## [v0.63.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.62.0...v0.63.0) (2021-12-14 14:36:04 +0100)
+
+### ✨ Features
+
+  - **formik**:  add FormikSearchSelect component ([050067a](https://github.com/AxisCommunications/practical-react-components/commit/050067a4d10c2e0ac12d05539d5deb841277d5c2))
+  - **icons**:  add arrow back icon ([4c7d85b](https://github.com/AxisCommunications/practical-react-components/commit/4c7d85b27dbb819468a49fd40e2ecb6f994d106e))
+
+## [v0.62.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.61.0...v0.62.0) (2021-12-08 11:31:49 +0100)
 
 ### ✨ Features
 
