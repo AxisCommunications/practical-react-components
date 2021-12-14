@@ -1,4 +1,4 @@
-Package: core-js (3.19.1)
+Package: core-js (3.19.3)
 Web:     
 License: MIT
 
@@ -1476,7 +1476,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-live (2.4.0)
+Package: react-live (2.3.0)
 Web:     
 License: MIT
 
