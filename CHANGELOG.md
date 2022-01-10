@@ -3,7 +3,17 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.63.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.62.0...v0.63.0) (2021-12-14 14:36:04 +0100)
+## [v0.64.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.63.0...v0.64.0) (2021-12-15 09:47:42 +0100)
+
+### 🚧 Maintenance
+
+  -  update dependencies ([7128435](https://github.com/AxisCommunications/practical-react-components/commit/712843571928d8dcab9684bfacb06106afede860))
+
+### ✨ Features
+
+  - **toast**:  allow user to provide custom toastOptions ([2d4df0a](https://github.com/AxisCommunications/practical-react-components/commit/2d4df0a60ecdea32a9dca83c93ea2069ada7b2a5))
+
+## [v0.63.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.62.0...v0.63.0) (2021-12-14 15:01:48 +0100)
 
 ### ✨ Features
 
