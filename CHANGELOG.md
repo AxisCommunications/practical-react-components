@@ -3,7 +3,17 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.64.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.63.0...v0.64.0) (2021-12-15 09:47:42 +0100)
+## [v0.65.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.64.0...v0.65.0) (2022-01-13 09:15:37 +0100)
+
+### 🚧 Maintenance
+
+  -  update dependencies ([a804922](https://github.com/AxisCommunications/practical-react-components/commit/a8049226f2be8eb619f9250555d72961d279d1d7))
+
+### ✨ Features
+
+  - **icons**:  add spot-focus icon ([80a00c1](https://github.com/AxisCommunications/practical-react-components/commit/80a00c14b665064ec50d23ba61238e93cb65f84d))
+
+## [v0.64.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.63.0...v0.64.0) (2022-01-10 09:13:47 +0100)
 
 ### 🚧 Maintenance
 
