@@ -23,7 +23,7 @@ object-assign
 /*! https://mths.be/regenerate v1.4.2 by @mathias | MIT license */
 
 /**
- * React Router DOM v6.0.2
+ * React Router DOM v6.2.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -34,7 +34,7 @@ object-assign
  */
 
 /**
- * React Router v6.0.2
+ * React Router v6.2.1
  *
  * Copyright (c) Remix Software Inc.
  *

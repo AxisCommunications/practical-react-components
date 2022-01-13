@@ -1,4 +1,4 @@
-Package: core-js (3.19.3)
+Package: core-js (3.20.1)
 Web:     
 License: MIT
 
@@ -765,7 +765,7 @@ SOFTWARE.
                        ====================
 
 
-Package: focus-trap-react (8.8.2)
+Package: focus-trap-react (8.9.0)
 Web:     https://github.com/focus-trap/focus-trap-react#readme
 License: MIT
 
@@ -1445,7 +1445,7 @@ License: MIT
                        ====================
 
 
-Package: react-router-dom (6.0.2)
+Package: react-router-dom (6.2.1)
 Web:     
 License: MIT
 
@@ -1476,7 +1476,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-live (2.3.0)
+Package: react-live (2.4.0)
 Web:     
 License: MIT
 
@@ -1708,7 +1708,7 @@ THE SOFTWARE.
                        ====================
 
 
-Package: react-router (6.0.2)
+Package: react-router (6.2.1)
 Web:     
 License: MIT
 
@@ -1739,7 +1739,7 @@ SOFTWARE.
                        ====================
 
 
-Package: history (5.1.0)
+Package: history (5.2.0)
 Web:     
 License: MIT
 
