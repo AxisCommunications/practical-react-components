@@ -1,8 +1,8 @@
-Package: core-js (3.20.1)
+Package: core-js (3.20.3)
 Web:     
 License: MIT
 
-Copyright (c) 2014-2021 Denis Pushkarev
+Copyright (c) 2014-2022 Denis Pushkarev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -765,7 +765,7 @@ SOFTWARE.
                        ====================
 
 
-Package: focus-trap-react (8.9.0)
+Package: focus-trap-react (8.9.1)
 Web:     https://github.com/focus-trap/focus-trap-react#readme
 License: MIT
 
@@ -1476,7 +1476,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-live (2.4.0)
+Package: react-live (2.4.1)
 Web:     
 License: MIT
 
@@ -1534,7 +1534,7 @@ SOFTWARE.
                        ====================
 
 
-Package: focus-trap (6.7.1)
+Package: focus-trap (6.7.2)
 Web:     https://github.com/focus-trap/focus-trap#readme
 License: MIT
 
