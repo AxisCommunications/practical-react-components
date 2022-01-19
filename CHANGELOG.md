@@ -3,7 +3,18 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.65.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.64.0...v0.65.0) (2022-01-13 09:15:37 +0100)
+## [v0.66.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.65.0...v0.66.0) (2022-01-19 09:35:55 +0100)
+
+### 🚧 Maintenance
+
+  -  update dependencies ([4b706fb](https://github.com/AxisCommunications/practical-react-components/commit/4b706fbfd66b7f799b19e99cddf3bbfb262299fa))
+
+### ✨ Features
+
+  - **icons**:  added audio stream icon ([ecae451](https://github.com/AxisCommunications/practical-react-components/commit/ecae4519d3007d21ea7ca4ff65ad82487233116b))
+  - **icons**:  add vertical configuration icon ([d55d926](https://github.com/AxisCommunications/practical-react-components/commit/d55d9269db91b58dee944f38a42f1188390e0208))
+
+## [v0.65.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.64.0...v0.65.0) (2022-01-13 09:57:26 +0100)
 
 ### 🚧 Maintenance
 
