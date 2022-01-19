@@ -391,63 +391,64 @@ export interface BaseItemWithSubmenuProps
   readonly hideSubmenu: VoidFunction
 }
 
-const BaseItemWithSubmenu: React.FunctionComponent<BaseItemWithSubmenuProps> =
-  ({
-    component,
-    submenuComponents,
-    disabled,
-    keyboardSelect,
-    align,
-    submenuVisible,
-    submenuArrowIndex,
-    hideAndBlurMenu,
-    hideSubmenu,
-  }) => {
-    const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
+const BaseItemWithSubmenu: React.FunctionComponent<
+  BaseItemWithSubmenuProps
+> = ({
+  component,
+  submenuComponents,
+  disabled,
+  keyboardSelect,
+  align,
+  submenuVisible,
+  submenuArrowIndex,
+  hideAndBlurMenu,
+  hideSubmenu,
+}) => {
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 
-    const [visible, show, hide] = useBoolean(false)
-    const [debouncedVisible, setDebouncedVisible] = useState(visible)
+  const [visible, show, hide] = useBoolean(false)
+  const [debouncedVisible, setDebouncedVisible] = useState(visible)
 
-    useEffect(() => {
-      const delayVisible = () => setDebouncedVisible(visible)
-      const delayed = setTimeout(delayVisible, SUBMENU_DELAY_MS)
-      return () => {
-        clearTimeout(delayed)
-      }
-    }, [visible])
+  useEffect(() => {
+    const delayVisible = () => setDebouncedVisible(visible)
+    const delayed = setTimeout(delayVisible, SUBMENU_DELAY_MS)
+    return () => {
+      clearTimeout(delayed)
+    }
+  }, [visible])
 
-    const preventMenuBlur = useCallback<PointerEventHandler>(e => {
-      // Prevent the menu from losing focus when clicking down on an item.
-      e.preventDefault()
-    }, [])
+  const preventMenuBlur = useCallback<PointerEventHandler>(e => {
+    // Prevent the menu from losing focus when clicking down on an item.
+    e.preventDefault()
+  }, [])
 
-    return (
-      <>
-        <BaseMenuItem
-          ref={setAnchorEl}
+  return (
+    <>
+      <BaseMenuItem
+        ref={setAnchorEl}
+        disabled={disabled}
+        keyboardSelect={keyboardSelect}
+        onPointerDown={preventMenuBlur}
+        onPointerOver={show}
+        onPointerOut={hide}
+      >
+        {component}
+      </BaseMenuItem>
+      {submenuComponents !== undefined && (
+        <Submenu
+          visible={submenuVisible || debouncedVisible}
+          submenuComponents={submenuComponents}
+          anchorEl={anchorEl}
           disabled={disabled}
-          keyboardSelect={keyboardSelect}
-          onPointerDown={preventMenuBlur}
-          onPointerOver={show}
-          onPointerOut={hide}
-        >
-          {component}
-        </BaseMenuItem>
-        {submenuComponents !== undefined && (
-          <Submenu
-            visible={submenuVisible || debouncedVisible}
-            submenuComponents={submenuComponents}
-            anchorEl={anchorEl}
-            disabled={disabled}
-            align={align}
-            arrowIndex={submenuArrowIndex}
-            hideAndBlurMenu={hideAndBlurMenu}
-            hideSubmenu={hideSubmenu}
-          />
-        )}
-      </>
-    )
-  }
+          align={align}
+          arrowIndex={submenuArrowIndex}
+          hideAndBlurMenu={hideAndBlurMenu}
+          hideSubmenu={hideSubmenu}
+        />
+      )}
+    </>
+  )
+}
 
 export interface BaseItemProps {
   readonly component: ReactNode
