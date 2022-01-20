@@ -3,7 +3,17 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.66.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.65.0...v0.66.0) (2022-01-19 09:35:55 +0100)
+## [v0.67.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.66.0...v0.67.0) (2022-01-19 17:02:09 +0100)
+
+### 🚧 Maintenance
+
+  -  fix lint and test error ([4cda251](https://github.com/AxisCommunications/practical-react-components/commit/4cda2519f683e969e39b73b01739d52c18c239ed))
+
+### ✨ Features
+
+  - **menu**:  support submenu functionality ([bd914c6](https://github.com/AxisCommunications/practical-react-components/commit/bd914c6b2270fda25f9fb996e2871ccbc0b881e6))
+
+## [v0.66.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.65.0...v0.66.0) (2022-01-19 10:05:46 +0100)
 
 ### 🚧 Maintenance
 
