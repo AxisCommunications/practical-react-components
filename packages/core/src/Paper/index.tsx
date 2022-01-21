@@ -31,7 +31,7 @@ const PaperDiv = styled.div<{
         `}
 `
 
-interface PaperProps extends BaseProps {
+export interface PaperProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */

@@ -202,7 +202,7 @@ const arrows: Record<Placement, ReactElement> = {
   down: <TooltipUpArrow />,
 }
 
-interface TooltipProps extends Omit<PopOverProps, 'anchorEl'> {
+export interface TooltipProps extends Omit<PopOverProps, 'anchorEl'> {
   /**
    * Optional Tooltip variant.
    * Default: `default`
@@ -214,7 +214,7 @@ interface TooltipProps extends Omit<PopOverProps, 'anchorEl'> {
   readonly text: string
 }
 
-interface ExpandedTooltipProps extends Omit<PopOverProps, 'anchorEl'> {
+export interface ExpandedTooltipProps extends Omit<PopOverProps, 'anchorEl'> {
   /**
    * Required Tooltip variant.
    */

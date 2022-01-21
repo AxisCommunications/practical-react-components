@@ -98,7 +98,7 @@ const SkeletonRow: React.FunctionComponent<SkeletonRowProps> = React.memo(
 )
 SkeletonRow.displayName = 'SkeletonRowComponent'
 
-interface SkeletonTableRowsProps extends BaseProps {
+export interface SkeletonTableRowsProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */

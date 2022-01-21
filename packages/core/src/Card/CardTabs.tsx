@@ -160,7 +160,7 @@ interface TabItem<T> {
   readonly disabled?: boolean
 }
 
-interface CardTabsProps<T> extends Omit<BaseProps, 'onChange'> {
+export interface CardTabsProps<T> extends Omit<BaseProps, 'onChange'> {
   /**
    * Current selected tab, matching a `value` from options
    */

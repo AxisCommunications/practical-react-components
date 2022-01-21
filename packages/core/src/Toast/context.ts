@@ -86,7 +86,7 @@ export type ToastAction =
 export const NI = () => {
   throw new Error(`Not implemented: no ToastContext set`)
 }
-interface ToastContextType extends ToastCallbacks {
+export interface ToastContextType extends ToastCallbacks {
   readonly __dispatchRef: React.MutableRefObject<React.Dispatch<ToastAction>>
 }
 

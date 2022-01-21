@@ -52,7 +52,7 @@ export const DraggableListItem = styled.div<{
  * rendered on the right side of the list items.
  */
 
-interface DraggableListProps extends Omit<BaseProps, 'onChange'> {
+export interface DraggableListProps extends Omit<BaseProps, 'onChange'> {
   /**
    * Function called when list order changes with list of re-ordered indices as argument
    */

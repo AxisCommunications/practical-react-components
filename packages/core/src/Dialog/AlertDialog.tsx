@@ -21,7 +21,7 @@ export interface AlertDialogAction {
   readonly onClick: ButtonClickHandler
 }
 
-interface AlertDialogProps extends ModalProps {
+export interface AlertDialogProps extends ModalProps {
   /**
    * When `true` the dialog is rendered, `false` removes the dialog.
    */

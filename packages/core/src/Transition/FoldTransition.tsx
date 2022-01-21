@@ -16,7 +16,7 @@ const transitionHeight = (
   node.style.height = `${end}px`
 }
 
-interface FoldTransitionProps {
+export interface FoldTransitionProps {
   readonly expanded: boolean
 }
 

@@ -61,7 +61,7 @@ const InputLabel = styled(Typography)`
   word-wrap: break-word;
 `
 
-interface DroppableProps extends BaseProps {
+export interface DroppableProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */

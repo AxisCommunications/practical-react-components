@@ -21,7 +21,7 @@ const FileInput = styled.input`
   display: none;
 `
 
-interface FilePickerProps
+export interface FilePickerProps
   extends Pick<ButtonProps, 'variant' | 'accent' | 'label' | 'icon'>,
     BaseProps {
   /**

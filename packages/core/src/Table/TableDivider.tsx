@@ -27,7 +27,7 @@ const TableDividerCell = styled(TableCell)`
   grid-column-end: scroll;
 `
 
-interface TableDividerProps extends BaseProps {
+export interface TableDividerProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */

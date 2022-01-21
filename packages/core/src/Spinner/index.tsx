@@ -66,7 +66,7 @@ const Label = styled.div`
   color: ${({ theme }) => theme.color.text01()};
 `
 
-interface SpinnerProps extends BaseProps {
+export interface SpinnerProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */

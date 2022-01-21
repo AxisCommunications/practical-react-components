@@ -11,7 +11,7 @@ export * from './ExpandableListItem'
 type BaseElement = HTMLDivElement
 type BaseProps = React.HTMLAttributes<BaseElement>
 
-interface ExpandableListProps extends BaseProps {
+export interface ExpandableListProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */

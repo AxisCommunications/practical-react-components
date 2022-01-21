@@ -178,7 +178,7 @@ const SelectOptionComponent: React.FC<SelectOption> = ({
   )
 }
 
-interface SelectPopoverProps<V extends string = string>
+export interface SelectPopoverProps<V extends string = string>
   extends Required<Pick<BaseSelectProps, 'direction' | 'align' | 'compact'>>,
     PopOverProps {
   readonly anchorEl: HTMLDivElement | null
