@@ -191,7 +191,7 @@ export interface ToggleButtonGroupOption<T extends string | number> {
   readonly disabled?: boolean
 }
 
-interface ToggleButtonGroupProps<T extends string | number>
+export interface ToggleButtonGroupProps<T extends string | number>
   extends Omit<BaseProps, 'onChange'> {
   /**
    * `class` to be passed to the component.

@@ -36,7 +36,7 @@ const ProgressLabel = styled(Typography).attrs({
   color: ${({ theme }) => theme.color.text03()};
 `
 
-interface ProgressProps extends BaseProps {
+export interface ProgressProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */

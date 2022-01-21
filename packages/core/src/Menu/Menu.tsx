@@ -79,7 +79,8 @@ export interface MenuItemProps
   readonly submenu?: ReadonlyArray<MenuItemProps>
 }
 
-interface MenuProps extends Omit<BaseMenuProps, 'components' | 'button'> {
+export interface MenuProps
+  extends Omit<BaseMenuProps, 'components' | 'button'> {
   /**
    * The icon element for menu button.
    *

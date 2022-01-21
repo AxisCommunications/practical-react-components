@@ -47,7 +47,7 @@ const Caption = styled(Typography)`
   color: ${({ theme }) => theme.color.text03()};
 `
 
-interface TextBlockProps extends BaseProps {
+export interface TextBlockProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -131,7 +131,7 @@ const GroupTitle: React.FC<{
   )
 }
 
-interface FormSectionProps extends BaseProps {
+export interface FormSectionProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */
@@ -183,7 +183,7 @@ export const ContentListItem = styled.div<{
   }
 `
 
-interface ContentListItemWithHoverProps extends BaseProps {
+export interface ContentListItemWithHoverProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */

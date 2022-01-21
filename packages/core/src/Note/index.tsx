@@ -25,7 +25,7 @@ const NoteTextWrapper = styled.div`
   margin-left: ${spacing.medium};
 `
 
-interface NoteProps extends BaseProps {
+export interface NoteProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */

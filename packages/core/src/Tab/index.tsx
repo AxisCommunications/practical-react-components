@@ -298,7 +298,7 @@ function InternalTab<T>({
 /**
  * Tab
  */
-interface TabProps<T> extends InternalTabBaseProps<T> {
+export interface TabProps<T> extends InternalTabBaseProps<T> {
   readonly markerOffset?: HorizontalTabMarkerOffset
 }
 
@@ -312,7 +312,7 @@ export function Tab<T>({
 /**
  * Vertical tab
  */
-interface VerticalTabProps<T> extends InternalTabBaseProps<T> {
+export interface VerticalTabProps<T> extends InternalTabBaseProps<T> {
   readonly markerOffset?: VerticalTabMarkerOffset
 }
 

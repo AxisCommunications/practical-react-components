@@ -18,7 +18,7 @@ const SvgIcon: IconType = () => (
   </svg>
 )
 
-interface ArrowProps {
+export interface ArrowProps {
   readonly expanded: boolean
   readonly disabled: boolean
 }

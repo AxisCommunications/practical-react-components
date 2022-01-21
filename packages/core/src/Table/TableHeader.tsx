@@ -30,7 +30,7 @@ const TableHeaderGrid = styled.div`
   display: grid;
   grid-template-rows: ${componentSize.large};
 `
-interface TableHeaderProps extends BaseProps {
+export interface TableHeaderProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */

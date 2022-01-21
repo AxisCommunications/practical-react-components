@@ -64,7 +64,7 @@ const SvgDot = styled.circle<{
     partial ? theme.color.text05() : theme.color.elementPrimary()};
 `
 
-interface RadioButtonAtomProps {
+export interface RadioButtonAtomProps {
   readonly checked: boolean
   readonly partial: boolean
   readonly error: string
@@ -229,7 +229,7 @@ export type RadioButtonValueChangeHandler<V extends string = string> = (
   value: V
 ) => void
 
-interface RadioButtonProps<V extends string = string> extends BaseProps {
+export interface RadioButtonProps<V extends string = string> extends BaseProps {
   /**
    * Attributes a name to the RadioButton.
    */

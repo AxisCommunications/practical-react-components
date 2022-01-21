@@ -180,7 +180,7 @@ export const BaseMenuItem = styled.div<{
 
 type ButtonClickHandler = React.MouseEventHandler<HTMLButtonElement>
 
-interface MenuButtonProps extends BaseButtonProps {
+export interface MenuButtonProps extends BaseButtonProps {
   /**
    * If `true`, the button will be disabled.
    */

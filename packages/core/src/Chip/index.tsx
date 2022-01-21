@@ -28,7 +28,8 @@ const ChipRemoveIcon = styled(ClickableIcon).attrs({
   margin-left: ${spacing.small};
 `
 
-interface ChipProps extends Omit<BaseChipProps, 'component' | 'noPadding'> {
+export interface ChipProps
+  extends Omit<BaseChipProps, 'component' | 'noPadding'> {
   /**
    * Changes the text of the label displayed on the chip.
    */

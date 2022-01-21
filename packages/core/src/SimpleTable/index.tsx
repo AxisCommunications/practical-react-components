@@ -164,7 +164,7 @@ const TableCellContent = styled.td<{ readonly columWidthPercentage?: number }>`
       : undefined}
 `
 
-interface SimpleTableRowProps extends BaseRowProps {
+export interface SimpleTableRowProps extends BaseRowProps {
   readonly children: React.ReactNodeArray
   /**
    * `class` to be passed to the component.
@@ -257,7 +257,7 @@ const TableContentContainer = styled.tbody<{
   border-top: 1px solid ${({ theme }) => theme.color.element12()};
 `
 
-interface SimpleTableProps extends BaseProps {
+export interface SimpleTableProps extends BaseProps {
   /**
    * `class` to be passed to the component.
    */

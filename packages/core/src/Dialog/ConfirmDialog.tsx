@@ -10,7 +10,7 @@ export interface ConfirmDialogAction {
   readonly onClick: ButtonClickHandler
 }
 
-interface ConfirmDialogProps extends ModalProps {
+export interface ConfirmDialogProps extends ModalProps {
   /**
    * When `true` the dialog is rendered, `false` removes the dialog.
    */
