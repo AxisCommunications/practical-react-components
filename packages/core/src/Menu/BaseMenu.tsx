@@ -422,6 +422,12 @@ const BaseItemWithSubmenu: React.FunctionComponent<
     e.preventDefault()
   }, [])
 
+  const preventCloseMenu = useCallback(e => {
+    // Prevent event from bubbling up to the wrapper
+    // that closes the menu when it has submenu
+    e.stopPropagation()
+  }, [])
+
   return (
     <>
       <BaseMenuItem
@@ -431,6 +437,7 @@ const BaseItemWithSubmenu: React.FunctionComponent<
         onPointerDown={preventMenuBlur}
         onPointerOver={show}
         onPointerOut={hide}
+        onClick={preventCloseMenu}
       >
         {component}
       </BaseMenuItem>
