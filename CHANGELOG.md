@@ -3,7 +3,17 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.67.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.66.0...v0.67.0) (2022-01-19 17:02:09 +0100)
+## [v0.68.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.67.0...v0.68.0) (2022-01-27 07:57:19 +0100)
+
+### 🐛 Bug fixes
+
+  - **menu**:  prevent closing menu when you click an item that has a submenu ([f869f9f](https://github.com/AxisCommunications/practical-react-components/commit/f869f9f23f2d0f877a8ea7c7c0f0c6851a29e6b9))
+
+### ♻️ Refactoring
+
+  -  export interfaces for exported components ([7f77f10](https://github.com/AxisCommunications/practical-react-components/commit/7f77f100217fd7933be443381e12975e0b3741d5))
+
+## [v0.67.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.66.0...v0.67.0) (2022-01-20 07:53:33 +0100)
 
 ### 🚧 Maintenance
 
