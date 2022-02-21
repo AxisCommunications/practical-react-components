@@ -452,6 +452,7 @@ exports[`ToggleButtonGroup ToggleButtonGroupWithField 1`] = `
       <div>
         <div
           className="c2"
+          disabled={false}
         >
           <span
             className="c3"
@@ -681,6 +682,7 @@ exports[`ToggleButtonGroup ToggleButtonGroupWithFieldExclusive 1`] = `
       <div>
         <div
           className="c2"
+          disabled={false}
         >
           <span
             className="c3"

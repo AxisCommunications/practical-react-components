@@ -597,14 +597,16 @@ export const SliderField: React.FC<
 > = ({ label, unitLabel, ...props }) => (
   <div>
     {label !== undefined ? (
-      <SliderLabel compact={false}>
+      <SliderLabel compact={false} disabled={props.disabled ?? false}>
         <Typography variant="navigation-label">{label}</Typography>
       </SliderLabel>
     ) : null}
     {unitLabel !== undefined ? (
       <WithUnitLabelContainer>
         <Slider {...props} />
-        <Unit variant="explanatory-text">{unitLabel}</Unit>
+        <Unit variant="explanatory-text" disabled={props.disabled ?? false}>
+          {unitLabel}
+        </Unit>
       </WithUnitLabelContainer>
     ) : (
       <Slider {...props} />

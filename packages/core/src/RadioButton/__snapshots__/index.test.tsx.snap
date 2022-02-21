@@ -3094,6 +3094,7 @@ exports[`RadioButtons RadioIconGroup 1`] = `
       <div>
         <div
           className="c2"
+          disabled={false}
         >
           <span
             className="c3"
