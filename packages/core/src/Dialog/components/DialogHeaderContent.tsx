@@ -1,8 +1,9 @@
 import styled from 'styled-components'
+
 import { spacing } from '../../designparams'
 import { DIALOG_PADDING } from './padding'
 
-export const Header = styled.div<{
+export const DialogHeaderContent = styled.div<{
   readonly shadowHidden: boolean
 }>`
   box-sizing: border-box;
