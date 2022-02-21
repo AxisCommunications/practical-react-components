@@ -4678,6 +4678,7 @@ exports[`TextInput TimeInput 1`] = `
       <div>
         <div
           className="c24"
+          disabled={false}
         >
           <span
             className="c25"
@@ -4716,6 +4717,7 @@ exports[`TextInput TimeInput 1`] = `
           </div>
           <span
             className="c22 c27"
+            disabled={false}
           >
             MM
           </span>
@@ -4724,6 +4726,7 @@ exports[`TextInput TimeInput 1`] = `
       <div>
         <div
           className="c24"
+          disabled={false}
         >
           <span
             className="c25"
@@ -4762,6 +4765,7 @@ exports[`TextInput TimeInput 1`] = `
           </div>
           <span
             className="c22 c27"
+            disabled={false}
           >
             MM
           </span>
