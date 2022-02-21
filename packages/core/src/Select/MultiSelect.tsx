@@ -46,12 +46,14 @@ const SelectInsideContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 `
 
 const ChipContainer = styled.div`
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
+  overflow: hidden;
 `
 
 const IconsContainer = styled.div`
