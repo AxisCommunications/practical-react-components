@@ -18,9 +18,11 @@ import { useScrollPosition } from 'react-hooks-shareable'
 
 import { Typography } from '../Typography'
 import { ModalProps } from '../Modal'
-import { Header } from './components/Header'
-import { Footer } from './components/Footer'
-import { MainSection } from './components/Content'
+import {
+  DialogHeaderContent,
+  DialogMainSection,
+  DialogFooterContent,
+} from './components'
 import {
   BaseDialog,
   DialogWidth,
@@ -78,16 +80,23 @@ export const Dialog: React.FC<DialogProps> = ({
     >
       {header !== undefined ? (
         <DialogHeader>
-          <Header shadowHidden={atTop !== false}>{header}</Header>
+          <DialogHeaderContent shadowHidden={atTop !== false}>
+            {header}
+          </DialogHeaderContent>
         </DialogHeader>
       ) : null}
       <DialogContent>
-        <MainSection scrollRef={scrollRef} hasHeader={header !== undefined}>
+        <DialogMainSection
+          scrollRef={scrollRef}
+          hasHeader={header !== undefined}
+        >
           {children}
-        </MainSection>
+        </DialogMainSection>
       </DialogContent>
       <DialogFooter>
-        <Footer shadowHidden={atBottom !== false}>{controls}</Footer>
+        <DialogFooterContent shadowHidden={atBottom !== false}>
+          {controls}
+        </DialogFooterContent>
       </DialogFooter>
     </BaseDialog>
   )

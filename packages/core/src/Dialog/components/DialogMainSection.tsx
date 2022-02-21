@@ -5,7 +5,7 @@ import { spacing } from '../../designparams'
 import { DIALOG_PADDING } from './padding'
 
 /**
- * Content
+ * DialogMainSection
  *
  * Simple div to base other sections on. It comes with a default padding to make
  * sure this isn't left out of anything put in the dialog body. Sections can be
@@ -55,7 +55,7 @@ interface ScrollSectionProps {
   readonly scrollRef: React.Dispatch<React.SetStateAction<HTMLElement | null>>
 }
 
-export const ScrollSection: React.FunctionComponent<ScrollSectionProps> = ({
+export const ScrollSection: React.FC<ScrollSectionProps> = ({
   className,
   maxHeight,
   scrollRef,
@@ -66,8 +66,7 @@ export const ScrollSection: React.FunctionComponent<ScrollSectionProps> = ({
   </ScrollContainer>
 )
 
-/* stylelint-disable selector-type-no-unknown  */
-export const MainSection = styled(ScrollSection)<{
+export const DialogMainSection = styled(ScrollSection)<{
   readonly hasHeader: boolean
   readonly scrollRef: React.Dispatch<React.SetStateAction<HTMLElement | null>>
 }>`

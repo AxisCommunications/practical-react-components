@@ -1,7 +1,7 @@
 /**
- * Footer
+ * DialogFooterContent
  *
- * The Footer component adds a small margin to all its children
+ * The `DialogFooterContent` component adds a small margin to all its children
  *
  * Note: the footer items are rendered from right to left!! This also causes the
  * focus to land on the most important button first. If focus behaviour needs to
@@ -15,7 +15,9 @@ import styled from 'styled-components'
 import { spacing } from '../../designparams'
 import { DIALOG_PADDING } from './padding'
 
-export const Footer = styled.div<{ readonly shadowHidden: boolean }>`
+export const DialogFooterContent = styled.div<{
+  readonly shadowHidden: boolean
+}>`
   display: flex;
   flex-direction: row-reverse;
   box-sizing: border-box;

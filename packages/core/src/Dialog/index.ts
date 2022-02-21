@@ -2,13 +2,14 @@ export * from './BaseDialog'
 export * from './AlertDialog'
 export * from './ConfirmDialog'
 export { DialogProps } from './Dialog'
+export * from './components'
 
 import { Dialog as DialogOriginal, HeaderTitle } from './Dialog'
 import {
   EdgeToEdgeSection,
   CenteredSection,
   ScrollSection,
-} from './components/Content'
+} from './components/DialogMainSection'
 
 type DialogOriginalType = typeof DialogOriginal
 
