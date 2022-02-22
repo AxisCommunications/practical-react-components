@@ -149,7 +149,7 @@ export const TickLabel: React.FC<TickLabelProps> = ({
   const el = useRef<HTMLDivElement | null>(null)
 
   const handleClick = useCallback(
-    (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    (event: React.MouseEvent<HTMLAnchorElement>) => {
       event.stopPropagation()
       handleChange(value)
     },
