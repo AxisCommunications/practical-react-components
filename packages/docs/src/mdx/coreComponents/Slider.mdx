@@ -25,6 +25,7 @@ export const DemoComponent = () => {
   const [valueField, setValueField] = useState(0)
   const [valueFieldUnitLabel, setValueFieldUnitLabel] = useState(0)
   const [metaSliderValue, setMetaSliderValue] = useState(0)
+  const [ticksSnapSliderValue, setTicksSnapSliderValue] = useState(0)
   const [ticksOnlySliderValue, setTicksOnlySliderValue] = useState(0)
   return (
     <>
@@ -47,11 +48,11 @@ export const DemoComponent = () => {
       />
       <SpaceBlock variant={16} />
       <SliderField
-        label="Tick slider field"
+        label="Slider field with ticks"
         min={-10}
         max={20}
-        value={ticksOnlySliderValue}
-        handleChange={setTicksOnlySliderValue}
+        value={ticksSnapSliderValue}
+        handleChange={setTicksSnapSliderValue}
         compact={true}
         tickConfig={{
           ticks: [
@@ -60,15 +61,16 @@ export const DemoComponent = () => {
             { position: 10, label: '10°', marker: true },
             { position: 20, label: '20°', marker: true },
           ],
-          snap: false,
         }}
       />
       <SpaceBlock variant={16} />
-      <Slider
+      <SliderField
+        label="Slider field with ticks where `snap` prop set to false"
         min={-20}
         max={20}
-        value={metaSliderValue}
-        handleChange={setMetaSliderValue}
+        value={ticksOnlySliderValue}
+        handleChange={setTicksOnlySliderValue}
+        compact={true}
         tickConfig={{
           ticks: [
             { position: -20, label: '-20°', marker: true },
@@ -77,7 +79,7 @@ export const DemoComponent = () => {
             { position: 10, label: '10°', marker: true },
             { position: 20, label: '20°', marker: true },
           ],
-          snap: true,
+          snap: false,
         }}
       />
     </>
