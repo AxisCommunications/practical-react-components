@@ -3,11 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.69.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.68.0...v0.69.0) (2022-02-09 09:00:01 +0100)
+## [v0.70.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.68.0...v0.70.0) (2022-02-23 06:56:55 +0100)
+
+### 🚧 Maintenance
+
+  -  update dependencies ([bbe7173](https://github.com/AxisCommunications/practical-react-components/commit/bbe71735efe7b2388f106830dc7ea1067409b872))
 
 ### ✨ Features
 
+  -  removes `resolutions` dependencies ([d42a7c4](https://github.com/AxisCommunications/practical-react-components/commit/d42a7c4d43684bd7e221cea194e3458503c19f0c))
+  - **dialog**:  export internal components ([5d22596](https://github.com/AxisCommunications/practical-react-components/commit/5d225969a3bcd55c049179b1dc1400a8374d584d))
   - **icons**:  add logout icon ([dc26adc](https://github.com/AxisCommunications/practical-react-components/commit/dc26adc6b32794be443e93f454b3fd4ba65319de))
+
+### 🐛 Bug fixes
+
+  - **utils**:  handle disabled label / unit label for `*Field` components ([b66367b](https://github.com/AxisCommunications/practical-react-components/commit/b66367bf6886b00122c5cf5d097a7b95b22d4d1c))
+  - **select**:  apply overflow hidden to MultiSelect chips ([2dce76c](https://github.com/AxisCommunications/practical-react-components/commit/2dce76cfacf8e44aa5f1c4a8a7156b0434e6a60a))
 
 ## [v0.68.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.67.0...v0.68.0) (2022-01-27 08:10:49 +0100)
 
@@ -78,40 +89,31 @@ All notable changes to this project will be documented in this file.
   - **table**:  hover effect does not stay on table row when menu on table row active ([64227e7](https://github.com/AxisCommunications/practical-react-components/commit/64227e7902b56313942aa77fdf5619d97cf19be0))
   - **menu**:  hover effect does not stay on menu button when menu is activated ([e383796](https://github.com/AxisCommunications/practical-react-components/commit/e383796ac23a0407139f214f4e4228147b8d8aef))
 
-## [v0.61.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.60.0...v0.61.0) (2021-11-23 16:11:01 +0100)
+## [v0.61.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.59.0...v0.61.0) (2021-11-23 16:11:01 +0100)
 
 ### 🚧 Maintenance
 
   - **docs**:  github repository link ([0a31bf2](https://github.com/AxisCommunications/practical-react-components/commit/0a31bf2e980f37ae3831c7aa06a9603acfae7617))
   -  update dependencies to latest versions ([85272e7](https://github.com/AxisCommunications/practical-react-components/commit/85272e771152dc1814d7e55c84856d5e8b9a0016))
 
+### ✨ Features
+
+  - **icons**:  add audio icons ([b1aeeb7](https://github.com/AxisCommunications/practical-react-components/commit/b1aeeb75af02c525a6f69847861881580465b4da))
+
 ### 🐛 Bug fixes
 
   - **simpletable**:  unable to change column width ([0229489](https://github.com/AxisCommunications/practical-react-components/commit/0229489d73db246993ef202cb17b8157c56c0788))
   - **searchSelect**:  set isTyping to false on blur ([b8f2f96](https://github.com/AxisCommunications/practical-react-components/commit/b8f2f961fc4b2fc5a4301b58a4fa3554be4a63a6))
 
-## [v0.60.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.59.0...v0.60.0) (2021-11-17 12:09:39 +0100)
-
-### ✨ Features
-
-  - **icons**:  add audio icons ([b1aeeb7](https://github.com/AxisCommunications/practical-react-components/commit/b1aeeb75af02c525a6f69847861881580465b4da))
-
-## [v0.59.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.58.0...v0.59.0) (2021-11-16 10:03:07 +0100)
+## [v0.59.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.56.0...v0.59.0) (2021-11-16 10:03:07 +0100)
 
 ### 🚧 Maintenance
 
   -  update dependencies to latest versions ([bfd6af1](https://github.com/AxisCommunications/practical-react-components/commit/bfd6af1109473895cc178c0fca71ca4bd93c0e4a))
 
-## [v0.58.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.57.0...v0.58.0) (2021-11-12 09:12:25 +0100)
-
 ### 🐛 Bug fixes
 
   - **button**:  icon don't overflow and buttons are aligned ([378549e](https://github.com/AxisCommunications/practical-react-components/commit/378549ea9fa00eea58c149c1aa735936fe1c2859))
-
-## [v0.57.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.56.0...v0.57.0) (2021-10-29 17:00:42 +0200)
-
-### 🐛 Bug fixes
-
   - **popOver**:  reposition PopOver when it is resized ([6c7dd8e](https://github.com/AxisCommunications/practical-react-components/commit/6c7dd8ebbbb3d581ac2a879bc447c9f1ff8c1b37))
 
 ## [v0.56.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.55.0...v0.56.0) (2021-10-26 15:17:49 +0200)
