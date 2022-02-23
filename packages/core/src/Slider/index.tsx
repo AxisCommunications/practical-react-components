@@ -366,6 +366,14 @@ export const Slider: React.FC<SliderProps> = ({
     [tickMarkers]
   )
 
+  /** Convert from the slider track value format (0.0 - 1.0) to the format used by the value. */
+  const convertDecimalToValue = useCallback(
+    x => min + x * (max - min),
+    [min, max]
+  )
+
+  const shouldSnapToTick = snap && tickMarkers.length > 0
+
   // Computes the new value and passed it to the handleChange callback
   const handleClick = useCallback(
     (e: PointerEvent | React.MouseEvent<BaseElement>) => {
@@ -377,7 +385,7 @@ export const Slider: React.FC<SliderProps> = ({
         let x = clamp((e.pageX - left) / width)
 
         // Find x position if snap is enabled
-        if (e.type !== 'pointermove' && snap && tickMarkers.length > 0) {
+        if (e.type !== 'pointermove' && shouldSnapToTick) {
           const snapTo = snapValues.reduce((a, b) =>
             Math.abs(b - x) < Math.abs(a - x) ? b : a
           )
@@ -385,7 +393,7 @@ export const Slider: React.FC<SliderProps> = ({
           x = snapTo
         }
 
-        handleChange(min + x * (max - min))
+        handleChange(convertDecimalToValue(x))
       }
     },
     [handleChange, max, min, onClick, snap, snapValues, tickMarkers.length]
@@ -421,6 +429,15 @@ export const Slider: React.FC<SliderProps> = ({
     }
   }, [handleClick, pressed])
 
+  const getNextSnap = useCallback(
+    () => snapValues.find(snapValue => snapValue > fraction),
+    [snapValues, fraction]
+  )
+  const getPreviousSnap = useCallback(
+    () => snapValues.reverse().find(snapValue => snapValue < fraction),
+    [snapValues, fraction]
+  )
+
   // Keyboard support
   const handleKeyDown = useCallback<React.KeyboardEventHandler<BaseElement>>(
     event => {
@@ -442,23 +459,31 @@ export const Slider: React.FC<SliderProps> = ({
       switch (event.key) {
         case SliderKeys.ArrowRight:
         case SliderKeys.ArrowUp: {
-          newValue = value + onePercent
+          newValue = shouldSnapToTick
+            ? convertDecimalToValue(getNextSnap())
+            : value + onePercent
           break
         }
 
         case SliderKeys.ArrowLeft:
         case SliderKeys.ArrowDown: {
-          newValue = value - onePercent
+          newValue = shouldSnapToTick
+            ? convertDecimalToValue(getPreviousSnap())
+            : value - onePercent
           break
         }
 
         case SliderKeys.PageUp: {
-          newValue = value + onePercent * 10
+          newValue = shouldSnapToTick
+            ? convertDecimalToValue(getNextSnap())
+            : value + onePercent * 10
           break
         }
 
         case SliderKeys.PageDown: {
-          newValue = value - onePercent * 10
+          newValue = shouldSnapToTick
+            ? convertDecimalToValue(getPreviousSnap())
+            : value - onePercent * 10
           break
         }
 
@@ -475,6 +500,7 @@ export const Slider: React.FC<SliderProps> = ({
         default:
       }
 
+      // keep new value inside min and max
       if (newValue !== undefined) {
         if (newValue > max) {
           newValue = max
