@@ -1,4 +1,4 @@
-Package: core-js (3.20.3)
+Package: core-js (3.21.1)
 Web:     
 License: MIT
 
@@ -372,7 +372,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                        ====================
 
 
-Package: css-loader (6.5.1)
+Package: css-loader (6.6.0)
 Web:     https://github.com/webpack-contrib/css-loader
 License: MIT
 
@@ -431,7 +431,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-hooks-shareable (1.47.0)
+Package: react-hooks-shareable (1.48.0)
 Web:     https://github.com/AxisCommunications/react-hooks-shareable
 License: MIT
 
@@ -765,7 +765,7 @@ SOFTWARE.
                        ====================
 
 
-Package: focus-trap-react (8.9.1)
+Package: focus-trap-react (8.9.2)
 Web:     https://github.com/focus-trap/focus-trap-react#readme
 License: MIT
 
@@ -790,15 +790,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-
-                       ====================
-
-
-Package: @prism-react-renderer/prism (undefined)
-Web:     
-License: MIT
 
 
 
@@ -1436,6 +1427,34 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
                        ====================
 
 
+Package: react-live (2.4.1)
+Web:     
+License: MIT
+
+The MIT License (MIT)
+
+Copyright (c) 2013
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+                       ====================
+
+
 Package: styled-components (5.3.3)
 Web:     https://styled-components.com
 License: MIT
@@ -1476,35 +1495,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-live (2.4.1)
-Web:     
-License: MIT
-
-The MIT License (MIT)
-
-Copyright (c) 2013
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-                       ====================
-
-
-Package: prism-react-renderer (1.2.1)
+Package: prism-react-renderer (1.3.1)
 Web:     
 License: MIT
 
@@ -1534,7 +1525,7 @@ SOFTWARE.
                        ====================
 
 
-Package: focus-trap (6.7.2)
+Package: focus-trap (6.7.3)
 Web:     https://github.com/focus-trap/focus-trap#readme
 License: MIT
 
@@ -1619,6 +1610,15 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+                       ====================
+
+
+Package: @prism-react-renderer/prism (undefined)
+Web:     
+License: MIT
+
+
 
                        ====================
 

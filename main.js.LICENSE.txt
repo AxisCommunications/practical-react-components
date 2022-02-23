@@ -11,7 +11,7 @@ object-assign
  */
 
 /*!
-* focus-trap 6.7.2
+* focus-trap 6.7.3
 * @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
 */
 
@@ -21,6 +21,15 @@ object-assign
 */
 
 /*! https://mths.be/regenerate v1.4.2 by @mathias | MIT license */
+
+/**
+ * Prism: Lightweight, robust, elegant syntax highlighting
+ *
+ * @license MIT <https://opensource.org/licenses/MIT>
+ * @author Lea Verou <https://lea.verou.me>
+ * @namespace
+ * @public
+ */
 
 /**
  * React Router DOM v6.2.1
