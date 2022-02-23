@@ -1,10 +1,9 @@
-import { MDXProviderComponentsProp } from '@mdx-js/react'
+import { MDXComponents } from 'mdx/types'
 
 import { P, H1, H2, H3, Li, Pre, A, HR } from './Base'
-import { Code } from './Code'
 import { Props } from './Props'
 
-export const components: MDXProviderComponentsProp = {
+export const components: MDXComponents = {
   p: P,
   h1: H1,
   h2: H2,
@@ -26,7 +25,7 @@ export const components: MDXProviderComponentsProp = {
   // td/ th	TODO
 
   pre: Pre,
-  code: Code,
+  // code - ok as is,
 
   // em - ok as is
   // strong - ok as is

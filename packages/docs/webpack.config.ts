@@ -3,6 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { LicenseWebpackPlugin } from 'license-webpack-plugin'
 import { createServer } from 'net'
 import { PackageJson } from 'license-webpack-plugin/dist/PackageJson'
+import { remarkMdxCodeMeta } from 'remark-mdx-code-meta'
 
 const DIST_FOLDER = 'dist'
 const PORT = 8080
@@ -91,7 +92,14 @@ export default async (env: Record<string, string> = {}) => {
                 rootMode: 'upward',
               },
             },
-            '@mdx-js/loader',
+            {
+              loader: '@mdx-js/loader',
+              /** @type {import('@mdx-js/loader').Options} */
+              options: {
+                providerImportSource: '@mdx-js/react',
+                remarkPlugins: [remarkMdxCodeMeta],
+              },
+            },
           ],
         },
         {
@@ -114,6 +122,7 @@ export default async (env: Record<string, string> = {}) => {
     },
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
+      fallback: { url: false },
     },
     plugins: [
       new HtmlWebpackPlugin({

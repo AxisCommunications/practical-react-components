@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import {
   Typography,
@@ -5,6 +6,9 @@ import {
   Divider,
   Link,
 } from 'practical-react-components-core'
+
+import { Code } from './Code'
+import { MDXComponents } from 'mdx/types'
 
 export const H1 = styled(Typography).attrs({
   variant: 'page-heading',
@@ -52,12 +56,25 @@ export const Li = styled(Typography).attrs({
   margin: ${spacing.small};
 `
 
-export const Pre = styled.pre`
-  > pre {
-    overflow: auto;
-  }
-`
-
 export const A = styled(Link).attrs({ variant: 'a' })``
 
 export const HR = Divider
+
+export const Pre: NonNullable<MDXComponents['pre']> = ({
+  children,
+  ...props
+}) => {
+  const child = React.Children.only(children)
+
+  // If this is a preformatted block of code, render it with the custom code
+  if (
+    child !== null &&
+    typeof child === 'object' &&
+    'type' in child &&
+    child?.type === 'code'
+  ) {
+    return <Code {...props} {...child?.props} />
+  }
+
+  return <pre>{children}</pre>
+}
