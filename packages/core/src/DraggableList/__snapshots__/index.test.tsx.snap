@@ -41,11 +41,6 @@ exports[`DraggableList DraggableList 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 100%;
   height: 48px;
 }
 
@@ -68,6 +63,11 @@ exports[`DraggableList DraggableList 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .c8 {
@@ -120,30 +120,32 @@ exports[`DraggableList DraggableList 1`] = `
               className="c3"
               disabled={false}
             >
-              <p>
-                1
-              </p>
-            </div>
-            <div
-              className="c4"
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-            >
-              <span
-                className="c5"
-                role="img"
-                size="medium"
+              <div>
+                <p>
+                  1
+                </p>
+              </div>
+              <div
+                className="c4"
+                onMouseDown={[Function]}
+                onMouseUp={[Function]}
               >
-                <svg
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <span
+                  className="c5"
+                  role="img"
+                  size="medium"
                 >
-                  <path
-                    d="m20 9h-16v2h16v-2zm-16 6h16v-2h-16v2z"
-                  />
-                </svg>
-              </span>
+                  <svg
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="m20 9h-16v2h16v-2zm-16 6h16v-2h-16v2z"
+                    />
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
           <div
@@ -167,30 +169,32 @@ exports[`DraggableList DraggableList 1`] = `
               className="c3"
               disabled={false}
             >
-              <p>
-                2
-              </p>
-            </div>
-            <div
-              className="c4"
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-            >
-              <span
-                className="c5"
-                role="img"
-                size="medium"
+              <div>
+                <p>
+                  2
+                </p>
+              </div>
+              <div
+                className="c4"
+                onMouseDown={[Function]}
+                onMouseUp={[Function]}
               >
-                <svg
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <span
+                  className="c5"
+                  role="img"
+                  size="medium"
                 >
-                  <path
-                    d="m20 9h-16v2h16v-2zm-16 6h16v-2h-16v2z"
-                  />
-                </svg>
-              </span>
+                  <svg
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="m20 9h-16v2h16v-2zm-16 6h16v-2h-16v2z"
+                    />
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
           <div
@@ -214,30 +218,32 @@ exports[`DraggableList DraggableList 1`] = `
               className="c3"
               disabled={false}
             >
-              <p>
-                3
-              </p>
-            </div>
-            <div
-              className="c4"
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-            >
-              <span
-                className="c5"
-                role="img"
-                size="medium"
+              <div>
+                <p>
+                  3
+                </p>
+              </div>
+              <div
+                className="c4"
+                onMouseDown={[Function]}
+                onMouseUp={[Function]}
               >
-                <svg
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <span
+                  className="c5"
+                  role="img"
+                  size="medium"
                 >
-                  <path
-                    d="m20 9h-16v2h16v-2zm-16 6h16v-2h-16v2z"
-                  />
-                </svg>
-              </span>
+                  <svg
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="m20 9h-16v2h16v-2zm-16 6h16v-2h-16v2z"
+                    />
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
           <div
@@ -260,9 +266,11 @@ exports[`DraggableList DraggableList 1`] = `
               className="c3"
               disabled={true}
             >
-              <p>
-                4
-              </p>
+              <div>
+                <p>
+                  4
+                </p>
+              </div>
             </div>
           </div>
           <div
@@ -286,30 +294,32 @@ exports[`DraggableList DraggableList 1`] = `
               className="c3"
               disabled={false}
             >
-              <p>
-                5
-              </p>
-            </div>
-            <div
-              className="c4"
-              onMouseDown={[Function]}
-              onMouseUp={[Function]}
-            >
-              <span
-                className="c5"
-                role="img"
-                size="medium"
+              <div>
+                <p>
+                  5
+                </p>
+              </div>
+              <div
+                className="c4"
+                onMouseDown={[Function]}
+                onMouseUp={[Function]}
               >
-                <svg
-                  height="1em"
-                  viewBox="0 0 24 24"
-                  width="1em"
+                <span
+                  className="c5"
+                  role="img"
+                  size="medium"
                 >
-                  <path
-                    d="m20 9h-16v2h16v-2zm-16 6h16v-2h-16v2z"
-                  />
-                </svg>
-              </span>
+                  <svg
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                  >
+                    <path
+                      d="m20 9h-16v2h16v-2zm-16 6h16v-2h-16v2z"
+                    />
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
           <div

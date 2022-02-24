@@ -20,8 +20,6 @@ type BaseProps = React.HTMLAttributes<BaseElement>
 const DraggableItem = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
   height: ${componentSize.large};
 `
 
@@ -36,14 +34,51 @@ const DragHandleIcon = () => (
   </svg>
 )
 
-export const DraggableListItem = styled.div<{
+const DraggableListItemStyled = styled.div<{
   readonly disabled?: boolean
 }>`
   display: flex;
   height: 100%;
   flex-grow: 1;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 `
+
+interface DraggableListItemProps extends BaseProps {
+  readonly disabled?: boolean
+  readonly className?: string
+}
+
+export const DraggableListItem: React.FC<DraggableListItemProps> = ({
+  children,
+  ...props
+}) => {
+  const onGrabHandle = useCallback<MouseEventHandler<HTMLDivElement>>(e => {
+    e.currentTarget.parentElement?.parentElement?.setAttribute(
+      'draggable',
+      'true'
+    )
+  }, [])
+
+  const onReleaseHandle = useCallback<MouseEventHandler<HTMLDivElement>>(e => {
+    e.currentTarget.parentElement?.parentElement?.setAttribute(
+      'draggable',
+      'false'
+    )
+  }, [])
+
+  return (
+    <DraggableListItemStyled {...props}>
+      <div>{children}</div>
+      {props.disabled === true ? null : (
+        <DraggableHandle onMouseDown={onGrabHandle} onMouseUp={onReleaseHandle}>
+          <Icon icon={DragHandleIcon} />
+        </DraggableHandle>
+      )}
+    </DraggableListItemStyled>
+  )
+}
 
 /**
  * Draggable list
@@ -120,18 +155,6 @@ export const DraggableList: React.FC<DraggableListProps> = ({
     onChange(order)
   }, [order, onChange])
 
-  const onGrabHandle = useCallback<MouseEventHandler<HTMLDivElement>>(e => {
-    if (e.currentTarget.parentElement !== null) {
-      e.currentTarget.parentElement.setAttribute('draggable', 'true')
-    }
-  }, [])
-
-  const onReleaseHandle = useCallback<MouseEventHandler<HTMLDivElement>>(e => {
-    if (e.currentTarget.parentElement !== null) {
-      e.currentTarget.parentElement.setAttribute('draggable', 'false')
-    }
-  }, [])
-
   return (
     <div {...props}>
       {order.map((childIndex, index) => {
@@ -150,14 +173,6 @@ export const DraggableList: React.FC<DraggableListProps> = ({
               }}
             >
               {el}
-              {isLocked ? null : (
-                <DraggableHandle
-                  onMouseDown={onGrabHandle}
-                  onMouseUp={onReleaseHandle}
-                >
-                  <Icon icon={DragHandleIcon} />
-                </DraggableHandle>
-              )}
             </DraggableItem>
             <Divider />
           </div>
