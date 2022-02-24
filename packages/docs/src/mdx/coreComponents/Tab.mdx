@@ -16,6 +16,7 @@ import {
 import {
   HomeIcon,
   SystemAccessoriesIcon,
+  AdaptiveIcon,
 } from 'practical-react-components-icons'
 
 # Tab
@@ -70,6 +71,12 @@ export const VTABS = [
   },
   {
     id: '2',
+    label: 'About',
+    icon: AdaptiveIcon,
+    disabled: true,
+  },
+  {
+    id: '3',
     label: 'Contact',
     icon: SystemAccessoriesIcon,
   },
@@ -132,6 +139,7 @@ export const DemoComponent = ({}) => {
                 icon={tab.icon}
                 selected={tab.id === selectedVTab}
                 onSelect={setSelectedVTab}
+                disabled={tab.disabled}
               />
             ))}
           </VerticalTabContainer>

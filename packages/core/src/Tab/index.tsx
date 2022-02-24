@@ -144,6 +144,7 @@ export function TabBase<T>({
   onSelect,
   markerOffset = 'right',
   children,
+  onKeyDown,
   ...props
 }: TabBaseProps<T>): JSX.Element {
   const onClick = useCallback<React.MouseEventHandler<HTMLDivElement>>(() => {
@@ -154,12 +155,29 @@ export function TabBase<T>({
     onSelect(id)
   }, [selected, disabled, id, onSelect])
 
+  const handleKeyDown = useCallback<React.KeyboardEventHandler<BaseElement>>(
+    event => {
+      onKeyDown?.(event)
+
+      if (selected || disabled) {
+        return
+      }
+
+      if (event.key === 'Enter') {
+        onSelect(id)
+      }
+    },
+    [selected, disabled, id, onSelect]
+  )
+
   return (
     <TabBaseContainer
       disabled={disabled}
       onClick={onClick}
       selected={selected}
       markerOffset={markerOffset}
+      tabIndex={disabled ? undefined : 0}
+      onKeyDown={handleKeyDown}
       {...props}
     >
       <TabBaseMarker offset={markerOffset} selected={selected} />
