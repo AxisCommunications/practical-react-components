@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useEffect } from 'react'
+import React, { useCallback, useRef, useEffect, useMemo } from 'react'
 import styled, { css } from 'styled-components'
 import { shape, spacing } from '../designparams'
 import { Typography } from '../Typography'
@@ -126,11 +126,15 @@ export const SelectList: React.FC<SelectListProps> = ({
     [onSelect]
   )
 
+  const selectedValueIndex: number = useMemo(
+    () => options.findIndex(o => o.value === value),
+    [options, value]
+  )
+
   // At first render _only_, scroll to the position of the selected item.
   useEffect(() => {
-    const index = options.findIndex(o => o.value === value)
-    if (listRef.current !== null && index !== -1) {
-      listRef.current.scrollTo(0, index * LIST_ITEM_HEIGHT)
+    if (listRef.current !== null && selectedValueIndex !== -1) {
+      listRef.current.scrollTo(0, selectedValueIndex * LIST_ITEM_HEIGHT)
     }
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -152,10 +156,53 @@ export const SelectList: React.FC<SelectListProps> = ({
     [options, listRef]
   )
 
+  // traversingKeys
+  enum TraversingKey {
+    ArrowUp = 'ArrowUp',
+    ArrowDown = 'ArrowDown',
+  }
+
+  const halfway = Math.round(maxHeight / LIST_ITEM_HEIGHT / 2)
+
+  const traverseSelection = useCallback(
+    (e: React.KeyboardEvent<HTMLUListElement>) => {
+      if (!(e.key in TraversingKey)) {
+        return
+      }
+
+      e.preventDefault()
+
+      let nextSelectedValueIndex = selectedValueIndex
+      let nextScrollTopCount = selectedValueIndex
+      switch (e.key) {
+        case TraversingKey.ArrowUp:
+          if (selectedValueIndex === 0) {
+            return
+          }
+          nextSelectedValueIndex--
+          nextScrollTopCount = nextSelectedValueIndex - halfway
+          break
+        case TraversingKey.ArrowDown:
+          if (selectedValueIndex + 1 === options.length) {
+            return
+          }
+          nextSelectedValueIndex++
+          nextScrollTopCount = nextSelectedValueIndex - halfway
+          break
+      }
+      onSelect(options[nextSelectedValueIndex].value)
+      if (listRef.current !== null && selectedValueIndex !== -1) {
+        listRef.current.scrollTo(0, nextScrollTopCount * LIST_ITEM_HEIGHT)
+      }
+    },
+    [options, value, selectedValueIndex]
+  )
+
   return (
     <SelectListNative
       tabIndex={0}
       onKeyUp={searchForOption}
+      onKeyDown={traverseSelection}
       maxHeight={`${maxHeight}px`}
       ref={listRef}
       {...props}

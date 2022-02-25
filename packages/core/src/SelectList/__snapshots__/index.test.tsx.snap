@@ -136,6 +136,7 @@ exports[`SelectList SelectList 1`] = `
     >
       <ul
         className="c2"
+        onKeyDown={[Function]}
         onKeyUp={[Function]}
         tabIndex={0}
       >
@@ -333,6 +334,7 @@ exports[`SelectList SelectList 2`] = `
     >
       <ul
         className="c2"
+        onKeyDown={[Function]}
         onKeyUp={[Function]}
         tabIndex={0}
       >
