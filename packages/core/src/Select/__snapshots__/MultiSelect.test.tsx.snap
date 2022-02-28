@@ -304,6 +304,7 @@ exports[`Select Direction 1`] = `
                   <span
                     className="c11 c12 c13"
                     onClick={[Function]}
+                    onKeyDown={[Function]}
                     role="img"
                     size="small"
                     tabIndex={0}
@@ -331,6 +332,7 @@ exports[`Select Direction 1`] = `
                 <span
                   className="c11 c12"
                   onClick={[Function]}
+                  onKeyDown={[Function]}
                   role="img"
                   size="small"
                   tabIndex={0}
@@ -697,6 +699,7 @@ exports[`Select Direction 2`] = `
                   <span
                     className="c11 c12 c13"
                     onClick={[Function]}
+                    onKeyDown={[Function]}
                     role="img"
                     size="small"
                     tabIndex={0}
@@ -724,6 +727,7 @@ exports[`Select Direction 2`] = `
                 <span
                   className="c11 c12"
                   onClick={[Function]}
+                  onKeyDown={[Function]}
                   role="img"
                   size="small"
                   tabIndex={0}
@@ -1097,6 +1101,7 @@ exports[`Select Other 1`] = `
                   <span
                     className="c11 c12 c13"
                     onClick={[Function]}
+                    onKeyDown={[Function]}
                     role="img"
                     size="small"
                     tabIndex={0}
@@ -1124,6 +1129,7 @@ exports[`Select Other 1`] = `
                 <span
                   className="c11 c12"
                   onClick={[Function]}
+                  onKeyDown={[Function]}
                   role="img"
                   size="small"
                   tabIndex={0}
@@ -1504,6 +1510,7 @@ exports[`Select Other 2`] = `
                   <span
                     className="c11 c12 c13"
                     onClick={[Function]}
+                    onKeyDown={[Function]}
                     role="img"
                     size="small"
                     tabIndex={0}
@@ -1531,6 +1538,7 @@ exports[`Select Other 2`] = `
                 <span
                   className="c11 c12"
                   onClick={[Function]}
+                  onKeyDown={[Function]}
                   role="img"
                   size="small"
                   tabIndex={0}
@@ -1897,6 +1905,7 @@ exports[`Select Width 1`] = `
                   <span
                     className="c11 c12 c13"
                     onClick={[Function]}
+                    onKeyDown={[Function]}
                     role="img"
                     size="small"
                     tabIndex={0}
@@ -1924,6 +1933,7 @@ exports[`Select Width 1`] = `
                 <span
                   className="c11 c12"
                   onClick={[Function]}
+                  onKeyDown={[Function]}
                   role="img"
                   size="small"
                   tabIndex={0}
@@ -2290,6 +2300,7 @@ exports[`Select Width 2`] = `
                   <span
                     className="c11 c12 c13"
                     onClick={[Function]}
+                    onKeyDown={[Function]}
                     role="img"
                     size="small"
                     tabIndex={0}
@@ -2322,6 +2333,7 @@ exports[`Select Width 2`] = `
                   <span
                     className="c11 c12 c13"
                     onClick={[Function]}
+                    onKeyDown={[Function]}
                     role="img"
                     size="small"
                     tabIndex={0}
@@ -2349,6 +2361,7 @@ exports[`Select Width 2`] = `
                 <span
                   className="c11 c12"
                   onClick={[Function]}
+                  onKeyDown={[Function]}
                   role="img"
                   size="small"
                   tabIndex={0}
@@ -2715,6 +2728,7 @@ exports[`Select Width 3`] = `
                   <span
                     className="c11 c12 c13"
                     onClick={[Function]}
+                    onKeyDown={[Function]}
                     role="img"
                     size="small"
                     tabIndex={0}
@@ -2747,6 +2761,7 @@ exports[`Select Width 3`] = `
                   <span
                     className="c11 c12 c13"
                     onClick={[Function]}
+                    onKeyDown={[Function]}
                     role="img"
                     size="small"
                     tabIndex={0}
@@ -2774,6 +2789,7 @@ exports[`Select Width 3`] = `
                 <span
                   className="c11 c12"
                   onClick={[Function]}
+                  onKeyDown={[Function]}
                   role="img"
                   size="small"
                   tabIndex={0}

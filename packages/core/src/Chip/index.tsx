@@ -1,6 +1,6 @@
 export * from './BaseChip'
 
-import React, { useMemo } from 'react'
+import React, { useCallback, useMemo } from 'react'
 import styled from 'styled-components'
 
 import { CloseIcon } from 'practical-react-components-icons'
@@ -42,18 +42,34 @@ export interface ChipProps
    * Function to call if remove icon is pressed. Remove icon
    * only visible if this prop is set.
    */
-  readonly onRemove?: (e: React.MouseEvent) => void
+  readonly onRemove?: () => void
 }
 
 /* eslint-disable-next-line react/display-name */
 export const Chip = React.forwardRef<HTMLDivElement, ChipProps>(
   ({ text, error = false, onRemove, icon, ...props }, ref) => {
+    const handleKeyDown = useCallback(
+      (event: React.KeyboardEvent<HTMLSpanElement>) => {
+        if (onRemove === undefined) {
+          return
+        }
+
+        if (event.key === 'Enter') {
+          event.stopPropagation()
+          onRemove()
+        }
+      },
+      [onRemove]
+    )
+
     const component = useMemo(() => {
       return (
         <>
           {!error && icon !== undefined ? <ChipIcon icon={icon} /> : null}
           <Typography variant="chip-tag-text">{text}</Typography>
-          {onRemove ? <ChipRemoveIcon onClick={onRemove} /> : null}
+          {onRemove ? (
+            <ChipRemoveIcon onClick={onRemove} onKeyDown={handleKeyDown} />
+          ) : null}
         </>
       )
     }, [text, error, icon, onRemove])
