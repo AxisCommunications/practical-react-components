@@ -84,6 +84,15 @@ export function MultiSelect<V extends string = string>({
     },
     [onChange]
   )
+  const handleRemoveAllKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLSpanElement>) => {
+      if (event.key === 'Enter') {
+        event.stopPropagation()
+        onChange?.([])
+      }
+    },
+    [onChange]
+  )
 
   const onMultiChange = useCallback(
     nextValue => onChange?.([...value, nextValue]),
@@ -95,8 +104,7 @@ export function MultiSelect<V extends string = string>({
     () =>
       value.map(v => ({
         label: options.find(option => option.value === v)?.label ?? '',
-        onRemove: (e: React.MouseEvent) => {
-          e.stopPropagation()
+        onRemove: () => {
           onChange?.(value.filter(v2 => v2 !== v))
         },
       })),
@@ -124,12 +132,13 @@ export function MultiSelect<V extends string = string>({
             size="small"
             icon={CloseIcon}
             onClick={onRemoveAllClick}
+            onKeyDown={handleRemoveAllKeyDown}
           />
         </IconsContainer>
         <Divider />
       </SelectInsideContainer>
     )
-  }, [chips, onRemoveAllClick, placeholder, value])
+  }, [chips, onRemoveAllClick, handleRemoveAllKeyDown, placeholder, value])
 
   const notSelectedOptions = useMemo(
     () =>
