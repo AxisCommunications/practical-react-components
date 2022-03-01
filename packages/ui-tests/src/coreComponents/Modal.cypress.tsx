@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Button, Modal } from 'practical-react-components-core'
 import { useBoolean } from 'react-hooks-shareable'
 

@@ -1,5 +1,5 @@
-import React from 'react'
 import 'jest-styled-components'
+import { expect, test, describe } from '@jest/globals'
 
 import { SelectNative } from '.'
 import { TestRender } from '../TestUtils'

@@ -1,4 +1,4 @@
-import React from 'react'
+import { ReactElement, forwardRef } from 'react'
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 import { PracticalProvider } from './Practical'
@@ -10,13 +10,13 @@ import { PracticalProvider } from './Practical'
 export const TP = ({
   children,
 }: {
-  readonly children: React.ReactElement
+  readonly children: ReactElement
 }): JSX.Element => <PracticalProvider>{children}</PracticalProvider>
 
 /**
  * Mock reference to practical-root
  */
-const createNodeMock = (element: React.ReactElement) => {
+const createNodeMock = (element: ReactElement) => {
   if (element.props.id !== 'practical-root') {
     return null
   }
@@ -31,7 +31,7 @@ export const TestRender = (jsx: JSX.Element) => {
 export const TestText = (): JSX.Element => <span>Test</span>
 
 /* eslint-disable-next-line react/display-name */
-export const TestTextWithForwardRef = React.forwardRef<HTMLElement>(
+export const TestTextWithForwardRef = forwardRef<HTMLElement>(
   ({ ...props }, ref) => (
     <span {...props} ref={ref}>
       Test

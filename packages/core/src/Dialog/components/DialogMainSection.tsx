@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 
 import { spacing } from '../../designparams'
@@ -55,7 +55,7 @@ interface ScrollSectionProps {
   readonly scrollRef: React.Dispatch<React.SetStateAction<HTMLElement | null>>
 }
 
-export const ScrollSection: React.FC<ScrollSectionProps> = ({
+export const ScrollSection: FC<ScrollSectionProps> = ({
   className,
   maxHeight,
   scrollRef,

@@ -12,7 +12,7 @@
  * specific dialogs. All dialogs should follow this structure.
  */
 
-import React from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 
 import { Modal, ModalProps } from '../Modal'
@@ -80,7 +80,7 @@ interface BaseDialogContentProps {
 
 export type BaseDialogProps = BaseDialogContentProps & ModalProps
 
-export const BaseDialog: React.FC<BaseDialogProps> = ({
+export const BaseDialog: FC<BaseDialogProps> = ({
   width = 'normal',
   children,
   ...modalProps

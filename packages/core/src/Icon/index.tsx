@@ -1,6 +1,6 @@
-import React from 'react'
-
+import { MemoExoticComponent, FC, SVGProps } from 'react'
 import styled from 'styled-components'
+
 import { iconSize } from '../designparams'
 
 type BaseElement = HTMLSpanElement
@@ -44,8 +44,8 @@ const IconContainer = styled.span<{ readonly size: string }>`
 `
 
 export type IconType =
-  | React.MemoExoticComponent<React.FC<React.SVGProps<SVGSVGElement>>>
-  | React.FC<React.SVGProps<SVGSVGElement>>
+  | MemoExoticComponent<FC<SVGProps<SVGSVGElement>>>
+  | FC<SVGProps<SVGSVGElement>>
 
 export type IconSize = 'small' | 'medium' | 'large' | 'extraLarge'
 
@@ -64,7 +64,7 @@ export interface IconProps extends BaseProps {
   readonly size?: IconSize
 }
 
-export const Icon: React.FunctionComponent<IconProps> = ({
+export const Icon: FC<IconProps> = ({
   icon: SvgIcon,
   size = 'medium',
   ...props

@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import { Typography, spacing } from 'practical-react-components-core'
 import { ComponentDoc } from '../types'
 import styled from 'styled-components'
@@ -52,7 +52,7 @@ interface PropsProps {
   readonly of: string
 }
 
-const PropsList: React.FC<PropsProps> = ({ of, props }) => {
+const PropsList: FC<PropsProps> = ({ of, props }) => {
   const componentProps = props.find(({ displayName }) => displayName === of)
 
   if (componentProps === undefined) {

@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   DurationInput,
@@ -11,7 +11,7 @@ export interface FormikDurationInputProps
     Partial<Pick<DurationInputProps, 'value' | 'onChange'>>,
     Pick<FieldConfig, 'name' | 'validate'> {}
 
-export const FormikDurationInput: React.FC<FormikDurationInputProps> = ({
+export const FormikDurationInput: FC<FormikDurationInputProps> = ({
   name,
   validate,
   ...props

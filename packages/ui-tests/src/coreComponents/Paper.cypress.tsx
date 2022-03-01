@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Paper } from 'practical-react-components-core'
 
 export const meta = {

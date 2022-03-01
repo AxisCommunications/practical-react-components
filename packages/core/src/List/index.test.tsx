@@ -1,5 +1,5 @@
-import React from 'react'
 import 'jest-styled-components'
+import { expect, test, describe } from '@jest/globals'
 
 import { List, ListItem } from '.'
 import { TestRender, TestText } from '../TestUtils'

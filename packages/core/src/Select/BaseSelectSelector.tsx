@@ -1,4 +1,4 @@
-import React from 'react'
+import { HTMLAttributes, MouseEventHandler, FC } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 
 import { Icon } from '../Icon'
@@ -133,8 +133,8 @@ const SelectInput = styled.div<SelectInputProps>`
 `
 
 export interface BaseSelectSelectorProps
-  extends React.HTMLAttributes<HTMLDivElement> {
-  readonly onToggleOpen: React.MouseEventHandler
+  extends HTMLAttributes<HTMLDivElement> {
+  readonly onToggleOpen: MouseEventHandler
   readonly open: boolean
   readonly compact?: boolean
   readonly disabled?: boolean
@@ -143,7 +143,7 @@ export interface BaseSelectSelectorProps
   readonly visibleFocus?: boolean
 }
 
-export const BaseSelectSelector: React.FC<BaseSelectSelectorProps> = ({
+export const BaseSelectSelector: FC<BaseSelectSelectorProps> = ({
   onToggleOpen,
   open,
   children,

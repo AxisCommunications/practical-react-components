@@ -1,4 +1,4 @@
-import React, { ReactNode, ReactElement, ReactPortal } from 'react'
+import { ReactNode, ReactElement, ReactPortal } from 'react'
 import ReactDOM from 'react-dom'
 
 ReactDOM.createPortal = jest.fn((c: ReactNode) => {

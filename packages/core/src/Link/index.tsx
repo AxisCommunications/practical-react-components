@@ -1,12 +1,12 @@
-import React from 'react'
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, FC } from 'react'
 import styled, { css } from 'styled-components'
 
 import { opacity } from '../designparams'
 
 type BaseElement = HTMLAnchorElement
-type BaseProps = React.AnchorHTMLAttributes<BaseElement>
+type BaseProps = AnchorHTMLAttributes<BaseElement>
 type BaseButtonElement = HTMLButtonElement
-type BaseButtonProps = React.ButtonHTMLAttributes<BaseButtonElement>
+type BaseButtonProps = ButtonHTMLAttributes<BaseButtonElement>
 
 const LinkNative = styled.a`
   padding: 0;
@@ -86,7 +86,7 @@ export interface ALinkProps extends BaseProps {
   readonly variant: 'a'
 }
 
-export const Link: React.FC<ButtonLinkProps | ALinkProps> = ({
+export const Link: FC<ButtonLinkProps | ALinkProps> = ({
   children,
   ...props
 }) => {

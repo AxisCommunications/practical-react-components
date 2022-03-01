@@ -22,13 +22,13 @@ can be clicked on.
 ## Basic usage
 
 ```typescript
-import React from 'react'
+import { FC } from 'react'
 import {
   GlobalScrollbarStyle,
   PracticalProvider,
 } from 'practical-react-components-core'
 
-const App: React.FC = () => {
+const App: FC = () => {
   const [theme] = useTheme()
 
   if (theme === undefined) {

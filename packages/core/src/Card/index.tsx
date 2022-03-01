@@ -1,4 +1,4 @@
-import React from 'react'
+import { HTMLAttributes, FC } from 'react'
 import styled, { css } from 'styled-components'
 
 import { shape, spacing } from '../designparams'
@@ -9,7 +9,7 @@ export * from './CardFooter'
 export * from './CardTabs'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 const CardDiv = styled.div`
   overflow: hidden;
@@ -92,7 +92,7 @@ export interface CardProps extends BaseProps {
   readonly square?: boolean
 }
 
-export const Card: React.FC<CardProps> = ({
+export const Card: FC<CardProps> = ({
   width = 'full',
   square = true,
   children,

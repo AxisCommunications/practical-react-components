@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import styled, { useTheme, css } from 'styled-components'
 
 import { Typography } from '../Typography'
@@ -59,9 +59,7 @@ export interface FieldProps {
   readonly unitLabel?: string
 }
 
-export function withField<T>(
-  InputComponent: React.FC<T>
-): React.FC<FieldProps & T> {
+export function withField<T>(InputComponent: FC<T>): FC<FieldProps & T> {
   // eslint-disable-next-line react/display-name
   return ({ label, unitLabel, ...props }) => {
     const { compact: compactFromTheme } = useTheme()

@@ -1,6 +1,6 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
-import React from 'react'
+import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 import styledNormalize from 'styled-normalize'
 import styled, { createGlobalStyle } from 'styled-components'
@@ -91,7 +91,7 @@ const Main = styled.main`
 `
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <ThemeProvider initialThemeName={initialThemeName}>
       <AppContainer>
         <GlobalStyle />
@@ -120,6 +120,6 @@ ReactDOM.render(
         </Router>
       </AppContainer>
     </ThemeProvider>
-  </React.StrictMode>,
+  </StrictMode>,
   document.querySelector('.root')
 )

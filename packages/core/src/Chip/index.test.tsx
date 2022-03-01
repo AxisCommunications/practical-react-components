@@ -1,5 +1,5 @@
-import React from 'react'
 import 'jest-styled-components'
+import { expect, test, describe } from '@jest/globals'
 
 import { CheckIcon } from 'practical-react-components-icons'
 import { Chip } from '.'

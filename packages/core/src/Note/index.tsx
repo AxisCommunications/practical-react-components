@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC, HTMLAttributes } from 'react'
 
 import styled from 'styled-components'
 import { Typography } from '../Typography'
@@ -6,7 +6,7 @@ import { Icon, IconType } from '../Icon'
 import { spacing } from '../designparams'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 const NoteWrapper = styled.div`
   display: flex;
@@ -40,11 +40,7 @@ export interface NoteProps extends BaseProps {
   readonly icon: IconType
 }
 
-export const Note: React.FunctionComponent<NoteProps> = ({
-  text,
-  icon,
-  ...props
-}) => (
+export const Note: FC<NoteProps> = ({ text, icon, ...props }) => (
   <NoteWrapper {...props}>
     <NoteIcon icon={icon} />
     <NoteTextWrapper>

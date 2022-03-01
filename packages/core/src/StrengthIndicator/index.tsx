@@ -1,4 +1,4 @@
-import React from 'react'
+import { HTMLAttributes, FC } from 'react'
 import styled from 'styled-components'
 
 import { Typography } from '../Typography'
@@ -6,7 +6,7 @@ import { spacing } from '../designparams'
 import { Color } from '../theme'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 /**
  * Get a color that matches the strength level.
@@ -81,7 +81,7 @@ export interface StrengthIndicatorProps extends BaseProps {
   readonly helpText: string
 }
 
-export const StrengthIndicator: React.FC<StrengthIndicatorProps> = ({
+export const StrengthIndicator: FC<StrengthIndicatorProps> = ({
   strength,
   helpText,
   ...props

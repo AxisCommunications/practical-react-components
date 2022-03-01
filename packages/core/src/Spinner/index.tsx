@@ -1,11 +1,11 @@
-import React from 'react'
-
+import { HTMLAttributes, FC } from 'react'
 import styled, { keyframes, css } from 'styled-components'
+
 import { shape, componentSize, spacing } from '../designparams'
 import { Typography } from '../Typography'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 // Constant size for spinner
 const SPINNER_SIZE = componentSize.small
@@ -81,7 +81,7 @@ export interface SpinnerProps extends BaseProps {
   readonly label?: string
 }
 
-export const Spinner: React.FC<SpinnerProps> = ({
+export const Spinner: FC<SpinnerProps> = ({
   type = 'primary',
   label,
   ...props

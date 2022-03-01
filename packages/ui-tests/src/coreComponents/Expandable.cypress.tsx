@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Expandable, Arrow } from 'practical-react-components-core'
 import styled from 'styled-components'
 

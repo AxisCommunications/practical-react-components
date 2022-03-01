@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import { useField } from 'formik'
 import { Switch, SwitchProps, withField } from 'practical-react-components-core'
 
@@ -8,7 +8,7 @@ export interface FormikSwitchProps
   readonly name: string
 }
 
-export const FormikSwitch: React.FC<FormikSwitchProps> = ({
+export const FormikSwitch: FC<FormikSwitchProps> = ({
   name,
   value,
   ...props

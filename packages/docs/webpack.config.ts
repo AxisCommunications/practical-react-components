@@ -114,14 +114,6 @@ export default async (env: Record<string, string> = {}) => {
     },
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
-      /**
-       * Temporary fix until the issue below is resolved:
-       * https://github.com/FormidableLabs/react-live/issues/265
-       */
-      alias: {
-        react: require.resolve('react'),
-        'react-dom': require.resolve('react-dom'),
-      },
     },
     plugins: [
       new HtmlWebpackPlugin({

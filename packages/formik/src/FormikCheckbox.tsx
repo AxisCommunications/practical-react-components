@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import { useField } from 'formik'
 import { Checkbox, CheckboxProps } from 'practical-react-components-core'
 
@@ -8,7 +8,7 @@ export interface FormikCheckboxProps
   readonly name: string
 }
 
-export const FormikCheckbox: React.FC<FormikCheckboxProps> = ({
+export const FormikCheckbox: FC<FormikCheckboxProps> = ({
   name,
   value,
   ...props

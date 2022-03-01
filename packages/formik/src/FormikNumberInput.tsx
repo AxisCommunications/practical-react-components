@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   NumberInput,
@@ -12,7 +12,7 @@ export interface FormikNumberInputProps
   readonly value?: number
 }
 
-export const FormikNumberInput: React.FC<FormikNumberInputProps> = ({
+export const FormikNumberInput: FC<FormikNumberInputProps> = ({
   name,
   validate,
   ...props
