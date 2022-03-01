@@ -1,4 +1,4 @@
-import React from 'react'
+import { isValidElement } from 'react'
 
 export const range = (length: number) => [...Array(length).keys()]
 
@@ -22,6 +22,4 @@ export const move = (
 }
 
 export const isElementDisabled = <T>(el: T) =>
-  React.isValidElement<{ disabled: boolean }>(el)
-    ? el.props.disabled === true
-    : false
+  isValidElement<{ disabled: boolean }>(el) ? el.props.disabled === true : false

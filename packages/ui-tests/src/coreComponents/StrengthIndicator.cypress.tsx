@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { StrengthIndicator } from 'practical-react-components-core'
 
 export const meta = {

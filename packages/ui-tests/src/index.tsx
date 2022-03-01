@@ -1,17 +1,18 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
-import React from 'react'
 import ReactDOM from 'react-dom'
 import styledNormalize from 'styled-normalize'
 import styled, { createGlobalStyle } from 'styled-components'
 import { HashRouter as Router, Route, Routes } from 'react-router-dom'
-import { Menu } from './Menu'
+
 import {
   GlobalScrollbarStyle,
   spacing,
   PracticalProvider,
   defaultTheme,
 } from 'practical-react-components-core'
+
+import { Menu } from './Menu'
 
 const practicalCoreTestsContext = require.context('./', true, /\.cypress\.tsx$/)
 

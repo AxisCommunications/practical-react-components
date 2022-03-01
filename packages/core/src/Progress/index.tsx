@@ -1,11 +1,11 @@
-import React from 'react'
+import { HTMLAttributes, FC } from 'react'
 import styled from 'styled-components'
 
 import { Typography } from '../Typography'
 import { spacing, shape } from '../designparams'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 const ProgressContainer = styled.div`
   display: flex;
@@ -52,11 +52,7 @@ export interface ProgressProps extends BaseProps {
   readonly label: string
 }
 
-export const Progress: React.FC<ProgressProps> = ({
-  value,
-  label,
-  ...props
-}) => (
+export const Progress: FC<ProgressProps> = ({ value, label, ...props }) => (
   <ProgressContainer {...props}>
     <ProgressIndicator>
       <ProgressMeter fraction={value} />

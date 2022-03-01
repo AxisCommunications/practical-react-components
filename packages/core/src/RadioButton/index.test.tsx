@@ -1,11 +1,12 @@
-import React from 'react'
 import 'jest-styled-components'
+import { expect, test, describe } from '@jest/globals'
 
 import {
   PolicyIcon,
   UsersIcon,
   SecurityIcon,
 } from 'practical-react-components-icons'
+
 import {
   RadioButton,
   RadioButtonGroup,

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { InfoIcon } from 'practical-react-components-icons'
 import { Note } from 'practical-react-components-core'
 

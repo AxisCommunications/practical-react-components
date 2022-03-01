@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Icon } from 'practical-react-components-core'
 import {
   AddIcon,

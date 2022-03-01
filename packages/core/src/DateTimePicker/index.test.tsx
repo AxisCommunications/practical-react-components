@@ -1,5 +1,6 @@
-import React from 'react'
 import 'jest-styled-components'
+import { expect, test, describe } from '@jest/globals'
+
 import { DateTimePicker } from '.'
 import {
   TimePickerAMPM,

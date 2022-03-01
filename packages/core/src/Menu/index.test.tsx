@@ -1,8 +1,9 @@
-import React from 'react'
 import 'jest-styled-components'
+import { expect, test, describe } from '@jest/globals'
+
+import { CheckIcon } from 'practical-react-components-icons'
 
 import { Menu, MenuItemProps } from '.'
-import { CheckIcon } from 'practical-react-components-icons'
 import { TestRender } from '../TestUtils'
 
 const clickHandler = () => console.log('Menu item click')

@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 import { useFormik, FormikProvider } from 'formik'
 import {
@@ -27,7 +27,7 @@ const Block = styled.div`
 `
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const FormikDemo: React.FC<{ readonly initialValues: any }> = ({
+export const FormikDemo: FC<{ readonly initialValues: any }> = ({
   initialValues,
   children,
 }) => {

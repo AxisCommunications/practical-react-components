@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   TextInputCredentials,
@@ -11,7 +11,7 @@ export interface FormikInputCredentialsProps
     Partial<Pick<TextInputCredentialsProps, 'value'>>,
     Pick<FieldConfig, 'name' | 'validate'> {}
 
-export const FormikInputCredentials: React.FC<FormikInputCredentialsProps> = ({
+export const FormikInputCredentials: FC<FormikInputCredentialsProps> = ({
   name,
   validate,
   ...props

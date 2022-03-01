@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import { Icon, IconType } from '../Icon'
 import styled, { css } from 'styled-components'
 import { opacity } from '../designparams'
@@ -50,6 +50,6 @@ const ArrowIcon = styled(Icon)<ArrowProps>`
       : undefined}
 `
 
-export const Arrow: React.FunctionComponent<ArrowProps> = props => {
-  return <ArrowIcon {...props} icon={SvgIcon} />
-}
+export const Arrow: FC<ArrowProps> = props => (
+  <ArrowIcon {...props} icon={SvgIcon} />
+)

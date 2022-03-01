@@ -1,6 +1,6 @@
-import React from 'react'
+import { FC } from 'react'
 
-const FocusTrap: React.FC = ({ children }) => {
+const FocusTrap: FC = ({ children }) => {
   return <>{children}</>
 }
 

@@ -1,4 +1,3 @@
-import React from 'react'
 import { useBoolean } from 'react-hooks-shareable'
 import {
   Dialog,

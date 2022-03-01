@@ -1,4 +1,3 @@
-import React from 'react'
 import { AddIcon } from 'practical-react-components-icons'
 
 import {

@@ -1,5 +1,5 @@
-import React from 'react'
 import 'jest-styled-components'
+import { expect, test, describe } from '@jest/globals'
 
 import { DraggableList, DraggableListItem } from '.'
 import { move } from './utils'

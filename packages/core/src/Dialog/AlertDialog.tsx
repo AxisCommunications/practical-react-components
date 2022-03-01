@@ -3,7 +3,7 @@
  * handler can just be the onClose handler?)
  */
 
-import React from 'react'
+import { FC } from 'react'
 
 import { Typography } from '../Typography'
 import { Button, ButtonClickHandler } from '../Button'
@@ -47,7 +47,7 @@ export interface AlertDialogProps extends ModalProps {
   readonly closeAction: AlertDialogAction
 }
 
-export const AlertDialog: React.FC<AlertDialogProps> = ({
+export const AlertDialog: FC<AlertDialogProps> = ({
   open,
   onClose,
   title,

@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 
 import { Typography } from '../Typography'
 import { Button, ButtonClickHandler } from '../Button'
@@ -41,7 +41,7 @@ export interface ConfirmDialogProps extends ModalProps {
   readonly cancelAction: ConfirmDialogAction
 }
 
-export const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
+export const ConfirmDialog: FC<ConfirmDialogProps> = ({
   open,
   onClose,
   title,

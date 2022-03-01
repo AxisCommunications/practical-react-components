@@ -1,4 +1,4 @@
-import React from 'react'
+import { HTMLAttributes, FC } from 'react'
 import styled from 'styled-components'
 
 import { componentSize } from '../designparams'
@@ -7,7 +7,7 @@ import { useGridTemplateColumns } from './Table'
 import { TableCell } from './TableCells'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 /**
  * Table divider
@@ -34,10 +34,7 @@ export interface TableDividerProps extends BaseProps {
   readonly className?: BaseProps['className']
 }
 
-export const TableDivider: React.FC<TableDividerProps> = ({
-  children,
-  ...props
-}) => {
+export const TableDivider: FC<TableDividerProps> = ({ children, ...props }) => {
   const { gridTemplateColumns } = useGridTemplateColumns()
   return (
     <TableDividerGrid style={{ gridTemplateColumns }} {...props}>

@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Typography } from 'practical-react-components-core'
 
 export const meta = {

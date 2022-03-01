@@ -1,7 +1,6 @@
-// Libs
-import React from 'react'
-
+import { SelectHTMLAttributes, FC } from 'react'
 import styled from 'styled-components'
+
 import { Icon } from '../Icon'
 import { componentSize, opacity, shape, spacing } from '../designparams'
 
@@ -123,7 +122,7 @@ const PlaceholderOption = styled.option`
 `
 
 type BaseElement = HTMLSelectElement
-type BaseProps = React.SelectHTMLAttributes<BaseElement>
+type BaseProps = SelectHTMLAttributes<BaseElement>
 
 type SelectVariant = 'filled' | 'transparent'
 
@@ -177,7 +176,7 @@ export interface SelectNativeProps extends BaseProps {
   readonly disabled?: boolean
 }
 
-export const SelectNative: React.FunctionComponent<SelectNativeProps> = ({
+export const SelectNative: FC<SelectNativeProps> = ({
   value,
   options,
   onChange,
