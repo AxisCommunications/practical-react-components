@@ -3,7 +3,21 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.70.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.68.0...v0.70.0) (2022-02-23 06:56:55 +0100)
+## [v0.71.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.70.0...v0.71.0) (2022-03-01 12:42:27 +0100)
+
+### ✨ Features
+
+  -  use the New JSX Transform ([a420596](https://github.com/AxisCommunications/practical-react-components/commit/a420596cae9aa411db7c641f76d8a69ed1ce9a53))
+
+### 🐛 Bug fixes
+
+  - **docs**:  update slider docs ([4d01568](https://github.com/AxisCommunications/practical-react-components/commit/4d0156874df1267904c6f66747b0a9f48b26497e))
+
+### ♻️ Refactoring
+
+  - **draggable**:  moves drag handle inside `DraggableListItem` ([01ff635](https://github.com/AxisCommunications/practical-react-components/commit/01ff635fc3d579e35e6df7c7c221a08d87ac111d))
+
+## [v0.70.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.68.0...v0.70.0) (2022-02-23 10:39:27 +0100)
 
 ### 🚧 Maintenance
 
