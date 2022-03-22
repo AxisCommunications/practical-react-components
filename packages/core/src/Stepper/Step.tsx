@@ -153,7 +153,7 @@ interface StepProps extends Omit<StepContent, 'content'> {
   /**
    * The function that run on action button click in the last stepper step.
    */
-  readonly completeAction: StepperAction
+  readonly completeAction?: StepperAction
   /**
    * The function that runs on previous button click.
    */
@@ -240,7 +240,7 @@ export const Step: React.FC<StepProps> = ({
         setCurrentStep(-1)
       }
 
-      if (completeAction.onClick !== undefined) {
+      if (completeAction?.onClick !== undefined) {
         completeAction.onClick(event)
       }
     },
@@ -299,7 +299,7 @@ export const Step: React.FC<StepProps> = ({
                 disabled={disableNext}
               />
             )}
-            {lastStep ? (
+            {lastStep && completeAction !== undefined ? (
               <Button
                 onClick={onCompleteButtonClick}
                 label={completeAction.label}

@@ -27,7 +27,7 @@ export interface StepperProps extends BaseProps {
   /**
    * The function that run on action button click in the last stepper step.
    */
-  readonly completeAction: StepperAction
+  readonly completeAction?: StepperAction
   /**
    * The function that runs on previous button click.
    */
