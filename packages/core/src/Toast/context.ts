@@ -7,6 +7,7 @@ export interface SimpleToast {
   readonly message?: string
   readonly onClose?: (id: ToastId) => void
   readonly duration?: number
+  readonly hasCloseButton?: boolean
 }
 
 export interface ActionToast extends SimpleToast {
