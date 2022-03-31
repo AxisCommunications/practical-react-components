@@ -338,28 +338,38 @@ export const createLoadingToast: SimpleToastCreator = ({
  * Progress toast
  */
 
-const ProgressWrapper = styled.div`
+const ProgressWrapper = styled.div<{
+  readonly hasClose: boolean
+}>`
   display: flex;
   align-items: center;
-  padding-left: ${spacing.large};
+  ${({ hasClose }) =>
+    !hasClose
+      ? css`
+          padding: 0 ${spacing.medium} 0 ${spacing.large};
+        `
+      : css`
+          padding-left: ${spacing.large};
+        `}
 `
 
 export const createProgressToast: ProgressToastCreator = ({
   label,
   message,
   progress,
+  hasCloseButton = true,
   ...rest
 }) => {
   const labelComponent = (
     <>
       <ToastLabel
-        hasCloseButton={true}
+        hasCloseButton={hasCloseButton}
         isError={false}
         hasEmphasis={message !== undefined}
       >
         {label}
       </ToastLabel>
-      <ProgressWrapper>
+      <ProgressWrapper hasClose={hasCloseButton}>
         <Progress {...progress} />
       </ProgressWrapper>
     </>
@@ -377,6 +387,7 @@ export const createProgressToast: ProgressToastCreator = ({
     icon,
     label: labelComponent,
     message: messageComponent,
+    hasCloseButton,
     ...rest,
   }
 }
