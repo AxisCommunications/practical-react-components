@@ -30,3 +30,4 @@ overrides:
 
 rules:
   'react-hooks/exhaustive-deps': off # temporary disable until a new release that fixes https://github.com/facebook/react/issues/22545
+  '@typescript-eslint/no-misused-promises': off
