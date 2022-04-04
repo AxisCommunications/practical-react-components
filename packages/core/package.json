@@ -9,6 +9,7 @@
     "build"
   ],
   "dependencies": {
+    "@fluentui/react": "8.61.2",
     "@juggle/resize-observer": "3.3.1",
     "focus-trap-react": "8.9.2",
     "no-scroll": "2.1.1",
