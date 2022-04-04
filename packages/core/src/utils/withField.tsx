@@ -5,20 +5,20 @@ import { Typography } from '../Typography'
 import { componentSize, spacing, opacity } from '../designparams'
 
 interface LabelProps {
-  readonly compact: boolean
-  readonly disabled: boolean
+  readonly compact?: boolean
+  readonly disabled?: boolean
 }
 
 export const Label = styled.div<LabelProps>`
   height: ${({ compact }) =>
-    !compact ? componentSize.medium : componentSize.small};
+    compact !== true ? componentSize.medium : componentSize.small};
   display: flex;
   align-items: center;
   color: ${({ theme }) => theme.color.text03()};
   cursor: default;
 
   ${({ disabled }) =>
-    disabled
+    disabled === true
       ? css`
           opacity: ${opacity[48]};
           pointer-events: none;
