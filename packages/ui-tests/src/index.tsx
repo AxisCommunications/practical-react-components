@@ -1,6 +1,6 @@
 import 'core-js/stable'
 import 'regenerator-runtime/runtime'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import styledNormalize from 'styled-normalize'
 import styled, { createGlobalStyle } from 'styled-components'
 import { HashRouter as Router, Route, Routes } from 'react-router-dom'
@@ -78,26 +78,31 @@ const Main = styled.main`
   padding: ${spacing.extraLarge};
 `
 
-ReactDOM.render(
-  <PracticalProvider theme={defaultTheme}>
-    <AppContainer>
-      <GlobalStyle />
-      <GlobalScrollbarStyle />
-      <Router>
-        <Aside>
-          <Menu components={componentDb} />
-        </Aside>
-        <Content>
-          <Main>
-            <Routes>
-              {componentDb.map(({ route, component: Component }) => (
-                <Route key={route} path={route} element={<Component />} />
-              ))}
-            </Routes>
-          </Main>
-        </Content>
-      </Router>
-    </AppContainer>
-  </PracticalProvider>,
-  document.querySelector('.root')
-)
+const container = document.querySelector('.root')
+
+if (container !== null) {
+  const root = createRoot(container)
+
+  root.render(
+    <PracticalProvider theme={defaultTheme}>
+      <AppContainer>
+        <GlobalStyle />
+        <GlobalScrollbarStyle />
+        <Router>
+          <Aside>
+            <Menu components={componentDb} />
+          </Aside>
+          <Content>
+            <Main>
+              <Routes>
+                {componentDb.map(({ route, component: Component }) => (
+                  <Route key={route} path={route} element={<Component />} />
+                ))}
+              </Routes>
+            </Main>
+          </Content>
+        </Router>
+      </AppContainer>
+    </PracticalProvider>
+  )
+}

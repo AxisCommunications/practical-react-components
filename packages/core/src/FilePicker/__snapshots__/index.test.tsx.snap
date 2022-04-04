@@ -184,9 +184,7 @@ exports[`FilePicker FilePicker 1`] = `
         />
         <p
           className="c8"
-        >
-          
-        </p>
+        />
       </div>
     </div>
   </div>
@@ -387,9 +385,7 @@ exports[`FilePicker FilePicker 2`] = `
         />
         <p
           className="c8"
-        >
-          
-        </p>
+        />
       </div>
     </div>
   </div>
