@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.72.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.71.0...v0.72.0) (2022-04-04 11:23:47 +0200)
+## [v0.73.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.72.0...v0.73.0) (2022-04-04 13:12:34 +0200)
+
+### 🐛 Bug fixes
+
+  - **utils**:  make all Label props optional ([47f0770](https://github.com/AxisCommunications/practical-react-components/commit/47f07702cfd3d6687bd450deeb5d07843b677d59))
+
+## [v0.72.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.71.0...v0.72.0) (2022-04-04 11:28:07 +0200)
 
 ### 🚧 Maintenance
 
