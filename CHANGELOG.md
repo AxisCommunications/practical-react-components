@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.73.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.72.0...v0.73.0) (2022-04-04 13:12:34 +0200)
+## [v0.74.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.73.0...v0.74.0) (2022-04-05 12:38:19 +0200)
+
+### ✨ Features
+
+  - **toast**:  adds the option to remove the close button ([5e53f7a](https://github.com/AxisCommunications/practical-react-components/commit/5e53f7a8c35aecbd0adbb60de1e292e76e484acd))
+
+## [v0.73.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.72.0...v0.73.0) (2022-04-04 14:50:04 +0200)
 
 ### 🐛 Bug fixes
 
