@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react'
+import { useCallback, useMemo, FC } from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   SelectField,
@@ -18,7 +18,7 @@ interface FormikNumberSelectProps
   readonly value?: number
 }
 
-export const FormikNumberSelect: React.FC<FormikNumberSelectProps> = ({
+export const FormikNumberSelect: FC<FormikNumberSelectProps> = ({
   name,
   validate,
   options,

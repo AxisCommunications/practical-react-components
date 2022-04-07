@@ -1,5 +1,10 @@
-// Libs
-import React, { useCallback, useMemo } from 'react'
+import {
+  useCallback,
+  useMemo,
+  InputHTMLAttributes,
+  ChangeEventHandler,
+  FC,
+} from 'react'
 
 import styled, { css } from 'styled-components'
 import { useVisibleFocus } from 'react-hooks-shareable'
@@ -156,9 +161,9 @@ const CSSBlankCheckbox = styled(BaseCheckbox)`
   border: 2px solid ${({ theme }) => theme.color.element01()};
 `
 type BaseElement = HTMLInputElement
-type BaseProps = React.InputHTMLAttributes<BaseElement>
+type BaseProps = InputHTMLAttributes<BaseElement>
 
-export type CheckboxChangeHandler = React.ChangeEventHandler<BaseElement>
+export type CheckboxChangeHandler = ChangeEventHandler<BaseElement>
 export type CheckboxValueChangeHandler = (value: boolean) => void
 
 export interface CheckboxProps extends BaseProps {
@@ -198,7 +203,7 @@ export interface CheckboxProps extends BaseProps {
   readonly onPartialValueChange?: CheckboxValueChangeHandler
 }
 
-export const Checkbox: React.FunctionComponent<CheckboxProps> = ({
+export const Checkbox: FC<CheckboxProps> = ({
   checked,
   label,
   disabled = false,

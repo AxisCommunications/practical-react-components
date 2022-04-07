@@ -1,4 +1,10 @@
-import React, { useCallback, ReactNode } from 'react'
+import {
+  useCallback,
+  ReactNode,
+  HTMLAttributes,
+  MouseEventHandler,
+  KeyboardEventHandler,
+} from 'react'
 
 import styled, { css } from 'styled-components'
 import { Icon, IconType } from '../Icon'
@@ -13,7 +19,7 @@ type MarkerOffset = 'top' | 'bottom' | 'left' | 'right'
 type VerticalTabMarkerOffset = 'left' | 'right'
 type HorizontalTabMarkerOffset = 'top' | 'bottom'
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 const FLEX_DIRECTION = {
   top: 'column-reverse',
@@ -147,7 +153,7 @@ export function TabBase<T>({
   onKeyDown,
   ...props
 }: TabBaseProps<T>): JSX.Element {
-  const onClick = useCallback<React.MouseEventHandler<HTMLDivElement>>(() => {
+  const onClick = useCallback<MouseEventHandler<HTMLDivElement>>(() => {
     if (selected || disabled) {
       return
     }
@@ -155,7 +161,7 @@ export function TabBase<T>({
     onSelect(id)
   }, [selected, disabled, id, onSelect])
 
-  const handleKeyDown = useCallback<React.KeyboardEventHandler<BaseElement>>(
+  const handleKeyDown = useCallback<KeyboardEventHandler<BaseElement>>(
     event => {
       onKeyDown?.(event)
 

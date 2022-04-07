@@ -1,12 +1,19 @@
-import React, { useRef, useCallback, useState } from 'react'
+import {
+  useRef,
+  useCallback,
+  useState,
+  InputHTMLAttributes,
+  ChangeEventHandler,
+  FC,
+} from 'react'
 import styled from 'styled-components'
 import { Typography } from '../Typography'
 import { spacing } from '../designparams'
 import { Button, ButtonProps } from '../Button'
 
 type BaseElement = HTMLInputElement
-type BaseProps = React.InputHTMLAttributes<BaseElement>
-type InputChangeHandler = React.ChangeEventHandler<BaseElement>
+type BaseProps = InputHTMLAttributes<BaseElement>
+type InputChangeHandler = ChangeEventHandler<BaseElement>
 
 const ButtonFileChooserContainer = styled.div`
   display: flex;
@@ -44,7 +51,7 @@ export interface FilePickerProps
  * clicks the button a input file chooser dialog will appear.
  *
  */
-export const FilePicker: React.FC<FilePickerProps> = ({
+export const FilePicker: FC<FilePickerProps> = ({
   onFileChange,
   disabled,
   name,

@@ -1,4 +1,12 @@
-import React, { useContext, useCallback, useEffect } from 'react'
+import {
+  useContext,
+  useCallback,
+  useEffect,
+  HTMLAttributes,
+  ReactNode,
+  FC,
+  Children,
+} from 'react'
 import styled from 'styled-components'
 
 import { componentSize } from '../designparams'
@@ -15,7 +23,7 @@ import {
 } from './TableCells'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 /*
  * TableHeader
@@ -46,15 +54,15 @@ export interface TableHeaderProps extends BaseProps {
   /**
    * Optional overlay element to cover the column headers.
    */
-  readonly overlay?: React.ReactNode
+  readonly overlay?: ReactNode
   /**
    * Optional menu content to put on the right.
    * It will be aligned to the right and overflow onto the row.
    */
-  readonly menu?: React.ReactNode
+  readonly menu?: ReactNode
 }
 
-export const TableHeader: React.FC<TableHeaderProps> = ({
+export const TableHeader: FC<TableHeaderProps> = ({
   children,
   selected = false,
   partial = false,
@@ -72,7 +80,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
     },
     [onSelect]
   )
-  const numberOfColumns = React.Children.count(children)
+  const numberOfColumns = Children.count(children)
   // Set the column widths.
   // This will happen on first render (number of columns changes from 0).
   useEffect(() => {
@@ -94,7 +102,7 @@ export const TableHeader: React.FC<TableHeaderProps> = ({
       {overlay !== undefined ? (
         <OverlayContainer>{overlay}</OverlayContainer>
       ) : (
-        React.Children.map(children, (cell, i) => {
+        Children.map(children, (cell, i) => {
           return (
             <TableHeaderCellContent data-col={i} key={i}>
               {cell}

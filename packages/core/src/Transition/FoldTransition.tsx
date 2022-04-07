@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react'
+import { useRef, useCallback, FC } from 'react'
 import { TransitionGroup, Transition } from 'react-transition-group'
 
 const FOLD_ANIMATION_DURATION = 250
@@ -20,7 +20,7 @@ export interface FoldTransitionProps {
   readonly expanded: boolean
 }
 
-export const FoldTransition: React.FunctionComponent<FoldTransitionProps> = ({
+export const FoldTransition: FC<FoldTransitionProps> = ({
   expanded,
   children,
 }) => {

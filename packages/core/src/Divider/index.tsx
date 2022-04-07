@@ -2,11 +2,13 @@
  * Divider shows a divider line
  */
 
+import { HTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
+
 import { spacing } from '../designparams'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 export interface NormalDividerProps extends BaseProps {
   /**

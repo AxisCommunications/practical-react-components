@@ -1,6 +1,4 @@
-export * from './BaseChip'
-
-import React, { useCallback, useMemo } from 'react'
+import { useCallback, useMemo, forwardRef, KeyboardEvent } from 'react'
 import styled from 'styled-components'
 
 import { CloseIcon } from 'practical-react-components-icons'
@@ -9,6 +7,8 @@ import { spacing } from '../designparams'
 import { ClickableIcon, Icon, IconType } from '../Icon'
 import { Typography } from '../Typography'
 import { BaseChip, BaseChipProps } from './BaseChip'
+
+export * from './BaseChip'
 
 const ChipIcon = styled(Icon).attrs({ size: 'small' })`
   flex: 0 0 min-content;
@@ -46,10 +46,10 @@ export interface ChipProps
 }
 
 /* eslint-disable-next-line react/display-name */
-export const Chip = React.forwardRef<HTMLDivElement, ChipProps>(
+export const Chip = forwardRef<HTMLDivElement, ChipProps>(
   ({ text, error = false, onRemove, icon, ...props }, ref) => {
     const handleKeyDown = useCallback(
-      (event: React.KeyboardEvent<HTMLSpanElement>) => {
+      (event: KeyboardEvent<HTMLSpanElement>) => {
         if (onRemove === undefined) {
           return
         }

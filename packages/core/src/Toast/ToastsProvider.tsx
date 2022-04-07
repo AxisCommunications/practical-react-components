@@ -1,4 +1,12 @@
-import React, { useReducer, useContext, useRef } from 'react'
+import {
+  useReducer,
+  useContext,
+  useRef,
+  FC,
+  Dispatch,
+  isValidElement,
+  cloneElement,
+} from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import styled, { css } from 'styled-components'
 
@@ -43,11 +51,11 @@ const ToastsWrapper = styled.div<ToastsPlacement>`
  * the dispatch ref.
  *
  */
-export const ToastsProvider: React.FC<SimpleToastsDurations> = ({
+export const ToastsProvider: FC<SimpleToastsDurations> = ({
   children,
   ...toastsOptions
 }) => {
-  const __dispatchRef = useRef<React.Dispatch<ToastAction>>(NI)
+  const __dispatchRef = useRef<Dispatch<ToastAction>>(NI)
 
   const callbacks = useToastCallbacks(__dispatchRef, toastsOptions)
 
@@ -58,7 +66,7 @@ export const ToastsProvider: React.FC<SimpleToastsDurations> = ({
   )
 }
 
-export const ToastTransition: React.FC = ({ children, ...props }) => {
+export const ToastTransition: FC = ({ children, ...props }) => {
   const ref = useRef<HTMLDivElement | null>(null)
 
   return (
@@ -71,9 +79,7 @@ export const ToastTransition: React.FC = ({ children, ...props }) => {
       unmountOnExit={true}
       {...props}
     >
-      {React.isValidElement(children)
-        ? React.cloneElement(children, { ref })
-        : null}
+      {isValidElement(children) ? cloneElement(children, { ref }) : null}
     </CSSTransition>
   )
 }
@@ -87,7 +93,7 @@ export interface ToastsAnchorProps {
   readonly placement: ToastsPlacement
 }
 
-export const ToastsAnchor: React.FC<ToastsAnchorProps> = ({ placement }) => {
+export const ToastsAnchor: FC<ToastsAnchorProps> = ({ placement }) => {
   const [toasts, dispatch] = useReducer(toastReducer, new Map())
   const { hideToast, __dispatchRef } = useContext(ToastsContext)
   __dispatchRef.current = dispatch

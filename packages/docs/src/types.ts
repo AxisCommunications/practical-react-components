@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import { IconType } from 'practical-react-components-core'
 
 export interface Component {
@@ -5,7 +6,7 @@ export interface Component {
   readonly route: string
   readonly menu: string
   readonly icon?: IconType
-  readonly component: React.FC
+  readonly component: FC
 }
 
 export type Components = ReadonlyArray<Component>

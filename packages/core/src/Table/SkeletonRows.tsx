@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext, HTMLAttributes, memo, FC } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 import { componentSize, opacity, spacing } from '../designparams'
@@ -9,7 +9,7 @@ import { TableContext } from './context'
 import { TableCellCheckbox, TableCellContent } from './TableCells'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 /**
  * Skeleton rows (used as a loading indicator)
@@ -76,7 +76,7 @@ interface SkeletonRowProps {
   readonly columns: number
 }
 
-const SkeletonRow: React.FunctionComponent<SkeletonRowProps> = React.memo(
+const SkeletonRow: FC<SkeletonRowProps> = memo(
   ({ columns, gridTemplateColumns, hasCheckbox }) => {
     const columnArray: Array<undefined> = Array.from(new Array(columns))
 
@@ -106,7 +106,7 @@ export interface SkeletonTableRowsProps extends BaseProps {
   readonly rows: number
   readonly columns: number
 }
-export const SkeletonTableRows: React.FC<SkeletonTableRowsProps> = React.memo(
+export const SkeletonTableRows: FC<SkeletonTableRowsProps> = memo(
   ({ rows, columns, ...props }) => {
     const rowArray: Array<undefined> = Array.from(new Array(rows))
 

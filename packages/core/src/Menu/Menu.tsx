@@ -1,4 +1,4 @@
-import React, { memo, useMemo } from 'react'
+import { memo, useMemo } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 
 import { MoreVertIcon } from 'practical-react-components-icons'

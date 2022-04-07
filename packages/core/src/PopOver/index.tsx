@@ -1,8 +1,10 @@
-import React, {
+import {
   useLayoutEffect,
   useContext,
   useCallback,
   useState,
+  HTMLAttributes,
+  FC,
 } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
@@ -16,7 +18,7 @@ import {
 } from './utils'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 const PopOverContainer = styled.div`
   position: fixed;
@@ -83,7 +85,7 @@ export interface PopOverProps extends BaseProps {
   readonly onScroll?: () => void
 }
 
-export const PopOver: React.FC<PopOverProps> = ({
+export const PopOver: FC<PopOverProps> = ({
   anchorEl,
   horizontalPosition = 'left',
   verticalPosition = 'bottom',

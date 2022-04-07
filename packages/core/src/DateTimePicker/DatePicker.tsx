@@ -1,4 +1,11 @@
-import React, { useCallback, useMemo } from 'react'
+import {
+  useCallback,
+  useMemo,
+  Dispatch,
+  SetStateAction,
+  VFC,
+  MouseEvent,
+} from 'react'
 import styled, { css } from 'styled-components'
 import { spacing, shape } from '../designparams'
 import { Typography } from '../Typography'
@@ -130,7 +137,7 @@ interface DatePickerProps {
   /**
    * Fires when date is changed
    */
-  readonly onChange: React.Dispatch<React.SetStateAction<Date>>
+  readonly onChange: Dispatch<SetStateAction<Date>>
   /**
    * Translation as locale string, used with javascript
    * Date object toLocaleString function.
@@ -145,7 +152,7 @@ interface DatePickerProps {
  * Modal component that allows users to choose
  * date, time and time zone setting
  */
-export const DatePicker: React.FC<DatePickerProps> = ({
+export const DatePicker: VFC<DatePickerProps> = ({
   date,
   onChange,
   lang = 'en',
@@ -188,7 +195,7 @@ export const DatePicker: React.FC<DatePickerProps> = ({
   )
 
   const onDateClick = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
+    (e: MouseEvent<HTMLButtonElement>) => {
       const newDate = new Date(date)
       newDate.setDate(Number(e.currentTarget.innerText))
       onChange(newDate)

@@ -1,10 +1,10 @@
-import { MemoExoticComponent, FC, SVGProps } from 'react'
+import { MemoExoticComponent, FC, SVGProps, HTMLAttributes } from 'react'
 import styled from 'styled-components'
 
 import { iconSize } from '../designparams'
 
 type BaseElement = HTMLSpanElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 /**
  * TODO: Add RTL-support for icon ? (https://material.io/design/usability/bidirectionality.html#mirroring-elements)

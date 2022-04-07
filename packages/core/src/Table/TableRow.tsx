@@ -1,4 +1,14 @@
-import React, { useContext, useCallback, useMemo } from 'react'
+import {
+  useContext,
+  useCallback,
+  useMemo,
+  HTMLAttributes,
+  ReactNode,
+  MouseEventHandler,
+  FC,
+  memo,
+  Children,
+} from 'react'
 import styled, { css } from 'styled-components'
 
 import { componentSize, opacity } from '../designparams'
@@ -14,7 +24,7 @@ import {
 } from './TableCells'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 /**
  * TableRow
@@ -86,7 +96,7 @@ const TableRowGrid = styled.div<{
 `
 
 export interface TableRowProps extends BaseProps {
-  readonly children: React.ReactNodeArray
+  readonly children: ReadonlyArray<ReactNode>
   /**
    * `class` to be passed to the component.
    */
@@ -103,7 +113,7 @@ export interface TableRowProps extends BaseProps {
    * Optional menu content to put on the right.
    * It will be aligned to the right and overflow onto the row.
    */
-  readonly menu?: React.ReactNode
+  readonly menu?: ReactNode
   /**
    * Optional flag to disable entire row.
    */
@@ -116,10 +126,10 @@ export interface TableRowProps extends BaseProps {
   /**
    * Function callback on row clicked
    */
-  readonly onClicked?: React.MouseEventHandler<HTMLDivElement>
+  readonly onClicked?: MouseEventHandler<HTMLDivElement>
 }
 
-export const TableRow: React.FC<TableRowProps> = React.memo(
+export const TableRow: FC<TableRowProps> = memo(
   ({
     className,
     id,
@@ -141,7 +151,7 @@ export const TableRow: React.FC<TableRowProps> = React.memo(
       [id, onSelect]
     )
 
-    const onRowClicked = useCallback<React.MouseEventHandler<HTMLDivElement>>(
+    const onRowClicked = useCallback<MouseEventHandler<HTMLDivElement>>(
       e => {
         e.stopPropagation()
         if (onClicked !== undefined && clickable && !disabled) {
@@ -166,7 +176,7 @@ export const TableRow: React.FC<TableRowProps> = React.memo(
     }, [onSelect, clickable, selected, onChange, disabled])
 
     const tableCellContent = useMemo(() => {
-      return React.Children.map(children, (cell, cellId) => {
+      return Children.map(children, (cell, cellId) => {
         return (
           <TableCellContent data-col={cellId} key={cellId}>
             {cell}

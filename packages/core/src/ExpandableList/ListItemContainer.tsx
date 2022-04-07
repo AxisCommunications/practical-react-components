@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback, VFC, KeyboardEventHandler } from 'react'
 import styled, { css } from 'styled-components'
 import { useHasOverflowWithResizeEvent } from 'react-hooks-shareable'
 
@@ -161,7 +161,7 @@ interface OverflowTooltipProps {
 /**
  * Used to show a tooltip if label is too long to be fully shown in container.
  */
-const LabelOverflowTooltip: React.FC<OverflowTooltipProps> = ({ label }) => {
+const LabelOverflowTooltip: VFC<OverflowTooltipProps> = ({ label }) => {
   const { hasOverflow, ref } = useHasOverflowWithResizeEvent()
 
   const text = <Label ref={ref}>{label}</Label>
@@ -188,7 +188,7 @@ const LabelOverflowTooltip: React.FC<OverflowTooltipProps> = ({ label }) => {
  *
  */
 
-export const ListItemContainer: React.VFC<ListItemContainerProps> = ({
+export const ListItemContainer: VFC<ListItemContainerProps> = ({
   selected,
   isNestedItem,
   hasChildren,
@@ -198,7 +198,7 @@ export const ListItemContainer: React.VFC<ListItemContainerProps> = ({
   icon,
   label,
 }) => {
-  const handleKeyDown = useCallback<React.KeyboardEventHandler<HTMLDivElement>>(
+  const handleKeyDown = useCallback<KeyboardEventHandler<HTMLDivElement>>(
     event => {
       if (event.key !== MenuKeys.Enter) {
         return

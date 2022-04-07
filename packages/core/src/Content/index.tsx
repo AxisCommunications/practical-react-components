@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback, HTMLAttributes, VFC, FC } from 'react'
 
 import styled, { css } from 'styled-components'
 import { spacing, componentSize } from '../designparams'
@@ -7,7 +7,7 @@ import { Typography } from '../Typography'
 import { Divider as DividerTemplate } from '../Divider'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 /**
  * Common padding of content in Dialog/Card
@@ -55,11 +55,7 @@ export interface TextBlockProps extends BaseProps {
   readonly text: string
   readonly caption?: string
 }
-export const TextBlock: React.FC<TextBlockProps> = ({
-  text,
-  caption,
-  ...props
-}) => {
+export const TextBlock: VFC<TextBlockProps> = ({ text, caption, ...props }) => {
   const hasCaption = caption !== undefined
   return (
     <Block hasCaption={hasCaption} {...props}>
@@ -121,7 +117,7 @@ const TitleContainer = styled.div`
   text-transform: uppercase;
 `
 
-const GroupTitle: React.FC<{
+const GroupTitle: VFC<{
   readonly title: string
 }> = ({ title }) => {
   return (
@@ -139,7 +135,7 @@ export interface FormSectionProps extends BaseProps {
   readonly title?: string
 }
 
-export const FormSection: React.FC<FormSectionProps> = ({
+export const FormSection: FC<FormSectionProps> = ({
   title,
   children,
   ...props
@@ -192,9 +188,12 @@ export interface ContentListItemWithHoverProps extends BaseProps {
   readonly onHover: (hover: boolean) => void
 }
 
-export const ContentListItemWithHover: React.FC<
-  ContentListItemWithHoverProps
-> = ({ listHeight = 'medium', onHover, children, ...props }) => {
+export const ContentListItemWithHover: FC<ContentListItemWithHoverProps> = ({
+  listHeight = 'medium',
+  onHover,
+  children,
+  ...props
+}) => {
   const handleMouseEnter = useCallback(() => {
     onHover(true)
   }, [onHover])

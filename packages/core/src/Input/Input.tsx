@@ -1,4 +1,15 @@
-import React, { useCallback, useState, useRef, useLayoutEffect } from 'react'
+import {
+  useCallback,
+  useState,
+  useRef,
+  useLayoutEffect,
+  InputHTMLAttributes,
+  ChangeEventHandler,
+  VFC,
+  RefObject,
+  KeyboardEventHandler,
+  MouseEventHandler,
+} from 'react'
 import styled, { css, useTheme } from 'styled-components'
 
 import { opacity, spacing, shape, componentSize } from '../designparams'
@@ -9,9 +20,9 @@ import { Tooltip } from '../Tooltip'
 import { VisibilityIcon, NotVisibilityIcon, ErrorIcon } from './icons'
 
 type BaseElement = HTMLInputElement
-type BaseProps = React.InputHTMLAttributes<BaseElement>
+type BaseProps = InputHTMLAttributes<BaseElement>
 export type NumberInputType = number | ''
-export type InputChangeHandler = React.ChangeEventHandler<BaseElement>
+export type InputChangeHandler = ChangeEventHandler<BaseElement>
 export type InputValueChangeHandler<T> = (value: T) => void
 export type TextInputWidth = 'small' | 'medium' | 'large' | 'full'
 export type TextInputCredentialsType =
@@ -228,7 +239,7 @@ interface ErrorMessageTextProps {
   readonly errorVariant: ErrorVariant
 }
 
-const ErrorMessageText: React.FC<ErrorMessageTextProps> = ({
+const ErrorMessageText: VFC<ErrorMessageTextProps> = ({
   error,
   errorVariant,
 }) => {
@@ -309,7 +320,7 @@ interface BaseInputProps<T extends string | NumberInputType> extends BaseProps {
    * Can be used to set React ref to the input element
    */
 
-  readonly inputRef?: React.RefObject<BaseElement>
+  readonly inputRef?: RefObject<BaseElement>
   /**
    * Override theme's default setting for `compact` if set.
 
@@ -338,7 +349,7 @@ function Input<T extends string | NumberInputType>({
   const { compact: compactFromTheme } = useTheme()
   const compact = compactFromProps ?? compactFromTheme
 
-  const handleKeyUp = useCallback<React.KeyboardEventHandler<BaseElement>>(
+  const handleKeyUp = useCallback<KeyboardEventHandler<BaseElement>>(
     e => {
       switch (e.key) {
         case 'Enter': {
@@ -358,7 +369,7 @@ function Input<T extends string | NumberInputType>({
     },
     [onPressEnter, onPressEscape, onKeyUp]
   )
-  const toggleShowPassword = useCallback<React.MouseEventHandler>(
+  const toggleShowPassword = useCallback<MouseEventHandler>(
     e => {
       e.preventDefault()
       setShowPassword(oldValue => !oldValue)
@@ -452,21 +463,21 @@ function Input<T extends string | NumberInputType>({
 }
 
 export interface TextInputProps extends BaseInputProps<string> {}
-export const TextInput: React.FC<TextInputProps> = props => (
+export const TextInput: VFC<TextInputProps> = props => (
   <Input {...props} type="text" />
 )
 
 export interface NumberInputProps extends BaseInputProps<NumberInputType> {}
-export const NumberInput: React.FC<NumberInputProps> = props => (
+export const NumberInput: VFC<NumberInputProps> = props => (
   <Input {...props} type="number" />
 )
 
 export interface TextInputCredentialsProps extends BaseInputProps<string> {
   readonly type: TextInputCredentialsType
 }
-export const TextInputCredentials: React.FC<
-  TextInputCredentialsProps
-> = props => <Input {...props} />
+export const TextInputCredentials: VFC<TextInputCredentialsProps> = props => (
+  <Input {...props} />
+)
 
 export const TextInputField = withField<TextInputProps>(TextInput)
 export const NumberInputField = withField<NumberInputProps>(NumberInput)

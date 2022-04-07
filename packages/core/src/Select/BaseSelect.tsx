@@ -1,10 +1,16 @@
-import React, {
+import {
   useMemo,
   useState,
   useCallback,
   useRef,
   useLayoutEffect,
   ReactNode,
+  SyntheticEvent,
+  VFC,
+  FC,
+  RefObject,
+  KeyboardEvent,
+  MutableRefObject,
 } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 import { useBoolean } from 'react-hooks-shareable'
@@ -127,10 +133,10 @@ interface SelectOption extends BaseOption {
   readonly selected: boolean
   readonly selectMarker: SelectMarker
   readonly role?: string
-  readonly onClick?: (event: React.SyntheticEvent) => void
+  readonly onClick?: (event: SyntheticEvent) => void
 }
 
-const SelectOptionComponent: React.FC<SelectOption> = ({
+const SelectOptionComponent: VFC<SelectOption> = ({
   value,
   disabled = false,
   onClick,
@@ -182,20 +188,20 @@ export interface SelectPopoverProps<V extends string = string>
   extends Required<Pick<BaseSelectProps, 'direction' | 'align' | 'compact'>>,
     PopOverProps {
   readonly anchorEl: HTMLDivElement | null
-  readonly onKeyDown: (event: React.KeyboardEvent) => void
+  readonly onKeyDown: (event: KeyboardEvent) => void
   readonly isOpen: boolean
-  readonly listRef: React.RefObject<HTMLUListElement>
+  readonly listRef: RefObject<HTMLUListElement>
   // eslint-disable-next-line functional/prefer-readonly-type
-  readonly itemRefs: React.MutableRefObject<Map<number, HTMLLIElement>>
+  readonly itemRefs: MutableRefObject<Map<number, HTMLLIElement>>
   readonly valueIndex: number | null
-  readonly optionHandlers: ReadonlyArray<(event: React.SyntheticEvent) => void>
+  readonly optionHandlers: ReadonlyArray<(event: SyntheticEvent) => void>
   readonly options: ReadonlyArray<BaseOption<V>>
   readonly noOptionsLabel?: string
   readonly onScroll: VoidFunction
   readonly selectMarker: SelectMarker
 }
 
-export const SelectPopover: React.FC<SelectPopoverProps> = ({
+export const SelectPopover: FC<SelectPopoverProps> = ({
   anchorEl,
   compact: compactFromProps,
   selectMarker: selectMarkerFromProps,
@@ -453,7 +459,7 @@ export function BaseSelect<V extends string = string>({
 
   const optionHandlers = useMemo(() => {
     return options.map(option => {
-      return (event: React.SyntheticEvent) => {
+      return (event: SyntheticEvent) => {
         event.stopPropagation()
 
         if (option.disabled === true) {
@@ -499,7 +505,7 @@ export function BaseSelect<V extends string = string>({
   )
 
   const handleKeyDown = useCallback(
-    (event: React.KeyboardEvent) => {
+    (event: KeyboardEvent) => {
       const { key } = event
 
       if (!(key in SelectKeys)) {

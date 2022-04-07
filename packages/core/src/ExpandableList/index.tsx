@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState, HTMLAttributes, VFC } from 'react'
 
 import {
   ExpandableListContainer,
@@ -9,7 +9,7 @@ import {
 export * from './ExpandableListItem'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 export interface ExpandableListProps extends BaseProps {
   /**
@@ -27,7 +27,7 @@ export interface ExpandableListProps extends BaseProps {
   readonly accordion?: boolean
 }
 
-export const ExpandableList: React.VFC<ExpandableListProps> = ({
+export const ExpandableList: VFC<ExpandableListProps> = ({
   items,
   accordion,
   ...props

@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useMemo } from 'react'
+import { useCallback, useContext, useMemo, FC } from 'react'
 import styled, { css } from 'styled-components'
 import Highlight, { defaultProps, Language } from 'prism-react-renderer'
 /* eslint-disable-next-line import/no-extraneous-dependencies */
@@ -67,7 +67,7 @@ interface CodeProps {
   readonly children: string
 }
 
-export const Code: React.FC<CodeProps> = ({
+export const Code: FC<CodeProps> = ({
   children,
   className: cls,
   type = 'code',

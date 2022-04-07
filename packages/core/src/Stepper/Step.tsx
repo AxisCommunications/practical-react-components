@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback, HTMLAttributes, ReactNode, FC, MouseEvent } from 'react'
 import styled, { css } from 'styled-components'
 import { CheckIcon, WarningIcon } from 'practical-react-components-icons'
 
@@ -19,13 +19,13 @@ export interface StepperAction {
 }
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 export interface StepContent extends BaseProps {
   /* Step's label */
   readonly label: string
   /* Step's content */
-  readonly content: React.ReactNode
+  readonly content: ReactNode
   /* Indicates whether the step has errors that should be resolved */
   readonly hasErrors?: boolean
   /* Disables next button */
@@ -167,7 +167,7 @@ interface StepProps extends Omit<StepContent, 'content'> {
    */
   readonly resetAction: StepperAction
   /* Step's content */
-  readonly children: React.ReactNode
+  readonly children: ReactNode
   /* Current step's ID */
   readonly currentStep: number
   /* Step's ID */
@@ -186,7 +186,7 @@ interface StepProps extends Omit<StepContent, 'content'> {
   readonly disableNext?: boolean
 }
 
-export const Step: React.FC<StepProps> = ({
+export const Step: FC<StepProps> = ({
   children,
   label,
   hasErrors,
@@ -207,7 +207,7 @@ export const Step: React.FC<StepProps> = ({
   const completed = completedSteps.includes(stepId)
   const lastStep = stepId === numberOfSteps - 1
   const onBackButtonClick = useCallback(
-    (event: React.MouseEvent<HTMLButtonElement>) => {
+    (event: MouseEvent<HTMLButtonElement>) => {
       const prevStep = stepId - 1
 
       setCompletedSteps(
@@ -222,7 +222,7 @@ export const Step: React.FC<StepProps> = ({
     [completedSteps, prevAction, setCompletedSteps, setCurrentStep, stepId]
   )
   const onNextButtonClick = useCallback(
-    (event: React.MouseEvent<HTMLButtonElement>) => {
+    (event: MouseEvent<HTMLButtonElement>) => {
       setCompletedSteps([...completedSteps, stepId])
       setCurrentStep(stepId + 1)
 
@@ -233,7 +233,7 @@ export const Step: React.FC<StepProps> = ({
     [completedSteps, nextAction, setCompletedSteps, setCurrentStep, stepId]
   )
   const onCompleteButtonClick = useCallback(
-    (event: React.MouseEvent<HTMLButtonElement>) => {
+    (event: MouseEvent<HTMLButtonElement>) => {
       setCompletedSteps(Array.from(Array(numberOfSteps).keys()))
 
       if (!hasAnyErrors) {

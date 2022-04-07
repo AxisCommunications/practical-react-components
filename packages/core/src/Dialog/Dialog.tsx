@@ -12,7 +12,7 @@
  * The title will automatically be ID-ed for ARIA conformance.
  */
 
-import React, { ReactNode } from 'react'
+import { ReactNode, FC } from 'react'
 import styled from 'styled-components'
 import { useScrollPosition } from 'react-hooks-shareable'
 
@@ -61,7 +61,7 @@ export interface DialogProps extends ModalProps {
   readonly focusDialog?: boolean
 }
 
-export const Dialog: React.FC<DialogProps> = ({
+export const Dialog: FC<DialogProps> = ({
   width,
   header,
   controls,

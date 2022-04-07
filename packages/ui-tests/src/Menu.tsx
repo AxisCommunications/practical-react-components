@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useMemo } from 'react'
+import { useCallback, useState, useMemo, FC, VFC } from 'react'
 import styled, { css } from 'styled-components'
 import { useNavigate, useLocation } from 'react-router-dom'
 import {
@@ -12,7 +12,7 @@ interface Component {
   readonly name: string
   readonly route: string
   readonly menu: string
-  readonly component: React.FC
+  readonly component: FC
 }
 type Components = ReadonlyArray<Component>
 
@@ -62,7 +62,7 @@ interface ComponentGroup extends Component {
   readonly selected: ExpandableListItemType['selected']
 }
 
-export const Menu: React.FC<MenuProps> = ({ components }) => {
+export const Menu: VFC<MenuProps> = ({ components }) => {
   const [showNavigation, setShowNavigation] = useState<boolean>(true)
   const navigate = useNavigate()
   const location = useLocation()

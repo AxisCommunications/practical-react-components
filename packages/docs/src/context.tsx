@@ -1,4 +1,4 @@
-import React, { createContext, useMemo, useState } from 'react'
+import { createContext, useMemo, useState, FC } from 'react'
 import {
   ColorBaseName,
   generateDefaultTheme,
@@ -49,7 +49,7 @@ export const ThemeContext = createContext<ThemeContextType>({
 })
 const { Provider } = ThemeContext
 
-export const ThemeProvider: React.FC<ThemeNameProvider> = ({
+export const ThemeProvider: FC<ThemeNameProvider> = ({
   children,
   initialThemeName = ThemeName.DEEP_PURPLE,
 }) => {

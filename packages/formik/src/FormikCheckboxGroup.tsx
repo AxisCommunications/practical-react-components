@@ -1,5 +1,4 @@
-// Libraries
-import React, { useMemo } from 'react'
+import { useMemo } from 'react'
 import { FieldConfig, useField } from 'formik'
 import {
   Checkbox,

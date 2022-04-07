@@ -103,7 +103,7 @@ export const Card: FC<CardProps> = ({
   </CardContainer>
 )
 
-export const PanelCard: React.FC<CardProps> = ({
+export const PanelCard: FC<CardProps> = ({
   width = 'full',
   square = true,
   children,

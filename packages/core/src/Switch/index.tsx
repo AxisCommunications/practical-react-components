@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback, FC, InputHTMLAttributes, ChangeEventHandler } from 'react'
 import styled, { css } from 'styled-components'
 import { useVisibleFocus } from 'react-hooks-shareable'
 
@@ -183,9 +183,9 @@ const TrackAfter = styled.span`
 `
 
 type BaseElement = HTMLInputElement
-type BaseProps = React.InputHTMLAttributes<BaseElement>
+type BaseProps = InputHTMLAttributes<BaseElement>
 
-export type SwitchChangeHandler = React.ChangeEventHandler<BaseElement>
+export type SwitchChangeHandler = ChangeEventHandler<BaseElement>
 export type SwitchValueChangeHandler = (value: boolean) => void
 
 export interface SwitchProps extends BaseProps {
@@ -216,7 +216,7 @@ export interface SwitchProps extends BaseProps {
   readonly label?: string
 }
 
-export const Switch: React.FunctionComponent<SwitchProps> = ({
+export const Switch: FC<SwitchProps> = ({
   checked,
   disabled = false,
   onChange,

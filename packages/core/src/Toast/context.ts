@@ -1,4 +1,4 @@
-import { createContext, ReactNode } from 'react'
+import { createContext, ReactNode, MutableRefObject, Dispatch } from 'react'
 import { IconType } from '../Icon'
 import { ALinkProps, ButtonLinkProps } from '../Link'
 
@@ -88,7 +88,7 @@ export const NI = () => {
   throw new Error(`Not implemented: no ToastContext set`)
 }
 export interface ToastContextType extends ToastCallbacks {
-  readonly __dispatchRef: React.MutableRefObject<React.Dispatch<ToastAction>>
+  readonly __dispatchRef: MutableRefObject<Dispatch<ToastAction>>
 }
 
 export const ToastsContext = createContext<ToastContextType>({

@@ -1,11 +1,17 @@
-import React, { useCallback, useMemo } from 'react'
+import {
+  useCallback,
+  useMemo,
+  ReactNode,
+  HTMLAttributes,
+  MouseEventHandler,
+} from 'react'
 import styled, { css } from 'styled-components'
 
 import { spacing, shape, opacity, componentSize } from '../designparams'
 import { withField, FieldProps } from '../utils'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 interface ToggleButtonContainerProps {
   readonly disabled: boolean
@@ -125,7 +131,7 @@ interface ToggleButtonProps<T extends string | number> {
   /**
    * ToggleButton content.
    */
-  readonly content: React.ReactNode
+  readonly content: ReactNode
 }
 
 /**
@@ -148,9 +154,7 @@ function ToggleButton<T extends string | number>({
     () => values.some(value => value === id),
     [values, id]
   )
-  const onButtonClick = useCallback<
-    React.MouseEventHandler<HTMLDivElement>
-  >(() => {
+  const onButtonClick = useCallback<MouseEventHandler<HTMLDivElement>>(() => {
     if (disabled) {
       return
     }
@@ -183,7 +187,7 @@ export interface ToggleButtonGroupOption<T extends string | number> {
   /**
    * Togglebutton content, can be e.g. Icon or Typography.
    */
-  readonly content: React.ReactNode
+  readonly content: ReactNode
   /**
    * Use to disable toggle button
    * Default `false`

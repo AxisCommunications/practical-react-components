@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo, useEffect } from 'react'
+import { useState, useCallback, useMemo, useEffect, FC } from 'react'
 import styled from 'styled-components'
 import {
   SystemDatetimeIcon,
@@ -128,7 +128,7 @@ export interface DateTimePickerProps extends ModalProps {
  *
  * Dialog that can be used for date, time and time zone settings.
  */
-export const DateTimePicker: React.FC<DateTimePickerProps> = ({
+export const DateTimePicker: FC<DateTimePickerProps> = ({
   open,
   date,
   lang = 'en',

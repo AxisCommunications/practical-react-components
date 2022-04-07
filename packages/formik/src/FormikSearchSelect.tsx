@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback } from 'react'
 import { useField, FieldConfig } from 'formik'
 import {
   SearchSelect,

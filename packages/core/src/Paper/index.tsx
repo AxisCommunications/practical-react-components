@@ -1,9 +1,9 @@
-import React, { forwardRef } from 'react'
+import { forwardRef, HTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
 import { shape, spacing } from '../designparams'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 const PaperDiv = styled.div<{
   readonly square: boolean

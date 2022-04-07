@@ -1,4 +1,4 @@
-import React, {
+import {
   useRef,
   useContext,
   useMemo,
@@ -6,6 +6,10 @@ import React, {
   Reducer,
   useLayoutEffect,
   useState,
+  HTMLAttributes,
+  FC,
+  Children,
+  memo,
 } from 'react'
 import styled from 'styled-components'
 import { spacing } from '../designparams'
@@ -17,7 +21,7 @@ import { TableContext, WidthAction, WidthActionType } from './context'
 import { TABLE_DIMENSIONS } from './dimensions'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 /*******************************************************************************
  *
@@ -313,7 +317,7 @@ export interface TableProps extends Omit<BaseProps, 'onSelect'> {
 
 const EMPTY_ARRAY: ReadonlyArray<number> = []
 
-const TableComponent: React.FunctionComponent<TableProps> = ({
+const TableComponent: FC<TableProps> = ({
   initialWidths = EMPTY_ARRAY,
   resizableColumns = false,
   minColumnWidth = TABLE_DIMENSIONS.DEFAULT_MIN_COLUMN_WIDTH,
@@ -390,7 +394,7 @@ const TableComponent: React.FunctionComponent<TableProps> = ({
       : undefined
 
   const { header, rows } = useMemo(() => {
-    const [headerEl, ...rowsEl] = React.Children.toArray(children)
+    const [headerEl, ...rowsEl] = Children.toArray(children)
     return { header: headerEl, rows: rowsEl }
   }, [children])
 
@@ -429,4 +433,4 @@ const TableComponent: React.FunctionComponent<TableProps> = ({
   )
 }
 
-export const Table = React.memo(TableComponent)
+export const Table = memo(TableComponent)

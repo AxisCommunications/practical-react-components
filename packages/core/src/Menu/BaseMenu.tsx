@@ -1,4 +1,4 @@
-import React, {
+import {
   useState,
   useCallback,
   useRef,
@@ -6,6 +6,15 @@ import React, {
   PointerEventHandler,
   ReactNode,
   useEffect,
+  HTMLAttributes,
+  MouseEventHandler,
+  forwardRef,
+  FocusEventHandler,
+  FC,
+  VFC,
+  MouseEvent,
+  KeyboardEvent,
+  KeyboardEventHandler,
 } from 'react'
 import styled, { css } from 'styled-components'
 
@@ -18,10 +27,10 @@ import { PopOver, PopOverProps } from '../PopOver'
 import { useEscapeListenerStack } from '../Modal/hooks/useEscapeListenerStack'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 type BaseButtonElement = HTMLButtonElement
-type BaseButtonProps = React.HTMLAttributes<BaseButtonElement>
+type BaseButtonProps = HTMLAttributes<BaseButtonElement>
 
 const MENU_MIN_WIDTH = '232px'
 const MENU_MAX_HEIGHT = '360px'
@@ -178,7 +187,7 @@ export const BaseMenuItem = styled.div<{
       : undefined}
 `
 
-type ButtonClickHandler = React.MouseEventHandler<HTMLButtonElement>
+type ButtonClickHandler = MouseEventHandler<HTMLButtonElement>
 
 export interface MenuButtonProps extends BaseButtonProps {
   /**
@@ -205,7 +214,7 @@ export interface MenuButtonProps extends BaseButtonProps {
   readonly title?: string
 }
 
-export const MenuButton = React.forwardRef<BaseButtonElement, MenuButtonProps>(
+export const MenuButton = forwardRef<BaseButtonElement, MenuButtonProps>(
   (
     {
       disabled,
@@ -223,7 +232,7 @@ export const MenuButton = React.forwardRef<BaseButtonElement, MenuButtonProps>(
     const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
       useVisibleFocus()
 
-    const handleFocus = useCallback<React.FocusEventHandler<BaseButtonElement>>(
+    const handleFocus = useCallback<FocusEventHandler<BaseButtonElement>>(
       e => {
         onFocus?.(e)
         determineVisibleFocus()
@@ -231,7 +240,7 @@ export const MenuButton = React.forwardRef<BaseButtonElement, MenuButtonProps>(
       [determineVisibleFocus, onFocus]
     )
     const handlePointerDown = useCallback<
-      React.PointerEventHandler<BaseButtonElement>
+      PointerEventHandler<BaseButtonElement>
     >(
       e => {
         onPointerDown?.(e)
@@ -239,9 +248,7 @@ export const MenuButton = React.forwardRef<BaseButtonElement, MenuButtonProps>(
       },
       [isPointerOn, onPointerDown]
     )
-    const handlePointerUp = useCallback<
-      React.PointerEventHandler<BaseButtonElement>
-    >(
+    const handlePointerUp = useCallback<PointerEventHandler<BaseButtonElement>>(
       e => {
         onPointerUp?.(e)
         isPointerOff()
@@ -307,7 +314,7 @@ export interface MenuListProps extends BaseProps {
   readonly isSubmenu?: boolean
 }
 
-export const MenuList: React.FC<MenuListProps> = ({
+export const MenuList: FC<MenuListProps> = ({
   onEscape,
   children,
   onPointerDown,
@@ -335,7 +342,7 @@ interface SubmenuProps {
   readonly hideSubmenu: VoidFunction
 }
 
-const Submenu: React.FC<SubmenuProps> = ({
+const Submenu: FC<SubmenuProps> = ({
   visible,
   submenuComponents,
   anchorEl,
@@ -391,9 +398,7 @@ export interface BaseItemWithSubmenuProps
   readonly hideSubmenu: VoidFunction
 }
 
-const BaseItemWithSubmenu: React.FunctionComponent<
-  BaseItemWithSubmenuProps
-> = ({
+const BaseItemWithSubmenu: VFC<BaseItemWithSubmenuProps> = ({
   component,
   submenuComponents,
   disabled,
@@ -460,18 +465,18 @@ const BaseItemWithSubmenu: React.FunctionComponent<
 export interface BaseItemProps {
   readonly component: ReactNode
   readonly submenuComponents?: ReadonlyArray<BaseItemProps>
-  readonly onClick: (e: React.MouseEvent | React.KeyboardEvent) => void
+  readonly onClick: (e: MouseEvent | KeyboardEvent) => void
   readonly disabled?: boolean
   readonly keyboardSelect?: boolean
 }
 
-const BaseItem: React.FunctionComponent<BaseItemProps> = ({
+const BaseItem: VFC<BaseItemProps> = ({
   component,
   onClick,
   disabled,
   keyboardSelect,
 }) => {
-  const clickHandler = useCallback<React.MouseEventHandler>(
+  const clickHandler = useCallback<MouseEventHandler>(
     event => {
       if (disabled === true) {
         // Prevent event from bubbling up to the wrapper
@@ -557,7 +562,7 @@ export const BaseMenu = memo<BaseMenuProps>(
       hideSubmenu()
     }, [hideMenu])
 
-    const handleBlur = useCallback<React.FocusEventHandler<BaseElement>>(
+    const handleBlur = useCallback<FocusEventHandler<BaseElement>>(
       e => {
         onBlur?.(e)
         hideMenu()
@@ -565,7 +570,7 @@ export const BaseMenu = memo<BaseMenuProps>(
       [onBlur, hideMenu]
     )
 
-    const mouseToggleMenu = useCallback<React.MouseEventHandler>(
+    const mouseToggleMenu = useCallback<MouseEventHandler>(
       event => {
         event.stopPropagation()
         if (menuVisible) {
@@ -601,9 +606,7 @@ export const BaseMenu = memo<BaseMenuProps>(
       [arrowIndex, components.length]
     )
 
-    const handleKeyDown = useCallback<
-      React.KeyboardEventHandler<HTMLDivElement>
-    >(
+    const handleKeyDown = useCallback<KeyboardEventHandler<HTMLDivElement>>(
       event => {
         if (!(event.key in MenuKeys)) {
           return
