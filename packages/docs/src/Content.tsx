@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef, FC } from 'react'
 import styled from 'styled-components'
 import { useLocation } from 'react-router-dom'
 import { spacing } from 'practical-react-components-core'
@@ -9,7 +9,7 @@ const StyledContent = styled.div`
   padding: ${spacing.extraLarge};
 `
 
-export const Content: React.FC = ({ children }) => {
+export const Content: FC = ({ children }) => {
   const { pathname } = useLocation()
   const ref = useRef<HTMLDivElement>(null)
 

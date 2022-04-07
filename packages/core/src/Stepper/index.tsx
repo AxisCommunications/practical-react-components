@@ -1,4 +1,11 @@
-import React, { useState, useMemo, useCallback } from 'react'
+import {
+  useState,
+  useMemo,
+  useCallback,
+  HTMLAttributes,
+  FC,
+  MouseEvent,
+} from 'react'
 import styled from 'styled-components'
 
 import { spacing } from '../designparams'
@@ -14,7 +21,7 @@ const StepperWrapper = styled(Paper)`
 export { StepContent, StepperAction } from './Step'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 export interface StepperProps extends BaseProps {
   /**
    * `class` to be passed to the component.
@@ -42,7 +49,7 @@ export interface StepperProps extends BaseProps {
   readonly resetAction: StepperAction
 }
 
-export const Stepper: React.FC<StepperProps> = ({
+export const Stepper: FC<StepperProps> = ({
   steps,
   completeAction,
   prevAction,
@@ -59,7 +66,7 @@ export const Stepper: React.FC<StepperProps> = ({
     [steps]
   )
   const onResetButtonClick = useCallback(
-    (event: React.MouseEvent<HTMLButtonElement>) => {
+    (event: MouseEvent<HTMLButtonElement>) => {
       setCompletedSteps([])
       setCurrentStep(0)
 

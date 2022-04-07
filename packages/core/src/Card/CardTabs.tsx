@@ -1,12 +1,12 @@
-import React, { useCallback } from 'react'
+import { useCallback, HTMLAttributes, MouseEventHandler } from 'react'
 import styled, { css } from 'styled-components'
 
 import { componentSize, opacity, shape, spacing } from '../designparams'
 import { Typography } from '../Typography'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
-type OnClickHandler = React.MouseEventHandler<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
+type OnClickHandler = MouseEventHandler<BaseElement>
 type TabVariant = 'inside' | 'outside'
 
 const OUTSIDE_TAB_HEIGHT = componentSize.small

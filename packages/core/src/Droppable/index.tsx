@@ -1,4 +1,13 @@
-import React, { useState, useCallback, useRef } from 'react'
+import {
+  useState,
+  useCallback,
+  useRef,
+  InputHTMLAttributes,
+  ChangeEventHandler,
+  FC,
+  DragEvent,
+  KeyboardEventHandler,
+} from 'react'
 import styled, { css } from 'styled-components'
 import { DropIcon } from 'practical-react-components-icons'
 
@@ -8,8 +17,8 @@ import { Typography } from '../Typography'
 import { Icon } from '../Icon'
 
 type BaseElement = HTMLInputElement
-type BaseProps = React.InputHTMLAttributes<BaseElement>
-type InputChangeHandler = React.ChangeEventHandler<BaseElement>
+type BaseProps = InputHTMLAttributes<BaseElement>
+type InputChangeHandler = ChangeEventHandler<BaseElement>
 
 const DroppableIcon = styled(Icon)`
   align-self: center;
@@ -86,7 +95,7 @@ export interface DroppableProps extends BaseProps {
 
 let enterTarget: EventTarget | undefined
 
-export const Droppable: React.FC<DroppableProps> = ({
+export const Droppable: FC<DroppableProps> = ({
   onFileChange,
   inputLabel,
   supportedFormats,
@@ -113,7 +122,7 @@ export const Droppable: React.FC<DroppableProps> = ({
     [fileRef, onFileChange]
   )
   const handleDragAndDrop = useCallback(
-    (event: React.DragEvent<HTMLDivElement>) => {
+    (event: DragEvent<HTMLDivElement>) => {
       event.preventDefault()
 
       if (event.type === 'dragenter') {
@@ -143,7 +152,7 @@ export const Droppable: React.FC<DroppableProps> = ({
     [handleFile, onChange]
   )
 
-  const handleKeyUp = useCallback<React.KeyboardEventHandler<BaseElement>>(
+  const handleKeyUp = useCallback<KeyboardEventHandler<BaseElement>>(
     e => {
       switch (e.key) {
         case 'Enter': {

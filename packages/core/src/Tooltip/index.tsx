@@ -1,9 +1,12 @@
-import React, {
+import {
   useState,
   useEffect,
   useLayoutEffect,
   Children,
   ReactElement,
+  cloneElement,
+  ReactNode,
+  FC,
 } from 'react'
 import styled, { css } from 'styled-components'
 import { useBoolean } from 'react-hooks-shareable'
@@ -18,7 +21,7 @@ import { font } from '../theme'
  *
  * A small info shown on hover.
  * Positioned below the anchor element,
- * aliigned to it's center.
+ * aligned to it's center.
  */
 
 export const TOOLTIP_DELAY_MS = 250
@@ -104,7 +107,7 @@ const StyledExpandedTooltipTypography = styled(Typography).attrs({
   white-space: normal;
 `
 
-export const ExpandedTooltipTypography: React.FC<
+export const ExpandedTooltipTypography: FC<
   Omit<TypographyProps, 'variant'>
 > = ({ children }) => (
   <StyledExpandedTooltipTypography>{children}</StyledExpandedTooltipTypography>
@@ -236,10 +239,10 @@ export interface ExpandedTooltipProps extends Omit<PopOverProps, 'anchorEl'> {
    * React element that will appear under the tipTitle.
    * Recommend to use `ExpandedTooltipTypography` to get proper Typography.
    */
-  readonly contents: React.ReactNode
+  readonly contents: ReactNode
 }
 
-export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
+export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
   children,
   ...props
 }) => {
@@ -327,7 +330,7 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
   if (props.variant !== 'expanded') {
     return (
       <>
-        {React.cloneElement(child, {
+        {cloneElement(child, {
           ref: setAnchorEl,
         })}
         {debouncedVisible ? (
@@ -345,7 +348,7 @@ export const Tooltip: React.FC<TooltipProps | ExpandedTooltipProps> = ({
 
   return (
     <>
-      {React.cloneElement(child, {
+      {cloneElement(child, {
         ref: setAnchorEl,
       })}
       {debouncedVisible ? (

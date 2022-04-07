@@ -1,4 +1,11 @@
-import React, { useCallback } from 'react'
+import {
+  useCallback,
+  TextareaHTMLAttributes,
+  ChangeEventHandler,
+  FC,
+  RefObject,
+  KeyboardEventHandler,
+} from 'react'
 
 import styled, { css } from 'styled-components'
 import { opacity, spacing, shape } from '../designparams'
@@ -156,9 +163,9 @@ const TextAreaContainer = styled.div<{
 `
 
 type BaseElement = HTMLTextAreaElement
-type BaseProps = React.TextareaHTMLAttributes<BaseElement>
+type BaseProps = TextareaHTMLAttributes<BaseElement>
 
-export type TextAreaChangeHandler = React.ChangeEventHandler<BaseElement>
+export type TextAreaChangeHandler = ChangeEventHandler<BaseElement>
 export type TextAreaValueChangeHandler = (value: string) => void
 
 export interface TextAreaProps extends BaseProps {
@@ -198,10 +205,10 @@ export interface TextAreaProps extends BaseProps {
   /**
    * Can be used to set React ref to the textarea element
    */
-  readonly textareaRef?: React.RefObject<BaseElement>
+  readonly textareaRef?: RefObject<BaseElement>
 }
 
-export const TextArea: React.FC<TextAreaProps> = ({
+export const TextArea: FC<TextAreaProps> = ({
   onChange,
   onValueChange,
   onPressEnter,
@@ -213,7 +220,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
   textareaRef,
   ...props
 }) => {
-  const handleKeyUp = useCallback<React.KeyboardEventHandler<BaseElement>>(
+  const handleKeyUp = useCallback<KeyboardEventHandler<BaseElement>>(
     e => {
       onKeyUp?.(e)
       switch (e.key) {

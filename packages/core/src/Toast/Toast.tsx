@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react'
+import { useCallback, useEffect, HTMLAttributes, memo, forwardRef } from 'react'
 import styled from 'styled-components'
 
 import { CloseIcon } from 'practical-react-components-icons'
@@ -15,7 +15,7 @@ import { Icon } from '../Icon'
 import { BaseToastValue, ToastId } from './context'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 /**
  * Building blocks
@@ -142,8 +142,8 @@ interface BaseToastProps extends BaseToastValue, BaseProps {
  * A basic container for all kinds of toasts.
  * Child elements are passed as props.
  */
-export const BaseToast = React.memo(
-  React.forwardRef<HTMLDivElement | null, BaseToastProps>(
+export const BaseToast = memo(
+  forwardRef<HTMLDivElement | null, BaseToastProps>(
     (
       {
         toastId,

@@ -1,4 +1,14 @@
-import React, { useCallback, useMemo } from 'react'
+import {
+  useCallback,
+  useMemo,
+  VFC,
+  InputHTMLAttributes,
+  ChangeEventHandler,
+  createRef,
+  FocusEventHandler,
+  PointerEventHandler,
+  HTMLAttributes,
+} from 'react'
 import styled, { css, useTheme } from 'styled-components'
 import { usePressed, useVisibleFocus } from 'react-hooks-shareable'
 
@@ -70,7 +80,7 @@ export interface RadioButtonAtomProps {
   readonly error: string
 }
 
-export const RadioButtonAtom: React.FunctionComponent<RadioButtonAtomProps> = ({
+export const RadioButtonAtom: VFC<RadioButtonAtomProps> = ({
   checked,
   partial,
   error,
@@ -222,9 +232,9 @@ export const RadioContainer = styled.div<{
 `
 
 type BaseElement = HTMLInputElement
-type BaseProps = React.InputHTMLAttributes<BaseElement>
+type BaseProps = InputHTMLAttributes<BaseElement>
 
-export type RadioButtonChangeHandler = React.ChangeEventHandler<BaseElement>
+export type RadioButtonChangeHandler = ChangeEventHandler<BaseElement>
 export type RadioButtonValueChangeHandler<V extends string = string> = (
   value: V
 ) => void
@@ -291,7 +301,7 @@ export function RadioButton<V extends string = string>({
   onPointerDown,
   ...rest
 }: RadioButtonProps<V>): JSX.Element {
-  const ref = React.createRef<BaseElement>()
+  const ref = createRef<BaseElement>()
   const pressed = usePressed(ref)
 
   const handleChange = useCallback<RadioButtonChangeHandler>(
@@ -305,21 +315,21 @@ export function RadioButton<V extends string = string>({
   const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
     useVisibleFocus()
 
-  const handleFocus = useCallback<React.FocusEventHandler<BaseElement>>(
+  const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
     e => {
       onFocus?.(e)
       determineVisibleFocus()
     },
     [determineVisibleFocus, onFocus]
   )
-  const handlePointerDown = useCallback<React.PointerEventHandler<BaseElement>>(
+  const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
     e => {
       onPointerDown?.(e)
       isPointerOn()
     },
     [isPointerOn, onPointerDown]
   )
-  const handlePointerUp = useCallback<React.PointerEventHandler<BaseElement>>(
+  const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
     e => {
       onPointerUp?.(e)
       isPointerOff()
@@ -378,7 +388,7 @@ export interface RadioButtonGroupOption<V extends string = string> {
 }
 
 type GroupBaseElement = HTMLDivElement
-type GroupBaseProps = React.HTMLAttributes<GroupBaseElement>
+type GroupBaseProps = HTMLAttributes<GroupBaseElement>
 
 export interface RadioButtonGroupProps<V extends string = string>
   extends GroupBaseProps {

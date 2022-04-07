@@ -1,4 +1,16 @@
-import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react'
+import {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  useMemo,
+  HTMLAttributes,
+  FC,
+  MouseEvent,
+  KeyboardEventHandler,
+  PointerEventHandler,
+  FocusEventHandler,
+} from 'react'
 import styled, { css } from 'styled-components'
 import { usePressed, useVisibleFocus } from 'react-hooks-shareable'
 
@@ -18,7 +30,7 @@ import { Typography } from '../Typography'
 const clamp = (x: number) => Math.max(0, Math.min(x, 1))
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 // Provides padding around the slider's track
 const Container = styled.div`
@@ -310,7 +322,7 @@ export const Meta = styled.div`
 /**
  * TODO: according to UX, need to add `variant` property to have style `dashed`
  */
-export const Slider: React.FC<SliderProps> = ({
+export const Slider: FC<SliderProps> = ({
   value,
   min = 0,
   max = 100,
@@ -376,9 +388,9 @@ export const Slider: React.FC<SliderProps> = ({
 
   // Computes the new value and passed it to the handleChange callback
   const handleClick = useCallback(
-    (e: PointerEvent | React.MouseEvent<BaseElement>) => {
+    (e: PointerEvent | MouseEvent<BaseElement>) => {
       e.preventDefault()
-      onClick?.(e as React.MouseEvent<BaseElement>)
+      onClick?.(e as MouseEvent<BaseElement>)
 
       if (sliderRef.current !== null) {
         const { left, width } = sliderRef.current.getBoundingClientRect()
@@ -439,7 +451,7 @@ export const Slider: React.FC<SliderProps> = ({
   )
 
   // Keyboard support
-  const handleKeyDown = useCallback<React.KeyboardEventHandler<BaseElement>>(
+  const handleKeyDown = useCallback<KeyboardEventHandler<BaseElement>>(
     event => {
       onKeyDown?.(event)
 
@@ -516,21 +528,21 @@ export const Slider: React.FC<SliderProps> = ({
   const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
     useVisibleFocus()
 
-  const handlePointerDown = useCallback<React.PointerEventHandler<BaseElement>>(
+  const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
     e => {
       onPointerDown?.(e)
       isPointerOn()
     },
     [isPointerOn, onPointerDown]
   )
-  const handlePointerUp = useCallback<React.PointerEventHandler<BaseElement>>(
+  const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
     e => {
       onPointerUp?.(e)
       isPointerOff()
     },
     [isPointerOff, onPointerUp]
   )
-  const handleFocus = useCallback<React.FocusEventHandler<BaseElement>>(
+  const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
     e => {
       onFocus?.(e)
       determineVisibleFocus()
@@ -618,9 +630,11 @@ const SliderLabel = styled(Label)`
 
 // Slider component has more air around its controls and will
 // use smaller space between label and slider.
-export const SliderField: React.FC<
-  Omit<FieldProps, 'compact'> & SliderProps
-> = ({ label, unitLabel, ...props }) => (
+export const SliderField: FC<Omit<FieldProps, 'compact'> & SliderProps> = ({
+  label,
+  unitLabel,
+  ...props
+}) => (
   <div>
     {label !== undefined ? (
       <SliderLabel compact={false} disabled={props.disabled ?? false}>

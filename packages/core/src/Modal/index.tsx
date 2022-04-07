@@ -11,7 +11,14 @@
  *  - In "with-knobs"-story only one sub-modal can be opened at a time?!
  */
 
-import React, { useState, useCallback, useEffect } from 'react'
+import {
+  useState,
+  useCallback,
+  useEffect,
+  HTMLAttributes,
+  VFC,
+  FC,
+} from 'react'
 import styled from 'styled-components'
 import noScroll from 'no-scroll'
 import FocusTrap from 'focus-trap-react'
@@ -29,12 +36,12 @@ interface CloseOnEscapeProps {
 }
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 /**
  * CloseOnEscape sets up and tears down the "close on escape" logic
  */
-const CloseOnEscape: React.FC<CloseOnEscapeProps> = ({ onClose }) => {
+const CloseOnEscape: VFC<CloseOnEscapeProps> = ({ onClose }) => {
   const [escPressed, setEscPressed] = useState(false)
 
   useEffect(() => {
@@ -82,7 +89,7 @@ export interface ModalBackdropProps extends BaseProps {
   readonly className?: BaseProps['className']
 }
 
-export const ModalBackdrop: React.FC<ModalBackdropProps> = ({
+export const ModalBackdrop: FC<ModalBackdropProps> = ({
   children,
   ...props
 }) => (
@@ -116,7 +123,7 @@ export interface ModalProps extends BaseProps {
   readonly open: boolean
 }
 
-export const Modal: React.FC<ModalProps> = ({
+export const Modal: FC<ModalProps> = ({
   open,
   onClose,
   focusDialog = true,

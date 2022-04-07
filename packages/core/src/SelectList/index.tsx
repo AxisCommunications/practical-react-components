@@ -1,10 +1,19 @@
-import React, { useCallback, useRef, useEffect, useMemo } from 'react'
+import {
+  useCallback,
+  useRef,
+  useEffect,
+  useMemo,
+  LiHTMLAttributes,
+  FC,
+  MouseEvent,
+  KeyboardEvent,
+} from 'react'
 import styled, { css } from 'styled-components'
 import { shape, spacing } from '../designparams'
 import { Typography } from '../Typography'
 
 type BaseElement = HTMLUListElement
-type BaseProps = React.LiHTMLAttributes<BaseElement>
+type BaseProps = LiHTMLAttributes<BaseElement>
 
 const LIST_ITEM_HEIGHT = 32
 
@@ -108,7 +117,7 @@ export interface SelectListProps extends Omit<BaseProps, 'onSelect'> {
  * in SelectList the options is always visible to the user.
  *
  */
-export const SelectList: React.FC<SelectListProps> = ({
+export const SelectList: FC<SelectListProps> = ({
   value,
   options,
   onSelect,
@@ -117,7 +126,7 @@ export const SelectList: React.FC<SelectListProps> = ({
 }) => {
   const listRef = useRef<HTMLUListElement>(null)
   const onItemClick = useCallback(
-    (e: React.MouseEvent<HTMLLIElement>) => {
+    (e: MouseEvent<HTMLLIElement>) => {
       const clickValue = e.currentTarget.getAttribute('value')
       if (clickValue !== null) {
         onSelect(clickValue)
@@ -139,7 +148,7 @@ export const SelectList: React.FC<SelectListProps> = ({
   }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const searchForOption = useCallback(
-    (e: React.KeyboardEvent<HTMLUListElement>) => {
+    (e: KeyboardEvent<HTMLUListElement>) => {
       const keyPressed = e.key
       const index = options.findIndex(
         o =>
@@ -165,7 +174,7 @@ export const SelectList: React.FC<SelectListProps> = ({
   const halfway = Math.round(maxHeight / LIST_ITEM_HEIGHT / 2)
 
   const traverseSelection = useCallback(
-    (e: React.KeyboardEvent<HTMLUListElement>) => {
+    (e: KeyboardEvent<HTMLUListElement>) => {
       if (!(e.key in TraversingKey)) {
         return
       }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState, FC } from 'react'
 import styled from 'styled-components'
 import {
   Button,
@@ -17,7 +17,7 @@ const LicensesText = styled(Typography).attrs({ as: 'pre' })`
   font-family: monospace;
 `
 
-export const Licenses: React.FC<ModalProps> = ({ onClose, ...props }) => {
+export const Licenses: FC<ModalProps> = ({ onClose, ...props }) => {
   const [license, setLicense] = useState('')
 
   useEffect(() => {

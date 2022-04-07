@@ -1,4 +1,4 @@
-import { SelectHTMLAttributes, FC } from 'react'
+import { SelectHTMLAttributes, FC, ChangeEventHandler } from 'react'
 import styled from 'styled-components'
 
 import { Icon } from '../Icon'
@@ -155,7 +155,7 @@ export interface SelectNativeProps extends BaseProps {
   /**
    * Executes a JavaScript when a user changes the selected option of an element.
    */
-  readonly onChange: React.ChangeEventHandler<HTMLSelectElement>
+  readonly onChange: ChangeEventHandler<HTMLSelectElement>
   /**
    * A name used to specify the particular element.
    */

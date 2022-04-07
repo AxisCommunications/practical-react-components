@@ -1,4 +1,4 @@
-import { createContext } from 'react'
+import { createContext, Dispatch, RefObject } from 'react'
 
 export enum WidthActionType {
   SET_WIDTHS,
@@ -46,13 +46,13 @@ export type WidthAction =
 export const TableContext = createContext<{
   readonly minColumnWidth: number
   readonly columnWidths: ReadonlyArray<number>
-  readonly dispatchWidthsAction: React.Dispatch<WidthAction>
+  readonly dispatchWidthsAction: Dispatch<WidthAction>
   readonly selectWidth: number
   readonly menuWidth: number
   readonly onSelect?: (selected: boolean, id?: string) => void
   readonly hasMenu: boolean
   readonly onWidthsChange?: (widths: ReadonlyArray<number>) => void
-  readonly tableRef?: React.RefObject<HTMLDivElement>
+  readonly tableRef?: RefObject<HTMLDivElement>
 }>({
   minColumnWidth: 0,
   columnWidths: [],

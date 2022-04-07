@@ -1,17 +1,17 @@
-import React, { useState, ReactNode, useCallback } from 'react'
+import { useState, ReactNode, useCallback, HTMLAttributes, FC } from 'react'
 import { FoldTransition } from '../Transition'
 import styled from 'styled-components'
 
 export * from './ArrowIcon'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 const Header = styled.div`
   cursor: pointer;
 `
 
-const ExpandableHeader: React.FC<{
+const ExpandableHeader: FC<{
   readonly onClick: () => void
 }> = ({ onClick, children }) => {
   return <Header onClick={onClick}>{children}</Header>
@@ -34,7 +34,7 @@ export interface ExpandableProps extends BaseProps {
   }
 }
 
-export const Expandable: React.FC<ExpandableProps> = ({
+export const Expandable: FC<ExpandableProps> = ({
   initialExpanded = false,
   children,
   ...props

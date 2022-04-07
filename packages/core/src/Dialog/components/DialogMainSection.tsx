@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, Dispatch, SetStateAction } from 'react'
 import styled from 'styled-components'
 
 import { spacing } from '../../designparams'
@@ -52,7 +52,7 @@ const ScrollContainer = styled(Section)`
 interface ScrollSectionProps {
   readonly className?: string
   readonly maxHeight?: string
-  readonly scrollRef: React.Dispatch<React.SetStateAction<HTMLElement | null>>
+  readonly scrollRef: Dispatch<SetStateAction<HTMLElement | null>>
 }
 
 export const ScrollSection: FC<ScrollSectionProps> = ({
@@ -68,7 +68,7 @@ export const ScrollSection: FC<ScrollSectionProps> = ({
 
 export const DialogMainSection = styled(ScrollSection)<{
   readonly hasHeader: boolean
-  readonly scrollRef: React.Dispatch<React.SetStateAction<HTMLElement | null>>
+  readonly scrollRef: Dispatch<SetStateAction<HTMLElement | null>>
 }>`
   padding-top: ${({ hasHeader }) => (hasHeader ? '0' : spacing.extraLarge)};
   padding-bottom: 48px;

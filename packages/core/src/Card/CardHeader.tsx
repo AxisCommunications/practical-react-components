@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import { useCallback, HTMLAttributes, FC, MouseEventHandler } from 'react'
 import styled, { css } from 'styled-components'
 
 import { CARD_PADDING } from './padding'
@@ -8,7 +8,7 @@ import { spacing } from '../designparams'
 
 export type CardHeaderHeightType = 'small' | 'normal' | 'large'
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 /**
  * Empty header with just a bottom border
@@ -56,10 +56,9 @@ export interface CardHeaderProps extends BaseProps {
   readonly className?: string
 }
 
-export const CardHeader: React.FC<CardHeaderProps> = ({
-  children,
-  ...props
-}) => <TitleHeader {...props}>{children}</TitleHeader>
+export const CardHeader: FC<CardHeaderProps> = ({ children, ...props }) => (
+  <TitleHeader {...props}>{children}</TitleHeader>
+)
 
 /**
  * Expandable header
@@ -88,14 +87,14 @@ export interface CardExpandableHeaderProps extends CardHeaderProps {
   readonly onToggle: (expanded: boolean) => void
 }
 
-export const CardExpandableHeader: React.FC<CardExpandableHeaderProps> = ({
+export const CardExpandableHeader: FC<CardExpandableHeaderProps> = ({
   disabled = false,
   expanded = false,
   onToggle,
   children,
   ...props
 }) => {
-  const onClick = useCallback<React.MouseEventHandler<HTMLDivElement>>(() => {
+  const onClick = useCallback<MouseEventHandler<HTMLDivElement>>(() => {
     if (!disabled) {
       onToggle(!expanded)
     }

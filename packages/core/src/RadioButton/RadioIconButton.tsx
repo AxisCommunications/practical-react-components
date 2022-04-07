@@ -1,4 +1,11 @@
-import React, { useCallback } from 'react'
+import {
+  useCallback,
+  InputHTMLAttributes,
+  createRef,
+  FocusEventHandler,
+  PointerEventHandler,
+  HTMLAttributes,
+} from 'react'
 import styled, { css } from 'styled-components'
 import { usePressed, useVisibleFocus } from 'react-hooks-shareable'
 
@@ -141,7 +148,7 @@ const RadioLabel = styled.div`
 `
 
 type BaseElement = HTMLInputElement
-type BaseProps = React.InputHTMLAttributes<BaseElement>
+type BaseProps = InputHTMLAttributes<BaseElement>
 
 export interface RadioIconButtonProps<V extends string = string>
   extends BaseProps {
@@ -195,7 +202,7 @@ export function RadioIconButton<V extends string = string>({
   onPointerDown,
   ...rest
 }: RadioIconButtonProps<V>): JSX.Element {
-  const ref = React.createRef<BaseElement>()
+  const ref = createRef<BaseElement>()
   const pressed = usePressed(ref)
   const onChangeHandler = useCallback<RadioButtonChangeHandler>(
     e => {
@@ -208,21 +215,21 @@ export function RadioIconButton<V extends string = string>({
   const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
     useVisibleFocus()
 
-  const handleFocus = useCallback<React.FocusEventHandler<BaseElement>>(
+  const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
     e => {
       onFocus?.(e)
       determineVisibleFocus()
     },
     [determineVisibleFocus, onFocus]
   )
-  const handlePointerDown = useCallback<React.PointerEventHandler<BaseElement>>(
+  const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
     e => {
       onPointerDown?.(e)
       isPointerOn()
     },
     [isPointerOn, onPointerDown]
   )
-  const handlePointerUp = useCallback<React.PointerEventHandler<BaseElement>>(
+  const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
     e => {
       onPointerUp?.(e)
       isPointerOff()
@@ -281,7 +288,7 @@ export interface RadioIconGroupOption<V extends string = string> {
 }
 
 type GroupBaseElement = HTMLDivElement
-type GroupBaseProps = React.HTMLAttributes<GroupBaseElement>
+type GroupBaseProps = HTMLAttributes<GroupBaseElement>
 
 export interface RadioIconGroupProps<V extends string = string>
   extends GroupBaseProps {

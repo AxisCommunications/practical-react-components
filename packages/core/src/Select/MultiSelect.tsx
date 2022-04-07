@@ -1,4 +1,4 @@
-import React, { useMemo, useCallback } from 'react'
+import { useMemo, useCallback, SyntheticEvent, KeyboardEvent } from 'react'
 import styled from 'styled-components'
 
 import { CloseIcon } from 'practical-react-components-icons'
@@ -78,14 +78,14 @@ export function MultiSelect<V extends string = string>({
   ...props
 }: MultiSelectProps<V>): JSX.Element {
   const onRemoveAllClick = useCallback(
-    (event: React.SyntheticEvent) => {
+    (event: SyntheticEvent) => {
       event.stopPropagation()
       onChange?.([])
     },
     [onChange]
   )
   const handleRemoveAllKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLSpanElement>) => {
+    (event: KeyboardEvent<HTMLSpanElement>) => {
       if (event.key === 'Enter') {
         event.stopPropagation()
         onChange?.([])

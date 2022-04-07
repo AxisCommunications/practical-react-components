@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react'
+import { useCallback, useMemo, useState, VFC } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { ColorPicker } from './ColorPicker'
 import {
@@ -208,7 +208,7 @@ interface PaletteColorProps {
   readonly onChange: (slot: keyof Color, colorName: ColorName) => void
 }
 
-const PaletteColor: React.VFC<PaletteColorProps> = ({
+const PaletteColor: VFC<PaletteColorProps> = ({
   slot,
   colorName,
   onChange,
@@ -253,9 +253,7 @@ interface PreviewComponentsProps {
   readonly theme: Theme
 }
 
-export const PreviewComponents: React.VFC<PreviewComponentsProps> = ({
-  theme,
-}) => {
+export const PreviewComponents: VFC<PreviewComponentsProps> = ({ theme }) => {
   const [open, setOpen] = useState(false)
   const [currentDate, setCurrentDate] = useState(new Date().toISOString())
   const toggle = () => {

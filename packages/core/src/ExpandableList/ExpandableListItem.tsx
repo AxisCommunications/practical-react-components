@@ -1,4 +1,10 @@
-import React, { useCallback, Dispatch, SetStateAction } from 'react'
+import {
+  useCallback,
+  Dispatch,
+  SetStateAction,
+  VFC,
+  HTMLAttributes,
+} from 'react'
 import styled from 'styled-components'
 
 import { FoldTransition } from '../Transition'
@@ -27,7 +33,7 @@ const ItemWrapper = styled.div`
 `
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 export interface ExpandableListItemProps extends BaseProps {
   readonly item: ExpandableListItemType
@@ -46,7 +52,7 @@ export interface ExpandableListItemProps extends BaseProps {
  *
  */
 
-export const ExpandableListItem: React.VFC<ExpandableListItemProps> = ({
+export const ExpandableListItem: VFC<ExpandableListItemProps> = ({
   item,
   expandedItems,
   setExpandedItems,

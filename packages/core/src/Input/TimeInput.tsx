@@ -1,4 +1,11 @@
-import React, { useCallback, useMemo, useLayoutEffect } from 'react'
+import {
+  useCallback,
+  useMemo,
+  useLayoutEffect,
+  FC,
+  createRef,
+  KeyboardEvent,
+} from 'react'
 import styled from 'styled-components'
 
 import { spacing } from '../designparams'
@@ -268,14 +275,14 @@ export interface TimeInputProps extends BaseTimeInputProps {
  * Is a variant of TimeInput but the highest time unit
  * in the input are not limited in value (can go up to max 99).
  */
-export const TimeInput: React.FC<TimeInputProps> = ({
+export const TimeInput: FC<TimeInputProps> = ({
   value,
   onChange,
   hour12 = false,
   hour12MeridiemLabels = { am: 'AM', pm: 'PM' },
   ...props
 }) => {
-  const inputElement = React.createRef<HTMLInputElement>()
+  const inputElement = createRef<HTMLInputElement>()
   const { hour, minute, second } = useMemo(() => value, [value])
 
   const inputValue = useMemo(() => {
@@ -340,7 +347,7 @@ export const TimeInput: React.FC<TimeInputProps> = ({
   )
 
   const onKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLInputElement>) => {
+    (event: KeyboardEvent<HTMLInputElement>) => {
       const { keyValue, backspace } = getKeyCodeValue(event.key)
       // If the key pressed is not a number
       if (!/^\d$/.test(keyValue)) {
@@ -456,13 +463,13 @@ export interface DurationInputProps extends BaseTimeInputProps {
  * Is a variant of TimeInput but the highest time unit
  * in the input are not limited in value (can go up to max 99).
  */
-export const DurationInput: React.FC<DurationInputProps> = ({
+export const DurationInput: FC<DurationInputProps> = ({
   value,
   onChange,
   format,
   ...props
 }) => {
-  const inputElement = React.createRef<HTMLInputElement>()
+  const inputElement = createRef<HTMLInputElement>()
   const { hour, minute, second } = useMemo(
     () => parseSecondsToFormat(value, format),
     [value, format]
@@ -494,7 +501,7 @@ export const DurationInput: React.FC<DurationInputProps> = ({
   )
 
   const onKeyDown = useCallback(
-    (event: React.KeyboardEvent<HTMLInputElement>) => {
+    (event: KeyboardEvent<HTMLInputElement>) => {
       const { keyValue, backspace } = getKeyCodeValue(event.key)
 
       // If the key pressed is not a number

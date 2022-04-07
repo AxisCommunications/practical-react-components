@@ -1,4 +1,11 @@
-import React, { useCallback } from 'react'
+import {
+  useCallback,
+  ButtonHTMLAttributes,
+  MouseEventHandler,
+  forwardRef,
+  FocusEventHandler,
+  PointerEventHandler,
+} from 'react'
 import styled, { css } from 'styled-components'
 import { useVisibleFocus } from 'react-hooks-shareable'
 import { Icon, IconType } from '../Icon'
@@ -203,10 +210,10 @@ const LabelContainer = styled.span.attrs({ className: 'sc-LabelContainer' })<{
 `
 
 type BaseElement = HTMLButtonElement
-type BaseProps = React.ButtonHTMLAttributes<BaseElement>
+type BaseProps = ButtonHTMLAttributes<BaseElement>
 type ButtonType = 'button' | 'submit' | 'reset'
 export type ButtonVariantType = 'primary' | 'secondary'
-export type ButtonClickHandler = React.MouseEventHandler<BaseElement>
+export type ButtonClickHandler = MouseEventHandler<BaseElement>
 
 interface BaseButtonProps extends BaseProps {
   /**
@@ -246,7 +253,7 @@ export interface ButtonProps extends BaseButtonProps {
 }
 
 /* eslint-disable-next-line react/display-name */
-export const Button = React.forwardRef<BaseElement, ButtonProps>(
+export const Button = forwardRef<BaseElement, ButtonProps>(
   (
     {
       disabled = false,
@@ -265,23 +272,21 @@ export const Button = React.forwardRef<BaseElement, ButtonProps>(
     const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
       useVisibleFocus()
 
-    const handleFocus = useCallback<React.FocusEventHandler<BaseElement>>(
+    const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
       e => {
         onFocus?.(e)
         determineVisibleFocus()
       },
       [determineVisibleFocus, onFocus]
     )
-    const handlePointerDown = useCallback<
-      React.PointerEventHandler<BaseElement>
-    >(
+    const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
       e => {
         onPointerDown?.(e)
         isPointerOn()
       },
       [isPointerOn, onPointerDown]
     )
-    const handlePointerUp = useCallback<React.PointerEventHandler<BaseElement>>(
+    const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
       e => {
         onPointerUp?.(e)
         isPointerOff()
@@ -430,7 +435,7 @@ export interface IconButtonProps extends BaseButtonProps {
 }
 
 /* eslint-disable-next-line react/display-name */
-export const IconButton = React.forwardRef<BaseElement, IconButtonProps>(
+export const IconButton = forwardRef<BaseElement, IconButtonProps>(
   (
     {
       disabled,
@@ -448,23 +453,21 @@ export const IconButton = React.forwardRef<BaseElement, IconButtonProps>(
     const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
       useVisibleFocus()
 
-    const handleFocus = useCallback<React.FocusEventHandler<BaseElement>>(
+    const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
       e => {
         onFocus?.(e)
         determineVisibleFocus()
       },
       [determineVisibleFocus, onFocus]
     )
-    const handlePointerDown = useCallback<
-      React.PointerEventHandler<BaseElement>
-    >(
+    const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
       e => {
         onPointerDown?.(e)
         isPointerOn()
       },
       [isPointerOn, onPointerDown]
     )
-    const handlePointerUp = useCallback<React.PointerEventHandler<BaseElement>>(
+    const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
       e => {
         onPointerUp?.(e)
         isPointerOff()
@@ -573,10 +576,7 @@ export interface IconTextButtonProps
 }
 
 // eslint-disable-next-line react/display-name
-export const IconTextButton = React.forwardRef<
-  BaseElement,
-  IconTextButtonProps
->(
+export const IconTextButton = forwardRef<BaseElement, IconTextButtonProps>(
   (
     {
       disabled = false,
@@ -593,23 +593,21 @@ export const IconTextButton = React.forwardRef<
     const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
       useVisibleFocus()
 
-    const handleFocus = useCallback<React.FocusEventHandler<BaseElement>>(
+    const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
       e => {
         onFocus?.(e)
         determineVisibleFocus()
       },
       [determineVisibleFocus, onFocus]
     )
-    const handlePointerDown = useCallback<
-      React.PointerEventHandler<BaseElement>
-    >(
+    const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
       e => {
         onPointerDown?.(e)
         isPointerOn()
       },
       [isPointerOn, onPointerDown]
     )
-    const handlePointerUp = useCallback<React.PointerEventHandler<BaseElement>>(
+    const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
       e => {
         onPointerUp?.(e)
         isPointerOff()

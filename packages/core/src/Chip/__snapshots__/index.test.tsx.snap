@@ -1,6 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Chips default 1`] = `
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
 .c2 {
   position: relative;
   box-sizing: border-box;
@@ -27,18 +39,6 @@ exports[`Chips default 1`] = `
   border-radius: 2px;
   color: rgb(41,41,41);
   background-color: rgb(240,240,240);
-}
-
-.c3 {
-  font-family: Open Sans,Helvetica,arial,sans-serif;
-  font-size: 13px;
-  line-height: 22px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  font-size: 12px;
-  line-height: 17px;
-  white-space: nowrap;
 }
 
 .c5 {
@@ -99,6 +99,18 @@ exports[`Chips default 1`] = `
 `;
 
 exports[`Chips disabled 1`] = `
+.c3 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
 .c2 {
   position: relative;
   box-sizing: border-box;
@@ -126,18 +138,6 @@ exports[`Chips disabled 1`] = `
   color: rgb(41,41,41);
   background-color: rgb(240,240,240);
   opacity: 0.48;
-}
-
-.c3 {
-  font-family: Open Sans,Helvetica,arial,sans-serif;
-  font-size: 13px;
-  line-height: 22px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  font-size: 12px;
-  line-height: 17px;
-  white-space: nowrap;
 }
 
 .c5 {
@@ -224,6 +224,18 @@ exports[`Chips error 1`] = `
   width: auto;
 }
 
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
 .c2 {
   position: relative;
   box-sizing: border-box;
@@ -261,18 +273,6 @@ exports[`Chips error 1`] = `
   flex: 0 0 min-content;
   overflow: visible;
   color: rgb(211,47,47);
-}
-
-.c5 {
-  font-family: Open Sans,Helvetica,arial,sans-serif;
-  font-size: 13px;
-  line-height: 22px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  font-size: 12px;
-  line-height: 17px;
-  white-space: nowrap;
 }
 
 .c7 {
@@ -375,6 +375,18 @@ exports[`Chips with icon 1`] = `
   width: auto;
 }
 
+.c5 {
+  font-family: Open Sans,Helvetica,arial,sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 12px;
+  line-height: 17px;
+  white-space: nowrap;
+}
+
 .c2 {
   position: relative;
   box-sizing: border-box;
@@ -401,18 +413,6 @@ exports[`Chips with icon 1`] = `
   border-radius: 2px;
   color: rgb(41,41,41);
   background-color: rgb(240,240,240);
-}
-
-.c5 {
-  font-family: Open Sans,Helvetica,arial,sans-serif;
-  font-size: 13px;
-  line-height: 22px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin: 0;
-  font-size: 12px;
-  line-height: 17px;
-  white-space: nowrap;
 }
 
 .c4 {

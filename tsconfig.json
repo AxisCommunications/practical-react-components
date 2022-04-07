@@ -15,6 +15,8 @@
     "noEmit": true,
     "incremental": true,
     "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "plugins": [{ "name": "typescript-styled-plugin" }]
   }
 }

@@ -1,4 +1,4 @@
-import React, {
+import {
   useCallback,
   useRef,
   useState,
@@ -6,6 +6,9 @@ import React, {
   DragEventHandler,
   useLayoutEffect,
   MouseEventHandler,
+  HTMLAttributes,
+  FC,
+  Children,
 } from 'react'
 import styled from 'styled-components'
 
@@ -15,7 +18,7 @@ import { componentSize } from '../designparams'
 import { move, isElementDisabled, range } from './utils'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 const DraggableItem = styled.div`
   display: flex;
@@ -50,7 +53,7 @@ interface DraggableListItemProps extends BaseProps {
   readonly className?: string
 }
 
-export const DraggableListItem: React.FC<DraggableListItemProps> = ({
+export const DraggableListItem: FC<DraggableListItemProps> = ({
   children,
   ...props
 }) => {
@@ -94,15 +97,12 @@ export interface DraggableListProps extends Omit<BaseProps, 'onChange'> {
   readonly onChange: (indices: ReadonlyArray<number>) => void
 }
 
-export const DraggableList: React.FC<DraggableListProps> = ({
+export const DraggableList: FC<DraggableListProps> = ({
   children,
   onChange,
   ...props
 }) => {
-  const childElements = useMemo(
-    () => React.Children.toArray(children),
-    [children]
-  )
+  const childElements = useMemo(() => Children.toArray(children), [children])
   const locked = useMemo(
     () => childElements.map(isElementDisabled),
     [childElements]

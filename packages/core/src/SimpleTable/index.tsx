@@ -1,10 +1,15 @@
-import React, {
+import {
   useCallback,
   useState,
   useLayoutEffect,
   useRef,
   createContext,
   useContext,
+  TableHTMLAttributes,
+  FC,
+  Children,
+  ReactNode,
+  MouseEventHandler,
 } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 
@@ -12,9 +17,9 @@ import { componentSize, spacing, opacity } from '../designparams'
 import { SCROLLBAR_DIMENSION } from '../Global/GlobalScrollbarStyle'
 
 type BaseElement = HTMLTableElement
-type BaseProps = React.TableHTMLAttributes<BaseElement>
+type BaseProps = TableHTMLAttributes<BaseElement>
 type BaseRowElement = HTMLTableRowElement
-type BaseRowProps = React.TableHTMLAttributes<BaseRowElement>
+type BaseRowProps = TableHTMLAttributes<BaseRowElement>
 
 // TODO: this is componentSize, but that one is a string and contains 'px'
 const ROW_HEIGHT = 56
@@ -80,12 +85,12 @@ const TableHeaderCellContent = styled.th<{
       : undefined}
 `
 
-const SimpleTableHeader: React.FC = ({ children }) => {
+const SimpleTableHeader: FC = ({ children }) => {
   const { compact, columnWidths } = useContext(SimpleTableContext)
 
   return (
     <TableHeader compact={compact}>
-      {React.Children.map(children, (cell, i) => {
+      {Children.map(children, (cell, i) => {
         return (
           <TableHeaderCellContent
             key={i}
@@ -165,7 +170,7 @@ const TableCellContent = styled.td<{ readonly columWidthPercentage?: number }>`
 `
 
 export interface SimpleTableRowProps extends BaseRowProps {
-  readonly children: React.ReactNodeArray
+  readonly children: ReadonlyArray<ReactNode>
   /**
    * `class` to be passed to the component.
    */
@@ -180,7 +185,7 @@ export interface SimpleTableRowProps extends BaseRowProps {
   readonly onClick?: BaseRowProps['onClick']
 }
 
-export const SimpleTableRow: React.FC<SimpleTableRowProps> = ({
+export const SimpleTableRow: FC<SimpleTableRowProps> = ({
   children,
   disabled = false,
   onClick,
@@ -189,7 +194,7 @@ export const SimpleTableRow: React.FC<SimpleTableRowProps> = ({
   const { compact, columnWidths } = useContext(SimpleTableContext)
   const clickable = onClick !== undefined
 
-  const handleClick = useCallback<React.MouseEventHandler<BaseRowElement>>(
+  const handleClick = useCallback<MouseEventHandler<BaseRowElement>>(
     e => {
       if (clickable) {
         e.stopPropagation()
@@ -208,7 +213,7 @@ export const SimpleTableRow: React.FC<SimpleTableRowProps> = ({
       onClick={handleClick}
       {...props}
     >
-      {React.Children.map(children, (cell, i) => {
+      {Children.map(children, (cell, i) => {
         return (
           <TableCellContent key={i} columWidthPercentage={columnWidths[i]}>
             {cell}
@@ -274,14 +279,14 @@ export interface SimpleTableProps extends BaseProps {
   /**
    * React element that will go into the top of the table.
    */
-  readonly header: React.ReactNode
+  readonly header: ReactNode
   /**
    * Override default column width by specified width (%) if set.
    */
   readonly widths?: ReadonlyArray<number>
 }
 
-export const SimpleTable: React.FC<SimpleTableProps> = ({
+export const SimpleTable: FC<SimpleTableProps> = ({
   maxHeight,
   compact: compactFromProps,
   header,
@@ -308,7 +313,7 @@ export const SimpleTable: React.FC<SimpleTableProps> = ({
     )
   }, [tableRef])
 
-  const [...rows] = React.Children.toArray(children)
+  const [...rows] = Children.toArray(children)
 
   const contentHeight =
     maxHeight !== undefined

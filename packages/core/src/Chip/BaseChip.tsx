@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import { ReactNode, HTMLAttributes, forwardRef } from 'react'
 import styled, { css } from 'styled-components'
 
 import { Icon } from '../Icon'
@@ -6,7 +6,7 @@ import { opacity, shape, spacing, componentSize } from '../designparams'
 import { ErrorWithoutCircleIcon } from './icons'
 
 type BaseElement = HTMLDivElement
-type BaseProps = React.HTMLAttributes<BaseElement>
+type BaseProps = HTMLAttributes<BaseElement>
 
 const ChipArea = styled.div<{
   readonly error: boolean
@@ -79,7 +79,7 @@ export interface BaseChipProps extends BaseProps {
 }
 
 /* eslint-disable-next-line react/display-name */
-export const BaseChip = React.forwardRef<HTMLDivElement, BaseChipProps>(
+export const BaseChip = forwardRef<HTMLDivElement, BaseChipProps>(
   ({ error = false, disabled = false, component, ...props }, ref) => (
     <ChipArea ref={ref} error={error} disabled={disabled} {...props}>
       {error ? <ChipErrorIcon /> : null}

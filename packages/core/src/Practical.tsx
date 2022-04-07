@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react'
+import { createContext, useState, useContext, FC } from 'react'
 import ReactDOM from 'react-dom'
 import styled, { ThemeProvider } from 'styled-components'
 import { ResizeObserver } from '@juggle/resize-observer'
@@ -63,7 +63,7 @@ interface PracticalProviderProps extends SimpleToastsDurations {
   readonly toastsOptions?: ToastsOptions
 }
 
-export const PracticalProvider: React.FC<PracticalProviderProps> = ({
+export const PracticalProvider: FC<PracticalProviderProps> = ({
   theme = defaultTheme,
   toastsOptions,
   children,
@@ -126,7 +126,7 @@ interface LayerProps {
   readonly zIndex?: number
 }
 
-export const Layer: React.FC<LayerProps> = ({ children, zIndex }) => {
+export const Layer: FC<LayerProps> = ({ children, zIndex }) => {
   const { rootEl } = useContext(PracticalContext)
 
   const [el, ref] = useState<HTMLDivElement | null>(null)

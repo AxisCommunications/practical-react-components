@@ -1,4 +1,11 @@
-import React, { useCallback, useLayoutEffect, useRef, useState } from 'react'
+import {
+  useCallback,
+  useLayoutEffect,
+  useRef,
+  useState,
+  VFC,
+  MouseEvent,
+} from 'react'
 import styled, { css } from 'styled-components'
 
 import { spacing, opacity, shape } from '../designparams'
@@ -109,10 +116,9 @@ const Label = styled(Typography).attrs({
   color: ${({ theme }) => theme.color.text04()};
 `
 
-export const TickMarker: React.FC<Omit<Tick, 'label'>> = ({
-  position,
-  marker,
-}) => <>{marker === true ? <BaseTick center={position} /> : null}</>
+export const TickMarker: VFC<Omit<Tick, 'label'>> = ({ position, marker }) => (
+  <>{marker === true ? <BaseTick center={position} /> : null}</>
+)
 
 interface TickLabelProps {
   /**
@@ -138,7 +144,7 @@ interface TickLabelProps {
   readonly handleChange: (value: number) => void
 }
 
-export const TickLabel: React.FC<TickLabelProps> = ({
+export const TickLabel: VFC<TickLabelProps> = ({
   position,
   label,
   value,
@@ -149,7 +155,7 @@ export const TickLabel: React.FC<TickLabelProps> = ({
   const el = useRef<HTMLDivElement | null>(null)
 
   const handleClick = useCallback(
-    (event: React.MouseEvent<HTMLAnchorElement>) => {
+    (event: MouseEvent<HTMLAnchorElement>) => {
       event.stopPropagation()
       handleChange(value)
     },

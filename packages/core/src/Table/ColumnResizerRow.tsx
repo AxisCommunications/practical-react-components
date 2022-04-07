@@ -1,4 +1,11 @@
-import React, { useContext, useMemo, useCallback, useEffect } from 'react'
+import {
+  useContext,
+  useMemo,
+  useCallback,
+  useEffect,
+  RefObject,
+  VFC,
+} from 'react'
 import styled from 'styled-components'
 
 import { useDraggable } from 'react-hooks-shareable'
@@ -103,7 +110,7 @@ const ResizeMarker = styled.div<{
  * accommodate it's largest element without overflow.
  */
 const widthLookup = (
-  tableRef: React.RefObject<HTMLDivElement>,
+  tableRef: RefObject<HTMLDivElement>,
   separator: number
 ): readonly [number, number] => {
   const column1Elements = tableRef.current?.querySelectorAll(
@@ -135,7 +142,7 @@ const widthLookup = (
 }
 
 interface UpdateWidthsArgs {
-  readonly tableRef: React.RefObject<HTMLDivElement>
+  readonly tableRef: RefObject<HTMLDivElement>
   readonly separator: number
   readonly currentSizes: ReadonlyArray<number>
   readonly minColumnWidth: number
@@ -178,7 +185,7 @@ interface ColumnResizerProps {
   readonly index: number
 }
 
-const ColumnResizer: React.FunctionComponent<ColumnResizerProps> = ({
+const ColumnResizer: VFC<ColumnResizerProps> = ({
   divider,
   setDragging,
   onDragEnd,
@@ -238,9 +245,9 @@ interface ColumnResizerRowProps {
   readonly setDragging: (dragging: boolean) => void
 }
 
-export const ColumnResizerRow: React.FunctionComponent<
-  ColumnResizerRowProps
-> = ({ setDragging }) => {
+export const ColumnResizerRow: VFC<ColumnResizerRowProps> = ({
+  setDragging,
+}) => {
   const {
     minColumnWidth,
     columnWidths,

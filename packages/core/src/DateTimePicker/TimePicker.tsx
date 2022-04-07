@@ -1,4 +1,13 @@
-import React, { useMemo, useRef, useCallback, useState } from 'react'
+import {
+  useMemo,
+  useRef,
+  useCallback,
+  useState,
+  VFC,
+  MouseEvent,
+  Dispatch,
+  SetStateAction,
+} from 'react'
 import styled from 'styled-components'
 
 import { spacing, shape } from '../designparams'
@@ -190,11 +199,7 @@ interface PointerProps {
   readonly rotation: number
 }
 
-const Pointer: React.FunctionComponent<PointerProps> = ({
-  innerPointer,
-  value,
-  rotation,
-}) => {
+const Pointer: VFC<PointerProps> = ({ innerPointer, value, rotation }) => {
   return (
     <StyledPointer rotation={rotation} innerPointer={innerPointer}>
       <Typography variant="button-text">{value}</Typography>
@@ -235,7 +240,7 @@ interface ClockComponentProps {
   readonly hour12MeridiemLabels?: TranslationMeridiem
 }
 
-const ClockComponent: React.FunctionComponent<ClockComponentProps> = ({
+const ClockComponent: VFC<ClockComponentProps> = ({
   numbers,
   value,
   innerNumbers = [],
@@ -292,7 +297,7 @@ const ClockComponent: React.FunctionComponent<ClockComponentProps> = ({
   }, [onTimeChange, value])
 
   const onMouseMove = useCallback(
-    (e: React.MouseEvent) => {
+    (e: MouseEvent) => {
       if (e.buttons !== 1 || middlePoint.current === null) {
         return
       }
@@ -413,7 +418,7 @@ interface TimePickerProps {
   /**
    * Fires when date value is changed
    */
-  readonly onChange: React.Dispatch<React.SetStateAction<Date>>
+  readonly onChange: Dispatch<SetStateAction<Date>>
 }
 
 /**
@@ -421,7 +426,7 @@ interface TimePickerProps {
  *
  * Shows a clock component with 24 hour time options
  */
-export const TimePickerTwentyFour: React.FC<TimePickerProps> = ({
+export const TimePickerTwentyFour: VFC<TimePickerProps> = ({
   date,
   onChange,
 }) => {
@@ -456,7 +461,7 @@ interface TimePickerAMPMProps extends TimePickerProps {
  *
  * Shows a clock component with AM/PM format.
  */
-export const TimePickerAMPM: React.FunctionComponent<TimePickerAMPMProps> = ({
+export const TimePickerAMPM: VFC<TimePickerAMPMProps> = ({
   date,
   onChange,
   hour12MeridiemLabels,
@@ -489,7 +494,7 @@ export const TimePickerAMPM: React.FunctionComponent<TimePickerAMPMProps> = ({
  *
  * Shows a clock component with minute values
  */
-export const MinutePicker: React.FC<TimePickerProps> = ({ date, onChange }) => {
+export const MinutePicker: VFC<TimePickerProps> = ({ date, onChange }) => {
   const onTimeChange = useCallback(
     (minutes: number) => {
       const newDate = new Date(date)

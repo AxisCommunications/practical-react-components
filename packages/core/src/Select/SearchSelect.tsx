@@ -1,4 +1,11 @@
-import React, { useMemo, useState, useCallback, useRef, useEffect } from 'react'
+import {
+  useMemo,
+  useState,
+  useCallback,
+  useRef,
+  useEffect,
+  ReactNode,
+} from 'react'
 import styled from 'styled-components'
 
 import { useBoolean } from 'react-hooks-shareable'
@@ -33,7 +40,7 @@ const getLabel = <V extends string = string>(
   return options.find(option => option.value === value)?.label ?? value
 }
 
-const getLabelComponent = (label: string, filter: string): React.ReactNode => {
+const getLabelComponent = (label: string, filter: string): ReactNode => {
   const offset = label.toLocaleLowerCase().indexOf(filter.toLocaleLowerCase())
 
   if (offset === -1) {
