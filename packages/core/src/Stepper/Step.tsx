@@ -23,7 +23,7 @@ type BaseProps = HTMLAttributes<BaseElement>
 
 export interface StepContent extends BaseProps {
   /* Step's label */
-  readonly label: string
+  readonly label: ReactNode
   /* Step's content */
   readonly content: ReactNode
   /* Indicates whether the step has errors that should be resolved */
@@ -110,7 +110,7 @@ const StepHeader = styled.div`
   margin-top: -${spacing.large};
 `
 
-const StepLabel = styled(Typography)<{
+export const StepLabel = styled(Typography)<{
   readonly active: boolean
   readonly completed: boolean
 }>`
