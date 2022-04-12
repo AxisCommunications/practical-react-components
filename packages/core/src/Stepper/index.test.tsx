@@ -2,7 +2,7 @@ import 'jest-styled-components'
 import { expect, test, describe } from '@jest/globals'
 
 import { TestRender } from '../TestUtils'
-import { Stepper } from '.'
+import { Stepper, StepLabel } from '.'
 
 const NOOP = () => {
   /** */
@@ -14,16 +14,16 @@ describe('Stepper', () => {
       <Stepper
         steps={[
           {
-            label: 'Step 1 Title',
+            label: <StepLabel>Step 1 Title</StepLabel>,
             content: <div />,
           },
           {
-            label: 'Step 2 Title',
+            label: <StepLabel>Step 2 Title</StepLabel>,
             content: <div />,
             hasErrors: true,
           },
           {
-            label: 'Step 3 Title (done)',
+            label: <StepLabel>Step 3 Title (done)</StepLabel>,
             content: <div />,
           },
         ]}
@@ -51,11 +51,11 @@ describe('Stepper', () => {
       <Stepper
         steps={[
           {
-            label: 'Step 1 Title',
+            label: <StepLabel>Step 1 Title</StepLabel>,
             content: <div />,
           },
           {
-            label: 'Step 3 Title (done)',
+            label: <StepLabel>Step 3 Title (done)</StepLabel>,
             content: <div />,
           },
         ]}
@@ -83,7 +83,7 @@ describe('Stepper', () => {
       <Stepper
         steps={[
           {
-            label: 'Step 1 Title',
+            label: <StepLabel>Step 1 Title</StepLabel>,
             content: <div />,
           },
         ]}

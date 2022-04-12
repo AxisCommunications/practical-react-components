@@ -109,8 +109,9 @@ const StepHeader = styled.div`
   position: relative;
   margin-top: -${spacing.large};
 `
+export const StepLabel = styled(Typography).attrs({ variant: 'default-text' })``
 
-export const StepLabel = styled(Typography)<{
+const StepLabelWrapper = styled.div<{
   readonly active: boolean
   readonly completed: boolean
 }>`
@@ -277,9 +278,9 @@ export const Step: FC<StepProps> = ({
         {lastStep ? null : (
           <StepDivider active={active} completed={completed} />
         )}
-        <StepLabel variant="default-text" active={active} completed={completed}>
+        <StepLabelWrapper active={active} completed={completed}>
           {label}
-        </StepLabel>
+        </StepLabelWrapper>
         {active ? (
           <StepContentContainer>{children}</StepContentContainer>
         ) : null}
