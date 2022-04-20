@@ -1,4 +1,4 @@
-Package: core-js (3.21.1)
+Package: core-js (3.22.1)
 Web:     
 License: MIT
 
