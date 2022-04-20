@@ -1,19 +1,14 @@
-import { useCallback, useContext, useMemo, FC } from 'react'
+import { useCallback, ReactNode, useMemo, createElement } from 'react'
 import styled, { css } from 'styled-components'
 import Highlight, { defaultProps, Language } from 'prism-react-renderer'
 /* eslint-disable-next-line import/no-extraneous-dependencies */
 import lightTheme from 'prism-react-renderer/themes/nightOwlLight'
-/* eslint-disable-next-line import/no-extraneous-dependencies */
-import darkTheme from 'prism-react-renderer/themes/nightOwl'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-import { mdx } from '@mdx-js/react'
 import * as practicalcore from 'practical-react-components-core'
 import * as practicalicons from 'practical-react-components-icons'
 import * as practicalformik from 'practical-react-components-formik'
 
 import { FormikDemo } from './Formik'
-
-import { ThemeContext, ThemeName } from '../context'
 
 const CodeCard = styled(practicalcore.Card)<{
   readonly size: 'small' | 'large'
@@ -61,30 +56,32 @@ const Editor = styled.div`
 `
 
 interface CodeProps {
-  readonly className: string
+  readonly className?: string
   readonly type?: 'demo' | 'live' | 'code'
   readonly size?: 'small' | 'large'
-  readonly children: string
+  readonly children?: ReactNode
 }
 
-export const Code: FC<CodeProps> = ({
+export const Code = ({
   children,
   className: cls,
   type = 'code',
   size = 'small',
-}) => {
+}: CodeProps) => {
   const language = (cls?.replace(/language-/, '') ?? '') as Language
-  const { themeName } = useContext(ThemeContext)
 
-  const theme = themeName === ThemeName.DEEP_PURPLE ? lightTheme : darkTheme
-
-  const transformCode = useCallback((code: string) => {
-    return `/** @jsx mdx */\n${code}`
-  }, [])
+  const transformCode = useCallback(
+    (code: string) => `/** @jsx mdx */\n${code}`,
+    []
+  )
 
   // Prettier currently inserts a leading ';' when formatting a code block
   // with a single arrow function in it.
   const code = useMemo(() => {
+    if (typeof children !== 'string') {
+      return ''
+    }
+
     const fixedCode = children.trim()
     if (fixedCode.startsWith(';(')) {
       return fixedCode.substr(1)
@@ -99,7 +96,7 @@ export const Code: FC<CodeProps> = ({
           code={code}
           transformCode={transformCode}
           scope={{
-            mdx,
+            mdx: createElement,
             ...practicalcore,
             ...practicalicons,
             ...practicalformik,
@@ -109,7 +106,7 @@ export const Code: FC<CodeProps> = ({
           {type === 'live' ? (
             <EditorContainer>
               <Editor>
-                <LiveEditor theme={theme} />
+                <LiveEditor theme={lightTheme} />
               </Editor>
               <Error />
             </EditorContainer>
@@ -121,7 +118,12 @@ export const Code: FC<CodeProps> = ({
   }
 
   return (
-    <Highlight {...defaultProps} code={code} language={language} theme={theme}>
+    <Highlight
+      {...defaultProps}
+      code={code}
+      language={language}
+      theme={lightTheme}
+    >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
           className={className}
