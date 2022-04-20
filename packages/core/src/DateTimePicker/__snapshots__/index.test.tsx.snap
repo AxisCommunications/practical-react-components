@@ -1798,7 +1798,7 @@ exports[`DateTimePicker DateTimePicker 1`] = `
   flex-direction: row-reverse;
 }
 
-.c45 >:last-child {
+.c45 > :last-child {
   margin-right: 8px;
 }
 
@@ -3139,7 +3139,7 @@ exports[`DateTimePicker DateTimePicker 2`] = `
   flex-direction: row-reverse;
 }
 
-.c50 >:last-child {
+.c50 > :last-child {
   margin-right: 8px;
 }
 
