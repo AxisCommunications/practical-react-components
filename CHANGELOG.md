@@ -3,7 +3,19 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v0.74.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.73.0...v0.74.0) (2022-04-05 12:38:19 +0200)
+## [v1.0.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.74.0...v1.0.0) (2022-04-20 12:34:07 +0200)
+
+### 🚧 Maintenance
+
+  -  update mdx to v2 ([32137c7](https://github.com/AxisCommunications/practical-react-components/commit/32137c74ab4b3dd6a801a8f67fecf959dc8786a6))
+  -  update dependencies ([96c56ba](https://github.com/AxisCommunications/practical-react-components/commit/96c56ba1cfcab628b8291dabf266fddb4af98a63))
+
+### ✨ Features
+
+  - **stepper**:  allow component to stepper label (#218) ([9d24386](https://github.com/AxisCommunications/practical-react-components/commit/9d243864298a67bdc294a368fa005733f9fcf0b5))
+  -  lint unused locals and parameters with tsc ([33daa7d](https://github.com/AxisCommunications/practical-react-components/commit/33daa7d131a995708186534bd6e589e7dc994e99))
+
+## [v0.74.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.73.0...v0.74.0) (2022-04-05 15:53:45 +0200)
 
 ### ✨ Features
 
