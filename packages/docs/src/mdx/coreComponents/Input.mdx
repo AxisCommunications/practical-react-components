@@ -103,7 +103,7 @@ export const TextInputDemoComponent = ({}) => {
 
 #### Without label
 
-```typescript type=live
+```typescript type="live"
 <TextInput
   value=""
   onValueChange={() => {}}
@@ -114,7 +114,7 @@ export const TextInputDemoComponent = ({}) => {
 
 #### With label
 
-```typescript type=live
+```typescript type="live"
 <TextInputField
   label="Text input field label"
   value=""
@@ -126,7 +126,7 @@ export const TextInputDemoComponent = ({}) => {
 
 #### With unit label
 
-```typescript type=live
+```typescript type="live"
 <TextInputField
   label="Text input field label"
   value=""
@@ -144,7 +144,7 @@ which is in `Content` folder. That gives section title(which is optional) and
 gives proper margin to all children's bottom. `SpaceBlock` which is in `Content`
 folder is useful for adjusting space between each `FormSection`.
 
-```typescript type=live
+```typescript type="live"
 <>
   <FormSection title="FormSection title">
     <TextInputField
@@ -239,7 +239,7 @@ export const NumberInputDemoComponent = ({}) => {
 
 #### Without label
 
-```typescript type=live
+```typescript type="live"
 <NumberInput
   value=""
   onValueChange={() => {}}
@@ -252,7 +252,7 @@ export const NumberInputDemoComponent = ({}) => {
 
 #### With label
 
-```typescript type=live
+```typescript type="live"
 <NumberInputField
   label="Number input field label"
   value=""
@@ -266,7 +266,7 @@ export const NumberInputDemoComponent = ({}) => {
 
 #### With unit label
 
-```typescript type=live
+```typescript type="live"
 <NumberInputField
   label="Number input field label"
   value=""
@@ -359,7 +359,7 @@ export const TimeInputDemoComponent = ({}) => {
 
 #### Normal 24 hours, minutes and seconds
 
-```typescript type=live
+```typescript type="live"
 <TimeInput
   value={{ hour: 0, minute: 0, second: 0 }}
   onChange={newState => {}}
@@ -368,7 +368,7 @@ export const TimeInputDemoComponent = ({}) => {
 
 #### Normal AM/PM hours and minutes
 
-```typescript type=live
+```typescript type="live"
 <TimeInput
   value={{ hour: 0, minute: 0 }}
   hour12={true}
@@ -378,25 +378,25 @@ export const TimeInputDemoComponent = ({}) => {
 
 #### Duration variant with minutes and seconds
 
-```typescript type=live
+```typescript type="live"
 <DurationInput value={0} format="mm:ss" onChange={newState => {}} />
 ```
 
 #### Duration variant with hours, minutes and seconds
 
-```typescript type=live
+```typescript type="live"
 <DurationInput value={0} format="hh:mm:ss" onChange={newState => {}} />
 ```
 
 #### Duration variant with seconds
 
-```typescript type=live
+```typescript type="live"
 <DurationInput value={0} format="ss" onChange={newState => {}} />
 ```
 
 #### WithField variant with seconds
 
-```typescript type=live
+```typescript type="live"
 <TimeInputField
   label="There is also a TimeInputField version"
   value={{ hour: 0, minute: 0, second: 0 }}
