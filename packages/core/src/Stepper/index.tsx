@@ -18,7 +18,7 @@ const StepperWrapper = styled(Paper)`
   box-shadow: none;
 `
 
-export { StepContent, StepperAction } from './Step'
+export { StepContent, StepperAction, StepLabel } from './Step'
 
 type BaseElement = HTMLDivElement
 type BaseProps = HTMLAttributes<BaseElement>

@@ -10,6 +10,7 @@ import {
   Typography,
   RadioButtonGroupField,
   Stepper,
+  StepLabel,
 } from 'practical-react-components-core'
 
 # Stepper
@@ -35,7 +36,7 @@ export const DemoComponent = ({}) => {
       className="my-stepper"
       steps={[
         {
-          label: 'Step 1 Title',
+          label: <StepLabel>Step 1 Title</StepLabel>,
           content: (
             <div>
               <RadioButtonGroupField
@@ -50,7 +51,7 @@ export const DemoComponent = ({}) => {
           className: 'my-step',
         },
         {
-          label: 'Step 2 Title',
+          label: <StepLabel>Step 2 Title</StepLabel>,
           content: (
             <div>
               <TextInputField label="Name" value="" placeholder="First name" />
@@ -58,7 +59,7 @@ export const DemoComponent = ({}) => {
           ),
         },
         {
-          label: 'Step 3 Title (done)',
+          label: <StepLabel>Step 3 Title (done)</StepLabel>,
           content: (
             <Typography variant="navigation-label">You are now done</Typography>
           ),
@@ -92,7 +93,7 @@ export const DemoComponent = ({}) => {
 <Stepper
   steps={[
     {
-      label: 'Step 1 Title',
+      label: <StepLabel>Step 1 Title</StepLabel>,
       content: (
         <div>
           <RadioButtonGroupField
@@ -109,7 +110,7 @@ export const DemoComponent = ({}) => {
       ),
     },
     {
-      label: 'Step 2 Title',
+      label: <StepLabel>Step 2 Title</StepLabel>,
       content: (
         <div>
           <TextInputField label="Name" value="" placeholder="First name" />
@@ -117,7 +118,7 @@ export const DemoComponent = ({}) => {
       ),
     },
     {
-      label: 'Step 3 Title (done)',
+      label: <StepLabel>Step 3 Title (done)</StepLabel>,
       content: (
         <Typography variant="navigation-label">You are now done</Typography>
       ),

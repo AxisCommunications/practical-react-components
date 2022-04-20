@@ -297,11 +297,15 @@ exports[`Stepper Stepper 1`] = `
             <span
               className="c9"
             />
-            <p
-              className="c7 c10"
+            <div
+              className="c10"
             >
-              Step 1 Title
-            </p>
+              <p
+                className="c7"
+              >
+                Step 1 Title
+              </p>
+            </div>
             <div
               className="c11"
             >
@@ -359,11 +363,15 @@ exports[`Stepper Stepper 1`] = `
             <span
               className="c18"
             />
-            <p
-              className="c7 c19"
+            <div
+              className="c19"
             >
-              Step 2 Title
-            </p>
+              <p
+                className="c7"
+              >
+                Step 2 Title
+              </p>
+            </div>
           </div>
         </div>
         <div
@@ -386,11 +394,15 @@ exports[`Stepper Stepper 1`] = `
           <div
             className="c8"
           >
-            <p
-              className="c7 c19"
+            <div
+              className="c19"
             >
-              Step 3 Title (done)
-            </p>
+              <p
+                className="c7"
+              >
+                Step 3 Title (done)
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -697,11 +709,15 @@ exports[`Stepper Stepper 2`] = `
             <span
               className="c9"
             />
-            <p
-              className="c7 c10"
+            <div
+              className="c10"
             >
-              Step 1 Title
-            </p>
+              <p
+                className="c7"
+              >
+                Step 1 Title
+              </p>
+            </div>
             <div
               className="c11"
             >
@@ -756,11 +772,15 @@ exports[`Stepper Stepper 2`] = `
           <div
             className="c8"
           >
-            <p
-              className="c7 c18"
+            <div
+              className="c18"
             >
-              Step 3 Title (done)
-            </p>
+              <p
+                className="c7"
+              >
+                Step 3 Title (done)
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -1013,11 +1033,15 @@ exports[`Stepper Stepper 3`] = `
           <div
             className="c8"
           >
-            <p
-              className="c7 c9"
+            <div
+              className="c9"
             >
-              Step 1 Title
-            </p>
+              <p
+                className="c7"
+              >
+                Step 1 Title
+              </p>
+            </div>
             <div
               className="c10"
             >
