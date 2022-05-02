@@ -58,9 +58,21 @@ export const DateTimeInformation: VFC<DateTimeInformationProps> = ({
         <TimeIcon height={iconSize.medium} width={iconSize.medium} />
         <Typography variant="page-heading">
           {dateTime.toLocaleString(lang, {
-            hour12,
             hour: 'numeric',
             minute: 'numeric',
+            /**
+             * There is an issue with displaying midnight as 0 or 24.
+             * If hour12 is specified, even as false, it defaults
+             * to hourCycle 'h24'. Not using hour12 if it's false and specifying h23
+             * resolves the issue. The issue exists on chrome-based browsers.
+             *
+             * More information regarding the issue can be found here:
+             * https://github.com/tc39/ecma402/pull/436
+             *
+             * Information regarding hourCycle can be found here:
+             * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle
+             */
+            ...(hour12 ? { hour12 } : { hourCycle: 'h23' }),
           })}
         </Typography>
       </DateInfoContainer>
