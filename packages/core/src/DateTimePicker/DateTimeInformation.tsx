@@ -1,4 +1,4 @@
-import { useMemo, VFC } from 'react'
+import { useMemo, FC } from 'react'
 import styled from 'styled-components'
 import { spacing, iconSize } from '../designparams'
 import { Typography } from '../Typography'
@@ -42,7 +42,7 @@ interface DateTimeInformationProps {
   readonly hour12: boolean
 }
 
-export const DateTimeInformation: VFC<DateTimeInformationProps> = ({
+export const DateTimeInformation: FC<DateTimeInformationProps> = ({
   dateTime,
   lang,
   hour12,

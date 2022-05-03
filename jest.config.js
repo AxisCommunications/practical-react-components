@@ -1,4 +1,5 @@
 module.exports = {
+  testEnvironment: 'jsdom',
   collectCoverage: true,
   coveragePathIgnorePatterns: ['/node_modules/', '/__generated__/', '/build/'],
   testMatch: ['**/packages/**/?(*.)test.ts?(x)'],

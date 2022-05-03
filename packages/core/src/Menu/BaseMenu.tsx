@@ -11,7 +11,6 @@ import {
   forwardRef,
   FocusEventHandler,
   FC,
-  VFC,
   MouseEvent,
   KeyboardEvent,
   KeyboardEventHandler,
@@ -190,6 +189,7 @@ export const BaseMenuItem = styled.div<{
 type ButtonClickHandler = MouseEventHandler<HTMLButtonElement>
 
 export interface MenuButtonProps extends BaseButtonProps {
+  readonly children?: ReactNode
   /**
    * If `true`, the button will be disabled.
    */
@@ -300,6 +300,7 @@ enum MenuKeys {
  * Add an escape listener to the actual rendered menu.
  */
 export interface MenuListProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * Called when user pressed the escape button on the keyboard
    */
@@ -398,7 +399,7 @@ export interface BaseItemWithSubmenuProps
   readonly hideSubmenu: VoidFunction
 }
 
-const BaseItemWithSubmenu: VFC<BaseItemWithSubmenuProps> = ({
+const BaseItemWithSubmenu: FC<BaseItemWithSubmenuProps> = ({
   component,
   submenuComponents,
   disabled,
@@ -427,7 +428,7 @@ const BaseItemWithSubmenu: VFC<BaseItemWithSubmenuProps> = ({
     e.preventDefault()
   }, [])
 
-  const preventCloseMenu = useCallback(e => {
+  const preventCloseMenu = useCallback<MouseEventHandler>(e => {
     // Prevent event from bubbling up to the wrapper
     // that closes the menu when it has submenu
     e.stopPropagation()
@@ -470,7 +471,7 @@ export interface BaseItemProps {
   readonly keyboardSelect?: boolean
 }
 
-const BaseItem: VFC<BaseItemProps> = ({
+const BaseItem: FC<BaseItemProps> = ({
   component,
   onClick,
   disabled,

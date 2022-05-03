@@ -192,7 +192,7 @@ export function CardTabs<T>({
   ...props
 }: CardTabsProps<T>): JSX.Element {
   const onClickHandler = useCallback(
-    index => onChange(options[index].value),
+    (index: number) => onChange(options[index].value),
     [options, onChange]
   )
 

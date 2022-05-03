@@ -3,7 +3,7 @@ import {
   useMemo,
   Dispatch,
   SetStateAction,
-  VFC,
+  FC,
   MouseEvent,
 } from 'react'
 import styled, { css } from 'styled-components'
@@ -152,7 +152,7 @@ interface DatePickerProps {
  * Modal component that allows users to choose
  * date, time and time zone setting
  */
-export const DatePicker: VFC<DatePickerProps> = ({
+export const DatePicker: FC<DatePickerProps> = ({
   date,
   onChange,
   lang = 'en',

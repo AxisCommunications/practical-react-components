@@ -1,4 +1,9 @@
-import { AnchorHTMLAttributes, ButtonHTMLAttributes, FC } from 'react'
+import {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  FC,
+  ReactNode,
+} from 'react'
 import styled, { css } from 'styled-components'
 
 import { opacity } from '../designparams'
@@ -64,6 +69,7 @@ const LinkButton = styled.button<{
 `
 
 export interface ButtonLinkProps extends BaseButtonProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */
@@ -76,6 +82,7 @@ export interface ButtonLinkProps extends BaseButtonProps {
 }
 
 export interface ALinkProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */

@@ -4,7 +4,7 @@ import {
   useCallback,
   useEffect,
   RefObject,
-  VFC,
+  FC,
 } from 'react'
 import styled from 'styled-components'
 
@@ -185,7 +185,7 @@ interface ColumnResizerProps {
   readonly index: number
 }
 
-const ColumnResizer: VFC<ColumnResizerProps> = ({
+const ColumnResizer: FC<ColumnResizerProps> = ({
   divider,
   setDragging,
   onDragEnd,
@@ -245,7 +245,7 @@ interface ColumnResizerRowProps {
   readonly setDragging: (dragging: boolean) => void
 }
 
-export const ColumnResizerRow: VFC<ColumnResizerRowProps> = ({
+export const ColumnResizerRow: FC<ColumnResizerRowProps> = ({
   setDragging,
 }) => {
   const {

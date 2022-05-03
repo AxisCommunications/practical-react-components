@@ -1,4 +1,11 @@
-import { useCallback, FC, InputHTMLAttributes, ChangeEventHandler } from 'react'
+import {
+  useCallback,
+  FC,
+  InputHTMLAttributes,
+  ChangeEventHandler,
+  FocusEventHandler,
+  PointerEventHandler,
+} from 'react'
 import styled, { css } from 'styled-components'
 import { useVisibleFocus } from 'react-hooks-shareable'
 
@@ -239,7 +246,7 @@ export const Switch: FC<SwitchProps> = ({
     [onChange, onValueChange]
   )
 
-  const handleFocus = useCallback(
+  const handleFocus = useCallback<FocusEventHandler<HTMLInputElement>>(
     e => {
       onFocus?.(e)
       determineVisibleFocus()
@@ -247,7 +254,7 @@ export const Switch: FC<SwitchProps> = ({
     [determineVisibleFocus, onFocus]
   )
 
-  const handlePointerUp = useCallback(
+  const handlePointerUp = useCallback<PointerEventHandler<HTMLInputElement>>(
     e => {
       onPointerUp?.(e)
       isPointerOff()
@@ -255,7 +262,7 @@ export const Switch: FC<SwitchProps> = ({
     [isPointerOff, onPointerUp]
   )
 
-  const handlePointerDown = useCallback(
+  const handlePointerDown = useCallback<PointerEventHandler<HTMLInputElement>>(
     e => {
       onPointerDown?.(e)
       isPointerOn()

@@ -85,7 +85,11 @@ const TableHeaderCellContent = styled.th<{
       : undefined}
 `
 
-const SimpleTableHeader: FC = ({ children }) => {
+interface SimpleTableHeaderProps {
+  readonly children?: ReactNode
+}
+
+const SimpleTableHeader: FC<SimpleTableHeaderProps> = ({ children }) => {
   const { compact, columnWidths } = useContext(SimpleTableContext)
 
   return (
@@ -263,6 +267,7 @@ const TableContentContainer = styled.tbody<{
 `
 
 export interface SimpleTableProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */

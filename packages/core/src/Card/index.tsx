@@ -1,4 +1,4 @@
-import { HTMLAttributes, FC } from 'react'
+import { HTMLAttributes, FC, ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 
 import { shape, spacing } from '../designparams'
@@ -74,6 +74,7 @@ export const CardContent = styled(CardPlainContent)`
 export type CardWidthType = 'small' | 'medium' | 'full'
 
 export interface CardProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */

@@ -9,6 +9,7 @@ import {
   HTMLAttributes,
   FC,
   Children,
+  ReactNode,
 } from 'react'
 import styled from 'styled-components'
 
@@ -49,6 +50,7 @@ const DraggableListItemStyled = styled.div<{
 `
 
 interface DraggableListItemProps extends BaseProps {
+  readonly children?: ReactNode
   readonly disabled?: boolean
   readonly className?: string
 }
@@ -91,6 +93,7 @@ export const DraggableListItem: FC<DraggableListItemProps> = ({
  */
 
 export interface DraggableListProps extends Omit<BaseProps, 'onChange'> {
+  readonly children?: ReactNode
   /**
    * Function called when list order changes with list of re-ordered indices as argument
    */

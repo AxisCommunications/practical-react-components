@@ -6,6 +6,7 @@ import {
   Dispatch,
   isValidElement,
   cloneElement,
+  ReactNode,
 } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import styled, { css } from 'styled-components'
@@ -41,6 +42,14 @@ const ToastsWrapper = styled.div<ToastsPlacement>`
         `}
 `
 
+interface ToastsProviderProps extends SimpleToastsDurations {
+  readonly children?: ReactNode
+}
+
+interface ToastTransitionProps {
+  readonly children?: ReactNode
+}
+
 /**
  *
  * Toasts provider
@@ -51,7 +60,7 @@ const ToastsWrapper = styled.div<ToastsPlacement>`
  * the dispatch ref.
  *
  */
-export const ToastsProvider: FC<SimpleToastsDurations> = ({
+export const ToastsProvider: FC<ToastsProviderProps> = ({
   children,
   ...toastsOptions
 }) => {
@@ -66,7 +75,10 @@ export const ToastsProvider: FC<SimpleToastsDurations> = ({
   )
 }
 
-export const ToastTransition: FC = ({ children, ...props }) => {
+export const ToastTransition: FC<ToastTransitionProps> = ({
+  children,
+  ...props
+}) => {
   const ref = useRef<HTMLDivElement | null>(null)
 
   return (

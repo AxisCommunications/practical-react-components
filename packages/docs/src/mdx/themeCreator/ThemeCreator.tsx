@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState, VFC } from 'react'
+import { useCallback, useMemo, useState, FC } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 import { ColorPicker } from './ColorPicker'
 import {
@@ -208,13 +208,9 @@ interface PaletteColorProps {
   readonly onChange: (slot: keyof Color, colorName: ColorName) => void
 }
 
-const PaletteColor: VFC<PaletteColorProps> = ({
-  slot,
-  colorName,
-  onChange,
-}) => {
+const PaletteColor: FC<PaletteColorProps> = ({ slot, colorName, onChange }) => {
   const handleColorChange = useCallback(
-    nextColorName => {
+    (nextColorName: ColorName) => {
       onChange(slot, nextColorName)
     },
     [slot, onChange]
@@ -253,16 +249,17 @@ interface PreviewComponentsProps {
   readonly theme: Theme
 }
 
-export const PreviewComponents: VFC<PreviewComponentsProps> = ({ theme }) => {
+export const PreviewComponents: FC<PreviewComponentsProps> = ({ theme }) => {
   const [open, setOpen] = useState(false)
   const [currentDate, setCurrentDate] = useState(new Date().toISOString())
   const toggle = () => {
     setOpen(!open)
   }
-  const save = useCallback(date => {
+  const save = useCallback((date: string) => {
     setOpen(false)
     setCurrentDate(date)
   }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <Card>

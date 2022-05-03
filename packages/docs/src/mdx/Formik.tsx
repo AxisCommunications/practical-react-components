@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 import styled from 'styled-components'
 import { useFormik, FormikProvider } from 'formik'
 import {
@@ -26,8 +26,13 @@ const Block = styled.div`
   flex-direction: column;
 `
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const FormikDemo: FC<{ readonly initialValues: any }> = ({
+interface FormikDemoProps {
+  readonly children?: ReactNode
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  readonly initialValues: any
+}
+
+export const FormikDemo: FC<FormikDemoProps> = ({
   initialValues,
   children,
 }) => {

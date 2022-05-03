@@ -1,4 +1,4 @@
-import { useState, useCallback, VFC } from 'react'
+import { useState, useCallback, FC } from 'react'
 import { LocationIcon, CalendarIcon } from 'practical-react-components-icons'
 import 'jest-styled-components'
 
@@ -7,7 +7,7 @@ import { TestRender } from '../TestUtils'
 import { Typography } from '../Typography'
 import { Icon } from '../Icon'
 
-const TestController: VFC = () => {
+const TestController: FC = () => {
   const [values, setToggledValues] = useState(['24'])
   const onChange = useCallback(
     id => {
@@ -40,7 +40,7 @@ const TestController: VFC = () => {
   )
 }
 
-const TestControllerWithField: VFC = () => {
+const TestControllerWithField: FC = () => {
   const [values, setToggledValues] = useState(['24'])
   const onChange = useCallback(
     id => {
@@ -76,7 +76,7 @@ const TestControllerWithField: VFC = () => {
   )
 }
 
-const TestControlledWithFieldExclusive: VFC = () => {
+const TestControlledWithFieldExclusive: FC = () => {
   const [exclusiveValue, setExclusiveValue] = useState([])
 
   const onExclusiveChange = useCallback(id => {

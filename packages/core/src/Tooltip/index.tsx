@@ -218,6 +218,7 @@ export interface TooltipProps extends Omit<PopOverProps, 'anchorEl'> {
 }
 
 export interface ExpandedTooltipProps extends Omit<PopOverProps, 'anchorEl'> {
+  readonly children?: ReactNode
   /**
    * Required Tooltip variant.
    */

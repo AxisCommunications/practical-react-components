@@ -380,7 +380,7 @@ export const Slider: FC<SliderProps> = ({
 
   /** Convert from the slider track value format (0.0 - 1.0) to the format used by the value. */
   const convertDecimalToValue = useCallback(
-    x => min + x * (max - min),
+    (x: number | undefined) => min + (x ?? 0) * (max - min),
     [min, max]
   )
 

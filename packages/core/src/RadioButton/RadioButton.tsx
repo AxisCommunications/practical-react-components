@@ -1,7 +1,7 @@
 import {
   useCallback,
   useMemo,
-  VFC,
+  FC,
   InputHTMLAttributes,
   ChangeEventHandler,
   createRef,
@@ -80,7 +80,7 @@ export interface RadioButtonAtomProps {
   readonly error: string
 }
 
-export const RadioButtonAtom: VFC<RadioButtonAtomProps> = ({
+export const RadioButtonAtom: FC<RadioButtonAtomProps> = ({
   checked,
   partial,
   error,

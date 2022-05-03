@@ -2,7 +2,7 @@ import {
   useCallback,
   Dispatch,
   SetStateAction,
-  VFC,
+  FC,
   HTMLAttributes,
 } from 'react'
 import styled from 'styled-components'
@@ -52,7 +52,7 @@ export interface ExpandableListItemProps extends BaseProps {
  *
  */
 
-export const ExpandableListItem: VFC<ExpandableListItemProps> = ({
+export const ExpandableListItem: FC<ExpandableListItemProps> = ({
   item,
   expandedItems,
   setExpandedItems,

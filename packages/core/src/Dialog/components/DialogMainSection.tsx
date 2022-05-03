@@ -1,4 +1,4 @@
-import { FC, Dispatch, SetStateAction } from 'react'
+import { FC, Dispatch, SetStateAction, ReactNode } from 'react'
 import styled from 'styled-components'
 
 import { spacing } from '../../designparams'
@@ -50,6 +50,7 @@ const ScrollContainer = styled(Section)`
 `
 
 interface ScrollSectionProps {
+  readonly children?: ReactNode
   readonly className?: string
   readonly maxHeight?: string
   readonly scrollRef: Dispatch<SetStateAction<HTMLElement | null>>

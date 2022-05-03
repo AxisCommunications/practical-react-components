@@ -3,7 +3,7 @@ import {
   useRef,
   useCallback,
   useState,
-  VFC,
+  FC,
   MouseEvent,
   Dispatch,
   SetStateAction,
@@ -199,7 +199,7 @@ interface PointerProps {
   readonly rotation: number
 }
 
-const Pointer: VFC<PointerProps> = ({ innerPointer, value, rotation }) => {
+const Pointer: FC<PointerProps> = ({ innerPointer, value, rotation }) => {
   return (
     <StyledPointer rotation={rotation} innerPointer={innerPointer}>
       <Typography variant="button-text">{value}</Typography>
@@ -240,7 +240,7 @@ interface ClockComponentProps {
   readonly hour12MeridiemLabels?: TranslationMeridiem
 }
 
-const ClockComponent: VFC<ClockComponentProps> = ({
+const ClockComponent: FC<ClockComponentProps> = ({
   numbers,
   value,
   innerNumbers = [],
@@ -426,7 +426,7 @@ interface TimePickerProps {
  *
  * Shows a clock component with 24 hour time options
  */
-export const TimePickerTwentyFour: VFC<TimePickerProps> = ({
+export const TimePickerTwentyFour: FC<TimePickerProps> = ({
   date,
   onChange,
 }) => {
@@ -461,7 +461,7 @@ interface TimePickerAMPMProps extends TimePickerProps {
  *
  * Shows a clock component with AM/PM format.
  */
-export const TimePickerAMPM: VFC<TimePickerAMPMProps> = ({
+export const TimePickerAMPM: FC<TimePickerAMPMProps> = ({
   date,
   onChange,
   hour12MeridiemLabels,
@@ -494,7 +494,7 @@ export const TimePickerAMPM: VFC<TimePickerAMPMProps> = ({
  *
  * Shows a clock component with minute values
  */
-export const MinutePicker: VFC<TimePickerProps> = ({ date, onChange }) => {
+export const MinutePicker: FC<TimePickerProps> = ({ date, onChange }) => {
   const onTimeChange = useCallback(
     (minutes: number) => {
       const newDate = new Date(date)

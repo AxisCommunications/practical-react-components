@@ -1,4 +1,4 @@
-import { useCallback, VFC, KeyboardEventHandler } from 'react'
+import { useCallback, FC, KeyboardEventHandler } from 'react'
 import styled, { css } from 'styled-components'
 import { useHasOverflowWithResizeEvent } from 'react-hooks-shareable'
 
@@ -161,7 +161,7 @@ interface OverflowTooltipProps {
 /**
  * Used to show a tooltip if label is too long to be fully shown in container.
  */
-const LabelOverflowTooltip: VFC<OverflowTooltipProps> = ({ label }) => {
+const LabelOverflowTooltip: FC<OverflowTooltipProps> = ({ label }) => {
   const { hasOverflow, ref } = useHasOverflowWithResizeEvent()
 
   const text = <Label ref={ref}>{label}</Label>
@@ -188,7 +188,7 @@ const LabelOverflowTooltip: VFC<OverflowTooltipProps> = ({ label }) => {
  *
  */
 
-export const ListItemContainer: VFC<ListItemContainerProps> = ({
+export const ListItemContainer: FC<ListItemContainerProps> = ({
   selected,
   isNestedItem,
   hasChildren,

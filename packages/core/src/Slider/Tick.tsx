@@ -3,7 +3,7 @@ import {
   useLayoutEffect,
   useRef,
   useState,
-  VFC,
+  FC,
   MouseEvent,
 } from 'react'
 import styled, { css } from 'styled-components'
@@ -116,7 +116,7 @@ const Label = styled(Typography).attrs({
   color: ${({ theme }) => theme.color.text04()};
 `
 
-export const TickMarker: VFC<Omit<Tick, 'label'>> = ({ position, marker }) => (
+export const TickMarker: FC<Omit<Tick, 'label'>> = ({ position, marker }) => (
   <>{marker === true ? <BaseTick center={position} /> : null}</>
 )
 
@@ -144,7 +144,7 @@ interface TickLabelProps {
   readonly handleChange: (value: number) => void
 }
 
-export const TickLabel: VFC<TickLabelProps> = ({
+export const TickLabel: FC<TickLabelProps> = ({
   position,
   label,
   value,

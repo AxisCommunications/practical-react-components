@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 
 export type TypographyVariant =
@@ -218,6 +219,7 @@ const TYPOGRAPHY_VARIANTS = {
  */
 
 export interface TypographyProps {
+  readonly children?: ReactNode
   readonly variant?: TypographyVariant
 }
 

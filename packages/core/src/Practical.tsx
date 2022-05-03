@@ -1,4 +1,4 @@
-import { createContext, useState, useContext, FC } from 'react'
+import { createContext, useState, useContext, FC, ReactNode } from 'react'
 import ReactDOM from 'react-dom'
 import styled, { ThemeProvider } from 'styled-components'
 import { ResizeObserver } from '@juggle/resize-observer'
@@ -51,6 +51,7 @@ const DEFAULT_TOASTS_OPTIONS: Required<ToastsOptions> = {
 }
 
 interface PracticalProviderProps extends SimpleToastsDurations {
+  readonly children?: ReactNode
   /**
    * The Practical React Components theme to be used.
    */
@@ -124,6 +125,7 @@ export const LayerContext = createContext<LayerContextType>({
 
 interface LayerProps {
   readonly zIndex?: number
+  readonly children?: ReactNode
 }
 
 export const Layer: FC<LayerProps> = ({ children, zIndex }) => {
