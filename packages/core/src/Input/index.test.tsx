@@ -1,4 +1,4 @@
-import { useCallback, VFC } from 'react'
+import { useCallback, FC } from 'react'
 import 'jest-styled-components'
 
 import {
@@ -12,7 +12,7 @@ import {
 } from '.'
 import { TestRender } from '../TestUtils'
 
-const TimeInputTestController: VFC = () => {
+const TimeInputTestController: FC = () => {
   const onChange = useCallback(() => {
     /** */
   }, [])

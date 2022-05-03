@@ -1,4 +1,4 @@
-import { createContext, useMemo, useState, FC } from 'react'
+import { createContext, useMemo, useState, FC, ReactNode } from 'react'
 import {
   ColorBaseName,
   generateDefaultTheme,
@@ -39,6 +39,7 @@ export interface ThemeContextType {
 
 export interface ThemeNameProvider {
   readonly initialThemeName?: ThemeName
+  readonly children?: ReactNode
 }
 
 export const ThemeContext = createContext<ThemeContextType>({

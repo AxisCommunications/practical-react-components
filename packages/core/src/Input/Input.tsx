@@ -5,7 +5,7 @@ import {
   useLayoutEffect,
   InputHTMLAttributes,
   ChangeEventHandler,
-  VFC,
+  FC,
   RefObject,
   KeyboardEventHandler,
   MouseEventHandler,
@@ -239,7 +239,7 @@ interface ErrorMessageTextProps {
   readonly errorVariant: ErrorVariant
 }
 
-const ErrorMessageText: VFC<ErrorMessageTextProps> = ({
+const ErrorMessageText: FC<ErrorMessageTextProps> = ({
   error,
   errorVariant,
 }) => {
@@ -463,19 +463,19 @@ function Input<T extends string | NumberInputType>({
 }
 
 export interface TextInputProps extends BaseInputProps<string> {}
-export const TextInput: VFC<TextInputProps> = props => (
+export const TextInput: FC<TextInputProps> = props => (
   <Input {...props} type="text" />
 )
 
 export interface NumberInputProps extends BaseInputProps<NumberInputType> {}
-export const NumberInput: VFC<NumberInputProps> = props => (
+export const NumberInput: FC<NumberInputProps> = props => (
   <Input {...props} type="number" />
 )
 
 export interface TextInputCredentialsProps extends BaseInputProps<string> {
   readonly type: TextInputCredentialsType
 }
-export const TextInputCredentials: VFC<TextInputCredentialsProps> = props => (
+export const TextInputCredentials: FC<TextInputCredentialsProps> = props => (
   <Input {...props} />
 )
 

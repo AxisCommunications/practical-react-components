@@ -10,6 +10,7 @@ import {
   FC,
   Children,
   memo,
+  ReactNode,
 } from 'react'
 import styled from 'styled-components'
 import { spacing } from '../designparams'
@@ -263,6 +264,7 @@ const TableContentContainer = styled.div.attrs<{
  */
 
 export interface TableProps extends Omit<BaseProps, 'onSelect'> {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */

@@ -1,4 +1,4 @@
-import { HTMLAttributes, MouseEventHandler, FC } from 'react'
+import { HTMLAttributes, MouseEventHandler, FC, ReactNode } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 
 import { Icon } from '../Icon'
@@ -141,6 +141,7 @@ export interface BaseSelectSelectorProps
   readonly variant?: SelectVariant
   readonly hasError?: boolean
   readonly visibleFocus?: boolean
+  readonly children?: ReactNode
 }
 
 export const BaseSelectSelector: FC<BaseSelectSelectorProps> = ({

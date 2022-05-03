@@ -4,6 +4,8 @@ import {
   InputHTMLAttributes,
   ChangeEventHandler,
   FC,
+  FocusEventHandler,
+  PointerEventHandler,
 } from 'react'
 
 import styled, { css } from 'styled-components'
@@ -220,7 +222,7 @@ export const Checkbox: FC<CheckboxProps> = ({
   const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
     useVisibleFocus()
 
-  const handleChange = useCallback(
+  const handleChange = useCallback<ChangeEventHandler<BaseElement>>(
     e => {
       onChange?.(e)
       if (partial) {
@@ -238,7 +240,7 @@ export const Checkbox: FC<CheckboxProps> = ({
     [partial, onChange, onCheckedValueChange, onPartialValueChange]
   )
 
-  const handleFocus = useCallback(
+  const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
     e => {
       onFocus?.(e)
       determineVisibleFocus()
@@ -246,7 +248,7 @@ export const Checkbox: FC<CheckboxProps> = ({
     [determineVisibleFocus, onFocus]
   )
 
-  const handlePointerUp = useCallback(
+  const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
     e => {
       onPointerUp?.(e)
       isPointerOff()
@@ -254,7 +256,7 @@ export const Checkbox: FC<CheckboxProps> = ({
     [isPointerOff, onPointerUp]
   )
 
-  const handlePointerDown = useCallback(
+  const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
     e => {
       onPointerDown?.(e)
       isPointerOn()

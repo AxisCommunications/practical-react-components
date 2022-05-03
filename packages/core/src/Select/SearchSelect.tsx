@@ -5,6 +5,7 @@ import {
   useRef,
   useEffect,
   ReactNode,
+  ChangeEventHandler,
 } from 'react'
 import styled from 'styled-components'
 
@@ -83,7 +84,7 @@ export function SearchSelect<V extends string = string>({
   }, [options, isTyping, filterLabel, filter])
 
   const onSelectChange = useCallback(
-    nextValue => {
+    (nextValue: V) => {
       setFilter(getLabel(nextValue, options) ?? nextValue)
       onChange?.(nextValue)
       stopTyping()
@@ -91,7 +92,7 @@ export function SearchSelect<V extends string = string>({
     [onChange, options, stopTyping]
   )
 
-  const onFilterChange = useCallback(
+  const onFilterChange = useCallback<ChangeEventHandler<HTMLInputElement>>(
     e => {
       setFilter(e.target.value)
       startTyping()

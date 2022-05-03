@@ -1,4 +1,4 @@
-import { useCallback, HTMLAttributes, VFC, FC } from 'react'
+import { useCallback, HTMLAttributes, FC, ReactNode } from 'react'
 
 import styled, { css } from 'styled-components'
 import { spacing, componentSize } from '../designparams'
@@ -55,7 +55,7 @@ export interface TextBlockProps extends BaseProps {
   readonly text: string
   readonly caption?: string
 }
-export const TextBlock: VFC<TextBlockProps> = ({ text, caption, ...props }) => {
+export const TextBlock: FC<TextBlockProps> = ({ text, caption, ...props }) => {
   const hasCaption = caption !== undefined
   return (
     <Block hasCaption={hasCaption} {...props}>
@@ -117,17 +117,16 @@ const TitleContainer = styled.div`
   text-transform: uppercase;
 `
 
-const GroupTitle: VFC<{
+const GroupTitle: FC<{
   readonly title: string
-}> = ({ title }) => {
-  return (
-    <TitleContainer>
-      <Typography variant="group-title">{title}</Typography>
-    </TitleContainer>
-  )
-}
+}> = ({ title }) => (
+  <TitleContainer>
+    <Typography variant="group-title">{title}</Typography>
+  </TitleContainer>
+)
 
 export interface FormSectionProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */
@@ -180,6 +179,7 @@ export const ContentListItem = styled.div<{
 `
 
 export interface ContentListItemWithHoverProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */

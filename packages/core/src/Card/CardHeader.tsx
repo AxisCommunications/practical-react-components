@@ -1,4 +1,10 @@
-import { useCallback, HTMLAttributes, FC, MouseEventHandler } from 'react'
+import {
+  useCallback,
+  HTMLAttributes,
+  FC,
+  MouseEventHandler,
+  ReactNode,
+} from 'react'
 import styled, { css } from 'styled-components'
 
 import { CARD_PADDING } from './padding'
@@ -50,6 +56,7 @@ export const CardSubHeaderTypography = styled(Typography).attrs({
 })``
 
 export interface CardHeaderProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */
@@ -82,6 +89,7 @@ const ExpandableTitleHeader = styled(TitleHeader)<ExpandableTitleHeaderProps>`
 `
 
 export interface CardExpandableHeaderProps extends CardHeaderProps {
+  readonly children?: ReactNode
   readonly disabled?: boolean
   readonly expanded?: boolean
   readonly onToggle: (expanded: boolean) => void

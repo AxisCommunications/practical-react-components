@@ -1,4 +1,4 @@
-import { HTMLAttributes, FC } from 'react'
+import { HTMLAttributes, FC, ReactNode } from 'react'
 import styled from 'styled-components'
 
 import { componentSize } from '../designparams'
@@ -28,6 +28,7 @@ const TableDividerCell = styled(TableCell)`
 `
 
 export interface TableDividerProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */

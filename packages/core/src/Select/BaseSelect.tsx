@@ -6,11 +6,11 @@ import {
   useLayoutEffect,
   ReactNode,
   SyntheticEvent,
-  VFC,
   FC,
   RefObject,
   KeyboardEvent,
   MutableRefObject,
+  PointerEventHandler,
 } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 import { useBoolean } from 'react-hooks-shareable'
@@ -136,7 +136,7 @@ interface SelectOption extends BaseOption {
   readonly onClick?: (event: SyntheticEvent) => void
 }
 
-const SelectOptionComponent: VFC<SelectOption> = ({
+const SelectOptionComponent: FC<SelectOption> = ({
   value,
   disabled = false,
   onClick,
@@ -156,7 +156,10 @@ const SelectOptionComponent: VFC<SelectOption> = ({
 
   // We prevent default on pointer down to prevent the blur from happening
   // which would hide the menu before allowing us to click
-  const handlePointerDown = useCallback(e => e.preventDefault(), [])
+  const handlePointerDown = useCallback<PointerEventHandler<HTMLLIElement>>(
+    e => e.preventDefault(),
+    []
+  )
 
   const item =
     selected && selectMarker === 'check' ? (
@@ -227,7 +230,7 @@ export const SelectPopover: FC<SelectPopoverProps> = ({
   const MAX_MIN_WIDTH = 300
 
   const onDropdownPosition = useCallback(
-    (anchorElement, popOverContainerEl) => {
+    (anchorElement: HTMLElement, popOverContainerEl: HTMLElement) => {
       if (listRef?.current === null) {
         return
       }

@@ -1,6 +1,10 @@
-import { FC } from 'react'
+import { FC, ReactNode } from 'react'
 
-const FocusTrap: FC = ({ children }) => {
+export interface FocusTrapProps {
+  readonly children?: ReactNode
+}
+
+const FocusTrap: FC<FocusTrapProps> = ({ children }) => {
   return <>{children}</>
 }
 

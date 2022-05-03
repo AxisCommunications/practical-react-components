@@ -330,7 +330,7 @@ export const TimeInput: FC<TimeInputProps> = ({
   )
 
   const setCursorPosition = useCallback(
-    newPos => {
+    (newPos: number) => {
       if (
         inputElement.current !== null &&
         document.activeElement === inputElement.current
@@ -484,7 +484,7 @@ export const DurationInput: FC<DurationInputProps> = ({
   }, [hour, minute, second])
 
   const setCursorPosition = useCallback(
-    newPos => {
+    (newPos: number) => {
       if (
         inputElement.current !== null &&
         document.activeElement === inputElement.current

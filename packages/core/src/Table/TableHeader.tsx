@@ -39,6 +39,7 @@ const TableHeaderGrid = styled.div`
   grid-template-rows: ${componentSize.large};
 `
 export interface TableHeaderProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */

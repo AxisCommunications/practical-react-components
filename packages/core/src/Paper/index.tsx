@@ -1,4 +1,4 @@
-import { forwardRef, HTMLAttributes } from 'react'
+import { forwardRef, HTMLAttributes, ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 import { shape, spacing } from '../designparams'
 
@@ -32,6 +32,7 @@ const PaperDiv = styled.div<{
 `
 
 export interface PaperProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */

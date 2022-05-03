@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useRef, useState, VFC } from 'react'
+import { useCallback, useMemo, useRef, useState, FC } from 'react'
 import styled from 'styled-components'
 import {
   palette,
@@ -63,7 +63,7 @@ interface PaletteColorProps {
   readonly selected: boolean
 }
 
-const PaletteColor: VFC<PaletteColorProps> = ({
+const PaletteColor: FC<PaletteColorProps> = ({
   colorName,
   colorValue,
   onChosenColor,
@@ -92,7 +92,7 @@ export interface ColorPickerProps {
   readonly value: ColorName
 }
 
-export const ColorPicker: VFC<ColorPickerProps> = ({ onChange, value }) => {
+export const ColorPicker: FC<ColorPickerProps> = ({ onChange, value }) => {
   const [directionUp, setDirectionUp] = useState(false)
   const [anchorEl, setAnchorEl] = useState<HTMLDivElement | null>(null)
   const [open, setOpen] = useState(false)

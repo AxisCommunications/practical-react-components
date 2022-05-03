@@ -11,13 +11,16 @@ const Header = styled.div`
   cursor: pointer;
 `
 
-const ExpandableHeader: FC<{
-  readonly onClick: () => void
-}> = ({ onClick, children }) => {
-  return <Header onClick={onClick}>{children}</Header>
+interface ExpandableHeaderProps {
+  readonly children?: ReactNode
+  readonly onClick: VoidFunction
 }
 
-export interface ExpandableProps extends BaseProps {
+const ExpandableHeader: FC<ExpandableHeaderProps> = ({ onClick, children }) => (
+  <Header onClick={onClick}>{children}</Header>
+)
+
+export interface ExpandableProps extends Omit<BaseProps, 'children'> {
   /**
    * `class` to be passed to the component.
    */

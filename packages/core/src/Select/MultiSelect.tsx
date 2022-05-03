@@ -95,7 +95,7 @@ export function MultiSelect<V extends string = string>({
   )
 
   const onMultiChange = useCallback(
-    nextValue => onChange?.([...value, nextValue]),
+    (nextValue: V | '') => onChange?.([...value, nextValue as V]),
 
     [value, onChange]
   )

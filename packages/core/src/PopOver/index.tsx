@@ -5,6 +5,7 @@ import {
   useState,
   HTMLAttributes,
   FC,
+  ReactNode,
 } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
@@ -34,6 +35,7 @@ const PopOverContainer = styled.div`
  */
 
 export interface PopOverProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * The element to anchor the pop-over to.
    */

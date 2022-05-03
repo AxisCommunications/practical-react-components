@@ -16,8 +16,8 @@ import {
   useCallback,
   useEffect,
   HTMLAttributes,
-  VFC,
   FC,
+  ReactNode,
 } from 'react'
 import styled from 'styled-components'
 import noScroll from 'no-scroll'
@@ -41,7 +41,7 @@ type BaseProps = HTMLAttributes<BaseElement>
 /**
  * CloseOnEscape sets up and tears down the "close on escape" logic
  */
-const CloseOnEscape: VFC<CloseOnEscapeProps> = ({ onClose }) => {
+const CloseOnEscape: FC<CloseOnEscapeProps> = ({ onClose }) => {
   const [escPressed, setEscPressed] = useState(false)
 
   useEffect(() => {
@@ -83,6 +83,7 @@ const FocusWrapper = styled.div`
 `
 
 export interface ModalBackdropProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */
@@ -99,6 +100,7 @@ export const ModalBackdrop: FC<ModalBackdropProps> = ({
 )
 
 export interface ModalProps extends BaseProps {
+  readonly children?: ReactNode
   /**
    * `class` to be passed to the component.
    */
