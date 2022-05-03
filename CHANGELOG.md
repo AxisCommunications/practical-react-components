@@ -3,7 +3,17 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v1.0.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.74.0...v1.0.0) (2022-04-20 12:34:07 +0200)
+## [v1.1.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.0.0...v1.1.0) (2022-05-03 13:57:02 +0200)
+
+### 🚧 Maintenance
+
+  -  updates dependencies ([f937474](https://github.com/AxisCommunications/practical-react-components/commit/f937474e2566986410ad3d0137b26fd54daec9eb))
+
+### 🐛 Bug fixes
+
+  - **dateTimePicker**:  display midnight as 00.XX ([66e13d4](https://github.com/AxisCommunications/practical-react-components/commit/66e13d45b9f3fa4ee3b3ad92c273d6f6444254cc))
+
+## [v1.0.0](https://github.com/AxisCommunications/practical-react-components/compare/v0.74.0...v1.0.0) (2022-04-20 14:49:54 +0200)
 
 ### 🚧 Maintenance
 
