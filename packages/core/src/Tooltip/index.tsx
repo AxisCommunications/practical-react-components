@@ -1,4 +1,5 @@
 import {
+  useCallback,
   useState,
   useEffect,
   useLayoutEffect,
@@ -252,30 +253,47 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
   const child = Children.only(children) as ReactElement
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 
-  const [visible, show, hide] = useBoolean(false)
-  const [debouncedVisible, setDebouncedVisible] = useState(visible)
+  // State for click
+  const [visibleByClick, showByClick] = useState(false)
+  // Delayed state for pointer
+  const [visibleDelayed, showDelayed, hideDelayed] = useBoolean(false)
+  // State for pointer
+  const [debouncedVisible, setDebouncedVisible] = useState(false)
   const [layout, setLayout] = useState<Placement>('down')
   const [tooltipEl, setTooltipEl] = useState<HTMLDivElement | null>(null)
 
+  // If tooltip should be shown
+  const visible = visibleByClick || debouncedVisible
+
+  const toggle = useCallback(() => {
+    // When using touch instead of mouse, we have to toggle the tooltip
+    // on "click" instead of "pointerover" and "pointerout"
+    showByClick(v => !v)
+  }, [showByClick])
+
   useEffect(() => {
-    const delayVisible = () => setDebouncedVisible(visible)
+    const delayVisible = () => setDebouncedVisible(visibleDelayed)
     const delayed = setTimeout(delayVisible, TOOLTIP_DELAY_MS)
     return () => {
       clearTimeout(delayed)
     }
-  }, [visible])
+  }, [visibleDelayed])
 
   useLayoutEffect(() => {
     if (anchorEl === null) {
       return
     }
-    anchorEl.addEventListener('pointerover', show)
-    anchorEl.addEventListener('pointerout', hide)
+    // Events when using a pointer
+    anchorEl.addEventListener('pointerover', showDelayed)
+    anchorEl.addEventListener('pointerout', hideDelayed)
+    // Event when using touch
+    anchorEl.addEventListener('click', toggle)
     return () => {
-      anchorEl.removeEventListener('pointerover', show)
-      anchorEl.removeEventListener('pointerout', hide)
+      anchorEl.removeEventListener('pointerover', showDelayed)
+      anchorEl.removeEventListener('pointerout', hideDelayed)
+      anchorEl.removeEventListener('click', toggle)
     }
-  }, [anchorEl, hide, show])
+  }, [anchorEl, hideDelayed, showDelayed, toggle])
 
   useLayoutEffect(() => {
     if (tooltipEl === null || anchorEl === null) {
@@ -334,7 +352,7 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
         {cloneElement(child, {
           ref: setAnchorEl,
         })}
-        {debouncedVisible ? (
+        {visible ? (
           <PopOver anchorEl={anchorEl} {...alignments[layout]} {...props}>
             <TooltipWrapper ref={setTooltipEl}>
               <Typography variant="chip-tag-text">{props.text}</Typography>
@@ -352,7 +370,7 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
       {cloneElement(child, {
         ref: setAnchorEl,
       })}
-      {debouncedVisible ? (
+      {visible ? (
         <>
           <PopOver anchorEl={anchorEl} {...alignments[layout]} {...props}>
             <ExpandedTooltipWrapper ref={setTooltipEl}>
