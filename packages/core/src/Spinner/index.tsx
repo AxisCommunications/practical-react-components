@@ -1,4 +1,5 @@
 import { HTMLAttributes, FC } from 'react'
+import { useSynchronizedAnimation } from 'react-hooks-shareable'
 import styled, { keyframes, css } from 'styled-components'
 
 import { shape, componentSize, spacing } from '../designparams'
@@ -85,13 +86,16 @@ export const Spinner: FC<SpinnerProps> = ({
   type = 'primary',
   label,
   ...props
-}) => (
-  <Container {...props}>
-    <Circle type={type} />
-    {label !== undefined && label.length > 0 ? (
-      <Label>
-        <Typography variant="navigation-label">{label}</Typography>
-      </Label>
-    ) : null}
-  </Container>
-)
+}) => {
+  const ref = useSynchronizedAnimation<HTMLDivElement>()
+  return (
+    <Container {...props}>
+      <Circle type={type} ref={ref} />
+      {label !== undefined && label.length > 0 ? (
+        <Label>
+          <Typography variant="navigation-label">{label}</Typography>
+        </Label>
+      ) : null}
+    </Container>
+  )
+}

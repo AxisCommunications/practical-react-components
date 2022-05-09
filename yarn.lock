@@ -12367,7 +12367,7 @@ __metadata:
     prop-types: 15.8.1
     react: 18.1.0
     react-dom: 18.1.0
-    react-hooks-shareable: 1.49.0
+    react-hooks-shareable: 1.50.1
     react-is: 18.1.0
     react-test-renderer: 18.1.0
     react-transition-group: 4.4.2
@@ -12424,7 +12424,7 @@ __metadata:
     react: 18.1.0
     react-docgen-typescript: 2.2.2
     react-dom: 18.1.0
-    react-hooks-shareable: 1.49.0
+    react-hooks-shareable: 1.50.1
     react-is: 18.1.0
     react-live: 2.4.1
     react-router-dom: 6.3.0
@@ -12539,7 +12539,7 @@ __metadata:
     practical-react-components-icons: "workspace:*"
     react: 18.1.0
     react-dom: 18.1.0
-    react-hooks-shareable: 1.49.0
+    react-hooks-shareable: 1.50.1
     react-is: 18.1.0
     react-router-dom: 6.3.0
     regenerator-runtime: 0.13.9
@@ -12894,13 +12894,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-hooks-shareable@npm:1.49.0":
-  version: 1.49.0
-  resolution: "react-hooks-shareable@npm:1.49.0"
+"react-hooks-shareable@npm:1.50.1":
+  version: 1.50.1
+  resolution: "react-hooks-shareable@npm:1.50.1"
   peerDependencies:
     "@juggle/resize-observer": ^3.3.1
     react: ^17.0.2 || ^18.0.0
-  checksum: 535d788055e1e844332dd3402c49d2f37908877bd4496a4862233fad4dd0e1a647173e55392b86133918131a1cbd6891510756885c7569f470116502365186b3
+  checksum: 9ca8f8c5dcb434dff51d6b6a9da8c898d05aea9f4d0585b579f52feed016a7bf6f45f1b515582b9ec716a361d974f80d6495e2318308ff284d348f3e75293940
   languageName: node
   linkType: hard
 
