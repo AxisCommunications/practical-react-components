@@ -14,7 +14,7 @@
     "practical-react-components-icons": "workspace:*",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "react-hooks-shareable": "1.49.0",
+    "react-hooks-shareable": "1.50.1",
     "react-is": "18.1.0",
     "react-router-dom": "6.3.0",
     "regenerator-runtime": "0.13.9",
