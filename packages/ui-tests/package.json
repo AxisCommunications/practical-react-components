@@ -1,7 +1,7 @@
 {
   "name": "practical-react-components-ui-tests",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "license": "MIT",
   "scripts": {
     "build:ts": "cross-env TS_NODE_PROJECT=\"tsconfig.webpack.json\" --env.NODE_ENV=docs",

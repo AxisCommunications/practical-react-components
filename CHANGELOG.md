@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v1.1.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.0.0...v1.1.0) (2022-05-03 13:57:02 +0200)
+## [v1.2.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.1.0...v1.2.0) (2022-05-10 08:17:01 +0200)
+
+### ✨ Features
+
+  - **spinner**:  synchronize spinners ([236d566](https://github.com/AxisCommunications/practical-react-components/commit/236d566a6856d81aa1585ad151b7f9b1e9f6b3e4))
+
+## [v1.1.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.0.0...v1.1.0) (2022-05-03 14:05:56 +0200)
 
 ### 🚧 Maintenance
 
