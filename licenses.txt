@@ -371,7 +371,7 @@ SOFTWARE.
                        ====================
 
 
-Package: react-hooks-shareable (1.49.0)
+Package: react-hooks-shareable (1.50.1)
 Web:     https://github.com/AxisCommunications/react-hooks-shareable
 License: MIT
 
