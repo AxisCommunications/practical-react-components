@@ -3,7 +3,21 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v1.2.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.1.0...v1.2.0) (2022-05-10 08:17:01 +0200)
+## [v1.3.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.2.0...v1.3.0) (2022-05-30 20:37:41 +0200)
+
+### 🚧 Maintenance
+
+  -  add code owners ([211e309](https://github.com/AxisCommunications/practical-react-components/commit/211e309f1b8fcfbb54cfde85c5ffe15d2c36a525))
+
+### 📝 Documentation
+
+  -  remove stable/experimental icons from menu ([933d97f](https://github.com/AxisCommunications/practical-react-components/commit/933d97fb97174094b3f2b73e75d558fdbbe1ac7e))
+
+### 🐛 Bug fixes
+
+  - **tooltip**:  handle tooltip with touch ([69f9a12](https://github.com/AxisCommunications/practical-react-components/commit/69f9a127620a1615fe905e0767eae9e85b67bf18))
+
+## [v1.2.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.1.0...v1.2.0) (2022-05-10 09:06:39 +0200)
 
 ### ✨ Features
 
