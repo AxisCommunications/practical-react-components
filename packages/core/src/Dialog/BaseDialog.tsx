@@ -33,6 +33,7 @@ const DIALOG_WIDTH = {
 const Container = styled.div<{ readonly width: DialogWidth }>`
   max-height: 80vh;
   width: ${({ width }) => DIALOG_WIDTH[width]};
+  max-width: 100vw;
   margin: auto;
   box-shadow: ${({ theme }) => theme.shadow.dialog};
   display: flex;
