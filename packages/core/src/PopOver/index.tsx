@@ -6,6 +6,7 @@ import {
   HTMLAttributes,
   FC,
   ReactNode,
+  useMemo,
 } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
@@ -40,6 +41,13 @@ export interface PopOverProps extends BaseProps {
    * The element to anchor the pop-over to.
    */
   readonly anchorEl: HTMLElement | null
+  /**
+   * Renders the pop-over at the same DOM-level as the
+   * anchorEl, not at the root layer which is by default.
+   *
+   * Default: `false`
+   */
+  readonly inline?: boolean
   /**
    * The horizontal position of the pop-over relative to the anchor.
    *
@@ -89,6 +97,7 @@ export interface PopOverProps extends BaseProps {
 
 export const PopOver: FC<PopOverProps> = ({
   anchorEl,
+  inline = false,
   horizontalPosition = 'left',
   verticalPosition = 'bottom',
   horizontalAlignment = 'left',
@@ -146,15 +155,24 @@ export const PopOver: FC<PopOverProps> = ({
     position()
   }, [position, popOverContainer])
 
+  const popOverElement = useMemo(
+    () => (
+      <PopOverContainer ref={setPopOverContainer} {...props}>
+        {children}
+      </PopOverContainer>
+    ),
+    [children, props]
+  )
+
   // When the layer element is not available, there is no layer yet.
   if (layerRoot === null) {
     return null
   }
 
-  return ReactDOM.createPortal(
-    <PopOverContainer ref={setPopOverContainer} {...props}>
-      {children}
-    </PopOverContainer>,
-    layerRoot
-  )
+  // Render the pop-over at the same DOM-level as anchorEl
+  if (inline && anchorEl !== null) {
+    return popOverElement
+  }
+
+  return ReactDOM.createPortal(popOverElement, layerRoot)
 }

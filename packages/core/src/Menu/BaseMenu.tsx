@@ -544,6 +544,7 @@ export const BaseMenu = memo<BaseMenuProps>(
     disabled = false,
     components,
     onBlur,
+    inline,
     ...props
   }) => {
     const [menuVisible, openMenu, hideMenu] = useBoolean(false)
@@ -761,6 +762,7 @@ export const BaseMenu = memo<BaseMenuProps>(
             horizontalAlignment={align}
             anchorEl={anchorRef.current}
             onScroll={hideAndBlurMenu}
+            inline={inline}
           >
             <MenuList onEscape={hideMenu} onClick={hideAndBlurMenu}>
               {components.map((component, index) => {
