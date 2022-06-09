@@ -433,6 +433,7 @@ export function BaseSelect<V extends string = string>({
   align = 'left',
   error = '',
   noOptionsLabel,
+  inline,
   ...props
 }: BaseSelectProps<V>): JSX.Element {
   const { compact: compactFromTheme, selectMarker: selectMarkerFromTheme } =
@@ -631,6 +632,7 @@ export function BaseSelect<V extends string = string>({
         itemRefs={itemRefs}
         listRef={listRef}
         noOptionsLabel={noOptionsLabel}
+        inline={inline}
       />
     </SelectContainer>
   )
