@@ -265,11 +265,18 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
   // If tooltip should be shown
   const visible = visibleByClick || debouncedVisible
 
-  const toggle = useCallback(() => {
-    // When using touch instead of mouse, we have to toggle the tooltip
-    // on "click" instead of "pointerover" and "pointerout"
-    showByClick(v => !v)
-  }, [showByClick])
+  const toggle = useCallback(
+    (event: PointerEvent) => {
+      // When using touch instead of mouse, we have to toggle the tooltip
+      // on "pointerdown" instead of "pointerover" and "pointerout"
+      if (event.pointerType === 'mouse') {
+        return
+      }
+
+      showByClick(v => !v)
+    },
+    [showByClick]
+  )
 
   useEffect(() => {
     const delayVisible = () => setDebouncedVisible(visibleDelayed)
@@ -287,11 +294,11 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
     anchorEl.addEventListener('pointerover', showDelayed)
     anchorEl.addEventListener('pointerout', hideDelayed)
     // Event when using touch
-    anchorEl.addEventListener('click', toggle)
+    anchorEl.addEventListener('pointerdown', toggle)
     return () => {
       anchorEl.removeEventListener('pointerover', showDelayed)
       anchorEl.removeEventListener('pointerout', hideDelayed)
-      anchorEl.removeEventListener('click', toggle)
+      anchorEl.removeEventListener('pointerdown', toggle)
     }
   }, [anchorEl, hideDelayed, showDelayed, toggle])
 
