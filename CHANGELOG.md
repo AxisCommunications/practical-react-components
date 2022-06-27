@@ -3,7 +3,22 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v1.3.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.2.0...v1.3.0) (2022-05-30 20:37:41 +0200)
+## [v1.4.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.3.0...v1.4.0) (2022-06-27 11:01:21 +0200)
+
+### 🚧 Maintenance
+
+  -  update yarn sdks ([1033070](https://github.com/AxisCommunications/practical-react-components/commit/103307079249626dd00626ef9c8e4b2820f586dc))
+  -  export designparams as const ([fd12bc2](https://github.com/AxisCommunications/practical-react-components/commit/fd12bc2bb6aae09842e11d743206de0096962cc0))
+
+### ✨ Features
+
+  - **popover**:  render pop-over at component DOM-level ([38c7d2d](https://github.com/AxisCommunications/practical-react-components/commit/38c7d2d9739948c00d59f4607148c2d86de57a2e))
+
+### 🐛 Bug fixes
+
+  - **tooltip**:  use pointerdown event for touch ([539c032](https://github.com/AxisCommunications/practical-react-components/commit/539c0329752832e75058b3b525ad1358bc7fc541))
+
+## [v1.3.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.2.0...v1.3.0) (2022-05-31 09:21:33 +0200)
 
 ### 🚧 Maintenance
 
