@@ -13,18 +13,18 @@ on:
 
 jobs:
   unit-tests:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
-        node-version: ['14', '15']
+        node-version: ['16', '18.5.0']
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -45,7 +45,7 @@ jobs:
           yarn test
 
       - name: Archive build artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: build
           path: |
@@ -55,20 +55,20 @@ jobs:
 
   ui-tests:
     needs: unit-tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
         browser: ['chrome', 'firefox']
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
 
       - name: Download all workflow run artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: build
           path: packages/
@@ -81,10 +81,10 @@ jobs:
           browser: ${{ matrix.browser }}
           working-directory: packages/ui-tests
           wait-on: 'http://localhost:9009'
-          command-prefix: yarn workspace practical-react-components-ui-tests
+          command-prefix: yarn
 
       - name: Upload screenshots for failed UI tests
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: cypress-screenshots
@@ -92,12 +92,12 @@ jobs:
 
   docs:
     needs: unit-tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
 
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache
@@ -105,7 +105,7 @@ jobs:
           CYPRESS_INSTALL_BINARY: '0'
 
       - name: Download all workflow run artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: build
           path: packages/
@@ -116,14 +116,14 @@ jobs:
           git diff --exit-code
           tar zcvf docs-static.tgz -C packages/docs dist
       - name: Archive docs files
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: docs-static
           path: docs-static.tgz
 
   deploy-docs:
     needs: [docs, ui-tests]
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Download docs files
         uses: actions/download-artifact@v2

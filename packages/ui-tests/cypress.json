@@ -6,5 +6,6 @@
   "integrationFolder": "./src",
   "testFiles": "**/*.spec.ts?(x)",
   "fixturesFolder": "missing",
-  "supportFile": false
+  "supportFile": false,
+  "retries": 10
 }

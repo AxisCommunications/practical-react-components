@@ -11,22 +11,24 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '18.5.0'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
         env:
           CYPRESS_INSTALL_BINARY: 0
-        run: yarn install --immutable --immutable-cache
+        run: |
+          sudo apt-get install -y firefox
+          yarn install --immutable --immutable-cache
 
       - name: Build
         run: yarn build:libs

@@ -6,6 +6,7 @@ import subprocess
 import sys
 
 import utils
+import config
 
 #
 # Stop immediately if version too old.
@@ -16,17 +17,10 @@ if sys.version_info < tuple(map(int, _MINIMUM_PYTHON_VERSION.split("."))):
         f"You need Python >= {_MINIMUM_PYTHON_VERSION}, but you are running {sys.version}"
     )
 
-GITHUB_COMPARE_URL = (
-    "https://github.com/AxisCommunications/practical-react-components/compare"
-)
-GITHUB_COMMIT_URL = (
-    "https://github.com/AxisCommunications/practical-react-components/commit"
-)
-
 GROUP_TITLES = {
     "build": "👷 Build",
     "chore": "🚧 Maintenance",
-    "ci": "🚦 Continous integration",
+    "ci": "🚦 Continuous integration",
     "docs": "📝 Documentation",
     "feat": "✨ Features",
     "fix": "🐛 Bug fixes",
@@ -41,14 +35,22 @@ GROUP_TITLES = {
 def changelog_part(commitish_to: str, commitish_from: str, version: str):
     date = utils.cmd(["git", "log", "-1", "--format=%ci", commitish_to])
 
-    commit_range = (
-        f"{commitish_from}..HEAD"
-        if commitish_to == "HEAD"
-        else f"{commitish_from}..{commitish_to}~"
-    )
+    if commitish_from is None:
+        commit_range = commitish_to
+    elif commitish_to == "HEAD":
+        commit_range = f"{commitish_from}..HEAD"
+    else:
+        commit_range = f"{commitish_from}..{commitish_to}~"
 
     commits = utils.cmd(
-        ["git", "log", "--no-merges", "--date-order", "--format=%H%x09%s", commit_range]
+        [
+            "git",
+            "log",
+            "--no-merges",
+            "--date-order",
+            "--format=%H%n%h%n%B%x1f",
+            commit_range,
+        ]
     )
 
     if commits == "":
@@ -56,21 +58,22 @@ def changelog_part(commitish_to: str, commitish_from: str, version: str):
 
     messages = {}
 
-    for commit in commits.split("\n"):
-        sha, msg = commit.split(maxsplit=1)
-        shortsha = utils.cmd(["git", "log", "-1", "--format=%h", sha])
+    for commit in commits.split("\x1f"):
+        sha, shortsha, msg = commit.strip().split("\n", maxsplit=2)
 
         try:
             data = utils.conventional_commit_parse(msg)
+            issues = utils.closing_issues_commit_parse(msg)
             messages.setdefault(data["type"], []).append(
-                {**data, "sha": sha, "shortsha": shortsha}
+                {**data, "issues": issues, "sha": sha, "shortsha": shortsha}
             )
         except:
             # No conventional commit
             pass
 
     content = [
-        f"## [{version}]({GITHUB_COMPARE_URL}/{commitish_from}...{version}) ({date})"
+        f"## [{version}]({config.GITHUB_RELEASE_URL}/{version})",
+        f"{date}, [Compare changes]({config.GITHUB_COMPARE_URL}/{commitish_from}...{version})",
     ]
 
     for group in GROUP_TITLES.keys():
@@ -81,10 +84,24 @@ def changelog_part(commitish_to: str, commitish_from: str, version: str):
 
         for data in messages[group]:
 
-            prefix = (
-                f'  - **{data["scope"]}**: ' if data["scope"] is not None else "  - "
+            prefix = "  - "
+
+            pull_request = utils.get_github_pull_request(data["sha"])
+            # pull_request[0] is id, pull_request[1] is url
+            if pull_request is not None:
+                prefix += f"[!{pull_request[0]}]({pull_request[1]}) - "
+
+            if data["scope"] is not None:
+                prefix += f'**{data["scope"]}**: '
+
+            postfix = (
+                f' ([`{data["shortsha"]}`]({config.GITHUB_COMMIT_URL}/{data["sha"]}))'
             )
-            postfix = f' ([{data["shortsha"]}]({GITHUB_COMMIT_URL}/{data["sha"]}))'
+
+            commit_author = utils.get_github_author(data["sha"])
+            # commit_author[0] is username, commit_author[1] is url
+            if commit_author is not None:
+                postfix += f" ([**@{commit_author[0]}**]({commit_author[1]}))"
 
             if data["breaking"]:
                 content.append(f'{prefix}**BREAKING** {data["description"]}{postfix}')
@@ -96,9 +113,7 @@ def changelog_part(commitish_to: str, commitish_from: str, version: str):
 
 HEADER = """
 # Changelog
-
 All notable changes to this project will be documented in this file.
-
 """
 
 
@@ -162,6 +177,7 @@ if __name__ == "__main__":
 
     if args.type == "full" and args.release is not None:
         tags.insert(0, "HEAD")
+    tags.append(None)
 
     content = [HEADER] if not args.skip_header else []
 
