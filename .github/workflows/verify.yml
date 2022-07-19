@@ -13,7 +13,7 @@ on:
 
 jobs:
   unit-tests:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       matrix:
         node-version: ['16', '18.5.0']
@@ -55,7 +55,7 @@ jobs:
 
   ui-tests:
     needs: unit-tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
@@ -81,7 +81,7 @@ jobs:
           browser: ${{ matrix.browser }}
           working-directory: packages/ui-tests
           wait-on: 'http://localhost:9009'
-          command-prefix: yarn workspace practical-react-components-ui-tests
+          command-prefix: yarn
 
       - name: Upload screenshots for failed UI tests
         uses: actions/upload-artifact@v3
@@ -92,7 +92,7 @@ jobs:
 
   docs:
     needs: unit-tests
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
 
@@ -123,7 +123,7 @@ jobs:
 
   deploy-docs:
     needs: [docs, ui-tests]
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Download docs files
         uses: actions/download-artifact@v2
