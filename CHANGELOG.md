@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v1.4.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.3.0...v1.4.0) (2022-06-27 11:01:21 +0200)
+## [v1.5.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.4.0...v1.5.0) (2022-08-18 15:14:22 +0200)
+
+### 🚧 Maintenance
+
+  -  update react-hooks-shareable ([97811ce](https://github.com/AxisCommunications/practical-react-components/commit/97811ce584d35ee05faf8d8bc7c69702cf4f6633))
+
+## [v1.4.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.3.0...v1.4.0) (2022-06-27 11:16:36 +0200)
 
 ### 🚧 Maintenance
 
