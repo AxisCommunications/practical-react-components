@@ -15558,7 +15558,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:18.1.0"],\
-            ["react-hooks-shareable", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.50.1"],\
+            ["react-hooks-shareable", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.51.1"],\
             ["react-is", "npm:18.1.0"],\
             ["react-test-renderer", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:18.1.0"],\
             ["react-transition-group", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:4.4.2"],\
@@ -15609,7 +15609,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:18.1.0"],\
-            ["react-hooks-shareable", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.50.1"],\
+            ["react-hooks-shareable", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.51.1"],\
             ["react-is", "npm:18.1.0"],\
             ["react-test-renderer", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:18.1.0"],\
             ["react-transition-group", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:4.4.2"],\
@@ -15660,7 +15660,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:18.1.0"],\
-            ["react-hooks-shareable", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.50.1"],\
+            ["react-hooks-shareable", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.51.1"],\
             ["react-is", "npm:18.1.0"],\
             ["react-test-renderer", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:18.1.0"],\
             ["react-transition-group", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:4.4.2"],\
@@ -15711,7 +15711,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prop-types", "npm:15.8.1"],\
             ["react", "npm:18.1.0"],\
             ["react-dom", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:18.1.0"],\
-            ["react-hooks-shareable", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.50.1"],\
+            ["react-hooks-shareable", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.51.1"],\
             ["react-is", "npm:18.1.0"],\
             ["react-test-renderer", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:18.1.0"],\
             ["react-transition-group", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:4.4.2"],\
@@ -16376,10 +16376,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.50.1", {\
-          "packageLocation": "./.yarn/__virtual__/react-hooks-shareable-virtual-23c2585992/0/cache/react-hooks-shareable-npm-1.50.1-d7de71efcb-9ca8f8c5dc.zip/node_modules/react-hooks-shareable/",\
+        ["npm:1.51.1", {\
+          "packageLocation": "./.yarn/cache/react-hooks-shareable-npm-1.51.1-3e59995858-dc4467a983.zip/node_modules/react-hooks-shareable/",\
           "packageDependencies": [\
-            ["react-hooks-shareable", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.50.1"],\
+            ["react-hooks-shareable", "npm:1.51.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.51.1", {\
+          "packageLocation": "./.yarn/__virtual__/react-hooks-shareable-virtual-ca71aa4401/0/cache/react-hooks-shareable-npm-1.51.1-3e59995858-dc4467a983.zip/node_modules/react-hooks-shareable/",\
+          "packageDependencies": [\
+            ["react-hooks-shareable", "virtual:a682fc36b74060958bf04554a7429ae913141183bfced847d8bdcd7c36e85e83bdc5a38cd7996f49e7dbfb05f7f89406fddbe06459a7419691d688a3b7684dfc#npm:1.51.1"],\
             ["@juggle/resize-observer", "npm:3.3.1"],\
             ["@types/juggle__resize-observer", null],\
             ["@types/react", "npm:18.0.8"],\
