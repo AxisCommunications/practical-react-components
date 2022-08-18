@@ -12367,7 +12367,7 @@ __metadata:
     prop-types: 15.8.1
     react: 18.1.0
     react-dom: 18.1.0
-    react-hooks-shareable: 1.50.1
+    react-hooks-shareable: 1.51.1
     react-is: 18.1.0
     react-test-renderer: 18.1.0
     react-transition-group: 4.4.2
@@ -12901,6 +12901,16 @@ __metadata:
     "@juggle/resize-observer": ^3.3.1
     react: ^17.0.2 || ^18.0.0
   checksum: 9ca8f8c5dcb434dff51d6b6a9da8c898d05aea9f4d0585b579f52feed016a7bf6f45f1b515582b9ec716a361d974f80d6495e2318308ff284d348f3e75293940
+  languageName: node
+  linkType: hard
+
+"react-hooks-shareable@npm:1.51.1":
+  version: 1.51.1
+  resolution: "react-hooks-shareable@npm:1.51.1"
+  peerDependencies:
+    "@juggle/resize-observer": ^3.3.1
+    react: ^17.0.2 || ^18.0.0
+  checksum: dc4467a9839006541eb14d6cc61fc050e6581c923e7d11f75d60cbb81a2118bcb288c2f9e687a33eaf0b62754ba5b620985345076311dcf171cd33628c05ab20
   languageName: node
   linkType: hard
 
