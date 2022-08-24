@@ -9,6 +9,7 @@ import {
   RefObject,
   KeyboardEventHandler,
   MouseEventHandler,
+  useMemo,
 } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 
@@ -21,7 +22,7 @@ import { VisibilityIcon, NotVisibilityIcon, ErrorIcon } from './icons'
 
 type BaseElement = HTMLInputElement
 type BaseProps = InputHTMLAttributes<BaseElement>
-export type NumberInputType = number | ''
+export type NumberInputType = number | string | ''
 export type InputChangeHandler = ChangeEventHandler<BaseElement>
 export type InputValueChangeHandler<T> = (value: T) => void
 export type TextInputWidth = 'small' | 'medium' | 'large' | 'full'
@@ -468,9 +469,36 @@ export const TextInput: FC<TextInputProps> = props => (
 )
 
 export interface NumberInputProps extends BaseInputProps<NumberInputType> {}
-export const NumberInput: FC<NumberInputProps> = props => (
-  <Input {...props} type="number" />
-)
+export const NumberInput: FC<NumberInputProps> = ({
+  value,
+  step,
+  ...props
+}) => {
+  const decimalValue = useMemo(() => {
+    if (step === undefined) {
+      return 0
+    }
+    const [_, decimals] = step.toString().split('.') as [
+      string,
+      string | undefined
+    ]
+
+    return decimals?.length ?? 0
+  }, [step])
+
+  return (
+    <Input
+      value={
+        step !== undefined && value !== ''
+          ? parseFloat(value.toString()).toFixed(decimalValue)
+          : value
+      }
+      step={step}
+      {...props}
+      type="number"
+    />
+  )
+}
 
 export interface TextInputCredentialsProps extends BaseInputProps<string> {
   readonly type: TextInputCredentialsType
