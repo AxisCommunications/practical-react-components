@@ -3,7 +3,21 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v1.5.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.4.0...v1.5.0) (2022-08-18 15:14:22 +0200)
+## [v1.6.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.5.0...v1.6.0) (2022-08-30 10:59:18 +0200)
+
+### 🚧 Maintenance
+
+  -  update yarn, yarn sdks and yarn plugins ([0582fe2](https://github.com/AxisCommunications/practical-react-components/commit/0582fe2fc30031e2653bd97f3c96b5f490772c69))
+
+### ✨ Features
+
+  - **input**:  show decimals if step is defined ([846092f](https://github.com/AxisCommunications/practical-react-components/commit/846092f126ba7d93bbaf219117723e0f5516d852))
+
+### 🐛 Bug fixes
+
+  - **dialog**:  make dialogs fit on small screens ([28d9363](https://github.com/AxisCommunications/practical-react-components/commit/28d936352e06ebc9ade2e73114ebcb73df6e6b31))
+
+## [v1.5.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.4.0...v1.5.0) (2022-08-18 15:18:31 +0200)
 
 ### 🚧 Maintenance
 
