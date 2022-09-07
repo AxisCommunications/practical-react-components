@@ -5,7 +5,7 @@ context('Tab', () => {
   const tab2El = '[data-cy*=my-tab-2]'
 
   before(() => {
-    cy.visit('http://localhost:9009/#/components/tab')
+    cy.visit('http://localhost:9009/#/components/tabs')
   })
 
   it('no tab selected, containers should not be visible', () => {
