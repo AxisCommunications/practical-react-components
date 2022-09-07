@@ -3,7 +3,13 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v1.6.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.5.0...v1.6.0) (2022-08-30 10:59:18 +0200)
+## [v1.7.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.6.0...v1.7.0) (2022-09-07 14:49:19 +0200)
+
+### ✨ Features
+
+  - **tabs**: **BREAKING** add tabs component ([b0dbc73](https://github.com/AxisCommunications/practical-react-components/commit/b0dbc73ee96d004ed4cca3ea73c99eec7c60094f))
+
+## [v1.6.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.5.0...v1.6.0) (2022-09-05 09:59:11 +0200)
 
 ### 🚧 Maintenance
 
