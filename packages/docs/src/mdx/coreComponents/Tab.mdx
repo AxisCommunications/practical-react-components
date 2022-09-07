@@ -1,17 +1,16 @@
 export const meta = {
-  name: 'Tab',
-  route: '/components/tab',
+  name: 'Tabs',
+  route: '/components/tabs',
   menu: 'Components',
 }
 
 import styled from 'styled-components'
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import {
-  Tab,
-  VerticalTab,
-  TabBase,
   Typography,
   Paper,
+  Tabs,
+  VerticalTabs,
 } from 'practical-react-components-core'
 import {
   HomeIcon,
@@ -98,21 +97,31 @@ export const TabPaper = styled(Paper)`
 export const DemoComponent = ({}) => {
   const [selectedHTab, setSelectedHTab] = useState('1')
   const [selectedVTab, setSelectedVTab] = useState('1')
+  const hTabs = useMemo(() => {
+    return HTABS.map(tab => ({
+      id: tab.id,
+      label: tab.label,
+      icon: tab.icon,
+      selected: tab.id === selectedHTab,
+      onSelect: setSelectedHTab,
+      className: 'my-tab',
+    }))
+  }, [selectedHTab, setSelectedHTab])
+  const vTabs = useMemo(() => {
+    return HTABS.map(tab => ({
+      id: tab.id,
+      label: tab.label,
+      icon: tab.icon,
+      selected: tab.id === selectedVTab,
+      onSelect: setSelectedVTab,
+      className: 'my-tab',
+    }))
+  }, [selectedVTab, setSelectedVTab])
   return (
     <>
       <ExamplePaper space={true}>
         <HorizontalTabContainer>
-          {HTABS.map(tab => (
-            <Tab
-              key={tab.id}
-              id={tab.id}
-              label={tab.label}
-              icon={tab.icon}
-              selected={tab.id === selectedHTab}
-              onSelect={setSelectedHTab}
-              className="my-tab"
-            />
-          ))}
+          <Tabs tabs={hTabs} />
         </HorizontalTabContainer>
         <Container show={selectedHTab === '1'}>
           <TabPaper space={true}>
@@ -131,17 +140,7 @@ export const DemoComponent = ({}) => {
       <ExamplePaper space={true}>
         <VContainer>
           <VerticalTabContainer>
-            {VTABS.map(tab => (
-              <VerticalTab
-                key={tab.id}
-                id={tab.id}
-                label={tab.label}
-                icon={tab.icon}
-                selected={tab.id === selectedVTab}
-                onSelect={setSelectedVTab}
-                disabled={tab.disabled}
-              />
-            ))}
+            <VerticalTabs tabs={vTabs} />
           </VerticalTabContainer>
           <Container show={selectedVTab === '1'}>
             <TabPaper space={true}>
@@ -166,12 +165,20 @@ export const DemoComponent = ({}) => {
 ## Basic usage
 
 ```typescript type="live"
-<Tab
-  id="id1"
-  label="Home"
-  icon={HomeIcon}
-  selected={true}
-  onSelect={() => {}}
+<Tabs
+  tabs={[
+    {
+      id: '1',
+      label: 'Home',
+      icon: HomeIcon,
+    },
+  ].map(tab => ({
+    id: tab.id,
+    label: tab.label,
+    icon: tab.icon,
+    selected: tab.id === '1',
+    onSelect: () => {},
+  }))}
 />
 ```
 
@@ -181,4 +188,4 @@ Tab forwards all unknown props to the base native `<div>` component. See
 [`<div>` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) for more
 details on which additional props that are available.
 
-<Props of="Tab" />
+<Props of="Tabs" />

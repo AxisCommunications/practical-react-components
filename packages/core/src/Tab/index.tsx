@@ -326,11 +326,19 @@ export interface TabProps<T> extends InternalTabBaseProps<T> {
   readonly markerOffset?: HorizontalTabMarkerOffset
 }
 
-export function Tab<T>({
-  markerOffset = 'bottom',
-  ...props
-}: TabProps<T>): JSX.Element {
-  return <InternalTab<T> {...props} markerOffset={markerOffset} />
+export function Tabs<T>({
+  tabs,
+}: {
+  readonly tabs: ReadonlyArray<TabProps<T>>
+}): JSX.Element {
+  return (
+    <>
+      {tabs.map((props, i) => {
+        const markerOffset = props.markerOffset ?? 'bottom'
+        return <InternalTab<T> key={i} {...props} markerOffset={markerOffset} />
+      })}
+    </>
+  )
 }
 
 /**
@@ -340,9 +348,17 @@ export interface VerticalTabProps<T> extends InternalTabBaseProps<T> {
   readonly markerOffset?: VerticalTabMarkerOffset
 }
 
-export function VerticalTab<T>({
-  markerOffset = 'right',
-  ...props
-}: VerticalTabProps<T>): JSX.Element {
-  return <InternalTab<T> {...props} markerOffset={markerOffset} />
+export function VerticalTabs<T>({
+  tabs,
+}: {
+  readonly tabs: ReadonlyArray<VerticalTabProps<T>>
+}): JSX.Element {
+  return (
+    <>
+      {tabs.map((props, i) => {
+        const markerOffset = props.markerOffset ?? 'right'
+        return <InternalTab<T> key={i} {...props} markerOffset={markerOffset} />
+      })}
+    </>
+  )
 }

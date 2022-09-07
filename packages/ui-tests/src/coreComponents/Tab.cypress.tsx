@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import styled from 'styled-components'
-import { DeviceIcon } from 'practical-react-components-icons'
-import { Tab } from 'practical-react-components-core'
+import { Tabs } from 'practical-react-components-core'
 
 export const meta = {
-  name: 'Tab',
-  route: '/components/tab',
+  name: 'Tabs',
+  route: '/components/tabs',
   menu: '',
 }
 
@@ -25,7 +24,6 @@ const HTABS = [
   {
     id: '1',
     label: 'Large device',
-    icon: DeviceIcon,
   },
   {
     id: '2',
@@ -36,20 +34,22 @@ const HTABS = [
 const Test = () => {
   const [selectedTab, setSelectedTab] = useState('none')
 
+  const hTabs = useMemo(() => {
+    return HTABS.map(tab => {
+      return {
+        id: tab.id,
+        label: tab.label,
+        selected: tab.id === selectedTab,
+        onSelect: setSelectedTab,
+        'data-cy': `my-tab-${tab.id}`,
+      }
+    })
+  }, [selectedTab, setSelectedTab])
+
   return (
     <>
       <HorizontalTabContainer>
-        {HTABS.map(tab => (
-          <Tab
-            key={tab.id}
-            id={tab.id}
-            label={tab.label}
-            icon={tab.icon}
-            selected={tab.id === selectedTab}
-            onSelect={setSelectedTab}
-            data-cy={`my-tab-${tab.id}`}
-          />
-        ))}
+        <Tabs tabs={hTabs} />
       </HorizontalTabContainer>
       <Container data-cy="container1" show={selectedTab === '1'}>
         <p>Content 1</p>
