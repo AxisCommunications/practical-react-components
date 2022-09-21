@@ -3,7 +3,9 @@
 All notable changes to this project will be documented in this file.
 
 
-## [v1.7.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.6.0...v1.7.0) (2022-09-07 14:49:19 +0200)
+## [v1.7.1](https://github.com/AxisCommunications/practical-react-components/compare/v1.7.0...v1.7.1) (2022-09-21 09:54:50 +0200)
+
+## [v1.7.0](https://github.com/AxisCommunications/practical-react-components/compare/v1.6.0...v1.7.0) (2022-09-07 14:57:38 +0200)
 
 ### ✨ Features
 
