@@ -6,7 +6,7 @@
   "homepage": "https://github.com/AxisCommunications/practical-react-components",
   "license": "MIT",
   "engines": {
-    "node": ">=14.0.0",
+    "node": ">=16.0.0",
     "yarn": ">=1.21.1"
   },
   "workspaces": [

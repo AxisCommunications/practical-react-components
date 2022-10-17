@@ -16,15 +16,15 @@ jobs:
     runs-on: ubuntu-20.04
     strategy:
       matrix:
-        node-version: ['14', '15']
+        node-version: ['16', '18']
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -59,13 +59,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        browser: ['chrome', 'firefox']
+        browser: ['chrome']
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
       - name: Download all workflow run artifacts
         uses: actions/download-artifact@v2
@@ -74,14 +76,10 @@ jobs:
           path: packages/
 
       - name: Run Cypress UI tests
-        uses: cypress-io/github-action@v2
-        with:
-          install-command: yarn install --immutable --immutable-cache
-          start: yarn cypress:ui-tests
-          browser: ${{ matrix.browser }}
-          working-directory: packages/ui-tests
-          wait-on: 'http://localhost:9009'
-          command-prefix: yarn workspace practical-react-components-ui-tests
+        run: |
+          yarn install --immutable --immutable-cache
+          yarn cypress:ui-tests &
+          yarn cypress:chrome
 
       - name: Upload screenshots for failed UI tests
         uses: actions/upload-artifact@v2
@@ -94,10 +92,10 @@ jobs:
     needs: unit-tests
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
 
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache
