@@ -4,6 +4,7 @@ import argparse
 import json
 
 import utils
+import changelog
 
 parser = argparse.ArgumentParser()
 parser.add_argument(
@@ -34,7 +35,7 @@ with open("package.json", "r") as f:
             "--increment",
             args.level,
             "--preid",
-            "alpha",
+            "beta",
         ]
     )
     next_tag = f"v{next_version}"
@@ -45,11 +46,17 @@ with open("package.json", "r") as f:
     utils.cmd(["yarn", "version", "apply", "--all"])
 
     print(" - Update changelog")
-    changelog = utils.cmd(["./sbin/changelog.py", "full", "--release", next_tag])
-    with open("CHANGELOG.md", "w") as f:
-        f.write(changelog)
+    changelog_part = utils.cmd(
+        ["./sbin/changelog.py", "--release", next_tag, "--skip-header", "single"]
+    )
+    with open("CHANGELOG.md", "r+") as f:
+        old = f.read()
+        f.seek(0)
+        f.write(changelog.HEADER)
+        f.write(changelog_part)
+        f.write("\n\n")
+        f.write(old[len(changelog.HEADER) :])
 
     print(" - Create release commit and tag")
-    utils.cmd(["git", "add", "-u"])
-    utils.cmd(["git", "commit", "-m", next_tag])
+    utils.cmd(["git", "commit", "-a", "-m", next_tag])
     utils.cmd(["git", "tag", "-a", "-m", next_tag, next_tag])
