@@ -408,6 +408,7 @@ exports[`DateTimePicker DatePicker 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -441,6 +442,7 @@ exports[`DateTimePicker DatePicker 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -993,6 +995,7 @@ exports[`DateTimePicker DatePicker 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1026,6 +1029,7 @@ exports[`DateTimePicker DatePicker 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1868,6 +1872,7 @@ exports[`DateTimePicker DateTimePicker 1`] = `
                       <svg
                         className="c11"
                         height="24px"
+                        role="img"
                         viewBox="0 0 24 24"
                         width="24px"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1888,6 +1893,7 @@ exports[`DateTimePicker DateTimePicker 1`] = `
                       <svg
                         className="c12"
                         height="24px"
+                        role="img"
                         viewBox="0 0 24 24"
                         width="24px"
                         xmlns="http://www.w3.org/2000/svg"
@@ -1928,6 +1934,7 @@ exports[`DateTimePicker DateTimePicker 1`] = `
                         >
                           <svg
                             height="1em"
+                            role="img"
                             viewBox="0 0 24 24"
                             width="1em"
                             xmlns="http://www.w3.org/2000/svg"
@@ -1957,6 +1964,7 @@ exports[`DateTimePicker DateTimePicker 1`] = `
                         >
                           <svg
                             height="1em"
+                            role="img"
                             viewBox="0 0 24 24"
                             width="1em"
                             xmlns="http://www.w3.org/2000/svg"
@@ -1986,6 +1994,7 @@ exports[`DateTimePicker DateTimePicker 1`] = `
                         >
                           <svg
                             height="1em"
+                            role="img"
                             viewBox="0 0 24 24"
                             width="1em"
                             xmlns="http://www.w3.org/2000/svg"
@@ -3209,6 +3218,7 @@ exports[`DateTimePicker DateTimePicker 2`] = `
                       <svg
                         className="c11"
                         height="24px"
+                        role="img"
                         viewBox="0 0 24 24"
                         width="24px"
                         xmlns="http://www.w3.org/2000/svg"
@@ -3229,6 +3239,7 @@ exports[`DateTimePicker DateTimePicker 2`] = `
                       <svg
                         className="c12"
                         height="24px"
+                        role="img"
                         viewBox="0 0 24 24"
                         width="24px"
                         xmlns="http://www.w3.org/2000/svg"
@@ -3269,6 +3280,7 @@ exports[`DateTimePicker DateTimePicker 2`] = `
                         >
                           <svg
                             height="1em"
+                            role="img"
                             viewBox="0 0 24 24"
                             width="1em"
                             xmlns="http://www.w3.org/2000/svg"
@@ -3298,6 +3310,7 @@ exports[`DateTimePicker DateTimePicker 2`] = `
                         >
                           <svg
                             height="1em"
+                            role="img"
                             viewBox="0 0 24 24"
                             width="1em"
                             xmlns="http://www.w3.org/2000/svg"
@@ -3327,6 +3340,7 @@ exports[`DateTimePicker DateTimePicker 2`] = `
                         >
                           <svg
                             height="1em"
+                            role="img"
                             viewBox="0 0 24 24"
                             width="1em"
                             xmlns="http://www.w3.org/2000/svg"

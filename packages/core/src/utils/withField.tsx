@@ -59,7 +59,7 @@ export interface FieldProps {
   readonly unitLabel?: string
 }
 
-export function withField<T>(InputComponent: FC<T>): FC<FieldProps & T> {
+export function withField<T>(InputComponent: FC<T>): FC<T & FieldProps> {
   // eslint-disable-next-line react/display-name
   return ({ label, unitLabel, ...props }) => {
     const { compact: compactFromTheme } = useTheme()
@@ -75,13 +75,13 @@ export function withField<T>(InputComponent: FC<T>): FC<FieldProps & T> {
         ) : null}
         {unitLabel !== undefined ? (
           <WithUnitLabelContainer>
-            <InputComponent {...(props as T)} />
+            <InputComponent {...(props as JSX.IntrinsicAttributes & T)} />
             <Unit variant="explanatory-text" disabled={disabled}>
               {unitLabel}
             </Unit>
           </WithUnitLabelContainer>
         ) : (
-          <InputComponent {...(props as T)} />
+          <InputComponent {...(props as JSX.IntrinsicAttributes & T)} />
         )}
       </div>
     )

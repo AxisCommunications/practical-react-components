@@ -243,7 +243,7 @@ exports[`Tables Table (full) 1`] = `
           <div
             className="c4"
             style={
-              Object {
+              {
                 "gridTemplateColumns": "24px [start] 48px [content-start] 2px 1px 2px [content-end] 40px [scroll] 12px [end]",
               }
             }
@@ -290,7 +290,7 @@ exports[`Tables Table (full) 1`] = `
         <div
           className="c16"
           style={
-            Object {
+            {
               "maxHeight": "336px",
               "width": "129px",
             }
@@ -446,7 +446,7 @@ exports[`Tables Table (minimal) 1`] = `
           <div
             className="c4"
             style={
-              Object {
+              {
                 "gridTemplateColumns": "24px [start] 0px [content-start] 64px 64px 64px [content-end] 0px [scroll] 12px [end]",
               }
             }
@@ -486,7 +486,7 @@ exports[`Tables Table (minimal) 1`] = `
         <div
           className="c10"
           style={
-            Object {
+            {
               "maxHeight": "336px",
               "width": "228px",
             }

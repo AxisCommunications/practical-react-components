@@ -191,6 +191,7 @@ exports[`Menus Menu (default) 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -416,6 +417,7 @@ exports[`Menus Menu (disabled) 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -637,6 +639,7 @@ exports[`Menus Menu (left) 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -858,6 +861,7 @@ exports[`Menus Menu (right) 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1079,6 +1083,7 @@ exports[`Menus with submenu Menu (default) 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1304,6 +1309,7 @@ exports[`Menus with submenu Menu (disabled) 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1525,6 +1531,7 @@ exports[`Menus with submenu Menu (left) 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"
@@ -1746,6 +1753,7 @@ exports[`Menus with submenu Menu (right) 1`] = `
             >
               <svg
                 height="1em"
+                role="img"
                 viewBox="0 0 24 24"
                 width="1em"
                 xmlns="http://www.w3.org/2000/svg"

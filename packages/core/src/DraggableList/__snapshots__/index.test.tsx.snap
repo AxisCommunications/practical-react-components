@@ -111,7 +111,7 @@ exports[`DraggableList DraggableList 1`] = `
             onDragOver={[Function]}
             onDragStart={[Function]}
             style={
-              Object {
+              {
                 "opacity": undefined,
               }
             }
@@ -160,7 +160,7 @@ exports[`DraggableList DraggableList 1`] = `
             onDragOver={[Function]}
             onDragStart={[Function]}
             style={
-              Object {
+              {
                 "opacity": undefined,
               }
             }
@@ -209,7 +209,7 @@ exports[`DraggableList DraggableList 1`] = `
             onDragOver={[Function]}
             onDragStart={[Function]}
             style={
-              Object {
+              {
                 "opacity": undefined,
               }
             }
@@ -257,7 +257,7 @@ exports[`DraggableList DraggableList 1`] = `
             onDragEnd={[Function]}
             onDragStart={[Function]}
             style={
-              Object {
+              {
                 "opacity": undefined,
               }
             }
@@ -285,7 +285,7 @@ exports[`DraggableList DraggableList 1`] = `
             onDragOver={[Function]}
             onDragStart={[Function]}
             style={
-              Object {
+              {
                 "opacity": undefined,
               }
             }

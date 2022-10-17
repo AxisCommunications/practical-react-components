@@ -66,6 +66,7 @@ exports[`Icons Sizes 1`] = `
       >
         <svg
           height="1em"
+          role="img"
           viewBox="0 0 24 24"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -156,6 +157,7 @@ exports[`Icons Sizes 2`] = `
       >
         <svg
           height="1em"
+          role="img"
           viewBox="0 0 24 24"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -246,6 +248,7 @@ exports[`Icons Sizes 3`] = `
       >
         <svg
           height="1em"
+          role="img"
           viewBox="0 0 24 24"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -336,6 +339,7 @@ exports[`Icons Sizes 4`] = `
       >
         <svg
           height="1em"
+          role="img"
           viewBox="0 0 24 24"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"
@@ -426,6 +430,7 @@ exports[`Icons Sizes 5`] = `
       >
         <svg
           height="1em"
+          role="img"
           viewBox="0 0 24 24"
           width="1em"
           xmlns="http://www.w3.org/2000/svg"

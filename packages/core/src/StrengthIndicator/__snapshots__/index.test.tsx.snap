@@ -96,7 +96,7 @@ exports[`StrengthIndicator Levels 1`] = `
           <div
             className="c4"
             style={
-              Object {
+              {
                 "transform": "scaleX(0)",
               }
             }
@@ -224,7 +224,7 @@ exports[`StrengthIndicator Levels 2`] = `
           <div
             className="c4"
             style={
-              Object {
+              {
                 "transform": "scaleX(0.01)",
               }
             }
@@ -352,7 +352,7 @@ exports[`StrengthIndicator Levels 3`] = `
           <div
             className="c4"
             style={
-              Object {
+              {
                 "transform": "scaleX(0.26)",
               }
             }
@@ -480,7 +480,7 @@ exports[`StrengthIndicator Levels 4`] = `
           <div
             className="c4"
             style={
-              Object {
+              {
                 "transform": "scaleX(0.51)",
               }
             }
@@ -608,7 +608,7 @@ exports[`StrengthIndicator Levels 5`] = `
           <div
             className="c4"
             style={
-              Object {
+              {
                 "transform": "scaleX(0.76)",
               }
             }

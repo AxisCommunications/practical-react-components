@@ -209,7 +209,7 @@ exports[`Slider Levels 1`] = `
             <div
               className="c6"
               style={
-                Object {
+                {
                   "transform": "scaleX(0)",
                 }
               }
@@ -217,7 +217,7 @@ exports[`Slider Levels 1`] = `
             <div
               className="c7 c8"
               style={
-                Object {
+                {
                   "transform": "translateX(-50%) translateX(0px)",
                 }
               }
@@ -524,7 +524,7 @@ exports[`Slider Levels 2`] = `
             <div
               className="c6"
               style={
-                Object {
+                {
                   "transform": "scaleX(0.5)",
                 }
               }
@@ -532,7 +532,7 @@ exports[`Slider Levels 2`] = `
             <div
               className="c7 c8"
               style={
-                Object {
+                {
                   "transform": "translateX(-50%) translateX(0px)",
                 }
               }
@@ -839,7 +839,7 @@ exports[`Slider Levels 3`] = `
             <div
               className="c6"
               style={
-                Object {
+                {
                   "transform": "scaleX(1)",
                 }
               }
@@ -847,7 +847,7 @@ exports[`Slider Levels 3`] = `
             <div
               className="c7 c8"
               style={
-                Object {
+                {
                   "transform": "translateX(-50%) translateX(0px)",
                 }
               }

@@ -1,4 +1,11 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["./types/*.d.ts", "./src/index.tsx"]
+  "include": ["./types/*.d.ts", "./src/index.tsx"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "es5",
+      "esModuleInterop": true
+    }
+  }
 }

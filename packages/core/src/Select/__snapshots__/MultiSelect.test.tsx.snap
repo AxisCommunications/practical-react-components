@@ -311,6 +311,7 @@ exports[`Select Direction 1`] = `
                   >
                     <svg
                       height="1em"
+                      role="img"
                       viewBox="0 0 24 24"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -339,6 +340,7 @@ exports[`Select Direction 1`] = `
                 >
                   <svg
                     height="1em"
+                    role="img"
                     viewBox="0 0 24 24"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -706,6 +708,7 @@ exports[`Select Direction 2`] = `
                   >
                     <svg
                       height="1em"
+                      role="img"
                       viewBox="0 0 24 24"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -734,6 +737,7 @@ exports[`Select Direction 2`] = `
                 >
                   <svg
                     height="1em"
+                    role="img"
                     viewBox="0 0 24 24"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -1108,6 +1112,7 @@ exports[`Select Other 1`] = `
                   >
                     <svg
                       height="1em"
+                      role="img"
                       viewBox="0 0 24 24"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1136,6 +1141,7 @@ exports[`Select Other 1`] = `
                 >
                   <svg
                     height="1em"
+                    role="img"
                     viewBox="0 0 24 24"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -1517,6 +1523,7 @@ exports[`Select Other 2`] = `
                   >
                     <svg
                       height="1em"
+                      role="img"
                       viewBox="0 0 24 24"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1545,6 +1552,7 @@ exports[`Select Other 2`] = `
                 >
                   <svg
                     height="1em"
+                    role="img"
                     viewBox="0 0 24 24"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -1912,6 +1920,7 @@ exports[`Select Width 1`] = `
                   >
                     <svg
                       height="1em"
+                      role="img"
                       viewBox="0 0 24 24"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -1940,6 +1949,7 @@ exports[`Select Width 1`] = `
                 >
                   <svg
                     height="1em"
+                    role="img"
                     viewBox="0 0 24 24"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -2307,6 +2317,7 @@ exports[`Select Width 2`] = `
                   >
                     <svg
                       height="1em"
+                      role="img"
                       viewBox="0 0 24 24"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2340,6 +2351,7 @@ exports[`Select Width 2`] = `
                   >
                     <svg
                       height="1em"
+                      role="img"
                       viewBox="0 0 24 24"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2368,6 +2380,7 @@ exports[`Select Width 2`] = `
                 >
                   <svg
                     height="1em"
+                    role="img"
                     viewBox="0 0 24 24"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"
@@ -2735,6 +2748,7 @@ exports[`Select Width 3`] = `
                   >
                     <svg
                       height="1em"
+                      role="img"
                       viewBox="0 0 24 24"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2768,6 +2782,7 @@ exports[`Select Width 3`] = `
                   >
                     <svg
                       height="1em"
+                      role="img"
                       viewBox="0 0 24 24"
                       width="1em"
                       xmlns="http://www.w3.org/2000/svg"
@@ -2796,6 +2811,7 @@ exports[`Select Width 3`] = `
                 >
                   <svg
                     height="1em"
+                    role="img"
                     viewBox="0 0 24 24"
                     width="1em"
                     xmlns="http://www.w3.org/2000/svg"

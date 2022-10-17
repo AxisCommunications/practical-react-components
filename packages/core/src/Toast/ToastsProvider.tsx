@@ -7,6 +7,7 @@ import {
   isValidElement,
   cloneElement,
   ReactNode,
+  Attributes,
 } from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 import styled, { css } from 'styled-components'
@@ -91,7 +92,9 @@ export const ToastTransition: FC<ToastTransitionProps> = ({
       unmountOnExit={true}
       {...props}
     >
-      {isValidElement(children) ? cloneElement(children, { ref }) : null}
+      {isValidElement(children)
+        ? cloneElement(children, { ref } as Attributes)
+        : null}
     </CSSTransition>
   )
 }
