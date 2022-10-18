@@ -32,6 +32,8 @@ jobs:
         run: yarn build:libs
 
       - name: Release changelog
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: ./sbin/changelog.py --skip-header single > release-CHANGELOG.md
 
       - name: Release

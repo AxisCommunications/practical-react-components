@@ -2,6 +2,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.8.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.8.0)
+2022-10-18 07:50:45 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.7.1...v1.8.0)
+
+### 🚧 Maintenance
+
+  -  update workflows ([`4adee08`](https://github.com/AxisCommunications/practical-react-components/commit/4adee087518f1c9c60b2e5316312786f773733e4)) ([**@Tigge**](https://github.com/Tigge))
+  -  upgrade dependencies ([`c67e969`](https://github.com/AxisCommunications/practical-react-components/commit/c67e9698a7ee311744f716384f5a55879cc0af0d)) ([**@Tigge**](https://github.com/Tigge))
+  -  upgrade release scripts ([`2feba5f`](https://github.com/AxisCommunications/practical-react-components/commit/2feba5fd57953b78f7435bb22f85fb100e920da2)) ([**@Tigge**](https://github.com/Tigge))
+  -  update yarn, yarn sdks, yarn plugins ([`3bc4288`](https://github.com/AxisCommunications/practical-react-components/commit/3bc428824df363a28a833b4d580a8d9f25611e62)) ([**@Tigge**](https://github.com/Tigge))
+
 ## [v1.7.1](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.7.1)
 2022-09-21 15:46:34 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.7.0...v1.7.1)
 
