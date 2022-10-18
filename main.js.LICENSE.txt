@@ -5,12 +5,12 @@
  */
 
 /*!
-* focus-trap 6.9.0
+* focus-trap 7.0.0
 * @license MIT, https://github.com/focus-trap/focus-trap/blob/master/LICENSE
 */
 
 /*!
-* tabbable 5.3.1
+* tabbable 6.0.0
 * @license MIT, https://github.com/focus-trap/tabbable/blob/master/LICENSE
 */
 
@@ -67,16 +67,7 @@
  */
 
 /**
- * Prism: Lightweight, robust, elegant syntax highlighting
- *
- * @license MIT <https://opensource.org/licenses/MIT>
- * @author Lea Verou <https://lea.verou.me>
- * @namespace
- * @public
- */
-
-/**
- * React Router DOM v6.3.0
+ * @remix-run/router v1.0.2
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -87,7 +78,27 @@
  */
 
 /**
- * React Router v6.3.0
+ * Prism: Lightweight, robust, elegant syntax highlighting
+ *
+ * @license MIT <https://opensource.org/licenses/MIT>
+ * @author Lea Verou <https://lea.verou.me>
+ * @namespace
+ * @public
+ */
+
+/**
+ * React Router DOM v6.4.2
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */
+
+/**
+ * React Router v6.4.2
  *
  * Copyright (c) Remix Software Inc.
  *
