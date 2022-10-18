@@ -1,4 +1,4 @@
-import { MutableRefObject, Dispatch, useContext, useCallback } from 'react'
+import { Dispatch, useContext, useCallback } from 'react'
 
 import { createToast, removeToast, removeAllToasts } from './toastActions'
 import {
@@ -30,29 +30,27 @@ export interface SimpleToastsDurations {
 }
 
 export const useToastCallbacks = (
-  dispatchRef: MutableRefObject<Dispatch<ToastAction>>,
+  dispatch: Dispatch<ToastAction>,
   { success, error, warning, info }: SimpleToastsDurations = {}
 ): ToastCallbacks => {
   const showToast: ShowToastHandler = useCallback(
     (toast, id) => {
       const toastAction = createToast(toast, id)
-      dispatchRef.current(toastAction)
+      dispatch(toastAction)
       return toastAction.id
     },
-    [dispatchRef]
+    [dispatch]
   )
 
   const hideToast: HideToastHandler = useCallback(
     id => {
       const toastAction = removeToast(id)
-      dispatchRef.current(toastAction)
+      dispatch(toastAction)
     },
-    [dispatchRef]
+    [dispatch]
   )
 
-  const clearToasts = useCallback(() => {
-    dispatchRef.current(removeAllToasts)
-  }, [dispatchRef])
+  const clearToasts = useCallback(() => dispatch(removeAllToasts), [dispatch])
 
   const showSuccessToast: SimpleToastCreator = useCallback(
     (toast, id) =>
@@ -111,7 +109,7 @@ export const useToastCallbacks = (
 }
 
 export const useToasts = () => {
-  const { __dispatchRef, ...callbacks } = useContext(ToastsContext)
+  const { dispatch, toasts, ...callbacks } = useContext(ToastsContext)
 
   return callbacks
 }
