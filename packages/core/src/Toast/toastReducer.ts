@@ -1,11 +1,4 @@
-import {
-  BaseToastValue,
-  ToastAction,
-  ToastActionType,
-  ToastId,
-} from './context'
-
-export type ToastsMap = ReadonlyMap<ToastId, BaseToastValue>
+import { ToastAction, ToastActionType, ToastsMap } from './context'
 
 /**
  * Given the current state (toast map) and an action,

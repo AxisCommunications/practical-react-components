@@ -3,7 +3,6 @@ import {
   useContext,
   useRef,
   FC,
-  Dispatch,
   isValidElement,
   cloneElement,
   ReactNode,
@@ -18,7 +17,7 @@ import { BaseToast } from './Toast'
 import { toastReducer } from './toastReducer'
 
 import { useToastCallbacks, SimpleToastsDurations } from './useToasts'
-import { ToastAction, NI, ToastsContext } from './context'
+import { ToastsContext } from './context'
 
 export interface ToastsPlacement {
   readonly justify: 'center' | 'right'
@@ -65,12 +64,12 @@ export const ToastsProvider: FC<ToastsProviderProps> = ({
   children,
   ...toastsOptions
 }) => {
-  const __dispatchRef = useRef<Dispatch<ToastAction>>(NI)
+  const [toasts, dispatch] = useReducer(toastReducer, new Map())
 
-  const callbacks = useToastCallbacks(__dispatchRef, toastsOptions)
+  const callbacks = useToastCallbacks(dispatch, toastsOptions)
 
   return (
-    <ToastsContext.Provider value={{ ...callbacks, __dispatchRef }}>
+    <ToastsContext.Provider value={{ ...callbacks, dispatch, toasts }}>
       {children}
     </ToastsContext.Provider>
   )
@@ -109,25 +108,28 @@ export interface ToastsAnchorProps {
 }
 
 export const ToastsAnchor: FC<ToastsAnchorProps> = ({ placement }) => {
-  const [toasts, dispatch] = useReducer(toastReducer, new Map())
-  const { hideToast, __dispatchRef } = useContext(ToastsContext)
-  __dispatchRef.current = dispatch
-
   return (
     <ToastsWrapper {...placement}>
-      <TransitionGroup component={null}>
-        {[...toasts.entries()].map(([id, props], index) => (
-          <ToastTransition key={id}>
-            <BaseToast
-              key={id}
-              toastId={id}
-              zIndex={-index}
-              dismissToast={hideToast}
-              {...props}
-            />
-          </ToastTransition>
-        ))}
-      </TransitionGroup>
+      <ToastContent />
     </ToastsWrapper>
+  )
+}
+
+export const ToastContent = () => {
+  const { hideToast, toasts } = useContext(ToastsContext)
+  return (
+    <TransitionGroup component={null}>
+      {[...toasts.entries()].map(([id, props], index) => (
+        <ToastTransition key={id}>
+          <BaseToast
+            key={id}
+            toastId={id}
+            zIndex={-index}
+            dismissToast={hideToast}
+            {...props}
+          />
+        </ToastTransition>
+      ))}
+    </TransitionGroup>
   )
 }

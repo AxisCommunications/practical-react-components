@@ -1,4 +1,4 @@
-import { createContext, ReactNode, MutableRefObject, Dispatch } from 'react'
+import { createContext, ReactNode, Dispatch } from 'react'
 import { IconType } from '../Icon'
 import { ALinkProps, ButtonLinkProps } from '../Link'
 
@@ -24,6 +24,8 @@ export interface ProgressToast extends SimpleToast {
     readonly label: string
   }
 }
+
+export type ToastsMap = ReadonlyMap<ToastId, BaseToastValue>
 
 export type ShowToastHandler = (toast: BaseToastValue, id?: ToastId) => ToastId
 export type HideToastHandler = (id: ToastId) => void
@@ -88,7 +90,8 @@ export const NI = () => {
   throw new Error(`Not implemented: no ToastContext set`)
 }
 export interface ToastContextType extends ToastCallbacks {
-  readonly __dispatchRef: MutableRefObject<Dispatch<ToastAction>>
+  readonly dispatch: Dispatch<ToastAction>
+  readonly toasts: ToastsMap
 }
 
 export const ToastsContext = createContext<ToastContextType>({
@@ -102,5 +105,6 @@ export const ToastsContext = createContext<ToastContextType>({
   showLoadingToast: NI,
   showProgressToast: NI,
   showActionToast: NI,
-  __dispatchRef: { current: NI },
+  dispatch: NI,
+  toasts: new Map(),
 })

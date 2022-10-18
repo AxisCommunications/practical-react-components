@@ -7,3 +7,4 @@ export {
   ToastIconWrapper,
   ToastIconType,
 } from './toastCreators'
+export { ToastContent } from './ToastsProvider'
