@@ -2,6 +2,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.9.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.9.0)
+2022-10-19 07:50:06 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.8.0...v1.9.0)
+
+### ✨ Features
+
+  - [!242](https://github.com/AxisCommunications/practical-react-components/pull/242) - **toast**:  use toasts from context ([`37ad7cc`](https://github.com/AxisCommunications/practical-react-components/commit/37ad7ccdb7941b93bd6bd3351a650f78beb54082)) ([**@danielkaxis**](https://github.com/danielkaxis))
+
 ## [v1.8.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.8.0)
 2022-10-18 07:50:45 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.7.1...v1.8.0)
 
