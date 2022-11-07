@@ -5,7 +5,11 @@ export const meta = {
 }
 
 import styled from 'styled-components'
-import { Progress } from 'practical-react-components-core'
+import {
+  Progress,
+  SpaceBlock,
+  Typography,
+} from 'practical-react-components-core'
 
 # Progress
 
@@ -15,14 +19,23 @@ A Progress inform users about the status of ongoing progresses.
 
 export const total = 84
 export const data = 31
-export const value = (data / total).toFixed(2)
+export const value = parseFloat((data / total).toFixed(2))
 
+<Typography>Primary</Typography>
 <Progress value={value} label={`${data}/${total}Mb`} className="progress" />
+<SpaceBlock variant={32} />
+<Typography>Secondary</Typography>
+<Progress
+  value={value}
+  label={`${data}/${total}Mb`}
+  className="progress"
+  variant="secondary"
+/>
 
 ## Basic usage
 
 ```typescript type="live"
-<Progress value={0.5} label="50%" />
+<Progress value={0.5} label="50%" variant="primary" />
 ```
 
 ## Props
