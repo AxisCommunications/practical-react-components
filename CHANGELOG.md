@@ -2,6 +2,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.10.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.10.0)
+2022-11-08 10:06:59 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.9.0...v1.10.0)
+
+### ✨ Features
+
+  - [!247](https://github.com/AxisCommunications/practical-react-components/pull/247) -  secondary progress ([`9b2e177`](https://github.com/AxisCommunications/practical-react-components/commit/9b2e1774ad83ff2351eef25228f14ccdea75f6dd)) ([**@lekoaf**](https://github.com/lekoaf))
+
 ## [v1.9.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.9.0)
 2022-10-19 07:50:06 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.8.0...v1.9.0)
 
