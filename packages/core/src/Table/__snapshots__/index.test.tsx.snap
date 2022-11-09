@@ -135,7 +135,7 @@ exports[`Tables Table (full) 1`] = `
   content: '';
   width: 5px;
   height: 10px;
-  border: solid #fff;
+  border: solid rgb(255,255,255);
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);

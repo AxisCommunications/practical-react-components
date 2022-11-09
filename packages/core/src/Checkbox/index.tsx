@@ -141,7 +141,7 @@ const CSSCheckboxChecked = styled(BaseCheckbox)`
     content: '';
     width: 5px;
     height: 10px;
-    border: solid #fff;
+    border: solid ${({ theme }) => theme.color.element17()};
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
     margin-bottom: 3px;
@@ -154,7 +154,7 @@ const CSSCheckboxIndeterminate = styled(BaseCheckbox)`
     content: '';
     width: 10px;
     height: 2px;
-    background-color: #fff;
+    background-color: ${({ theme }) => theme.color.element17()};
     border-radius: ${shape.radius.small};
   }
 `

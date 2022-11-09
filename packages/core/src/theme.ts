@@ -81,6 +81,9 @@ export interface Color {
   readonly element14: CSSColor
   readonly element15: CSSColor
   readonly element16: CSSColor
+  readonly element17: CSSColor
+  readonly elementBorderActive: CSSColor
+  readonly elementBorderFocus: CSSColor
   readonly elementPrimary: CSSColor
   readonly elementHalfPrimary: CSSColor
   readonly elementError: CSSColor
@@ -198,6 +201,9 @@ const generateDefaultColors = (
     element14: palette.grey64,
     element15: palette.grey98,
     element16: palette.grey98,
+    element17: palette.white,
+    elementBorderActive: palette[`${color}500` as ColorName],
+    elementBorderFocus: palette[`${color}800` as ColorName],
     elementPrimary: palette[`${color}500` as ColorName],
     elementHalfPrimary: palette[`${color}600` as ColorName],
     elementError: palette.red700,

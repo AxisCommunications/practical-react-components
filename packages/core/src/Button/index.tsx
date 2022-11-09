@@ -72,14 +72,14 @@ export const NativeButton = styled.button<{
             ? css`
                 background-color: ${theme.color.elementPrimary()};
                 box-shadow: ${theme.shadow.primaryButton};
-                border: 2px solid ${theme.color.textPrimary()};
+                border: 2px solid ${theme.color.elementBorderFocus()};
               `
             : undefined};
         }
 
         &:active {
           background-color: ${theme.color.textPrimary()};
-          box-shadow: 0 0 0 4px ${theme.color.elementPrimary(opacity[24])};
+          box-shadow: 0 0 0 4px ${theme.color.elementBorderActive(opacity[24])};
         }
 
         &:disabled {
