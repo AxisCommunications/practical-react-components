@@ -2,6 +2,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.11.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.11.0)
+2022-11-09 14:47:39 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.10.0...v1.11.0)
+
+### ✨ Features
+
+  - [!248](https://github.com/AxisCommunications/practical-react-components/pull/248) - **theme**:  add more color slots ([`c96d0c2`](https://github.com/AxisCommunications/practical-react-components/commit/c96d0c2d9293e5c16418a4879cde990c8883b2eb)) ([**@tripleWdotcom**](https://github.com/tripleWdotcom))
+
 ## [v1.10.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.10.0)
 2022-11-08 10:06:59 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.9.0...v1.10.0)
 
