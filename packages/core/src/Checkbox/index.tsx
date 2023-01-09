@@ -100,7 +100,7 @@ const Container = styled.div<{
   ${({ hasLabel }) =>
     hasLabel
       ? css`
-          width: 100%;
+          width: auto;
           justify-content: flex-start;
           padding-left: 3px;
           > span {
