@@ -123,6 +123,11 @@ export interface ModalProps extends BaseProps {
    * When `true` the dialog is rendered, `false` removes the dialog.
    */
   readonly open: boolean
+  /**
+   * If `true`, clicking outside the modal is possible, `false` does not allow
+   * clicking outside the modal.
+   */
+  readonly allowOutsideClick?: boolean
 }
 
 export const Modal: FC<ModalProps> = ({
@@ -130,6 +135,7 @@ export const Modal: FC<ModalProps> = ({
   onClose,
   focusDialog = true,
   children,
+  allowOutsideClick = true,
   ...props
 }) => {
   useEffect(() => {
@@ -156,7 +162,7 @@ export const Modal: FC<ModalProps> = ({
         focusTrapOptions={{
           initialFocus: focusDialog ? `#${id}` : undefined,
           escapeDeactivates: false, // We use our own stack
-          clickOutsideDeactivates: true, // 😱😱😱 We need this to prevent click capturing
+          clickOutsideDeactivates: allowOutsideClick,
         }}
       >
         <FocusWrapper tabIndex={-1} id={id}>
