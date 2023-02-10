@@ -35,6 +35,7 @@ export const FoldTransition: FC<FoldTransitionProps> = ({
     const node = nodeRef.current
 
     const height = node.offsetHeight
+    if (height === 0) return
     transitionHeight(node, 0, height)
   }, [])
 
