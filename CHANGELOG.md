@@ -2,6 +2,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.12.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.12.0)
+2023-02-10 09:25:15 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.11.0...v1.12.0)
+
+### ✨ Features
+
+  - [!255](https://github.com/AxisCommunications/practical-react-components/pull/255) - **icons**:  added new icons ([`e3c73dc`](https://github.com/AxisCommunications/practical-react-components/commit/e3c73dc0ca027b478839b6bd2d9fad4b772afc1b)) ([**@danlundgren1**](https://github.com/danlundgren1))
+
 ## [v1.11.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.11.0)
 2022-11-09 14:47:39 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.10.0...v1.11.0)
 
