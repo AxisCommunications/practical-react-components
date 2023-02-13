@@ -233,6 +233,7 @@ export const RadioContainer = styled.div<{
 
 type BaseElement = HTMLInputElement
 type BaseProps = InputHTMLAttributes<BaseElement>
+type ColumnDirection = 'column' | 'row'
 
 export type RadioButtonChangeHandler = ChangeEventHandler<BaseElement>
 export type RadioButtonValueChangeHandler<V extends string = string> = (
@@ -373,9 +374,16 @@ export function RadioButton<V extends string = string>({
  * Radio Group
  */
 /* stylelint-disable no-descending-specificity  */
-const RadioButtonGroupContainer = styled.div<{ readonly compact: boolean }>`
-  display: grid;
-  grid-row-gap: ${({ compact }) => (!compact ? spacing.large : spacing.medium)};
+
+const RadioButtonGroupContainer = styled.div<{
+  readonly compact: boolean
+  readonly direction: ColumnDirection
+}>`
+  display: flex;
+  flex-direction: ${({ direction }) => (!direction ? 'column' : direction)};
+  justify-content: ${({ direction }) =>
+    direction === 'column' ? '' : 'space-between'};
+  row-gap: ${({ compact }) => (!compact ? spacing.large : spacing.medium)};
   margin: ${({ compact }) =>
     !compact ? `${spacing.medium} 0` : `${spacing.small} 0`};
 `
@@ -407,6 +415,11 @@ export interface RadioButtonGroupProps<V extends string = string>
 
    */
   readonly compact?: boolean
+  /**
+   * Aligns the menu item as a column or row.
+   * Default: `column`
+   */
+  readonly direction?: ColumnDirection
 }
 
 export function RadioButtonGroup<V extends string = string>({
@@ -417,13 +430,18 @@ export function RadioButtonGroup<V extends string = string>({
   onValueChange,
   error,
   compact: compactFromProps,
+  direction = 'column',
   ...rest
 }: RadioButtonGroupProps<V>): JSX.Element {
   const { compact: compactFromTheme } = useTheme()
   const compact = compactFromProps ?? compactFromTheme
 
   return (
-    <RadioButtonGroupContainer compact={compact} {...rest}>
+    <RadioButtonGroupContainer
+      compact={compact}
+      direction={direction}
+      {...rest}
+    >
       {options.map((option, index) => (
         <RadioButton<V>
           key={index}

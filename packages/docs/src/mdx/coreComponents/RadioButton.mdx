@@ -118,6 +118,24 @@ export const DemoComponent = () => {
 />
 ```
 
+#### Group with direction set to row
+
+```typescript type="live"
+<RadioButtonGroupField
+  name="weather-group-row-test"
+  label="Grouped buttons with direction set to row"
+  options={[
+    { value: 'sunny', label: 'Sunny' },
+    { value: 'cloudy', label: 'Cloudy' },
+    { value: 'rainy', label: 'Rainy' },
+    { value: 'windy', label: 'Windy', disabled: true },
+  ]}
+  value="sunny"
+  onValueChange={() => {}}
+  direction="row"
+/>
+```
+
 ## RadioIconButton
 
 A RadioIconButton is a clickable element which will execute a command when clicked.

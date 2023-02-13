@@ -26,6 +26,23 @@ A formik component that wraps a RadioButtonGroup component.
 </FormikDemo>
 ```
 
+```typescript type="demo"
+<FormikDemo initialValues={{ day: 'mon' }}>
+  <FormikRadioButtonGroupField
+    label="Row direction set to row"
+    name="dayrow"
+    options={[
+      { label: 'Monday', value: 'mon' },
+      { label: 'Tuesday', value: 'tue' },
+      { label: 'Wednesday', value: 'wed' },
+      { label: 'Thursday', value: 'thu' },
+      { label: 'Friday', value: 'fri' },
+    ]}
+    direction="row"
+  />
+</FormikDemo>
+```
+
 ## Usage in code
 
 ```typescript
