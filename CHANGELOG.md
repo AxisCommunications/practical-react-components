@@ -2,6 +2,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.14.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.14.0)
+2023-03-01 13:22:02 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.13.0...v1.14.0)
+
+### ✨ Features
+
+  - [!254](https://github.com/AxisCommunications/practical-react-components/pull/254) - **modal**:  allowoutsideclick optional prop ([`4346b75`](https://github.com/AxisCommunications/practical-react-components/commit/4346b75eb20e27aeb8ba88cb4ce7ec4a363e2632)) ([**@victoringvarsson**](https://github.com/victoringvarsson))
+
+### 🐛 Bug fixes
+
+  - [!253](https://github.com/AxisCommunications/practical-react-components/pull/253) - **checkbox**:  only checkbox-area is clickable ([`d20f6f9`](https://github.com/AxisCommunications/practical-react-components/commit/d20f6f95e8a7a05db46ee3fcf9ee768e076d0bb8)) ([**@tobiaslilja2**](https://github.com/tobiaslilja2))
+
 ## [v1.13.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.13.0)
 2023-02-22 11:11:53 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.11.0...v1.13.0)
 
