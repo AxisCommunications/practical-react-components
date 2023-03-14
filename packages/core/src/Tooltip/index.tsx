@@ -16,6 +16,7 @@ import { Typography, TypographyProps } from '../Typography'
 import { PopOver, PopOverProps } from '../PopOver'
 import { shape, spacing, componentSize } from '../designparams'
 import { font } from '../theme'
+import { useTouchScrollDistance } from './utils'
 
 /**
  * Tooltip
@@ -252,7 +253,6 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
     (props.variant === 'expanded' ? props.placement : undefined) ?? 'up-down'
   const child = Children.only(children) as ReactElement
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
-
   // State for click
   const [visibleByClick, showByClick] = useState(false)
   // Delayed state for pointer
@@ -264,6 +264,8 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
 
   // If tooltip should be shown
   const visible = visibleByClick || debouncedVisible
+
+  const touchScrollDistance = useTouchScrollDistance()
 
   const toggle = useCallback(
     (event: PointerEvent) => {
@@ -277,6 +279,20 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
     },
     [showByClick]
   )
+
+  /**
+   * If the delta for any axis is larger than 150 pixels,
+   * remove the tooltip from the screen.
+   */
+  useLayoutEffect(() => {
+    if (!visible) {
+      return
+    }
+    const { x, y } = touchScrollDistance
+    if (Math.max(Math.abs(x), Math.abs(y)) > 150) {
+      showByClick(false)
+    }
+  }, [touchScrollDistance])
 
   useEffect(() => {
     const delayVisible = () => setDebouncedVisible(visibleDelayed)

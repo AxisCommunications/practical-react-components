@@ -60,3 +60,52 @@ context('Tooltip', () => {
     })
   })
 })
+
+context('Tooltip mobile device', () => {
+  before(() => {
+    cy.viewport('ipad-2')
+    cy.visit('http://localhost:9009/#/components/tooltip')
+  })
+
+  const data = {
+    textDataCy: 'expandedTooltipBottomLeftRightText',
+    tooltipDataCy: 'expandedTooltipBottomLeftRight',
+  }
+
+  it(`Tooltip ${data.tooltipDataCy} should appear, and should hide`, () => {
+    // Touch to show tooltip
+    cy.get(`[data-cy=${data.textDataCy}]`).should('exist')
+    cy.get(`[data-cy=${data.textDataCy}]`).trigger('pointerdown')
+    cy.get(`[data-cy=${data.tooltipDataCy}]`)
+      .should('exist')
+      .should('be.visible')
+
+    // Touch to hide tooltip
+    cy.get(`[data-cy=${data.textDataCy}]`).trigger('pointerdown')
+    cy.get(`[data-cy=${data.tooltipDataCy}]`).should('not.exist')
+  })
+
+  it(`Tooltip ${data.tooltipDataCy} should hide when client touch move more than 150 pixels`, () => {
+    // Touch to show tooltip
+    cy.get(`[data-cy=${data.textDataCy}]`).trigger('pointerdown')
+    cy.get(`[data-cy=${data.tooltipDataCy}]`)
+      .should('exist')
+      .should('be.visible')
+
+    // Touch move 151 pixels and hide tooltip
+    cy.get(`[data-cy=${data.textDataCy}]`)
+      .parent()
+      .trigger('touchstart', {
+        touches: [{ clientX: 0, clientY: 0, identifier: 0 }],
+      })
+
+    cy.get(`[data-cy=${data.textDataCy}]`)
+      .parent()
+      .trigger('touchmove', {
+        changedTouches: [{ clientX: 151, clientY: 151, identifier: 0 }],
+      })
+
+    // Tooltip is not shown
+    cy.get(`[data-cy=${data.tooltipDataCy}]`).should('not.exist')
+  })
+})
