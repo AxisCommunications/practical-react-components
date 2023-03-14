@@ -136,14 +136,10 @@ export const PopOver: FC<PopOverProps> = ({
     popOverContainer,
   ])
 
-  useOnScrollEffect(
-    anchorEl,
-    onScroll !== undefined
-      ? onScroll
-      : () => {
-          /** */
-        }
-  )
+  useOnScrollEffect(anchorEl, () => {
+    onScroll?.()
+    position()
+  })
 
   // Used when resizing the parent anchorEl
   useOnResizeParentEffect(anchorEl, position)
