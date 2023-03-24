@@ -1,0 +1,9 @@
+<!-- 
+  Based on Material design icons by Google - https://github.com/google/material-design-icons
+  which are licensed under the Apache License 2.0. Icon 'crop_free (filled)'.
+
+  File is modified. Modifications are licensed under the MIT license.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M15.334 22v-2.222h4.444v-4.445H22v4.445A2.228 2.228 0 0 1 19.779 22Zm-11.11 0A2.23 2.23 0 0 1 2 19.778v-4.445h2.223v4.445h4.444V22Zm9.562-6.966V8.671h4.362v1.076h-3.077v1.506h2.656v1.077h-2.656v2.7Zm-2.354 0-.556-1.445H8.333l-.525 1.445H6.445l2.478-6.363h1.359l2.547 6.363Zm-2.7-2.518h1.736l-.877-2.361Zm11.05-3.849V4.222h-4.444V2h4.445A2.228 2.228 0 0 1 22 4.222v4.445Zm-17.778 0V4.222A2.23 2.23 0 0 1 4.224 2h4.443v2.222H4.223v4.445Z"/>
+</svg>
