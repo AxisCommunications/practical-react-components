@@ -2,6 +2,15 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.15.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.15.0)
+2023-03-30 16:03:07 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.14.0...v1.15.0)
+
+### ✨ Features
+
+  - [!260](https://github.com/AxisCommunications/practical-react-components/pull/260) - **tooltip**:  remove tooltip on touch scroll ([`06d200f`](https://github.com/AxisCommunications/practical-react-components/commit/06d200f1f379f5820de533fca9161d2a06917fe8)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!260](https://github.com/AxisCommunications/practical-react-components/pull/260) - **popover**:  reposition on scroll event ([`b19437f`](https://github.com/AxisCommunications/practical-react-components/commit/b19437fd67ff1b5e2d3682d4eb4d06ba0dcc23ab)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!262](https://github.com/AxisCommunications/practical-react-components/pull/262) - **icons**:  add AltAutofocus icon ([`e57b668`](https://github.com/AxisCommunications/practical-react-components/commit/e57b668e1ba5b68066c370ff350ee6f0e3c6a13a)) ([**@Sana-Shana**](https://github.com/Sana-Shana))
+
 ## [v1.14.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.14.0)
 2023-03-01 13:22:02 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.13.0...v1.14.0)
 
