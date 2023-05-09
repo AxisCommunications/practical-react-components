@@ -5,6 +5,8 @@ import {
   FC,
   createRef,
   KeyboardEvent,
+  FocusEventHandler,
+  MouseEventHandler,
 } from 'react'
 import styled from 'styled-components'
 
@@ -31,6 +33,20 @@ type FormatVariants = 'hh:mm:ss' | 'hh:mm' | 'mm:ss' | 'hh' | 'mm' | 'ss'
 
 const BACKSPACE_KEY = 'Backspace'
 const DELETE_KEY = 'Delete'
+const ARROW_LEFT_KEY = 'ArrowLeft'
+const ARROW_RIGHT_KEY = 'ArrowRight'
+const ARROW_DOWN_KEY = 'ArrowDown'
+const ARROW_UP_KEY = 'ArrowUp'
+const END_KEY = 'End'
+const HOME_KEY = 'Home'
+const NAVIGATION_KEYS = [
+  ARROW_LEFT_KEY,
+  ARROW_RIGHT_KEY,
+  ARROW_DOWN_KEY,
+  ARROW_UP_KEY,
+  END_KEY,
+  HOME_KEY,
+]
 
 interface TimeContainerProps {
   readonly hour12: boolean
@@ -96,10 +112,10 @@ enum CursorPositions {
 /**
  * Gets the next caret position
  * @param position Current caret position
- * @param backspace If backspace was pressed
+ * @param reverse If backspace was pressed
  */
-const getTargetPos = (position: number, backspace: boolean) => {
-  if (!backspace) {
+const getTargetPos = (position: number, reverse: boolean) => {
+  if (!reverse) {
     switch (position) {
       case CursorPositions.BeforeFirstColon:
       case CursorPositions.BeforeSecondColon:
@@ -122,10 +138,10 @@ const getTargetPos = (position: number, backspace: boolean) => {
  * Moves the cursor one extra position if next to a colon
  *
  * @param position
- * @param backspace
+ * @param reverse
  */
-const moveCursor = (position: number, backspace: boolean) => {
-  if (!backspace) {
+const moveCursor = (position: number, reverse: boolean) => {
+  if (!reverse) {
     switch (position) {
       case CursorPositions.BeforeFirstColon:
       case CursorPositions.BeforeSecondColon:
@@ -349,6 +365,36 @@ export const TimeInput: FC<TimeInputProps> = ({
   const onKeyDown = useCallback(
     (event: KeyboardEvent<HTMLInputElement>) => {
       const { keyValue, backspace } = getKeyCodeValue(event.key)
+
+      const { currentTarget } = event
+      const currentValue = currentTarget.value
+
+      if (NAVIGATION_KEYS.includes(keyValue)) {
+        event.preventDefault()
+
+        if (keyValue === ARROW_LEFT_KEY || keyValue === ARROW_RIGHT_KEY) {
+          const position =
+            event.currentTarget.selectionStart ??
+            event.currentTarget.value.length
+          const reverse = keyValue === 'ArrowLeft'
+          inputPos = getTargetPos(position, reverse)
+
+          inputPos += reverse ? 0 : 1
+          inputPos = moveCursor(inputPos, reverse)
+        }
+
+        if (keyValue === HOME_KEY || keyValue === ARROW_UP_KEY) {
+          inputPos = 0
+        }
+
+        if (keyValue === END_KEY || keyValue === ARROW_DOWN_KEY) {
+          inputPos = event.currentTarget.value.length
+        }
+
+        setCursorPosition(inputPos)
+        return
+      }
+
       // If the key pressed is not a number
       if (!/^\d$/.test(keyValue)) {
         return
@@ -356,8 +402,6 @@ export const TimeInput: FC<TimeInputProps> = ({
 
       // Find input position and get target position for the new value.
       event.preventDefault()
-      const { currentTarget } = event
-      const currentValue = currentTarget.value
       inputPos = getTargetPos(
         currentTarget.selectionStart ?? currentValue.length,
         backspace
@@ -418,12 +462,28 @@ export const TimeInput: FC<TimeInputProps> = ({
     ]
   )
 
+  const handleCursorPosition = useCallback((element: HTMLInputElement) => {
+    if (element.selectionStart !== null) {
+      inputPos = element.selectionStart
+    }
+  }, [])
+  const onFocus = useCallback<FocusEventHandler<HTMLInputElement>>(
+    event => handleCursorPosition(event.currentTarget),
+    [handleCursorPosition]
+  )
+  const onClick = useCallback<MouseEventHandler<HTMLInputElement>>(
+    event => handleCursorPosition(event.currentTarget),
+    [handleCursorPosition]
+  )
+
   return (
     <TimeContainer hour12={hour12}>
       <TextInput
         value={inputValue}
         inputRef={inputElement}
         onKeyDown={onKeyDown}
+        onFocus={onFocus}
+        onClick={onClick}
         {...props}
       />
       {hour12 && hour !== undefined ? (
