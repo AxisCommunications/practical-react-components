@@ -302,6 +302,14 @@ export interface SliderProps extends BaseProps {
    * Configuration for displaying ticks in the slider
    */
   readonly tickConfig?: TickConfig
+  /**
+   * Executes JavaScript when a user presses the knob
+   */
+  readonly onPressed?: (pressed: boolean) => void
+  /**
+   * Returns the current knob position in the X-axis
+   */
+  readonly onKnobMove?: (value: number) => void
 }
 
 export const Meta = styled.div`
@@ -334,6 +342,8 @@ export const Slider: FC<SliderProps> = ({
   onPointerDown,
   onPointerUp,
   onFocus,
+  onPressed,
+  onKnobMove,
   tickConfig = {
     ticks: [],
   },
@@ -355,6 +365,11 @@ export const Slider: FC<SliderProps> = ({
   const fraction = useMemo(
     () => clamp((value - min) / (max - min)),
     [max, min, value]
+  )
+
+  const sliderPosition = useMemo(
+    () => fraction * sliderWidth,
+    [fraction, sliderWidth]
   )
 
   // Generate the ticks with its position along the x-axis
@@ -440,6 +455,16 @@ export const Slider: FC<SliderProps> = ({
       }
     }
   }, [handleClick, pressed])
+
+  // Trigger callback when the knob is moved along the X-axis
+  useEffect(() => {
+    onKnobMove?.(sliderPosition)
+  }, [sliderPosition])
+
+  // Trigger callback when knob is pressed
+  useEffect(() => {
+    onPressed?.(pressed)
+  }, [pressed])
 
   const getNextSnap = useCallback(
     () => snapValues.find(snapValue => snapValue > fraction),
@@ -597,9 +622,7 @@ export const Slider: FC<SliderProps> = ({
             fraction={fraction}
             pressed={pressed}
             style={{
-              transform: `translateX(-50%) translateX(${
-                fraction * sliderWidth
-              }px)`,
+              transform: `translateX(-50%) translateX(${sliderPosition}px)`,
             }}
             ref={knobRef}
           >
