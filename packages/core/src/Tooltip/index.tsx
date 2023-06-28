@@ -96,7 +96,7 @@ const ExpandedTooltipTitle = styled(Typography).attrs({
   variant: 'chip-tag-text',
 })`
   font-weight: ${font.fontWeight.semibold};
-  white-space: nowrap;
+  white-space: normal;
 `
 
 const ExpandedTooltipExtraInfo = styled(Typography).attrs({
