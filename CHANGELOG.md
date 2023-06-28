@@ -2,6 +2,18 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.16.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.16.0)
+2023-06-28 14:02:18 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.15.0...v1.16.0)
+
+### ✨ Features
+
+  - [!268](https://github.com/AxisCommunications/practical-react-components/pull/268) - **icons**:  add SystemTimelocation icon ([`c3bfb9b`](https://github.com/AxisCommunications/practical-react-components/commit/c3bfb9baa294a685cb6add419e693330bf88f393))
+  - [!266](https://github.com/AxisCommunications/practical-react-components/pull/266) - **slider**:  slider with indicator props ([`d712d27`](https://github.com/AxisCommunications/practical-react-components/commit/d712d27b2f9299dbad394450040418b3aac11560)) ([**@brian-chano**](https://github.com/brian-chano))
+
+### 🐛 Bug fixes
+
+  - [!265](https://github.com/AxisCommunications/practical-react-components/pull/265) - **tooltip**:  wrap ExpandedTooltipTitle overflow ([`333d9ae`](https://github.com/AxisCommunications/practical-react-components/commit/333d9ae986beaa5f373f9df6aca81397cbb28cf5))
+
 ## [v1.15.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.15.0)
 2023-03-30 16:03:07 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.14.0...v1.15.0)
 
