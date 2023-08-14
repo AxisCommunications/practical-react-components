@@ -165,7 +165,7 @@ export const DraggableList: FC<DraggableListProps> = ({
         const isLocked = locked[childIndex]
 
         return (
-          <div key={index}>
+          <div key={childIndex}>
             <DraggableItem
               onDragStart={onDragStart}
               onDragOver={isLocked ? undefined : onDragOver}
