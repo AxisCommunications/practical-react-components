@@ -2,6 +2,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.17.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.17.0)
+2023-08-18 11:32:14 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.16.0...v1.17.0)
+
+### 🐛 Bug fixes
+
+  - [!270](https://github.com/AxisCommunications/practical-react-components/pull/270) - **core**:  segments missing while dragging ([`5e90887`](https://github.com/AxisCommunications/practical-react-components/commit/5e90887f815a8582bc81a2966d2c9da2bf9a84ba)) ([**@rikteg**](https://github.com/rikteg))
+
 ## [v1.16.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.16.0)
 2023-06-28 14:02:18 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.15.0...v1.16.0)
 
