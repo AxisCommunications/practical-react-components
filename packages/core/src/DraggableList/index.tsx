@@ -125,13 +125,19 @@ export const DraggableList: FC<DraggableListProps> = ({
   const dragIndexRef = useRef<number | undefined>()
   const dropIndexRef = useRef<number | undefined>()
 
-  const onDragStart = useCallback<DragEventHandler<HTMLDivElement>>(e => {
-    // Needed for Firefox
-    // You need to set some data in the dataTransfer member
-    // of the event when the drag start in Firefox
-    e.dataTransfer.setData('text', '')
-    dragIndexRef.current = Number(e.currentTarget.dataset.index)
-  }, [])
+  const onDragStart = useCallback<DragEventHandler<HTMLDivElement>>(
+    e => {
+      // Needed for Firefox
+      // You need to set some data in the dataTransfer member
+      // of the event when the drag start in Firefox
+      e.dataTransfer.setData('text', '')
+      const dragIndex = Number(e.currentTarget.dataset.index)
+      if (locked[dragIndex] !== true) {
+        dragIndexRef.current = Number(e.currentTarget.dataset.index)
+      }
+    },
+    [locked]
+  )
 
   const onDragOver = useCallback<DragEventHandler<HTMLDivElement>>(
     e => {
