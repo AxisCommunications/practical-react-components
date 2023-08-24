@@ -102,7 +102,7 @@ const StepDivider = styled.span<{
       : css`
           background-color: ${() => theme.color.element14()};
         `}
-  left: -2px;
+  left: -10px;
 `
 
 const StepHeader = styled.div`
@@ -128,18 +128,18 @@ const StepLabelWrapper = styled.div<{
 
   display: flex;
   min-height: 24px;
-  padding-left: 18px;
+  padding-left: 10px;
 `
 
 const StepContentContainer = styled.div`
-  padding: ${spacing.medium} 0 ${spacing.huge} 20px;
+  padding: ${spacing.medium} 0 ${spacing.huge} 12px;
 `
 
 export const StepControls = styled.div`
   display: inline-grid;
   grid-template-columns: auto auto;
   grid-gap: ${spacing.medium};
-  padding: ${spacing.small} 0 20px 20px;
+  padding: ${spacing.small} 0 20px 12px;
 `
 
 const StepContentWrapper = styled.div<{
@@ -148,6 +148,7 @@ const StepContentWrapper = styled.div<{
   position: relative;
   min-height: 32px;
   margin-bottom: -8px;
+  margin-left: ${spacing.medium};
 `
 
 interface StepProps extends Omit<StepContent, 'content'> {

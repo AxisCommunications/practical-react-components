@@ -195,7 +195,7 @@ exports[`Stepper Stepper 1`] = `
   width: 1px;
   position: absolute;
   background-color: rgb(103,58,183);
-  left: -2px;
+  left: -10px;
 }
 
 .c18 {
@@ -204,7 +204,7 @@ exports[`Stepper Stepper 1`] = `
   width: 1px;
   position: absolute;
   background-color: rgb(163,163,163);
-  left: -2px;
+  left: -10px;
 }
 
 .c5 {
@@ -223,7 +223,7 @@ exports[`Stepper Stepper 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 24px;
-  padding-left: 18px;
+  padding-left: 10px;
 }
 
 .c19 {
@@ -237,24 +237,25 @@ exports[`Stepper Stepper 1`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 24px;
-  padding-left: 18px;
+  padding-left: 10px;
 }
 
 .c11 {
-  padding: 8px 0 32px 20px;
+  padding: 8px 0 32px 12px;
 }
 
 .c12 {
   display: inline-grid;
   grid-template-columns: auto auto;
   grid-gap: 8px;
-  padding: 4px 0 20px 20px;
+  padding: 4px 0 20px 12px;
 }
 
 .c8 {
   position: relative;
   min-height: 32px;
   margin-bottom: -8px;
+  margin-left: 8px;
 }
 
 .c3 {
@@ -616,7 +617,7 @@ exports[`Stepper Stepper 2`] = `
   width: 1px;
   position: absolute;
   background-color: rgb(103,58,183);
-  left: -2px;
+  left: -10px;
 }
 
 .c5 {
@@ -635,7 +636,7 @@ exports[`Stepper Stepper 2`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 24px;
-  padding-left: 18px;
+  padding-left: 10px;
 }
 
 .c18 {
@@ -649,24 +650,25 @@ exports[`Stepper Stepper 2`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 24px;
-  padding-left: 18px;
+  padding-left: 10px;
 }
 
 .c11 {
-  padding: 8px 0 32px 20px;
+  padding: 8px 0 32px 12px;
 }
 
 .c12 {
   display: inline-grid;
   grid-template-columns: auto auto;
   grid-gap: 8px;
-  padding: 4px 0 20px 20px;
+  padding: 4px 0 20px 12px;
 }
 
 .c8 {
   position: relative;
   min-height: 32px;
   margin-bottom: -8px;
+  margin-left: 8px;
 }
 
 .c3 {
@@ -976,24 +978,25 @@ exports[`Stepper Stepper 3`] = `
   display: -ms-flexbox;
   display: flex;
   min-height: 24px;
-  padding-left: 18px;
+  padding-left: 10px;
 }
 
 .c10 {
-  padding: 8px 0 32px 20px;
+  padding: 8px 0 32px 12px;
 }
 
 .c11 {
   display: inline-grid;
   grid-template-columns: auto auto;
   grid-gap: 8px;
-  padding: 4px 0 20px 20px;
+  padding: 4px 0 20px 12px;
 }
 
 .c8 {
   position: relative;
   min-height: 32px;
   margin-bottom: -8px;
+  margin-left: 8px;
 }
 
 .c3 {
