@@ -2,6 +2,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.17.2](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.17.2)
+2023-08-24 16:08:44 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.17.1...v1.17.2)
+
+### 🐛 Bug fixes
+
+  - [!274](https://github.com/AxisCommunications/practical-react-components/pull/274) - **stepper**:  step number cursor ([`da78987`](https://github.com/AxisCommunications/practical-react-components/commit/da7898768ec28b5ede88de44f2e8200e22143750)) ([**@HitomiWin**](https://github.com/HitomiWin))
+
 ## [v1.17.1](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.17.1)
 2023-08-21 10:10:19 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.17.0...v1.17.1)
 
