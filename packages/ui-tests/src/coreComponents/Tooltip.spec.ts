@@ -85,25 +85,15 @@ context('Tooltip mobile device', { testIsolation: false }, () => {
     cy.get(`[data-cy=${data.tooltipDataCy}]`).should('not.exist')
   })
 
-  it(`Tooltip ${data.tooltipDataCy} should hide when client touch move more than 150 pixels`, () => {
+  it(`Tooltip ${data.tooltipDataCy} should hide when client touch the screen again`, () => {
     // Touch to show tooltip
     cy.get(`[data-cy=${data.textDataCy}]`).trigger('pointerdown')
     cy.get(`[data-cy=${data.tooltipDataCy}]`)
       .should('exist')
       .should('be.visible')
 
-    // Touch move 151 pixels and hide tooltip
-    cy.get(`[data-cy=${data.textDataCy}]`)
-      .parent()
-      .trigger('touchstart', {
-        touches: [{ clientX: 0, clientY: 0, identifier: 0 }],
-      })
-
-    cy.get(`[data-cy=${data.textDataCy}]`)
-      .parent()
-      .trigger('touchmove', {
-        changedTouches: [{ clientX: 151, clientY: 151, identifier: 0 }],
-      })
+    // Touch the screen again
+    cy.get(`[data-cy=${data.textDataCy}]`).parent().trigger('pointerdown')
 
     // Tooltip is not shown
     cy.get(`[data-cy=${data.tooltipDataCy}]`).should('not.exist')
