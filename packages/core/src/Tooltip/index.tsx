@@ -10,13 +10,12 @@ import {
 	FC,
 } from 'react'
 import styled, { css } from 'styled-components'
-import { useBoolean } from 'react-hooks-shareable'
+import { useBoolean, useClickOutside } from 'react-hooks-shareable'
 
 import { Typography, TypographyProps } from '../Typography'
 import { PopOver, PopOverProps } from '../PopOver'
 import { shape, spacing, componentSize } from '../designparams'
 import { font } from '../theme'
-import { useTouchScrollDistance } from './utils'
 
 /**
  * Tooltip
@@ -255,7 +254,8 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
 	const child = Children.only(children) as ReactElement
 	const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
 	// State for click
-	const [visibleByClick, showByClick] = useState(false)
+	const [visibleByClick, _showByClick, hideByClick, toggleByClick] =
+		useBoolean(false)
 	// Delayed state for pointer
 	const [visibleDelayed, showDelayed, hideDelayed] = useBoolean(false)
 	// State for pointer
@@ -266,8 +266,6 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
 	// If tooltip should be shown
 	const visible = visibleByClick || debouncedVisible
 
-	const touchScrollDistance = useTouchScrollDistance()
-
 	const toggle = useCallback(
 		(event: PointerEvent) => {
 			// When using touch instead of mouse, we have to toggle the tooltip
@@ -276,24 +274,12 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
 				return
 			}
 
-			showByClick(v => !v)
+			toggleByClick()
 		},
-		[showByClick]
+		[toggleByClick]
 	)
 
-	/**
-	 * If the delta for any axis is larger than 150 pixels,
-	 * remove the tooltip from the screen.
-	 */
-	useLayoutEffect(() => {
-		if (!visible) {
-			return
-		}
-		const { x, y } = touchScrollDistance
-		if (Math.max(Math.abs(x), Math.abs(y)) > 150) {
-			showByClick(false)
-		}
-	}, [touchScrollDistance])
+	const handlePointerDown = useClickOutside(hideByClick)
 
 	useEffect(() => {
 		const delayVisible = () => setDebouncedVisible(visibleDelayed)
@@ -375,6 +361,7 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
 			<>
 				{cloneElement(child, {
 					ref: setAnchorEl,
+					onPointerDown: handlePointerDown,
 				})}
 				{visible ? (
 					<PopOver anchorEl={anchorEl} {...alignments[layout]} {...props}>
@@ -393,6 +380,7 @@ export const Tooltip: FC<TooltipProps | ExpandedTooltipProps> = ({
 		<>
 			{cloneElement(child, {
 				ref: setAnchorEl,
+				onPointerDown: handlePointerDown,
 			})}
 			{visible ? (
 				<>

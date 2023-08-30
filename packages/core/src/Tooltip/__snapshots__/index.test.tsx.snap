@@ -33,7 +33,9 @@ exports[`Tooltip Default 1`] = `
       className="c1"
       id="layer-1"
     >
-      <span>
+      <span
+        onPointerDown={[Function]}
+      >
         Test
       </span>
     </div>
@@ -84,7 +86,9 @@ exports[`Tooltip Expanded 1`] = `
       className="c1"
       id="layer-3"
     >
-      <span>
+      <span
+        onPointerDown={[Function]}
+      >
         Test
       </span>
     </div>
@@ -135,7 +139,9 @@ exports[`Tooltip Expanded 2`] = `
       className="c1"
       id="layer-5"
     >
-      <span>
+      <span
+        onPointerDown={[Function]}
+      >
         Test
       </span>
     </div>
@@ -186,7 +192,9 @@ exports[`Tooltip Expanded 3`] = `
       className="c1"
       id="layer-7"
     >
-      <span>
+      <span
+        onPointerDown={[Function]}
+      >
         Test
       </span>
     </div>
