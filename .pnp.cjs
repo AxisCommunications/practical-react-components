@@ -58,6 +58,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:7.19.4"],\
             ["@babel/preset-react", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:7.18.6"],\
             ["@babel/preset-typescript", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:7.18.6"],\
+            ["@biomejs/biome", "npm:1.2.2"],\
             ["@mdx-js/react", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:2.1.5"],\
             ["@stylelint/postcss-css-in-js", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:0.38.0"],\
             ["@types/enzyme", "npm:3.10.12"],\
@@ -2716,6 +2717,75 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@bcoe-v8-coverage-npm-0.2.3-9e27b3c57e-850f930553.zip/node_modules/@bcoe/v8-coverage/",\
           "packageDependencies": [\
             ["@bcoe/v8-coverage", "npm:0.2.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@biomejs/biome", [\
+        ["npm:1.2.2", {\
+          "packageLocation": "./.yarn/unplugged/@biomejs-biome-npm-1.2.2-e74518880a/node_modules/@biomejs/biome/",\
+          "packageDependencies": [\
+            ["@biomejs/biome", "npm:1.2.2"],\
+            ["@biomejs/cli-darwin-arm64", "npm:1.2.2"],\
+            ["@biomejs/cli-darwin-x64", "npm:1.2.2"],\
+            ["@biomejs/cli-linux-arm64", "npm:1.2.2"],\
+            ["@biomejs/cli-linux-x64", "npm:1.2.2"],\
+            ["@biomejs/cli-win32-arm64", "npm:1.2.2"],\
+            ["@biomejs/cli-win32-x64", "npm:1.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@biomejs/cli-darwin-arm64", [\
+        ["npm:1.2.2", {\
+          "packageLocation": "./.yarn/unplugged/@biomejs-cli-darwin-arm64-npm-1.2.2-40624e6a91/node_modules/@biomejs/cli-darwin-arm64/",\
+          "packageDependencies": [\
+            ["@biomejs/cli-darwin-arm64", "npm:1.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@biomejs/cli-darwin-x64", [\
+        ["npm:1.2.2", {\
+          "packageLocation": "./.yarn/unplugged/@biomejs-cli-darwin-x64-npm-1.2.2-2d9a85bc47/node_modules/@biomejs/cli-darwin-x64/",\
+          "packageDependencies": [\
+            ["@biomejs/cli-darwin-x64", "npm:1.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@biomejs/cli-linux-arm64", [\
+        ["npm:1.2.2", {\
+          "packageLocation": "./.yarn/unplugged/@biomejs-cli-linux-arm64-npm-1.2.2-51de2eb792/node_modules/@biomejs/cli-linux-arm64/",\
+          "packageDependencies": [\
+            ["@biomejs/cli-linux-arm64", "npm:1.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@biomejs/cli-linux-x64", [\
+        ["npm:1.2.2", {\
+          "packageLocation": "./.yarn/unplugged/@biomejs-cli-linux-x64-npm-1.2.2-edd34f0d61/node_modules/@biomejs/cli-linux-x64/",\
+          "packageDependencies": [\
+            ["@biomejs/cli-linux-x64", "npm:1.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@biomejs/cli-win32-arm64", [\
+        ["npm:1.2.2", {\
+          "packageLocation": "./.yarn/unplugged/@biomejs-cli-win32-arm64-npm-1.2.2-27c4c0537a/node_modules/@biomejs/cli-win32-arm64/",\
+          "packageDependencies": [\
+            ["@biomejs/cli-win32-arm64", "npm:1.2.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@biomejs/cli-win32-x64", [\
+        ["npm:1.2.2", {\
+          "packageLocation": "./.yarn/unplugged/@biomejs-cli-win32-x64-npm-1.2.2-02c61dccd8/node_modules/@biomejs/cli-win32-x64/",\
+          "packageDependencies": [\
+            ["@biomejs/cli-win32-x64", "npm:1.2.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -13778,6 +13848,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/preset-env", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:7.19.4"],\
             ["@babel/preset-react", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:7.18.6"],\
             ["@babel/preset-typescript", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:7.18.6"],\
+            ["@biomejs/biome", "npm:1.2.2"],\
             ["@mdx-js/react", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:2.1.5"],\
             ["@stylelint/postcss-css-in-js", "virtual:45019550212a285261f40f1c5b5aca972094bc34a9701de48e46ffe0346e9125e46a0cb258ee74f57c2a62ce50c24ee0bb05ededbf7d691dc9c3094e8af89711#npm:0.38.0"],\
             ["@types/enzyme", "npm:3.10.12"],\
