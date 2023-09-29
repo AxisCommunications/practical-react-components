@@ -85,5 +85,5 @@
     "html-webpack-plugin": "5.5.0",
     "loader-utils": "2.0.2"
   },
-  "packageManager": "yarn@3.2.4"
+  "packageManager": "yarn@3.6.3"
 }
