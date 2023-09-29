@@ -1,0 +1,64 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.2.2/schema.json",
+  "organizeImports": {
+    "enabled": false
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noEmptyInterface": "off",
+        "noExplicitAny": "off",
+        "noArrayIndexKey": "off",
+        "noShadowRestrictedNames": "off",
+        "noAssignInExpressions": "off"
+      },
+      "complexity": {
+        "noUselessFragments": "off",
+        "useLiteralKeys": "off",
+        "noUselessSwitchCase": "off"
+      },
+      "style": {
+        "noUnusedTemplateLiteral": "off",
+        "useExponentiationOperator": "off",
+        "noParameterAssign": "off",
+        "useEnumInitializers": "off",
+        "useSelfClosingElements": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off",
+        "noPositiveTabindex": "off"
+      },
+      "correctness": {
+        "noSelfAssign": "off"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": false,
+    "indentStyle": "space"
+  },
+  "files": {
+    "ignore": [
+      "packages/**/build",
+      "packages/**/dist",
+      "packages/**/*.spec.ts",
+      "packages/icons/src/__generated__",
+      "./packages/docs/src/props.json",
+      ".pnp.cjs",
+      ".pnp.loader.mjs",
+      "coverage"
+    ]
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "quoteStyle": "single",
+      "indentStyle": "space",
+      "trailingComma": "es5",
+      "arrowParentheses": "asNeeded",
+      "quoteProperties": "preserve"
+    }
+  }
+}
