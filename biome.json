@@ -36,7 +36,6 @@
     }
   },
   "formatter": {
-    "enabled": false,
     "indentStyle": "space"
   },
   "files": {

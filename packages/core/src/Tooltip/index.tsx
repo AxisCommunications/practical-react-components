@@ -109,11 +109,12 @@ const StyledExpandedTooltipTypography = styled(Typography).attrs({
   white-space: normal;
 `
 
-export const ExpandedTooltipTypography: FC<
-  Omit<TypographyProps, 'variant'>
-> = ({ children }) => (
-  <StyledExpandedTooltipTypography>{children}</StyledExpandedTooltipTypography>
-)
+export const ExpandedTooltipTypography: FC<Omit<TypographyProps, 'variant'>> =
+  ({ children }) => (
+    <StyledExpandedTooltipTypography>
+      {children}
+    </StyledExpandedTooltipTypography>
+  )
 
 const upDownArrowBase = css`
   width: 0;

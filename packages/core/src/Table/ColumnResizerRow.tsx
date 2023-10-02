@@ -297,9 +297,7 @@ export const ColumnResizerRow: FC<ColumnResizerRowProps> = ({
 
   const dragEndHandlers = useMemo(() => {
     return [...Array(dividers.length).keys()].map(
-      i =>
-        ([tx]: readonly [number, number]) =>
-          moveDivider(tx, i)
+      i => ([tx]: readonly [number, number]) => moveDivider(tx, i)
     )
   }, [dividers.length, moveDivider])
 

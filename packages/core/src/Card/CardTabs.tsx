@@ -50,9 +50,9 @@ const Tab = styled.div<{
           }
         `
       : css`
-          background-color: ${selected
-            ? theme.color.background00()
-            : theme.color.background02()};
+          background-color: ${
+            selected ? theme.color.background00() : theme.color.background02()
+          };
           border-radius: ${shape.radius.medium} ${shape.radius.medium} 0 0;
           box-shadow: ${theme.shadow.tab};
           padding: 0 ${spacing.large};
@@ -65,9 +65,9 @@ const Tab = styled.div<{
           }
 
           &:hover {
-            background-color: ${selected
-              ? theme.color.background00()
-              : theme.color.background01()};
+            background-color: ${
+              selected ? theme.color.background00() : theme.color.background01()
+            };
           }
         `}
 

@@ -96,9 +96,11 @@ const SelectInput = styled.div<SelectInputProps>`
           `
         : visibleFocus
         ? css`
-            background-color: ${variant === 'filled' || variant === 'framed'
-              ? theme.color.background01()
-              : 'transparent'};
+            background-color: ${
+              variant === 'filled' || variant === 'framed'
+                ? theme.color.background01()
+                : 'transparent'
+            };
             border: 2px solid ${theme.color.textPrimary()};
             padding: 0;
           `
