@@ -1,10 +1,10 @@
 import {
-  useRef,
-  useCallback,
-  useState,
-  InputHTMLAttributes,
-  ChangeEventHandler,
-  FC,
+	useRef,
+	useCallback,
+	useState,
+	InputHTMLAttributes,
+	ChangeEventHandler,
+	FC,
 } from 'react'
 import styled from 'styled-components'
 import { Typography } from '../Typography'
@@ -29,17 +29,17 @@ const FileInput = styled.input`
 `
 
 export interface FilePickerProps
-  extends Pick<ButtonProps, 'variant' | 'accent' | 'label' | 'icon'>,
-    BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * Callback that fires when user has chosen a file.
-   * @param file the chosen file
-   */
-  readonly onFileChange?: (file?: File) => void
+	extends Pick<ButtonProps, 'variant' | 'accent' | 'label' | 'icon'>,
+		BaseProps {
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * Callback that fires when user has chosen a file.
+	 * @param file the chosen file
+	 */
+	readonly onFileChange?: (file?: File) => void
 }
 
 /**
@@ -52,52 +52,52 @@ export interface FilePickerProps
  *
  */
 export const FilePicker: FC<FilePickerProps> = ({
-  onFileChange,
-  disabled,
-  name,
-  variant,
-  label,
-  icon,
-  className,
-  onChange,
-  ...props
+	onFileChange,
+	disabled,
+	name,
+	variant,
+	label,
+	icon,
+	className,
+	onChange,
+	...props
 }) => {
-  const ref = useRef<HTMLInputElement>(null)
-  const [fileName, setFileName] = useState('')
-  const onButtonClick = useCallback(() => {
-    if (ref.current !== null) {
-      ref.current.click()
-    }
-  }, [ref])
-  const handleFileChange = useCallback<InputChangeHandler>(
-    e => {
-      onChange?.(e)
-      const chosenFile = e.target.files?.[0]
+	const ref = useRef<HTMLInputElement>(null)
+	const [fileName, setFileName] = useState('')
+	const onButtonClick = useCallback(() => {
+		if (ref.current !== null) {
+			ref.current.click()
+		}
+	}, [ref])
+	const handleFileChange = useCallback<InputChangeHandler>(
+		e => {
+			onChange?.(e)
+			const chosenFile = e.target.files?.[0]
 
-      if (chosenFile === undefined) {
-        return
-      }
+			if (chosenFile === undefined) {
+				return
+			}
 
-      setFileName(chosenFile.name)
-      onFileChange?.(chosenFile)
-    },
-    [onFileChange, onChange]
-  )
+			setFileName(chosenFile.name)
+			onFileChange?.(chosenFile)
+		},
+		[onFileChange, onChange]
+	)
 
-  return (
-    <ButtonFileChooserContainer className={className}>
-      <Button
-        disabled={disabled}
-        name={name}
-        onClick={onButtonClick}
-        variant={variant}
-        className={className}
-        label={label}
-        type="button"
-        icon={icon}
-      />
-      <FileInput type="file" ref={ref} onChange={handleFileChange} {...props} />
-      <Typography variant="default-text">{fileName}</Typography>
-    </ButtonFileChooserContainer>
-  )
+	return (
+		<ButtonFileChooserContainer className={className}>
+			<Button
+				disabled={disabled}
+				name={name}
+				onClick={onButtonClick}
+				variant={variant}
+				className={className}
+				label={label}
+				type="button"
+				icon={icon}
+			/>
+			<FileInput type="file" ref={ref} onChange={handleFileChange} {...props} />
+			<Typography variant="default-text">{fileName}</Typography>
+		</ButtonFileChooserContainer>
+	)
 }

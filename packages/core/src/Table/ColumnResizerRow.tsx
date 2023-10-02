@@ -1,10 +1,10 @@
 import {
-  useContext,
-  useMemo,
-  useCallback,
-  useEffect,
-  RefObject,
-  FC,
+	useContext,
+	useMemo,
+	useCallback,
+	useEffect,
+	RefObject,
+	FC,
 } from 'react'
 import styled from 'styled-components'
 
@@ -21,9 +21,9 @@ import { TableContext, WidthActionType } from './context'
  * before and after the divider.
  */
 interface ColumnDivider {
-  readonly offset: number
-  readonly before: number
-  readonly after: number
+	readonly offset: number
+	readonly before: number
+	readonly after: number
 }
 
 /**
@@ -34,15 +34,15 @@ interface ColumnDivider {
  * @param divider Divider
  */
 const clipTranslation = (
-  tx: number,
-  divider: ColumnDivider,
-  minWidth: number
+	tx: number,
+	divider: ColumnDivider,
+	minWidth: number
 ) => {
-  const { before, after } = divider
-  const txMin = minWidth - before
-  const txMax = after - minWidth
+	const { before, after } = divider
+	const txMin = minWidth - before
+	const txMax = after - minWidth
 
-  return Math.min(Math.max(txMin, tx), txMax)
+	return Math.min(Math.max(txMin, tx), txMax)
 }
 
 /*******************************************************************************
@@ -52,11 +52,11 @@ const clipTranslation = (
  ******************************************************************************/
 
 const ResizeContainer = styled.div.attrs<{ readonly left: number }>(
-  ({ left }) => {
-    return {
-      style: { left: `${left - 8}px` },
-    }
-  }
+	({ left }) => {
+		return {
+			style: { left: `${left - 8}px` },
+		}
+	}
 )<{ readonly left: number }>`
   display: relative;
   position: absolute;
@@ -88,7 +88,7 @@ const ResizeHandle = styled.div`
  * A vertical line marking the edge of the new column.
  */
 const ResizeMarker = styled.div<{
-  readonly dragging: boolean
+	readonly dragging: boolean
 }>`
   display: ${({ dragging }) => (dragging ? 'unset' : 'none')};
   position: absolute;
@@ -110,64 +110,64 @@ const ResizeMarker = styled.div<{
  * accommodate it's largest element without overflow.
  */
 const widthLookup = (
-  tableRef: RefObject<HTMLDivElement>,
-  separator: number
+	tableRef: RefObject<HTMLDivElement>,
+	separator: number
 ): readonly [number, number] => {
-  const column1Elements = tableRef.current?.querySelectorAll(
-    `[data-col="${separator}"]`
-  )
-  let maxColumn1Width = 0
-  for (const el of column1Elements ?? []) {
-    maxColumn1Width = Math.max(
-      maxColumn1Width,
-      el.children[0].getBoundingClientRect().width
-    )
-  }
+	const column1Elements = tableRef.current?.querySelectorAll(
+		`[data-col="${separator}"]`
+	)
+	let maxColumn1Width = 0
+	for (const el of column1Elements ?? []) {
+		maxColumn1Width = Math.max(
+			maxColumn1Width,
+			el.children[0].getBoundingClientRect().width
+		)
+	}
 
-  const column2Elements = tableRef.current?.querySelectorAll(
-    `[data-col="${separator + 1}"]`
-  )
-  let maxColumn2Width = 0
-  for (const el of column2Elements ?? []) {
-    maxColumn2Width = Math.max(
-      maxColumn2Width,
-      el.children[0].getBoundingClientRect().width
-    )
-  }
+	const column2Elements = tableRef.current?.querySelectorAll(
+		`[data-col="${separator + 1}"]`
+	)
+	let maxColumn2Width = 0
+	for (const el of column2Elements ?? []) {
+		maxColumn2Width = Math.max(
+			maxColumn2Width,
+			el.children[0].getBoundingClientRect().width
+		)
+	}
 
-  return [
-    maxColumn1Width + TABLE_DIMENSIONS.PADDING_LEFT,
-    maxColumn2Width + TABLE_DIMENSIONS.PADDING_LEFT,
-  ]
+	return [
+		maxColumn1Width + TABLE_DIMENSIONS.PADDING_LEFT,
+		maxColumn2Width + TABLE_DIMENSIONS.PADDING_LEFT,
+	]
 }
 
 interface UpdateWidthsArgs {
-  readonly tableRef: RefObject<HTMLDivElement>
-  readonly separator: number
-  readonly currentSizes: ReadonlyArray<number>
-  readonly minColumnWidth: number
+	readonly tableRef: RefObject<HTMLDivElement>
+	readonly separator: number
+	readonly currentSizes: ReadonlyArray<number>
+	readonly minColumnWidth: number
 }
 
 const updateWidths = ({
-  tableRef,
-  separator,
-  currentSizes,
-  minColumnWidth,
+	tableRef,
+	separator,
+	currentSizes,
+	minColumnWidth,
 }: UpdateWidthsArgs) => {
-  const [col1, col2] = widthLookup(tableRef, separator)
-  const prevCol1 = currentSizes[separator]
-  const prevCol2 = currentSizes[separator + 1]
+	const [col1, col2] = widthLookup(tableRef, separator)
+	const prevCol1 = currentSizes[separator]
+	const prevCol2 = currentSizes[separator + 1]
 
-  const newCol1 = Math.min(Math.max(col1, minColumnWidth), prevCol1)
-  const newCol2 = Math.min(Math.max(col2, minColumnWidth), prevCol2)
+	const newCol1 = Math.min(Math.max(col1, minColumnWidth), prevCol1)
+	const newCol2 = Math.min(Math.max(col2, minColumnWidth), prevCol2)
 
-  const scaleFactor = (prevCol1 + prevCol2) / (newCol1 + newCol2)
+	const scaleFactor = (prevCol1 + prevCol2) / (newCol1 + newCol2)
 
-  const newWidths = [...currentSizes]
-  newWidths[separator] = newCol1 * scaleFactor
-  newWidths[separator + 1] = newCol2 * scaleFactor
+	const newWidths = [...currentSizes]
+	newWidths[separator] = newCol1 * scaleFactor
+	newWidths[separator + 1] = newCol2 * scaleFactor
 
-  return newWidths
+	return newWidths
 }
 
 /*
@@ -179,57 +179,57 @@ const updateWidths = ({
  */
 
 interface ColumnResizerProps {
-  readonly divider: ColumnDivider
-  readonly setDragging: (dragging: boolean) => void
-  readonly onDragEnd: (t: readonly [number, number]) => void
-  readonly index: number
+	readonly divider: ColumnDivider
+	readonly setDragging: (dragging: boolean) => void
+	readonly onDragEnd: (t: readonly [number, number]) => void
+	readonly index: number
 }
 
 const ColumnResizer: FC<ColumnResizerProps> = ({
-  divider,
-  setDragging,
-  onDragEnd,
-  index,
+	divider,
+	setDragging,
+	onDragEnd,
+	index,
 }) => {
-  const { minColumnWidth, dispatchWidthsAction, columnWidths, tableRef } =
-    useContext(TableContext)
+	const { minColumnWidth, dispatchWidthsAction, columnWidths, tableRef } =
+		useContext(TableContext)
 
-  const [[tx], onDragStart, dragging] = useDraggable(onDragEnd)
-  const txClipped = clipTranslation(tx, divider, minColumnWidth)
+	const [[tx], onDragStart, dragging] = useDraggable(onDragEnd)
+	const txClipped = clipTranslation(tx, divider, minColumnWidth)
 
-  useEffect(() => {
-    setDragging(dragging)
-    if (dragging) {
-      document.body.style.cursor = 'ew-resize'
-      return () => {
-        document.body.style.cursor = ''
-      }
-    }
-  }, [dragging, setDragging])
+	useEffect(() => {
+		setDragging(dragging)
+		if (dragging) {
+			document.body.style.cursor = 'ew-resize'
+			return () => {
+				document.body.style.cursor = ''
+			}
+		}
+	}, [dragging, setDragging])
 
-  const optimizeColWidths = useCallback(() => {
-    if (tableRef === undefined) return
+	const optimizeColWidths = useCallback(() => {
+		if (tableRef === undefined) return
 
-    dispatchWidthsAction({
-      type: WidthActionType.UPDATE_WIDTHS,
-      widths: updateWidths({
-        tableRef,
-        separator: index,
-        currentSizes: columnWidths,
-        minColumnWidth,
-      }),
-    })
-  }, [tableRef, minColumnWidth, index, columnWidths, dispatchWidthsAction])
+		dispatchWidthsAction({
+			type: WidthActionType.UPDATE_WIDTHS,
+			widths: updateWidths({
+				tableRef,
+				separator: index,
+				currentSizes: columnWidths,
+				minColumnWidth,
+			}),
+		})
+	}, [tableRef, minColumnWidth, index, columnWidths, dispatchWidthsAction])
 
-  return (
-    <ResizeContainer
-      onDoubleClick={optimizeColWidths}
-      left={divider.offset + txClipped}
-    >
-      <ResizeHandle onPointerDown={onDragStart} />
-      <ResizeMarker dragging={dragging} />
-    </ResizeContainer>
-  )
+	return (
+		<ResizeContainer
+			onDoubleClick={optimizeColWidths}
+			left={divider.offset + txClipped}
+		>
+			<ResizeHandle onPointerDown={onDragStart} />
+			<ResizeMarker dragging={dragging} />
+		</ResizeContainer>
+	)
 }
 
 /**
@@ -239,81 +239,81 @@ const ColumnResizer: FC<ColumnResizerProps> = ({
  */
 
 interface ColumnResizerRowProps {
-  /**
-   * Callback signaling start of a drag.
-   */
-  readonly setDragging: (dragging: boolean) => void
+	/**
+	 * Callback signaling start of a drag.
+	 */
+	readonly setDragging: (dragging: boolean) => void
 }
 
 export const ColumnResizerRow: FC<ColumnResizerRowProps> = ({
-  setDragging,
+	setDragging,
 }) => {
-  const {
-    minColumnWidth,
-    columnWidths,
-    dispatchWidthsAction,
-    onSelect,
-    onWidthsChange,
-  } = useContext(TableContext)
+	const {
+		minColumnWidth,
+		columnWidths,
+		dispatchWidthsAction,
+		onSelect,
+		onWidthsChange,
+	} = useContext(TableContext)
 
-  /**
-   * The global offset of all resize handles.
-   * This is used e.g. when there is a column
-   * of checkboxes that needs to be taken into account.
-   */
-  const globalOffset =
-    TABLE_DIMENSIONS.PADDING_LEFT +
-    (onSelect !== undefined ? TABLE_DIMENSIONS.SELECT_WIDTH : 0)
+	/**
+	 * The global offset of all resize handles.
+	 * This is used e.g. when there is a column
+	 * of checkboxes that needs to be taken into account.
+	 */
+	const globalOffset =
+		TABLE_DIMENSIONS.PADDING_LEFT +
+		(onSelect !== undefined ? TABLE_DIMENSIONS.SELECT_WIDTH : 0)
 
-  const dividers = useMemo(() => {
-    const result = []
-    let offset = globalOffset
-    for (let i = 0; i < columnWidths.length - 1; i += 1) {
-      offset = offset + columnWidths[i]
-      result.push({
-        offset,
-        before: columnWidths[i],
-        after: columnWidths[i + 1],
-      })
-    }
-    return result
-  }, [columnWidths, globalOffset])
+	const dividers = useMemo(() => {
+		const result = []
+		let offset = globalOffset
+		for (let i = 0; i < columnWidths.length - 1; i += 1) {
+			offset = offset + columnWidths[i]
+			result.push({
+				offset,
+				before: columnWidths[i],
+				after: columnWidths[i + 1],
+			})
+		}
+		return result
+	}, [columnWidths, globalOffset])
 
-  const moveDivider = useCallback(
-    (x: number, dividerIndex: number) => {
-      const divider = dividers[dividerIndex]
-      const xClipped = clipTranslation(x, divider, minColumnWidth)
-      dispatchWidthsAction({
-        type: WidthActionType.UPDATE_WIDTHS,
-        widths: {
-          [dividerIndex]: divider.before + xClipped,
-          [dividerIndex + 1]: divider.after - xClipped,
-        },
-        onWidthsChange,
-      })
-    },
-    [dividers, dispatchWidthsAction, minColumnWidth, onWidthsChange]
-  )
+	const moveDivider = useCallback(
+		(x: number, dividerIndex: number) => {
+			const divider = dividers[dividerIndex]
+			const xClipped = clipTranslation(x, divider, minColumnWidth)
+			dispatchWidthsAction({
+				type: WidthActionType.UPDATE_WIDTHS,
+				widths: {
+					[dividerIndex]: divider.before + xClipped,
+					[dividerIndex + 1]: divider.after - xClipped,
+				},
+				onWidthsChange,
+			})
+		},
+		[dividers, dispatchWidthsAction, minColumnWidth, onWidthsChange]
+	)
 
-  const dragEndHandlers = useMemo(() => {
-    return [...Array(dividers.length).keys()].map(
-      i => ([tx]: readonly [number, number]) => moveDivider(tx, i)
-    )
-  }, [dividers.length, moveDivider])
+	const dragEndHandlers = useMemo(() => {
+		return [...Array(dividers.length).keys()].map(
+			i => ([tx]: readonly [number, number]) => moveDivider(tx, i)
+		)
+	}, [dividers.length, moveDivider])
 
-  return (
-    <>
-      {dividers.map((divider, i) => {
-        return (
-          <ColumnResizer
-            setDragging={setDragging}
-            key={`${i}:${divider.offset}`}
-            index={i}
-            divider={divider}
-            onDragEnd={dragEndHandlers[i]}
-          />
-        )
-      })}
-    </>
-  )
+	return (
+		<>
+			{dividers.map((divider, i) => {
+				return (
+					<ColumnResizer
+						setDragging={setDragging}
+						key={`${i}:${divider.offset}`}
+						index={i}
+						divider={divider}
+						onDragEnd={dragEndHandlers[i]}
+					/>
+				)
+			})}
+		</>
+	)
 }

@@ -1,16 +1,16 @@
 import {
-  useRef,
-  useContext,
-  useMemo,
-  useReducer,
-  Reducer,
-  useLayoutEffect,
-  useState,
-  HTMLAttributes,
-  FC,
-  Children,
-  memo,
-  ReactNode,
+	useRef,
+	useContext,
+	useMemo,
+	useReducer,
+	Reducer,
+	useLayoutEffect,
+	useState,
+	HTMLAttributes,
+	FC,
+	Children,
+	memo,
+	ReactNode,
 } from 'react'
 import styled from 'styled-components'
 import { spacing } from '../designparams'
@@ -40,129 +40,129 @@ type BaseProps = HTMLAttributes<BaseElement>
  ******************************************************************************/
 
 interface WidthsState {
-  readonly totalWidth: number
-  readonly columnWidths: ReadonlyArray<number>
-  readonly initialWidths: ReadonlyArray<number>
-  readonly minColumnWidth: number
+	readonly totalWidth: number
+	readonly columnWidths: ReadonlyArray<number>
+	readonly initialWidths: ReadonlyArray<number>
+	readonly minColumnWidth: number
 }
 
 const reduceWidths = (state: WidthsState, action: WidthAction): WidthsState => {
-  switch (action.type) {
-    case WidthActionType.SET_WIDTHS: {
-      // Sanitize columns to the minimum width
-      const sanitizedWidths = action.widths.map(width =>
-        Math.max(state.minColumnWidth, width)
-      )
-      const totalColumnWidths = sanitizedWidths.reduce(
-        (acc, cur) => acc + cur,
-        0
-      )
-      const normalizedWidths = sanitizedWidths.map(
-        width => width / totalColumnWidths
-      )
-      // Scale all columns to fill the total width.
-      return {
-        ...state,
-        columnWidths: normalizedWidths.map(normalizedWidth =>
-          Math.max(state.minColumnWidth, normalizedWidth * state.totalWidth)
-        ),
-      }
-    }
-    case WidthActionType.UPDATE_WIDTHS: {
-      const columnWidths = state.columnWidths.map((value, id) => {
-        const width = action.widths[id]
-        return width !== undefined
-          ? Math.max(state.minColumnWidth, width)
-          : value
-      })
-      if (action.onWidthsChange !== undefined) {
-        action.onWidthsChange(columnWidths)
-      }
-      return {
-        ...state,
-        columnWidths,
-      }
-    }
-    case WidthActionType.RESET_WIDTHS: {
-      const columnWidth =
-        action.numberOfColumns !== 0
-          ? state.totalWidth / action.numberOfColumns
-          : 0
-      return {
-        ...state,
-        columnWidths: new Array(action.numberOfColumns).fill(
-          Math.max(state.minColumnWidth, columnWidth)
-        ),
-      }
-    }
-    case WidthActionType.SET_TOTAL_WIDTH: {
-      const totalWidth = action.value
+	switch (action.type) {
+		case WidthActionType.SET_WIDTHS: {
+			// Sanitize columns to the minimum width
+			const sanitizedWidths = action.widths.map(width =>
+				Math.max(state.minColumnWidth, width)
+			)
+			const totalColumnWidths = sanitizedWidths.reduce(
+				(acc, cur) => acc + cur,
+				0
+			)
+			const normalizedWidths = sanitizedWidths.map(
+				width => width / totalColumnWidths
+			)
+			// Scale all columns to fill the total width.
+			return {
+				...state,
+				columnWidths: normalizedWidths.map(normalizedWidth =>
+					Math.max(state.minColumnWidth, normalizedWidth * state.totalWidth)
+				),
+			}
+		}
+		case WidthActionType.UPDATE_WIDTHS: {
+			const columnWidths = state.columnWidths.map((value, id) => {
+				const width = action.widths[id]
+				return width !== undefined
+					? Math.max(state.minColumnWidth, width)
+					: value
+			})
+			if (action.onWidthsChange !== undefined) {
+				action.onWidthsChange(columnWidths)
+			}
+			return {
+				...state,
+				columnWidths,
+			}
+		}
+		case WidthActionType.RESET_WIDTHS: {
+			const columnWidth =
+				action.numberOfColumns !== 0
+					? state.totalWidth / action.numberOfColumns
+					: 0
+			return {
+				...state,
+				columnWidths: new Array(action.numberOfColumns).fill(
+					Math.max(state.minColumnWidth, columnWidth)
+				),
+			}
+		}
+		case WidthActionType.SET_TOTAL_WIDTH: {
+			const totalWidth = action.value
 
-      // We always base the calculation on the initial widths if possible,
-      // in order to keep the widths stable upon resize.
-      const columnWidths =
-        state.initialWidths.length !== 0
-          ? state.initialWidths
-          : state.columnWidths
+			// We always base the calculation on the initial widths if possible,
+			// in order to keep the widths stable upon resize.
+			const columnWidths =
+				state.initialWidths.length !== 0
+					? state.initialWidths
+					: state.columnWidths
 
-      const totalColumnWidths = columnWidths.reduce((acc, cur) => acc + cur, 0)
-      const nColumns = columnWidths.length
+			const totalColumnWidths = columnWidths.reduce((acc, cur) => acc + cur, 0)
+			const nColumns = columnWidths.length
 
-      if (totalWidth === totalColumnWidths || nColumns === 0) {
-        return {
-          ...state,
-          totalWidth,
-        }
-      }
+			if (totalWidth === totalColumnWidths || nColumns === 0) {
+				return {
+					...state,
+					totalWidth,
+				}
+			}
 
-      const minWidth = nColumns * state.minColumnWidth
+			const minWidth = nColumns * state.minColumnWidth
 
-      const availableWidth = totalWidth - minWidth
-      if (availableWidth <= 0) {
-        // There is no available width, all columns get the minimum width
-        return {
-          ...state,
-          totalWidth,
-          columnWidths: columnWidths.map(() => state.minColumnWidth),
-        }
-      }
+			const availableWidth = totalWidth - minWidth
+			if (availableWidth <= 0) {
+				// There is no available width, all columns get the minimum width
+				return {
+					...state,
+					totalWidth,
+					columnWidths: columnWidths.map(() => state.minColumnWidth),
+				}
+			}
 
-      // Distribute available width to all columns
-      const sanitizedWidths = columnWidths.map(width =>
-        Math.max(state.minColumnWidth, width)
-      )
-      const sanitizedTotalWidth = sanitizedWidths.reduce(
-        (acc, cur) => acc + cur,
-        0
-      )
-      const extraColumnWidth = sanitizedTotalWidth - minWidth
+			// Distribute available width to all columns
+			const sanitizedWidths = columnWidths.map(width =>
+				Math.max(state.minColumnWidth, width)
+			)
+			const sanitizedTotalWidth = sanitizedWidths.reduce(
+				(acc, cur) => acc + cur,
+				0
+			)
+			const extraColumnWidth = sanitizedTotalWidth - minWidth
 
-      if (extraColumnWidth <= 0) {
-        // There is no extra width, all columns get the same new width
-        return {
-          ...state,
-          totalWidth,
-          columnWidths: columnWidths.map(() => totalWidth / nColumns),
-        }
-      }
+			if (extraColumnWidth <= 0) {
+				// There is no extra width, all columns get the same new width
+				return {
+					...state,
+					totalWidth,
+					columnWidths: columnWidths.map(() => totalWidth / nColumns),
+				}
+			}
 
-      const normalizedWidths = sanitizedWidths.map(
-        width => Math.max(width - state.minColumnWidth) / extraColumnWidth
-      )
+			const normalizedWidths = sanitizedWidths.map(
+				width => Math.max(width - state.minColumnWidth) / extraColumnWidth
+			)
 
-      return {
-        ...state,
-        totalWidth,
-        columnWidths: normalizedWidths.map(
-          normalizedWidth =>
-            state.minColumnWidth + normalizedWidth * availableWidth
-        ),
-      }
-    }
-    default: {
-      return state
-    }
-  }
+			return {
+				...state,
+				totalWidth,
+				columnWidths: normalizedWidths.map(
+					normalizedWidth =>
+						state.minColumnWidth + normalizedWidth * availableWidth
+				),
+			}
+		}
+		default: {
+			return state
+		}
+	}
 }
 
 /**
@@ -174,27 +174,27 @@ const reduceWidths = (state: WidthsState, action: WidthAction): WidthsState => {
  */
 
 export const useGridTemplateColumns = () => {
-  const { columnWidths, selectWidth, menuWidth } = useContext(TableContext)
+	const { columnWidths, selectWidth, menuWidth } = useContext(TableContext)
 
-  // Set up grid template columns from widths
-  const gridTemplateColumnsStyle = useMemo(() => {
-    return {
-      gridTemplateColumns: [
-        `${TABLE_DIMENSIONS.PADDING_LEFT}px`,
-        '[start]',
-        `${selectWidth}px`,
-        '[content-start]',
-        ...columnWidths.map(columnWidth => `${columnWidth}px`),
-        '[content-end]',
-        `${menuWidth}px`,
-        '[scroll]',
-        `${SCROLLBAR_DIMENSION}px`,
-        '[end]',
-      ].join(' '),
-    }
-  }, [columnWidths, menuWidth, selectWidth])
+	// Set up grid template columns from widths
+	const gridTemplateColumnsStyle = useMemo(() => {
+		return {
+			gridTemplateColumns: [
+				`${TABLE_DIMENSIONS.PADDING_LEFT}px`,
+				'[start]',
+				`${selectWidth}px`,
+				'[content-start]',
+				...columnWidths.map(columnWidth => `${columnWidth}px`),
+				'[content-end]',
+				`${menuWidth}px`,
+				'[scroll]',
+				`${SCROLLBAR_DIMENSION}px`,
+				'[end]',
+			].join(' '),
+		}
+	}, [columnWidths, menuWidth, selectWidth])
 
-  return gridTemplateColumnsStyle
+	return gridTemplateColumnsStyle
 }
 
 /*******************************************************************************
@@ -211,7 +211,7 @@ export const useGridTemplateColumns = () => {
  */
 
 const TableContainer = styled.div<{
-  readonly dragging: boolean
+	readonly dragging: boolean
 }>`
   overflow-x: auto;
   overflow-y: hidden;
@@ -239,15 +239,15 @@ const TableHeaderContainer = styled.div`
  * A grid containing the content cells.
  */
 const TableContentContainer = styled.div.attrs<{
-  readonly width: number
-  readonly maxHeight: number
+	readonly width: number
+	readonly maxHeight: number
 }>(({ width, maxHeight }) => {
-  return {
-    style: { width: `${width}px`, maxHeight: `${maxHeight}px` },
-  }
+	return {
+		style: { width: `${width}px`, maxHeight: `${maxHeight}px` },
+	}
 })<{
-  readonly maxHeight?: number
-  readonly width: number
+	readonly maxHeight?: number
+	readonly width: number
 }>`
   display: grid;
   overflow-y: auto;
@@ -264,175 +264,175 @@ const TableContentContainer = styled.div.attrs<{
  */
 
 export interface TableProps extends Omit<BaseProps, 'onSelect'> {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * The initial widths for the columns of the Table.
-   * The width will be automatically adjusted to fit the
-   * table, so use 0 if not known, e.g. new Array(#columns).fill(0)
-   * would be a valid starting point.
-   */
-  readonly initialWidths?: ReadonlyArray<number>
-  /**
-   * Control if columns should be resizeable or not. If true, resize
-   * handles will be available to change column width.
-   *
-   * For doubleclick functionality to work properly, when you have multiple elements in one cell, wrap them inside a <div>.
-   *
-   * @default false
-   */
-  readonly resizableColumns?: boolean
-  /**
-   * Minimum column width.
-   *
-   * @default DEFAULT_MIN_COLUMN_WIDTH
-   */
-  readonly minColumnWidth?: number
-  /**
-   * Callback which will get the (new) array of column widths
-   * every time any width is changed.
-   */
-  readonly onWidthsChange?: (widths: ReadonlyArray<number>) => void
-  /**
-   * The maximum height of the table in number of rows,
-   * more rows will cause a scrollbar to appear.
-   */
-  readonly maxHeight?: number
-  /**
-   * Callback which will get checked status and row ID on selection.
-   * The ID is undefined if the main checkbox is selected ("select all").
-   */
-  readonly onSelect?: (selected: boolean, id?: string) => void
-  /**
-   * Allow for optional right-side menu content for each row.
-   */
-  readonly hasMenu?: boolean
-  /**
-   * Key to control scrollbar in Table.
-   * If key changes, scrollbar will scroll to top.
-   */
-  readonly scrollKey?: string
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * The initial widths for the columns of the Table.
+	 * The width will be automatically adjusted to fit the
+	 * table, so use 0 if not known, e.g. new Array(#columns).fill(0)
+	 * would be a valid starting point.
+	 */
+	readonly initialWidths?: ReadonlyArray<number>
+	/**
+	 * Control if columns should be resizeable or not. If true, resize
+	 * handles will be available to change column width.
+	 *
+	 * For doubleclick functionality to work properly, when you have multiple elements in one cell, wrap them inside a <div>.
+	 *
+	 * @default false
+	 */
+	readonly resizableColumns?: boolean
+	/**
+	 * Minimum column width.
+	 *
+	 * @default DEFAULT_MIN_COLUMN_WIDTH
+	 */
+	readonly minColumnWidth?: number
+	/**
+	 * Callback which will get the (new) array of column widths
+	 * every time any width is changed.
+	 */
+	readonly onWidthsChange?: (widths: ReadonlyArray<number>) => void
+	/**
+	 * The maximum height of the table in number of rows,
+	 * more rows will cause a scrollbar to appear.
+	 */
+	readonly maxHeight?: number
+	/**
+	 * Callback which will get checked status and row ID on selection.
+	 * The ID is undefined if the main checkbox is selected ("select all").
+	 */
+	readonly onSelect?: (selected: boolean, id?: string) => void
+	/**
+	 * Allow for optional right-side menu content for each row.
+	 */
+	readonly hasMenu?: boolean
+	/**
+	 * Key to control scrollbar in Table.
+	 * If key changes, scrollbar will scroll to top.
+	 */
+	readonly scrollKey?: string
 }
 
 const EMPTY_ARRAY: ReadonlyArray<number> = []
 
 const TableComponent: FC<TableProps> = ({
-  initialWidths = EMPTY_ARRAY,
-  resizableColumns = false,
-  minColumnWidth = TABLE_DIMENSIONS.DEFAULT_MIN_COLUMN_WIDTH,
-  onWidthsChange,
-  maxHeight,
-  onSelect,
-  hasMenu = false,
-  scrollKey,
-  children,
-  ...props
+	initialWidths = EMPTY_ARRAY,
+	resizableColumns = false,
+	minColumnWidth = TABLE_DIMENSIONS.DEFAULT_MIN_COLUMN_WIDTH,
+	onWidthsChange,
+	maxHeight,
+	onSelect,
+	hasMenu = false,
+	scrollKey,
+	children,
+	...props
 }) => {
-  // Table width/height, including column widths
-  const [{ columnWidths }, dispatchWidthsAction] = useReducer<
-    Reducer<WidthsState, WidthAction>
-  >(reduceWidths, {
-    totalWidth: initialWidths.reduce((sum, width) => sum + width, 0),
-    columnWidths: initialWidths,
-    initialWidths,
-    minColumnWidth,
-  })
-  const [tableHeight, setTableHeight] = useState<number>()
+	// Table width/height, including column widths
+	const [{ columnWidths }, dispatchWidthsAction] = useReducer<
+		Reducer<WidthsState, WidthAction>
+	>(reduceWidths, {
+		totalWidth: initialWidths.reduce((sum, width) => sum + width, 0),
+		columnWidths: initialWidths,
+		initialWidths,
+		minColumnWidth,
+	})
+	const [tableHeight, setTableHeight] = useState<number>()
 
-  // Keep track of additional columns for select/menu.
-  const selectWidth = useMemo(
-    () => (onSelect !== undefined ? TABLE_DIMENSIONS.SELECT_WIDTH : 0),
-    [onSelect]
-  )
-  const menuWidth = useMemo(
-    () => (hasMenu ? TABLE_DIMENSIONS.MENU_WIDTH : 0),
-    [hasMenu]
-  )
+	// Keep track of additional columns for select/menu.
+	const selectWidth = useMemo(
+		() => (onSelect !== undefined ? TABLE_DIMENSIONS.SELECT_WIDTH : 0),
+		[onSelect]
+	)
+	const menuWidth = useMemo(
+		() => (hasMenu ? TABLE_DIMENSIONS.MENU_WIDTH : 0),
+		[hasMenu]
+	)
 
-  // Set up total width control
-  const tableRef = useRef<HTMLDivElement>(null)
+	// Set up total width control
+	const tableRef = useRef<HTMLDivElement>(null)
 
-  useLayoutEffect(() => {
-    const tableEl = tableRef.current
-    if (tableEl !== null) {
-      const updateTableDimensions = () => {
-        const { width, height } = tableEl.getBoundingClientRect()
-        dispatchWidthsAction({
-          type: WidthActionType.SET_TOTAL_WIDTH,
-          value: width - selectWidth - menuWidth - TABLE_DIMENSIONS.PADDING,
-        })
-        setTableHeight(height)
-      }
-      updateTableDimensions()
+	useLayoutEffect(() => {
+		const tableEl = tableRef.current
+		if (tableEl !== null) {
+			const updateTableDimensions = () => {
+				const { width, height } = tableEl.getBoundingClientRect()
+				dispatchWidthsAction({
+					type: WidthActionType.SET_TOTAL_WIDTH,
+					value: width - selectWidth - menuWidth - TABLE_DIMENSIONS.PADDING,
+				})
+				setTableHeight(height)
+			}
+			updateTableDimensions()
 
-      const observer = new window.ResizeObserver(updateTableDimensions)
-      observer.observe(tableEl)
+			const observer = new window.ResizeObserver(updateTableDimensions)
+			observer.observe(tableEl)
 
-      return () => observer.disconnect()
-    }
-  }, [columnWidths.length, selectWidth, menuWidth, setTableHeight])
+			return () => observer.disconnect()
+		}
+	}, [columnWidths.length, selectWidth, menuWidth, setTableHeight])
 
-  const [dragging, setDragging] = useState(false)
+	const [dragging, setDragging] = useState(false)
 
-  /**
-   * The content's width and (maximum) height.
-   */
-  const contentWidth = useMemo(() => {
-    return (
-      columnWidths.reduce((total, width) => total + width, 0) +
-      selectWidth +
-      menuWidth +
-      TABLE_DIMENSIONS.PADDING
-    )
-  }, [columnWidths, selectWidth, menuWidth])
-  const contentHeight =
-    maxHeight !== undefined
-      ? maxHeight * TABLE_DIMENSIONS.ROW_HEIGHT
-      : tableHeight !== undefined
-      ? tableHeight - TABLE_DIMENSIONS.ROW_HEIGHT
-      : undefined
+	/**
+	 * The content's width and (maximum) height.
+	 */
+	const contentWidth = useMemo(() => {
+		return (
+			columnWidths.reduce((total, width) => total + width, 0) +
+			selectWidth +
+			menuWidth +
+			TABLE_DIMENSIONS.PADDING
+		)
+	}, [columnWidths, selectWidth, menuWidth])
+	const contentHeight =
+		maxHeight !== undefined
+			? maxHeight * TABLE_DIMENSIONS.ROW_HEIGHT
+			: tableHeight !== undefined
+			? tableHeight - TABLE_DIMENSIONS.ROW_HEIGHT
+			: undefined
 
-  const { header, rows } = useMemo(() => {
-    const [headerEl, ...rowsEl] = Children.toArray(children)
-    return { header: headerEl, rows: rowsEl }
-  }, [children])
+	const { header, rows } = useMemo(() => {
+		const [headerEl, ...rowsEl] = Children.toArray(children)
+		return { header: headerEl, rows: rowsEl }
+	}, [children])
 
-  const tableContentRef = useRef<HTMLDivElement>(null)
-  // Scroll to top when scrollKey changes
-  useResetScroll(tableContentRef, scrollKey)
+	const tableContentRef = useRef<HTMLDivElement>(null)
+	// Scroll to top when scrollKey changes
+	useResetScroll(tableContentRef, scrollKey)
 
-  return (
-    <TableContainer ref={tableRef} dragging={dragging} {...props}>
-      <TableContext.Provider
-        value={{
-          minColumnWidth,
-          columnWidths,
-          dispatchWidthsAction,
-          selectWidth,
-          menuWidth,
-          onSelect,
-          hasMenu,
-          onWidthsChange,
-          tableRef,
-        }}
-      >
-        <TableHeaderContainer>{header}</TableHeaderContainer>
-        <TableContentContainer
-          maxHeight={contentHeight}
-          width={contentWidth}
-          ref={tableContentRef}
-        >
-          {tableHeight !== undefined ? rows : undefined}
-        </TableContentContainer>
-        {resizableColumns ? (
-          <ColumnResizerRow setDragging={setDragging} />
-        ) : null}
-      </TableContext.Provider>
-    </TableContainer>
-  )
+	return (
+		<TableContainer ref={tableRef} dragging={dragging} {...props}>
+			<TableContext.Provider
+				value={{
+					minColumnWidth,
+					columnWidths,
+					dispatchWidthsAction,
+					selectWidth,
+					menuWidth,
+					onSelect,
+					hasMenu,
+					onWidthsChange,
+					tableRef,
+				}}
+			>
+				<TableHeaderContainer>{header}</TableHeaderContainer>
+				<TableContentContainer
+					maxHeight={contentHeight}
+					width={contentWidth}
+					ref={tableContentRef}
+				>
+					{tableHeight !== undefined ? rows : undefined}
+				</TableContentContainer>
+				{resizableColumns ? (
+					<ColumnResizerRow setDragging={setDragging} />
+				) : null}
+			</TableContext.Provider>
+		</TableContainer>
+	)
 }
 
 export const Table = memo(TableComponent)

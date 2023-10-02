@@ -6,9 +6,9 @@ import { useId } from 'react-hooks-shareable'
 
 import { Theme, defaultTheme } from './theme'
 import {
-  ToastsProvider,
-  ToastsAnchor,
-  ToastsPlacement,
+	ToastsProvider,
+	ToastsAnchor,
+	ToastsPlacement,
 } from './Toast/ToastsProvider'
 import { SimpleToastsDurations } from './Toast'
 
@@ -17,79 +17,79 @@ const PracticalRoot = styled.div`
 `
 
 interface PracticalContextType {
-  readonly rootEl: HTMLElement | null | undefined
+	readonly rootEl: HTMLElement | null | undefined
 }
 
 const PracticalContext = createContext<PracticalContextType>({
-  rootEl: undefined,
+	rootEl: undefined,
 })
 
 export interface ToastsOptions {
-  /**
-   * Position of toasts on the page.
-   */
-  readonly placement?: ToastsPlacement
-  /**
-   * Determine if toasts should be always on top (above any other modal layers),
-   * or not (above the main application layer but below any other modal layers).
-   *
-   * @default true
-   */
-  readonly alwaysOnTop?: boolean
-  /**
-   * Default toast durations
-   */
-  readonly defaultDurations?: SimpleToastsDurations
+	/**
+	 * Position of toasts on the page.
+	 */
+	readonly placement?: ToastsPlacement
+	/**
+	 * Determine if toasts should be always on top (above any other modal layers),
+	 * or not (above the main application layer but below any other modal layers).
+	 *
+	 * @default true
+	 */
+	readonly alwaysOnTop?: boolean
+	/**
+	 * Default toast durations
+	 */
+	readonly defaultDurations?: SimpleToastsDurations
 }
 
 const DEFAULT_TOASTS_OPTIONS: Required<ToastsOptions> = {
-  placement: { justify: 'right', top: '0' },
-  alwaysOnTop: true,
-  defaultDurations: {
-    success: 4000,
-  },
+	placement: { justify: 'right', top: '0' },
+	alwaysOnTop: true,
+	defaultDurations: {
+		success: 4000,
+	},
 }
 
 interface PracticalProviderProps extends SimpleToastsDurations {
-  readonly children?: ReactNode
-  /**
-   * The Practical React Components theme to be used.
-   */
-  readonly theme?: Theme
-  /**
-   * The toasts layout.
-   *
-   * @default Toasts are centered at the top and always visible.
-   */
-  readonly toastsOptions?: ToastsOptions
+	readonly children?: ReactNode
+	/**
+	 * The Practical React Components theme to be used.
+	 */
+	readonly theme?: Theme
+	/**
+	 * The toasts layout.
+	 *
+	 * @default Toasts are centered at the top and always visible.
+	 */
+	readonly toastsOptions?: ToastsOptions
 }
 
 export const PracticalProvider: FC<PracticalProviderProps> = ({
-  theme = defaultTheme,
-  toastsOptions,
-  children,
+	theme = defaultTheme,
+	toastsOptions,
+	children,
 }) => {
-  const [rootEl, rootRef] = useState<HTMLDivElement | null>(null)
+	const [rootEl, rootRef] = useState<HTMLDivElement | null>(null)
 
-  const mergedOptions = {
-    ...DEFAULT_TOASTS_OPTIONS,
-    ...toastsOptions,
-  }
+	const mergedOptions = {
+		...DEFAULT_TOASTS_OPTIONS,
+		...toastsOptions,
+	}
 
-  return (
-    <ThemeProvider theme={theme}>
-      <PracticalContext.Provider value={{ rootEl }}>
-        <ToastsProvider {...mergedOptions.defaultDurations}>
-          <PracticalRoot id="practical-root" ref={rootRef}>
-            <Layer>{children}</Layer>
-            <Layer zIndex={mergedOptions.alwaysOnTop ? 1 : 0}>
-              <ToastsAnchor placement={mergedOptions.placement} />
-            </Layer>
-          </PracticalRoot>
-        </ToastsProvider>
-      </PracticalContext.Provider>
-    </ThemeProvider>
-  )
+	return (
+		<ThemeProvider theme={theme}>
+			<PracticalContext.Provider value={{ rootEl }}>
+				<ToastsProvider {...mergedOptions.defaultDurations}>
+					<PracticalRoot id="practical-root" ref={rootRef}>
+						<Layer>{children}</Layer>
+						<Layer zIndex={mergedOptions.alwaysOnTop ? 1 : 0}>
+							<ToastsAnchor placement={mergedOptions.placement} />
+						</Layer>
+					</PracticalRoot>
+				</ToastsProvider>
+			</PracticalContext.Provider>
+		</ThemeProvider>
+	)
 }
 
 /**
@@ -114,49 +114,49 @@ const LayerContainer = styled.div<{ readonly zIndex?: number }>`
 `
 
 interface LayerContextType {
-  readonly el: HTMLElement | null
-  readonly id: string
+	readonly el: HTMLElement | null
+	readonly id: string
 }
 
 export const LayerContext = createContext<LayerContextType>({
-  el: typeof document !== 'undefined' ? document.body : null,
-  id: LAYER_ID_PREFIX,
+	el: typeof document !== 'undefined' ? document.body : null,
+	id: LAYER_ID_PREFIX,
 })
 
 interface LayerProps {
-  readonly zIndex?: number
-  readonly children?: ReactNode
+	readonly zIndex?: number
+	readonly children?: ReactNode
 }
 
 export const Layer: FC<LayerProps> = ({ children, zIndex }) => {
-  const { rootEl } = useContext(PracticalContext)
+	const { rootEl } = useContext(PracticalContext)
 
-  const [el, ref] = useState<HTMLDivElement | null>(null)
-  const id = useId(LAYER_ID_PREFIX)
+	const [el, ref] = useState<HTMLDivElement | null>(null)
+	const id = useId(LAYER_ID_PREFIX)
 
-  if (rootEl === undefined) {
-    throw new Error(
-      'You need to wrap your application in a PracticalProvider component, otherwise layers do not work.'
-    )
-  }
+	if (rootEl === undefined) {
+		throw new Error(
+			'You need to wrap your application in a PracticalProvider component, otherwise layers do not work.'
+		)
+	}
 
-  if (rootEl === null) {
-    return null
-  }
+	if (rootEl === null) {
+		return null
+	}
 
-  return ReactDOM.createPortal(
-    <LayerContext.Provider value={{ el, id }}>
-      <LayerContainer id={id} ref={ref} zIndex={zIndex}>
-        {children}
-      </LayerContainer>
-    </LayerContext.Provider>,
-    rootEl
-  )
+	return ReactDOM.createPortal(
+		<LayerContext.Provider value={{ el, id }}>
+			<LayerContainer id={id} ref={ref} zIndex={zIndex}>
+				{children}
+			</LayerContainer>
+		</LayerContext.Provider>,
+		rootEl
+	)
 }
 // Add ResizeObserver polyfill from juggle if not available
 if (typeof window !== 'undefined') {
-  if (window.ResizeObserver === undefined) {
-    // @ts-ignore
-    window.ResizeObserver = ResizeObserver
-  }
+	if (window.ResizeObserver === undefined) {
+		// @ts-ignore
+		window.ResizeObserver = ResizeObserver
+	}
 }

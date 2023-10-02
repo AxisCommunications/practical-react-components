@@ -1,28 +1,28 @@
 import {
-  BaseToastValue,
-  ToastId,
-  ToastCreateAction,
-  ToastActionType,
-  ToastRemoveAction,
-  ToastRemoveAllAction,
+	BaseToastValue,
+	ToastId,
+	ToastCreateAction,
+	ToastActionType,
+	ToastRemoveAction,
+	ToastRemoveAllAction,
 } from './context'
 
 let toastCounter = 0
 
 export const createToast = (
-  toast: BaseToastValue,
-  id: ToastId = `practical-${++toastCounter}`
+	toast: BaseToastValue,
+	id: ToastId = `practical-${++toastCounter}`
 ): ToastCreateAction => ({
-  id,
-  type: ToastActionType.TOAST_CREATE,
-  data: toast,
+	id,
+	type: ToastActionType.TOAST_CREATE,
+	data: toast,
 })
 
 export const removeToast = (id: ToastId): ToastRemoveAction => ({
-  id,
-  type: ToastActionType.TOAST_REMOVE,
+	id,
+	type: ToastActionType.TOAST_REMOVE,
 })
 
 export const removeAllToasts: ToastRemoveAllAction = {
-  type: ToastActionType.TOAST_REMOVE_ALL,
+	type: ToastActionType.TOAST_REMOVE_ALL,
 }

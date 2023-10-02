@@ -1,38 +1,38 @@
 import { createContext, Dispatch, RefObject } from 'react'
 
 export enum WidthActionType {
-  SET_WIDTHS,
-  UPDATE_WIDTHS,
-  RESET_WIDTHS,
-  SET_TOTAL_WIDTH,
+	SET_WIDTHS,
+	UPDATE_WIDTHS,
+	RESET_WIDTHS,
+	SET_TOTAL_WIDTH,
 }
 
 interface SetWidthsAction {
-  readonly type: WidthActionType.SET_WIDTHS
-  readonly widths: ReadonlyArray<number>
+	readonly type: WidthActionType.SET_WIDTHS
+	readonly widths: ReadonlyArray<number>
 }
 
 interface UpdateWidthsAction {
-  readonly type: WidthActionType.UPDATE_WIDTHS
-  readonly widths: { readonly [id: number]: number | undefined }
-  readonly onWidthsChange?: (widths: ReadonlyArray<number>) => void
+	readonly type: WidthActionType.UPDATE_WIDTHS
+	readonly widths: { readonly [id: number]: number | undefined }
+	readonly onWidthsChange?: (widths: ReadonlyArray<number>) => void
 }
 
 interface ResetWidthsAction {
-  readonly type: WidthActionType.RESET_WIDTHS
-  readonly numberOfColumns: number
+	readonly type: WidthActionType.RESET_WIDTHS
+	readonly numberOfColumns: number
 }
 
 interface SetTotalWidthAction {
-  readonly type: WidthActionType.SET_TOTAL_WIDTH
-  readonly value: number
+	readonly type: WidthActionType.SET_TOTAL_WIDTH
+	readonly value: number
 }
 
 export type WidthAction =
-  | SetWidthsAction
-  | UpdateWidthsAction
-  | ResetWidthsAction
-  | SetTotalWidthAction
+	| SetWidthsAction
+	| UpdateWidthsAction
+	| ResetWidthsAction
+	| SetTotalWidthAction
 
 /*******************************************************************************
  *
@@ -44,25 +44,25 @@ export type WidthAction =
  ******************************************************************************/
 
 export const TableContext = createContext<{
-  readonly minColumnWidth: number
-  readonly columnWidths: ReadonlyArray<number>
-  readonly dispatchWidthsAction: Dispatch<WidthAction>
-  readonly selectWidth: number
-  readonly menuWidth: number
-  readonly onSelect?: (selected: boolean, id?: string) => void
-  readonly hasMenu: boolean
-  readonly onWidthsChange?: (widths: ReadonlyArray<number>) => void
-  readonly tableRef?: RefObject<HTMLDivElement>
+	readonly minColumnWidth: number
+	readonly columnWidths: ReadonlyArray<number>
+	readonly dispatchWidthsAction: Dispatch<WidthAction>
+	readonly selectWidth: number
+	readonly menuWidth: number
+	readonly onSelect?: (selected: boolean, id?: string) => void
+	readonly hasMenu: boolean
+	readonly onWidthsChange?: (widths: ReadonlyArray<number>) => void
+	readonly tableRef?: RefObject<HTMLDivElement>
 }>({
-  minColumnWidth: 0,
-  columnWidths: [],
-  dispatchWidthsAction: () => {
-    /** */
-  },
-  selectWidth: 0,
-  menuWidth: 0,
-  hasMenu: false,
-  onWidthsChange: () => {
-    /** */
-  },
+	minColumnWidth: 0,
+	columnWidths: [],
+	dispatchWidthsAction: () => {
+		/** */
+	},
+	selectWidth: 0,
+	menuWidth: 0,
+	hasMenu: false,
+	onWidthsChange: () => {
+		/** */
+	},
 })

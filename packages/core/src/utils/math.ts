@@ -5,4 +5,4 @@
  * @param divisor
  */
 export const remainder = (dividend: number, divisor: number) =>
-  ((dividend % divisor) + divisor) % divisor
+	((dividend % divisor) + divisor) % divisor

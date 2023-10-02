@@ -7,8 +7,8 @@ import { Note } from '.'
 import { TestRender } from '../TestUtils'
 
 describe('Notes', () => {
-  test('Note', () => {
-    const tree1 = TestRender(<Note text="test" icon={InfoIcon} />)
-    expect(tree1).toMatchSnapshot()
-  })
+	test('Note', () => {
+		const tree1 = TestRender(<Note text="test" icon={InfoIcon} />)
+		expect(tree1).toMatchSnapshot()
+	})
 })

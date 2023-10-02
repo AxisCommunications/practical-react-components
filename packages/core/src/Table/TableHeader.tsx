@@ -1,11 +1,11 @@
 import {
-  useContext,
-  useCallback,
-  useEffect,
-  HTMLAttributes,
-  ReactNode,
-  FC,
-  Children,
+	useContext,
+	useCallback,
+	useEffect,
+	HTMLAttributes,
+	ReactNode,
+	FC,
+	Children,
 } from 'react'
 import styled from 'styled-components'
 
@@ -16,10 +16,10 @@ import { useGridTemplateColumns } from './Table'
 import { TableContext, WidthActionType } from './context'
 
 import {
-  TableHeaderCellCheckbox,
-  OverlayContainer,
-  TableHeaderCellContent,
-  TableHeaderCellMenu,
+	TableHeaderCellCheckbox,
+	OverlayContainer,
+	TableHeaderCellContent,
+	TableHeaderCellMenu,
 } from './TableCells'
 
 type BaseElement = HTMLDivElement
@@ -39,83 +39,83 @@ const TableHeaderGrid = styled.div`
   grid-template-rows: ${componentSize.large};
 `
 export interface TableHeaderProps extends BaseProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * Indicates if the all rows are selected.
-   */
-  readonly selected?: boolean
-  /**
-   * Indicates if only a part of all rows are selected.
-   */
-  readonly partial?: boolean
-  /**
-   * Optional overlay element to cover the column headers.
-   */
-  readonly overlay?: ReactNode
-  /**
-   * Optional menu content to put on the right.
-   * It will be aligned to the right and overflow onto the row.
-   */
-  readonly menu?: ReactNode
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * Indicates if the all rows are selected.
+	 */
+	readonly selected?: boolean
+	/**
+	 * Indicates if only a part of all rows are selected.
+	 */
+	readonly partial?: boolean
+	/**
+	 * Optional overlay element to cover the column headers.
+	 */
+	readonly overlay?: ReactNode
+	/**
+	 * Optional menu content to put on the right.
+	 * It will be aligned to the right and overflow onto the row.
+	 */
+	readonly menu?: ReactNode
 }
 
 export const TableHeader: FC<TableHeaderProps> = ({
-  children,
-  selected = false,
-  partial = false,
-  overlay,
-  menu,
-  ...props
+	children,
+	selected = false,
+	partial = false,
+	overlay,
+	menu,
+	...props
 }) => {
-  const { onSelect, hasMenu, columnWidths, dispatchWidthsAction } =
-    useContext(TableContext)
-  const onChange = useCallback<CheckboxChangeHandler>(
-    e => {
-      if (onSelect !== undefined) {
-        onSelect(e.target.checked)
-      }
-    },
-    [onSelect]
-  )
-  const numberOfColumns = Children.count(children)
-  // Set the column widths.
-  // This will happen on first render (number of columns changes from 0).
-  useEffect(() => {
-    if (columnWidths.length === 0) {
-      dispatchWidthsAction({
-        type: WidthActionType.RESET_WIDTHS,
-        numberOfColumns,
-      })
-    }
-  }, [dispatchWidthsAction, columnWidths.length, numberOfColumns])
-  const gridTemplateColumnsStyle = useGridTemplateColumns()
-  return (
-    <TableHeaderGrid style={gridTemplateColumnsStyle} {...props}>
-      {onSelect !== undefined ? (
-        <TableHeaderCellCheckbox>
-          <Checkbox checked={selected} partial={partial} onChange={onChange} />
-        </TableHeaderCellCheckbox>
-      ) : null}
-      {overlay !== undefined ? (
-        <OverlayContainer>{overlay}</OverlayContainer>
-      ) : (
-        Children.map(children, (cell, i) => {
-          return (
-            <TableHeaderCellContent data-col={i} key={i}>
-              {cell}
-            </TableHeaderCellContent>
-          )
-        })
-      )}
-      {overlay === undefined && hasMenu ? (
-        <TableHeaderCellMenu>
-          {menu !== undefined ? menu : null}
-        </TableHeaderCellMenu>
-      ) : null}
-    </TableHeaderGrid>
-  )
+	const { onSelect, hasMenu, columnWidths, dispatchWidthsAction } =
+		useContext(TableContext)
+	const onChange = useCallback<CheckboxChangeHandler>(
+		e => {
+			if (onSelect !== undefined) {
+				onSelect(e.target.checked)
+			}
+		},
+		[onSelect]
+	)
+	const numberOfColumns = Children.count(children)
+	// Set the column widths.
+	// This will happen on first render (number of columns changes from 0).
+	useEffect(() => {
+		if (columnWidths.length === 0) {
+			dispatchWidthsAction({
+				type: WidthActionType.RESET_WIDTHS,
+				numberOfColumns,
+			})
+		}
+	}, [dispatchWidthsAction, columnWidths.length, numberOfColumns])
+	const gridTemplateColumnsStyle = useGridTemplateColumns()
+	return (
+		<TableHeaderGrid style={gridTemplateColumnsStyle} {...props}>
+			{onSelect !== undefined ? (
+				<TableHeaderCellCheckbox>
+					<Checkbox checked={selected} partial={partial} onChange={onChange} />
+				</TableHeaderCellCheckbox>
+			) : null}
+			{overlay !== undefined ? (
+				<OverlayContainer>{overlay}</OverlayContainer>
+			) : (
+				Children.map(children, (cell, i) => {
+					return (
+						<TableHeaderCellContent data-col={i} key={i}>
+							{cell}
+						</TableHeaderCellContent>
+					)
+				})
+			)}
+			{overlay === undefined && hasMenu ? (
+				<TableHeaderCellMenu>
+					{menu !== undefined ? menu : null}
+				</TableHeaderCellMenu>
+			) : null}
+		</TableHeaderGrid>
+	)
 }

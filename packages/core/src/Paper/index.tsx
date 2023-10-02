@@ -6,8 +6,8 @@ type BaseElement = HTMLDivElement
 type BaseProps = HTMLAttributes<BaseElement>
 
 const PaperDiv = styled.div<{
-  readonly square: boolean
-  readonly space: boolean
+	readonly square: boolean
+	readonly space: boolean
 }>`
   background-color: ${({ theme }) => theme.color.background00()};
   color: ${({ theme }) => theme.color.text01()};
@@ -15,42 +15,42 @@ const PaperDiv = styled.div<{
   overflow: hidden;
 
   ${({ square }) =>
-    !square
-      ? css`
+		!square
+			? css`
           border-radius: ${shape.radius.medium};
         `
-      : undefined}
+			: undefined}
 
   ${({ space }) =>
-    space
-      ? css`
+		space
+			? css`
           padding: ${spacing.medium} ${spacing.large};
         `
-      : css`
+			: css`
           padding: 0;
         `}
 `
 
 export interface PaperProps extends BaseProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * If `true`, the corners become squared.
-   */
-  readonly square?: boolean
-  /**
-   * If `true`, spacing is added.
-   */
-  readonly space?: boolean
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * If `true`, the corners become squared.
+	 */
+	readonly square?: boolean
+	/**
+	 * If `true`, spacing is added.
+	 */
+	readonly space?: boolean
 }
 
 export const Paper = forwardRef<BaseElement, PaperProps>(
-  ({ square = false, space = false, children, ...props }, ref) => (
-    <PaperDiv square={square} space={space} {...props} ref={ref}>
-      {children}
-    </PaperDiv>
-  )
+	({ square = false, space = false, children, ...props }, ref) => (
+		<PaperDiv square={square} space={space} {...props} ref={ref}>
+			{children}
+		</PaperDiv>
+	)
 )

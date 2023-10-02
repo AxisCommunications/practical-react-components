@@ -10,16 +10,16 @@ const StyledContent = styled.div`
 `
 
 interface ContentProps {
-  readonly children?: ReactNode
+	readonly children?: ReactNode
 }
 
 export const Content: FC<ContentProps> = ({ children }) => {
-  const { pathname } = useLocation()
-  const ref = useRef<HTMLDivElement>(null)
+	const { pathname } = useLocation()
+	const ref = useRef<HTMLDivElement>(null)
 
-  useEffect(() => {
-    ref.current?.scrollTo(0, 0)
-  }, [pathname])
+	useEffect(() => {
+		ref.current?.scrollTo(0, 0)
+	}, [pathname])
 
-  return <StyledContent ref={ref}>{children}</StyledContent>
+	return <StyledContent ref={ref}>{children}</StyledContent>
 }

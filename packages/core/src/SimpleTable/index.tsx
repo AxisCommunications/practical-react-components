@@ -1,15 +1,15 @@
 import {
-  useCallback,
-  useState,
-  useLayoutEffect,
-  useRef,
-  createContext,
-  useContext,
-  TableHTMLAttributes,
-  FC,
-  Children,
-  ReactNode,
-  MouseEventHandler,
+	useCallback,
+	useState,
+	useLayoutEffect,
+	useRef,
+	createContext,
+	useContext,
+	TableHTMLAttributes,
+	FC,
+	Children,
+	ReactNode,
+	MouseEventHandler,
 } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 
@@ -32,11 +32,11 @@ const SIMPLE_ROW_HEIGHT = 32
  ******************************************************************************/
 
 const SimpleTableContext = createContext<{
-  readonly compact: boolean
-  readonly columnWidths: ReadonlyArray<number>
+	readonly compact: boolean
+	readonly columnWidths: ReadonlyArray<number>
 }>({
-  compact: false,
-  columnWidths: [],
+	compact: false,
+	columnWidths: [],
 })
 
 /*******************************************************************************
@@ -52,10 +52,10 @@ const SimpleTableContext = createContext<{
  */
 
 const TableHeader = styled.tr<{
-  readonly compact: boolean
+	readonly compact: boolean
 }>`
   height: ${({ compact }) =>
-    compact ? componentSize.small : componentSize.large};
+		compact ? componentSize.small : componentSize.large};
   text-align: left;
   display: table;
   table-layout: fixed;
@@ -63,7 +63,7 @@ const TableHeader = styled.tr<{
 `
 
 const TableHeaderCellContent = styled.th<{
-  readonly columWidthPercentage?: number
+	readonly columWidthPercentage?: number
 }>`
   color: ${({ theme }) => theme.color.text02()};
   background: ${({ theme }) => theme.color.background00()};
@@ -78,34 +78,34 @@ const TableHeaderCellContent = styled.th<{
   user-select: none;
 
   ${({ columWidthPercentage }) =>
-    columWidthPercentage !== undefined
-      ? css`
+		columWidthPercentage !== undefined
+			? css`
           width: ${columWidthPercentage}%;
         `
-      : undefined}
+			: undefined}
 `
 
 interface SimpleTableHeaderProps {
-  readonly children?: ReactNode
+	readonly children?: ReactNode
 }
 
 const SimpleTableHeader: FC<SimpleTableHeaderProps> = ({ children }) => {
-  const { compact, columnWidths } = useContext(SimpleTableContext)
+	const { compact, columnWidths } = useContext(SimpleTableContext)
 
-  return (
-    <TableHeader compact={compact}>
-      {Children.map(children, (cell, i) => {
-        return (
-          <TableHeaderCellContent
-            key={i}
-            columWidthPercentage={columnWidths[i]}
-          >
-            {cell}
-          </TableHeaderCellContent>
-        )
-      })}
-    </TableHeader>
-  )
+	return (
+		<TableHeader compact={compact}>
+			{Children.map(children, (cell, i) => {
+				return (
+					<TableHeaderCellContent
+						key={i}
+						columWidthPercentage={columnWidths[i]}
+					>
+						{cell}
+					</TableHeaderCellContent>
+				)
+			})}
+		</TableHeader>
+	)
 }
 
 /**
@@ -115,16 +115,16 @@ const SimpleTableHeader: FC<SimpleTableHeaderProps> = ({ children }) => {
  */
 
 const TableRow = styled.tr<{
-  readonly compact: boolean
-  readonly disabled: boolean
-  readonly clickable: boolean
+	readonly compact: boolean
+	readonly disabled: boolean
+	readonly clickable: boolean
 }>`
   display: table;
   table-layout: fixed;
 
   width: 100%;
   height: ${({ compact }) =>
-    compact ? componentSize.small : componentSize.extraLarge};
+		compact ? componentSize.small : componentSize.extraLarge};
 
   text-align: left;
 
@@ -144,15 +144,15 @@ const TableRow = styled.tr<{
   }
 
   ${({ disabled }) =>
-    disabled
-      ? css`
+		disabled
+			? css`
           opacity: ${opacity[48]};
           pointer-events: none;
         `
-      : undefined};
+			: undefined};
 
   cursor: ${({ clickable, disabled }) =>
-    clickable && !disabled ? 'pointer' : 'unset'};
+		clickable && !disabled ? 'pointer' : 'unset'};
 `
 
 const TableCellContent = styled.td<{ readonly columWidthPercentage?: number }>`
@@ -166,66 +166,66 @@ const TableCellContent = styled.td<{ readonly columWidthPercentage?: number }>`
   text-overflow: ellipsis;
 
   ${({ columWidthPercentage }) =>
-    columWidthPercentage !== undefined
-      ? css`
+		columWidthPercentage !== undefined
+			? css`
           width: ${columWidthPercentage}%;
         `
-      : undefined}
+			: undefined}
 `
 
 export interface SimpleTableRowProps extends BaseRowProps {
-  readonly children: ReadonlyArray<ReactNode>
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * Optional flag to disable entire row.
-   */
-  readonly disabled?: boolean
-  /**
-   * Function callback on row clicked
-   */
-  readonly onClick?: BaseRowProps['onClick']
+	readonly children: ReadonlyArray<ReactNode>
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * Optional flag to disable entire row.
+	 */
+	readonly disabled?: boolean
+	/**
+	 * Function callback on row clicked
+	 */
+	readonly onClick?: BaseRowProps['onClick']
 }
 
 export const SimpleTableRow: FC<SimpleTableRowProps> = ({
-  children,
-  disabled = false,
-  onClick,
-  ...props
+	children,
+	disabled = false,
+	onClick,
+	...props
 }) => {
-  const { compact, columnWidths } = useContext(SimpleTableContext)
-  const clickable = onClick !== undefined
+	const { compact, columnWidths } = useContext(SimpleTableContext)
+	const clickable = onClick !== undefined
 
-  const handleClick = useCallback<MouseEventHandler<BaseRowElement>>(
-    e => {
-      if (clickable) {
-        e.stopPropagation()
-      }
+	const handleClick = useCallback<MouseEventHandler<BaseRowElement>>(
+		e => {
+			if (clickable) {
+				e.stopPropagation()
+			}
 
-      onClick?.(e)
-    },
-    [onClick, clickable]
-  )
+			onClick?.(e)
+		},
+		[onClick, clickable]
+	)
 
-  return (
-    <TableRow
-      compact={compact}
-      disabled={disabled}
-      clickable={clickable}
-      onClick={handleClick}
-      {...props}
-    >
-      {Children.map(children, (cell, i) => {
-        return (
-          <TableCellContent key={i} columWidthPercentage={columnWidths[i]}>
-            {cell}
-          </TableCellContent>
-        )
-      })}
-    </TableRow>
-  )
+	return (
+		<TableRow
+			compact={compact}
+			disabled={disabled}
+			clickable={clickable}
+			onClick={handleClick}
+			{...props}
+		>
+			{Children.map(children, (cell, i) => {
+				return (
+					<TableCellContent key={i} columWidthPercentage={columnWidths[i]}>
+						{cell}
+					</TableCellContent>
+				)
+			})}
+		</TableRow>
+	)
 }
 
 /**
@@ -245,101 +245,101 @@ const TableHeaderContainer = styled.thead<{ readonly hasMargin: boolean }>`
   display: table;
 
   ${({ hasMargin }) =>
-    hasMargin
-      ? css`
+		hasMargin
+			? css`
           margin-right: ${SCROLLBAR_DIMENSION}px;
         `
-      : css`
+			: css`
           width: 100%;
         `}
 `
 
 const TableContentContainer = styled.tbody<{
-  readonly maxHeight?: number
+	readonly maxHeight?: number
 }>`
   display: block;
   width: 100%;
   max-height: ${({ maxHeight }) =>
-    maxHeight === undefined ? 'initial' : `${maxHeight}px`};
+		maxHeight === undefined ? 'initial' : `${maxHeight}px`};
   overflow: auto;
   padding-bottom: ${spacing.medium};
   border-top: 1px solid ${({ theme }) => theme.color.element12()};
 `
 
 export interface SimpleTableProps extends BaseProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * The maximum height of the table in number of rows,
-   * more rows will cause a scrollbar to appear.
-   */
-  readonly maxHeight: number
-  /**
-   * Override theme's default setting for `compact` if set.
-   */
-  readonly compact?: boolean
-  /**
-   * React element that will go into the top of the table.
-   */
-  readonly header: ReactNode
-  /**
-   * Override default column width by specified width (%) if set.
-   */
-  readonly widths?: ReadonlyArray<number>
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * The maximum height of the table in number of rows,
+	 * more rows will cause a scrollbar to appear.
+	 */
+	readonly maxHeight: number
+	/**
+	 * Override theme's default setting for `compact` if set.
+	 */
+	readonly compact?: boolean
+	/**
+	 * React element that will go into the top of the table.
+	 */
+	readonly header: ReactNode
+	/**
+	 * Override default column width by specified width (%) if set.
+	 */
+	readonly widths?: ReadonlyArray<number>
 }
 
 export const SimpleTable: FC<SimpleTableProps> = ({
-  maxHeight,
-  compact: compactFromProps,
-  header,
-  widths = [],
-  children,
-  ...props
+	maxHeight,
+	compact: compactFromProps,
+	header,
+	widths = [],
+	children,
+	...props
 }) => {
-  const { compact: compactFromTheme } = useTheme()
-  const compact = compactFromProps ?? compactFromTheme
+	const { compact: compactFromTheme } = useTheme()
+	const compact = compactFromProps ?? compactFromTheme
 
-  const [hasOverflow, setHasOverflow] = useState(false)
-  const tableRef = useRef<HTMLTableSectionElement>(null)
+	const [hasOverflow, setHasOverflow] = useState(false)
+	const tableRef = useRef<HTMLTableSectionElement>(null)
 
-  const columnWidths = widths
+	const columnWidths = widths
 
-  useLayoutEffect(() => {
-    if (tableRef.current === null) {
-      return
-    }
+	useLayoutEffect(() => {
+		if (tableRef.current === null) {
+			return
+		}
 
-    setHasOverflow(
-      tableRef.current.offsetHeight < tableRef.current.scrollHeight ||
-        tableRef.current.offsetWidth < tableRef.current.scrollWidth
-    )
-  }, [tableRef])
+		setHasOverflow(
+			tableRef.current.offsetHeight < tableRef.current.scrollHeight ||
+				tableRef.current.offsetWidth < tableRef.current.scrollWidth
+		)
+	}, [tableRef])
 
-  const [...rows] = Children.toArray(children)
+	const [...rows] = Children.toArray(children)
 
-  const contentHeight =
-    maxHeight !== undefined
-      ? maxHeight * (compact ? SIMPLE_ROW_HEIGHT : ROW_HEIGHT)
-      : undefined
+	const contentHeight =
+		maxHeight !== undefined
+			? maxHeight * (compact ? SIMPLE_ROW_HEIGHT : ROW_HEIGHT)
+			: undefined
 
-  return (
-    <TableContainer {...props}>
-      <SimpleTableContext.Provider
-        value={{
-          compact,
-          columnWidths,
-        }}
-      >
-        <TableHeaderContainer hasMargin={hasOverflow}>
-          <SimpleTableHeader>{header}</SimpleTableHeader>
-        </TableHeaderContainer>
-        <TableContentContainer ref={tableRef} maxHeight={contentHeight}>
-          {rows}
-        </TableContentContainer>
-      </SimpleTableContext.Provider>
-    </TableContainer>
-  )
+	return (
+		<TableContainer {...props}>
+			<SimpleTableContext.Provider
+				value={{
+					compact,
+					columnWidths,
+				}}
+			>
+				<TableHeaderContainer hasMargin={hasOverflow}>
+					<SimpleTableHeader>{header}</SimpleTableHeader>
+				</TableHeaderContainer>
+				<TableContentContainer ref={tableRef} maxHeight={contentHeight}>
+					{rows}
+				</TableContentContainer>
+			</SimpleTableContext.Provider>
+		</TableContainer>
+	)
 }

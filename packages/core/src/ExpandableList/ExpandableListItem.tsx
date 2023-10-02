@@ -1,9 +1,9 @@
 import {
-  useCallback,
-  Dispatch,
-  SetStateAction,
-  FC,
-  HTMLAttributes,
+	useCallback,
+	Dispatch,
+	SetStateAction,
+	FC,
+	HTMLAttributes,
 } from 'react'
 import styled from 'styled-components'
 
@@ -13,12 +13,12 @@ import { IconType } from '../Icon'
 import { ListItemContainer } from './ListItemContainer'
 
 export interface ExpandableListItemType {
-  readonly id: string
-  readonly label: string
-  readonly icon: IconType
-  readonly selected?: boolean
-  readonly onClick?: VoidFunction
-  readonly items?: ReadonlyArray<ExpandableListItemType>
+	readonly id: string
+	readonly label: string
+	readonly icon: IconType
+	readonly selected?: boolean
+	readonly onClick?: VoidFunction
+	readonly items?: ReadonlyArray<ExpandableListItemType>
 }
 
 export const ExpandableListContainer = styled.div`
@@ -36,11 +36,11 @@ type BaseElement = HTMLDivElement
 type BaseProps = HTMLAttributes<BaseElement>
 
 export interface ExpandableListItemProps extends BaseProps {
-  readonly item: ExpandableListItemType
-  readonly expandedItems: ReadonlyArray<string>
-  readonly setExpandedItems: Dispatch<SetStateAction<ReadonlyArray<string>>>
-  readonly isNestedItem: boolean
-  readonly accordion?: boolean
+	readonly item: ExpandableListItemType
+	readonly expandedItems: ReadonlyArray<string>
+	readonly setExpandedItems: Dispatch<SetStateAction<ReadonlyArray<string>>>
+	readonly isNestedItem: boolean
+	readonly accordion?: boolean
 }
 
 /**
@@ -53,70 +53,70 @@ export interface ExpandableListItemProps extends BaseProps {
  */
 
 export const ExpandableListItem: FC<ExpandableListItemProps> = ({
-  item,
-  expandedItems,
-  setExpandedItems,
-  isNestedItem,
-  accordion = false,
-  ...props
+	item,
+	expandedItems,
+	setExpandedItems,
+	isNestedItem,
+	accordion = false,
+	...props
 }) => {
-  const { id, label, icon, selected = false, onClick, items } = item
-  const onChildClick = useCallback(
-    () =>
-      ((itemId: string) => {
-        let nextExpandedItems = []
+	const { id, label, icon, selected = false, onClick, items } = item
+	const onChildClick = useCallback(
+		() =>
+			((itemId: string) => {
+				let nextExpandedItems = []
 
-        if (expandedItems.includes(itemId)) {
-          // Close the expanded item
-          nextExpandedItems = expandedItems.filter(i => i !== itemId)
-        } else if (accordion) {
-          // Only add one expanded item when accordion
-          nextExpandedItems = [id]
-        } else {
-          // Extend expanded items with a new one
-          nextExpandedItems = [...expandedItems, id]
-        }
+				if (expandedItems.includes(itemId)) {
+					// Close the expanded item
+					nextExpandedItems = expandedItems.filter(i => i !== itemId)
+				} else if (accordion) {
+					// Only add one expanded item when accordion
+					nextExpandedItems = [id]
+				} else {
+					// Extend expanded items with a new one
+					nextExpandedItems = [...expandedItems, id]
+				}
 
-        setExpandedItems(nextExpandedItems)
-      })(id),
-    [expandedItems, id, accordion, setExpandedItems]
-  )
-  const hasChildren = items !== undefined
-  const onItemClick = hasChildren ? onChildClick : onClick
-  const expanded = expandedItems.includes(id)
-  const childSelected =
-    items !== undefined
-      ? Boolean(items.find(({ selected: subSelected = false }) => subSelected))
-      : false
+				setExpandedItems(nextExpandedItems)
+			})(id),
+		[expandedItems, id, accordion, setExpandedItems]
+	)
+	const hasChildren = items !== undefined
+	const onItemClick = hasChildren ? onChildClick : onClick
+	const expanded = expandedItems.includes(id)
+	const childSelected =
+		items !== undefined
+			? Boolean(items.find(({ selected: subSelected = false }) => subSelected))
+			: false
 
-  return (
-    <ItemWrapper key={id} {...props}>
-      <ListItemContainer
-        selected={selected}
-        isNestedItem={isNestedItem}
-        hasChildren={hasChildren}
-        expanded={expanded}
-        childSelected={childSelected}
-        onClick={onItemClick}
-        icon={icon}
-        label={label}
-      />
-      {items !== undefined ? (
-        <FoldTransition expanded={expanded}>
-          <ExpandableListContainer>
-            {items.map(i => (
-              <ExpandableListItem
-                key={i.id}
-                item={i}
-                expandedItems={expandedItems}
-                setExpandedItems={setExpandedItems}
-                isNestedItem={true}
-                accordion={accordion}
-              />
-            ))}
-          </ExpandableListContainer>
-        </FoldTransition>
-      ) : null}
-    </ItemWrapper>
-  )
+	return (
+		<ItemWrapper key={id} {...props}>
+			<ListItemContainer
+				selected={selected}
+				isNestedItem={isNestedItem}
+				hasChildren={hasChildren}
+				expanded={expanded}
+				childSelected={childSelected}
+				onClick={onItemClick}
+				icon={icon}
+				label={label}
+			/>
+			{items !== undefined ? (
+				<FoldTransition expanded={expanded}>
+					<ExpandableListContainer>
+						{items.map(i => (
+							<ExpandableListItem
+								key={i.id}
+								item={i}
+								expandedItems={expandedItems}
+								setExpandedItems={setExpandedItems}
+								isNestedItem={true}
+								accordion={accordion}
+							/>
+						))}
+					</ExpandableListContainer>
+				</FoldTransition>
+			) : null}
+		</ItemWrapper>
+	)
 }

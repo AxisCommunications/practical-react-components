@@ -1,8 +1,8 @@
 import {
-  AnchorHTMLAttributes,
-  ButtonHTMLAttributes,
-  FC,
-  ReactNode,
+	AnchorHTMLAttributes,
+	ButtonHTMLAttributes,
+	FC,
+	ReactNode,
 } from 'react'
 import styled, { css } from 'styled-components'
 
@@ -36,7 +36,7 @@ const LinkNative = styled.a`
 `
 
 const LinkButton = styled.button<{
-  readonly disabled?: boolean
+	readonly disabled?: boolean
 }>`
   padding: 0;
   border: none;
@@ -60,50 +60,50 @@ const LinkButton = styled.button<{
   }
 
   ${({ disabled }) =>
-    disabled === true
-      ? css`
+		disabled === true
+			? css`
           opacity: ${opacity[48]};
           pointer-events: none;
         `
-      : undefined}
+			: undefined}
 `
 
 export interface ButtonLinkProps extends BaseButtonProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseButtonProps['className']
-  /**
-   * If `button` it use <button> tag.
-   * <button> tag is better than <span> tag for accessibility.
-   */
-  readonly variant: 'button'
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseButtonProps['className']
+	/**
+	 * If `button` it use <button> tag.
+	 * <button> tag is better than <span> tag for accessibility.
+	 */
+	readonly variant: 'button'
 }
 
 export interface ALinkProps extends BaseProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * If `a` it use <a> tag and href is required.
-   */
-  readonly variant: 'a'
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * If `a` it use <a> tag and href is required.
+	 */
+	readonly variant: 'a'
 }
 
 export const Link: FC<ButtonLinkProps | ALinkProps> = ({
-  children,
-  ...props
+	children,
+	...props
 }) => {
-  if (props.variant === 'a') {
-    return <LinkNative {...props}>{children}</LinkNative>
-  }
+	if (props.variant === 'a') {
+		return <LinkNative {...props}>{children}</LinkNative>
+	}
 
-  return (
-    <LinkButton {...props} type="button">
-      {children}
-    </LinkButton>
-  )
+	return (
+		<LinkButton {...props} type="button">
+			{children}
+		</LinkButton>
+	)
 }

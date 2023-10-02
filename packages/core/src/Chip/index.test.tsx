@@ -6,26 +6,26 @@ import { Chip } from '.'
 import { TestRender } from '../TestUtils'
 
 describe('Chips', () => {
-  test('default', () => {
-    const tree = TestRender(<Chip text="test" />)
-    expect(tree).toMatchSnapshot()
-  })
+	test('default', () => {
+		const tree = TestRender(<Chip text="test" />)
+		expect(tree).toMatchSnapshot()
+	})
 
-  test('error', () => {
-    const tree = TestRender(<Chip text="test" error={true} />)
+	test('error', () => {
+		const tree = TestRender(<Chip text="test" error={true} />)
 
-    expect(tree).toMatchSnapshot()
-  })
+		expect(tree).toMatchSnapshot()
+	})
 
-  test('disabled', () => {
-    const tree = TestRender(<Chip text="test" disabled={true} />)
+	test('disabled', () => {
+		const tree = TestRender(<Chip text="test" disabled={true} />)
 
-    expect(tree).toMatchSnapshot()
-  })
+		expect(tree).toMatchSnapshot()
+	})
 
-  test('with icon', () => {
-    const tree = TestRender(<Chip text="with icon" icon={CheckIcon} />)
+	test('with icon', () => {
+		const tree = TestRender(<Chip text="with icon" icon={CheckIcon} />)
 
-    expect(tree).toMatchSnapshot()
-  })
+		expect(tree).toMatchSnapshot()
+	})
 })

@@ -1,12 +1,12 @@
 import {
-  useState,
-  useCallback,
-  useRef,
-  InputHTMLAttributes,
-  ChangeEventHandler,
-  FC,
-  DragEvent,
-  KeyboardEventHandler,
+	useState,
+	useCallback,
+	useRef,
+	InputHTMLAttributes,
+	ChangeEventHandler,
+	FC,
+	DragEvent,
+	KeyboardEventHandler,
 } from 'react'
 import styled, { css } from 'styled-components'
 import { DropIcon } from 'practical-react-components-icons'
@@ -32,11 +32,11 @@ const DroppableIcon = styled(Icon)`
 
 const DroppableArea = styled.div<{ readonly isDragging: boolean }>`
   ${({ isDragging }) =>
-    isDragging
-      ? css`
+		isDragging
+			? css`
           background-color: ${({ theme }) => theme.color.background02()};
         `
-      : undefined}
+			: undefined}
   border: 1px dashed ${({ theme }) => theme.color.text02()};
   display: flex;
   flex-direction: column;
@@ -71,137 +71,137 @@ const InputLabel = styled(Typography)`
 `
 
 export interface DroppableProps extends BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * Text that is shown inside the component.
-   */
-  readonly inputLabel: string
-  /**
-   * A function which is run when the file is selected.
-   */
-  readonly onFileChange?: (file?: File) => void
-  /**
-   * Text which can be used to inform user about supported formats.
-   */
-  readonly supportedFormats?: string
-  /**
-   * Name of the selected file
-   */
-  readonly selectedFileName?: string
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * Text that is shown inside the component.
+	 */
+	readonly inputLabel: string
+	/**
+	 * A function which is run when the file is selected.
+	 */
+	readonly onFileChange?: (file?: File) => void
+	/**
+	 * Text which can be used to inform user about supported formats.
+	 */
+	readonly supportedFormats?: string
+	/**
+	 * Name of the selected file
+	 */
+	readonly selectedFileName?: string
 }
 
 let enterTarget: EventTarget | undefined
 
 export const Droppable: FC<DroppableProps> = ({
-  onFileChange,
-  inputLabel,
-  supportedFormats,
-  selectedFileName,
-  className,
-  onChange,
-  ...props
+	onFileChange,
+	inputLabel,
+	supportedFormats,
+	selectedFileName,
+	className,
+	onChange,
+	...props
 }) => {
-  const [isDragging, setDragging] = useState(false)
-  const fileRef = useRef<HTMLInputElement>(null)
-  const handleLinkClick = useCallback(() => fileRef.current?.click(), [fileRef])
-  const handleFile = useCallback(
-    (files: ReadonlyArray<File> | null) => {
-      if (files === null) {
-        return
-      }
+	const [isDragging, setDragging] = useState(false)
+	const fileRef = useRef<HTMLInputElement>(null)
+	const handleLinkClick = useCallback(() => fileRef.current?.click(), [fileRef])
+	const handleFile = useCallback(
+		(files: ReadonlyArray<File> | null) => {
+			if (files === null) {
+				return
+			}
 
-      onFileChange?.(files[0])
+			onFileChange?.(files[0])
 
-      if (fileRef.current !== null) {
-        fileRef.current.value = ''
-      }
-    },
-    [fileRef, onFileChange]
-  )
-  const handleDragAndDrop = useCallback(
-    (event: DragEvent<HTMLDivElement>) => {
-      event.preventDefault()
+			if (fileRef.current !== null) {
+				fileRef.current.value = ''
+			}
+		},
+		[fileRef, onFileChange]
+	)
+	const handleDragAndDrop = useCallback(
+		(event: DragEvent<HTMLDivElement>) => {
+			event.preventDefault()
 
-      if (event.type === 'dragenter') {
-        enterTarget = event.target
-        setDragging(true)
-      }
+			if (event.type === 'dragenter') {
+				enterTarget = event.target
+				setDragging(true)
+			}
 
-      if (event.type === 'dragleave' && enterTarget === event.target) {
-        event.stopPropagation()
-        setDragging(false)
-      }
+			if (event.type === 'dragleave' && enterTarget === event.target) {
+				event.stopPropagation()
+				setDragging(false)
+			}
 
-      if (event.type === 'drop') {
-        enterTarget = undefined
+			if (event.type === 'drop') {
+				enterTarget = undefined
 
-        handleFile([...event.dataTransfer.files])
-        setDragging(false)
-      }
-    },
-    [handleFile]
-  )
-  const handleFileChange = useCallback<InputChangeHandler>(
-    e => {
-      onChange?.(e)
-      handleFile(e.target.files !== null ? [...e.target.files] : null)
-    },
-    [handleFile, onChange]
-  )
+				handleFile([...event.dataTransfer.files])
+				setDragging(false)
+			}
+		},
+		[handleFile]
+	)
+	const handleFileChange = useCallback<InputChangeHandler>(
+		e => {
+			onChange?.(e)
+			handleFile(e.target.files !== null ? [...e.target.files] : null)
+		},
+		[handleFile, onChange]
+	)
 
-  const handleKeyUp = useCallback<KeyboardEventHandler<BaseElement>>(
-    e => {
-      switch (e.key) {
-        case 'Enter': {
-          handleLinkClick()
-          break
-        }
-      }
-    },
-    [handleLinkClick]
-  )
+	const handleKeyUp = useCallback<KeyboardEventHandler<BaseElement>>(
+		e => {
+			switch (e.key) {
+				case 'Enter': {
+					handleLinkClick()
+					break
+				}
+			}
+		},
+		[handleLinkClick]
+	)
 
-  const hasSelectedFile = selectedFileName !== undefined
+	const hasSelectedFile = selectedFileName !== undefined
 
-  return (
-    <DroppableArea
-      isDragging={isDragging}
-      draggable={false}
-      onDragEnter={handleDragAndDrop}
-      onDragLeave={handleDragAndDrop}
-      onDragOver={handleDragAndDrop}
-      onDrop={handleDragAndDrop}
-      onClick={handleLinkClick}
-      className={className}
-      tabIndex={0}
-      onKeyUp={handleKeyUp}
-    >
-      <DroppableIcon icon={DropIcon} />
-      <DroppableInputFile
-        ref={fileRef}
-        type="file"
-        multiple={false}
-        onChange={handleFileChange}
-        {...props}
-      />
-      <DroppableLabel>
-        <InputLabel variant={hasSelectedFile ? 'caption' : 'group-title'}>
-          {inputLabel}
-        </InputLabel>
-      </DroppableLabel>
+	return (
+		<DroppableArea
+			isDragging={isDragging}
+			draggable={false}
+			onDragEnter={handleDragAndDrop}
+			onDragLeave={handleDragAndDrop}
+			onDragOver={handleDragAndDrop}
+			onDrop={handleDragAndDrop}
+			onClick={handleLinkClick}
+			className={className}
+			tabIndex={0}
+			onKeyUp={handleKeyUp}
+		>
+			<DroppableIcon icon={DropIcon} />
+			<DroppableInputFile
+				ref={fileRef}
+				type="file"
+				multiple={false}
+				onChange={handleFileChange}
+				{...props}
+			/>
+			<DroppableLabel>
+				<InputLabel variant={hasSelectedFile ? 'caption' : 'group-title'}>
+					{inputLabel}
+				</InputLabel>
+			</DroppableLabel>
 
-      {supportedFormats !== undefined && !hasSelectedFile ? (
-        <Typography variant="caption">{supportedFormats}</Typography>
-      ) : null}
+			{supportedFormats !== undefined && !hasSelectedFile ? (
+				<Typography variant="caption">{supportedFormats}</Typography>
+			) : null}
 
-      {selectedFileName !== undefined ? (
-        <Typography variant={!hasSelectedFile ? 'group-title' : 'caption'}>
-          {selectedFileName}
-        </Typography>
-      ) : null}
-    </DroppableArea>
-  )
+			{selectedFileName !== undefined ? (
+				<Typography variant={!hasSelectedFile ? 'group-title' : 'caption'}>
+					{selectedFileName}
+				</Typography>
+			) : null}
+		</DroppableArea>
+	)
 }

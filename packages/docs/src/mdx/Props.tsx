@@ -48,54 +48,54 @@ const PropInfo = styled.div`
 `
 
 interface PropsProps {
-  readonly props: ReadonlyArray<ComponentDoc>
-  readonly of: string
+	readonly props: ReadonlyArray<ComponentDoc>
+	readonly of: string
 }
 
 const PropsList: FC<PropsProps> = ({ of, props }) => {
-  const componentProps = props.find(({ displayName }) => displayName === of)
+	const componentProps = props.find(({ displayName }) => displayName === of)
 
-  if (componentProps === undefined) {
-    return null
-  }
+	if (componentProps === undefined) {
+		return null
+	}
 
-  return (
-    <PropTable>
-      {Object.values(componentProps.props).map(prop => (
-        <PropItem key={prop.name}>
-          <div>
-            <PropTitle>
-              {prop.name}
+	return (
+		<PropTable>
+			{Object.values(componentProps.props).map(prop => (
+				<PropItem key={prop.name}>
+					<div>
+						<PropTitle>
+							{prop.name}
 
-              {!prop.required ? (
-                <>
-                  {' '}
-                  <PropTitleOptional>
-                    (optional
-                    {prop.defaultValue !== null ? (
-                      <>
-                        {`, default: `}
-                        <PropTitleOptionalDefault>
-                          {JSON.stringify(prop.defaultValue.value)}
-                        </PropTitleOptionalDefault>
-                      </>
-                    ) : null}
-                    )
-                  </PropTitleOptional>
-                </>
-              ) : null}
-            </PropTitle>
-            <PropDescription>{prop.description}</PropDescription>
-          </div>
-          <PropInfo>
-            <PropValue>{prop.type.name}</PropValue>
-          </PropInfo>
-        </PropItem>
-      ))}
-    </PropTable>
-  )
+							{!prop.required ? (
+								<>
+									{' '}
+									<PropTitleOptional>
+										(optional
+										{prop.defaultValue !== null ? (
+											<>
+												{`, default: `}
+												<PropTitleOptionalDefault>
+													{JSON.stringify(prop.defaultValue.value)}
+												</PropTitleOptionalDefault>
+											</>
+										) : null}
+										)
+									</PropTitleOptional>
+								</>
+							) : null}
+						</PropTitle>
+						<PropDescription>{prop.description}</PropDescription>
+					</div>
+					<PropInfo>
+						<PropValue>{prop.type.name}</PropValue>
+					</PropInfo>
+				</PropItem>
+			))}
+		</PropTable>
+	)
 }
 
 export const Props = styled(PropsList).attrs({
-  props: propsList as unknown as ReadonlyArray<ComponentDoc>,
+	props: propsList as unknown as ReadonlyArray<ComponentDoc>,
 })``

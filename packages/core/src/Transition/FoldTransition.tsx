@@ -4,77 +4,77 @@ import { TransitionGroup, Transition } from 'react-transition-group'
 const FOLD_ANIMATION_DURATION = 250
 
 const transitionHeight = (
-  node: HTMLElement,
-  start: number,
-  end: number
+	node: HTMLElement,
+	start: number,
+	end: number
 ): void => {
-  node.style.overflow = 'hidden'
-  node.style.height = `${start}px`
-  node.scrollTop = node.scrollTop // ✨ force reflow ✨
-  node.style.transition = `height ${FOLD_ANIMATION_DURATION}ms ease-in-out`
-  node.style.height = `${end}px`
+	node.style.overflow = 'hidden'
+	node.style.height = `${start}px`
+	node.scrollTop = node.scrollTop // ✨ force reflow ✨
+	node.style.transition = `height ${FOLD_ANIMATION_DURATION}ms ease-in-out`
+	node.style.height = `${end}px`
 }
 
 export interface FoldTransitionProps {
-  readonly children?: ReactNode
-  readonly expanded: boolean
+	readonly children?: ReactNode
+	readonly expanded: boolean
 }
 
 export const FoldTransition: FC<FoldTransitionProps> = ({
-  expanded,
-  children,
+	expanded,
+	children,
 }) => {
-  const nodeRef = useRef<HTMLDivElement | null>(null)
+	const nodeRef = useRef<HTMLDivElement | null>(null)
 
-  const increaseHeight = useCallback(() => {
-    if (nodeRef.current === null) {
-      return
-    }
+	const increaseHeight = useCallback(() => {
+		if (nodeRef.current === null) {
+			return
+		}
 
-    const node = nodeRef.current
+		const node = nodeRef.current
 
-    const height = node.offsetHeight
-    if (height === 0) return
-    transitionHeight(node, 0, height)
-  }, [])
+		const height = node.offsetHeight
+		if (height === 0) return
+		transitionHeight(node, 0, height)
+	}, [])
 
-  const decreaseHeight = useCallback(() => {
-    if (nodeRef.current === null) {
-      return
-    }
+	const decreaseHeight = useCallback(() => {
+		if (nodeRef.current === null) {
+			return
+		}
 
-    const node = nodeRef.current
+		const node = nodeRef.current
 
-    const height = node.offsetHeight
-    transitionHeight(node, height, 0)
-  }, [])
+		const height = node.offsetHeight
+		transitionHeight(node, height, 0)
+	}, [])
 
-  const resetHeight = useCallback(() => {
-    if (nodeRef.current === null) {
-      return
-    }
+	const resetHeight = useCallback(() => {
+		if (nodeRef.current === null) {
+			return
+		}
 
-    const node = nodeRef.current
-    node.style.overflow = 'visible'
-    node.style.height = 'auto'
-    node.style.removeProperty('transition')
-  }, [])
+		const node = nodeRef.current
+		node.style.overflow = 'visible'
+		node.style.height = 'auto'
+		node.style.removeProperty('transition')
+	}, [])
 
-  return (
-    <TransitionGroup component={null}>
-      {expanded ? (
-        <Transition
-          nodeRef={nodeRef}
-          appear={true}
-          timeout={FOLD_ANIMATION_DURATION}
-          onEnter={increaseHeight}
-          onEntered={resetHeight}
-          onExit={decreaseHeight}
-          onExited={resetHeight}
-        >
-          <div ref={nodeRef}>{children}</div>
-        </Transition>
-      ) : undefined}
-    </TransitionGroup>
-  )
+	return (
+		<TransitionGroup component={null}>
+			{expanded ? (
+				<Transition
+					nodeRef={nodeRef}
+					appear={true}
+					timeout={FOLD_ANIMATION_DURATION}
+					onEnter={increaseHeight}
+					onEntered={resetHeight}
+					onExit={decreaseHeight}
+					onExited={resetHeight}
+				>
+					<div ref={nodeRef}>{children}</div>
+				</Transition>
+			) : undefined}
+		</TransitionGroup>
+	)
 }

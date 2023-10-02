@@ -4,35 +4,35 @@ import 'jest-styled-components'
 import { PracticalProvider } from './Practical'
 
 interface TPProps {
-  readonly children?: ReactNode
+	readonly children?: ReactNode
 }
 /*
   Only used for Jest Snapshot Testing
 */
 export const TP: FC<TPProps> = ({ children }): JSX.Element => (
-  <PracticalProvider>{children}</PracticalProvider>
+	<PracticalProvider>{children}</PracticalProvider>
 )
 
 /**
  * Mock reference to practical-root
  */
 const createNodeMock = (element: ReactElement) => {
-  if (element.props.id !== 'practical-root') {
-    return null
-  }
+	if (element.props.id !== 'practical-root') {
+		return null
+	}
 
-  return {}
+	return {}
 }
 
 export const TestRender = (jsx: JSX.Element) =>
-  renderer.create(<TP>{jsx}</TP>, { createNodeMock }).toJSON()
+	renderer.create(<TP>{jsx}</TP>, { createNodeMock }).toJSON()
 
 export const TestText = (): JSX.Element => <span>Test</span>
 
 export const TestTextWithForwardRef = forwardRef<HTMLElement>(
-  ({ ...props }, ref) => (
-    <span {...props} ref={ref}>
-      Test
-    </span>
-  )
+	({ ...props }, ref) => (
+		<span {...props} ref={ref}>
+			Test
+		</span>
+	)
 )

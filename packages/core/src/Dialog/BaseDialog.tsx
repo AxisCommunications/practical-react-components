@@ -25,9 +25,9 @@ const BOTTOM_HEIGHT = '64px'
 export type DialogWidth = 'normal' | 'settings-panel' | 'large-settings-panel'
 
 const DIALOG_WIDTH = {
-  normal: '504px',
-  'settings-panel': '656px',
-  'large-settings-panel': '808px',
+	normal: '504px',
+	'settings-panel': '656px',
+	'large-settings-panel': '808px',
 }
 
 const Container = styled.div<{ readonly width: DialogWidth }>`
@@ -70,25 +70,25 @@ export const DialogFooter = styled.div`
 `
 
 interface BaseDialogContentProps {
-  /**
-   * The width of the dialog, one of `'normal'`, `'settings-panel'` or
-   * `'large-settings-panel'`.
-   *
-   * Default: `'normal'`
-   */
-  readonly width?: DialogWidth
+	/**
+	 * The width of the dialog, one of `'normal'`, `'settings-panel'` or
+	 * `'large-settings-panel'`.
+	 *
+	 * Default: `'normal'`
+	 */
+	readonly width?: DialogWidth
 }
 
 export type BaseDialogProps = BaseDialogContentProps & ModalProps
 
 export const BaseDialog: FC<BaseDialogProps> = ({
-  width = 'normal',
-  children,
-  ...modalProps
+	width = 'normal',
+	children,
+	...modalProps
 }) => (
-  <Modal {...modalProps}>
-    <Paper>
-      <Container width={width}>{children}</Container>
-    </Paper>
-  </Modal>
+	<Modal {...modalProps}>
+		<Paper>
+			<Container width={width}>{children}</Container>
+		</Paper>
+	</Modal>
 )

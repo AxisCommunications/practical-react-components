@@ -1,10 +1,10 @@
 import {
-  useCallback,
-  ButtonHTMLAttributes,
-  MouseEventHandler,
-  forwardRef,
-  FocusEventHandler,
-  PointerEventHandler,
+	useCallback,
+	ButtonHTMLAttributes,
+	MouseEventHandler,
+	forwardRef,
+	FocusEventHandler,
+	PointerEventHandler,
 } from 'react'
 import styled, { css } from 'styled-components'
 import { useVisibleFocus } from 'react-hooks-shareable'
@@ -41,22 +41,22 @@ const COMMON_STYLE = css`
  */
 
 export const NativeButton = styled.button<{
-  readonly variant: ButtonVariantType
-  readonly accent: boolean
-  readonly icon?: IconType
-  readonly visibleFocus: boolean
+	readonly variant: ButtonVariantType
+	readonly accent: boolean
+	readonly icon?: IconType
+	readonly visibleFocus: boolean
 }>`
   ${COMMON_STYLE}
   min-width: ${BUTTON_MIN_WIDTH};
   border: 2px solid transparent;
   padding: ${({ icon }) =>
-    icon === undefined
-      ? `0 ${spacing.large}`
-      : `0 ${spacing.large} 0 ${spacing.medium}`};
+		icon === undefined
+			? `0 ${spacing.large}`
+			: `0 ${spacing.large} 0 ${spacing.medium}`};
 
   ${({ variant, accent, visibleFocus, theme }) => {
-    if (variant === 'primary') {
-      return css`
+		if (variant === 'primary') {
+			return css`
         color: ${theme.color.text00()};
         fill: ${theme.color.text00()};
         background-color: ${theme.color.elementPrimary()};
@@ -69,14 +69,14 @@ export const NativeButton = styled.button<{
 
         &:focus {
           ${
-            visibleFocus
-              ? css`
+						visibleFocus
+							? css`
                 background-color: ${theme.color.elementPrimary()};
                 box-shadow: ${theme.shadow.primaryButton};
                 border: 2px solid ${theme.color.elementBorderFocus()};
               `
-              : undefined
-          };
+							: undefined
+					};
         }
 
         &:active {
@@ -88,8 +88,8 @@ export const NativeButton = styled.button<{
           background-color: ${theme.color.elementPrimary()};
         }
       `
-    } else if (accent) {
-      return css`
+		} else if (accent) {
+			return css`
         color: ${theme.color.elementPrimary()};
         fill: ${theme.color.elementPrimary()};
         background-color: transparent;
@@ -101,14 +101,14 @@ export const NativeButton = styled.button<{
 
         &:focus {
           ${
-            visibleFocus
-              ? css`
+						visibleFocus
+							? css`
                 color: ${theme.color.elementPrimary()};
                 background-color: ${theme.color.elementPrimary(opacity[16])};
                 border: 2px solid ${theme.color.elementBorder()};
               `
-              : undefined
-          };
+							: undefined
+					};
         }
 
         &:active {
@@ -122,9 +122,9 @@ export const NativeButton = styled.button<{
           background-color: transparent;
         }
       `
-    }
+		}
 
-    return css`
+		return css`
       color: ${theme.color.text04()};
       fill: ${theme.color.text04()};
       background-color: transparent;
@@ -136,14 +136,14 @@ export const NativeButton = styled.button<{
 
       &:focus {
         ${
-          visibleFocus
-            ? css`
+					visibleFocus
+						? css`
               color: ${theme.color.text04()};
               background-color: ${theme.color.element11(opacity[16])};
               border: 2px solid ${theme.color.elementBorder()};
             `
-            : undefined
-        };
+						: undefined
+				};
       }
 
       &:active {
@@ -157,12 +157,12 @@ export const NativeButton = styled.button<{
         background-color: transparent;
       }
     `
-  }}
+	}}
 
   /** common disabled style */
   ${({ disabled }) =>
-    disabled === true
-      ? css`
+		disabled === true
+			? css`
           opacity: ${opacity[48]};
           cursor: default;
           box-shadow: none;
@@ -174,7 +174,7 @@ export const NativeButton = styled.button<{
             border: 2px solid transparent;
           }
         `
-      : undefined}
+			: undefined}
 `
 
 const Container = styled.span.attrs({ className: 'sc-Container' })`
@@ -185,34 +185,34 @@ const Container = styled.span.attrs({ className: 'sc-Container' })`
 `
 
 const ButtonIcon = styled(Icon).attrs({ className: 'sc-ButtonIcon' })<{
-  readonly addSpace: boolean
+	readonly addSpace: boolean
 }>`
   fill: inherit;
   flex: none;
   ${({ addSpace }) =>
-    addSpace
-      ? css`
+		addSpace
+			? css`
           margin-right: ${spacing.medium};
         `
-      : undefined}
+			: undefined}
 `
 
 const LabelContainer = styled.span.attrs({ className: 'sc-LabelContainer' })<{
-  readonly variant: ButtonVariantType
-  readonly accent: boolean
+	readonly variant: ButtonVariantType
+	readonly accent: boolean
 }>`
   overflow: hidden;
   text-overflow: ellipsis;
   pointer-events: none;
   color: inherit;
   text-transform: ${({ variant, accent, theme }) => {
-    if (variant === 'primary') {
-      return theme.font.button.primary.textTransform
-    } else if (accent) {
-      return theme.font.button.secondary.accent.textTransform
-    }
-    return theme.font.button.secondary.default.textTransform
-  }};
+		if (variant === 'primary') {
+			return theme.font.button.primary.textTransform
+		} else if (accent) {
+			return theme.font.button.secondary.accent.textTransform
+		}
+		return theme.font.button.secondary.default.textTransform
+	}};
 `
 
 type BaseElement = HTMLButtonElement
@@ -222,108 +222,108 @@ export type ButtonVariantType = 'primary' | 'secondary'
 export type ButtonClickHandler = MouseEventHandler<BaseElement>
 
 interface BaseButtonProps extends BaseProps {
-  /**
-   * Specifies the name for a <button> element.
-   */
-  readonly name?: BaseProps['name']
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * Specifies the type of button.
-   * Default: `button`
-   */
-  readonly type?: ButtonType
-  /**
-   * Button variant.
-   * Default: `primary`
-   */
-  readonly variant?: ButtonVariantType
-  /**
-   * If `true` the secondary button gets primary color.
-   * Default: `false`
-   */
-  readonly accent?: boolean
+	/**
+	 * Specifies the name for a <button> element.
+	 */
+	readonly name?: BaseProps['name']
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * Specifies the type of button.
+	 * Default: `button`
+	 */
+	readonly type?: ButtonType
+	/**
+	 * Button variant.
+	 * Default: `primary`
+	 */
+	readonly variant?: ButtonVariantType
+	/**
+	 * If `true` the secondary button gets primary color.
+	 * Default: `false`
+	 */
+	readonly accent?: boolean
 }
 
 export interface ButtonProps extends BaseButtonProps {
-  /**
-   * String used to label the button.
-   */
-  readonly label: string
-  /**
-   * The icon element.
-   */
-  readonly icon?: IconType
+	/**
+	 * String used to label the button.
+	 */
+	readonly label: string
+	/**
+	 * The icon element.
+	 */
+	readonly icon?: IconType
 }
 
 export const Button = forwardRef<BaseElement, ButtonProps>(
-  (
-    {
-      disabled = false,
-      type = 'button',
-      variant = 'primary',
-      accent = false,
-      icon,
-      onPointerDown,
-      onPointerUp,
-      onFocus,
-      label,
-      ...props
-    },
-    ref
-  ) => {
-    const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
-      useVisibleFocus()
+	(
+		{
+			disabled = false,
+			type = 'button',
+			variant = 'primary',
+			accent = false,
+			icon,
+			onPointerDown,
+			onPointerUp,
+			onFocus,
+			label,
+			...props
+		},
+		ref
+	) => {
+		const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+			useVisibleFocus()
 
-    const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
-      e => {
-        onFocus?.(e)
-        determineVisibleFocus()
-      },
-      [determineVisibleFocus, onFocus]
-    )
-    const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
-      e => {
-        onPointerDown?.(e)
-        isPointerOn()
-      },
-      [isPointerOn, onPointerDown]
-    )
-    const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
-      e => {
-        onPointerUp?.(e)
-        isPointerOff()
-      },
-      [isPointerOff, onPointerUp]
-    )
+		const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
+			e => {
+				onFocus?.(e)
+				determineVisibleFocus()
+			},
+			[determineVisibleFocus, onFocus]
+		)
+		const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
+			e => {
+				onPointerDown?.(e)
+				isPointerOn()
+			},
+			[isPointerOn, onPointerDown]
+		)
+		const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
+			e => {
+				onPointerUp?.(e)
+				isPointerOff()
+			},
+			[isPointerOff, onPointerUp]
+		)
 
-    return (
-      <NativeButton
-        ref={ref}
-        disabled={disabled}
-        type={type}
-        variant={variant}
-        accent={accent}
-        icon={icon}
-        onPointerDown={handlePointerDown}
-        onPointerUp={handlePointerUp}
-        onFocus={handleFocus}
-        {...props}
-        visibleFocus={visibleFocus}
-      >
-        <Container>
-          {icon !== undefined ? (
-            <ButtonIcon icon={icon} addSpace={true} />
-          ) : undefined}
-          <LabelContainer variant={variant} accent={accent}>
-            <Typography variant="button-text">{label}</Typography>
-          </LabelContainer>
-        </Container>
-      </NativeButton>
-    )
-  }
+		return (
+			<NativeButton
+				ref={ref}
+				disabled={disabled}
+				type={type}
+				variant={variant}
+				accent={accent}
+				icon={icon}
+				onPointerDown={handlePointerDown}
+				onPointerUp={handlePointerUp}
+				onFocus={handleFocus}
+				{...props}
+				visibleFocus={visibleFocus}
+			>
+				<Container>
+					{icon !== undefined ? (
+						<ButtonIcon icon={icon} addSpace={true} />
+					) : undefined}
+					<LabelContainer variant={variant} accent={accent}>
+						<Typography variant="button-text">{label}</Typography>
+					</LabelContainer>
+				</Container>
+			</NativeButton>
+		)
+	}
 )
 
 /*
@@ -338,7 +338,7 @@ export const Button = forwardRef<BaseElement, ButtonProps>(
  */
 
 const IconNativeButton = styled(NativeButton)<{
-  readonly visibleFocus: boolean
+	readonly visibleFocus: boolean
 }>`
   position: relative;
   flex: none;
@@ -348,10 +348,10 @@ const IconNativeButton = styled(NativeButton)<{
   padding: unset;
 
   ${({ variant, accent, visibleFocus, theme }) => {
-    if (variant === 'primary') {
-      return undefined
-    } else if (accent) {
-      return css`
+		if (variant === 'primary') {
+			return undefined
+		} else if (accent) {
+			return css`
         background-color: transparent;
         border-radius: ${shape.radius.circle};
 
@@ -365,8 +365,8 @@ const IconNativeButton = styled(NativeButton)<{
         }
         &:focus {
           ${
-            visibleFocus
-              ? css`
+						visibleFocus
+							? css`
                 background-color: transparent;
                 border: 2px solid ${theme.color.elementBorder()};
                 ${IconButtonHalo} {
@@ -374,8 +374,8 @@ const IconNativeButton = styled(NativeButton)<{
                   transform: scale(1);
                 }
               `
-              : undefined
-          }
+							: undefined
+					}
         }
         &:active {
           background-color: transparent;
@@ -385,8 +385,8 @@ const IconNativeButton = styled(NativeButton)<{
           }
         }
       `
-    }
-    return css`
+		}
+		return css`
       background-color: transparent;
       border-radius: ${shape.radius.circle};
 
@@ -400,8 +400,8 @@ const IconNativeButton = styled(NativeButton)<{
       }
       &:focus {
         ${
-          visibleFocus
-            ? css`
+					visibleFocus
+						? css`
               background-color: transparent;
               border: 2px solid ${theme.color.elementBorder()};
               ${IconButtonHalo} {
@@ -409,8 +409,8 @@ const IconNativeButton = styled(NativeButton)<{
                 transform: scale(1);
               }
             `
-            : undefined
-        }
+						: undefined
+				}
       }
       &:active {
         background-color: transparent;
@@ -420,7 +420,7 @@ const IconNativeButton = styled(NativeButton)<{
         }
       }
     `
-  }}
+	}}
 `
 
 const IconButtonHalo = styled.div<{ readonly accent: boolean }>`
@@ -437,72 +437,72 @@ const IconButtonHalo = styled.div<{ readonly accent: boolean }>`
 `
 
 export interface IconButtonProps extends BaseButtonProps {
-  /**
-   * Icon that shows inside Button.
-   */
-  readonly icon: IconType
+	/**
+	 * Icon that shows inside Button.
+	 */
+	readonly icon: IconType
 }
 
 export const IconButton = forwardRef<BaseElement, IconButtonProps>(
-  (
-    {
-      disabled,
-      type = 'button',
-      variant = 'primary',
-      accent = false,
-      onPointerDown,
-      onPointerUp,
-      onFocus,
-      icon,
-      ...props
-    },
-    ref
-  ) => {
-    const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
-      useVisibleFocus()
+	(
+		{
+			disabled,
+			type = 'button',
+			variant = 'primary',
+			accent = false,
+			onPointerDown,
+			onPointerUp,
+			onFocus,
+			icon,
+			...props
+		},
+		ref
+	) => {
+		const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+			useVisibleFocus()
 
-    const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
-      e => {
-        onFocus?.(e)
-        determineVisibleFocus()
-      },
-      [determineVisibleFocus, onFocus]
-    )
-    const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
-      e => {
-        onPointerDown?.(e)
-        isPointerOn()
-      },
-      [isPointerOn, onPointerDown]
-    )
-    const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
-      e => {
-        onPointerUp?.(e)
-        isPointerOff()
-      },
-      [isPointerOff, onPointerUp]
-    )
+		const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
+			e => {
+				onFocus?.(e)
+				determineVisibleFocus()
+			},
+			[determineVisibleFocus, onFocus]
+		)
+		const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
+			e => {
+				onPointerDown?.(e)
+				isPointerOn()
+			},
+			[isPointerOn, onPointerDown]
+		)
+		const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
+			e => {
+				onPointerUp?.(e)
+				isPointerOff()
+			},
+			[isPointerOff, onPointerUp]
+		)
 
-    return (
-      <IconNativeButton
-        ref={ref}
-        disabled={disabled}
-        type={type}
-        variant={variant}
-        accent={accent}
-        onPointerDown={handlePointerDown}
-        onPointerUp={handlePointerUp}
-        onFocus={handleFocus}
-        {...props}
-        visibleFocus={visibleFocus}
-      >
-        <ButtonIcon icon={icon} addSpace={false} />
-        {variant === 'secondary' ? (
-          <IconButtonHalo accent={accent} />
-        ) : undefined}
-      </IconNativeButton>
-    )
-  }
+		return (
+			<IconNativeButton
+				ref={ref}
+				disabled={disabled}
+				type={type}
+				variant={variant}
+				accent={accent}
+				onPointerDown={handlePointerDown}
+				onPointerUp={handlePointerUp}
+				onFocus={handleFocus}
+				{...props}
+				visibleFocus={visibleFocus}
+			>
+				<ButtonIcon icon={icon} addSpace={false} />
+				{variant === 'secondary' ? (
+					<IconButtonHalo accent={accent} />
+				) : undefined}
+			</IconNativeButton>
+		)
+	}
 )
 
 /**
@@ -513,13 +513,13 @@ export const IconButton = forwardRef<BaseElement, IconButtonProps>(
  */
 
 export const NativeIconTextButton = styled.button<{
-  readonly visibleFocus: boolean
+	readonly visibleFocus: boolean
 }>`
   ${COMMON_STYLE}
   border: none;
   padding: 0 ${spacing.large} 0 0;
   ${({ visibleFocus, theme }) => {
-    return css`
+		return css`
       color: ${theme.color.text04()};
       fill: ${theme.color.text04()};
       background-color: transparent;
@@ -533,13 +533,13 @@ export const NativeIconTextButton = styled.button<{
       }
       &:focus {
         ${
-          visibleFocus
-            ? css`
+					visibleFocus
+						? css`
               color: ${theme.color.text04()};
               background-color: ${theme.color.element11(opacity[16])};
             `
-            : undefined
-        };
+						: undefined
+				};
       }
       &:active {
         box-shadow: 0 0 0 4px ${theme.color.elementPrimary(opacity[24])};
@@ -556,11 +556,11 @@ export const NativeIconTextButton = styled.button<{
         }
       }
     `
-  }}
+	}}
 `
 const IconContainer = styled(Icon)`
   ${({ theme }) => {
-    return css`
+		return css`
       box-sizing: border-box;
       height: ${componentSize.small};
       width: ${componentSize.small};
@@ -571,76 +571,76 @@ const IconContainer = styled(Icon)`
       padding: ${spacing.small};
       transition: all 200ms;
     `
-  }}
+	}}
 `
 export interface IconTextButtonProps
-  extends Omit<BaseButtonProps, 'variant' | 'accent'> {
-  /**
-   * String used to label the button.
-   */
-  readonly label: string
-  /**
-   * The icon element.
-   */
-  readonly icon: IconType
+	extends Omit<BaseButtonProps, 'variant' | 'accent'> {
+	/**
+	 * String used to label the button.
+	 */
+	readonly label: string
+	/**
+	 * The icon element.
+	 */
+	readonly icon: IconType
 }
 
 export const IconTextButton = forwardRef<BaseElement, IconTextButtonProps>(
-  (
-    {
-      disabled = false,
-      type = 'button',
-      icon,
-      onPointerDown,
-      onPointerUp,
-      onFocus,
-      label,
-      ...props
-    },
-    ref
-  ) => {
-    const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
-      useVisibleFocus()
+	(
+		{
+			disabled = false,
+			type = 'button',
+			icon,
+			onPointerDown,
+			onPointerUp,
+			onFocus,
+			label,
+			...props
+		},
+		ref
+	) => {
+		const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+			useVisibleFocus()
 
-    const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
-      e => {
-        onFocus?.(e)
-        determineVisibleFocus()
-      },
-      [determineVisibleFocus, onFocus]
-    )
-    const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
-      e => {
-        onPointerDown?.(e)
-        isPointerOn()
-      },
-      [isPointerOn, onPointerDown]
-    )
-    const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
-      e => {
-        onPointerUp?.(e)
-        isPointerOff()
-      },
-      [isPointerOff, onPointerUp]
-    )
-    return (
-      <NativeIconTextButton
-        ref={ref}
-        disabled={disabled}
-        type={type}
-        onPointerDown={handlePointerDown}
-        onPointerUp={handlePointerUp}
-        onFocus={handleFocus}
-        {...props}
-        visibleFocus={visibleFocus}
-      >
-        <Container>
-          <IconContainer icon={icon} />
-          <LabelContainer variant="primary" accent={false}>
-            <Typography variant="button-text">{label}</Typography>
-          </LabelContainer>
-        </Container>
-      </NativeIconTextButton>
-    )
-  }
+		const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
+			e => {
+				onFocus?.(e)
+				determineVisibleFocus()
+			},
+			[determineVisibleFocus, onFocus]
+		)
+		const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
+			e => {
+				onPointerDown?.(e)
+				isPointerOn()
+			},
+			[isPointerOn, onPointerDown]
+		)
+		const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
+			e => {
+				onPointerUp?.(e)
+				isPointerOff()
+			},
+			[isPointerOff, onPointerUp]
+		)
+		return (
+			<NativeIconTextButton
+				ref={ref}
+				disabled={disabled}
+				type={type}
+				onPointerDown={handlePointerDown}
+				onPointerUp={handlePointerUp}
+				onFocus={handleFocus}
+				{...props}
+				visibleFocus={visibleFocus}
+			>
+				<Container>
+					<IconContainer icon={icon} />
+					<LabelContainer variant="primary" accent={false}>
+						<Typography variant="button-text">{label}</Typography>
+					</LabelContainer>
+				</Container>
+			</NativeIconTextButton>
+		)
+	}
 )

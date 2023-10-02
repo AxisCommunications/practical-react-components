@@ -1,12 +1,12 @@
 {
-  "typescript.tsdk": ".yarn/sdks/typescript/lib",
-  "editor.formatOnSave": true,
-  "javascript.format.enable": false,
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "search.exclude": {
-    "**/.yarn": true,
-    "**/.pnp.*": true
-  },
-  "typescript.enablePromptUseWorkspaceTsdk": true
+	"typescript.tsdk": ".yarn/sdks/typescript/lib",
+	"editor.formatOnSave": true,
+	"javascript.format.enable": false,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"search.exclude": {
+		"**/.yarn": true,
+		"**/.pnp.*": true
+	},
+	"typescript.enablePromptUseWorkspaceTsdk": true
 }

@@ -10,8 +10,8 @@ type BaseProps = HTMLAttributes<BaseElement>
 type ProgressMeterVariants = 'primary' | 'secondary'
 
 interface ProgressMeterProps {
-  readonly fraction: number
-  readonly variant: ProgressMeterVariants
+	readonly fraction: number
+	readonly variant: ProgressMeterVariants
 }
 
 const ProgressContainer = styled.div`
@@ -31,51 +31,51 @@ const ProgressIndicator = styled.div`
 
 const ProgressMeter = styled.div<ProgressMeterProps>`
   background-color: ${({ theme, variant }) =>
-    variant === 'primary'
-      ? theme.color.elementPrimary()
-      : theme.color.element14()};
+		variant === 'primary'
+			? theme.color.elementPrimary()
+			: theme.color.element14()};
   border-radius: inherit;
   height: 100%;
   width: ${({ fraction }) => `${Math.round(fraction * 100)}%`};
 `
 
 const ProgressLabel = styled(Typography).attrs({
-  variant: 'chip-tag-text',
+	variant: 'chip-tag-text',
 })`
   padding: 0 ${spacing.medium};
   color: ${({ theme }) => theme.color.text03()};
 `
 
 export interface ProgressProps extends BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * Used to indicate the percentage value of the indicator.
-   * Value should between 0 and 1.
-   */
-  readonly value: number
-  /**
-   * A string used to tell the user information regarding the progress value.
-   */
-  readonly label: string
-  /**
-   * Primary or secondary variant of the progress meter
-   */
-  readonly variant?: ProgressMeterVariants
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * Used to indicate the percentage value of the indicator.
+	 * Value should between 0 and 1.
+	 */
+	readonly value: number
+	/**
+	 * A string used to tell the user information regarding the progress value.
+	 */
+	readonly label: string
+	/**
+	 * Primary or secondary variant of the progress meter
+	 */
+	readonly variant?: ProgressMeterVariants
 }
 
 export const Progress: FC<ProgressProps> = ({
-  value,
-  label,
-  variant = 'primary',
-  ...props
+	value,
+	label,
+	variant = 'primary',
+	...props
 }) => (
-  <ProgressContainer {...props}>
-    <ProgressIndicator>
-      <ProgressMeter fraction={value} variant={variant} />
-    </ProgressIndicator>
-    <ProgressLabel>{label}</ProgressLabel>
-  </ProgressContainer>
+	<ProgressContainer {...props}>
+		<ProgressIndicator>
+			<ProgressMeter fraction={value} variant={variant} />
+		</ProgressIndicator>
+		<ProgressLabel>{label}</ProgressLabel>
+	</ProgressContainer>
 )

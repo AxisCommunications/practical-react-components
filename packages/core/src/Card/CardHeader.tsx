@@ -1,9 +1,9 @@
 import {
-  useCallback,
-  HTMLAttributes,
-  FC,
-  MouseEventHandler,
-  ReactNode,
+	useCallback,
+	HTMLAttributes,
+	FC,
+	MouseEventHandler,
+	ReactNode,
 } from 'react'
 import styled, { css } from 'styled-components'
 
@@ -48,23 +48,23 @@ const TitleContainer = styled.div`
 `
 
 export const CardHeaderTypography = styled(Typography).attrs({
-  variant: 'card-title',
+	variant: 'card-title',
 })``
 
 export const CardSubHeaderTypography = styled(Typography).attrs({
-  variant: 'caption',
+	variant: 'caption',
 })``
 
 export interface CardHeaderProps extends BaseProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: string
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: string
 }
 
 export const CardHeader: FC<CardHeaderProps> = ({ children, ...props }) => (
-  <TitleHeader {...props}>{children}</TitleHeader>
+	<TitleHeader {...props}>{children}</TitleHeader>
 )
 
 /**
@@ -72,51 +72,51 @@ export const CardHeader: FC<CardHeaderProps> = ({ children, ...props }) => (
  */
 
 interface ExpandableTitleHeaderProps {
-  readonly expanded: boolean
-  readonly disabled: boolean
+	readonly expanded: boolean
+	readonly disabled: boolean
 }
 
 const ExpandableTitleHeader = styled(TitleHeader)<ExpandableTitleHeaderProps>`
   cursor: ${({ disabled }) => (disabled ? undefined : 'pointer')};
 
   ${({ expanded }) =>
-    !expanded
-      ? css`
+		!expanded
+			? css`
           transition: border-bottom 50ms ease-in-out 200ms;
           border-bottom-color: transparent;
         `
-      : undefined};
+			: undefined};
 `
 
 export interface CardExpandableHeaderProps extends CardHeaderProps {
-  readonly children?: ReactNode
-  readonly disabled?: boolean
-  readonly expanded?: boolean
-  readonly onToggle: (expanded: boolean) => void
+	readonly children?: ReactNode
+	readonly disabled?: boolean
+	readonly expanded?: boolean
+	readonly onToggle: (expanded: boolean) => void
 }
 
 export const CardExpandableHeader: FC<CardExpandableHeaderProps> = ({
-  disabled = false,
-  expanded = false,
-  onToggle,
-  children,
-  ...props
+	disabled = false,
+	expanded = false,
+	onToggle,
+	children,
+	...props
 }) => {
-  const onClick = useCallback<MouseEventHandler<HTMLDivElement>>(() => {
-    if (!disabled) {
-      onToggle(!expanded)
-    }
-  }, [disabled, onToggle, expanded])
+	const onClick = useCallback<MouseEventHandler<HTMLDivElement>>(() => {
+		if (!disabled) {
+			onToggle(!expanded)
+		}
+	}, [disabled, onToggle, expanded])
 
-  return (
-    <ExpandableTitleHeader
-      disabled={disabled}
-      expanded={expanded}
-      onClick={onClick}
-      {...props}
-    >
-      <TitleContainer>{children}</TitleContainer>
-      <Arrow disabled={disabled} expanded={expanded} />
-    </ExpandableTitleHeader>
-  )
+	return (
+		<ExpandableTitleHeader
+			disabled={disabled}
+			expanded={expanded}
+			onClick={onClick}
+			{...props}
+		>
+			<TitleContainer>{children}</TitleContainer>
+			<Arrow disabled={disabled} expanded={expanded} />
+		</ExpandableTitleHeader>
+	)
 }

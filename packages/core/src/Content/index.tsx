@@ -27,11 +27,11 @@ const Block = styled.div<{ readonly hasCaption: boolean }>`
   flex-direction: column;
 
   ${({ hasCaption }) =>
-    hasCaption
-      ? css`
+		hasCaption
+			? css`
           padding: ${spacing.medium} 0;
         `
-      : css`
+			: css`
           > * {
             display: flex;
             align-items: center;
@@ -48,23 +48,23 @@ const Caption = styled(Typography)`
 `
 
 export interface TextBlockProps extends BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  readonly text: string
-  readonly caption?: string
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	readonly text: string
+	readonly caption?: string
 }
 export const TextBlock: FC<TextBlockProps> = ({ text, caption, ...props }) => {
-  const hasCaption = caption !== undefined
-  return (
-    <Block hasCaption={hasCaption} {...props}>
-      <DefaultText>{text}</DefaultText>
-      {caption !== undefined ? (
-        <Caption variant="caption">{caption}</Caption>
-      ) : undefined}
-    </Block>
-  )
+	const hasCaption = caption !== undefined
+	return (
+		<Block hasCaption={hasCaption} {...props}>
+			<DefaultText>{text}</DefaultText>
+			{caption !== undefined ? (
+				<Caption variant="caption">{caption}</Caption>
+			) : undefined}
+		</Block>
+	)
 }
 
 /**
@@ -77,13 +77,13 @@ export const TextBlock: FC<TextBlockProps> = ({ text, caption, ...props }) => {
 export const SpaceBlock = styled.div<{ readonly variant: 8 | 16 | 24 | 32 }>`
   width: 100%;
   height: ${({ variant }) =>
-    variant === 8
-      ? spacing.medium
-      : variant === 16
-      ? spacing.large
-      : variant === 24
-      ? spacing.extraLarge
-      : spacing.huge};
+		variant === 8
+			? spacing.medium
+			: variant === 16
+			? spacing.large
+			: variant === 24
+			? spacing.extraLarge
+			: spacing.huge};
 `
 
 /**
@@ -118,35 +118,35 @@ const TitleContainer = styled.div`
 `
 
 const GroupTitle: FC<{
-  readonly title: string
+	readonly title: string
 }> = ({ title }) => (
-  <TitleContainer>
-    <Typography variant="group-title">{title}</Typography>
-  </TitleContainer>
+	<TitleContainer>
+		<Typography variant="group-title">{title}</Typography>
+	</TitleContainer>
 )
 
 export interface FormSectionProps extends BaseProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  readonly title?: string
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	readonly title?: string
 }
 
 export const FormSection: FC<FormSectionProps> = ({
-  title,
-  children,
-  ...props
+	title,
+	children,
+	...props
 }) => {
-  return (
-    <>
-      {title !== undefined ? <GroupTitle title={title} /> : undefined}
-      {children !== undefined ? (
-        <FormContainer {...props}>{children}</FormContainer>
-      ) : undefined}
-    </>
-  )
+	return (
+		<>
+			{title !== undefined ? <GroupTitle title={title} /> : undefined}
+			{children !== undefined ? (
+				<FormContainer {...props}>{children}</FormContainer>
+			) : undefined}
+		</>
+	)
 }
 
 /**
@@ -156,7 +156,7 @@ export const FormSection: FC<FormSectionProps> = ({
 type ListHeightType = 'medium' | 'large'
 
 export const ContentListItem = styled.div<{
-  readonly listHeight?: ListHeightType
+	readonly listHeight?: ListHeightType
 }>`
   margin: 0 -${CONTENT_PADDING};
   padding: 0 ${CONTENT_PADDING};
@@ -165,9 +165,9 @@ export const ContentListItem = styled.div<{
   align-items: center;
   justify-content: space-between;
   height: ${({ listHeight }) =>
-    listHeight === 'medium' || listHeight === undefined
-      ? componentSize.medium
-      : componentSize.large};
+		listHeight === 'medium' || listHeight === undefined
+			? componentSize.medium
+			: componentSize.large};
 
   &:hover {
     background-color: ${({ theme }) => theme.color.background03()};
@@ -179,36 +179,36 @@ export const ContentListItem = styled.div<{
 `
 
 export interface ContentListItemWithHoverProps extends BaseProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  readonly listHeight?: ListHeightType
-  readonly onHover: (hover: boolean) => void
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	readonly listHeight?: ListHeightType
+	readonly onHover: (hover: boolean) => void
 }
 
 export const ContentListItemWithHover: FC<ContentListItemWithHoverProps> = ({
-  listHeight = 'medium',
-  onHover,
-  children,
-  ...props
+	listHeight = 'medium',
+	onHover,
+	children,
+	...props
 }) => {
-  const handleMouseEnter = useCallback(() => {
-    onHover(true)
-  }, [onHover])
-  const handleMouseLeave = useCallback(() => {
-    onHover(false)
-  }, [onHover])
+	const handleMouseEnter = useCallback(() => {
+		onHover(true)
+	}, [onHover])
+	const handleMouseLeave = useCallback(() => {
+		onHover(false)
+	}, [onHover])
 
-  return (
-    <ContentListItem
-      listHeight={listHeight}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      {...props}
-    >
-      {children}
-    </ContentListItem>
-  )
+	return (
+		<ContentListItem
+			listHeight={listHeight}
+			onMouseEnter={handleMouseEnter}
+			onMouseLeave={handleMouseLeave}
+			{...props}
+		>
+			{children}
+		</ContentListItem>
+	)
 }

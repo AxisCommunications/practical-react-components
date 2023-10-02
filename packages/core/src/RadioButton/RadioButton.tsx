@@ -1,13 +1,13 @@
 import {
-  useCallback,
-  useMemo,
-  FC,
-  InputHTMLAttributes,
-  ChangeEventHandler,
-  createRef,
-  FocusEventHandler,
-  PointerEventHandler,
-  HTMLAttributes,
+	useCallback,
+	useMemo,
+	FC,
+	InputHTMLAttributes,
+	ChangeEventHandler,
+	createRef,
+	FocusEventHandler,
+	PointerEventHandler,
+	HTMLAttributes,
 } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 import { usePressed, useVisibleFocus } from 'react-hooks-shareable'
@@ -43,8 +43,8 @@ const SvgHalo = styled.div`
 `
 
 const SvgContainer = styled.svg<{
-  readonly checked: boolean
-  readonly error: boolean
+	readonly checked: boolean
+	readonly error: boolean
 }>`
   width: ${componentSize.mini};
   height: ${componentSize.mini};
@@ -54,11 +54,11 @@ const SvgContainer = styled.svg<{
   fill: transparent;
 
   stroke: ${({ theme, checked, error }) =>
-    error
-      ? theme.color.elementError()
-      : checked
-      ? theme.color.elementPrimary()
-      : theme.color.element01()};
+		error
+			? theme.color.elementError()
+			: checked
+			? theme.color.elementPrimary()
+			: theme.color.element01()};
 `
 
 const SvgRing = styled.circle`
@@ -66,36 +66,36 @@ const SvgRing = styled.circle`
 `
 
 const SvgDot = styled.circle<{
-  readonly partial: boolean
+	readonly partial: boolean
 }>`
   fill: ${({ partial, theme }) =>
-    partial ? theme.color.text05() : theme.color.elementPrimary()};
+		partial ? theme.color.text05() : theme.color.elementPrimary()};
   stroke: ${({ partial, theme }) =>
-    partial ? theme.color.text05() : theme.color.elementPrimary()};
+		partial ? theme.color.text05() : theme.color.elementPrimary()};
 `
 
 export interface RadioButtonAtomProps {
-  readonly checked: boolean
-  readonly partial: boolean
-  readonly error: string
+	readonly checked: boolean
+	readonly partial: boolean
+	readonly error: string
 }
 
 export const RadioButtonAtom: FC<RadioButtonAtomProps> = ({
-  checked,
-  partial,
-  error,
+	checked,
+	partial,
+	error,
 }) => {
-  return (
-    <AtomContainer>
-      <SvgHalo />
-      <SvgContainer checked={checked} error={error.length > 0}>
-        <SvgRing r={9} cx={12} cy={12} />
-        {checked || partial ? (
-          <SvgDot r={4.5} cx={12} cy={12} partial={!checked && partial} />
-        ) : null}
-      </SvgContainer>
-    </AtomContainer>
-  )
+	return (
+		<AtomContainer>
+			<SvgHalo />
+			<SvgContainer checked={checked} error={error.length > 0}>
+				<SvgRing r={9} cx={12} cy={12} />
+				{checked || partial ? (
+					<SvgDot r={4.5} cx={12} cy={12} partial={!checked && partial} />
+				) : null}
+			</SvgContainer>
+		</AtomContainer>
+	)
 }
 
 /**
@@ -144,12 +144,12 @@ export const RadioNative = styled.input`
  */
 
 export const RadioContainer = styled.div<{
-  readonly disabled: boolean
-  readonly checked: boolean
-  readonly partial: boolean
-  readonly pressed: boolean
-  readonly hovered: boolean
-  readonly visibleFocus: boolean
+	readonly disabled: boolean
+	readonly checked: boolean
+	readonly partial: boolean
+	readonly pressed: boolean
+	readonly hovered: boolean
+	readonly visibleFocus: boolean
 }>`
   position: relative;
   display: grid;
@@ -159,9 +159,9 @@ export const RadioContainer = styled.div<{
 
   &:hover ${SvgHalo} {
     background-color: ${({ checked, theme }) =>
-      checked
-        ? theme.color.elementPrimary(opacity[16])
-        : theme.color.element11(opacity[16])};
+			checked
+				? theme.color.elementPrimary(opacity[16])
+				: theme.color.element11(opacity[16])};
     transform: scale(1.6);
   }
 
@@ -171,30 +171,30 @@ export const RadioContainer = styled.div<{
    * RadioButton shows hover effect.
    */
   ${({ hovered, checked, theme }) =>
-    hovered
-      ? css`
+		hovered
+			? css`
           ${SvgHalo} {
             background-color: ${
-              checked
-                ? theme.color.elementPrimary(opacity[16])
-                : theme.color.element11(opacity[16])
-            };
+							checked
+								? theme.color.elementPrimary(opacity[16])
+								: theme.color.element11(opacity[16])
+						};
             transform: scale(1.6);
           }
         `
-      : undefined}
+			: undefined}
 
   &:focus-within {
     ${({ visibleFocus, checked, theme }) =>
-      visibleFocus
-        ? css`
+			visibleFocus
+				? css`
             outline: none;
             ${SvgHalo} {
               background-color: ${
-                checked
-                  ? theme.color.elementPrimary(opacity[16])
-                  : theme.color.element11(opacity[16])
-              };
+								checked
+									? theme.color.elementPrimary(opacity[16])
+									: theme.color.element11(opacity[16])
+							};
               transform: scale(1.6);
             }
             ${SvgRing} {
@@ -202,24 +202,24 @@ export const RadioContainer = styled.div<{
               stroke: ${theme.color.textPrimary()};
             }
           `
-        : undefined}
+				: undefined}
   }
 
   &:active {
     ${SvgHalo} {
       background-color: ${({ checked, theme }) =>
-        checked
-          ? theme.color.elementPrimary(opacity[24])
-          : theme.color.element11(opacity[24])};
+				checked
+					? theme.color.elementPrimary(opacity[24])
+					: theme.color.element11(opacity[24])};
       transform: scale(1.7);
     }
     ${SvgRing} {
       stroke: ${({ checked, theme }) =>
-        checked ? theme.color.textPrimary() : theme.color.text02()};
+				checked ? theme.color.textPrimary() : theme.color.text02()};
     }
     ${SvgDot} {
       ${({ partial, theme }) =>
-        css`
+				css`
           fill: ${partial ? theme.color.text02() : theme.color.textPrimary()};
           stroke: ${partial ? theme.color.text02() : theme.color.textPrimary()};
         `}
@@ -227,12 +227,12 @@ export const RadioContainer = styled.div<{
   }
 
   ${({ disabled }) =>
-    disabled
-      ? css`
+		disabled
+			? css`
           opacity: ${opacity[48]};
           pointer-events: none;
         `
-      : undefined}
+			: undefined}
 `
 
 type BaseElement = HTMLInputElement
@@ -241,137 +241,137 @@ type ColumnDirection = 'column' | 'row'
 
 export type RadioButtonChangeHandler = ChangeEventHandler<BaseElement>
 export type RadioButtonValueChangeHandler<V extends string = string> = (
-  value: V
+	value: V
 ) => void
 
 export interface RadioButtonProps<V extends string = string> extends BaseProps {
-  /**
-   * Attributes a name to the RadioButton.
-   */
-  readonly name?: BaseProps['name']
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * The value of the component.
-   */
-  readonly value: V
-  /**
-   * String used to label the RadioButton.
-   */
-  readonly label: string
-  /**
-   * If `true`, the component is checked.
-   */
-  readonly checked: boolean
-  /**
-   * If `true`, the component is partially checked.
-   */
-  readonly partial?: boolean
-  /**
-   * If `true`, the switch will be disabled.
-   */
-  readonly disabled?: boolean
-  /**
-   * Signifies error by turning the checkbox red.
-   */
-  readonly error?: string
-  /**
-   * Native change handler that can be used by formik etc.
-   */
-  readonly onChange?: RadioButtonChangeHandler
-  /**
-   * Smooth typed value change handler.
-   */
-  readonly onValueChange?: RadioButtonValueChangeHandler<V>
-  /**
-   * If RadioButton exist in a `ContentListItemWithHover`, RadioButton get this props.
-   * RadioButton shows hover effect if the `ContentListItemWithHover` is on hover state.
-   */
-  readonly hovered?: boolean
+	/**
+	 * Attributes a name to the RadioButton.
+	 */
+	readonly name?: BaseProps['name']
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * The value of the component.
+	 */
+	readonly value: V
+	/**
+	 * String used to label the RadioButton.
+	 */
+	readonly label: string
+	/**
+	 * If `true`, the component is checked.
+	 */
+	readonly checked: boolean
+	/**
+	 * If `true`, the component is partially checked.
+	 */
+	readonly partial?: boolean
+	/**
+	 * If `true`, the switch will be disabled.
+	 */
+	readonly disabled?: boolean
+	/**
+	 * Signifies error by turning the checkbox red.
+	 */
+	readonly error?: string
+	/**
+	 * Native change handler that can be used by formik etc.
+	 */
+	readonly onChange?: RadioButtonChangeHandler
+	/**
+	 * Smooth typed value change handler.
+	 */
+	readonly onValueChange?: RadioButtonValueChangeHandler<V>
+	/**
+	 * If RadioButton exist in a `ContentListItemWithHover`, RadioButton get this props.
+	 * RadioButton shows hover effect if the `ContentListItemWithHover` is on hover state.
+	 */
+	readonly hovered?: boolean
 }
 
 export function RadioButton<V extends string = string>({
-  label,
-  checked,
-  partial = false,
-  disabled = false,
-  error = '',
-  onChange,
-  onValueChange,
-  hovered = false,
-  onFocus,
-  onPointerUp,
-  onPointerDown,
-  ...rest
+	label,
+	checked,
+	partial = false,
+	disabled = false,
+	error = '',
+	onChange,
+	onValueChange,
+	hovered = false,
+	onFocus,
+	onPointerUp,
+	onPointerDown,
+	...rest
 }: RadioButtonProps<V>): JSX.Element {
-  const ref = createRef<BaseElement>()
-  const pressed = usePressed(ref)
+	const ref = createRef<BaseElement>()
+	const pressed = usePressed(ref)
 
-  const handleChange = useCallback<RadioButtonChangeHandler>(
-    e => {
-      onChange?.(e)
-      onValueChange?.(e.target.value as V)
-    },
-    [onChange, onValueChange]
-  )
+	const handleChange = useCallback<RadioButtonChangeHandler>(
+		e => {
+			onChange?.(e)
+			onValueChange?.(e.target.value as V)
+		},
+		[onChange, onValueChange]
+	)
 
-  const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
-    useVisibleFocus()
+	const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+		useVisibleFocus()
 
-  const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
-    e => {
-      onFocus?.(e)
-      determineVisibleFocus()
-    },
-    [determineVisibleFocus, onFocus]
-  )
-  const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
-    e => {
-      onPointerDown?.(e)
-      isPointerOn()
-    },
-    [isPointerOn, onPointerDown]
-  )
-  const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
-    e => {
-      onPointerUp?.(e)
-      isPointerOff()
-    },
-    [isPointerOff, onPointerUp]
-  )
+	const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
+		e => {
+			onFocus?.(e)
+			determineVisibleFocus()
+		},
+		[determineVisibleFocus, onFocus]
+	)
+	const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
+		e => {
+			onPointerDown?.(e)
+			isPointerOn()
+		},
+		[isPointerOn, onPointerDown]
+	)
+	const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
+		e => {
+			onPointerUp?.(e)
+			isPointerOff()
+		},
+		[isPointerOff, onPointerUp]
+	)
 
-  const radiobuttonLabel = useMemo(() => {
-    return label !== undefined ? (
-      <Label variant="navigation-label">{label}</Label>
-    ) : null
-  }, [label])
+	const radiobuttonLabel = useMemo(() => {
+		return label !== undefined ? (
+			<Label variant="navigation-label">{label}</Label>
+		) : null
+	}, [label])
 
-  return (
-    <RadioContainer
-      disabled={disabled}
-      checked={checked}
-      partial={partial}
-      pressed={pressed}
-      hovered={hovered}
-      visibleFocus={visibleFocus}
-    >
-      <RadioButtonAtom checked={checked} partial={partial} error={error} />
-      {radiobuttonLabel}
-      <RadioNative
-        ref={ref}
-        type="radio"
-        checked={checked}
-        disabled={disabled}
-        onPointerDown={handlePointerDown}
-        onPointerUp={handlePointerUp}
-        onFocus={handleFocus}
-        onChange={handleChange}
-        {...rest}
-      />
-    </RadioContainer>
-  )
+	return (
+		<RadioContainer
+			disabled={disabled}
+			checked={checked}
+			partial={partial}
+			pressed={pressed}
+			hovered={hovered}
+			visibleFocus={visibleFocus}
+		>
+			<RadioButtonAtom checked={checked} partial={partial} error={error} />
+			{radiobuttonLabel}
+			<RadioNative
+				ref={ref}
+				type="radio"
+				checked={checked}
+				disabled={disabled}
+				onPointerDown={handlePointerDown}
+				onPointerUp={handlePointerUp}
+				onFocus={handleFocus}
+				onChange={handleChange}
+				{...rest}
+			/>
+		</RadioContainer>
+	)
 }
 
 /*
@@ -379,88 +379,88 @@ export function RadioButton<V extends string = string>({
  */
 
 const RadioButtonGroupContainer = styled.div<{
-  readonly compact: boolean
-  readonly direction: ColumnDirection
+	readonly compact: boolean
+	readonly direction: ColumnDirection
 }>`
   display: flex;
   flex-direction: ${({ direction }) => (!direction ? 'column' : direction)};
   justify-content: ${({ direction }) =>
-    direction === 'column' ? '' : 'space-between'};
+		direction === 'column' ? '' : 'space-between'};
   row-gap: ${({ compact }) => (!compact ? spacing.large : spacing.medium)};
   margin: ${({ compact }) =>
-    !compact ? `${spacing.medium} 0` : `${spacing.small} 0`};
+		!compact ? `${spacing.medium} 0` : `${spacing.small} 0`};
 `
 
 export interface RadioButtonGroupOption<V extends string = string> {
-  readonly value: V
-  readonly label: string
-  readonly disabled?: boolean
+	readonly value: V
+	readonly label: string
+	readonly disabled?: boolean
 }
 
 type GroupBaseElement = HTMLDivElement
 type GroupBaseProps = HTMLAttributes<GroupBaseElement>
 
 export interface RadioButtonGroupProps<V extends string = string>
-  extends GroupBaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: GroupBaseProps['className']
-  readonly name?: string
-  readonly options: ReadonlyArray<RadioButtonGroupOption<V>>
-  readonly value: V
-  readonly onChange?: RadioButtonChangeHandler
-  readonly onValueChange?: RadioButtonValueChangeHandler<V>
-  readonly error?: string
-  /**
+	extends GroupBaseProps {
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: GroupBaseProps['className']
+	readonly name?: string
+	readonly options: ReadonlyArray<RadioButtonGroupOption<V>>
+	readonly value: V
+	readonly onChange?: RadioButtonChangeHandler
+	readonly onValueChange?: RadioButtonValueChangeHandler<V>
+	readonly error?: string
+	/**
    * Override theme's default setting for `compact` if set.
 
    */
-  readonly compact?: boolean
-  /**
-   * Aligns the menu item as a column or row.
-   * Default: `column`
-   */
-  readonly direction?: ColumnDirection
+	readonly compact?: boolean
+	/**
+	 * Aligns the menu item as a column or row.
+	 * Default: `column`
+	 */
+	readonly direction?: ColumnDirection
 }
 
 export function RadioButtonGroup<V extends string = string>({
-  options,
-  name,
-  value,
-  onChange,
-  onValueChange,
-  error,
-  compact: compactFromProps,
-  direction = 'column',
-  ...rest
+	options,
+	name,
+	value,
+	onChange,
+	onValueChange,
+	error,
+	compact: compactFromProps,
+	direction = 'column',
+	...rest
 }: RadioButtonGroupProps<V>): JSX.Element {
-  const { compact: compactFromTheme } = useTheme()
-  const compact = compactFromProps ?? compactFromTheme
+	const { compact: compactFromTheme } = useTheme()
+	const compact = compactFromProps ?? compactFromTheme
 
-  return (
-    <RadioButtonGroupContainer
-      compact={compact}
-      direction={direction}
-      {...rest}
-    >
-      {options.map((option, index) => (
-        <RadioButton<V>
-          key={index}
-          name={name}
-          value={option.value}
-          label={option.label}
-          disabled={option.disabled}
-          checked={value === option.value}
-          onChange={onChange}
-          onValueChange={onValueChange}
-          error={error}
-        />
-      ))}
-    </RadioButtonGroupContainer>
-  )
+	return (
+		<RadioButtonGroupContainer
+			compact={compact}
+			direction={direction}
+			{...rest}
+		>
+			{options.map((option, index) => (
+				<RadioButton<V>
+					key={index}
+					name={name}
+					value={option.value}
+					label={option.label}
+					disabled={option.disabled}
+					checked={value === option.value}
+					onChange={onChange}
+					onValueChange={onValueChange}
+					error={error}
+				/>
+			))}
+		</RadioButtonGroupContainer>
+	)
 }
 
 export const RadioButtonGroupField = <V extends string = string>(
-  props: FieldProps & RadioButtonGroupProps<V>
+	props: FieldProps & RadioButtonGroupProps<V>
 ) => withField<RadioButtonGroupProps<V>>(RadioButtonGroup)(props)

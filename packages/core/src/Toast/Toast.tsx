@@ -4,11 +4,11 @@ import styled from 'styled-components'
 import { CloseIcon } from 'practical-react-components-icons'
 
 import {
-  spacing,
-  iconSize,
-  opacity,
-  shape,
-  componentSize,
+	spacing,
+	iconSize,
+	opacity,
+	shape,
+	componentSize,
 } from '../designparams'
 import { Icon } from '../Icon'
 
@@ -74,11 +74,11 @@ const MessageContainer = styled.div`
 `
 
 const ToastWrapper = styled.div.attrs<{ readonly zIndex: number }>(
-  ({ zIndex }) => ({ style: { zIndex } })
+	({ zIndex }) => ({ style: { zIndex } })
 )<{
-  readonly hasClose: boolean
-  readonly hasMessage: boolean
-  readonly zIndex: number
+	readonly hasClose: boolean
+	readonly hasMessage: boolean
+	readonly zIndex: number
 }>`
   position: relative;
   align-items: center;
@@ -87,7 +87,7 @@ const ToastWrapper = styled.div.attrs<{ readonly zIndex: number }>(
   border-radius: ${shape.radius.medium};
   display: grid;
   grid-template-columns: ${({ hasClose }) =>
-    hasClose ? 'auto 1fr auto' : 'auto 1fr'};
+		hasClose ? 'auto 1fr auto' : 'auto 1fr'};
   grid-template-rows: ${({ hasMessage }) => (hasMessage ? '1fr auto' : '1fr')};
   margin-top: ${spacing.large};
   will-change: transform;
@@ -129,13 +129,13 @@ const ToastWrapper = styled.div.attrs<{ readonly zIndex: number }>(
  */
 
 interface BaseToastProps extends BaseToastValue, BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  readonly toastId: ToastId
-  readonly dismissToast: (id: ToastId) => void
-  readonly zIndex: number
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	readonly toastId: ToastId
+	readonly dismissToast: (id: ToastId) => void
+	readonly zIndex: number
 }
 
 /**
@@ -143,63 +143,63 @@ interface BaseToastProps extends BaseToastValue, BaseProps {
  * Child elements are passed as props.
  */
 export const BaseToast = memo(
-  forwardRef<HTMLDivElement | null, BaseToastProps>(
-    (
-      {
-        toastId,
-        dismissToast,
-        icon,
-        label,
-        message,
-        onClose,
-        duration,
-        hasCloseButton = true,
-        zIndex,
-        ...props
-      },
-      ref
-    ) => {
-      const onDismissToast = useCallback(() => {
-        dismissToast(toastId)
+	forwardRef<HTMLDivElement | null, BaseToastProps>(
+		(
+			{
+				toastId,
+				dismissToast,
+				icon,
+				label,
+				message,
+				onClose,
+				duration,
+				hasCloseButton = true,
+				zIndex,
+				...props
+			},
+			ref
+		) => {
+			const onDismissToast = useCallback(() => {
+				dismissToast(toastId)
 
-        if (onClose !== undefined) {
-          onClose(toastId)
-        }
-      }, [toastId, onClose, dismissToast])
+				if (onClose !== undefined) {
+					onClose(toastId)
+				}
+			}, [toastId, onClose, dismissToast])
 
-      useEffect(() => {
-        if (duration !== undefined) {
-          const autoDismissTimer = setTimeout(onDismissToast, duration)
-          return () => {
-            clearTimeout(autoDismissTimer)
-          }
-        }
-      }, [duration, onDismissToast, toastId, label, message])
+			useEffect(() => {
+				if (duration !== undefined) {
+					const autoDismissTimer = setTimeout(onDismissToast, duration)
+					return () => {
+						clearTimeout(autoDismissTimer)
+					}
+				}
+			}, [duration, onDismissToast, toastId, label, message])
 
-      return (
-        <ToastWrapper
-          hasMessage={message !== undefined}
-          hasClose={hasCloseButton}
-          zIndex={zIndex}
-          {...props}
-          ref={ref}
-        >
-          <IconContainer>{icon}</IconContainer>
-          <LabelContainer>{label}</LabelContainer>
-          {hasCloseButton ? (
-            <CloseIconContainer>
-              <CloseIconWrapper onClick={onDismissToast}>
-                <Icon icon={CloseIcon} />
-              </CloseIconWrapper>
-            </CloseIconContainer>
-          ) : null}
-          {message !== undefined ? (
-            <MessageContainer>{message}</MessageContainer>
-          ) : null}
-        </ToastWrapper>
-      )
-    }
-  )
+			return (
+				<ToastWrapper
+					hasMessage={message !== undefined}
+					hasClose={hasCloseButton}
+					zIndex={zIndex}
+					{...props}
+					ref={ref}
+				>
+					<IconContainer>{icon}</IconContainer>
+					<LabelContainer>{label}</LabelContainer>
+					{hasCloseButton ? (
+						<CloseIconContainer>
+							<CloseIconWrapper onClick={onDismissToast}>
+								<Icon icon={CloseIcon} />
+							</CloseIconWrapper>
+						</CloseIconContainer>
+					) : null}
+					{message !== undefined ? (
+						<MessageContainer>{message}</MessageContainer>
+					) : null}
+				</ToastWrapper>
+			)
+		}
+	)
 )
 
 BaseToast.displayName = 'BaseToast'

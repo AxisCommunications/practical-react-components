@@ -6,18 +6,18 @@ export * from './components'
 
 import { Dialog as DialogOriginal, HeaderTitle } from './Dialog'
 import {
-  EdgeToEdgeSection,
-  CenteredSection,
-  ScrollSection,
+	EdgeToEdgeSection,
+	CenteredSection,
+	ScrollSection,
 } from './components/DialogMainSection'
 
 type DialogOriginalType = typeof DialogOriginal
 
 interface DialogSetupType {
-  CenteredSection: typeof CenteredSection
-  EdgeToEdgeSection: typeof EdgeToEdgeSection
-  ScrollSection: typeof ScrollSection
-  HeaderTitle: typeof HeaderTitle
+	CenteredSection: typeof CenteredSection
+	EdgeToEdgeSection: typeof EdgeToEdgeSection
+	ScrollSection: typeof ScrollSection
+	HeaderTitle: typeof HeaderTitle
 }
 
 const DialogSetup = DialogOriginal as DialogOriginalType & DialogSetupType

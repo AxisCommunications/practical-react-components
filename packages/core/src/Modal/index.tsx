@@ -12,12 +12,12 @@
  */
 
 import {
-  useState,
-  useCallback,
-  useEffect,
-  HTMLAttributes,
-  FC,
-  ReactNode,
+	useState,
+	useCallback,
+	useEffect,
+	HTMLAttributes,
+	FC,
+	ReactNode,
 } from 'react'
 import styled from 'styled-components'
 import noScroll from 'no-scroll'
@@ -26,13 +26,13 @@ import { useId } from 'react-hooks-shareable'
 
 import { Layer } from '../Practical'
 import {
-  useEscapeListenerStack,
-  EscapeHandler,
+	useEscapeListenerStack,
+	EscapeHandler,
 } from './hooks/useEscapeListenerStack'
 import { opacity } from '../designparams'
 
 interface CloseOnEscapeProps {
-  readonly onClose: VoidFunction
+	readonly onClose: VoidFunction
 }
 
 type BaseElement = HTMLDivElement
@@ -42,26 +42,26 @@ type BaseProps = HTMLAttributes<BaseElement>
  * CloseOnEscape sets up and tears down the "close on escape" logic
  */
 const CloseOnEscape: FC<CloseOnEscapeProps> = ({ onClose }) => {
-  const [escPressed, setEscPressed] = useState(false)
+	const [escPressed, setEscPressed] = useState(false)
 
-  useEffect(() => {
-    if (escPressed) {
-      onClose()
-    }
-  }, [escPressed, onClose])
+	useEffect(() => {
+		if (escPressed) {
+			onClose()
+		}
+	}, [escPressed, onClose])
 
-  // escape handler must be constant
-  const escapeHandler = useCallback<EscapeHandler>(
-    evt => {
-      evt.preventDefault()
-      setEscPressed(true)
-    },
-    [setEscPressed]
-  )
+	// escape handler must be constant
+	const escapeHandler = useCallback<EscapeHandler>(
+		evt => {
+			evt.preventDefault()
+			setEscPressed(true)
+		},
+		[setEscPressed]
+	)
 
-  useEscapeListenerStack(escapeHandler)
+	useEscapeListenerStack(escapeHandler)
 
-  return null
+	return null
 }
 
 const ModalContainer = styled.div`
@@ -83,92 +83,92 @@ const FocusWrapper = styled.div`
 `
 
 export interface ModalBackdropProps extends BaseProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
 }
 
 export const ModalBackdrop: FC<ModalBackdropProps> = ({
-  children,
-  ...props
+	children,
+	...props
 }) => (
-  <Layer>
-    <ModalContainer {...props}>{children}</ModalContainer>
-  </Layer>
+	<Layer>
+		<ModalContainer {...props}>{children}</ModalContainer>
+	</Layer>
 )
 
 export interface ModalProps extends BaseProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * Handler which is called when the modal should be closed (e.g. when the user
-   * pressed the escape key). You need to set open to `false` to close the modal,
-   * or do nothing to leave the modal open.
-   */
-  readonly onClose?: VoidFunction
-  /**
-   * If `true`, centers the modal.
-   */
-  readonly verticallyCenter?: boolean
-  /**
-   * If `true`, puts the modal dialog into focus.
-   */
-  readonly focusDialog?: boolean
-  /**
-   * When `true` the dialog is rendered, `false` removes the dialog.
-   */
-  readonly open: boolean
-  /**
-   * If `true`, clicking outside the modal is possible, `false` does not allow
-   * clicking outside the modal.
-   */
-  readonly allowOutsideClick?: boolean
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * Handler which is called when the modal should be closed (e.g. when the user
+	 * pressed the escape key). You need to set open to `false` to close the modal,
+	 * or do nothing to leave the modal open.
+	 */
+	readonly onClose?: VoidFunction
+	/**
+	 * If `true`, centers the modal.
+	 */
+	readonly verticallyCenter?: boolean
+	/**
+	 * If `true`, puts the modal dialog into focus.
+	 */
+	readonly focusDialog?: boolean
+	/**
+	 * When `true` the dialog is rendered, `false` removes the dialog.
+	 */
+	readonly open: boolean
+	/**
+	 * If `true`, clicking outside the modal is possible, `false` does not allow
+	 * clicking outside the modal.
+	 */
+	readonly allowOutsideClick?: boolean
 }
 
 export const Modal: FC<ModalProps> = ({
-  open,
-  onClose,
-  focusDialog = true,
-  children,
-  allowOutsideClick = true,
-  ...props
+	open,
+	onClose,
+	focusDialog = true,
+	children,
+	allowOutsideClick = true,
+	...props
 }) => {
-  useEffect(() => {
-    if (open) {
-      noScroll.on()
-      return () => noScroll.off()
-    }
-  }, [open])
+	useEffect(() => {
+		if (open) {
+			noScroll.on()
+			return () => noScroll.off()
+		}
+	}, [open])
 
-  const id = useId('practical-modal')
+	const id = useId('practical-modal')
 
-  /**
-   * Render
-   */
+	/**
+	 * Render
+	 */
 
-  if (!open) {
-    return null
-  }
+	if (!open) {
+		return null
+	}
 
-  return (
-    <ModalBackdrop {...props}>
-      {onClose !== undefined ? <CloseOnEscape onClose={onClose} /> : null}
-      <FocusTrap
-        focusTrapOptions={{
-          initialFocus: focusDialog ? `#${id}` : undefined,
-          escapeDeactivates: false, // We use our own stack
-          clickOutsideDeactivates: allowOutsideClick,
-        }}
-      >
-        <FocusWrapper tabIndex={-1} id={id}>
-          {children}
-        </FocusWrapper>
-      </FocusTrap>
-    </ModalBackdrop>
-  )
+	return (
+		<ModalBackdrop {...props}>
+			{onClose !== undefined ? <CloseOnEscape onClose={onClose} /> : null}
+			<FocusTrap
+				focusTrapOptions={{
+					initialFocus: focusDialog ? `#${id}` : undefined,
+					escapeDeactivates: false, // We use our own stack
+					clickOutsideDeactivates: allowOutsideClick,
+				}}
+			>
+				<FocusWrapper tabIndex={-1} id={id}>
+					{children}
+				</FocusWrapper>
+			</FocusTrap>
+		</ModalBackdrop>
+	)
 }

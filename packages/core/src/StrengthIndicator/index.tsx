@@ -17,15 +17,15 @@ type BaseProps = HTMLAttributes<BaseElement>
  * @param strength The level of strength (between 0 and 1)
  */
 const getStrengthColor = (strength: number, color: Color) => {
-  if (strength > 0.75) {
-    return color.elementSuccess()
-  }
-  if (strength > 0.5) {
-    return color.elementWarning()
-  }
-  if (strength > 0) {
-    return color.elementError()
-  }
+	if (strength > 0.75) {
+		return color.elementSuccess()
+	}
+	if (strength > 0.5) {
+		return color.elementWarning()
+	}
+	if (strength > 0) {
+		return color.elementError()
+	}
 }
 
 const PasswordMeterContainer = styled.div`
@@ -36,14 +36,14 @@ const PasswordMeterContainer = styled.div`
 `
 
 const PasswordMeter = styled.div.attrs<{ readonly strength: number }>(
-  ({ strength }) => ({
-    style: {
-      transform: `scaleX(${strength})`,
-    },
-  })
+	({ strength }) => ({
+		style: {
+			transform: `scaleX(${strength})`,
+		},
+	})
 )<{ readonly strength: number }>`
   background-color: ${({ theme, strength }) =>
-    getStrengthColor(strength, theme.color)};
+		getStrengthColor(strength, theme.color)};
   height: 100%;
   width: 100%;
   transition: transform 0.3s ease-in-out;
@@ -67,31 +67,31 @@ const PasswordStrengthIndicator = styled.div`
 `
 
 export interface StrengthIndicatorProps extends BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * Used to indicate the strength value of the indicator.
-   */
-  readonly strength: number
-  /**
-   * A string used to tell the user information regarding the strength value.
-   */
-  readonly helpText: string
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * Used to indicate the strength value of the indicator.
+	 */
+	readonly strength: number
+	/**
+	 * A string used to tell the user information regarding the strength value.
+	 */
+	readonly helpText: string
 }
 
 export const StrengthIndicator: FC<StrengthIndicatorProps> = ({
-  strength,
-  helpText,
-  ...props
+	strength,
+	helpText,
+	...props
 }) => (
-  <PasswordStrengthIndicator {...props}>
-    <PasswordMeterContainer>
-      <PasswordMeter strength={strength} />
-    </PasswordMeterContainer>
-    <PasswordWarning>
-      <Typography variant="navigation-label">{helpText}</Typography>
-    </PasswordWarning>
-  </PasswordStrengthIndicator>
+	<PasswordStrengthIndicator {...props}>
+		<PasswordMeterContainer>
+			<PasswordMeter strength={strength} />
+		</PasswordMeterContainer>
+		<PasswordWarning>
+			<Typography variant="navigation-label">{helpText}</Typography>
+		</PasswordWarning>
+	</PasswordStrengthIndicator>
 )

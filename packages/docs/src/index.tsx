@@ -27,15 +27,15 @@ const storage = getLocalStorage()
 const initialThemeName: ThemeName | undefined = storage[THEME_NAME] ?? undefined
 
 const componentDb = paths.map(path => {
-  const componentModule = practicalCoreModuleContext(path)
-  if (componentModule.meta === undefined) {
-    throw new Error(`${path} is missing exported meta object`)
-  }
+	const componentModule = practicalCoreModuleContext(path)
+	if (componentModule.meta === undefined) {
+		throw new Error(`${path} is missing exported meta object`)
+	}
 
-  return {
-    ...componentModule.meta,
-    component: componentModule.default,
-  }
+	return {
+		...componentModule.meta,
+		component: componentModule.default,
+	}
 }) as Components
 
 const GlobalStyle = createGlobalStyle`
@@ -93,38 +93,38 @@ const Main = styled.main`
 const container = document.querySelector('.root')
 
 if (container !== null) {
-  const root = createRoot(container)
+	const root = createRoot(container)
 
-  root.render(
-    <StrictMode>
-      <ThemeProvider initialThemeName={initialThemeName}>
-        <AppContainer>
-          <GlobalStyle />
-          <GlobalScrollbarStyle />
-          <HeaderStyled>
-            <Header />
-          </HeaderStyled>
-          <Router>
-            <Aside>
-              <Menu components={componentDb} />
-            </Aside>
-            <Content>
-              <MDXProvider components={components}>
-                <Main>
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/theme-creator" element={<ThemeCreator />} />
+	root.render(
+		<StrictMode>
+			<ThemeProvider initialThemeName={initialThemeName}>
+				<AppContainer>
+					<GlobalStyle />
+					<GlobalScrollbarStyle />
+					<HeaderStyled>
+						<Header />
+					</HeaderStyled>
+					<Router>
+						<Aside>
+							<Menu components={componentDb} />
+						</Aside>
+						<Content>
+							<MDXProvider components={components}>
+								<Main>
+									<Routes>
+										<Route path="/" element={<Home />} />
+										<Route path="/theme-creator" element={<ThemeCreator />} />
 
-                    {componentDb.map(({ route, component: Component }) => (
-                      <Route key={route} path={route} element={<Component />} />
-                    ))}
-                  </Routes>
-                </Main>
-              </MDXProvider>
-            </Content>
-          </Router>
-        </AppContainer>
-      </ThemeProvider>
-    </StrictMode>
-  )
+										{componentDb.map(({ route, component: Component }) => (
+											<Route key={route} path={route} element={<Component />} />
+										))}
+									</Routes>
+								</Main>
+							</MDXProvider>
+						</Content>
+					</Router>
+				</AppContainer>
+			</ThemeProvider>
+		</StrictMode>
+	)
 }
