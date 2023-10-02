@@ -22,8 +22,7 @@
 			"style": {
 				"noUnusedTemplateLiteral": "off",
 				"useExponentiationOperator": "off",
-				"noParameterAssign": "off",
-				"useEnumInitializers": "off"
+				"noParameterAssign": "off"
 			},
 			"a11y": {
 				"noSvgWithoutTitle": "off"

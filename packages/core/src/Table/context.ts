@@ -1,10 +1,10 @@
 import { createContext, Dispatch, RefObject } from 'react'
 
 export enum WidthActionType {
-	SET_WIDTHS,
-	UPDATE_WIDTHS,
-	RESET_WIDTHS,
-	SET_TOTAL_WIDTH,
+	SET_WIDTHS = 0,
+	UPDATE_WIDTHS = 1,
+	RESET_WIDTHS = 2,
+	SET_TOTAL_WIDTH = 3,
 }
 
 interface SetWidthsAction {
