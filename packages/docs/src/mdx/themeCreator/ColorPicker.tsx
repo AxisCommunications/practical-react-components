@@ -31,7 +31,7 @@ const ColorBox = styled.div<ColorBoxProps>`
 			: '0px'};
 `
 const SelectedColorBox = styled.div<ColorBoxProps>`
-  ${({ selected }) => (selected ? `border:2px solid;` : 'none')};
+  ${({ selected }) => (selected ? 'border:2px solid;' : 'none')};
 `
 
 const ColorSegment = styled.div`

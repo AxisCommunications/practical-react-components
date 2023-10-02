@@ -90,13 +90,13 @@ async function parseSVG(svg: string, componentName: string): Promise<string> {
 		const header = `${comment !== undefined ? `/**${comment}*/\n` : ''}`
 
 		return tpl`${header}
-    
+
     import React from 'react'
 
     ${variables.interfaces};
 
     export const ${variables.componentName} = React.memo(
-      (${`(props: React.SVGProps<SVGSVGElement>)`}) =>
+      (${'(props: React.SVGProps<SVGSVGElement>)'}) =>
         ${variables.jsx}
     )
     `

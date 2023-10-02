@@ -38,7 +38,7 @@ interface TimeContainerProps {
 
 const TimeContainer = styled.div<TimeContainerProps>`
   display: grid;
-  grid-template-columns: ${({ hour12 }) => (hour12 ? `72px 64px` : `144px`)};
+  grid-template-columns: ${({ hour12 }) => (hour12 ? '72px 64px' : '144px')};
   grid-column-gap: ${spacing.medium};
   align-items: end;
 `
