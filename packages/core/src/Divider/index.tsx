@@ -69,9 +69,7 @@ export const Divider = styled.div<
         `
       : props.variant === 'inset'
       ? css`
-          margin-left: ${props.insetSize !== undefined
-            ? props.insetSize
-            : 64}px;
+          margin-left: ${props.insetSize !== undefined ? props.insetSize : 64}px;
         `
       : undefined}
 `

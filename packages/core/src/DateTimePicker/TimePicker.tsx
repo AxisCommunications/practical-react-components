@@ -137,9 +137,7 @@ const StyledPointer = styled.div<StyledPointerProps>`
     border-right: 2px solid transparent;
     border-left: 2px solid transparent;
     border-bottom: ${props =>
-        props.innerPointer
-          ? `${QUARTER_CLOCK_SIZE}px`
-          : `${CLOCK_NUMBER_DIF}px`}
+      props.innerPointer ? `${QUARTER_CLOCK_SIZE}px` : `${CLOCK_NUMBER_DIF}px`}
       solid ${({ theme }) => theme.color.elementPrimary()};
   }
   ::after {

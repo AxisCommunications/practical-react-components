@@ -105,14 +105,16 @@ const Container = styled.div<DisabledProps & CheckedProps & VisibleFocusProps>`
         ? css`
             ${Thumb} {
               border: 2px solid ${theme.color.textPrimary()};
-              box-shadow: ${checked
-                ? theme.shadow.knobOn2
-                : theme.shadow.knobOff1};
+              box-shadow: ${
+                checked ? theme.shadow.knobOn2 : theme.shadow.knobOff1
+              };
             }
             ${ThumbHalo} {
-              background-color: ${checked
-                ? theme.color.elementPrimary(opacity[16])
-                : theme.color.element11(opacity[16])};
+              background-color: ${
+                checked
+                  ? theme.color.elementPrimary(opacity[16])
+                  : theme.color.element11(opacity[16])
+              };
               transform: scale(1.77);
             }
           `

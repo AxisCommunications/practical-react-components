@@ -85,11 +85,11 @@ const ListItemContainerWrapper = styled.div<ListItemContainerBaseProps>`
       : undefined}
     
     ${({ selected, childSelected }) =>
-    !selected && !childSelected
-      ? css`
+      !selected && !childSelected
+        ? css`
           margin-right: ${spacing.small};
         `
-      : undefined}
+        : undefined}
 `
 
 const ListItemMarker = styled.div<ListItemMarkerProps>`
@@ -107,9 +107,11 @@ const ListItemMarker = styled.div<ListItemMarkerProps>`
 
   ${({ selected, childSelected, expanded }) =>
     css`
-      transform: ${!expanded && (selected || childSelected)
-        ? 'scaleY(1) translateY(-50%)'
-        : 'scaleY(0)'};
+      transform: ${
+        !expanded && (selected || childSelected)
+          ? 'scaleY(1) translateY(-50%)'
+          : 'scaleY(0)'
+      };
     `}
 `
 

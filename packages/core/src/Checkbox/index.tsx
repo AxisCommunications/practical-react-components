@@ -62,9 +62,11 @@ const Container = styled.div<{
       visibleFocus
         ? css`
             ${BoxHalo} {
-              background-color: ${checked || partial
-                ? theme.color.elementPrimary(opacity[16])
-                : theme.color.element11(opacity[16])};
+              background-color: ${
+                checked || partial
+                  ? theme.color.elementPrimary(opacity[16])
+                  : theme.color.element11(opacity[16])
+              };
               transform: scale(1.77);
             }
             ${CSSBlankCheckbox}, ${CSSCheckboxChecked}, ${CSSCheckboxIndeterminate} {

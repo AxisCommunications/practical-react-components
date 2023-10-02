@@ -80,8 +80,9 @@ const RadioIconContainer = styled(RadioContainer)<{
 
           &:focus-within {
             outline: none;
-            ${visibleFocus
-              ? css`
+            ${
+              visibleFocus
+                ? css`
                   ${RadioIcon} {
                     outline: none;
                     color: ${theme.color.textPrimary()};
@@ -89,7 +90,8 @@ const RadioIconContainer = styled(RadioContainer)<{
                     border: 2px solid ${theme.color.textPrimary()};
                   }
                 `
-              : undefined}
+                : undefined
+            }
           }
 
           &:active ${RadioIcon} {
@@ -107,8 +109,9 @@ const RadioIconContainer = styled(RadioContainer)<{
 
           &:focus-within {
             outline: none;
-            ${visibleFocus
-              ? css`
+            ${
+              visibleFocus
+                ? css`
                   ${RadioIcon} {
                     outline: none;
                     color: ${theme.color.text04()};
@@ -116,7 +119,8 @@ const RadioIconContainer = styled(RadioContainer)<{
                     border: 2px solid ${theme.color.textPrimary()};
                   }
                 `
-              : undefined}
+                : undefined
+            }
           }
 
           &:active ${RadioIcon} {

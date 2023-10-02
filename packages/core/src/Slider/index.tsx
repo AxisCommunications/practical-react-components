@@ -156,8 +156,9 @@ const Track = styled.div<{
 
           &:focus {
             outline: none;
-            ${visibleFocus
-              ? css`
+            ${
+              visibleFocus
+                ? css`
                   ${Knob} {
                     box-shadow: ${theme.shadow.knobOff1};
                   }
@@ -174,7 +175,8 @@ const Track = styled.div<{
                     stroke-width: 1px;
                   }
                 `
-              : undefined}
+                : undefined
+            }
           }
 
           &:active {
@@ -204,8 +206,9 @@ const Track = styled.div<{
           }
           &:focus {
             outline: none;
-            ${visibleFocus
-              ? css`
+            ${
+              visibleFocus
+                ? css`
                   ${Knob} {
                     box-shadow: ${theme.shadow.knobOn2};
                   }
@@ -214,9 +217,7 @@ const Track = styled.div<{
                   }
                   ${KnobHalo} {
                     visibility: visible;
-                    background-color: ${theme.color.elementPrimary(
-                      opacity[16]
-                    )};
+                    background-color: ${theme.color.elementPrimary(opacity[16])};
                     transform: scale(2);
                   }
                   ${KnobOutline} {
@@ -224,7 +225,8 @@ const Track = styled.div<{
                     stroke-width: 2px;
                   }
                 `
-              : undefined}
+                : undefined
+            }
           }
 
           &:active {
