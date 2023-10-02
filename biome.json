@@ -11,8 +11,7 @@
 				"noEmptyInterface": "off",
 				"noExplicitAny": "off",
 				"noArrayIndexKey": "off",
-				"noShadowRestrictedNames": "off",
-				"noAssignInExpressions": "off"
+				"noShadowRestrictedNames": "off"
 			},
 			"a11y": {
 				"noSvgWithoutTitle": "off"

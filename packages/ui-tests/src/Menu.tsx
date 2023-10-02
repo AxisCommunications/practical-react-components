@@ -79,10 +79,14 @@ export const Menu: FC<MenuProps> = ({ components }) => {
 				label: c.name,
 				icon: () => null,
 				selected: c.route === location.pathname,
-				onClick: () =>
-					/^https?:\/\//.test(c.route)
-						? (window.location.href = c.route)
-						: selectTab(c.route),
+				onClick: () => {
+					const routeMatches = /^https?:\/\//.test(c.route)
+					if (routeMatches) {
+						window.location.href = c.route
+						return
+					}
+					selectTab(c.route)
+				},
 				...c,
 			})) as unknown as ReadonlyArray<ComponentGroup>,
 		[location.pathname, components, selectTab]
