@@ -311,7 +311,7 @@ const ClockComponent: FC<ClockComponentProps> = ({
 			theta = theta > roundValue * (numbers.length - 1) ? 0 : theta
 			if (innerNumbers.length > 0) {
 				// Calculate distance from middlepoint, used to know if user is clicking on inner numbers.
-				const distance = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2))
+				const distance = Math.sqrt(dx ** 2 + dy ** 2)
 				const clock = e.currentTarget.getBoundingClientRect()
 				const distanceFromMiddle = distance / clock.width
 				if (distanceFromMiddle < 0.32) {
