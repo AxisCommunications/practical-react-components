@@ -74,7 +74,7 @@ const PropsList: FC<PropsProps> = ({ of, props }) => {
 										(optional
 										{prop.defaultValue !== null ? (
 											<>
-												{`, default: `}
+												{', default: '}
 												<PropTitleOptionalDefault>
 													{JSON.stringify(prop.defaultValue.value)}
 												</PropTitleOptionalDefault>

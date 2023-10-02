@@ -19,9 +19,6 @@
 				"useLiteralKeys": "off",
 				"noUselessSwitchCase": "off"
 			},
-			"style": {
-				"noUnusedTemplateLiteral": "off"
-			},
 			"a11y": {
 				"noSvgWithoutTitle": "off"
 			}

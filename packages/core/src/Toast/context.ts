@@ -87,7 +87,7 @@ export type ToastAction =
 	| ToastRemoveAllAction
 
 export const NI = () => {
-	throw new Error(`Not implemented: no ToastContext set`)
+	throw new Error('Not implemented: no ToastContext set')
 }
 export interface ToastContextType extends ToastCallbacks {
 	readonly dispatch: Dispatch<ToastAction>
