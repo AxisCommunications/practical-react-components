@@ -10,7 +10,8 @@ const transitionHeight = (
 ): void => {
 	node.style.overflow = 'hidden'
 	node.style.height = `${start}px`
-	node.scrollTop = node.scrollTop // ✨ force reflow ✨
+	// biome-ignore lint/correctness/noSelfAssign: ✨ force reflow ✨
+	node.scrollTop = node.scrollTop
 	node.style.transition = `height ${FOLD_ANIMATION_DURATION}ms ease-in-out`
 	node.style.height = `${end}px`
 }
