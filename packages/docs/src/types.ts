@@ -30,13 +30,11 @@ export interface PropItem {
   readonly required: boolean
   readonly type: PropItemType
   readonly description: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   readonly defaultValue: any
 }
 
 export interface PropItemType {
   readonly name: string
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   readonly value?: any
   readonly raw?: string
 }

@@ -47,7 +47,6 @@ export interface PaperProps extends BaseProps {
   readonly space?: boolean
 }
 
-/* eslint-disable-next-line react/display-name */
 export const Paper = forwardRef<BaseElement, PaperProps>(
   ({ square = false, space = false, children, ...props }, ref) => (
     <PaperDiv square={square} space={space} {...props} ref={ref}>

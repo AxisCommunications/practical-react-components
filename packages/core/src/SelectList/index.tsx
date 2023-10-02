@@ -145,7 +145,7 @@ export const SelectList: FC<SelectListProps> = ({
     if (listRef.current !== null && selectedValueIndex !== -1) {
       listRef.current.scrollTo(0, selectedValueIndex * LIST_ITEM_HEIGHT)
     }
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [])
 
   const searchForOption = useCallback(
     (e: KeyboardEvent<HTMLUListElement>) => {

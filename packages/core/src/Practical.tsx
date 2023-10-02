@@ -156,7 +156,6 @@ export const Layer: FC<LayerProps> = ({ children, zIndex }) => {
 // Add ResizeObserver polyfill from juggle if not available
 if (typeof window !== 'undefined') {
   if (window.ResizeObserver === undefined) {
-    /* eslint-disable-next-line @typescript-eslint/ban-ts-comment */
     // @ts-ignore
     window.ResizeObserver = ResizeObserver
   }

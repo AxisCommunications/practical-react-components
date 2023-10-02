@@ -31,7 +31,6 @@ const args = generateArgs()
 const prod = args.prod === true
 
 // Webpack configuration should be a default export
-/* eslint-disable-next-line import/no-default-export */
 export default {
   mode: prod ? 'production' : 'development',
   devtool: prod ? false : 'inline-source-map',

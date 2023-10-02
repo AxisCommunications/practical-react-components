@@ -5,7 +5,6 @@ packages/docs/props.json
 yarn-debug.log*
 yarn-error.log*
 
-.eslintcache
 *.tsbuildinfo
 
 .yarn/*

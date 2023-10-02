@@ -127,7 +127,6 @@ const CheckItemRow = styled.div`
 
 interface SelectOption extends BaseOption {
   readonly index: number
-  // eslint-disable-next-line functional/prefer-readonly-type
   readonly itemRefs: SelectPopoverProps['itemRefs']
   readonly compact: boolean
   readonly selected: boolean
@@ -194,7 +193,6 @@ export interface SelectPopoverProps<V extends string = string>
   readonly onKeyDown: (event: KeyboardEvent) => void
   readonly isOpen: boolean
   readonly listRef: RefObject<HTMLUListElement>
-  // eslint-disable-next-line functional/prefer-readonly-type
   readonly itemRefs: MutableRefObject<Map<number, HTMLLIElement>>
   readonly valueIndex: number | null
   readonly optionHandlers: ReadonlyArray<(event: SyntheticEvent) => void>

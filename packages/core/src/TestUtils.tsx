@@ -29,7 +29,6 @@ export const TestRender = (jsx: JSX.Element) =>
 
 export const TestText = (): JSX.Element => <span>Test</span>
 
-/* eslint-disable-next-line react/display-name */
 export const TestTextWithForwardRef = forwardRef<HTMLElement>(
   ({ ...props }, ref) => (
     <span {...props} ref={ref}>

@@ -1,7 +1,6 @@
 import { useCallback, ReactNode, useMemo, createElement } from 'react'
 import styled, { css } from 'styled-components'
 import Highlight, { defaultProps, Language } from 'prism-react-renderer'
-/* eslint-disable-next-line import/no-extraneous-dependencies */
 import lightTheme from 'prism-react-renderer/themes/nightOwlLight'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import * as practicalcore from 'practical-react-components-core'
@@ -75,8 +74,6 @@ export const Code = ({
     []
   )
 
-  // Prettier currently inserts a leading ';' when formatting a code block
-  // with a single arrow function in it.
   const code = useMemo(() => {
     if (typeof children !== 'string') {
       return ''

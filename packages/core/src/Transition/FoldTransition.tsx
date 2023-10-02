@@ -10,7 +10,6 @@ const transitionHeight = (
 ): void => {
   node.style.overflow = 'hidden'
   node.style.height = `${start}px`
-  /* eslint-disable-next-line no-self-assign */
   node.scrollTop = node.scrollTop // ✨ force reflow ✨
   node.style.transition = `height ${FOLD_ANIMATION_DURATION}ms ease-in-out`
   node.style.height = `${end}px`

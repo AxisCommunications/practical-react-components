@@ -164,7 +164,6 @@ export const ThemeCreator = () => {
                 <PaletteColor
                   slot={slot}
                   colorName={colorName}
-                  // eslint-disable-next-line react/jsx-no-bind
                   onChange={(slot2, nextColorName) => {
                     setSlotColors(currentValue => ({
                       ...currentValue,
@@ -271,7 +270,6 @@ export const PreviewComponents: FC<PreviewComponentsProps> = ({ theme }) => {
           <Button
             label="Change date and time"
             variant="primary"
-            // eslint-disable-next-line react/jsx-no-bind
             onClick={toggle}
           />
           <DateTimePicker

@@ -45,7 +45,6 @@ export interface ChipProps
   readonly onRemove?: () => void
 }
 
-/* eslint-disable-next-line react/display-name */
 export const Chip = forwardRef<HTMLDivElement, ChipProps>(
   ({ text, error = false, onRemove, icon, ...props }, ref) => {
     const handleKeyDown = useCallback(
