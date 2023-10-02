@@ -172,7 +172,7 @@ function ToggleButton<T extends string | number>({
 			disabled={disabled}
 			onClick={onButtonClick}
 		>
-			<ToggleButtonContent tabIndex={1} selected={selected}>
+			<ToggleButtonContent tabIndex={0} selected={selected}>
 				{content}
 			</ToggleButtonContent>
 		</ToggleButtonContainer>

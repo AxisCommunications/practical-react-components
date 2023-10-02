@@ -27,8 +27,7 @@
 				"useSelfClosingElements": "off"
 			},
 			"a11y": {
-				"noSvgWithoutTitle": "off",
-				"noPositiveTabindex": "off"
+				"noSvgWithoutTitle": "off"
 			}
 		}
 	},

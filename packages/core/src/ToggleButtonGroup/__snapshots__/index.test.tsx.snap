@@ -217,7 +217,7 @@ exports[`ToggleButtonGroup ToggleButtonGroup 1`] = `
           <div
             className="c4"
             selected={true}
-            tabIndex={1}
+            tabIndex={0}
           >
             <p
               className="c5"
@@ -235,7 +235,7 @@ exports[`ToggleButtonGroup ToggleButtonGroup 1`] = `
           <div
             className="c7"
             selected={false}
-            tabIndex={1}
+            tabIndex={0}
           >
             <span
               className="c8"
@@ -265,7 +265,7 @@ exports[`ToggleButtonGroup ToggleButtonGroup 1`] = `
           <div
             className="c7"
             selected={false}
-            tabIndex={1}
+            tabIndex={0}
           >
             <p
               className="c5"
@@ -473,7 +473,7 @@ exports[`ToggleButtonGroup ToggleButtonGroupWithField 1`] = `
             <div
               className="c6"
               selected={false}
-              tabIndex={1}
+              tabIndex={0}
             >
               <p
                 className="c7"
@@ -491,7 +491,7 @@ exports[`ToggleButtonGroup ToggleButtonGroupWithField 1`] = `
             <div
               className="c6"
               selected={false}
-              tabIndex={1}
+              tabIndex={0}
             >
               <span
                 className="c8"
@@ -521,7 +521,7 @@ exports[`ToggleButtonGroup ToggleButtonGroupWithField 1`] = `
             <div
               className="c6"
               selected={false}
-              tabIndex={1}
+              tabIndex={0}
             >
               <p
                 className="c7"
@@ -705,7 +705,7 @@ exports[`ToggleButtonGroup ToggleButtonGroupWithFieldExclusive 1`] = `
             <div
               className="c6"
               selected={false}
-              tabIndex={1}
+              tabIndex={0}
             >
               <p
                 className="c7"
@@ -723,7 +723,7 @@ exports[`ToggleButtonGroup ToggleButtonGroupWithFieldExclusive 1`] = `
             <div
               className="c6"
               selected={false}
-              tabIndex={1}
+              tabIndex={0}
             >
               <p
                 className="c7"
@@ -741,7 +741,7 @@ exports[`ToggleButtonGroup ToggleButtonGroupWithFieldExclusive 1`] = `
             <div
               className="c6"
               selected={false}
-              tabIndex={1}
+              tabIndex={0}
             >
               <p
                 className="c7"
