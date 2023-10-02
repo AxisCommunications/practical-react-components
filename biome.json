@@ -15,8 +15,7 @@
 				"noAssignInExpressions": "off"
 			},
 			"complexity": {
-				"noUselessFragments": "off",
-				"useLiteralKeys": "off"
+				"noUselessFragments": "off"
 			},
 			"a11y": {
 				"noSvgWithoutTitle": "off"
