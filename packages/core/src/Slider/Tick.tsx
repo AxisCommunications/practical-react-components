@@ -172,7 +172,7 @@ export const TickLabel: FC<TickLabelProps> = ({
 	return (
 		<BaseLabel ref={el} center={position} width={width} disabled={disabled}>
 			<LabelContainer onClick={handleClick}>
-				<BoxHalo width={width}></BoxHalo>
+				<BoxHalo width={width} />
 				<Label>{label === undefined ? value : label}</Label>
 			</LabelContainer>
 		</BaseLabel>
