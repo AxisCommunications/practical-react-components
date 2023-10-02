@@ -14,9 +14,6 @@
 				"noShadowRestrictedNames": "off",
 				"noAssignInExpressions": "off"
 			},
-			"complexity": {
-				"noUselessFragments": "off"
-			},
 			"a11y": {
 				"noSvgWithoutTitle": "off"
 			}
