@@ -29,9 +29,6 @@
 			"a11y": {
 				"noSvgWithoutTitle": "off",
 				"noPositiveTabindex": "off"
-			},
-			"correctness": {
-				"noSelfAssign": "off"
 			}
 		}
 	},
