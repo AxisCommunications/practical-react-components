@@ -23,7 +23,7 @@ export interface ComponentDoc {
 	readonly props: Props
 }
 
-export interface Props extends StringIndexedObject<PropItem> {}
+export type Props = StringIndexedObject<PropItem>
 
 export interface PropItem {
 	readonly name: string

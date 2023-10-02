@@ -8,7 +8,6 @@
 		"rules": {
 			"recommended": true,
 			"suspicious": {
-				"noEmptyInterface": "off",
 				"noArrayIndexKey": "off"
 			},
 			"a11y": {
