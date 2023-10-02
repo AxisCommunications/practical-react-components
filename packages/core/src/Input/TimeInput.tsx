@@ -217,17 +217,16 @@ const getKeyCodeValue = (key: string) => {
 	}
 }
 
-export interface BaseTimeInputProps
-	extends Omit<
-		TextInputProps,
-		| 'value'
-		| 'onValueChange'
-		| 'onChange'
-		| 'ref'
-		| 'width'
-		| 'maxLength'
-		| 'placeholder'
-	> {}
+export type BaseTimeInputProps = Omit<
+	TextInputProps,
+	| 'value'
+	| 'onValueChange'
+	| 'onChange'
+	| 'ref'
+	| 'width'
+	| 'maxLength'
+	| 'placeholder'
+>
 
 export interface TimeInputValues {
 	readonly hour?: number

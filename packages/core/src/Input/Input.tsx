@@ -462,12 +462,12 @@ function Input<T extends string | NumberInputType>({
 	)
 }
 
-export interface TextInputProps extends BaseInputProps<string> {}
+export type TextInputProps = BaseInputProps<string>
 export const TextInput: FC<TextInputProps> = props => (
 	<Input {...props} type="text" />
 )
 
-export interface NumberInputProps extends BaseInputProps<NumberInputType> {}
+export type NumberInputProps = BaseInputProps<NumberInputType>
 export const NumberInput: FC<NumberInputProps> = props => (
 	<Input {...props} type="number" />
 )
