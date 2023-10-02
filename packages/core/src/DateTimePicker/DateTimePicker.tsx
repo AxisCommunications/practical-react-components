@@ -23,10 +23,10 @@ import { Icon } from '../Icon'
 import { TranslationMeridiem } from './types'
 
 export enum DateTimeTabs {
-	'TwentyFour' = '24',
-	'AMPM' = 'AM/PM',
-	'Min' = 'Min',
-	'Date' = 'Date',
+	TwentyFour = '24',
+	AMPM = 'AM/PM',
+	Min = 'Min',
+	Date = 'Date',
 }
 
 const TitleContainer = styled.div`

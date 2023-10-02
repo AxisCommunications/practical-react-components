@@ -52,8 +52,7 @@
 			"semicolons": "asNeeded",
 			"quoteStyle": "single",
 			"trailingComma": "es5",
-			"arrowParentheses": "asNeeded",
-			"quoteProperties": "preserve"
+			"arrowParentheses": "asNeeded"
 		}
 	}
 }

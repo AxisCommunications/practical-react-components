@@ -59,9 +59,9 @@ export interface BaseToastValue {
 }
 
 export enum ToastActionType {
-	'TOAST_CREATE',
-	'TOAST_REMOVE',
-	'TOAST_REMOVE_ALL',
+	TOAST_CREATE,
+	TOAST_REMOVE,
+	TOAST_REMOVE_ALL,
 }
 
 export type ToastId = string
