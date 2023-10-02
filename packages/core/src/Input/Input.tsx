@@ -1,14 +1,14 @@
 import {
-  useCallback,
-  useState,
-  useRef,
-  useLayoutEffect,
-  InputHTMLAttributes,
-  ChangeEventHandler,
-  FC,
-  RefObject,
-  KeyboardEventHandler,
-  MouseEventHandler,
+	useCallback,
+	useState,
+	useRef,
+	useLayoutEffect,
+	InputHTMLAttributes,
+	ChangeEventHandler,
+	FC,
+	RefObject,
+	KeyboardEventHandler,
+	MouseEventHandler,
 } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 
@@ -26,29 +26,29 @@ export type InputChangeHandler = ChangeEventHandler<BaseElement>
 export type InputValueChangeHandler<T> = (value: T) => void
 export type TextInputWidth = 'small' | 'medium' | 'large' | 'full'
 export type TextInputCredentialsType =
-  | 'username'
-  | 'current-password'
-  | 'new-password'
+	| 'username'
+	| 'current-password'
+	| 'new-password'
 export type InputType = 'text' | 'number'
 type ErrorVariant = 'text' | 'icon'
 
 const getWidth = (width: TextInputWidth): string => {
-  switch (width) {
-    case 'small':
-      return '160px'
-    case 'medium':
-      return '200px'
-    case 'large':
-      return '352px'
-    case 'full':
-      return '100%'
-    default:
-      return '100%'
-  }
+	switch (width) {
+		case 'small':
+			return '160px'
+		case 'medium':
+			return '200px'
+		case 'large':
+			return '352px'
+		case 'full':
+			return '100%'
+		default:
+			return '100%'
+	}
 }
 
 const Error = styled.div<{
-  readonly compact: boolean
+	readonly compact: boolean
 }>`
   color: ${({ theme }) => theme.color.elementError()};
   line-height: 16px;
@@ -60,7 +60,7 @@ const Error = styled.div<{
   right: 0;
   bottom: 0;
   top: ${({ compact }) =>
-    !compact ? componentSize.medium : componentSize.small};
+		!compact ? componentSize.medium : componentSize.small};
 `
 
 const ErrorLineContainer = styled.div`
@@ -79,9 +79,9 @@ const ErrorLine = styled.div<{ readonly hasErrorMessage: boolean }>`
   width: 100%;
   background-color: transparent;
   border-radius: ${({ hasErrorMessage }) =>
-    hasErrorMessage
-      ? `${shape.radius.small} 0 0 0`
-      : `${shape.radius.small} ${shape.radius.small} 0 0`};
+		hasErrorMessage
+			? `${shape.radius.small} 0 0 0`
+			: `${shape.radius.small} ${shape.radius.small} 0 0`};
 `
 
 const ErrorMessage = styled.div`
@@ -103,10 +103,10 @@ const FocusLine = styled.div`
 `
 
 const InputContainer = styled.div<{
-  readonly disabled: boolean
-  readonly compact: boolean
-  readonly width: TextInputWidth
-  readonly hasError: boolean
+	readonly disabled: boolean
+	readonly compact: boolean
+	readonly width: TextInputWidth
+	readonly hasError: boolean
 }>`
   position: relative;
   display: inline-flex;
@@ -118,7 +118,7 @@ const InputContainer = styled.div<{
   border-radius: ${shape.radius.medium} ${shape.radius.medium} 0 0;
 
   height: ${({ compact }) =>
-    !compact ? componentSize.medium : componentSize.small};
+		!compact ? componentSize.medium : componentSize.small};
 
   &:hover {
     border-bottom: 1px solid ${({ theme }) => theme.color.element01()};
@@ -144,16 +144,16 @@ const InputContainer = styled.div<{
   }
 
   ${({ disabled }) =>
-    disabled
-      ? css`
+		disabled
+			? css`
           opacity: ${opacity[48]};
           pointer-events: none;
         `
-      : undefined}
+			: undefined}
 
   ${({ theme, hasError }) =>
-    hasError
-      ? css`
+		hasError
+			? css`
           background-color: ${theme.color.backgroundError()};
           border-bottom: none;
 
@@ -166,7 +166,7 @@ const InputContainer = styled.div<{
             border-bottom: none;
           }
         `
-      : undefined};
+			: undefined};
 `
 
 const InputNative = styled.input`
@@ -194,8 +194,8 @@ const InputNative = styled.input`
   }
 
   ${({ type }) =>
-    type === 'number'
-      ? `
+		type === 'number'
+			? `
     ::-webkit-outer-spin-button,
     ::-webkit-inner-spin-button {
       appearance: none;
@@ -203,14 +203,14 @@ const InputNative = styled.input`
     }
     appearance: textfield; /* Firefox */
   `
-      : type === 'password' || type === 'text'
-      ? `
+			: type === 'password' || type === 'text'
+			? `
     ::-ms-reveal,
     ::-ms-clear {
       display: none;
     }
     `
-      : undefined}
+			: undefined}
 `
 
 const PasswordToggle = styled.div`
@@ -235,251 +235,251 @@ const ErrorIconContainer = styled.div`
 `
 
 interface ErrorMessageTextProps {
-  readonly error?: string
-  readonly errorVariant: ErrorVariant
+	readonly error?: string
+	readonly errorVariant: ErrorVariant
 }
 
 const ErrorMessageText: FC<ErrorMessageTextProps> = ({
-  error,
-  errorVariant,
+	error,
+	errorVariant,
 }) => {
-  const [hasOverflow, setHasOverflow] = useState(false)
-  const errorMessageRef = useRef<HTMLDivElement>(null)
+	const [hasOverflow, setHasOverflow] = useState(false)
+	const errorMessageRef = useRef<HTMLDivElement>(null)
 
-  useLayoutEffect(() => {
-    if (errorMessageRef.current === null) {
-      return
-    }
+	useLayoutEffect(() => {
+		if (errorMessageRef.current === null) {
+			return
+		}
 
-    setHasOverflow(
-      errorMessageRef.current.offsetHeight <
-        errorMessageRef.current.scrollHeight ||
-        errorMessageRef.current.offsetWidth <
-          errorMessageRef.current.scrollWidth
-    )
-  }, [errorMessageRef])
+		setHasOverflow(
+			errorMessageRef.current.offsetHeight <
+				errorMessageRef.current.scrollHeight ||
+				errorMessageRef.current.offsetWidth <
+					errorMessageRef.current.scrollWidth
+		)
+	}, [errorMessageRef])
 
-  if (error === undefined || error === '' || errorVariant !== 'text') {
-    return null
-  }
+	if (error === undefined || error === '' || errorVariant !== 'text') {
+		return null
+	}
 
-  const text = (
-    <ErrorMessage ref={errorMessageRef}>
-      <Typography variant="explanatory-text">{error}</Typography>
-    </ErrorMessage>
-  )
+	const text = (
+		<ErrorMessage ref={errorMessageRef}>
+			<Typography variant="explanatory-text">{error}</Typography>
+		</ErrorMessage>
+	)
 
-  return hasOverflow ? <Tooltip text={error}>{text}</Tooltip> : text
+	return hasOverflow ? <Tooltip text={error}>{text}</Tooltip> : text
 }
 
 interface BaseInputProps<T extends string | NumberInputType> extends BaseProps {
-  /**
-   * Specifies the name of an input element.
-   */
-  readonly name?: BaseProps['name']
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * The value of the input element.
-   */
-  readonly value: T
-  /**
-   * Native change handler that can be used by formik etc.
-   */
-  readonly onChange?: InputChangeHandler
-  /**
-   * Smooth typed value change handler.
-   */
-  readonly onValueChange?: InputValueChangeHandler<T>
-  /**
-   * Executes an action when the Enter key is pressed.
-   */
-  readonly onPressEnter?: VoidFunction
-  /**
-   * Executes an action when the Esc key is pressed.
-   */
-  readonly onPressEscape?: VoidFunction
-  /**
-   * Changes the width of the textbox area.
-   */
-  readonly width?: TextInputWidth
-  /**
-   * Adds error message to TextInput.
-   */
-  readonly error?: string
-  /**
-   * Error message variant.
-   *
-   * Default: `text`
-   */
-  readonly errorVariant?: ErrorVariant
+	/**
+	 * Specifies the name of an input element.
+	 */
+	readonly name?: BaseProps['name']
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * The value of the input element.
+	 */
+	readonly value: T
+	/**
+	 * Native change handler that can be used by formik etc.
+	 */
+	readonly onChange?: InputChangeHandler
+	/**
+	 * Smooth typed value change handler.
+	 */
+	readonly onValueChange?: InputValueChangeHandler<T>
+	/**
+	 * Executes an action when the Enter key is pressed.
+	 */
+	readonly onPressEnter?: VoidFunction
+	/**
+	 * Executes an action when the Esc key is pressed.
+	 */
+	readonly onPressEscape?: VoidFunction
+	/**
+	 * Changes the width of the textbox area.
+	 */
+	readonly width?: TextInputWidth
+	/**
+	 * Adds error message to TextInput.
+	 */
+	readonly error?: string
+	/**
+	 * Error message variant.
+	 *
+	 * Default: `text`
+	 */
+	readonly errorVariant?: ErrorVariant
 
-  /**
-   * Can be used to set React ref to the input element
-   */
+	/**
+	 * Can be used to set React ref to the input element
+	 */
 
-  readonly inputRef?: RefObject<BaseElement>
-  /**
+	readonly inputRef?: RefObject<BaseElement>
+	/**
    * Override theme's default setting for `compact` if set.
 
    */
-  readonly compact?: boolean
+	readonly compact?: boolean
 }
 
 function Input<T extends string | NumberInputType>({
-  onChange,
-  onValueChange,
-  onPressEnter,
-  onPressEscape,
-  disabled = false,
-  compact: compactFromProps,
-  width = 'full',
-  error,
-  errorVariant = 'text',
-  type,
-  className,
-  onKeyUp,
-  inputRef,
-  ...props
+	onChange,
+	onValueChange,
+	onPressEnter,
+	onPressEscape,
+	disabled = false,
+	compact: compactFromProps,
+	width = 'full',
+	error,
+	errorVariant = 'text',
+	type,
+	className,
+	onKeyUp,
+	inputRef,
+	...props
 }: BaseInputProps<T>): JSX.Element {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [showPassword, setShowPassword] = useState(false)
-  const { compact: compactFromTheme } = useTheme()
-  const compact = compactFromProps ?? compactFromTheme
+	const containerRef = useRef<HTMLDivElement>(null)
+	const [showPassword, setShowPassword] = useState(false)
+	const { compact: compactFromTheme } = useTheme()
+	const compact = compactFromProps ?? compactFromTheme
 
-  const handleKeyUp = useCallback<KeyboardEventHandler<BaseElement>>(
-    e => {
-      switch (e.key) {
-        case 'Enter': {
-          onPressEnter?.()
-          break
-        }
+	const handleKeyUp = useCallback<KeyboardEventHandler<BaseElement>>(
+		e => {
+			switch (e.key) {
+				case 'Enter': {
+					onPressEnter?.()
+					break
+				}
 
-        case 'Esc':
-        case 'Escape': {
-          onPressEscape?.()
-          break
-        }
+				case 'Esc':
+				case 'Escape': {
+					onPressEscape?.()
+					break
+				}
 
-        default:
-          onKeyUp?.(e)
-      }
-    },
-    [onPressEnter, onPressEscape, onKeyUp]
-  )
-  const toggleShowPassword = useCallback<MouseEventHandler>(
-    e => {
-      e.preventDefault()
-      setShowPassword(oldValue => !oldValue)
-    },
-    [setShowPassword]
-  )
+				default:
+					onKeyUp?.(e)
+			}
+		},
+		[onPressEnter, onPressEscape, onKeyUp]
+	)
+	const toggleShowPassword = useCallback<MouseEventHandler>(
+		e => {
+			e.preventDefault()
+			setShowPassword(oldValue => !oldValue)
+		},
+		[setShowPassword]
+	)
 
-  const handleChange = useCallback<InputChangeHandler>(
-    e => {
-      e.preventDefault()
+	const handleChange = useCallback<InputChangeHandler>(
+		e => {
+			e.preventDefault()
 
-      onChange?.(e)
+			onChange?.(e)
 
-      if (onValueChange !== undefined) {
-        if (type === 'number') {
-          const newNumberValue = e.target.value
-          if (newNumberValue === '') {
-            // To allow 0 to be removed while typing
-            onValueChange(newNumberValue as T)
-          } else {
-            // We know that T should be number here
-            onValueChange(Number(newNumberValue) as T)
-          }
-        } else {
-          // We know that T should be string here
-          onValueChange(e.target.value as T)
-        }
-      }
-    },
-    [onChange, onValueChange, type]
-  )
+			if (onValueChange !== undefined) {
+				if (type === 'number') {
+					const newNumberValue = e.target.value
+					if (newNumberValue === '') {
+						// To allow 0 to be removed while typing
+						onValueChange(newNumberValue as T)
+					} else {
+						// We know that T should be number here
+						onValueChange(Number(newNumberValue) as T)
+					}
+				} else {
+					// We know that T should be string here
+					onValueChange(e.target.value as T)
+				}
+			}
+		},
+		[onChange, onValueChange, type]
+	)
 
-  return (
-    <InputContainer
-      disabled={disabled}
-      compact={compact}
-      ref={containerRef}
-      className={className}
-      width={width}
-      hasError={error !== undefined}
-    >
-      <InputNative
-        autoCapitalize="off"
-        autoComplete="off"
-        autoCorrect="off"
-        spellCheck={false}
-        disabled={disabled}
-        ref={inputRef}
-        {...props}
-        type={
-          (type === 'current-password' || type === 'new-password') &&
-          !showPassword
-            ? 'password'
-            : type
-        }
-        onChange={handleChange}
-        onKeyUp={handleKeyUp}
-      />
-      {(type === 'current-password' || type === 'new-password') &&
-      props.value !== '' ? (
-        <PasswordToggle onClick={toggleShowPassword}>
-          <Icon
-            icon={showPassword ? NotVisibilityIcon : VisibilityIcon}
-            size="small"
-          />
-        </PasswordToggle>
-      ) : null}
-      {error !== undefined && errorVariant === 'icon' ? (
-        <ErrorIconContainer>
-          <Tooltip text={error ?? ''}>
-            <div>
-              <Icon icon={ErrorIcon} />
-            </div>
-          </Tooltip>
-        </ErrorIconContainer>
-      ) : null}
-      {error !== undefined ? (
-        <Error compact={compact}>
-          <ErrorLineContainer>
-            <ErrorLine hasErrorMessage={error !== ''} />
-          </ErrorLineContainer>
-          {errorVariant === 'text' && error !== '' ? (
-            <ErrorMessageText errorVariant={errorVariant} error={error} />
-          ) : null}
-        </Error>
-      ) : (
-        <FocusLine />
-      )}
-    </InputContainer>
-  )
+	return (
+		<InputContainer
+			disabled={disabled}
+			compact={compact}
+			ref={containerRef}
+			className={className}
+			width={width}
+			hasError={error !== undefined}
+		>
+			<InputNative
+				autoCapitalize="off"
+				autoComplete="off"
+				autoCorrect="off"
+				spellCheck={false}
+				disabled={disabled}
+				ref={inputRef}
+				{...props}
+				type={
+					(type === 'current-password' || type === 'new-password') &&
+					!showPassword
+						? 'password'
+						: type
+				}
+				onChange={handleChange}
+				onKeyUp={handleKeyUp}
+			/>
+			{(type === 'current-password' || type === 'new-password') &&
+			props.value !== '' ? (
+				<PasswordToggle onClick={toggleShowPassword}>
+					<Icon
+						icon={showPassword ? NotVisibilityIcon : VisibilityIcon}
+						size="small"
+					/>
+				</PasswordToggle>
+			) : null}
+			{error !== undefined && errorVariant === 'icon' ? (
+				<ErrorIconContainer>
+					<Tooltip text={error ?? ''}>
+						<div>
+							<Icon icon={ErrorIcon} />
+						</div>
+					</Tooltip>
+				</ErrorIconContainer>
+			) : null}
+			{error !== undefined ? (
+				<Error compact={compact}>
+					<ErrorLineContainer>
+						<ErrorLine hasErrorMessage={error !== ''} />
+					</ErrorLineContainer>
+					{errorVariant === 'text' && error !== '' ? (
+						<ErrorMessageText errorVariant={errorVariant} error={error} />
+					) : null}
+				</Error>
+			) : (
+				<FocusLine />
+			)}
+		</InputContainer>
+	)
 }
 
 export interface TextInputProps extends BaseInputProps<string> {}
 export const TextInput: FC<TextInputProps> = props => (
-  <Input {...props} type="text" />
+	<Input {...props} type="text" />
 )
 
 export interface NumberInputProps extends BaseInputProps<NumberInputType> {}
 export const NumberInput: FC<NumberInputProps> = props => (
-  <Input {...props} type="number" />
+	<Input {...props} type="number" />
 )
 
 export interface TextInputCredentialsProps extends BaseInputProps<string> {
-  readonly type: TextInputCredentialsType
+	readonly type: TextInputCredentialsType
 }
 export const TextInputCredentials: FC<TextInputCredentialsProps> = props => (
-  <Input {...props} />
+	<Input {...props} />
 )
 
 export const TextInputField = withField<TextInputProps>(TextInput)
 export const NumberInputField = withField<NumberInputProps>(NumberInput)
 export const TextInputCredentialsField =
-  withField<TextInputCredentialsProps>(TextInputCredentials)
+	withField<TextInputCredentialsProps>(TextInputCredentials)

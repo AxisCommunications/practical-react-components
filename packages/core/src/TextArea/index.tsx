@@ -1,10 +1,10 @@
 import {
-  useCallback,
-  TextareaHTMLAttributes,
-  ChangeEventHandler,
-  FC,
-  RefObject,
-  KeyboardEventHandler,
+	useCallback,
+	TextareaHTMLAttributes,
+	ChangeEventHandler,
+	FC,
+	RefObject,
+	KeyboardEventHandler,
 } from 'react'
 
 import styled, { css } from 'styled-components'
@@ -45,9 +45,9 @@ const ErrorLine = styled.div<{ readonly hasErrorMessage: boolean }>`
   width: 100%;
   background-color: transparent;
   border-radius: ${({ hasErrorMessage }) =>
-    hasErrorMessage
-      ? `${shape.radius.small} 0 0 0`
-      : `${shape.radius.small} ${shape.radius.small} 0 0`};
+		hasErrorMessage
+			? `${shape.radius.small} 0 0 0`
+			: `${shape.radius.small} ${shape.radius.small} 0 0`};
 `
 
 const ErrorMessage = styled.div`
@@ -94,8 +94,8 @@ const TextAreaNative = styled.textarea`
 `
 
 const TextAreaContainer = styled.div<{
-  readonly disabled: boolean
-  readonly hasError: boolean
+	readonly disabled: boolean
+	readonly hasError: boolean
 }>`
   height: ${TEXT_AREA_HEIGHT};
   position: relative;
@@ -131,8 +131,8 @@ const TextAreaContainer = styled.div<{
   }
 
   ${({ disabled }) =>
-    disabled
-      ? css`
+		disabled
+			? css`
           opacity: ${opacity[48]};
 
           &:hover {
@@ -140,11 +140,11 @@ const TextAreaContainer = styled.div<{
             border-bottom: 1px solid ${({ theme }) => theme.color.element11()};
           }
         `
-      : undefined}
+			: undefined}
 
   ${({ theme, hasError }) =>
-    hasError
-      ? css`
+		hasError
+			? css`
           background-color: ${theme.color.backgroundError()};
           border-bottom: none;
 
@@ -159,7 +159,7 @@ const TextAreaContainer = styled.div<{
             border-bottom: none;
           }
         `
-      : undefined};
+			: undefined};
 `
 
 type BaseElement = HTMLTextAreaElement
@@ -169,117 +169,117 @@ export type TextAreaChangeHandler = ChangeEventHandler<BaseElement>
 export type TextAreaValueChangeHandler = (value: string) => void
 
 export interface TextAreaProps extends BaseProps {
-  /**
-   * Specifies the name of an input element.
-   */
-  readonly name?: BaseProps['name']
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: string
-  /**
-   * The value of the input element.
-   */
-  readonly value?: BaseProps['value']
-  /**
-   * Native change handler that can be used by formik etc.
-   */
-  readonly onChange?: TextAreaChangeHandler
+	/**
+	 * Specifies the name of an input element.
+	 */
+	readonly name?: BaseProps['name']
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: string
+	/**
+	 * The value of the input element.
+	 */
+	readonly value?: BaseProps['value']
+	/**
+	 * Native change handler that can be used by formik etc.
+	 */
+	readonly onChange?: TextAreaChangeHandler
 
-  /**
-   * Smooth typed value change handler.
-   */
-  readonly onValueChange?: TextAreaValueChangeHandler
-  /**
-   * Executes an action when the Enter key is pressed.
-   */
-  readonly onPressEnter?: () => void
-  /**
-   * Executes an action when the Esc key is pressed.
-   */
-  readonly onPressEscape?: () => void
-  /**
-   * Adds an error message underneath the text area.
-   */
-  readonly error?: string | undefined
-  /**
-   * Can be used to set React ref to the textarea element
-   */
-  readonly textareaRef?: RefObject<BaseElement>
+	/**
+	 * Smooth typed value change handler.
+	 */
+	readonly onValueChange?: TextAreaValueChangeHandler
+	/**
+	 * Executes an action when the Enter key is pressed.
+	 */
+	readonly onPressEnter?: () => void
+	/**
+	 * Executes an action when the Esc key is pressed.
+	 */
+	readonly onPressEscape?: () => void
+	/**
+	 * Adds an error message underneath the text area.
+	 */
+	readonly error?: string | undefined
+	/**
+	 * Can be used to set React ref to the textarea element
+	 */
+	readonly textareaRef?: RefObject<BaseElement>
 }
 
 export const TextArea: FC<TextAreaProps> = ({
-  onChange,
-  onValueChange,
-  onPressEnter,
-  onPressEscape,
-  disabled = false,
-  error,
-  onKeyUp,
-  className,
-  textareaRef,
-  ...props
+	onChange,
+	onValueChange,
+	onPressEnter,
+	onPressEscape,
+	disabled = false,
+	error,
+	onKeyUp,
+	className,
+	textareaRef,
+	...props
 }) => {
-  const handleKeyUp = useCallback<KeyboardEventHandler<BaseElement>>(
-    e => {
-      onKeyUp?.(e)
-      switch (e.key) {
-        case 'Enter': {
-          onPressEnter?.()
-          break
-        }
+	const handleKeyUp = useCallback<KeyboardEventHandler<BaseElement>>(
+		e => {
+			onKeyUp?.(e)
+			switch (e.key) {
+				case 'Enter': {
+					onPressEnter?.()
+					break
+				}
 
-        case 'Esc':
-        case 'Escape': {
-          onPressEscape?.()
-          break
-        }
-      }
-    },
-    [onPressEnter, onPressEscape, onKeyUp]
-  )
+				case 'Esc':
+				case 'Escape': {
+					onPressEscape?.()
+					break
+				}
+			}
+		},
+		[onPressEnter, onPressEscape, onKeyUp]
+	)
 
-  const handleChange = useCallback<TextAreaChangeHandler>(
-    e => {
-      onChange?.(e)
-      onValueChange?.(e.target.value)
-    },
-    [onChange, onValueChange]
-  )
+	const handleChange = useCallback<TextAreaChangeHandler>(
+		e => {
+			onChange?.(e)
+			onValueChange?.(e.target.value)
+		},
+		[onChange, onValueChange]
+	)
 
-  return (
-    <TextAreaContainer
-      className={className}
-      disabled={disabled}
-      hasError={error !== undefined}
-    >
-      <TextAreaNative
-        autoCorrect="off"
-        autoCapitalize="off"
-        spellCheck={false}
-        rows={3}
-        disabled={disabled}
-        {...props}
-        onChange={handleChange}
-        onKeyUp={handleKeyUp}
-        ref={textareaRef}
-      />
-      {error !== undefined ? (
-        <Error>
-          <ErrorLineContainter>
-            <ErrorLine hasErrorMessage={error !== ''} />
-          </ErrorLineContainter>
-          {error !== '' ? (
-            <ErrorMessage>
-              <Typography variant="explanatory-text">{error}</Typography>
-            </ErrorMessage>
-          ) : null}
-        </Error>
-      ) : (
-        <FocusLine />
-      )}
-    </TextAreaContainer>
-  )
+	return (
+		<TextAreaContainer
+			className={className}
+			disabled={disabled}
+			hasError={error !== undefined}
+		>
+			<TextAreaNative
+				autoCorrect="off"
+				autoCapitalize="off"
+				spellCheck={false}
+				rows={3}
+				disabled={disabled}
+				{...props}
+				onChange={handleChange}
+				onKeyUp={handleKeyUp}
+				ref={textareaRef}
+			/>
+			{error !== undefined ? (
+				<Error>
+					<ErrorLineContainter>
+						<ErrorLine hasErrorMessage={error !== ''} />
+					</ErrorLineContainter>
+					{error !== '' ? (
+						<ErrorMessage>
+							<Typography variant="explanatory-text">{error}</Typography>
+						</ErrorMessage>
+					) : null}
+				</Error>
+			) : (
+				<FocusLine />
+			)}
+		</TextAreaContainer>
+	)
 }
 
 export const TextAreaField = withField<TextAreaProps>(TextArea)

@@ -9,21 +9,21 @@ import { ToastAction, ToastActionType, ToastsMap } from './context'
  * @param action The required action
  */
 export const toastReducer = (state: ToastsMap, action: ToastAction) => {
-  switch (action.type) {
-    case ToastActionType.TOAST_CREATE: {
-      const toastMap = new Map(state)
-      toastMap.set(action.id, action.data)
-      return toastMap
-    }
-    case ToastActionType.TOAST_REMOVE: {
-      const toastMap = new Map(state)
-      toastMap.delete(action.id)
-      return toastMap
-    }
-    case ToastActionType.TOAST_REMOVE_ALL: {
-      return new Map()
-    }
-    default:
-      return state
-  }
+	switch (action.type) {
+		case ToastActionType.TOAST_CREATE: {
+			const toastMap = new Map(state)
+			toastMap.set(action.id, action.data)
+			return toastMap
+		}
+		case ToastActionType.TOAST_REMOVE: {
+			const toastMap = new Map(state)
+			toastMap.delete(action.id)
+			return toastMap
+		}
+		case ToastActionType.TOAST_REMOVE_ALL: {
+			return new Map()
+		}
+		default:
+			return state
+	}
 }

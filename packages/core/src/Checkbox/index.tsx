@@ -1,11 +1,11 @@
 import {
-  useCallback,
-  useMemo,
-  InputHTMLAttributes,
-  ChangeEventHandler,
-  FC,
-  FocusEventHandler,
-  PointerEventHandler,
+	useCallback,
+	useMemo,
+	InputHTMLAttributes,
+	ChangeEventHandler,
+	FC,
+	FocusEventHandler,
+	PointerEventHandler,
 } from 'react'
 
 import styled, { css } from 'styled-components'
@@ -26,11 +26,11 @@ const BoxHalo = styled.div`
 `
 
 const Container = styled.div<{
-  readonly disabled: boolean
-  readonly checked: boolean
-  readonly partial: boolean
-  readonly hasLabel: boolean
-  readonly visibleFocus: boolean
+	readonly disabled: boolean
+	readonly checked: boolean
+	readonly partial: boolean
+	readonly hasLabel: boolean
+	readonly visibleFocus: boolean
 }>`
   position: relative;
   cursor: pointer;
@@ -41,45 +41,45 @@ const Container = styled.div<{
   height: 24px;
 
   ${({ disabled }) =>
-    disabled
-      ? css`
+		disabled
+			? css`
           opacity: ${opacity[48]};
           pointer-events: none;
         `
-      : undefined}
+			: undefined}
 
   &:hover ${BoxHalo} {
     background-color: ${({ checked, partial, theme }) =>
-      checked || partial
-        ? theme.color.elementPrimary(opacity[16])
-        : theme.color.element11(opacity[16])};
+			checked || partial
+				? theme.color.elementPrimary(opacity[16])
+				: theme.color.element11(opacity[16])};
     transform: scale(1.77);
   }
 
   &:focus-within {
     outline: none;
     ${({ visibleFocus, checked, partial, theme }) =>
-      visibleFocus
-        ? css`
+			visibleFocus
+				? css`
             ${BoxHalo} {
               background-color: ${
-                checked || partial
-                  ? theme.color.elementPrimary(opacity[16])
-                  : theme.color.element11(opacity[16])
-              };
+								checked || partial
+									? theme.color.elementPrimary(opacity[16])
+									: theme.color.element11(opacity[16])
+							};
               transform: scale(1.77);
             }
             ${CSSBlankCheckbox}, ${CSSCheckboxChecked}, ${CSSCheckboxIndeterminate} {
               border: 2px solid ${theme.color.textPrimary()};
             }
           `
-        : undefined}
+				: undefined}
   }
 
   &:active {
     ${({ checked, partial, theme }) =>
-      checked || partial
-        ? css`
+			checked || partial
+				? css`
             ${BoxHalo} {
               background-color: ${theme.color.elementPrimary(opacity[24])};
               transform: scale(1.88);
@@ -88,7 +88,7 @@ const Container = styled.div<{
               background-color: ${theme.color.textPrimary()};
             }
           `
-        : css`
+				: css`
             ${BoxHalo} {
               background-color: ${theme.color.element11(opacity[24])};
               transform: scale(1.88);
@@ -100,8 +100,8 @@ const Container = styled.div<{
   }
 
   ${({ hasLabel }) =>
-    hasLabel
-      ? css`
+		hasLabel
+			? css`
           width: auto;
           justify-content: flex-start;
           padding-left: 3px;
@@ -109,7 +109,7 @@ const Container = styled.div<{
             margin-left: 28px;
           }
         `
-      : undefined}
+			: undefined}
 `
 
 const BoxNative = styled.input`
@@ -171,143 +171,143 @@ export type CheckboxChangeHandler = ChangeEventHandler<BaseElement>
 export type CheckboxValueChangeHandler = (value: boolean) => void
 
 export interface CheckboxProps extends BaseProps {
-  /**
-   * Specifies the name of an input element.
-   */
-  readonly name?: BaseProps['name']
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: string
-  /**
-   * If `true`, the component is checked.
-   */
-  readonly checked: boolean
-  /**
-   * Native change handler that can be used by formik etc.
-   */
-  readonly onChange?: CheckboxChangeHandler
+	/**
+	 * Specifies the name of an input element.
+	 */
+	readonly name?: BaseProps['name']
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: string
+	/**
+	 * If `true`, the component is checked.
+	 */
+	readonly checked: boolean
+	/**
+	 * Native change handler that can be used by formik etc.
+	 */
+	readonly onChange?: CheckboxChangeHandler
 
-  /**
-   * A label for the checkbox
-   */
-  readonly label?: string
-  /**
-   * If `true`, the component is partially checked.
-   */
-  readonly partial?: boolean
+	/**
+	 * A label for the checkbox
+	 */
+	readonly label?: string
+	/**
+	 * If `true`, the component is partially checked.
+	 */
+	readonly partial?: boolean
 
-  /**
-   * Set as true when checkbox checked as checked.
-   */
-  readonly onCheckedValueChange?: CheckboxValueChangeHandler
-  /**
-   * Set as true when checkbox checked as partial.
-   */
-  readonly onPartialValueChange?: CheckboxValueChangeHandler
+	/**
+	 * Set as true when checkbox checked as checked.
+	 */
+	readonly onCheckedValueChange?: CheckboxValueChangeHandler
+	/**
+	 * Set as true when checkbox checked as partial.
+	 */
+	readonly onPartialValueChange?: CheckboxValueChangeHandler
 }
 
 export const Checkbox: FC<CheckboxProps> = ({
-  checked,
-  label,
-  disabled = false,
-  onChange,
-  onCheckedValueChange,
-  onPartialValueChange,
-  onFocus,
-  onPointerUp,
-  onPointerDown,
-  partial = false,
-  className,
-  ...props
+	checked,
+	label,
+	disabled = false,
+	onChange,
+	onCheckedValueChange,
+	onPartialValueChange,
+	onFocus,
+	onPointerUp,
+	onPointerDown,
+	partial = false,
+	className,
+	...props
 }) => {
-  const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
-    useVisibleFocus()
+	const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+		useVisibleFocus()
 
-  const handleChange = useCallback<ChangeEventHandler<BaseElement>>(
-    e => {
-      onChange?.(e)
-      if (partial) {
-        if (
-          onPartialValueChange !== undefined &&
-          onCheckedValueChange !== undefined
-        ) {
-          onPartialValueChange(false)
-          onCheckedValueChange(false)
-        }
-      } else if (onCheckedValueChange !== undefined) {
-        onCheckedValueChange(e.target.checked)
-      }
-    },
-    [partial, onChange, onCheckedValueChange, onPartialValueChange]
-  )
+	const handleChange = useCallback<ChangeEventHandler<BaseElement>>(
+		e => {
+			onChange?.(e)
+			if (partial) {
+				if (
+					onPartialValueChange !== undefined &&
+					onCheckedValueChange !== undefined
+				) {
+					onPartialValueChange(false)
+					onCheckedValueChange(false)
+				}
+			} else if (onCheckedValueChange !== undefined) {
+				onCheckedValueChange(e.target.checked)
+			}
+		},
+		[partial, onChange, onCheckedValueChange, onPartialValueChange]
+	)
 
-  const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
-    e => {
-      onFocus?.(e)
-      determineVisibleFocus()
-    },
-    [determineVisibleFocus, onFocus]
-  )
+	const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
+		e => {
+			onFocus?.(e)
+			determineVisibleFocus()
+		},
+		[determineVisibleFocus, onFocus]
+	)
 
-  const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
-    e => {
-      onPointerUp?.(e)
-      isPointerOff()
-    },
-    [isPointerOff, onPointerUp]
-  )
+	const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
+		e => {
+			onPointerUp?.(e)
+			isPointerOff()
+		},
+		[isPointerOff, onPointerUp]
+	)
 
-  const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
-    e => {
-      onPointerDown?.(e)
-      isPointerOn()
-    },
-    [isPointerOn, onPointerDown]
-  )
+	const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
+		e => {
+			onPointerDown?.(e)
+			isPointerOn()
+		},
+		[isPointerOn, onPointerDown]
+	)
 
-  const CheckBoxIcon = useMemo(() => {
-    return partial ? (
-      <CSSCheckboxIndeterminate />
-    ) : checked ? (
-      <CSSCheckboxChecked />
-    ) : (
-      <CSSBlankCheckbox />
-    )
-  }, [partial, checked])
+	const CheckBoxIcon = useMemo(() => {
+		return partial ? (
+			<CSSCheckboxIndeterminate />
+		) : checked ? (
+			<CSSCheckboxChecked />
+		) : (
+			<CSSBlankCheckbox />
+		)
+	}, [partial, checked])
 
-  const CheckboxLabel = useMemo(() => {
-    return label !== undefined ? (
-      <Typography variant="navigation-label">{label}</Typography>
-    ) : null
-  }, [label])
+	const CheckboxLabel = useMemo(() => {
+		return label !== undefined ? (
+			<Typography variant="navigation-label">{label}</Typography>
+		) : null
+	}, [label])
 
-  const hasLabel = label !== undefined
+	const hasLabel = label !== undefined
 
-  return (
-    <Container
-      className={className}
-      disabled={disabled}
-      checked={checked}
-      partial={partial}
-      hasLabel={hasLabel}
-      visibleFocus={visibleFocus}
-    >
-      <BoxHalo />
-      {CheckBoxIcon}
-      {CheckboxLabel}
-      <BoxNative
-        type="checkbox"
-        checked={checked}
-        disabled={disabled}
-        {...props}
-        onChange={handleChange}
-        onPointerDown={handlePointerDown}
-        onPointerUp={handlePointerUp}
-        onFocus={handleFocus}
-      />
-    </Container>
-  )
+	return (
+		<Container
+			className={className}
+			disabled={disabled}
+			checked={checked}
+			partial={partial}
+			hasLabel={hasLabel}
+			visibleFocus={visibleFocus}
+		>
+			<BoxHalo />
+			{CheckBoxIcon}
+			{CheckboxLabel}
+			<BoxNative
+				type="checkbox"
+				checked={checked}
+				disabled={disabled}
+				{...props}
+				onChange={handleChange}
+				onPointerDown={handlePointerDown}
+				onPointerUp={handlePointerUp}
+				onFocus={handleFocus}
+			/>
+		</Container>
+	)
 }
 
 export const CheckboxField = withField<CheckboxProps>(Checkbox)

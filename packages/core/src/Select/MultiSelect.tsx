@@ -17,28 +17,28 @@ const StyledChip = styled(Chip)`
 `
 
 export interface MultiSelectProps<V extends string = string>
-  extends Omit<
-    BaseSelectProps<V>,
-    'value' | 'component' | 'options' | 'onChange' | 'selectMarker'
-  > {
-  /**
-   * Selects items in the dropdown menu.
-   * Must pre-exist in the dropdown menu and written in lowercase.
-   * Otherwise no value is selected.
-   */
-  readonly value: ReadonlyArray<V>
-  /**
-   * Used to create an array of selectable options.
-   */
-  readonly options: ReadonlyArray<Option<V>>
-  /**
-   * Executes a JavaScript when a user changes the selected option of an element.
-   */
-  readonly onChange?: (value: ReadonlyArray<V>) => void
-  /**
-   * Placeholder text when no value has been selected.
-   */
-  readonly placeholder?: string
+	extends Omit<
+		BaseSelectProps<V>,
+		'value' | 'component' | 'options' | 'onChange' | 'selectMarker'
+	> {
+	/**
+	 * Selects items in the dropdown menu.
+	 * Must pre-exist in the dropdown menu and written in lowercase.
+	 * Otherwise no value is selected.
+	 */
+	readonly value: ReadonlyArray<V>
+	/**
+	 * Used to create an array of selectable options.
+	 */
+	readonly options: ReadonlyArray<Option<V>>
+	/**
+	 * Executes a JavaScript when a user changes the selected option of an element.
+	 */
+	readonly onChange?: (value: ReadonlyArray<V>) => void
+	/**
+	 * Placeholder text when no value has been selected.
+	 */
+	readonly placeholder?: string
 }
 
 const SelectInsideContainer = styled.div`
@@ -71,96 +71,96 @@ const Divider = styled.div`
 `
 
 export function MultiSelect<V extends string = string>({
-  value,
-  options,
-  onChange,
-  placeholder = '',
-  ...props
+	value,
+	options,
+	onChange,
+	placeholder = '',
+	...props
 }: MultiSelectProps<V>): JSX.Element {
-  const onRemoveAllClick = useCallback(
-    (event: SyntheticEvent) => {
-      event.stopPropagation()
-      onChange?.([])
-    },
-    [onChange]
-  )
-  const handleRemoveAllKeyDown = useCallback(
-    (event: KeyboardEvent<HTMLSpanElement>) => {
-      if (event.key === 'Enter') {
-        event.stopPropagation()
-        onChange?.([])
-      }
-    },
-    [onChange]
-  )
+	const onRemoveAllClick = useCallback(
+		(event: SyntheticEvent) => {
+			event.stopPropagation()
+			onChange?.([])
+		},
+		[onChange]
+	)
+	const handleRemoveAllKeyDown = useCallback(
+		(event: KeyboardEvent<HTMLSpanElement>) => {
+			if (event.key === 'Enter') {
+				event.stopPropagation()
+				onChange?.([])
+			}
+		},
+		[onChange]
+	)
 
-  const onMultiChange = useCallback(
-    (nextValue: V | '') => onChange?.([...value, nextValue as V]),
+	const onMultiChange = useCallback(
+		(nextValue: V | '') => onChange?.([...value, nextValue as V]),
 
-    [value, onChange]
-  )
+		[value, onChange]
+	)
 
-  const chips = useMemo(
-    () =>
-      value.map(v => ({
-        label: options.find(option => option.value === v)?.label ?? '',
-        onRemove: () => {
-          onChange?.(value.filter(v2 => v2 !== v))
-        },
-      })),
-    [onChange, options, value]
-  )
+	const chips = useMemo(
+		() =>
+			value.map(v => ({
+				label: options.find(option => option.value === v)?.label ?? '',
+				onRemove: () => {
+					onChange?.(value.filter(v2 => v2 !== v))
+				},
+			})),
+		[onChange, options, value]
+	)
 
-  const component = useMemo(() => {
-    if (value.length === 0) {
-      return <PlaceholderContainer>{placeholder}</PlaceholderContainer>
-    }
+	const component = useMemo(() => {
+		if (value.length === 0) {
+			return <PlaceholderContainer>{placeholder}</PlaceholderContainer>
+		}
 
-    return (
-      <SelectInsideContainer>
-        <ChipContainer>
-          {value.map((v, i) => (
-            <StyledChip
-              key={v}
-              text={chips[i].label}
-              onRemove={chips[i].onRemove}
-            />
-          ))}
-        </ChipContainer>
-        <IconsContainer>
-          <ClickableIcon
-            size="small"
-            icon={CloseIcon}
-            onClick={onRemoveAllClick}
-            onKeyDown={handleRemoveAllKeyDown}
-          />
-        </IconsContainer>
-        <Divider />
-      </SelectInsideContainer>
-    )
-  }, [chips, onRemoveAllClick, handleRemoveAllKeyDown, placeholder, value])
+		return (
+			<SelectInsideContainer>
+				<ChipContainer>
+					{value.map((v, i) => (
+						<StyledChip
+							key={v}
+							text={chips[i].label}
+							onRemove={chips[i].onRemove}
+						/>
+					))}
+				</ChipContainer>
+				<IconsContainer>
+					<ClickableIcon
+						size="small"
+						icon={CloseIcon}
+						onClick={onRemoveAllClick}
+						onKeyDown={handleRemoveAllKeyDown}
+					/>
+				</IconsContainer>
+				<Divider />
+			</SelectInsideContainer>
+		)
+	}, [chips, onRemoveAllClick, handleRemoveAllKeyDown, placeholder, value])
 
-  const notSelectedOptions = useMemo(
-    () =>
-      options
-        .filter(o => !value.includes(o.value))
-        .map(({ label, ...rest }) => {
-          return { ...rest, component: label }
-        }),
-    [options, value]
-  )
+	const notSelectedOptions = useMemo(
+		() =>
+			options
+				.filter(o => !value.includes(o.value))
+				.map(({ label, ...rest }) => {
+					return { ...rest, component: label }
+				}),
+		[options, value]
+	)
 
-  return (
-    <BaseSelect<V | ''>
-      value=""
-      options={notSelectedOptions}
-      component={component}
-      {...props}
-      onChange={onMultiChange}
-    />
-  )
+	return (
+		<BaseSelect<V | ''>
+			value=""
+			options={notSelectedOptions}
+			component={component}
+			{...props}
+			onChange={onMultiChange}
+		/>
+	)
 }
 
 export const MultiSelectField = <V extends string = string>(
-  props: FieldProps & MultiSelectProps<V>
+	props: FieldProps & MultiSelectProps<V>
 ) => withField<MultiSelectProps<V>>(MultiSelect)(props)

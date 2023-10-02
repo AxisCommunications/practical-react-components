@@ -22,26 +22,26 @@ const CardDiv = styled.div`
   `};
 `
 const CardContainer = styled(CardDiv)<{
-  readonly width: CardWidthType
-  readonly square: boolean
+	readonly width: CardWidthType
+	readonly square: boolean
 }>`
   flex: none;
   display: inline-flex;
   flex-direction: column;
   align-items: stretch;
   width: ${({ width }) =>
-    width === 'full' ? '100%' : width === 'small' ? '400px' : '600px'};
+		width === 'full' ? '100%' : width === 'small' ? '400px' : '600px'};
 
   ${({ square }) =>
-    square
-      ? undefined
-      : css`
+		square
+			? undefined
+			: css`
           border-radius: ${shape.radius.large};
         `}
 `
 const PanelCardContainer = styled(CardDiv)<{
-  readonly width: CardWidthType
-  readonly square: boolean
+	readonly width: CardWidthType
+	readonly square: boolean
 }>`
   width: 100%;
   height: 100%;
@@ -50,12 +50,12 @@ const PanelCardContainer = styled(CardDiv)<{
   align-items: center;
   justify-content: space-evenly;
   min-width: ${({ width }) =>
-    width === 'full' ? '100%' : width === 'small' ? '400px' : '600px'};
+		width === 'full' ? '100%' : width === 'small' ? '400px' : '600px'};
 
   ${({ square }) =>
-    square
-      ? undefined
-      : css`
+		square
+			? undefined
+			: css`
           border-radius: ${shape.radius.large};
         `}
 `
@@ -74,43 +74,43 @@ export const CardContent = styled(CardPlainContent)`
 export type CardWidthType = 'small' | 'medium' | 'full'
 
 export interface CardProps extends BaseProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * The width of the card, one of `'small'`, `'medium'` or `'full'`.
-   *
-   * Default: `'full'`
-   */
-  readonly width?: CardWidthType
-  /**
-   * Gives border-radius if it is `false`.
-   *
-   * Default: `true`.
-   */
-  readonly square?: boolean
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * The width of the card, one of `'small'`, `'medium'` or `'full'`.
+	 *
+	 * Default: `'full'`
+	 */
+	readonly width?: CardWidthType
+	/**
+	 * Gives border-radius if it is `false`.
+	 *
+	 * Default: `true`.
+	 */
+	readonly square?: boolean
 }
 
 export const Card: FC<CardProps> = ({
-  width = 'full',
-  square = true,
-  children,
-  ...props
+	width = 'full',
+	square = true,
+	children,
+	...props
 }) => (
-  <CardContainer width={width} square={square} {...props}>
-    {children}
-  </CardContainer>
+	<CardContainer width={width} square={square} {...props}>
+		{children}
+	</CardContainer>
 )
 
 export const PanelCard: FC<CardProps> = ({
-  width = 'full',
-  square = true,
-  children,
-  ...props
+	width = 'full',
+	square = true,
+	children,
+	...props
 }) => (
-  <PanelCardContainer width={width} square={square} {...props}>
-    {children}
-  </PanelCardContainer>
+	<PanelCardContainer width={width} square={square} {...props}>
+		{children}
+	</PanelCardContainer>
 )

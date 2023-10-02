@@ -16,7 +16,7 @@ import { spacing } from '../../designparams'
 import { DIALOG_PADDING } from './padding'
 
 export const DialogFooterContent = styled.div<{
-  readonly shadowHidden: boolean
+	readonly shadowHidden: boolean
 }>`
   display: flex;
   flex-direction: row-reverse;
@@ -32,6 +32,6 @@ export const DialogFooterContent = styled.div<{
   }
 
   box-shadow: ${({ shadowHidden, theme }) =>
-    shadowHidden ? 'none' : theme.shadow.dialogHeaderFooter};
+		shadowHidden ? 'none' : theme.shadow.dialogHeaderFooter};
   transition: box-shadow 0.2s ease-in-out;
 `

@@ -26,25 +26,25 @@ const NoteTextWrapper = styled.div`
 `
 
 export interface NoteProps extends BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * Used to input text.
-   */
-  readonly text: string
-  /**
-   * The icon element.
-   */
-  readonly icon: IconType
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * Used to input text.
+	 */
+	readonly text: string
+	/**
+	 * The icon element.
+	 */
+	readonly icon: IconType
 }
 
 export const Note: FC<NoteProps> = ({ text, icon, ...props }) => (
-  <NoteWrapper {...props}>
-    <NoteIcon icon={icon} />
-    <NoteTextWrapper>
-      <Typography variant="default-text">{text}</Typography>
-    </NoteTextWrapper>
-  </NoteWrapper>
+	<NoteWrapper {...props}>
+		<NoteIcon icon={icon} />
+		<NoteTextWrapper>
+			<Typography variant="default-text">{text}</Typography>
+		</NoteTextWrapper>
+	</NoteWrapper>
 )

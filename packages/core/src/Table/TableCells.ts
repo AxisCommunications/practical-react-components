@@ -89,7 +89,7 @@ export const TableHeaderCellMenu = styled(TableHeaderCell)`
 `
 
 export const TableHeaderText = styled(Typography).attrs({
-  variant: 'column-heading',
+	variant: 'column-heading',
 })`
   text-transform: ${({ theme }) => theme.font.tableHeader.textTransform};
 `

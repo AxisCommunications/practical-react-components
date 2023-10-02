@@ -10,19 +10,19 @@ import * as practicalformik from 'practical-react-components-formik'
 import { FormikDemo } from './Formik'
 
 const CodeCard = styled(practicalcore.Card)<{
-  readonly size: 'small' | 'large'
+	readonly size: 'small' | 'large'
 }>`
   display: grid;
   ${({ theme, size }) =>
-    size === 'small'
-      ? css`
+		size === 'small'
+			? css`
           grid-template-areas: 'editor preview';
           grid-template-columns: 3fr 2fr;
           ${EditorContainer} {
             border-right: 1px solid ${theme.color.element12()};
           }
         `
-      : css`
+			: css`
           grid-template-areas: 'preview' 'editor';
           grid-template-rows: auto auto;
           ${EditorContainer} {
@@ -55,90 +55,90 @@ const Editor = styled.div`
 `
 
 interface CodeProps {
-  readonly className?: string
-  readonly type?: 'demo' | 'live' | 'code'
-  readonly size?: 'small' | 'large'
-  readonly children?: ReactNode
+	readonly className?: string
+	readonly type?: 'demo' | 'live' | 'code'
+	readonly size?: 'small' | 'large'
+	readonly children?: ReactNode
 }
 
 export const Code = ({
-  children,
-  className: cls,
-  type = 'code',
-  size = 'small',
+	children,
+	className: cls,
+	type = 'code',
+	size = 'small',
 }: CodeProps) => {
-  const language = (cls?.replace(/language-/, '') ?? '') as Language
+	const language = (cls?.replace(/language-/, '') ?? '') as Language
 
-  const transformCode = useCallback(
-    (code: string) => `/** @jsx mdx */\n${code}`,
-    []
-  )
+	const transformCode = useCallback(
+		(code: string) => `/** @jsx mdx */\n${code}`,
+		[]
+	)
 
-  const code = useMemo(() => {
-    if (typeof children !== 'string') {
-      return ''
-    }
+	const code = useMemo(() => {
+		if (typeof children !== 'string') {
+			return ''
+		}
 
-    const fixedCode = children.trim()
-    if (fixedCode.startsWith(';(')) {
-      return fixedCode.substr(1)
-    }
-    return fixedCode
-  }, [children])
+		const fixedCode = children.trim()
+		if (fixedCode.startsWith(';(')) {
+			return fixedCode.substr(1)
+		}
+		return fixedCode
+	}, [children])
 
-  if (type === 'demo' || type === 'live') {
-    return (
-      <CodeCard size={type === 'demo' ? 'large' : size}>
-        <LiveProvider
-          code={code}
-          transformCode={transformCode}
-          scope={{
-            mdx: createElement,
-            ...practicalcore,
-            ...practicalicons,
-            ...practicalformik,
-            FormikDemo,
-          }}
-        >
-          {type === 'live' ? (
-            <EditorContainer>
-              <Editor>
-                <LiveEditor theme={lightTheme} />
-              </Editor>
-              <Error />
-            </EditorContainer>
-          ) : null}
-          <Preview />
-        </LiveProvider>
-      </CodeCard>
-    )
-  }
+	if (type === 'demo' || type === 'live') {
+		return (
+			<CodeCard size={type === 'demo' ? 'large' : size}>
+				<LiveProvider
+					code={code}
+					transformCode={transformCode}
+					scope={{
+						mdx: createElement,
+						...practicalcore,
+						...practicalicons,
+						...practicalformik,
+						FormikDemo,
+					}}
+				>
+					{type === 'live' ? (
+						<EditorContainer>
+							<Editor>
+								<LiveEditor theme={lightTheme} />
+							</Editor>
+							<Error />
+						</EditorContainer>
+					) : null}
+					<Preview />
+				</LiveProvider>
+			</CodeCard>
+		)
+	}
 
-  return (
-    <Highlight
-      {...defaultProps}
-      code={code}
-      language={language}
-      theme={lightTheme}
-    >
-      {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre
-          className={className}
-          style={{
-            ...style,
-            padding: `${practicalcore.spacing.extraLarge}`,
-            fontSize: '13px',
-          }}
-        >
-          {tokens.map((line, i) => (
-            <div key={i} {...getLineProps({ line, key: i })}>
-              {line.map((token, key) => (
-                <span key={key} {...getTokenProps({ token, key })} />
-              ))}
-            </div>
-          ))}
-        </pre>
-      )}
-    </Highlight>
-  )
+	return (
+		<Highlight
+			{...defaultProps}
+			code={code}
+			language={language}
+			theme={lightTheme}
+		>
+			{({ className, style, tokens, getLineProps, getTokenProps }) => (
+				<pre
+					className={className}
+					style={{
+						...style,
+						padding: `${practicalcore.spacing.extraLarge}`,
+						fontSize: '13px',
+					}}
+				>
+					{tokens.map((line, i) => (
+						<div key={i} {...getLineProps({ line, key: i })}>
+							{line.map((token, key) => (
+								<span key={key} {...getTokenProps({ token, key })} />
+							))}
+						</div>
+					))}
+				</pre>
+			)}
+		</Highlight>
+	)
 }

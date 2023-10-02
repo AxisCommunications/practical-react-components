@@ -68,64 +68,64 @@ const SkeletonRowGrid = styled.div`
 `
 
 interface SkeletonRowProps {
-  readonly gridTemplateColumns: string
-  readonly hasCheckbox: boolean
-  /**
-   * The number of columns in the row
-   */
-  readonly columns: number
+	readonly gridTemplateColumns: string
+	readonly hasCheckbox: boolean
+	/**
+	 * The number of columns in the row
+	 */
+	readonly columns: number
 }
 
 const SkeletonRow: FC<SkeletonRowProps> = memo(
-  ({ columns, gridTemplateColumns, hasCheckbox }) => {
-    const columnArray: Array<undefined> = Array.from(new Array(columns))
+	({ columns, gridTemplateColumns, hasCheckbox }) => {
+		const columnArray: Array<undefined> = Array.from(new Array(columns))
 
-    return (
-      <SkeletonRowGrid style={{ gridTemplateColumns }}>
-        {hasCheckbox ? (
-          <TableCellCheckbox>
-            <SkeletonCheckboxContent />
-          </TableCellCheckbox>
-        ) : null}
-        {columnArray.map((__, index) => (
-          <TableCellContent key={index}>
-            <SkeletonContent />
-          </TableCellContent>
-        ))}
-      </SkeletonRowGrid>
-    )
-  }
+		return (
+			<SkeletonRowGrid style={{ gridTemplateColumns }}>
+				{hasCheckbox ? (
+					<TableCellCheckbox>
+						<SkeletonCheckboxContent />
+					</TableCellCheckbox>
+				) : null}
+				{columnArray.map((__, index) => (
+					<TableCellContent key={index}>
+						<SkeletonContent />
+					</TableCellContent>
+				))}
+			</SkeletonRowGrid>
+		)
+	}
 )
 SkeletonRow.displayName = 'SkeletonRowComponent'
 
 export interface SkeletonTableRowsProps extends BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  readonly rows: number
-  readonly columns: number
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	readonly rows: number
+	readonly columns: number
 }
 export const SkeletonTableRows: FC<SkeletonTableRowsProps> = memo(
-  ({ rows, columns, ...props }) => {
-    const rowArray: Array<undefined> = Array.from(new Array(rows))
+	({ rows, columns, ...props }) => {
+		const rowArray: Array<undefined> = Array.from(new Array(rows))
 
-    const { onSelect } = useContext(TableContext)
-    const { gridTemplateColumns } = useGridTemplateColumns()
+		const { onSelect } = useContext(TableContext)
+		const { gridTemplateColumns } = useGridTemplateColumns()
 
-    return (
-      <div style={{ gridTemplateColumns }} {...props}>
-        {rowArray.map((_, i) => (
-          <SkeletonRow
-            key={i}
-            columns={columns}
-            gridTemplateColumns={gridTemplateColumns}
-            hasCheckbox={onSelect !== undefined}
-          />
-        ))}
-      </div>
-    )
-  }
+		return (
+			<div style={{ gridTemplateColumns }} {...props}>
+				{rowArray.map((_, i) => (
+					<SkeletonRow
+						key={i}
+						columns={columns}
+						gridTemplateColumns={gridTemplateColumns}
+						hasCheckbox={onSelect !== undefined}
+					/>
+				))}
+			</div>
+		)
+	}
 )
 
 SkeletonTableRows.displayName = 'SkeletonTableRowsComponent'

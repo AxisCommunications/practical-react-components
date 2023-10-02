@@ -6,10 +6,10 @@ import styled, { createGlobalStyle } from 'styled-components'
 import { HashRouter as Router, Route, Routes } from 'react-router-dom'
 
 import {
-  GlobalScrollbarStyle,
-  spacing,
-  PracticalProvider,
-  defaultTheme,
+	GlobalScrollbarStyle,
+	spacing,
+	PracticalProvider,
+	defaultTheme,
 } from 'practical-react-components-core'
 
 import { Menu } from './Menu'
@@ -18,16 +18,16 @@ const practicalCoreTestsContext = require.context('./', true, /\.cypress\.tsx$/)
 
 const paths = practicalCoreTestsContext.keys() as ReadonlyArray<string>
 const componentDb = paths.map(path => {
-  const componentModule = practicalCoreTestsContext(path)
-  console.log(componentModule)
-  if (componentModule.meta === undefined) {
-    throw new Error(`${path} is missing exported meta object`)
-  }
+	const componentModule = practicalCoreTestsContext(path)
+	console.log(componentModule)
+	if (componentModule.meta === undefined) {
+		throw new Error(`${path} is missing exported meta object`)
+	}
 
-  return {
-    ...componentModule.meta,
-    component: componentModule.default,
-  }
+	return {
+		...componentModule.meta,
+		component: componentModule.default,
+	}
 })
 
 const GlobalStyle = createGlobalStyle`
@@ -81,28 +81,28 @@ const Main = styled.main`
 const container = document.querySelector('.root')
 
 if (container !== null) {
-  const root = createRoot(container)
+	const root = createRoot(container)
 
-  root.render(
-    <PracticalProvider theme={defaultTheme}>
-      <AppContainer>
-        <GlobalStyle />
-        <GlobalScrollbarStyle />
-        <Router>
-          <Aside>
-            <Menu components={componentDb} />
-          </Aside>
-          <Content>
-            <Main>
-              <Routes>
-                {componentDb.map(({ route, component: Component }) => (
-                  <Route key={route} path={route} element={<Component />} />
-                ))}
-              </Routes>
-            </Main>
-          </Content>
-        </Router>
-      </AppContainer>
-    </PracticalProvider>
-  )
+	root.render(
+		<PracticalProvider theme={defaultTheme}>
+			<AppContainer>
+				<GlobalStyle />
+				<GlobalScrollbarStyle />
+				<Router>
+					<Aside>
+						<Menu components={componentDb} />
+					</Aside>
+					<Content>
+						<Main>
+							<Routes>
+								{componentDb.map(({ route, component: Component }) => (
+									<Route key={route} path={route} element={<Component />} />
+								))}
+							</Routes>
+						</Main>
+					</Content>
+				</Router>
+			</AppContainer>
+		</PracticalProvider>
+	)
 }

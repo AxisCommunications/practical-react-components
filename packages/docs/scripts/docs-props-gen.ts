@@ -8,79 +8,79 @@ import chalk from 'chalk'
 import fs from 'fs'
 import path from 'path'
 import {
-  withCustomConfig,
-  PropItem,
-  ComponentDoc,
+	withCustomConfig,
+	PropItem,
+	ComponentDoc,
 } from 'react-docgen-typescript'
 import yargs from 'yargs'
 
 const generateArgs = () =>
-  yargs
-    .usage(
-      'yarn props - generates a json file with props for TypeScript components'
-    )
-    .option('source', {
-      describe: 'Path to the entry file',
-      type: 'array',
-    })
-    .option('dest', {
-      describe: 'Relative path to the output folder',
-      type: 'string',
-    })
-    .option('tsconfig', {
-      describe: 'Relative path to the `tsconfig` file',
-      type: 'string',
-    })
-    .demandOption(
-      ['source', 'dest', 'tsconfig'],
-      'Please provide `source`, `path` and `tsconfig` arguments'
-    )
-    .example('yarn props --source src/index.ts --path ../out', 'Creates props')
-    .help('help')
-    .wrap(75).argv
+	yargs
+		.usage(
+			'yarn props - generates a json file with props for TypeScript components'
+		)
+		.option('source', {
+			describe: 'Path to the entry file',
+			type: 'array',
+		})
+		.option('dest', {
+			describe: 'Relative path to the output folder',
+			type: 'string',
+		})
+		.option('tsconfig', {
+			describe: 'Relative path to the `tsconfig` file',
+			type: 'string',
+		})
+		.demandOption(
+			['source', 'dest', 'tsconfig'],
+			'Please provide `source`, `path` and `tsconfig` arguments'
+		)
+		.example('yarn props --source src/index.ts --path ../out', 'Creates props')
+		.help('help')
+		.wrap(75).argv
 
 export const createDir = (target: string) => {
-  if (!fs.existsSync(target)) {
-    fs.mkdirSync(target, { recursive: true })
-  }
+	if (!fs.existsSync(target)) {
+		fs.mkdirSync(target, { recursive: true })
+	}
 }
 
 const propFilter = (prop: PropItem) => {
-  if (prop.parent !== undefined) {
-    return !prop.parent.fileName.includes('node_modules')
-  }
+	if (prop.parent !== undefined) {
+		return !prop.parent.fileName.includes('node_modules')
+	}
 
-  return true
+	return true
 }
 
 async function main() {
-  const args = await generateArgs()
+	const args = await generateArgs()
 
-  console.log(chalk.gray('About to generate the props'))
-  const cwd = process.cwd()
-  const dest = path.resolve(cwd, args.dest)
-  const destFile = path.join(dest, 'props.json')
-  const tsconfig = path.resolve(cwd, args.tsconfig)
+	console.log(chalk.gray('About to generate the props'))
+	const cwd = process.cwd()
+	const dest = path.resolve(cwd, args.dest)
+	const destFile = path.join(dest, 'props.json')
+	const tsconfig = path.resolve(cwd, args.tsconfig)
 
-  let data: ReadonlyArray<ComponentDoc> = []
-  for (const source of args.source) {
-    const src = path.resolve(cwd, source as string)
-    const generator = withCustomConfig(tsconfig, {
-      propFilter,
-      shouldRemoveUndefinedFromOptional: true,
-    })
-    data = [...data, ...generator.parse(src)]
-  }
+	let data: ReadonlyArray<ComponentDoc> = []
+	for (const source of args.source) {
+		const src = path.resolve(cwd, source as string)
+		const generator = withCustomConfig(tsconfig, {
+			propFilter,
+			shouldRemoveUndefinedFromOptional: true,
+		})
+		data = [...data, ...generator.parse(src)]
+	}
 
-  const json = JSON.stringify(data, null, 2)
+	const json = JSON.stringify(data, null, 2)
 
-  createDir(dest)
+	createDir(dest)
 
-  fs.writeFileSync(destFile, json)
+	fs.writeFileSync(destFile, json)
 
-  console.log(
-    chalk.green(`The file, ${destFile}, with props was successfully generated `)
-  )
+	console.log(
+		chalk.green(`The file, ${destFile}, with props was successfully generated `)
+	)
 }
 
 main().catch(console.error)

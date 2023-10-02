@@ -1,13 +1,13 @@
 import {
-  useContext,
-  useCallback,
-  useMemo,
-  HTMLAttributes,
-  ReactNode,
-  MouseEventHandler,
-  FC,
-  memo,
-  Children,
+	useContext,
+	useCallback,
+	useMemo,
+	HTMLAttributes,
+	ReactNode,
+	MouseEventHandler,
+	FC,
+	memo,
+	Children,
 } from 'react'
 import styled, { css } from 'styled-components'
 
@@ -18,9 +18,9 @@ import { useGridTemplateColumns } from './Table'
 import { TableContext } from './context'
 
 import {
-  TableCellMenu,
-  TableCellContent,
-  TableCellCheckbox,
+	TableCellMenu,
+	TableCellContent,
+	TableCellCheckbox,
 } from './TableCells'
 
 type BaseElement = HTMLDivElement
@@ -36,8 +36,8 @@ type BaseProps = HTMLAttributes<BaseElement>
  */
 
 const TableRowGrid = styled.div<{
-  readonly disabled: boolean
-  readonly clickable: boolean
+	readonly disabled: boolean
+	readonly clickable: boolean
 }>`
   z-index: 0;
   display: grid;
@@ -83,135 +83,135 @@ const TableRowGrid = styled.div<{
 
   & ${TableCellContent} {
     ${({ disabled }) =>
-      disabled
-        ? css`
+			disabled
+				? css`
             opacity: ${opacity[48]}; /* TODO: to be decided */
             pointer-events: none;
           `
-        : undefined};
+				: undefined};
   }
 
   cursor: ${({ clickable, disabled }) =>
-    clickable && !disabled ? 'pointer' : 'unset'};
+		clickable && !disabled ? 'pointer' : 'unset'};
 `
 
 export interface TableRowProps extends BaseProps {
-  readonly children: ReadonlyArray<ReactNode>
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * ID for the row, used in the onSelect handler
-   */
-  readonly id: string
-  /**
-   * Indicates if the row is selected or not.
-   */
-  readonly selected?: boolean
-  /**
-   * Optional menu content to put on the right.
-   * It will be aligned to the right and overflow onto the row.
-   */
-  readonly menu?: ReactNode
-  /**
-   * Optional flag to disable entire row.
-   */
-  readonly disabled?: boolean
-  /**
-   * If the row is clickable.
-   * Note: If row is clickable, row can not be selectable.
-   */
-  readonly clickable?: boolean
-  /**
-   * Function callback on row clicked
-   */
-  readonly onClicked?: MouseEventHandler<HTMLDivElement>
+	readonly children: ReadonlyArray<ReactNode>
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * ID for the row, used in the onSelect handler
+	 */
+	readonly id: string
+	/**
+	 * Indicates if the row is selected or not.
+	 */
+	readonly selected?: boolean
+	/**
+	 * Optional menu content to put on the right.
+	 * It will be aligned to the right and overflow onto the row.
+	 */
+	readonly menu?: ReactNode
+	/**
+	 * Optional flag to disable entire row.
+	 */
+	readonly disabled?: boolean
+	/**
+	 * If the row is clickable.
+	 * Note: If row is clickable, row can not be selectable.
+	 */
+	readonly clickable?: boolean
+	/**
+	 * Function callback on row clicked
+	 */
+	readonly onClicked?: MouseEventHandler<HTMLDivElement>
 }
 
 export const TableRow: FC<TableRowProps> = memo(
-  ({
-    className,
-    id,
-    children,
-    selected = false,
-    disabled = false,
-    clickable = false,
-    onClicked,
-    menu,
-    ...props
-  }) => {
-    const { onSelect, hasMenu } = useContext(TableContext)
-    const onChange = useCallback<CheckboxChangeHandler>(
-      e => {
-        if (onSelect !== undefined) {
-          onSelect(e.target.checked, id)
-        }
-      },
-      [id, onSelect]
-    )
+	({
+		className,
+		id,
+		children,
+		selected = false,
+		disabled = false,
+		clickable = false,
+		onClicked,
+		menu,
+		...props
+	}) => {
+		const { onSelect, hasMenu } = useContext(TableContext)
+		const onChange = useCallback<CheckboxChangeHandler>(
+			e => {
+				if (onSelect !== undefined) {
+					onSelect(e.target.checked, id)
+				}
+			},
+			[id, onSelect]
+		)
 
-    const onRowClicked = useCallback<MouseEventHandler<HTMLDivElement>>(
-      e => {
-        e.stopPropagation()
-        if (onClicked !== undefined && clickable && !disabled) {
-          onClicked(e)
-        }
-      },
-      [disabled, clickable, onClicked]
-    )
+		const onRowClicked = useCallback<MouseEventHandler<HTMLDivElement>>(
+			e => {
+				e.stopPropagation()
+				if (onClicked !== undefined && clickable && !disabled) {
+					onClicked(e)
+				}
+			},
+			[disabled, clickable, onClicked]
+		)
 
-    const gridTemplateColumnsStyle = useGridTemplateColumns()
+		const gridTemplateColumnsStyle = useGridTemplateColumns()
 
-    const tableCheckboxContent = useMemo(() => {
-      return onSelect !== undefined && !clickable ? (
-        <TableCellCheckbox>
-          <Checkbox
-            checked={selected}
-            onChange={onChange}
-            disabled={disabled}
-          />
-        </TableCellCheckbox>
-      ) : null
-    }, [onSelect, clickable, selected, onChange, disabled])
+		const tableCheckboxContent = useMemo(() => {
+			return onSelect !== undefined && !clickable ? (
+				<TableCellCheckbox>
+					<Checkbox
+						checked={selected}
+						onChange={onChange}
+						disabled={disabled}
+					/>
+				</TableCellCheckbox>
+			) : null
+		}, [onSelect, clickable, selected, onChange, disabled])
 
-    const tableCellContent = useMemo(() => {
-      return Children.map(children, (cell, cellId) => {
-        return (
-          <TableCellContent data-col={cellId} key={cellId}>
-            {cell}
-          </TableCellContent>
-        )
-      })
-    }, [children])
+		const tableCellContent = useMemo(() => {
+			return Children.map(children, (cell, cellId) => {
+				return (
+					<TableCellContent data-col={cellId} key={cellId}>
+						{cell}
+					</TableCellContent>
+				)
+			})
+		}, [children])
 
-    const tableMenuContent = useMemo(() => {
-      return hasMenu ? (
-        <TableCellMenu>{menu !== undefined ? menu : null}</TableCellMenu>
-      ) : null
-    }, [hasMenu, menu])
-    const tableRowClassName = useMemo(
-      () =>
-        [selected ? 'selected' : undefined, className]
-          .filter(Boolean)
-          .join(' '),
-      [className, selected]
-    )
+		const tableMenuContent = useMemo(() => {
+			return hasMenu ? (
+				<TableCellMenu>{menu !== undefined ? menu : null}</TableCellMenu>
+			) : null
+		}, [hasMenu, menu])
+		const tableRowClassName = useMemo(
+			() =>
+				[selected ? 'selected' : undefined, className]
+					.filter(Boolean)
+					.join(' '),
+			[className, selected]
+		)
 
-    return (
-      <TableRowGrid
-        style={gridTemplateColumnsStyle}
-        disabled={disabled}
-        className={tableRowClassName}
-        clickable={clickable}
-        onClick={clickable ? onRowClicked : undefined}
-        {...props}
-      >
-        {tableCheckboxContent}
-        {tableCellContent}
-        {tableMenuContent}
-      </TableRowGrid>
-    )
-  }
+		return (
+			<TableRowGrid
+				style={gridTemplateColumnsStyle}
+				disabled={disabled}
+				className={tableRowClassName}
+				clickable={clickable}
+				onClick={clickable ? onRowClicked : undefined}
+				{...props}
+			>
+				{tableCheckboxContent}
+				{tableCellContent}
+				{tableMenuContent}
+			</TableRowGrid>
+		)
+	}
 )
 TableRow.displayName = 'TableRowComponent'

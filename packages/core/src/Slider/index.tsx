@@ -1,25 +1,25 @@
 import {
-  useState,
-  useEffect,
-  useRef,
-  useCallback,
-  useMemo,
-  HTMLAttributes,
-  FC,
-  MouseEvent,
-  KeyboardEventHandler,
-  PointerEventHandler,
-  FocusEventHandler,
+	useState,
+	useEffect,
+	useRef,
+	useCallback,
+	useMemo,
+	HTMLAttributes,
+	FC,
+	MouseEvent,
+	KeyboardEventHandler,
+	PointerEventHandler,
+	FocusEventHandler,
 } from 'react'
 import styled, { css } from 'styled-components'
 import { usePressed, useVisibleFocus } from 'react-hooks-shareable'
 
 import {
-  shape,
-  spacing,
-  componentSize,
-  iconSize,
-  opacity,
+	shape,
+	spacing,
+	componentSize,
+	iconSize,
+	opacity,
 } from '../designparams'
 import { FieldProps, Label, Unit, WithUnitLabelContainer } from '../utils'
 
@@ -58,12 +58,12 @@ const Trail = styled.div<{ readonly pressed: boolean }>`
   height: 100%;
   transform-origin: 0px 0px;
   transition: ${({ pressed }) =>
-    pressed ? 'none' : 'transform 0.2s ease-in-out'};
+		pressed ? 'none' : 'transform 0.2s ease-in-out'};
 `
 // The handle for dragging the slider
 const Knob = styled.div<{
-  readonly pressed: boolean
-  readonly fraction: number
+	readonly pressed: boolean
+	readonly fraction: number
 }>`
   width: ${iconSize.small};
   height: ${iconSize.small};
@@ -72,15 +72,15 @@ const Knob = styled.div<{
   left: 0;
   border-radius: ${shape.radius.circle};
   transition: ${({ pressed }) =>
-    pressed ? 'none' : 'transform 0.2s ease-in-out'};
+		pressed ? 'none' : 'transform 0.2s ease-in-out'};
 
   &:hover {
     ${({ fraction, theme }) =>
-      fraction === 0
-        ? css`
+			fraction === 0
+				? css`
             box-shadow: ${theme.shadow.knobOff1};
           `
-        : css`
+				: css`
             box-shadow: ${theme.shadow.knobOn2};
           `}
   }
@@ -120,17 +120,17 @@ const KnobHalo = styled.div<{ readonly fraction: number }>`
   ${/* sc-selector */ Knob}:hover & {
     visibility: unset;
     background-color: ${({ fraction, theme }) =>
-      fraction === 0
-        ? theme.color.element11(opacity[16])
-        : theme.color.elementPrimary(opacity[16])};
+			fraction === 0
+				? theme.color.element11(opacity[16])
+				: theme.color.elementPrimary(opacity[16])};
     transform: scale(2);
   }
 `
 // Contains the track and knob, allows click to position
 const Track = styled.div<{
-  readonly fraction: number
-  readonly disabled: boolean
-  readonly visibleFocus: boolean
+	readonly fraction: number
+	readonly disabled: boolean
+	readonly visibleFocus: boolean
 }>`
   position: relative;
   width: 100%;
@@ -138,8 +138,8 @@ const Track = styled.div<{
   cursor: pointer;
 
   ${({ fraction, visibleFocus, theme }) =>
-    fraction === 0
-      ? css`
+		fraction === 0
+			? css`
           ${Rail} {
             background-color: ${theme.color.element14()};
           }
@@ -157,8 +157,8 @@ const Track = styled.div<{
           &:focus {
             outline: none;
             ${
-              visibleFocus
-                ? css`
+							visibleFocus
+								? css`
                   ${Knob} {
                     box-shadow: ${theme.shadow.knobOff1};
                   }
@@ -175,8 +175,8 @@ const Track = styled.div<{
                     stroke-width: 1px;
                   }
                 `
-                : undefined
-            }
+								: undefined
+						}
           }
 
           &:active {
@@ -197,7 +197,7 @@ const Track = styled.div<{
             }
           }
         `
-      : css`
+			: css`
           ${Knob} {
             box-shadow: ${theme.shadow.knobOn1};
           }
@@ -207,8 +207,8 @@ const Track = styled.div<{
           &:focus {
             outline: none;
             ${
-              visibleFocus
-                ? css`
+							visibleFocus
+								? css`
                   ${Knob} {
                     box-shadow: ${theme.shadow.knobOn2};
                   }
@@ -225,8 +225,8 @@ const Track = styled.div<{
                     stroke-width: 2px;
                   }
                 `
-                : undefined
-            }
+								: undefined
+						}
           }
 
           &:active {
@@ -245,73 +245,73 @@ const Track = styled.div<{
         `}
 
   ${({ disabled }) =>
-    disabled
-      ? css`
+		disabled
+			? css`
           opacity: ${opacity[48]};
           pointer-events: none;
         `
-      : undefined}
+			: undefined}
 `
 
 enum SliderKeys {
-  Home = 'Home',
-  End = 'End',
-  PageUp = 'PageUp',
-  PageDown = 'PageDown',
-  ArrowRight = 'ArrowRight',
-  ArrowUp = 'ArrowUp',
-  ArrowLeft = 'ArrowLeft',
-  ArrowDown = 'ArrowDown',
+	Home = 'Home',
+	End = 'End',
+	PageUp = 'PageUp',
+	PageDown = 'PageDown',
+	ArrowRight = 'ArrowRight',
+	ArrowUp = 'ArrowUp',
+	ArrowLeft = 'ArrowLeft',
+	ArrowDown = 'ArrowDown',
 }
 interface TickConfig {
-  /**
-   * An array of Ticks to display
-   */
-  readonly ticks: ReadonlyArray<Tick>
-  /**
-   * Wether to snap to Ticks or not
-   * Default true.
-   */
-  readonly snap?: boolean
+	/**
+	 * An array of Ticks to display
+	 */
+	readonly ticks: ReadonlyArray<Tick>
+	/**
+	 * Wether to snap to Ticks or not
+	 * Default true.
+	 */
+	readonly snap?: boolean
 }
 
 export interface SliderProps extends BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * Specifies default value between min and max value.
-   */
-  readonly value: number
-  /**
-   * Specifies minimum value of the slider.
-   */
-  readonly min?: number
-  /**
-   * Specifies maximum value of the slider.
-   */
-  readonly max?: number
-  /**
-   * Executes a JavaScript when a user changes the value.
-   */
-  readonly handleChange: (value: number) => void
-  /**
-   * If `true`, the slider will be disabled.
-   */
-  readonly disabled?: boolean
-  /**
-   * Configuration for displaying ticks in the slider
-   */
-  readonly tickConfig?: TickConfig
-  /**
-   * Executes JavaScript when a user presses the knob
-   */
-  readonly onPressed?: (pressed: boolean) => void
-  /**
-   * Returns the current knob position in the X-axis
-   */
-  readonly onKnobMove?: (value: number) => void
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * Specifies default value between min and max value.
+	 */
+	readonly value: number
+	/**
+	 * Specifies minimum value of the slider.
+	 */
+	readonly min?: number
+	/**
+	 * Specifies maximum value of the slider.
+	 */
+	readonly max?: number
+	/**
+	 * Executes a JavaScript when a user changes the value.
+	 */
+	readonly handleChange: (value: number) => void
+	/**
+	 * If `true`, the slider will be disabled.
+	 */
+	readonly disabled?: boolean
+	/**
+	 * Configuration for displaying ticks in the slider
+	 */
+	readonly tickConfig?: TickConfig
+	/**
+	 * Executes JavaScript when a user presses the knob
+	 */
+	readonly onPressed?: (pressed: boolean) => void
+	/**
+	 * Returns the current knob position in the X-axis
+	 */
+	readonly onKnobMove?: (value: number) => void
 }
 
 export const Meta = styled.div`
@@ -333,320 +333,320 @@ export const Meta = styled.div`
  * TODO: according to UX, need to add `variant` property to have style `dashed`
  */
 export const Slider: FC<SliderProps> = ({
-  value,
-  min = 0,
-  max = 100,
-  handleChange,
-  disabled = false,
-  className,
-  onKeyDown,
-  onClick,
-  onPointerDown,
-  onPointerUp,
-  onFocus,
-  onPressed,
-  onKnobMove,
-  tickConfig = {
-    ticks: [],
-  },
-  ...props
+	value,
+	min = 0,
+	max = 100,
+	handleChange,
+	disabled = false,
+	className,
+	onKeyDown,
+	onClick,
+	onPointerDown,
+	onPointerUp,
+	onFocus,
+	onPressed,
+	onKnobMove,
+	tickConfig = {
+		ticks: [],
+	},
+	...props
 }) => {
-  const sliderRef = useRef<BaseElement>(null)
-  const knobRef = useRef(null)
-  const pressed = usePressed(knobRef)
-  const [sliderWidth, setSliderWidth] = useState(0)
+	const sliderRef = useRef<BaseElement>(null)
+	const knobRef = useRef(null)
+	const pressed = usePressed(knobRef)
+	const [sliderWidth, setSliderWidth] = useState(0)
 
-  // Spread default values with incoming values since they are optional
-  const { ticks, snap } = useMemo(() => {
-    return {
-      ...{ snap: tickConfig.ticks.length > 0 },
-      ...tickConfig,
-    }
-  }, [tickConfig])
+	// Spread default values with incoming values since they are optional
+	const { ticks, snap } = useMemo(() => {
+		return {
+			...{ snap: tickConfig.ticks.length > 0 },
+			...tickConfig,
+		}
+	}, [tickConfig])
 
-  const fraction = useMemo(
-    () => clamp((value - min) / (max - min)),
-    [max, min, value]
-  )
+	const fraction = useMemo(
+		() => clamp((value - min) / (max - min)),
+		[max, min, value]
+	)
 
-  const sliderPosition = useMemo(
-    () => fraction * sliderWidth,
-    [fraction, sliderWidth]
-  )
+	const sliderPosition = useMemo(
+		() => fraction * sliderWidth,
+		[fraction, sliderWidth]
+	)
 
-  // Generate the ticks with its position along the x-axis
-  const tickMarkers = useMemo(
-    () =>
-      ticks.map(v => ({
-        position: getXAbsolutePosition(min, max, v.position),
-        value: v.position,
-        label: v.label,
-        marker: v.marker ?? false,
-      })),
-    [max, min, ticks]
-  )
+	// Generate the ticks with its position along the x-axis
+	const tickMarkers = useMemo(
+		() =>
+			ticks.map(v => ({
+				position: getXAbsolutePosition(min, max, v.position),
+				value: v.position,
+				label: v.label,
+				marker: v.marker ?? false,
+			})),
+		[max, min, ticks]
+	)
 
-  /**
-   * To avoid making the calculation for snap values each time
-   * the slider is dragged we create the snap values here.
-   */
-  const snapValues = useMemo(
-    () => tickMarkers.map(v => v.position / 100),
-    [tickMarkers]
-  )
+	/**
+	 * To avoid making the calculation for snap values each time
+	 * the slider is dragged we create the snap values here.
+	 */
+	const snapValues = useMemo(
+		() => tickMarkers.map(v => v.position / 100),
+		[tickMarkers]
+	)
 
-  /** Convert from the slider track value format (0.0 - 1.0) to the format used by the value. */
-  const convertDecimalToValue = useCallback(
-    (x: number | undefined) => min + (x ?? 0) * (max - min),
-    [min, max]
-  )
+	/** Convert from the slider track value format (0.0 - 1.0) to the format used by the value. */
+	const convertDecimalToValue = useCallback(
+		(x: number | undefined) => min + (x ?? 0) * (max - min),
+		[min, max]
+	)
 
-  const shouldSnapToTick = snap && tickMarkers.length > 0
+	const shouldSnapToTick = snap && tickMarkers.length > 0
 
-  // Computes the new value and passed it to the handleChange callback
-  const handleClick = useCallback(
-    (e: PointerEvent | MouseEvent<BaseElement>) => {
-      e.preventDefault()
-      onClick?.(e as MouseEvent<BaseElement>)
+	// Computes the new value and passed it to the handleChange callback
+	const handleClick = useCallback(
+		(e: PointerEvent | MouseEvent<BaseElement>) => {
+			e.preventDefault()
+			onClick?.(e as MouseEvent<BaseElement>)
 
-      if (sliderRef.current !== null) {
-        const { left, width } = sliderRef.current.getBoundingClientRect()
-        let x = clamp((e.pageX - left) / width)
+			if (sliderRef.current !== null) {
+				const { left, width } = sliderRef.current.getBoundingClientRect()
+				let x = clamp((e.pageX - left) / width)
 
-        // Find x position if snap is enabled
-        if (e.type !== 'pointermove' && shouldSnapToTick) {
-          const snapTo = snapValues.reduce((a, b) =>
-            Math.abs(b - x) < Math.abs(a - x) ? b : a
-          )
+				// Find x position if snap is enabled
+				if (e.type !== 'pointermove' && shouldSnapToTick) {
+					const snapTo = snapValues.reduce((a, b) =>
+						Math.abs(b - x) < Math.abs(a - x) ? b : a
+					)
 
-          x = snapTo
-        }
+					x = snapTo
+				}
 
-        handleChange(convertDecimalToValue(x))
-      }
-    },
-    [handleChange, max, min, onClick, snap, snapValues, tickMarkers.length]
-  )
+				handleChange(convertDecimalToValue(x))
+			}
+		},
+		[handleChange, max, min, onClick, snap, snapValues, tickMarkers.length]
+	)
 
-  // Fetch slider dimensions once when the component is mounted and
-  // again on each resize
-  useEffect(() => {
-    const updateDims = () => {
-      if (sliderRef.current !== null) {
-        const { width } = sliderRef.current.getBoundingClientRect()
-        setSliderWidth(width)
-      }
-    }
+	// Fetch slider dimensions once when the component is mounted and
+	// again on each resize
+	useEffect(() => {
+		const updateDims = () => {
+			if (sliderRef.current !== null) {
+				const { width } = sliderRef.current.getBoundingClientRect()
+				setSliderWidth(width)
+			}
+		}
 
-    if (sliderRef.current !== null) {
-      updateDims()
-      const observer = new window.ResizeObserver(updateDims)
-      observer.observe(sliderRef.current)
-    }
-  }, [])
+		if (sliderRef.current !== null) {
+			updateDims()
+			const observer = new window.ResizeObserver(updateDims)
+			observer.observe(sliderRef.current)
+		}
+	}, [])
 
-  // Track pointer position as soon as knob is pressed
-  useEffect(() => {
-    if (pressed) {
-      document.addEventListener('pointermove', handleClick)
-      document.addEventListener('pointerup', handleClick)
+	// Track pointer position as soon as knob is pressed
+	useEffect(() => {
+		if (pressed) {
+			document.addEventListener('pointermove', handleClick)
+			document.addEventListener('pointerup', handleClick)
 
-      return () => {
-        document.removeEventListener('pointermove', handleClick)
-        document.removeEventListener('pointerup', handleClick)
-      }
-    }
-  }, [handleClick, pressed])
+			return () => {
+				document.removeEventListener('pointermove', handleClick)
+				document.removeEventListener('pointerup', handleClick)
+			}
+		}
+	}, [handleClick, pressed])
 
-  // Trigger callback when the knob is moved along the X-axis
-  useEffect(() => {
-    onKnobMove?.(sliderPosition)
-  }, [sliderPosition])
+	// Trigger callback when the knob is moved along the X-axis
+	useEffect(() => {
+		onKnobMove?.(sliderPosition)
+	}, [sliderPosition])
 
-  // Trigger callback when knob is pressed
-  useEffect(() => {
-    onPressed?.(pressed)
-  }, [pressed])
+	// Trigger callback when knob is pressed
+	useEffect(() => {
+		onPressed?.(pressed)
+	}, [pressed])
 
-  const getNextSnap = useCallback(
-    () => snapValues.find(snapValue => snapValue > fraction),
-    [snapValues, fraction]
-  )
-  const getPreviousSnap = useCallback(
-    () => snapValues.reverse().find(snapValue => snapValue < fraction),
-    [snapValues, fraction]
-  )
+	const getNextSnap = useCallback(
+		() => snapValues.find(snapValue => snapValue > fraction),
+		[snapValues, fraction]
+	)
+	const getPreviousSnap = useCallback(
+		() => snapValues.reverse().find(snapValue => snapValue < fraction),
+		[snapValues, fraction]
+	)
 
-  // Keyboard support
-  const handleKeyDown = useCallback<KeyboardEventHandler<BaseElement>>(
-    event => {
-      onKeyDown?.(event)
+	// Keyboard support
+	const handleKeyDown = useCallback<KeyboardEventHandler<BaseElement>>(
+		event => {
+			onKeyDown?.(event)
 
-      if (!(event.key in SliderKeys)) {
-        return
-      }
-      event.preventDefault()
+			if (!(event.key in SliderKeys)) {
+				return
+			}
+			event.preventDefault()
 
-      if (sliderRef.current !== null) {
-        const { width } = sliderRef.current.getBoundingClientRect()
-        setSliderWidth(width)
-      }
+			if (sliderRef.current !== null) {
+				const { width } = sliderRef.current.getBoundingClientRect()
+				setSliderWidth(width)
+			}
 
-      const onePercent = Math.abs((max - min) / 100)
-      let newValue
+			const onePercent = Math.abs((max - min) / 100)
+			let newValue
 
-      switch (event.key) {
-        case SliderKeys.ArrowRight:
-        case SliderKeys.ArrowUp: {
-          newValue = shouldSnapToTick
-            ? convertDecimalToValue(getNextSnap())
-            : value + onePercent
-          break
-        }
+			switch (event.key) {
+				case SliderKeys.ArrowRight:
+				case SliderKeys.ArrowUp: {
+					newValue = shouldSnapToTick
+						? convertDecimalToValue(getNextSnap())
+						: value + onePercent
+					break
+				}
 
-        case SliderKeys.ArrowLeft:
-        case SliderKeys.ArrowDown: {
-          newValue = shouldSnapToTick
-            ? convertDecimalToValue(getPreviousSnap())
-            : value - onePercent
-          break
-        }
+				case SliderKeys.ArrowLeft:
+				case SliderKeys.ArrowDown: {
+					newValue = shouldSnapToTick
+						? convertDecimalToValue(getPreviousSnap())
+						: value - onePercent
+					break
+				}
 
-        case SliderKeys.PageUp: {
-          newValue = shouldSnapToTick
-            ? convertDecimalToValue(getNextSnap())
-            : value + onePercent * 10
-          break
-        }
+				case SliderKeys.PageUp: {
+					newValue = shouldSnapToTick
+						? convertDecimalToValue(getNextSnap())
+						: value + onePercent * 10
+					break
+				}
 
-        case SliderKeys.PageDown: {
-          newValue = shouldSnapToTick
-            ? convertDecimalToValue(getPreviousSnap())
-            : value - onePercent * 10
-          break
-        }
+				case SliderKeys.PageDown: {
+					newValue = shouldSnapToTick
+						? convertDecimalToValue(getPreviousSnap())
+						: value - onePercent * 10
+					break
+				}
 
-        case SliderKeys.Home: {
-          newValue = min
-          break
-        }
+				case SliderKeys.Home: {
+					newValue = min
+					break
+				}
 
-        case SliderKeys.End: {
-          newValue = max
-          break
-        }
+				case SliderKeys.End: {
+					newValue = max
+					break
+				}
 
-        default:
-      }
+				default:
+			}
 
-      // keep new value inside min and max
-      if (newValue !== undefined) {
-        if (newValue > max) {
-          newValue = max
-        } else if (newValue < min) {
-          newValue = min
-        }
-        handleChange(newValue)
-      }
-    },
-    [max, min, value, handleChange, onKeyDown]
-  )
+			// keep new value inside min and max
+			if (newValue !== undefined) {
+				if (newValue > max) {
+					newValue = max
+				} else if (newValue < min) {
+					newValue = min
+				}
+				handleChange(newValue)
+			}
+		},
+		[max, min, value, handleChange, onKeyDown]
+	)
 
-  const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
-    useVisibleFocus()
+	const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+		useVisibleFocus()
 
-  const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
-    e => {
-      onPointerDown?.(e)
-      isPointerOn()
-    },
-    [isPointerOn, onPointerDown]
-  )
-  const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
-    e => {
-      onPointerUp?.(e)
-      isPointerOff()
-    },
-    [isPointerOff, onPointerUp]
-  )
-  const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
-    e => {
-      onFocus?.(e)
-      determineVisibleFocus()
-    },
-    [determineVisibleFocus, onFocus]
-  )
+	const handlePointerDown = useCallback<PointerEventHandler<BaseElement>>(
+		e => {
+			onPointerDown?.(e)
+			isPointerOn()
+		},
+		[isPointerOn, onPointerDown]
+	)
+	const handlePointerUp = useCallback<PointerEventHandler<BaseElement>>(
+		e => {
+			onPointerUp?.(e)
+			isPointerOff()
+		},
+		[isPointerOff, onPointerUp]
+	)
+	const handleFocus = useCallback<FocusEventHandler<BaseElement>>(
+		e => {
+			onFocus?.(e)
+			determineVisibleFocus()
+		},
+		[determineVisibleFocus, onFocus]
+	)
 
-  const tickLabels = useMemo(() => {
-    return tickMarkers.map((tick, index) => {
-      return {
-        key: index,
-        label: tick.label,
-        position: tick.position,
-        value: tick.value,
-        handleChange,
-      }
-    })
-  }, [handleChange, tickMarkers])
+	const tickLabels = useMemo(() => {
+		return tickMarkers.map((tick, index) => {
+			return {
+				key: index,
+				label: tick.label,
+				position: tick.position,
+				value: tick.value,
+				handleChange,
+			}
+		})
+	}, [handleChange, tickMarkers])
 
-  const hasTickLabels = useMemo(
-    () => tickLabels.length > 0,
-    [tickLabels.length]
-  )
+	const hasTickLabels = useMemo(
+		() => tickLabels.length > 0,
+		[tickLabels.length]
+	)
 
-  return (
-    <Container className={className}>
-      <Track
-        onClick={handleClick}
-        tabIndex={0}
-        onKeyDown={handleKeyDown}
-        fraction={fraction}
-        disabled={disabled}
-        onPointerDown={handlePointerDown}
-        onPointerUp={handlePointerUp}
-        onFocus={handleFocus}
-        visibleFocus={visibleFocus}
-        {...props}
-      >
-        <Rail ref={sliderRef}>
-          <Trail
-            pressed={pressed}
-            style={{ transform: `scaleX(${fraction})` }}
-          />
-          {tickMarkers.map((tick, index) => (
-            <TickMarker
-              key={index}
-              position={tick.position}
-              marker={tick.marker}
-            />
-          ))}
-          <Knob
-            fraction={fraction}
-            pressed={pressed}
-            style={{
-              transform: `translateX(-50%) translateX(${sliderPosition}px)`,
-            }}
-            ref={knobRef}
-          >
-            <KnobHalo fraction={fraction} />
-            <KnobCore>
-              <circle cx={8} cy={8} r={8} />
-            </KnobCore>
-            <KnobOutline>
-              <circle cx={8} cy={8} r={fraction === 0 ? 7.5 : 7} />
-            </KnobOutline>
-          </Knob>
-        </Rail>
-      </Track>
-      {hasTickLabels ? (
-        <TickLabelContainer>
-          {tickLabels.map(({ key, ...tickLabel }) => (
-            <TickLabel key={key} disabled={disabled} {...tickLabel} />
-          ))}
-        </TickLabelContainer>
-      ) : null}
-    </Container>
-  )
+	return (
+		<Container className={className}>
+			<Track
+				onClick={handleClick}
+				tabIndex={0}
+				onKeyDown={handleKeyDown}
+				fraction={fraction}
+				disabled={disabled}
+				onPointerDown={handlePointerDown}
+				onPointerUp={handlePointerUp}
+				onFocus={handleFocus}
+				visibleFocus={visibleFocus}
+				{...props}
+			>
+				<Rail ref={sliderRef}>
+					<Trail
+						pressed={pressed}
+						style={{ transform: `scaleX(${fraction})` }}
+					/>
+					{tickMarkers.map((tick, index) => (
+						<TickMarker
+							key={index}
+							position={tick.position}
+							marker={tick.marker}
+						/>
+					))}
+					<Knob
+						fraction={fraction}
+						pressed={pressed}
+						style={{
+							transform: `translateX(-50%) translateX(${sliderPosition}px)`,
+						}}
+						ref={knobRef}
+					>
+						<KnobHalo fraction={fraction} />
+						<KnobCore>
+							<circle cx={8} cy={8} r={8} />
+						</KnobCore>
+						<KnobOutline>
+							<circle cx={8} cy={8} r={fraction === 0 ? 7.5 : 7} />
+						</KnobOutline>
+					</Knob>
+				</Rail>
+			</Track>
+			{hasTickLabels ? (
+				<TickLabelContainer>
+					{tickLabels.map(({ key, ...tickLabel }) => (
+						<TickLabel key={key} disabled={disabled} {...tickLabel} />
+					))}
+				</TickLabelContainer>
+			) : null}
+		</Container>
+	)
 }
 
 const SliderLabel = styled(Label)`
@@ -656,25 +656,25 @@ const SliderLabel = styled(Label)`
 // Slider component has more air around its controls and will
 // use smaller space between label and slider.
 export const SliderField: FC<Omit<FieldProps, 'compact'> & SliderProps> = ({
-  label,
-  unitLabel,
-  ...props
+	label,
+	unitLabel,
+	...props
 }) => (
-  <div>
-    {label !== undefined ? (
-      <SliderLabel compact={false} disabled={props.disabled ?? false}>
-        <Typography variant="navigation-label">{label}</Typography>
-      </SliderLabel>
-    ) : null}
-    {unitLabel !== undefined ? (
-      <WithUnitLabelContainer>
-        <Slider {...props} />
-        <Unit variant="explanatory-text" disabled={props.disabled ?? false}>
-          {unitLabel}
-        </Unit>
-      </WithUnitLabelContainer>
-    ) : (
-      <Slider {...props} />
-    )}
-  </div>
+	<div>
+		{label !== undefined ? (
+			<SliderLabel compact={false} disabled={props.disabled ?? false}>
+				<Typography variant="navigation-label">{label}</Typography>
+			</SliderLabel>
+		) : null}
+		{unitLabel !== undefined ? (
+			<WithUnitLabelContainer>
+				<Slider {...props} />
+				<Unit variant="explanatory-text" disabled={props.disabled ?? false}>
+					{unitLabel}
+				</Unit>
+			</WithUnitLabelContainer>
+		) : (
+			<Slider {...props} />
+		)}
+	</div>
 )

@@ -9,8 +9,8 @@ type BaseElement = HTMLDivElement
 type BaseProps = HTMLAttributes<BaseElement>
 
 const ChipArea = styled.div<{
-  readonly error: boolean
-  readonly disabled: boolean
+	readonly error: boolean
+	readonly disabled: boolean
 }>`
   position: relative;
 
@@ -21,7 +21,7 @@ const ChipArea = styled.div<{
   width: min-content;
   /** space for a character and dots */
   min-width: ${({ error }) =>
-    error ? componentSize.extraLarge : componentSize.small};
+		error ? componentSize.extraLarge : componentSize.small};
   max-width: 100%;
 
   padding: 0 ${spacing.medium};
@@ -34,23 +34,23 @@ const ChipArea = styled.div<{
   border-radius: ${shape.radius.small};
   color: ${({ theme }) => theme.color.text01()};
   background-color: ${({ error, theme }) =>
-    error ? theme.color.backgroundError() : theme.color.background01()};
+		error ? theme.color.backgroundError() : theme.color.background01()};
 
   ${({ disabled }) =>
-    disabled
-      ? css`
+		disabled
+			? css`
           opacity: ${opacity[48]};
         `
-      : undefined};
+			: undefined};
 
   ${({ error, theme }) =>
-    error
-      ? css`
+		error
+			? css`
           color: ${theme.color.textError()};
           padding-left: 0;
           border: 1px solid ${theme.color.elementError()};
         `
-      : undefined};
+			: undefined};
 `
 
 const ChipErrorIcon = styled(Icon).attrs({ icon: ErrorWithoutCircleIcon })`
@@ -60,29 +60,29 @@ const ChipErrorIcon = styled(Icon).attrs({ icon: ErrorWithoutCircleIcon })`
 `
 
 export interface BaseChipProps extends BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * If `true`, adds an error notification to the chip.
-   */
-  readonly error?: boolean
-  /**
-   * If `true`, the chip will be disabled.
-   */
-  readonly disabled?: boolean
-  /**
-   * Component to render inside the chip.
-   */
-  readonly component: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * If `true`, adds an error notification to the chip.
+	 */
+	readonly error?: boolean
+	/**
+	 * If `true`, the chip will be disabled.
+	 */
+	readonly disabled?: boolean
+	/**
+	 * Component to render inside the chip.
+	 */
+	readonly component: ReactNode
 }
 
 export const BaseChip = forwardRef<HTMLDivElement, BaseChipProps>(
-  ({ error = false, disabled = false, component, ...props }, ref) => (
-    <ChipArea ref={ref} error={error} disabled={disabled} {...props}>
-      {error ? <ChipErrorIcon /> : null}
-      {component}
-    </ChipArea>
-  )
+	({ error = false, disabled = false, component, ...props }, ref) => (
+		<ChipArea ref={ref} error={error} disabled={disabled} {...props}>
+			{error ? <ChipErrorIcon /> : null}
+			{component}
+		</ChipArea>
+	)
 )

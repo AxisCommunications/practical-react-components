@@ -1,12 +1,12 @@
 import { useEffect, useState, FC } from 'react'
 import styled from 'styled-components'
 import {
-  Button,
-  Dialog,
-  ModalProps,
-  SpaceBlock,
-  spacing,
-  Typography,
+	Button,
+	Dialog,
+	ModalProps,
+	SpaceBlock,
+	spacing,
+	Typography,
 } from 'practical-react-components-core'
 
 const LicensesText = styled(Typography).attrs({ as: 'pre' })`
@@ -18,30 +18,30 @@ const LicensesText = styled(Typography).attrs({ as: 'pre' })`
 `
 
 export const Licenses: FC<ModalProps> = ({ onClose, ...props }) => {
-  const [license, setLicense] = useState('')
+	const [license, setLicense] = useState('')
 
-  useEffect(() => {
-    const fix = async () => {
-      const response = await fetch('licenses.txt')
-      const data = await response.text()
-      setLicense(data)
-    }
-    void fix()
-  }, [])
+	useEffect(() => {
+		const fix = async () => {
+			const response = await fetch('licenses.txt')
+			const data = await response.text()
+			setLicense(data)
+		}
+		void fix()
+	}, [])
 
-  return (
-    <Dialog
-      {...props}
-      onClose={onClose}
-      focusDialog={false}
-      width="large-settings-panel"
-      controls={<Button label="Close" onClick={onClose} />}
-    >
-      <Typography variant="dialog-heading">
-        Licenses &amp; third party licenses
-      </Typography>
-      <SpaceBlock variant={32} />
-      <LicensesText>{license}</LicensesText>
-    </Dialog>
-  )
+	return (
+		<Dialog
+			{...props}
+			onClose={onClose}
+			focusDialog={false}
+			width="large-settings-panel"
+			controls={<Button label="Close" onClick={onClose} />}
+		>
+			<Typography variant="dialog-heading">
+				Licenses &amp; third party licenses
+			</Typography>
+			<SpaceBlock variant={32} />
+			<LicensesText>{license}</LicensesText>
+		</Dialog>
+	)
 }

@@ -32,7 +32,7 @@ const rotate = keyframes`
 type SpinnerType = 'primary' | 'dashed'
 
 interface CircleProps {
-  readonly type: SpinnerType
+	readonly type: SpinnerType
 }
 
 const Circle = styled.div<CircleProps>`
@@ -50,13 +50,13 @@ const Circle = styled.div<CircleProps>`
   }
 
   ${({ type }) =>
-    type === 'primary'
-      ? css`
+		type === 'primary'
+			? css`
           border-style: solid;
           border-left: 2px solid ${({ theme }) => theme.color.elementPrimary()};
           animation-duration: 2s;
         `
-      : css`
+			: css`
           border-style: dashed;
           animation-duration: 10s;
         `}
@@ -68,34 +68,34 @@ const Label = styled.div`
 `
 
 export interface SpinnerProps extends BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * Used to choose spinner type.
-   */
-  readonly type?: SpinnerType
-  /**
-   * Changes the label attatched to the spinner.
-   */
-  readonly label?: string
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * Used to choose spinner type.
+	 */
+	readonly type?: SpinnerType
+	/**
+	 * Changes the label attatched to the spinner.
+	 */
+	readonly label?: string
 }
 
 export const Spinner: FC<SpinnerProps> = ({
-  type = 'primary',
-  label,
-  ...props
+	type = 'primary',
+	label,
+	...props
 }) => {
-  const ref = useSynchronizedAnimation<HTMLDivElement>()
-  return (
-    <Container {...props}>
-      <Circle type={type} ref={ref} />
-      {label !== undefined && label.length > 0 ? (
-        <Label>
-          <Typography variant="navigation-label">{label}</Typography>
-        </Label>
-      ) : null}
-    </Container>
-  )
+	const ref = useSynchronizedAnimation<HTMLDivElement>()
+	return (
+		<Container {...props}>
+			<Circle type={type} ref={ref} />
+			{label !== undefined && label.length > 0 ? (
+				<Label>
+					<Typography variant="navigation-label">{label}</Typography>
+				</Label>
+			) : null}
+		</Container>
+	)
 }

@@ -8,24 +8,24 @@ import { Typography } from '../Typography'
 import { Tooltip, ExpandedTooltipTypography } from '../Tooltip'
 
 interface ListItemMarkerBaseProps {
-  readonly selected: boolean
-  readonly expanded: boolean
+	readonly selected: boolean
+	readonly expanded: boolean
 }
 
 interface ListItemContainerBaseProps extends ListItemMarkerBaseProps {
-  readonly childSelected: boolean
-  readonly isNestedItem: boolean
-  readonly hasChildren: boolean
+	readonly childSelected: boolean
+	readonly isNestedItem: boolean
+	readonly hasChildren: boolean
 }
 
 interface ListItemContainerProps extends ListItemContainerBaseProps {
-  readonly onClick?: VoidFunction
-  readonly icon: IconType
-  readonly label: string
+	readonly onClick?: VoidFunction
+	readonly icon: IconType
+	readonly label: string
 }
 
 interface ListItemMarkerProps extends ListItemMarkerBaseProps {
-  readonly childSelected: ListItemContainerProps['childSelected']
+	readonly childSelected: ListItemContainerProps['childSelected']
 }
 
 /**
@@ -33,7 +33,7 @@ interface ListItemMarkerProps extends ListItemMarkerBaseProps {
  */
 
 enum MenuKeys {
-  Enter = 'Enter',
+	Enter = 'Enter',
 }
 
 const ListItemContainerWrapper = styled.div<ListItemContainerBaseProps>`
@@ -51,8 +51,8 @@ const ListItemContainerWrapper = styled.div<ListItemContainerBaseProps>`
   width: 100%;
 
   ${({ hasChildren, expanded }) =>
-    hasChildren
-      ? css`
+		hasChildren
+			? css`
           &::after {
             border-right: 2px solid currentColor;
             border-top: 2px solid currentColor;
@@ -72,24 +72,24 @@ const ListItemContainerWrapper = styled.div<ListItemContainerBaseProps>`
             width: 8px;
           }
         `
-      : undefined}
+			: undefined}
 
   ${({ theme, selected }) =>
-    selected
-      ? css`
+		selected
+			? css`
           color: ${theme.color.text01()};
           fill: ${theme.color.text01()};
           background-color: ${theme.color.element15()};
           font-weight: ${theme.font.fontWeight.semibold};
         `
-      : undefined}
+			: undefined}
     
     ${({ selected, childSelected }) =>
-      !selected && !childSelected
-        ? css`
+			!selected && !childSelected
+				? css`
           margin-right: ${spacing.small};
         `
-        : undefined}
+				: undefined}
 `
 
 const ListItemMarker = styled.div<ListItemMarkerProps>`
@@ -97,7 +97,7 @@ const ListItemMarker = styled.div<ListItemMarkerProps>`
   position: absolute;
   flex: none;
   background-color: ${({ theme, childSelected }) =>
-    childSelected ? theme.color.text05() : theme.color.elementPrimary()};
+		childSelected ? theme.color.text05() : theme.color.elementPrimary()};
   transition: all 500ms cubic-bezier(0.57, 0.67, 0.015, 1.005);
   border-radius: ${shape.radius.medium} 0 0 ${shape.radius.medium};
   width: 4px;
@@ -106,24 +106,24 @@ const ListItemMarker = styled.div<ListItemMarkerProps>`
   top: 50%;
 
   ${({ selected, childSelected, expanded }) =>
-    css`
+		css`
       transform: ${
-        !expanded && (selected || childSelected)
-          ? 'scaleY(1) translateY(-50%)'
-          : 'scaleY(0)'
-      };
+				!expanded && (selected || childSelected)
+					? 'scaleY(1) translateY(-50%)'
+					: 'scaleY(0)'
+			};
     `}
 `
 
 const Label = styled(Typography).attrs({
-  variant: 'default-text',
+	variant: 'default-text',
 })`
   margin-right: ${spacing.huge};
   white-space: nowrap;
 `
 
 const ListItemContents = styled.div<{
-  readonly isNestedItem: ListItemContainerBaseProps['isNestedItem']
+	readonly isNestedItem: ListItemContainerBaseProps['isNestedItem']
 }>`
   align-items: center;
   display: inline-flex;
@@ -132,7 +132,7 @@ const ListItemContents = styled.div<{
   outline: none;
   border: 2px solid transparent;
   padding-left: ${({ isNestedItem }) =>
-    isNestedItem ? spacing.huge : spacing.extraLarge};
+		isNestedItem ? spacing.huge : spacing.extraLarge};
 
   &:hover {
     background-color: ${({ theme }) => theme.color.background04()};
@@ -144,40 +144,40 @@ const ListItemContents = styled.div<{
 `
 
 const ListItemContentsIcon = styled(Icon)<{
-  readonly selected: ListItemMarkerBaseProps['selected']
+	readonly selected: ListItemMarkerBaseProps['selected']
 }>`
   flex: none;
   margin-right: ${spacing.medium};
   fill: ${({ theme, selected }) =>
-    selected ? theme.color.elementPrimary() : theme.color.text05()};
+		selected ? theme.color.elementPrimary() : theme.color.text05()};
   color: ${({ theme, selected }) =>
-    selected ? theme.color.text01() : theme.color.text05()};
+		selected ? theme.color.text01() : theme.color.text05()};
   width: 16px;
   height: 16px;
 `
 
 interface OverflowTooltipProps {
-  readonly label: string
+	readonly label: string
 }
 
 /**
  * Used to show a tooltip if label is too long to be fully shown in container.
  */
 const LabelOverflowTooltip: FC<OverflowTooltipProps> = ({ label }) => {
-  const { hasOverflow, ref } = useHasOverflowWithResizeEvent()
+	const { hasOverflow, ref } = useHasOverflowWithResizeEvent()
 
-  const text = <Label ref={ref}>{label}</Label>
+	const text = <Label ref={ref}>{label}</Label>
 
-  return hasOverflow ? (
-    <Tooltip
-      variant="expanded"
-      contents={<ExpandedTooltipTypography>{label}</ExpandedTooltipTypography>}
-    >
-      <Label>{label}</Label>
-    </Tooltip>
-  ) : (
-    text
-  )
+	return hasOverflow ? (
+		<Tooltip
+			variant="expanded"
+			contents={<ExpandedTooltipTypography>{label}</ExpandedTooltipTypography>}
+		>
+			<Label>{label}</Label>
+		</Tooltip>
+	) : (
+		text
+	)
 }
 
 /**
@@ -191,52 +191,52 @@ const LabelOverflowTooltip: FC<OverflowTooltipProps> = ({ label }) => {
  */
 
 export const ListItemContainer: FC<ListItemContainerProps> = ({
-  selected,
-  isNestedItem,
-  hasChildren,
-  expanded,
-  childSelected,
-  onClick,
-  icon,
-  label,
+	selected,
+	isNestedItem,
+	hasChildren,
+	expanded,
+	childSelected,
+	onClick,
+	icon,
+	label,
 }) => {
-  const handleKeyDown = useCallback<KeyboardEventHandler<HTMLDivElement>>(
-    event => {
-      if (event.key !== MenuKeys.Enter) {
-        return
-      }
+	const handleKeyDown = useCallback<KeyboardEventHandler<HTMLDivElement>>(
+		event => {
+			if (event.key !== MenuKeys.Enter) {
+				return
+			}
 
-      event.preventDefault()
+			event.preventDefault()
 
-      if (onClick !== undefined) {
-        onClick()
-      }
-    },
-    [onClick]
-  )
+			if (onClick !== undefined) {
+				onClick()
+			}
+		},
+		[onClick]
+	)
 
-  return (
-    <ListItemContainerWrapper
-      selected={selected}
-      isNestedItem={isNestedItem}
-      hasChildren={hasChildren}
-      expanded={expanded}
-      childSelected={childSelected}
-    >
-      <ListItemMarker
-        selected={selected}
-        childSelected={childSelected}
-        expanded={expanded}
-      />
-      <ListItemContents
-        isNestedItem={isNestedItem}
-        onClick={onClick}
-        onKeyDown={handleKeyDown}
-        tabIndex={0}
-      >
-        <ListItemContentsIcon icon={icon} selected={selected} />
-        <LabelOverflowTooltip label={label} />
-      </ListItemContents>
-    </ListItemContainerWrapper>
-  )
+	return (
+		<ListItemContainerWrapper
+			selected={selected}
+			isNestedItem={isNestedItem}
+			hasChildren={hasChildren}
+			expanded={expanded}
+			childSelected={childSelected}
+		>
+			<ListItemMarker
+				selected={selected}
+				childSelected={childSelected}
+				expanded={expanded}
+			/>
+			<ListItemContents
+				isNestedItem={isNestedItem}
+				onClick={onClick}
+				onKeyDown={handleKeyDown}
+				tabIndex={0}
+			>
+				<ListItemContentsIcon icon={icon} selected={selected} />
+				<LabelOverflowTooltip label={label} />
+			</ListItemContents>
+		</ListItemContainerWrapper>
+	)
 }

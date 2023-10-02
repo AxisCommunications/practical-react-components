@@ -8,12 +8,12 @@ import { componentSize, shape, spacing, opacity } from '../designparams'
 export type SelectVariant = 'filled' | 'transparent' | 'framed'
 
 interface SelectInputProps {
-  readonly compact: boolean
-  readonly variant: SelectVariant
-  readonly hasError: boolean
-  readonly openedFocus: boolean
-  readonly visibleFocus: boolean
-  readonly disabled: boolean
+	readonly compact: boolean
+	readonly variant: SelectVariant
+	readonly hasError: boolean
+	readonly openedFocus: boolean
+	readonly visibleFocus: boolean
+	readonly disabled: boolean
 }
 
 export const SelectInsideContainer = styled.div`
@@ -28,25 +28,25 @@ const SelectInput = styled.div<SelectInputProps>`
   display: flex;
   align-items: center;
   min-height: ${({ compact }) =>
-    compact ? componentSize.small : componentSize.medium};
+		compact ? componentSize.small : componentSize.medium};
   color: ${({ theme }) => theme.color.text01()};
 
   background-color: ${({ variant, theme }) =>
-    variant === 'filled' || variant === 'framed'
-      ? theme.color.background02()
-      : 'transparent'};
+		variant === 'filled' || variant === 'framed'
+			? theme.color.background02()
+			: 'transparent'};
 
   padding: 2px;
   border: 0 solid transparent;
   border-radius: ${shape.radius.medium};
 
   ${({ variant, theme }) =>
-    variant === 'framed'
-      ? css`
+		variant === 'framed'
+			? css`
           padding: 1px;
           border: 1px solid ${theme.color.element01()};
         `
-      : undefined}
+			: undefined}
 
   font-family: ${({ theme }) => theme.font.family};
   font-size: ${({ theme }) => theme.font.size.regular};
@@ -56,9 +56,9 @@ const SelectInput = styled.div<SelectInputProps>`
 
   ${SelectInsideContainer} {
     padding: ${({ compact }) =>
-      compact
-        ? `0 ${spacing.small} 0 ${spacing.medium}`
-        : `0 ${spacing.medium}`};
+			compact
+				? `0 ${spacing.small} 0 ${spacing.medium}`
+				: `0 ${spacing.medium}`};
   }
 
   ${SelectInsideContainer} > *:last-child > svg {
@@ -71,40 +71,40 @@ const SelectInput = styled.div<SelectInputProps>`
 
   &:hover {
     background-color: ${({ variant, theme }) =>
-      variant === 'filled' || variant === 'framed'
-        ? theme.color.background01()
-        : theme.color.background02()};
+			variant === 'filled' || variant === 'framed'
+				? theme.color.background01()
+				: theme.color.background02()};
 
     ${({ variant, theme }) =>
-      variant === 'framed'
-        ? css`
+			variant === 'framed'
+				? css`
             padding: 0;
             border: 2px solid ${theme.color.element01()};
           `
-        : undefined}
+				: undefined}
   }
 
   &:focus-within {
     outline: none;
 
     ${({ openedFocus, visibleFocus, variant, theme }) =>
-      openedFocus
-        ? css`
+			openedFocus
+				? css`
             background-color: ${theme.color.background01()};
             border: none;
             padding: 2px;
           `
-        : visibleFocus
-        ? css`
+				: visibleFocus
+				? css`
             background-color: ${
-              variant === 'filled' || variant === 'framed'
-                ? theme.color.background01()
-                : 'transparent'
-            };
+							variant === 'filled' || variant === 'framed'
+								? theme.color.background01()
+								: 'transparent'
+						};
             border: 2px solid ${theme.color.textPrimary()};
             padding: 0;
           `
-        : undefined}
+				: undefined}
   }
 
   &:active {
@@ -114,16 +114,16 @@ const SelectInput = styled.div<SelectInputProps>`
   }
 
   ${({ disabled }) =>
-    disabled
-      ? css`
+		disabled
+			? css`
           opacity: ${opacity[48]};
           pointer-events: none;
         `
-      : undefined}
+			: undefined}
 
   ${({ theme, hasError }) =>
-    hasError
-      ? css`
+		hasError
+			? css`
           &,
           &:hover,
           &:focus {
@@ -131,52 +131,52 @@ const SelectInput = styled.div<SelectInputProps>`
             border-color: ${theme.color.elementError()};
           }
         `
-      : undefined};
+			: undefined};
 `
 
 export interface BaseSelectSelectorProps
-  extends HTMLAttributes<HTMLDivElement> {
-  readonly onToggleOpen: MouseEventHandler
-  readonly open: boolean
-  readonly compact?: boolean
-  readonly disabled?: boolean
-  readonly variant?: SelectVariant
-  readonly hasError?: boolean
-  readonly visibleFocus?: boolean
-  readonly children?: ReactNode
+	extends HTMLAttributes<HTMLDivElement> {
+	readonly onToggleOpen: MouseEventHandler
+	readonly open: boolean
+	readonly compact?: boolean
+	readonly disabled?: boolean
+	readonly variant?: SelectVariant
+	readonly hasError?: boolean
+	readonly visibleFocus?: boolean
+	readonly children?: ReactNode
 }
 
 export const BaseSelectSelector: FC<BaseSelectSelectorProps> = ({
-  onToggleOpen,
-  open,
-  children,
-  compact: compactFromProps,
-  disabled = false,
-  variant = 'filled',
-  hasError = false,
-  visibleFocus = false,
-  ...props
+	onToggleOpen,
+	open,
+	children,
+	compact: compactFromProps,
+	disabled = false,
+	variant = 'filled',
+	hasError = false,
+	visibleFocus = false,
+	...props
 }) => {
-  const { compact: compactFromTheme } = useTheme()
-  const compact = compactFromProps ?? compactFromTheme
+	const { compact: compactFromTheme } = useTheme()
+	const compact = compactFromProps ?? compactFromTheme
 
-  return (
-    <SelectInput
-      role="button"
-      tabIndex={0}
-      onClick={onToggleOpen}
-      compact={compact}
-      disabled={disabled}
-      variant={variant}
-      openedFocus={open}
-      visibleFocus={visibleFocus}
-      hasError={hasError}
-      {...props}
-    >
-      <SelectInsideContainer>
-        {children}
-        <Icon icon={open ? ArrowUpIcon : ArrowDownIcon} />
-      </SelectInsideContainer>
-    </SelectInput>
-  )
+	return (
+		<SelectInput
+			role="button"
+			tabIndex={0}
+			onClick={onToggleOpen}
+			compact={compact}
+			disabled={disabled}
+			variant={variant}
+			openedFocus={open}
+			visibleFocus={visibleFocus}
+			hasError={hasError}
+			{...props}
+		>
+			<SelectInsideContainer>
+				{children}
+				<Icon icon={open ? ArrowUpIcon : ArrowDownIcon} />
+			</SelectInsideContainer>
+		</SelectInput>
+	)
 }

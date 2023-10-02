@@ -2,13 +2,13 @@ import { FC, ReactNode } from 'react'
 import styled from 'styled-components'
 import { useFormik, FormikProvider } from 'formik'
 import {
-  Typography,
-  spacing,
-  SpaceBlock,
+	Typography,
+	spacing,
+	SpaceBlock,
 } from 'practical-react-components-core'
 
 const Pre = styled(Typography).attrs({
-  variant: 'default-text',
+	variant: 'default-text',
 })`
   font-family: monospace;
   line-height: 1.2;
@@ -27,33 +27,33 @@ const Block = styled.div`
 `
 
 interface FormikDemoProps {
-  readonly children?: ReactNode
-  readonly initialValues: any
+	readonly children?: ReactNode
+	readonly initialValues: any
 }
 
 export const FormikDemo: FC<FormikDemoProps> = ({
-  initialValues,
-  children,
+	initialValues,
+	children,
 }) => {
-  const formik = useFormik({
-    initialValues,
-    onSubmit: v => alert(v),
-  })
+	const formik = useFormik({
+		initialValues,
+		onSubmit: v => alert(v),
+	})
 
-  return (
-    <FormikProvider value={formik}>
-      <Container>
-        <Block>
-          <Typography variant="group-title">Component</Typography>
-          <SpaceBlock variant={8} />
-          {children}
-        </Block>
-        <Block>
-          <Typography variant="group-title">Formik state</Typography>
-          <SpaceBlock variant={8} />
-          <Pre>{JSON.stringify(formik, null, 2)}</Pre>
-        </Block>
-      </Container>
-    </FormikProvider>
-  )
+	return (
+		<FormikProvider value={formik}>
+			<Container>
+				<Block>
+					<Typography variant="group-title">Component</Typography>
+					<SpaceBlock variant={8} />
+					{children}
+				</Block>
+				<Block>
+					<Typography variant="group-title">Formik state</Typography>
+					<SpaceBlock variant={8} />
+					<Pre>{JSON.stringify(formik, null, 2)}</Pre>
+				</Block>
+			</Container>
+		</FormikProvider>
+	)
 }

@@ -1,4 +1,4 @@
 {
-  "tsserver.tsdk": ".yarn/sdks/typescript/lib",
-  "workspace.workspaceFolderCheckCwd": false
+	"tsserver.tsdk": ".yarn/sdks/typescript/lib",
+	"workspace.workspaceFolderCheckCwd": false
 }

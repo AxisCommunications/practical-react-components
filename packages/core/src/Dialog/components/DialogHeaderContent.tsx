@@ -4,7 +4,7 @@ import { spacing } from '../../designparams'
 import { DIALOG_PADDING } from './padding'
 
 export const DialogHeaderContent = styled.div<{
-  readonly shadowHidden: boolean
+	readonly shadowHidden: boolean
 }>`
   box-sizing: border-box;
   width: 100%;
@@ -14,6 +14,6 @@ export const DialogHeaderContent = styled.div<{
   cursor: default;
 
   box-shadow: ${({ shadowHidden, theme }) =>
-    shadowHidden ? 'none' : theme.shadow.dialogHeaderFooter};
+		shadowHidden ? 'none' : theme.shadow.dialogHeaderFooter};
   transition: box-shadow 0.2s ease-in-out;
 `

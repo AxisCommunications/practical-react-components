@@ -1,10 +1,10 @@
 import {
-  useCallback,
-  FC,
-  InputHTMLAttributes,
-  ChangeEventHandler,
-  FocusEventHandler,
-  PointerEventHandler,
+	useCallback,
+	FC,
+	InputHTMLAttributes,
+	ChangeEventHandler,
+	FocusEventHandler,
+	PointerEventHandler,
 } from 'react'
 import styled, { css } from 'styled-components'
 import { useVisibleFocus } from 'react-hooks-shareable'
@@ -16,15 +16,15 @@ import { Typography } from '../Typography'
 const SWITCH_THUMB_SIZE = '18px'
 
 interface DisabledProps {
-  readonly disabled: boolean
+	readonly disabled: boolean
 }
 
 interface CheckedProps {
-  readonly checked: boolean
+	readonly checked: boolean
 }
 
 interface VisibleFocusProps {
-  readonly visibleFocus: boolean
+	readonly visibleFocus: boolean
 }
 
 const ThumbContainer = styled.div`
@@ -39,7 +39,7 @@ const ThumbContainer = styled.div`
 `
 
 const SwitchLabel = styled(Typography).attrs({
-  variant: 'default-text',
+	variant: 'default-text',
 })`
   margin-right: ${spacing.medium};
 `
@@ -62,16 +62,16 @@ const Thumb = styled.span<CheckedProps>`
   height: 100%;
   border-radius: ${shape.radius.circle};
   box-shadow: ${({ checked, theme }) =>
-    checked ? theme.shadow.knobOn1 : theme.shadow.knobOff1};
+		checked ? theme.shadow.knobOn1 : theme.shadow.knobOff1};
   transition: background-color 200ms ease-in-out;
 
   background-color: ${({ checked, theme }) =>
-    checked ? theme.color.elementPrimary() : theme.color.element10()};
+		checked ? theme.color.elementPrimary() : theme.color.element10()};
 
   ${({ checked, theme }) =>
-    checked
-      ? undefined
-      : css`
+		checked
+			? undefined
+			: css`
           border: 1px solid ${theme.color.element16()};
         `};
 `
@@ -86,13 +86,13 @@ const Container = styled.div<DisabledProps & CheckedProps & VisibleFocusProps>`
   &:hover {
     ${Thumb} {
       box-shadow: ${({ checked, theme }) =>
-        checked ? theme.shadow.knobOn2 : theme.shadow.knobOff1};
+				checked ? theme.shadow.knobOn2 : theme.shadow.knobOff1};
     }
     ${ThumbHalo} {
       background-color: ${({ checked, theme }) =>
-        checked
-          ? theme.color.elementPrimary(opacity[16])
-          : theme.color.element11(opacity[16])};
+				checked
+					? theme.color.elementPrimary(opacity[16])
+					: theme.color.element11(opacity[16])};
       transform: scale(1.77);
     }
   }
@@ -101,49 +101,49 @@ const Container = styled.div<DisabledProps & CheckedProps & VisibleFocusProps>`
     outline: none;
 
     ${({ visibleFocus, checked, theme }) =>
-      visibleFocus
-        ? css`
+			visibleFocus
+				? css`
             ${Thumb} {
               border: 2px solid ${theme.color.textPrimary()};
               box-shadow: ${
-                checked ? theme.shadow.knobOn2 : theme.shadow.knobOff1
-              };
+								checked ? theme.shadow.knobOn2 : theme.shadow.knobOff1
+							};
             }
             ${ThumbHalo} {
               background-color: ${
-                checked
-                  ? theme.color.elementPrimary(opacity[16])
-                  : theme.color.element11(opacity[16])
-              };
+								checked
+									? theme.color.elementPrimary(opacity[16])
+									: theme.color.element11(opacity[16])
+							};
               transform: scale(1.77);
             }
           `
-        : undefined}
+				: undefined}
   }
 
   &:active {
     ${Thumb} {
       background-color: ${({ checked, theme }) =>
-        checked ? theme.color.textPrimary() : undefined};
+				checked ? theme.color.textPrimary() : undefined};
       box-shadow: ${({ checked, theme }) =>
-        checked ? theme.shadow.knobOn3 : theme.shadow.knobOff2};
+				checked ? theme.shadow.knobOn3 : theme.shadow.knobOff2};
     }
     ${ThumbHalo} {
       background-color: ${({ checked, theme }) =>
-        checked
-          ? theme.color.elementPrimary(opacity[24])
-          : theme.color.element11(opacity[24])};
+				checked
+					? theme.color.elementPrimary(opacity[24])
+					: theme.color.element11(opacity[24])};
       transform: scale(1.88);
     }
   }
 
   ${({ disabled }) =>
-    disabled
-      ? css`
+		disabled
+			? css`
           opacity: ${opacity[48]};
           pointer-events: none;
         `
-      : undefined};
+			: undefined};
 `
 
 const TapArea = styled.label<DisabledProps>`
@@ -198,110 +198,110 @@ export type SwitchChangeHandler = ChangeEventHandler<BaseElement>
 export type SwitchValueChangeHandler = (value: boolean) => void
 
 export interface SwitchProps extends BaseProps {
-  /**
-   * Specifies the name of an input element.
-   */
-  readonly name?: BaseProps['name']
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: string
-  /**
-   * If `true`, the component is switched ON, `false` if OFF.
-   */
-  readonly checked: boolean
-  /**
-   * Native change handler that can be used by formik etc.
-   */
-  readonly onChange?: SwitchChangeHandler
-  /**
-   * Smooth typed value change handler.
-   */
-  readonly onValueChange?: SwitchValueChangeHandler
-  /**
-   * A label for the switch
-   * Default `undefined`
-   */
-  readonly label?: string
+	/**
+	 * Specifies the name of an input element.
+	 */
+	readonly name?: BaseProps['name']
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: string
+	/**
+	 * If `true`, the component is switched ON, `false` if OFF.
+	 */
+	readonly checked: boolean
+	/**
+	 * Native change handler that can be used by formik etc.
+	 */
+	readonly onChange?: SwitchChangeHandler
+	/**
+	 * Smooth typed value change handler.
+	 */
+	readonly onValueChange?: SwitchValueChangeHandler
+	/**
+	 * A label for the switch
+	 * Default `undefined`
+	 */
+	readonly label?: string
 }
 
 export const Switch: FC<SwitchProps> = ({
-  checked,
-  disabled = false,
-  onChange,
-  onValueChange,
-  onFocus,
-  onPointerUp,
-  onPointerDown,
-  label,
-  className,
-  ...props
+	checked,
+	disabled = false,
+	onChange,
+	onValueChange,
+	onFocus,
+	onPointerUp,
+	onPointerDown,
+	label,
+	className,
+	...props
 }) => {
-  const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
-    useVisibleFocus()
+	const { isPointerOn, isPointerOff, determineVisibleFocus, visibleFocus } =
+		useVisibleFocus()
 
-  const handleChange = useCallback<SwitchChangeHandler>(
-    e => {
-      onChange?.(e)
-      onValueChange?.(e.target.checked)
-    },
-    [onChange, onValueChange]
-  )
+	const handleChange = useCallback<SwitchChangeHandler>(
+		e => {
+			onChange?.(e)
+			onValueChange?.(e.target.checked)
+		},
+		[onChange, onValueChange]
+	)
 
-  const handleFocus = useCallback<FocusEventHandler<HTMLInputElement>>(
-    e => {
-      onFocus?.(e)
-      determineVisibleFocus()
-    },
-    [determineVisibleFocus, onFocus]
-  )
+	const handleFocus = useCallback<FocusEventHandler<HTMLInputElement>>(
+		e => {
+			onFocus?.(e)
+			determineVisibleFocus()
+		},
+		[determineVisibleFocus, onFocus]
+	)
 
-  const handlePointerUp = useCallback<PointerEventHandler<HTMLInputElement>>(
-    e => {
-      onPointerUp?.(e)
-      isPointerOff()
-    },
-    [isPointerOff, onPointerUp]
-  )
+	const handlePointerUp = useCallback<PointerEventHandler<HTMLInputElement>>(
+		e => {
+			onPointerUp?.(e)
+			isPointerOff()
+		},
+		[isPointerOff, onPointerUp]
+	)
 
-  const handlePointerDown = useCallback<PointerEventHandler<HTMLInputElement>>(
-    e => {
-      onPointerDown?.(e)
-      isPointerOn()
-    },
-    [isPointerOn, onPointerDown]
-  )
+	const handlePointerDown = useCallback<PointerEventHandler<HTMLInputElement>>(
+		e => {
+			onPointerDown?.(e)
+			isPointerOn()
+		},
+		[isPointerOn, onPointerDown]
+	)
 
-  return (
-    <Container
-      className={className}
-      disabled={disabled}
-      checked={checked}
-      visibleFocus={visibleFocus}
-    >
-      {label !== undefined ? <SwitchLabel>{label}</SwitchLabel> : null}
-      <TapArea disabled={disabled}>
-        <SwitchBox>
-          <TrackBefore checked={checked} />
-          <ThumbContainer>
-            <ThumbHalo />
-            <Thumb checked={checked} />
-          </ThumbContainer>
-          <TrackAfter />
-        </SwitchBox>
-        <NativeCheckbox
-          type="checkbox"
-          checked={checked}
-          disabled={disabled}
-          {...props}
-          onChange={handleChange}
-          onPointerDown={handlePointerDown}
-          onPointerUp={handlePointerUp}
-          onFocus={handleFocus}
-        />
-      </TapArea>
-    </Container>
-  )
+	return (
+		<Container
+			className={className}
+			disabled={disabled}
+			checked={checked}
+			visibleFocus={visibleFocus}
+		>
+			{label !== undefined ? <SwitchLabel>{label}</SwitchLabel> : null}
+			<TapArea disabled={disabled}>
+				<SwitchBox>
+					<TrackBefore checked={checked} />
+					<ThumbContainer>
+						<ThumbHalo />
+						<Thumb checked={checked} />
+					</ThumbContainer>
+					<TrackAfter />
+				</SwitchBox>
+				<NativeCheckbox
+					type="checkbox"
+					checked={checked}
+					disabled={disabled}
+					{...props}
+					onChange={handleChange}
+					onPointerDown={handlePointerDown}
+					onPointerUp={handlePointerUp}
+					onFocus={handleFocus}
+				/>
+			</TapArea>
+		</Container>
+	)
 }
 
 export const SwitchField = withField<SwitchProps>(Switch)

@@ -11,18 +11,18 @@ type BaseProps = HTMLAttributes<BaseElement>
  */
 
 const getSize = (size: string): string => {
-  switch (size) {
-    case 'small':
-      return iconSize.small
-    case 'medium':
-      return iconSize.medium
-    case 'large':
-      return iconSize.large
-    case 'extraLarge':
-      return iconSize.extraLarge
-    default:
-      return iconSize.medium
-  }
+	switch (size) {
+		case 'small':
+			return iconSize.small
+		case 'medium':
+			return iconSize.medium
+		case 'large':
+			return iconSize.large
+		case 'extraLarge':
+			return iconSize.extraLarge
+		default:
+			return iconSize.medium
+	}
 }
 
 const IconContainer = styled.span<{ readonly size: string }>`
@@ -44,34 +44,34 @@ const IconContainer = styled.span<{ readonly size: string }>`
 `
 
 export type IconType =
-  | MemoExoticComponent<FC<SVGProps<SVGSVGElement>>>
-  | FC<SVGProps<SVGSVGElement>>
+	| MemoExoticComponent<FC<SVGProps<SVGSVGElement>>>
+	| FC<SVGProps<SVGSVGElement>>
 
 export type IconSize = 'small' | 'medium' | 'large' | 'extraLarge'
 
 export interface IconProps extends BaseProps {
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
-  /**
-   * The icon element.
-   */
-  readonly icon: IconType
-  /**
-   * Changes the size of the Icons.
-   */
-  readonly size?: IconSize
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
+	/**
+	 * The icon element.
+	 */
+	readonly icon: IconType
+	/**
+	 * Changes the size of the Icons.
+	 */
+	readonly size?: IconSize
 }
 
 export const Icon: FC<IconProps> = ({
-  icon: SvgIcon,
-  size = 'medium',
-  ...props
+	icon: SvgIcon,
+	size = 'medium',
+	...props
 }) => (
-  <IconContainer role="img" size={size} {...props}>
-    <SvgIcon />
-  </IconContainer>
+	<IconContainer role="img" size={size} {...props}>
+		<SvgIcon />
+	</IconContainer>
 )
 
 export const ClickableIcon = styled(Icon).attrs({ tabIndex: 0 })`

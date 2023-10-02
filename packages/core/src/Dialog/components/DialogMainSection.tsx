@@ -50,26 +50,26 @@ const ScrollContainer = styled(Section)`
 `
 
 interface ScrollSectionProps {
-  readonly children?: ReactNode
-  readonly className?: string
-  readonly maxHeight?: string
-  readonly scrollRef: Dispatch<SetStateAction<HTMLElement | null>>
+	readonly children?: ReactNode
+	readonly className?: string
+	readonly maxHeight?: string
+	readonly scrollRef: Dispatch<SetStateAction<HTMLElement | null>>
 }
 
 export const ScrollSection: FC<ScrollSectionProps> = ({
-  className,
-  maxHeight,
-  scrollRef,
-  children,
+	className,
+	maxHeight,
+	scrollRef,
+	children,
 }) => (
-  <ScrollContainer className={className} ref={scrollRef} style={{ maxHeight }}>
-    {children}
-  </ScrollContainer>
+	<ScrollContainer className={className} ref={scrollRef} style={{ maxHeight }}>
+		{children}
+	</ScrollContainer>
 )
 
 export const DialogMainSection = styled(ScrollSection)<{
-  readonly hasHeader: boolean
-  readonly scrollRef: Dispatch<SetStateAction<HTMLElement | null>>
+	readonly hasHeader: boolean
+	readonly scrollRef: Dispatch<SetStateAction<HTMLElement | null>>
 }>`
   padding-top: ${({ hasHeader }) => (hasHeader ? '0' : spacing.extraLarge)};
   padding-bottom: 48px;

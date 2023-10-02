@@ -5,15 +5,15 @@ export type EscapeHandler = (evt: KeyboardEvent) => void
 let handlerStack: ReadonlyArray<EscapeHandler> = []
 
 const escapeListener: EscapeHandler = evt => {
-  const { key, defaultPrevented } = evt
+	const { key, defaultPrevented } = evt
 
-  if (defaultPrevented) {
-    return
-  }
+	if (defaultPrevented) {
+		return
+	}
 
-  if (key === 'Escape' || key === 'Esc') {
-    handlerStack[0](evt)
-  }
+	if (key === 'Escape' || key === 'Esc') {
+		handlerStack[0](evt)
+	}
 }
 
 /**
@@ -21,21 +21,21 @@ const escapeListener: EscapeHandler = evt => {
  * @param handler - Escape handler callback. Must be constant.
  */
 export const useEscapeListenerStack = (handler: EscapeHandler) => {
-  useEffect(() => {
-    // Add new handler to top of stack
-    handlerStack = [handler, ...handlerStack]
+	useEffect(() => {
+		// Add new handler to top of stack
+		handlerStack = [handler, ...handlerStack]
 
-    if (handlerStack.length === 1) {
-      window.addEventListener('keydown', escapeListener)
-    }
+		if (handlerStack.length === 1) {
+			window.addEventListener('keydown', escapeListener)
+		}
 
-    return () => {
-      // Remove handler from anywhere in stack
-      handlerStack = handlerStack.filter(h => h !== handler)
+		return () => {
+			// Remove handler from anywhere in stack
+			handlerStack = handlerStack.filter(h => h !== handler)
 
-      if (handlerStack.length === 0) {
-        window.removeEventListener('keydown', escapeListener)
-      }
-    }
-  }, [handler])
+			if (handlerStack.length === 0) {
+				window.removeEventListener('keydown', escapeListener)
+			}
+		}
+	}, [handler])
 }

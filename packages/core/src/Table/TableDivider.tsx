@@ -28,18 +28,18 @@ const TableDividerCell = styled(TableCell)`
 `
 
 export interface TableDividerProps extends BaseProps {
-  readonly children?: ReactNode
-  /**
-   * `class` to be passed to the component.
-   */
-  readonly className?: BaseProps['className']
+	readonly children?: ReactNode
+	/**
+	 * `class` to be passed to the component.
+	 */
+	readonly className?: BaseProps['className']
 }
 
 export const TableDivider: FC<TableDividerProps> = ({ children, ...props }) => {
-  const { gridTemplateColumns } = useGridTemplateColumns()
-  return (
-    <TableDividerGrid style={{ gridTemplateColumns }} {...props}>
-      <TableDividerCell>{children}</TableDividerCell>
-    </TableDividerGrid>
-  )
+	const { gridTemplateColumns } = useGridTemplateColumns()
+	return (
+		<TableDividerGrid style={{ gridTemplateColumns }} {...props}>
+			<TableDividerCell>{children}</TableDividerCell>
+		</TableDividerGrid>
+	)
 }
