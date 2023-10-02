@@ -16,8 +16,7 @@
 			},
 			"complexity": {
 				"noUselessFragments": "off",
-				"useLiteralKeys": "off",
-				"noUselessSwitchCase": "off"
+				"useLiteralKeys": "off"
 			},
 			"a11y": {
 				"noSvgWithoutTitle": "off"

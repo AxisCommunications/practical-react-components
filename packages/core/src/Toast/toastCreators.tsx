@@ -34,7 +34,6 @@ const getIconColor = (theme: Theme, iconType?: ToastIconType) => {
 			return color.elementError()
 		case ToastIconType.ACTION:
 			return color.elementPrimary()
-		case ToastIconType.INFO:
 		default:
 			return color.text04()
 	}
