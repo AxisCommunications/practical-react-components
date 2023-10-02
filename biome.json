@@ -21,8 +21,7 @@
 			},
 			"style": {
 				"noUnusedTemplateLiteral": "off",
-				"useExponentiationOperator": "off",
-				"noParameterAssign": "off"
+				"useExponentiationOperator": "off"
 			},
 			"a11y": {
 				"noSvgWithoutTitle": "off"
