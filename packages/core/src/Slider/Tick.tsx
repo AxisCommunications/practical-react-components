@@ -16,7 +16,6 @@ const BoxHalo = styled.div.attrs<{ readonly width: number }>(({ width }) => ({
 }))<{ readonly width: number }>`
   position: absolute;
   transform: scaleX(0);
-  /* stylelint-disable-next-line value-no-vendor-prefix */
   height: -webkit-fill-available;
   border-radius: ${shape.radius.small};
   transition: transform 100ms;

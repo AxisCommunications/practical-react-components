@@ -174,9 +174,11 @@ export const RadioContainer = styled.div<{
     hovered
       ? css`
           ${SvgHalo} {
-            background-color: ${checked
-              ? theme.color.elementPrimary(opacity[16])
-              : theme.color.element11(opacity[16])};
+            background-color: ${
+              checked
+                ? theme.color.elementPrimary(opacity[16])
+                : theme.color.element11(opacity[16])
+            };
             transform: scale(1.6);
           }
         `
@@ -188,9 +190,11 @@ export const RadioContainer = styled.div<{
         ? css`
             outline: none;
             ${SvgHalo} {
-              background-color: ${checked
-                ? theme.color.elementPrimary(opacity[16])
-                : theme.color.element11(opacity[16])};
+              background-color: ${
+                checked
+                  ? theme.color.elementPrimary(opacity[16])
+                  : theme.color.element11(opacity[16])
+              };
               transform: scale(1.6);
             }
             ${SvgRing} {
@@ -373,7 +377,6 @@ export function RadioButton<V extends string = string>({
 /*
  * Radio Group
  */
-/* stylelint-disable no-descending-specificity  */
 
 const RadioButtonGroupContainer = styled.div<{
   readonly compact: boolean
@@ -387,7 +390,6 @@ const RadioButtonGroupContainer = styled.div<{
   margin: ${({ compact }) =>
     !compact ? `${spacing.medium} 0` : `${spacing.small} 0`};
 `
-/* stylelint-enable */
 
 export interface RadioButtonGroupOption<V extends string = string> {
   readonly value: V

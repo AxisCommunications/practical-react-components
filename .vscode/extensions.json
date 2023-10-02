@@ -2,7 +2,6 @@
   "recommendations": [
     "arcanis.vscode-zipfs",
     "dbaeumer.vscode-eslint",
-    "stylelint.vscode-stylelint",
     "esbenp.prettier-vscode"
   ]
 }
