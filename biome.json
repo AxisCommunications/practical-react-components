@@ -9,7 +9,6 @@
 			"recommended": true,
 			"suspicious": {
 				"noEmptyInterface": "off",
-				"noExplicitAny": "off",
 				"noArrayIndexKey": "off"
 			},
 			"a11y": {
