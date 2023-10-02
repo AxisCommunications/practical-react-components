@@ -145,20 +145,23 @@ const moveCursor = (position: number, backspace: boolean) => {
 }
 
 const convertToTwentyFour = (hour: number, ampm: TimeFormat) => {
-	if (hour === 0) {
+	let nextHour = hour
+	if (nextHour === 0) {
 		// 0 does not exist on AM/PM so it can be converted to 1 instead.
-		hour = 1
+		nextHour = 1
 	}
 	if (ampm === TimeFormat.AM) {
-		return hour === 12 ? 0 : hour
+		return nextHour === 12 ? 0 : nextHour
 	}
-	return hour === 12 ? hour : hour + 12
+	return nextHour === 12 ? nextHour : nextHour + 12
 }
 
 const SECONDS_PER_HOUR = 3600
 const SECONDS_PER_MINUTE = 60
 
-const parseSecondsToFormat = (sec: number, format: FormatVariants) => {
+const parseSecondsToFormat = (value: number, format: FormatVariants) => {
+	let sec = value
+
 	let hour
 	let minute
 	let second
@@ -306,13 +309,13 @@ export const TimeInput: FC<TimeInputProps> = ({
 				.split(':')
 				.reduce<TimeValues>((acc, v) => {
 					if (hour !== undefined && acc.hour === undefined) {
-						acc = {
+						return {
 							hour: convertToTwentyFour(parseInt(v), newTimeFormat),
 						}
 					} else if (minute !== undefined && acc.minute === undefined) {
-						acc = { ...acc, minute: parseInt(v) }
+						return { ...acc, minute: parseInt(v) }
 					} else if (second !== undefined && acc.second === undefined) {
-						acc = { ...acc, second: parseInt(v) }
+						return { ...acc, second: parseInt(v) }
 					}
 					return acc
 				}, {})
@@ -380,13 +383,13 @@ export const TimeInput: FC<TimeInputProps> = ({
 						number = MAX_INPUT_VALUE - 1
 					}
 					if (hour !== undefined && acc.hour === undefined) {
-						acc = {
+						return {
 							hour: hour12 ? convertToTwentyFour(number, timeFormat) : number,
 						}
 					} else if (minute !== undefined && acc.minute === undefined) {
-						acc = { ...acc, minute: number }
+						return { ...acc, minute: number }
 					} else if (second !== undefined && acc.second === undefined) {
-						acc = { ...acc, second: number }
+						return { ...acc, second: number }
 					}
 					return acc
 				}, {})
@@ -536,11 +539,11 @@ export const DurationInput: FC<DurationInputProps> = ({
 						number = MAX_INPUT_VALUE - 1
 					}
 					if (hour !== undefined && acc.hour === undefined) {
-						acc = { hour: number }
+						return { hour: number }
 					} else if (minute !== undefined && acc.minute === undefined) {
-						acc = { ...acc, minute: number }
+						return { ...acc, minute: number }
 					} else if (second !== undefined && acc.second === undefined) {
-						acc = { ...acc, second: number }
+						return { ...acc, second: number }
 					}
 					return acc
 				}, {})

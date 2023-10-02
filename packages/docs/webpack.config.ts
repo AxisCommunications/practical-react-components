@@ -25,8 +25,7 @@ const getNextFreePort = async (port: number): Promise<number> => {
 		tmpServer.on('error', (e: NodeJS.ErrnoException) => {
 			if (e.code === 'EADDRINUSE') {
 				tmpServer.close()
-				port = 1 + port
-				tmpServer.listen(port)
+				tmpServer.listen(1 + port)
 			}
 		})
 	})
