@@ -30,11 +30,13 @@ export interface PropItem {
 	readonly required: boolean
 	readonly type: PropItemType
 	readonly description: string
+	// biome-ignore lint/suspicious/noExplicitAny: should be fixed separately
 	readonly defaultValue: any
 }
 
 export interface PropItemType {
 	readonly name: string
+	// biome-ignore lint/suspicious/noExplicitAny: should be fixed separately
 	readonly value?: any
 	readonly raw?: string
 }

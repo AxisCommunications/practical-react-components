@@ -28,6 +28,7 @@ const Block = styled.div`
 
 interface FormikDemoProps {
 	readonly children?: ReactNode
+	// biome-ignore lint/suspicious/noExplicitAny: should be fixed separately
 	readonly initialValues: any
 }
 
