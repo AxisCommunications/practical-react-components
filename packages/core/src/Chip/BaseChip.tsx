@@ -78,7 +78,6 @@ export interface BaseChipProps extends BaseProps {
   readonly component: ReactNode
 }
 
-/* eslint-disable-next-line react/display-name */
 export const BaseChip = forwardRef<HTMLDivElement, BaseChipProps>(
   ({ error = false, disabled = false, component, ...props }, ref) => (
     <ChipArea ref={ref} error={error} disabled={disabled} {...props}>

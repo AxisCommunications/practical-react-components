@@ -11,5 +11,4 @@ const text =
 
 const Test = () => <Paper data-cy="paper">{text}</Paper>
 
-/* eslint-disable-next-line import/no-default-export */
 export default Test

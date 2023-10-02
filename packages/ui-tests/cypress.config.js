@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/unbound-method, @typescript-eslint/no-require-imports
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({

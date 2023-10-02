@@ -60,7 +60,6 @@ export interface FieldProps {
 }
 
 export function withField<T>(InputComponent: FC<T>): FC<T & FieldProps> {
-  // eslint-disable-next-line react/display-name
   return ({ label, unitLabel, ...props }) => {
     const { compact: compactFromTheme } = useTheme()
     const compact = props.compact ?? compactFromTheme

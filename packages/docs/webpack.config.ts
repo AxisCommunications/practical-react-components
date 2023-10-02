@@ -39,7 +39,6 @@ interface Args {
 }
 
 // Webpack configuration should be a default export
-/* eslint-disable-next-line import/no-default-export */
 export default async (env: Record<string, string> = {}) => {
   const args = Object.keys(env).reduce<Args>((acc, key) => {
     const value = env[key]

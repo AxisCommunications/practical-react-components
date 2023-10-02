@@ -13,14 +13,12 @@ import {
 
 type DialogOriginalType = typeof DialogOriginal
 
-/* eslint-disable functional/prefer-readonly-type */
 interface DialogSetupType {
   CenteredSection: typeof CenteredSection
   EdgeToEdgeSection: typeof EdgeToEdgeSection
   ScrollSection: typeof ScrollSection
   HeaderTitle: typeof HeaderTitle
 }
-/* eslint-enable functional/prefer-readonly-type */
 
 const DialogSetup = DialogOriginal as DialogOriginalType & DialogSetupType
 DialogSetup.CenteredSection = CenteredSection

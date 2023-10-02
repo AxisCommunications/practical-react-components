@@ -28,7 +28,6 @@ const Block = styled.div`
 
 interface FormikDemoProps {
   readonly children?: ReactNode
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   readonly initialValues: any
 }
 

@@ -68,13 +68,15 @@ export const NativeButton = styled.button<{
         }
 
         &:focus {
-          ${visibleFocus
-            ? css`
+          ${
+            visibleFocus
+              ? css`
                 background-color: ${theme.color.elementPrimary()};
                 box-shadow: ${theme.shadow.primaryButton};
                 border: 2px solid ${theme.color.elementBorderFocus()};
               `
-            : undefined};
+              : undefined
+          };
         }
 
         &:active {
@@ -98,13 +100,15 @@ export const NativeButton = styled.button<{
         }
 
         &:focus {
-          ${visibleFocus
-            ? css`
+          ${
+            visibleFocus
+              ? css`
                 color: ${theme.color.elementPrimary()};
                 background-color: ${theme.color.elementPrimary(opacity[16])};
                 border: 2px solid ${theme.color.elementBorder()};
               `
-            : undefined};
+              : undefined
+          };
         }
 
         &:active {
@@ -131,13 +135,15 @@ export const NativeButton = styled.button<{
       }
 
       &:focus {
-        ${visibleFocus
-          ? css`
+        ${
+          visibleFocus
+            ? css`
               color: ${theme.color.text04()};
               background-color: ${theme.color.element11(opacity[16])};
               border: 2px solid ${theme.color.elementBorder()};
             `
-          : undefined};
+            : undefined
+        };
       }
 
       &:active {
@@ -252,7 +258,6 @@ export interface ButtonProps extends BaseButtonProps {
   readonly icon?: IconType
 }
 
-/* eslint-disable-next-line react/display-name */
 export const Button = forwardRef<BaseElement, ButtonProps>(
   (
     {
@@ -359,8 +364,9 @@ const IconNativeButton = styled(NativeButton)<{
           }
         }
         &:focus {
-          ${visibleFocus
-            ? css`
+          ${
+            visibleFocus
+              ? css`
                 background-color: transparent;
                 border: 2px solid ${theme.color.elementBorder()};
                 ${IconButtonHalo} {
@@ -368,7 +374,8 @@ const IconNativeButton = styled(NativeButton)<{
                   transform: scale(1);
                 }
               `
-            : undefined}
+              : undefined
+          }
         }
         &:active {
           background-color: transparent;
@@ -392,8 +399,9 @@ const IconNativeButton = styled(NativeButton)<{
         }
       }
       &:focus {
-        ${visibleFocus
-          ? css`
+        ${
+          visibleFocus
+            ? css`
               background-color: transparent;
               border: 2px solid ${theme.color.elementBorder()};
               ${IconButtonHalo} {
@@ -401,7 +409,8 @@ const IconNativeButton = styled(NativeButton)<{
                 transform: scale(1);
               }
             `
-          : undefined}
+            : undefined
+        }
       }
       &:active {
         background-color: transparent;
@@ -434,7 +443,6 @@ export interface IconButtonProps extends BaseButtonProps {
   readonly icon: IconType
 }
 
-/* eslint-disable-next-line react/display-name */
 export const IconButton = forwardRef<BaseElement, IconButtonProps>(
   (
     {
@@ -524,12 +532,14 @@ export const NativeIconTextButton = styled.button<{
         }
       }
       &:focus {
-        ${visibleFocus
-          ? css`
+        ${
+          visibleFocus
+            ? css`
               color: ${theme.color.text04()};
               background-color: ${theme.color.element11(opacity[16])};
             `
-          : undefined};
+            : undefined
+        };
       }
       &:active {
         box-shadow: 0 0 0 4px ${theme.color.elementPrimary(opacity[24])};
@@ -575,7 +585,6 @@ export interface IconTextButtonProps
   readonly icon: IconType
 }
 
-// eslint-disable-next-line react/display-name
 export const IconTextButton = forwardRef<BaseElement, IconTextButtonProps>(
   (
     {

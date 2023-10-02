@@ -12,5 +12,4 @@ const text =
 
 const Test = () => <Note data-cy="note" text={text} icon={InfoIcon} />
 
-/* eslint-disable-next-line import/no-default-export */
 export default Test
