@@ -41,7 +41,7 @@ const EditorContainer = styled.div`
   overflow: hidden;
 `
 
-const Error = styled(LiveError)`
+const ErrorContainer = styled(LiveError)`
   background-color: ${({ theme }) => theme.color.elementError(0.3)};
   font-size: 12px;
   padding: ${practicalcore.spacing.large};
@@ -105,7 +105,7 @@ export const Code = ({
 							<Editor>
 								<LiveEditor theme={lightTheme} />
 							</Editor>
-							<Error />
+							<ErrorContainer />
 						</EditorContainer>
 					) : null}
 					<Preview />

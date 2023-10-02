@@ -10,8 +10,7 @@
 			"suspicious": {
 				"noEmptyInterface": "off",
 				"noExplicitAny": "off",
-				"noArrayIndexKey": "off",
-				"noShadowRestrictedNames": "off"
+				"noArrayIndexKey": "off"
 			},
 			"a11y": {
 				"noSvgWithoutTitle": "off"

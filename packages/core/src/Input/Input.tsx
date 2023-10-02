@@ -47,7 +47,7 @@ const getWidth = (width: TextInputWidth): string => {
 	}
 }
 
-const Error = styled.div<{
+const ErrorContainer = styled.div<{
 	readonly compact: boolean
 }>`
   color: ${({ theme }) => theme.color.elementError()};
@@ -447,14 +447,14 @@ function Input<T extends string | NumberInputType>({
 				</ErrorIconContainer>
 			) : null}
 			{error !== undefined ? (
-				<Error compact={compact}>
+				<ErrorContainer compact={compact}>
 					<ErrorLineContainer>
 						<ErrorLine hasErrorMessage={error !== ''} />
 					</ErrorLineContainer>
 					{errorVariant === 'text' && error !== '' ? (
 						<ErrorMessageText errorVariant={errorVariant} error={error} />
 					) : null}
-				</Error>
+				</ErrorContainer>
 			) : (
 				<FocusLine />
 			)}

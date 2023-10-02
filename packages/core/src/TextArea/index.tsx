@@ -14,7 +14,7 @@ import { Typography } from '../Typography'
 
 const TEXT_AREA_HEIGHT = '96px'
 
-const Error = styled.div`
+const ErrorContainer = styled.div`
   color: ${({ theme }) => theme.color.elementError()};
   line-height: 16px;
   background-color: transparent;
@@ -265,7 +265,7 @@ export const TextArea: FC<TextAreaProps> = ({
 				ref={textareaRef}
 			/>
 			{error !== undefined ? (
-				<Error>
+				<ErrorContainer>
 					<ErrorLineContainter>
 						<ErrorLine hasErrorMessage={error !== ''} />
 					</ErrorLineContainter>
@@ -274,7 +274,7 @@ export const TextArea: FC<TextAreaProps> = ({
 							<Typography variant="explanatory-text">{error}</Typography>
 						</ErrorMessage>
 					) : null}
-				</Error>
+				</ErrorContainer>
 			) : (
 				<FocusLine />
 			)}
