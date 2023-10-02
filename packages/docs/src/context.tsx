@@ -64,9 +64,7 @@ export const ThemeProvider: FC<ThemeNameProvider> = ({
 
 	return (
 		<Provider value={{ themeName, setThemeName }}>
-			<PracticalProvider theme={selectedTheme}>
-				<>{children}</>
-			</PracticalProvider>
+			<PracticalProvider theme={selectedTheme}>{children}</PracticalProvider>
 		</Provider>
 	)
 }
