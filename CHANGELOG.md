@@ -2,6 +2,38 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.18.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.18.0)
+2023-10-03 15:46:43 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.17.2...v1.18.0)
+
+### 🚧 Maintenance
+
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule noEmptyInterface ([`89c9afd`](https://github.com/AxisCommunications/practical-react-components/commit/89c9afd5a02bb4a4225170d080e8cb4fd82bfdc2)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule noExplicitAny ([`4505b80`](https://github.com/AxisCommunications/practical-react-components/commit/4505b80b73aa4f2156a0c12f82ab51e0e4618ca9)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule noShadowRestrictedNames ([`1fc1071`](https://github.com/AxisCommunications/practical-react-components/commit/1fc1071777bd3e38a1ea87b95db2ef5de8415ed2)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule noAssignInExpressions ([`bb8059f`](https://github.com/AxisCommunications/practical-react-components/commit/bb8059f9bf12145f5a0a20b8b73f4b716a2d04f4)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule noUselessFragments ([`0073edf`](https://github.com/AxisCommunications/practical-react-components/commit/0073edf85cc6ad74b95c91abeac867cb03746a8b)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule useLiteralKeys ([`a61d8b5`](https://github.com/AxisCommunications/practical-react-components/commit/a61d8b530108b1c89aa86e0c0043b4a83b88f341)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule noUselessSwitchCase ([`5a758f7`](https://github.com/AxisCommunications/practical-react-components/commit/5a758f7c001e2ead5a439ce9500256f7b326fe57)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule noUnusedTemplateLiteral ([`2993f28`](https://github.com/AxisCommunications/practical-react-components/commit/2993f28164534a1c345a983c5fbe748ee190619a)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule useExponentiationOperator ([`7f9b7c0`](https://github.com/AxisCommunications/practical-react-components/commit/7f9b7c0d7e158b2c8def104d3b1a0515536837bc)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule noParameterAssign ([`1e9f473`](https://github.com/AxisCommunications/practical-react-components/commit/1e9f473405cf59e03f89e67bbc4af36595ed4f23)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule useEnumInitializers ([`eacc3fd`](https://github.com/AxisCommunications/practical-react-components/commit/eacc3fdd26313d5de2dacba2da0c64710cd57d4b)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule useSelfClosingElements ([`5d8f4a8`](https://github.com/AxisCommunications/practical-react-components/commit/5d8f4a8885a9e5ed7b9f3b3fbdfb328e8eeeac5b)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule noPositiveTabindex ([`2afc405`](https://github.com/AxisCommunications/practical-react-components/commit/2afc405c2aeb9a27861f0ff4c4e5fce4a923df6e)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome lint rule noSelfAssign ([`fecd530`](https://github.com/AxisCommunications/practical-react-components/commit/fecd53069a5aa3fea05221b7c3f4e79959a8ecc2)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome format rule quoteProperties ([`d4dbd05`](https://github.com/AxisCommunications/practical-react-components/commit/d4dbd058c886e8252ad863028669ca5be3dce7b0)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove biome format rule indentStyle ([`6c0d90c`](https://github.com/AxisCommunications/practical-react-components/commit/6c0d90cff2f986aa0de40d20bd88cca1fe72a9ee)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  enable biome formatter ([`3f2b27a`](https://github.com/AxisCommunications/practical-react-components/commit/3f2b27ae52fe9bffc89f1406ab20ae3e525cd6f1)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove eslint and prettier ([`50e7854`](https://github.com/AxisCommunications/practical-react-components/commit/50e7854ef541f39aa3cf9d6284edd55402fcffd2)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  remove stylelint ([`f31f421`](https://github.com/AxisCommunications/practical-react-components/commit/f31f421b326e73661b9c7774b015f17a76370ce3)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  add biome ([`b49ff21`](https://github.com/AxisCommunications/practical-react-components/commit/b49ff2193f1655a52029836ee792c2dedd01dfb0)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!280](https://github.com/AxisCommunications/practical-react-components/pull/280) -  upgrade yarn to latest version ([`8d81f42`](https://github.com/AxisCommunications/practical-react-components/commit/8d81f42b8412a041837e6cb918671d380e181ed2)) ([**@danielkaxis**](https://github.com/danielkaxis))
+  - [!281](https://github.com/AxisCommunications/practical-react-components/pull/281) -  upgrade cypress to v12.15.0 ([`b16e671`](https://github.com/AxisCommunications/practical-react-components/commit/b16e67147ae15803d5d3f429980cef02fe27029b)) ([**@danielkaxis**](https://github.com/danielkaxis))
+
+### 🐛 Bug fixes
+
+  - [!277](https://github.com/AxisCommunications/practical-react-components/pull/277) - **tooltip**:  hide tooltip when touched outside of a component ([`7c3a669`](https://github.com/AxisCommunications/practical-react-components/commit/7c3a66974f1197c2a08c509df9ffd113b4ee66cb)) ([**@HitomiWin**](https://github.com/HitomiWin))
+
 ## [v1.17.2](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.17.2)
 2023-08-24 16:08:44 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.17.1...v1.17.2)
 
