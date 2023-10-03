@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Link', () => {
+context('Link', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/link')
   })

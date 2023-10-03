@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Button', () => {
+context('Button', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/button')
   })
@@ -48,7 +48,7 @@ context('Button', () => {
   })
 })
 
-describe('Tests of IconTextButton', () => {
+context('Tests of IconTextButton', { testIsolation: false }, () => {
   it('Enable/Disable Props', () => {
     cy.get('[data-cy=buttonTest5]')
       .should('be.enabled')

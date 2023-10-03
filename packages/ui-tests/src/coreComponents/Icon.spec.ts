@@ -12,7 +12,7 @@ const icons = [
   { name: 'extraLarge', size: parseIconSize(iconSize.extraLarge) },
 ]
 
-context('Icon', () => {
+context('Icon', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/icon')
   })

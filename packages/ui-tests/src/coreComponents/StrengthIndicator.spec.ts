@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('StrengthIndicator', () => {
+context('StrengthIndicator', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/strengthindicator')
   })

@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Divder', () => {
+context('Divder', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/divider')
   })

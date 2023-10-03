@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Tooltip', () => {
+context('Tooltip', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/tooltip')
   })
@@ -61,7 +61,7 @@ context('Tooltip', () => {
   })
 })
 
-context('Tooltip mobile device', () => {
+context('Tooltip mobile device', { testIsolation: false }, () => {
   before(() => {
     cy.viewport('ipad-2')
     cy.visit('http://localhost:9009/#/components/tooltip')

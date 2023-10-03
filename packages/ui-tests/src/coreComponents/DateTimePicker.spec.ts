@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('DateTimePicker', () => {
+context('DateTimePicker', { testIsolation: false }, () => {
   const toggleBtnGroupEL = '[class*=ToggleButtonGroup__ToggleButtonGrid]'
   const dateTimeInfoConEl =
     '[class*=DateTimeInformation__DateTimeInformationContainer]'

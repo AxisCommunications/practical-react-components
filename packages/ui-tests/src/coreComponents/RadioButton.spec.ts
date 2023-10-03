@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('RadioButton', () => {
+context('RadioButton', { testIsolation: false }, () => {
   const checkedValue = (dataCy, checked) => {
     if (checked === true) {
       cy.get(`[data-cy=${dataCy}]`).should('be.checked')

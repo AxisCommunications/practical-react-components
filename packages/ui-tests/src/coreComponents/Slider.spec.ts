@@ -10,7 +10,7 @@ const getKnobPositionPercent = $div => {
   return `${Math.round((adjustedKnobPosition / parseInt(railWidth)) * 100)}%`
 }
 
-context('Slider', () => {
+context('Slider', { testIsolation: false }, () => {
   const trail = '[class^=Slider__Trail]'
   const knob = '[class^=Slider__Knob]'
   const button = '[data-cy=sliderButton]'

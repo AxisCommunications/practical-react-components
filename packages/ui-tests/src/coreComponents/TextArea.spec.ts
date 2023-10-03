@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('TextArea', () => {
+context('TextArea', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/textarea')
   })

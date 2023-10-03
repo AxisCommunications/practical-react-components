@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-context('Dialog', () => {
+context('Dialog', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/dialog')
   })

@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Chip', () => {
+context('Chip', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/chip')
   })

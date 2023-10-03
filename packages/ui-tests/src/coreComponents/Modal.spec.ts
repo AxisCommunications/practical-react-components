@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Modal', () => {
+context('Modal', { testIsolation: false }, () => {
   const modalContainerEl = '[class^=Modal__ModalContainer]'
 
   before(() => {

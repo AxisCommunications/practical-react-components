@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Checkbox', () => {
+context('Checkbox', { testIsolation: false }, () => {
   const checkboxEl = '[class^=Checkbox__Container]'
   const checkboxNativeEl = '#cypress-checkbox'
 

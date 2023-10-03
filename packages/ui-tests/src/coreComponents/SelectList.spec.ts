@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('SelectList', () => {
+context('SelectList', { testIsolation: false }, () => {
   const selectListitem = '[class^=SelectList__SelectListItem]'
 
   const timezones = [

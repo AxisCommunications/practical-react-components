@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Toast', () => {
+context('Toast', { testIsolation: false }, () => {
   const toasts = [
     { dataCy: 'Success', label: 'Successfully set parameter' },
     { dataCy: 'Info', label: 'Note that this will do that.' },

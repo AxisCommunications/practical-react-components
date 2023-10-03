@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('ExpandableList', () => {
+context('ExpandableList', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/expandablelist')
   })

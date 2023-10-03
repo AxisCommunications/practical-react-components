@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Menu', () => {
+context('Menu', { testIsolation: false }, () => {
   const menuItemEl = '[class^=BaseMenu__BaseMenuItem]'
   const menu1 = '[data-cy=menuTest1]'
   const menu2 = '[data-cy=menuTest2]'

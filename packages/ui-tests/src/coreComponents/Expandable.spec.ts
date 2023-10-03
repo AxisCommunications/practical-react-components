@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Expandable', () => {
+context('Expandable', { testIsolation: false }, () => {
   const iconConEl = '[class^=Icon__IconContainer]'
 
   before(() => {

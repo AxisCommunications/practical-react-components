@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Stepper', () => {
+context('Stepper', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/stepper')
   })
