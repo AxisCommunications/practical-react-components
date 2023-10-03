@@ -6,7 +6,7 @@ const getWidthInPercent = $div => {
   return `${Math.round(100 * width)}%`
 }
 
-context('Progress', () => {
+context('Progress', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/Progress')
   })

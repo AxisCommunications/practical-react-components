@@ -21,7 +21,7 @@ const DEVICE_LIST = [
   { serialNumber: 'FACEFACE0012', name: 'l', ip: '192.168.0.12' },
 ]
 
-context('SimpleTable', () => {
+context('SimpleTable', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/simpletable')
   })

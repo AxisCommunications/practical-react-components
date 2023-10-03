@@ -5,7 +5,7 @@ const CONTROLLER_LIST = [
   { id: 'bla2', description: '192.168.0.100:8081' },
 ]
 
-context('List', () => {
+context('List', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/list')
   })

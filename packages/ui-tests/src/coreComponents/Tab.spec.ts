@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Tab', () => {
+context('Tab', { testIsolation: false }, () => {
   const tab1El = '[data-cy*=my-tab-1]'
   const tab2El = '[data-cy*=my-tab-2]'
 

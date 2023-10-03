@@ -7,7 +7,7 @@ const options = [
   { value: 'pie', label: 'Pie', disabled: true },
 ]
 
-context('SelectNative', () => {
+context('SelectNative', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/selectnative')
   })

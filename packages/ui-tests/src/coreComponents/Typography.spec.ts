@@ -89,7 +89,7 @@ const typographys = [
   },
 ]
 
-context('Typography', () => {
+context('Typography', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/typography')
   })

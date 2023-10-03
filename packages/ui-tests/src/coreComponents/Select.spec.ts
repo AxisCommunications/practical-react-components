@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Select', () => {
+context('Select', { testIsolation: false }, () => {
   const popOverEl = '[class^=PopOver__]'
   const popOverSelectItem = '[class^=BaseSelect__SelectItem]'
   const multiSelectChip = '[class^=MultiSelect__ChipContainer]'

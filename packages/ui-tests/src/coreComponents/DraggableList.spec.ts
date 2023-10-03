@@ -3,7 +3,7 @@
 const draggableListItemEl = '[class^=DraggableList__DraggableItem]'
 const draggableHandleEl = '[class^=DraggableList__DraggableHandle]'
 
-context('DraggableList', () => {
+context('DraggableList', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/draggablelist')
   })

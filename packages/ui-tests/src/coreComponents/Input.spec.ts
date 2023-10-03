@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Input', () => {
+context('Input', { testIsolation: false }, () => {
   const timeFormatSelectEl = '[class*=Select__LabelContainer]'
   const timeFormatSelectPopOverEl = '[class^=PopOver__]'
 

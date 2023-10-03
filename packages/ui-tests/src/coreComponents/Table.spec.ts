@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Table', () => {
+context('Table', { testIsolation: false }, () => {
   const checkboxEl = '[class^=Checkbox__Container]'
 
   before(() => {

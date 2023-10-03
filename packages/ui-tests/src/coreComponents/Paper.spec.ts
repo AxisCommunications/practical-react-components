@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Paper', () => {
+context('Paper', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/paper')
   })

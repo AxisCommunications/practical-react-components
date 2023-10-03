@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Switch', () => {
+context('Switch', { testIsolation: false }, () => {
   const switchEl = '[class*=Switch__Container]'
   const switchNativeEl = '#cypress-switch'
 

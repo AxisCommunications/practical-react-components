@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Droppable', () => {
+context('Droppable', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/droppable')
   })

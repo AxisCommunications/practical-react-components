@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-context('Spinner', () => {
+context('Spinner', { testIsolation: false }, () => {
   before(() => {
     cy.visit('http://localhost:9009/#/components/spinner')
   })
