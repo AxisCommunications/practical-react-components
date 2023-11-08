@@ -51,7 +51,7 @@
     "jest-environment-jsdom": "29.2.0",
     "jest-styled-components": "7.1.1",
     "pepjs": "0.5.3",
-    "postcss": "8.4.18",
+    "postcss": "8.4.31",
     "postcss-scss": "4.0.5",
     "postcss-styled": "0.34.0",
     "postcss-syntax": "0.36.2",

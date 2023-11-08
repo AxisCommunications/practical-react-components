@@ -8426,6 +8426,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nanoid@npm:^3.3.6":
+  version: 3.3.7
+  resolution: "nanoid@npm:3.3.7"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: d36c427e530713e4ac6567d488b489a36582ef89da1d6d4e3b87eded11eb10d7042a877958c6f104929809b2ab0bafa17652b076cdf84324aa75b30b722204f2
+  languageName: node
+  linkType: hard
+
 "natural-compare@npm:^1.4.0":
   version: 1.4.0
   resolution: "natural-compare@npm:1.4.0"
@@ -9056,7 +9065,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.18, postcss@npm:^8.4.7":
+"postcss@npm:8.4.31":
+  version: 8.4.31
+  resolution: "postcss@npm:8.4.31"
+  dependencies:
+    nanoid: ^3.3.6
+    picocolors: ^1.0.0
+    source-map-js: ^1.0.2
+  checksum: 1d8611341b073143ad90486fcdfeab49edd243377b1f51834dc4f6d028e82ce5190e4f11bb2633276864503654fb7cab28e67abdc0fbf9d1f88cad4a0ff0beea
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.4.7":
   version: 8.4.18
   resolution: "postcss@npm:8.4.18"
   dependencies:
@@ -9309,7 +9329,7 @@ __metadata:
     jest-environment-jsdom: 29.2.0
     jest-styled-components: 7.1.1
     pepjs: 0.5.3
-    postcss: 8.4.18
+    postcss: 8.4.31
     postcss-scss: 4.0.5
     postcss-styled: 0.34.0
     postcss-syntax: 0.36.2
