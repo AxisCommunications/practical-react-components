@@ -7,6 +7,7 @@ exports[`Slider Levels 1`] = `
   grid-auto-flow: row;
   padding: 8px;
   width: 100%;
+  touch-action: none;
 }
 
 .c5 {
@@ -269,6 +270,7 @@ exports[`Slider Levels 2`] = `
   grid-auto-flow: row;
   padding: 8px;
   width: 100%;
+  touch-action: none;
 }
 
 .c5 {
@@ -584,6 +586,7 @@ exports[`Slider Levels 3`] = `
   grid-auto-flow: row;
   padding: 8px;
   width: 100%;
+  touch-action: none;
 }
 
 .c5 {

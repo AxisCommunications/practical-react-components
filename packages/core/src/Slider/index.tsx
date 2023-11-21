@@ -39,6 +39,7 @@ const Container = styled.div`
   grid-auto-flow: row;
   padding: ${spacing.medium};
   width: 100%;
+  touch-action: none;
 `
 // The holder for the knob
 const Rail = styled.div`
