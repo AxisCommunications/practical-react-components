@@ -2,6 +2,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.18.1](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.18.1)
+2023-11-27 10:33:32 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.18.0...v1.18.1)
+
+### 🚧 Maintenance
+
+  -  create dependabot.yml ([`e043e88`](https://github.com/AxisCommunications/practical-react-components/commit/e043e885c6923888665118c1751de5436064a30c)) ([**@steabert**](https://github.com/steabert))
+
+### 🐛 Bug fixes
+
+  - [!295](https://github.com/AxisCommunications/practical-react-components/pull/295) - **slider**:  drag slider on small screen ([`8f9a6be`](https://github.com/AxisCommunications/practical-react-components/commit/8f9a6be9f1c45c20b2c10c04b61e3e2ac5066dde)) ([**@HitomiWin**](https://github.com/HitomiWin))
+
 ## [v1.18.0](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.18.0)
 2023-10-03 15:46:43 +0200, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.17.2...v1.18.0)
 
