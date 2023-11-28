@@ -9,6 +9,7 @@ import {
 	RefObject,
 	KeyboardEventHandler,
 	MouseEventHandler,
+	FocusEventHandler,
 } from 'react'
 import styled, { css, useTheme } from 'styled-components'
 
@@ -402,6 +403,15 @@ function Input<T extends string | NumberInputType>({
 		[onChange, onValueChange, type]
 	)
 
+	// Prevent the mouse wheel from increasing/deacreasing the number
+	const handleFocus = useCallback<FocusEventHandler<HTMLInputElement>>(e => {
+		if (type === 'number') {
+			e.target.addEventListener('wheel', ev => ev.preventDefault(), {
+				passive: false,
+			})
+		}
+	}, [])
+
 	return (
 		<InputContainer
 			disabled={disabled}
@@ -427,6 +437,7 @@ function Input<T extends string | NumberInputType>({
 				}
 				onChange={handleChange}
 				onKeyUp={handleKeyUp}
+				onFocus={handleFocus}
 			/>
 			{(type === 'current-password' || type === 'new-password') &&
 			props.value !== '' ? (
