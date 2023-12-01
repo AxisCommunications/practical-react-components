@@ -2,6 +2,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.18.2](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.18.2)
+2023-12-01 13:21:19 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.18.1...v1.18.2)
+
+### 🐛 Bug fixes
+
+  - [!300](https://github.com/AxisCommunications/practical-react-components/pull/300) - **input**:  prevent mouse wheel from changing field value ([`8d3b408`](https://github.com/AxisCommunications/practical-react-components/commit/8d3b408621ed8a64ff365cfb544de30972c2aaa3)) ([**@tripleWdotcom**](https://github.com/tripleWdotcom))
+
 ## [v1.18.1](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.18.1)
 2023-11-27 10:33:32 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.18.0...v1.18.1)
 

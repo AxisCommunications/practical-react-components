@@ -1,7 +1,7 @@
 {
   "name": "practical-react-components-ui-tests",
   "private": true,
-  "version": "1.18.1",
+  "version": "1.18.2",
   "license": "MIT",
   "scripts": {
     "build": "NODE_ENV=docs yarn webpack --bail",
