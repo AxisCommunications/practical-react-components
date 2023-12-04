@@ -27,7 +27,7 @@
     "@babel/preset-react": "7.18.6",
     "@babel/preset-typescript": "7.18.6",
     "@cypress/webpack-dev-server": "2.4.0",
-    "@cypress/webpack-preprocessor": "5.14.0",
+    "@cypress/webpack-preprocessor": "6.0.0",
     "@types/node": "18.11.0",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
