@@ -2032,10 +2032,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/router@npm:1.0.2":
-  version: 1.0.2
-  resolution: "@remix-run/router@npm:1.0.2"
-  checksum: bf410f9cbb31308fc306bc8c5e3a732b9ad81ddb84281e37804bdd196b6db7ddd86abc29e15c5b21883e01b37f250d0b8db7bee5f5a9af6c7c532b68280676c9
+"@remix-run/router@npm:1.14.0":
+  version: 1.14.0
+  resolution: "@remix-run/router@npm:1.14.0"
+  checksum: 573138c1f5d93130bf950fa1abf209280abf831a065eecb70965d55239ffda3a53a75a0e15c79cea408734efefcac03041fc07a29e98adaca9aa309a1d1c9656
   languageName: node
   linkType: hard
 
@@ -2502,6 +2502,16 @@ __metadata:
     "@types/react": "*"
     hoist-non-react-statics: ^3.3.0
   checksum: 2c0778570d9a01d05afabc781b32163f28409bb98f7245c38d5eaf082416fdb73034003f5825eb5e21313044e8d2d9e1f3fe2831e345d3d1b1d20bcd12270719
+  languageName: node
+  linkType: hard
+
+"@types/hoist-non-react-statics@npm:^3.3.1":
+  version: 3.3.5
+  resolution: "@types/hoist-non-react-statics@npm:3.3.5"
+  dependencies:
+    "@types/react": "*"
+    hoist-non-react-statics: ^3.3.0
+  checksum: b645b062a20cce6ab1245ada8274051d8e2e0b2ee5c6bd58215281d0ec6dae2f26631af4e2e7c8abe238cdcee73fcaededc429eef569e70908f82d0cc0ea31d7
   languageName: node
   linkType: hard
 
@@ -4385,7 +4395,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:3.25.5, core-js@npm:^3.14.0":
+"core-js@npm:3.34.0":
+  version: 3.34.0
+  resolution: "core-js@npm:3.34.0"
+  checksum: 26b0d103716b33fc660ee8737da7bc9475fbc655f93bbf1360ab692966449d18f2fc393805095937283db9f919ca2aa5c88d86d16f2846217983ad7da707e31e
+  languageName: node
+  linkType: hard
+
+"core-js@npm:^3.14.0":
   version: 3.25.5
   resolution: "core-js@npm:3.25.5"
   checksum: 208b308c49bc022f90d4349d4c99802a73c9d55053976b3c529f10014c1e37845926defad8c519f2c7f71ea0acf18d2b323ab6aaee34dc85b4c4b3ced0623f3f
@@ -5547,26 +5564,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"focus-trap-react@npm:10.0.0":
-  version: 10.0.0
-  resolution: "focus-trap-react@npm:10.0.0"
+"focus-trap-react@npm:10.2.3":
+  version: 10.2.3
+  resolution: "focus-trap-react@npm:10.2.3"
   dependencies:
-    focus-trap: ^7.0.0
-    tabbable: ^6.0.0
+    focus-trap: ^7.5.4
+    tabbable: ^6.2.0
   peerDependencies:
     prop-types: ^15.8.1
     react: ">=16.3.0"
     react-dom: ">=16.3.0"
-  checksum: 44e98f61fbeb49b94f4d89bcc3c6833b31a07cdd742b74999c4dead54d3b7b06b6f094da76151575e7a052215eb305898b7bee5e3e759238302d45d78f85da1c
+  checksum: 5efbde5af1cdd5873b1a58f04832099b10f4acdaab6d144f03b7414c77f71e54b68907e790349043d8faa89375c85186b6565b3b35d8e1c98efff8fece301c70
   languageName: node
   linkType: hard
 
-"focus-trap@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "focus-trap@npm:7.0.0"
+"focus-trap@npm:^7.5.4":
+  version: 7.5.4
+  resolution: "focus-trap@npm:7.5.4"
   dependencies:
-    tabbable: ^6.0.0
-  checksum: 36812c880a5262478d5d8a678cae0a0576b3c801a7c00010d44154d5526aeaeaab5cd05aaf3199ceee97ff9be8defe47809f3712c8211bc829bde6c0614d7bb9
+    tabbable: ^6.2.0
+  checksum: 9589ae0c8ad2f0bb0610c23e949571ef956424f1e7f7e1981c0d95ce518ea97b8bdd3d43b68c6113cbbcf35c9d36d521ffc2841610f7d5cc1746e2aa84faf578
   languageName: node
   linkType: hard
 
@@ -5609,20 +5626,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"formik@npm:2.2.9":
-  version: 2.2.9
-  resolution: "formik@npm:2.2.9"
+"formik@npm:2.4.5":
+  version: 2.4.5
+  resolution: "formik@npm:2.4.5"
   dependencies:
+    "@types/hoist-non-react-statics": ^3.3.1
     deepmerge: ^2.1.1
     hoist-non-react-statics: ^3.3.0
     lodash: ^4.17.21
     lodash-es: ^4.17.21
     react-fast-compare: ^2.0.1
     tiny-warning: ^1.0.2
-    tslib: ^1.10.0
+    tslib: ^2.0.0
   peerDependencies:
     react: ">=16.8.0"
-  checksum: f07f80eee8423b4c5560546c48c4093c47530dae7d931a4e0d947d68ae1aab94291b1bf2e99ecaa5854ee50593b415fb5724c624c787338f0577f066009e8812
+  checksum: 316c91fc4e440094655c0d0ba47277a0f84f6082f77ae2ae959e97e2eebb8eab5b866a9e43d93a28efdae07c3f23e779da67922e2f2a1fb47d135b7346e0b5f3
   languageName: node
   linkType: hard
 
@@ -9086,8 +9104,8 @@ __metadata:
     "@types/react-test-renderer": 18.0.0
     "@types/react-transition-group": 4.4.5
     "@types/styled-components": 5.1.26
-    core-js: 3.25.5
-    focus-trap-react: 10.0.0
+    core-js: 3.34.0
+    focus-trap-react: 10.2.3
     jest-styled-components: 7.1.1
     no-scroll: 2.1.1
     pepjs: 0.5.3
@@ -9100,7 +9118,7 @@ __metadata:
     react-test-renderer: 18.2.0
     react-transition-group: 4.4.5
     styled-components: 5.3.6
-    tabbable: 6.0.0
+    tabbable: 6.2.0
     typeface-open-sans: 1.1.13
     typescript: 4.8.4
     yup: 0.32.11
@@ -9139,11 +9157,11 @@ __metadata:
     babel-loader: 8.2.5
     babel-plugin-styled-components: 2.0.7
     chalk: 4.1.2
-    core-js: 3.25.5
+    core-js: 3.34.0
     cross-env: 7.0.3
     css-loader: 6.7.1
     file-loader: 6.2.0
-    formik: 2.2.9
+    formik: 2.4.5
     html-webpack-plugin: 5.5.0
     license-webpack-plugin: 4.0.2
     practical-react-components-core: "workspace:*"
@@ -9156,13 +9174,13 @@ __metadata:
     react-hooks-shareable: 1.53.0
     react-is: 18.2.0
     react-live: 2.4.1
-    react-router-dom: 6.4.2
+    react-router-dom: 6.21.0
     react-transition-group: 4.4.5
-    regenerator-runtime: 0.13.10
+    regenerator-runtime: 0.14.1
     remark-mdx-code-meta: 1.0.0
     style-loader: 3.3.1
     styled-components: 5.3.6
-    styled-normalize: 8.0.7
+    styled-normalize: 8.1.0
     svg-url-loader: 8.0.0
     ts-node: 10.9.1
     tsconfig-paths: 4.1.0
@@ -9190,8 +9208,8 @@ __metadata:
     "@types/react": 18.0.21
     "@types/react-dom": 18.0.6
     "@types/styled-components": 5.1.26
-    core-js: 3.25.5
-    formik: 2.2.9
+    core-js: 3.34.0
+    formik: 2.4.5
     practical-react-components-core: "workspace:*"
     react: 18.2.0
     react-is: 18.2.0
@@ -9224,7 +9242,7 @@ __metadata:
     "@types/react": 18.0.21
     "@types/react-dom": 18.0.6
     chalk: 4.1.2
-    core-js: 3.25.5
+    core-js: 3.34.0
     cross-env: 7.0.3
     react: 18.2.0
     react-dom: 18.2.0
@@ -9259,7 +9277,7 @@ __metadata:
     babel-loader: 8.2.5
     babel-plugin-styled-components: 2.0.7
     chalk: 4.1.2
-    core-js: 3.25.5
+    core-js: 3.34.0
     cross-env: 7.0.3
     cypress: 12.15.0
     file-loader: 6.2.0
@@ -9271,10 +9289,10 @@ __metadata:
     react-dom: 18.2.0
     react-hooks-shareable: 1.53.0
     react-is: 18.2.0
-    react-router-dom: 6.4.2
-    regenerator-runtime: 0.13.10
+    react-router-dom: 6.21.0
+    regenerator-runtime: 0.14.1
     styled-components: 5.3.6
-    styled-normalize: 8.0.7
+    styled-normalize: 8.1.0
     ts-node: 10.9.1
     tsconfig-paths: 4.1.0
     typescript: 4.8.4
@@ -9593,27 +9611,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:6.4.2":
-  version: 6.4.2
-  resolution: "react-router-dom@npm:6.4.2"
+"react-router-dom@npm:6.21.0":
+  version: 6.21.0
+  resolution: "react-router-dom@npm:6.21.0"
   dependencies:
-    "@remix-run/router": 1.0.2
-    react-router: 6.4.2
+    "@remix-run/router": 1.14.0
+    react-router: 6.21.0
   peerDependencies:
     react: ">=16.8"
     react-dom: ">=16.8"
-  checksum: 858e6a5c4c5da56615dbf53118d576d61851157f077805dfe476b10c332329f8b1494062d75a8de6f1bdd35fbcb8a510f8e23beb2306440d2452b9f2fe4b079d
+  checksum: ea9dfc1e089c0623c7cb45f2a1da807a3505e8c816d5a7021d3d0d04a7a9541850b45f00195b8fa3cc5f981d59170bc27f1ba81407f0d39346642e9759a2c059
   languageName: node
   linkType: hard
 
-"react-router@npm:6.4.2":
-  version: 6.4.2
-  resolution: "react-router@npm:6.4.2"
+"react-router@npm:6.21.0":
+  version: 6.21.0
+  resolution: "react-router@npm:6.21.0"
   dependencies:
-    "@remix-run/router": 1.0.2
+    "@remix-run/router": 1.14.0
   peerDependencies:
     react: ">=16.8"
-  checksum: c229d65d9b0df88dd4e8c57bd59793e371f2c84b4cb200b77ead9f601c8fd7758f72acfffc9a2fc5cb31877af3a0e08ae24aeb75ab2b20681f3b1d33ca671552
+  checksum: e9e50767cf85e7e216aed97dcc280a8b0b83e4f0790274096991823046bb86aa1aaab3ba10a4de11bd89d73c9eeb880df1d50055e6e4f44fcdfad38adcd6c1b8
   languageName: node
   linkType: hard
 
@@ -9745,7 +9763,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:0.13.10, regenerator-runtime@npm:^0.13.4":
+"regenerator-runtime@npm:0.14.1":
+  version: 0.14.1
+  resolution: "regenerator-runtime@npm:0.14.1"
+  checksum: 9f57c93277b5585d3c83b0cf76be47b473ae8c6d9142a46ce8b0291a04bb2cf902059f0f8445dcabb3fb7378e5fe4bb4ea1e008876343d42e46d3b484534ce38
+  languageName: node
+  linkType: hard
+
+"regenerator-runtime@npm:^0.13.4":
   version: 0.13.10
   resolution: "regenerator-runtime@npm:0.13.10"
   checksum: 09893f5a9e82932642d9a999716b6c626dc53ef2a01307c952ebbf8e011802360163a37c304c18a6c358548be5a72b448e37209954a18696f21e438c81cbb4b9
@@ -10719,12 +10744,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"styled-normalize@npm:8.0.7":
-  version: 8.0.7
-  resolution: "styled-normalize@npm:8.0.7"
+"styled-normalize@npm:8.1.0":
+  version: 8.1.0
+  resolution: "styled-normalize@npm:8.1.0"
   peerDependencies:
-    styled-components: ^4.0.0 || ^5.0.0
-  checksum: afdb450407ec4dcd41b4806a1193060e128f617fbbb6c14cc8679f9a651b93afc54bd13035c84aec3c298a7ae0084aef4a8a651c082c9bf209843b17cfc73305
+    styled-components: ^4.0.0 || ^5.0.0 || ^6.0.0
+  checksum: 9bd864ba49347df4d499ec7bf58a5cd883a90c56804b367cadd0e9242d3fa1a2405567b569fef5e04b7927b609e853988efb93a51faefe3c626e45ba9e2da459
   languageName: node
   linkType: hard
 
@@ -10787,10 +10812,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tabbable@npm:6.0.0, tabbable@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "tabbable@npm:6.0.0"
-  checksum: a6bd253035b91b6ed280c77e07880f35d337509c2d49f6eef9e9d80a006bf6bddb42cdc5772f7a33a2a6625f47d2faa47b50398dda4bb83157a078c3002884ba
+"tabbable@npm:6.2.0, tabbable@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "tabbable@npm:6.2.0"
+  checksum: f8440277d223949272c74bb627a3371be21735ca9ad34c2570f7e1752bd646ccfc23a9d8b1ee65d6561243f4134f5fbbf1ad6b39ac3c4b586554accaff4a1300
   languageName: node
   linkType: hard
 
@@ -11048,10 +11073,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.10.0, tslib@npm:^1.9.0":
+"tslib@npm:^1.9.0":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.0.0":
+  version: 2.6.2
+  resolution: "tslib@npm:2.6.2"
+  checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
   languageName: node
   linkType: hard
 
