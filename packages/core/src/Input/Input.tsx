@@ -343,6 +343,7 @@ function Input<T extends string | NumberInputType>({
 	className,
 	onKeyUp,
 	inputRef,
+	onFocus,
 	...props
 }: BaseInputProps<T>): JSX.Element {
 	const containerRef = useRef<HTMLDivElement>(null)
@@ -403,14 +404,18 @@ function Input<T extends string | NumberInputType>({
 		[onChange, onValueChange, type]
 	)
 
-	// Prevent the mouse wheel from increasing/deacreasing the number
-	const handleFocus = useCallback<FocusEventHandler<HTMLInputElement>>(e => {
-		if (type === 'number') {
-			e.target.addEventListener('wheel', ev => ev.preventDefault(), {
-				passive: false,
-			})
-		}
-	}, [])
+	// Prevent the mouse wheel from increasing/decreasing the number
+	const handleFocus = useCallback<FocusEventHandler<HTMLInputElement>>(
+		e => {
+			onFocus?.(e)
+			if (type === 'number') {
+				e.target.addEventListener('wheel', ev => ev.preventDefault(), {
+					passive: false,
+				})
+			}
+		},
+		[onFocus]
+	)
 
 	return (
 		<InputContainer
