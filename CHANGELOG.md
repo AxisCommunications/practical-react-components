@@ -2,6 +2,13 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [v1.18.3](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.18.3)
+2024-02-21 11:34:08 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.18.2...v1.18.3)
+
+### 🐛 Bug fixes
+
+  - [!323](https://github.com/AxisCommunications/practical-react-components/pull/323) - **input**:  add onFocus as prop to handleFocus ([`be0942e`](https://github.com/AxisCommunications/practical-react-components/commit/be0942e371acf90ea3ac32c1edea9e559135b20e)) ([**@tripleWdotcom**](https://github.com/tripleWdotcom))
+
 ## [v1.18.2](https://github.com/AxisCommunications/practical-react-components/releases/tag/v1.18.2)
 2023-12-01 13:21:19 +0100, [Compare changes](https://github.com/AxisCommunications/practical-react-components/compare/v1.18.1...v1.18.2)
 
