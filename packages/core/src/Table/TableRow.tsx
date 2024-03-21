@@ -96,7 +96,7 @@ const TableRowGrid = styled.div<{
 `
 
 export interface TableRowProps extends BaseProps {
-	readonly children: ReadonlyArray<ReactNode>
+	readonly children: ReadonlyArray<ReactNode> | ReactNode
 	/**
 	 * `class` to be passed to the component.
 	 */
