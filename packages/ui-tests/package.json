@@ -9,17 +9,17 @@
   },
   "dependencies": {
     "@juggle/resize-observer": "3.4.0",
-    "core-js": "3.25.5",
+    "core-js": "3.37.0",
     "practical-react-components-core": "workspace:*",
     "practical-react-components-icons": "workspace:*",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hooks-shareable": "1.53.0",
     "react-is": "18.2.0",
-    "react-router-dom": "6.4.2",
-    "regenerator-runtime": "0.13.10",
+    "react-router-dom": "6.22.3",
+    "regenerator-runtime": "0.14.1",
     "styled-components": "5.3.6",
-    "styled-normalize": "8.0.7"
+    "styled-normalize": "8.1.1"
   },
   "devDependencies": {
     "@babel/core": "7.19.3",
