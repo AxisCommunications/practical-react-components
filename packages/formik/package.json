@@ -12,11 +12,11 @@
     "practical-react-components-core": "workspace:*"
   },
   "devDependencies": {
-    "@babel/cli": "7.19.3",
-    "@babel/core": "7.19.3",
-    "@babel/preset-env": "7.19.4",
-    "@babel/preset-react": "7.18.6",
-    "@babel/preset-typescript": "7.18.6",
+    "@babel/cli": "7.24.6",
+    "@babel/core": "7.24.6",
+    "@babel/preset-env": "7.24.6",
+    "@babel/preset-react": "7.24.6",
+    "@babel/preset-typescript": "7.24.6",
     "@mdx-js/mdx": "2.1.5",
     "@mdx-js/react": "2.1.5",
     "@types/react": "18.0.21",
