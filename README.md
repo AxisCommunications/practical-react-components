@@ -1,3 +1,20 @@
+
+> [!CAUTION]
+> Hi there!
+>
+> I'm sorry, but this library has been **discontinued and will no longer be updated**.
+> We have migrated our applications to use [Fluent](https://react.fluentui.dev/)
+> and will no longer maintain this repository. This means you will need to switch
+> out your current React components for Fluent components.
+>
+> We are also publishing our own [Fluent components and theme](https://github.com/AxisCommunications/fluent-components).
+> We look forward to seeing you there. Feel free to open an issue there if you
+> have any questions.
+
+
+---
+
+
 # Practical react components
 
 A catalogue of React components, focused on ease-of-use.
